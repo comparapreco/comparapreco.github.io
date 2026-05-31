@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Produtos Mais Clicados — Radar de Preços</title>
+<meta content="Veja quais são os produtos mais populares e mais clicados por outros usuários. Tendências em tempo real." name="description"/>
+<link href="https://radardeprecos.github.io/radar/mais-clicados/" rel="canonical"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    .hero { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: white; padding: 60px 0 40px; margin-bottom: 40px; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+    .hero p { opacity: 0.9; font-size: 1.1rem; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .tabs { display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; border-bottom: 2px solid var(--border); }
+    .tab { padding: 12px 20px; background: none; border: none; cursor: pointer; font-weight: 700; color: var(--text-light); border-bottom: 3px solid transparent; transition: all 0.3s; }
+    .tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+    .tab:hover { color: var(--text); }
+    .period-selector { display: flex; gap: 10px; margin-bottom: 30px; }
+    .period-btn { padding: 8px 16px; border-radius: 20px; border: 2px solid var(--border); background: var(--card); cursor: pointer; transition: all 0.3s; }
+    .period-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+    .ranking-list { display: flex; flex-direction: column; gap: 15px; margin-bottom: 40px; }
+    .ranking-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .ranking-item:hover { transform: translateX(5px); box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+    .ranking-position {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      min-width: 50px;
+      text-align: center;
+    }
+    .ranking-position.top1 { color: #fbbf24; font-size: 2.5rem; }
+    .ranking-position.top2 { color: #d1d5db; }
+    .ranking-position.top3 { color: #d97706; }
+    .ranking-image { width: 80px; height: 80px; background: var(--bg); border-radius: 8px; flex-shrink: 0; }
+    .ranking-content { flex: 1; }
+    .ranking-title { font-weight: 700; margin-bottom: 5px; }
+    .ranking-meta { display: flex; gap: 20px; font-size: 0.9rem; color: var(--text-light); }
+    .ranking-stats { display: flex; gap: 20px; align-items: center; }
+    .stat-badge {
+      background: var(--bg);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .stat-badge.clicks { color: var(--primary); }
+    .stat-badge.views { color: #8b5cf6; }
+    .stat-badge.trending { color: #ef4444; }
+    .categories-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; margin-bottom: 40px; }
+    .category-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .category-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+    .category-icon { font-size: 2.5rem; margin-bottom: 10px; }
+    .category-name { font-weight: 700; margin-bottom: 8px; }
+    .category-count { font-size: 0.85rem; color: var(--text-light); }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+<section class="hero">
+<div class="container">
+<h1>🔥 Mais Clicados</h1>
+<p>Produtos e categorias mais populares entre os usuários do Radar. Veja o que está em alta!</p>
+</div>
+</section>
+<main class="container">
+<div class="tabs">
+<button class="tab active" data-tab="produtos">📦 Produtos</button>
+<button class="tab" data-tab="categorias">🏪 Categorias</button>
+<button class="tab" data-tab="marcas">🏷️ Marcas</button>
+</div>
+<div class="period-selector">
+<button class="period-btn active" data-period="today">Hoje</button>
+<button class="period-btn" data-period="week">Esta Semana</button>
+<button class="period-btn" data-period="month">Este Mês</button>
+<button class="period-btn" data-period="all">Tudo</button>
+</div>
+<!-- Produtos -->
+<div class="tab-content" id="produtos-tab">
+<div class="ranking-list">
+<div class="ranking-item">
+<div class="ranking-position top1">🥇</div>
+<div class="ranking-image"></div>
+<div class="ranking-content">
+<div class="ranking-title">Samsung Galaxy A36 128GB</div>
+<div class="ranking-meta">
+<span>📱 Celulares</span>
+<span>💰 R$ 1.299</span>
+</div>
+</div>
+<div class="ranking-stats">
+<div class="stat-badge clicks">👆 15.2K cliques</div>
+<div class="stat-badge trending">📈 +45%</div>
+</div>
+</div>
+<div class="ranking-item">
+<div class="ranking-position top2">🥈</div>
+<div class="ranking-image"></div>
+<div class="ranking-content">
+<div class="ranking-title">LG 55" OLED 4K 120Hz</div>
+<div class="ranking-meta">
+<span>📺 TVs</span>
+<span>💰 R$ 2.999</span>
+</div>
+</div>
+<div class="ranking-stats">
+<div class="stat-badge clicks">👆 12.8K cliques</div>
+<div class="stat-badge trending">📈 +32%</div>
+</div>
+</div>
+<div class="ranking-item">
+<div class="ranking-position top3">🥉</div>
+<div class="ranking-image"></div>
+<div class="ranking-content">
+<div class="ranking-title">Notebook Lenovo IdeaPad 3</div>
+<div class="ranking-meta">
+<span>💻 Informática</span>
+<span>💰 R$ 1.999</span>
+</div>
+</div>
+<div class="ranking-stats">
+<div class="stat-badge clicks">👆 11.5K cliques</div>
+<div class="stat-badge trending">📈 +28%</div>
+</div>
+</div>
+<div class="ranking-item">
+<div class="ranking-position">4</div>
+<div class="ranking-image"></div>
+<div class="ranking-content">
+<div class="ranking-title">Xiaomi Redmi Note 13</div>
+<div class="ranking-meta">
+<span>📱 Celulares</span>
+<span>💰 R$ 899</span>
+</div>
+</div>
+<div class="ranking-stats">
+<div class="stat-badge clicks">👆 9.3K cliques</div>
+<div class="stat-badge trending">📈 +18%</div>
+</div>
+</div>
+<div class="ranking-item">
+<div class="ranking-position">5</div>
+<div class="ranking-image"></div>
+<div class="ranking-content">
+<div class="ranking-title">PlayStation 5 Standard</div>
+<div class="ranking-meta">
+<span>🎮 Games</span>
+<span>💰 R$ 3.999</span>
+</div>
+</div>
+<div class="ranking-stats">
+<div class="stat-badge clicks">👆 8.7K cliques</div>
+<div class="stat-badge trending">📈 +15%</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Categorias -->
+<div class="tab-content" id="categorias-tab" style="display: none;">
+<div class="categories-grid">
+<div class="category-card">
+<div class="category-icon">📱</div>
+<div class="category-name">Celulares</div>
+<div class="category-count">45.2K cliques</div>
+</div>
+<div class="category-card">
+<div class="category-icon">💻</div>
+<div class="category-name">Informática</div>
+<div class="category-count">32.1K cliques</div>
+</div>
+<div class="category-card">
+<div class="category-icon">📺</div>
+<div class="category-name">TVs</div>
+<div class="category-count">28.5K cliques</div>
+</div>
+<div class="category-card">
+<div class="category-icon">🎮</div>
+<div class="category-name">Games</div>
+<div class="category-count">25.3K cliques</div>
+</div>
+<div class="category-card">
+<div class="category-icon">🏠</div>
+<div class="category-name">Eletrodomésticos</div>
+<div class="category-count">18.9K cliques</div>
+</div>
+<div class="category-card">
+<div class="category-icon">🎧</div>
+<div class="category-name">Áudio</div>
+<div class="category-count">15.6K cliques</div>
+</div>
+</div>
+</div>
+<!-- Marcas -->
+<div class="tab-content" id="marcas-tab" style="display: none;">
+<div class="categories-grid">
+<div class="category-card">
+<div class="category-icon">🔷</div>
+<div class="category-name">Samsung</div>
+<div class="category-count">28.5K cliques</div>
+</div>
+<div class="category-card">
+<div class="category-icon">🔶</div>
+<div class="category-name">LG</div>
+<div class="category-count">22.1K cliques</div>
+</div>
+<div class="category-card">
+<div class="category-icon">🟦</div>
+<div class="category-name">Xiaomi</div>
+<div class="category-count">19.8K cliques</div>
+</div>
+<div class="category-card">
+<div class="category-icon">🍎</div>
+<div class="category-name">Apple</div>
+<div class="category-count">18.3K cliques</div>
+</div>
+<div class="category-card">
+<div class="category-icon">🟩</div>
+<div class="category-name">Motorola</div>
+<div class="category-count">14.2K cliques</div>
+</div>
+<div class="category-card">
+<div class="category-icon">🟥</div>
+<div class="category-name">Lenovo</div>
+<div class="category-count">12.7K cliques</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Tendências em Tempo Real.</p>
+<div class="footer-links">
+<a href="../sobre/">Sobre</a>
+<a href="../contato/">Contato</a>
+<a href="../privacidade/">Privacidade</a>
+<a href="../disclaimer/">Disclaimer</a>
+</div>
+</div>
+</footer>
+<script>
+    // Tabs
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const tabName = tab.dataset.tab;
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+        tab.classList.add('active');
+        document.getElementById(`${tabName}-tab`).style.display = 'block';
+      });
+    });
+
+    // Tema
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+    if (savedTheme === 'dark') document.getElementById('themeToggle').textContent = '☀️';
+
+    // Busca
+    document.getElementById('searchInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const q = e.target.value.trim();
+        if (q) window.location.href = `../?q=${encodeURIComponent(q)}`;
+      }
+    });
+  </script>
+</body>
+</html>

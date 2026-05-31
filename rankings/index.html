@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rankings de Melhores Produtos 2026 — Radar de Preços</title>
+<meta content="Descubra os melhores celulares, TVs, notebooks, tablets e fones de 2026. Rankings atualizados com base em preço, qualidade e avaliações." name="description"/>
+<link href="https://radardeprecos.github.io/radar/rankings/" rel="canonical"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<style>
+.ranking-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.ranking-position {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary);
+  min-width: 50px;
+  text-align: center;
+}
+.ranking-position.gold { color: #FFD700; }
+.ranking-position.silver { color: #C0C0C0; }
+.ranking-position.bronze { color: #CD7F32; }
+.ranking-info {
+  flex: 1;
+}
+.ranking-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.ranking-specs {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+.ranking-rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.star { color: #FFD700; }
+.ranking-price {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.price-current {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+}
+.price-original {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+.discount-badge {
+  background: #ff6b6b;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+</style>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+
+<section class="main-hero">
+<div class="container">
+<h1>🏆 Rankings de Melhores Produtos 2026</h1>
+<p>Descubra os melhores produtos de cada categoria com base em preço, qualidade e avaliações.</p>
+</div>
+</section>
+
+<main class="container">
+<section class="section">
+<div class="section-header">
+<h2>Selecionar Categoria</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 40px;">
+<button class="btn" onclick="filterRankings('celulares')" style="background: var(--primary);">📱 Celulares</button>
+<button class="btn" onclick="filterRankings('notebooks')">💻 Notebooks</button>
+<button class="btn" onclick="filterRankings('tvs')">📺 TVs</button>
+<button class="btn" onclick="filterRankings('tablets')">📱 Tablets</button>
+<button class="btn" onclick="filterRankings('fones')">🎧 Fones</button>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header" id="categoryTitle">
+<h2>📱 Melhores Celulares 2026</h2>
+</div>
+
+<div id="rankingsList">
+<!-- Preenchido via JS -->
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2>💡 Como Lemos os Rankings</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+<div class="product-card">
+<h4>🔍 Análise Completa</h4>
+<p>Analisamos especificações técnicas, desempenho, qualidade de construção e feedback de usuários.</p>
+</div>
+<div class="product-card">
+<h4>💰 Melhor Custo-Benefício</h4>
+<p>Priorizamos produtos que oferecem o melhor valor pelo preço, não apenas o mais caro.</p>
+</div>
+<div class="product-card">
+<h4>📊 Dados em Tempo Real</h4>
+<p>Os preços e ofertas são atualizados diariamente com base no monitoramento do Mercado Livre.</p>
+</div>
+<div class="product-card">
+<h4>⭐ Avaliações Verificadas</h4>
+<p>Consideramos apenas avaliações de compradores verificados para garantir autenticidade.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Rankings Inteligentes.</p>
+<div class="footer-links">
+<a href="../noticias/">Blog</a>
+<a href="../sobre/">Sobre</a>
+<a href="../contato/">Contato</a>
+<a href="../privacidade/">Privacidade</a>
+<a href="../termos/">Termos</a>
+<a href="../quem-somos/">Quem Somos</a>
+</div>
+</div>
+</footer>
+
+<script src="../assets/js/app.js"></script>
+<script>
+const rankings = {
+  celulares: [
+    {pos: 1, name: 'Samsung Galaxy S24 Ultra', specs: '6.8" AMOLED, 256GB, 5G', rating: 4.8, price: 4799, original: 9599, discount: 50},
+    {pos: 2, name: 'iPhone 15 Pro Max', specs: '6.7" Super Retina, 256GB, 5G', rating: 4.7, price: 6299, original: 11999, discount: 48},
+    {pos: 3, name: 'Xiaomi 14 Ultra', specs: '6.73" AMOLED, 512GB, 5G', rating: 4.6, price: 2199, original: 4499, discount: 51},
+    {pos: 4, name: 'Samsung Galaxy A36', specs: '6.7" AMOLED, 128GB, 5G', rating: 4.4, price: 799, original: 1799, discount: 56},
+    {pos: 5, name: 'Motorola Moto G35', specs: '6.72" IPS, 128GB, 5G', rating: 4.3, price: 599, original: 1299, discount: 54},
+  ],
+  notebooks: [
+    {pos: 1, name: 'MacBook Pro 14" M3', specs: 'M3 Pro, 16GB RAM, 512GB SSD', rating: 4.9, price: 8999, original: 14999, discount: 40},
+    {pos: 2, name: 'Dell XPS 13', specs: 'Intel i7, 16GB RAM, 512GB SSD', rating: 4.7, price: 5999, original: 9999, discount: 40},
+    {pos: 3, name: 'Lenovo ThinkPad X1', specs: 'Intel i7, 16GB RAM, 512GB SSD', rating: 4.6, price: 4999, original: 8999, discount: 44},
+    {pos: 4, name: 'ASUS VivoBook 15', specs: 'AMD Ryzen 7, 16GB RAM, 512GB SSD', rating: 4.4, price: 3499, original: 5999, discount: 42},
+    {pos: 5, name: 'HP Pavilion 15', specs: 'Intel i5, 8GB RAM, 256GB SSD', rating: 4.2, price: 2299, original: 3999, discount: 43},
+  ],
+  tvs: [
+    {pos: 1, name: 'LG OLED 55" C3', specs: '4K, 120Hz, Smart TV', rating: 4.8, price: 2999, original: 5999, discount: 50},
+    {pos: 2, name: 'Samsung QN55" S95C', specs: '4K, Mini LED, Smart TV', rating: 4.7, price: 3299, original: 6599, discount: 50},
+    {pos: 3, name: 'TCL 55" Mini LED', specs: '4K, 120Hz, Smart TV', rating: 4.5, price: 1299, original: 2599, discount: 50},
+    {pos: 4, name: 'Sony 55" X95L', specs: '4K, Mini LED, Smart TV', rating: 4.6, price: 2999, original: 5999, discount: 50},
+    {pos: 5, name: 'Philco 50" Smart TV', specs: '4K, 60Hz, Smart TV', rating: 4.2, price: 699, original: 1299, discount: 46},
+  ],
+  tablets: [
+    {pos: 1, name: 'iPad Pro 12.9" M2', specs: '12.9" Liquid Retina, 256GB, 5G', rating: 4.8, price: 4999, original: 8999, discount: 44},
+    {pos: 2, name: 'Samsung Galaxy Tab S9', specs: '11" AMOLED, 256GB, 5G', rating: 4.6, price: 2999, original: 5999, discount: 50},
+    {pos: 3, name: 'iPad Air 11" M1', specs: '11" Liquid Retina, 128GB, 5G', rating: 4.5, price: 3499, original: 5999, discount: 42},
+    {pos: 4, name: 'Lenovo Tab P11', specs: '11.5" IPS, 128GB, Wi-Fi', rating: 4.2, price: 1299, original: 2299, discount: 43},
+    {pos: 5, name: 'Samsung Galaxy Tab A8', specs: '10.5" IPS, 64GB, Wi-Fi', rating: 4.0, price: 699, original: 1299, discount: 46},
+  ],
+  fones: [
+    {pos: 1, name: 'Sony WH-1000XM5', specs: 'Cancelamento de Ruído, 30h Bateria', rating: 4.8, price: 1299, original: 1999, discount: 35},
+    {pos: 2, name: 'AirPods Pro 2', specs: 'Cancelamento de Ruído, 6h Bateria', rating: 4.7, price: 1199, original: 1899, discount: 37},
+    {pos: 3, name: 'Bose QuietComfort 45', specs: 'Cancelamento de Ruído, 24h Bateria', rating: 4.6, price: 1099, original: 1699, discount: 35},
+    {pos: 4, name: 'JBL Tune 770NC', specs: 'Cancelamento de Ruído, 70h Bateria', rating: 4.4, price: 599, original: 999, discount: 40},
+    {pos: 5, name: 'Beats Studio Pro', specs: 'Cancelamento de Ruído, 40h Bateria', rating: 4.3, price: 899, original: 1399, discount: 36},
+  ]
+};
+
+const categoryNames = {
+  celulares: '📱 Melhores Celulares 2026',
+  notebooks: '💻 Melhores Notebooks 2026',
+  tvs: '📺 Melhores TVs 2026',
+  tablets: '📱 Melhores Tablets 2026',
+  fones: '🎧 Melhores Fones 2026'
+};
+
+function renderRankings(category = 'celulares') {
+  const list = document.getElementById('rankingsList');
+  const title = document.getElementById('categoryTitle');
+  const items = rankings[category] || [];
+  
+  title.innerHTML = `<h2>${categoryNames[category]}</h2>`;
+  
+  list.innerHTML = items.map((item, idx) => {
+    let posClass = '';
+    if (item.pos === 1) posClass = 'gold';
+    else if (item.pos === 2) posClass = 'silver';
+    else if (item.pos === 3) posClass = 'bronze';
+    
+    return `
+      <div class="ranking-card">
+        <div class="ranking-position ${posClass}">${item.pos}º</div>
+        <div class="ranking-info">
+          <div class="ranking-title">${item.name}</div>
+          <div class="ranking-specs">${item.specs}</div>
+          <div class="ranking-rating">
+            ${Array(Math.floor(item.rating)).fill('⭐').join('')}
+            <span style="color: var(--text-secondary); font-size: 12px;">${item.rating}</span>
+          </div>
+          <div class="ranking-price">
+            <span class="price-current">R$ ${item.price.toLocaleString('pt-BR')}</span>
+            <span class="price-original">R$ ${item.original.toLocaleString('pt-BR')}</span>
+            <span class="discount-badge">-${item.discount}%</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function filterRankings(category) {
+  renderRankings(category);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  renderRankings('celulares');
+});
+</script>
+</body>
+</html>

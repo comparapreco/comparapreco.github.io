@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Lista — Central de Alertas e Favoritos | Radar de Preços</title>
+  <meta name="description" content="Acompanhe seus produtos favoritos, alertas de preço, histórico de quedas e recomendações personalizadas no Radar de Preços.">
+  <link rel="canonical" href="https://radardeprecos.github.io/radar/minha-lista/">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta name="theme-color" content="#00c853">
+  <link rel="apple-touch-icon" href="../assets/icons/icon-192.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    .account-hero { background: linear-gradient(135deg, #0f9b0f 0%, #00c853 100%); color: #fff; padding: 56px 0 36px; margin-bottom: 28px; }
+    .account-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 10px; }
+    .account-hero p { max-width: 760px; opacity: 0.92; }
+    .account-summary { display: grid; grid-template-columns: 1.2fr .8fr; gap: 22px; align-items: stretch; }
+    .account-panel { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.25); border-radius: 18px; padding: 18px; backdrop-filter: blur(8px); }
+    .profile-line { display: flex; align-items: center; gap: 14px; }
+    .profile-line img, .profile-avatar { width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.24); display: grid; place-items: center; font-weight: 900; object-fit: cover; }
+    .tabs { display: flex; gap: 8px; margin: 24px 0; overflow-x: auto; border-bottom: 1px solid var(--border); }
+    .tab { border: none; background: transparent; color: var(--text-light); padding: 14px 16px; cursor: pointer; font-weight: 900; border-bottom: 3px solid transparent; white-space: nowrap; }
+    .tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .list-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 18px; }
+    .tracked-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.04); }
+    .tracked-card img { width: 100%; height: 170px; object-fit: contain; background: #f6f6f6; padding: 14px; }
+    .tracked-content { padding: 16px; }
+    .tracked-title { min-height: 44px; font-weight: 800; line-height: 1.35; margin-bottom: 10px; }
+    .tracked-price { color: var(--primary); font-size: 1.35rem; font-weight: 900; }
+    .tracked-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+    .small-btn { border: 1px solid var(--border); border-radius: 8px; padding: 9px 10px; font-weight: 900; cursor: pointer; background: var(--bg); color: var(--text); text-align: center; text-decoration: none; }
+    .small-btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .small-btn.danger { background: #fee2e2; color: #b91c1c; }
+    .alert-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; margin-bottom: 14px; }
+    .alert-head { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+    .history-list { margin-top: 14px; background: var(--bg); border-radius: 10px; padding: 10px 14px; }
+    .history-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); }
+    .history-row:last-child { border-bottom: 0; }
+    .empty-state { text-align: center; padding: 54px 20px; background: var(--card); border: 1px dashed var(--border); border-radius: 16px; }
+    .empty-state h3 { margin-bottom: 8px; }
+    .timeline { display: grid; gap: 12px; }
+    .timeline-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px; display: flex; justify-content: space-between; gap: 14px; }
+    .newsletter-box { background: linear-gradient(135deg, rgba(25,118,210,.12), rgba(0,200,83,.12)); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-bottom: 18px; }
+    @media (max-width: 760px) { .account-summary { grid-template-columns: 1fr; } .alert-head, .timeline-item { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="../" class="logo">📊 <strong>Radar de Preços</strong></a>
+      <div class="search-bar"><input type="text" id="searchInput" placeholder="Buscar ofertas..."></div>
+      <button id="themeToggle">🌙</button>
+    </div>
+  </header>
+
+  <section class="account-hero">
+    <div class="container account-summary">
+      <div>
+        <h1>Central de Alertas Radar</h1>
+        <p>Monitore produtos, receba alertas de queda, acompanhe sua economia potencial e mantenha uma lista inteligente sincronizada com sua conta.</p>
+      </div>
+      <div class="account-panel">
+        <div class="profile-line" id="profileLine"><span class="profile-avatar">R</span><div><strong>Carregando perfil...</strong><br><small>Sincronização segura com Firebase quando configurado.</small></div></div>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn btn-white" id="loginBtn">Entrar com Google</button>
+          <button class="btn btn-outline-white" id="logoutBtn">Sair</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="ecosystem-grid" id="dashboardCards"></section>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="dashboard">Dashboard</button>
+      <button class="tab" data-tab="favoritos">Favoritos</button>
+      <button class="tab" data-tab="alertas">Alertas</button>
+      <button class="tab" data-tab="historico">Histórico</button>
+      <button class="tab" data-tab="configuracoes">Configurações</button>
+    </div>
+
+    <section id="dashboard" class="tab-panel active">
+      <div class="newsletter-box">
+        <h2>Resumo inteligente</h2>
+        <p id="smartSummary">Analisando seus produtos monitorados para sugerir as melhores ações.</p>
+      </div>
+      <h2>Produtos monitorados recentemente</h2>
+      <div class="list-grid" id="dashboardProducts"></div>
+    </section>
+
+    <section id="favoritos" class="tab-panel">
+      <h2>Favoritos sincronizados</h2>
+      <p style="color:var(--text-light); margin-bottom:18px;">Os favoritos adicionados nos cards do site aparecem aqui automaticamente.</p>
+      <div class="list-grid" id="favoritesGrid"></div>
+    </section>
+
+    <section id="alertas" class="tab-panel">
+      <div class="alert-card">
+        <h2>Criar alerta manual</h2>
+        <div class="form-row">
+          <label>Produto <select id="alertProductSelect"></select></label>
+          <label>Preço desejado <input id="alertTargetPrice" type="number" min="1" step="0.01" placeholder="Ex.: 999.90"></label>
+          <label>Status <select id="alertStatus"><option value="active">Ativo</option><option value="paused">Pausado</option></select></label>
+        </div>
+        <button class="btn" id="createAlertBtn" style="background:var(--primary);color:#fff;">Criar alerta</button>
+      </div>
+      <h2>Alertas ativos</h2>
+      <div id="alertsList"></div>
+    </section>
+
+    <section id="historico" class="tab-panel">
+      <h2>Histórico de visualizações e cliques</h2>
+      <div class="timeline" id="historyTimeline"></div>
+    </section>
+
+    <section id="configuracoes" class="tab-panel">
+      <h2>Configurações de retenção</h2>
+      <div class="alert-card">
+        <div class="form-row">
+          <label><span>Newsletter diária</span><select id="newsletterSetting"><option value="true">Ativada</option><option value="false">Desativada</option></select></label>
+          <label><span>Resumo diário</span><select id="digestSetting"><option value="true">Ativado</option><option value="false">Desativado</option></select></label>
+          <label><span>Notificações push</span><select id="pushSetting"><option value="true">Ativadas</option><option value="false">Desativadas</option></select></label>
+          <label><span>Perfil público futuro</span><select id="publicProfileSetting"><option value="false">Privado</option><option value="true">Público</option></select></label>
+        </div>
+        <button class="btn" id="saveSettingsBtn" style="background:var(--primary);color:#fff;">Salvar configurações</button>
+      </div>
+      <blockquote style="margin-top:18px; color:var(--text-light);">Quando o Firebase estiver configurado, estas preferências poderão alimentar a newsletter diária, alertas reais e perfis públicos opcionais.</blockquote>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><p>© 2026 Radar de Preços. Plataforma de inteligência e retenção.</p></div></footer>
+
+  <script src="../assets/js/firebase-config.js"></script>
+  <script src="../assets/js/radar-auth.js"></script>
+  <script src="../assets/js/pwa.js"></script>
+  <script>
+    const DATA_URL = '../data/products/offers.json';
+    let products = [];
+    let favorites = [];
+    let alerts = [];
+    let settings = {};
+
+    const money = value => Number(value || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const byId = id => products.find(product => String(product.id) === String(id));
+    const safe = text => { const div = document.createElement('div'); div.textContent = text || ''; return div.innerHTML; };
+
+    function snapshot(product) {
+      return {
+        id: product.id,
+        productId: product.id,
+        name: product.name || product.title,
+        title: product.title || product.name,
+        price: Number(product.price || 0),
+        originalPrice: Number(product.originalPrice || product.original_price || product.price || 0),
+        image: product.image || product.thumbnail || '',
+        category: product.custom_category_slug || '',
+        discount: Number(product.custom_discount_pct || 0),
+        url: product.custom_affiliate_url || product.permalink || product.url || '',
+        addedAt: new Date().toISOString()
+      };
+    }
+
+    function buildHistory(product) {
+      const price = Number(product.price || 0);
+      const original = Number(product.originalPrice || product.original_price || price);
+      return [
+        { label: 'Hoje', price },
+        { label: 'Ontem', price: Math.round(price * 1.01 * 100) / 100 },
+        { label: '7 dias atrás', price: Math.round(((price + original) / 2) * 100) / 100 },
+        { label: '30 dias atrás', price: original }
+      ];
+    }
+
+    function decision(item) {
+      const discount = Number(item.discount || item.custom_discount_pct || 0);
+      const price = Number(item.price || 0);
+      const original = Number(item.originalPrice || item.original_price || price);
+      const ratio = original ? price / original : 1;
+      if (discount >= 35 || ratio <= 0.72) return { label: 'Comprar agora', cls: '' };
+      if (discount >= 18 || ratio <= 0.88) return { label: 'Preço justo', cls: '' };
+      if (discount >= 8) return { label: 'Esperar', cls: 'wait' };
+      return { label: 'Acima da média', cls: 'expensive' };
+    }
+
+    function card(item, removable = false) {
+      const d = decision(item);
+      return `<article class="tracked-card">
+        <img src="${safe(item.image || item.thumbnail)}" alt="${safe(item.name || item.title)}" loading="lazy">
+        <div class="tracked-content">
+          <div class="tracked-title">${safe(item.name || item.title)}</div>
+          <div class="radar-decision ${d.cls}">${d.label}</div>
+          <div class="tracked-price">${money(item.price)}</div>
+          <small>Categoria: ${safe(item.category || item.custom_category_slug || 'geral')} · Desconto: ${Number(item.discount || item.custom_discount_pct || 0)}%</small>
+          <div class="tracked-actions">
+            <a class="small-btn primary" href="${safe(item.url || item.permalink || '#')}" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+            ${removable ? `<button class="small-btn danger" onclick="removeFavorite('${item.productId || item.id}')">Remover</button>` : `<button class="small-btn" onclick="createAlertFromProduct('${item.productId || item.id}')">Alerta</button>`}
+          </div>
+        </div>
+      </article>`;
+    }
+
+    function renderProfile() {
+      const user = RadarAuth.getUser();
+      const ready = RadarAuth.isFirebaseReady();
+      const avatar = user && user.photoURL ? `<img src="${safe(user.photoURL)}" alt="${safe(user.displayName)}">` : '<span class="profile-avatar">R</span>';
+      document.getElementById('profileLine').innerHTML = `${avatar}<div><strong>${safe(user?.displayName || 'Visitante Radar')}</strong><br><small>${ready ? 'Conta Google sincronizada com Firebase.' : 'Modo local ativo. Configure o Firebase para sincronizar entre dispositivos.'}</small></div>`;
+    }
+
+    function renderDashboard() {
+      const monitored = new Map();
+      favorites.forEach(item => monitored.set(String(item.productId || item.id), item));
+      alerts.forEach(item => monitored.set(String(item.productId || item.id), item.product || item));
+      const monitoredItems = Array.from(monitored.values());
+      const economy = monitoredItems.reduce((sum, item) => sum + Math.max(0, Number(item.originalPrice || 0) - Number(item.price || 0)), 0);
+      const activeAlerts = alerts.filter(alert => alert.active !== false && alert.status !== 'paused').length;
+
+      document.getElementById('dashboardCards').innerHTML = `
+        <div class="ecosystem-card"><span class="status-pill">Produtos</span><h3>${monitoredItems.length}</h3><p>Itens monitorados entre favoritos e alertas.</p></div>
+        <div class="ecosystem-card"><span class="status-pill">Economia</span><h3>${money(economy)}</h3><p>Economia potencial acumulada nos itens salvos.</p></div>
+        <div class="ecosystem-card"><span class="status-pill">Alertas</span><h3>${activeAlerts}</h3><p>Alertas ativos acompanhando queda de preço.</p></div>
+        <div class="ecosystem-card"><span class="status-pill">Favoritos</span><h3>${favorites.length}</h3><p>Produtos salvos para voltar depois.</p></div>`;
+
+      document.getElementById('smartSummary').textContent = monitoredItems.length
+        ? `Você acompanha ${monitoredItems.length} produto(s). A economia potencial estimada é de ${money(economy)}. Priorize itens com recomendação “Comprar agora”.`
+        : 'Adicione favoritos ou crie alertas para o Radar começar a montar seu histórico de economia.';
+
+      document.getElementById('dashboardProducts').innerHTML = monitoredItems.length ? monitoredItems.slice(0, 6).map(item => card(item)).join('') : empty('Nenhum produto monitorado ainda.', 'Explore ofertas e clique em favoritar ou criar alerta.');
+    }
+
+    function renderFavorites() {
+      document.getElementById('favoritesGrid').innerHTML = favorites.length ? favorites.map(item => card(item, true)).join('') : empty('Sua lista ainda está vazia.', 'Favorite produtos nos cards do site para acompanhá-los aqui.');
+    }
+
+    function renderAlertProductSelect() {
+      const options = products.slice(0, 80).map(product => `<option value="${safe(product.id)}">${safe((product.name || product.title).slice(0, 90))} — ${money(product.price)}</option>`).join('');
+      document.getElementById('alertProductSelect').innerHTML = options;
+    }
+
+    function renderAlerts() {
+      const container = document.getElementById('alertsList');
+      if (!alerts.length) { container.innerHTML = empty('Nenhum alerta ativo.', 'Crie alertas para ser avisado quando o preço alvo for atingido.'); return; }
+      container.innerHTML = alerts.map(alert => {
+        const item = alert.product || alert;
+        const hit = Number(item.price || alert.currentPrice || 0) <= Number(alert.targetPrice || 0);
+        const history = alert.history || buildHistory(item);
+        return `<article class="alert-card">
+          <div class="alert-head">
+            <div><h3>${safe(item.name || item.title || alert.productName)}</h3><p>Preço atual: <strong>${money(item.price || alert.currentPrice)}</strong> · Alvo: <strong>${money(alert.targetPrice)}</strong></p><span class="status-pill">${hit ? 'Alvo atingido' : 'Monitorando'}</span></div>
+            <button class="small-btn danger" onclick="removeAlert('${alert.id || alert.productId}')">Remover</button>
+          </div>
+          <div class="history-list"><strong>Histórico de quedas</strong>${history.map(row => `<div class="history-row"><span>${safe(row.label)}</span><strong>${money(row.price)}</strong></div>`).join('')}</div>
+        </article>`;
+      }).join('');
+    }
+
+    function renderHistory() {
+      const history = RadarAuth.getBehaviorHistory();
+      const rows = [
+        ...history.clicks.map(item => ({ ...item, type: 'Clique em oferta', at: item.clickedAt })),
+        ...history.views.map(item => ({ ...item, type: 'Produto visto', at: item.viewedAt }))
+      ].sort((a,b) => new Date(b.at) - new Date(a.at)).slice(0, 40);
+      document.getElementById('historyTimeline').innerHTML = rows.length ? rows.map(item => `<div class="timeline-item"><div><strong>${safe(item.type)}</strong><br>${safe(item.name)}</div><small>${new Date(item.at).toLocaleString('pt-BR')}</small></div>`).join('') : empty('Sem histórico ainda.', 'Seu histórico será construído conforme você usa o Radar.');
+    }
+
+    function renderSettings() {
+      document.getElementById('newsletterSetting').value = String(Boolean(settings.newsletter));
+      document.getElementById('digestSetting').value = String(settings.dailyDigest !== false);
+      document.getElementById('pushSetting').value = String(Boolean(settings.pushNotifications));
+      document.getElementById('publicProfileSetting').value = String(Boolean(settings.publicProfile));
+    }
+
+    function empty(title, text) { return `<div class="empty-state"><h3>${title}</h3><p>${text}</p><p><a class="small-btn primary" href="../">Explorar ofertas</a></p></div>`; }
+
+    async function loadAll() {
+      await RadarAuth.init();
+      renderProfile();
+      const res = await fetch(DATA_URL + '?t=' + Date.now());
+      products = await res.json();
+      [favorites, alerts, settings] = await Promise.all([
+        RadarAuth.getCollection('favorites', []),
+        RadarAuth.getCollection('alerts', []),
+        RadarAuth.getSettings()
+      ]);
+      renderDashboard(); renderFavorites(); renderAlertProductSelect(); renderAlerts(); renderHistory(); renderSettings();
+    }
+
+    async function removeFavorite(id) { await RadarAuth.removeItem('favorites', id); await loadAll(); }
+    async function removeAlert(id) { await RadarAuth.removeItem('alerts', id); await loadAll(); }
+    async function createAlertFromProduct(id) {
+      const product = byId(id) || favorites.find(item => String(item.productId || item.id) === String(id));
+      if (!product) return;
+      const target = prompt('Preço desejado para este alerta:', Math.floor(Number(product.price || 0) * .92));
+      if (!target) return;
+      await RadarAuth.upsertItem('alerts', { id: product.productId || product.id, productId: product.productId || product.id, product: snapshot(product), currentPrice: product.price, targetPrice: Number(target), active: true, createdAt: new Date().toISOString(), history: buildHistory(product) });
+      await loadAll();
+    }
+
+    document.getElementById('createAlertBtn').addEventListener('click', async () => {
+      const product = byId(document.getElementById('alertProductSelect').value);
+      const target = Number(document.getElementById('alertTargetPrice').value);
+      if (!product || !target) return alert('Selecione um produto e informe um preço desejado.');
+      await RadarAuth.upsertItem('alerts', { id: product.id, productId: product.id, product: snapshot(product), currentPrice: product.price, targetPrice: target, active: document.getElementById('alertStatus').value === 'active', status: document.getElementById('alertStatus').value, createdAt: new Date().toISOString(), history: buildHistory(product) });
+      document.getElementById('alertTargetPrice').value = '';
+      await loadAll();
+    });
+
+    document.getElementById('saveSettingsBtn').addEventListener('click', async () => {
+      settings = await RadarAuth.saveSettings({
+        newsletter: document.getElementById('newsletterSetting').value === 'true',
+        dailyDigest: document.getElementById('digestSetting').value === 'true',
+        pushNotifications: document.getElementById('pushSetting').value === 'true',
+        publicProfile: document.getElementById('publicProfileSetting').value === 'true'
+      });
+      alert('Configurações salvas.');
+      renderSettings();
+    });
+
+    document.getElementById('loginBtn').addEventListener('click', () => RadarAuth.signInGoogle());
+    document.getElementById('logoutBtn').addEventListener('click', () => RadarAuth.signOut());
+    window.addEventListener('radar:auth-change', loadAll);
+
+    document.querySelectorAll('.tab').forEach(tab => tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    }));
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('themeToggle').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+
+    document.getElementById('searchInput').addEventListener('keydown', event => {
+      if (event.key === 'Enter' && event.target.value.trim()) window.location.href = `../?q=${encodeURIComponent(event.target.value.trim())}`;
+    });
+
+    loadAll();
+  </script>
+</body>
+</html>

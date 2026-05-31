@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mercado Livre — Produtos, Descontos e Reputação | Radar de Preços</title>
+<meta content="Veja todos os produtos do Mercado Livre no Radar de Preços: média de desconto, produtos mais populares, histórico de preços e avaliação da loja." name="description"/>
+<link href="https://radardeprecos.github.io/radar/vendedor/mercado-livre/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="https://radardeprecos.github.io/radar/vendedor/mercado-livre/" property="og:url"/>
+<meta content="Mercado Livre — Produtos e Descontos | Radar de Preços" property="og:title"/>
+<link href="../../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Mercado Livre",
+    "url": "https://www.mercadolivre.com.br",
+    "description": "Maior marketplace do Brasil com milhões de produtos.",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "12500" }
+  }
+  </script>
+<style>
+    .page-hero {
+      background: linear-gradient(135deg, #ffe600 0%, #ffb800 100%);
+      color: #333;
+      padding: 50px 0 40px;
+      margin-bottom: 40px;
+    }
+    .page-hero h1 { font-size: 2rem; margin-bottom: 10px; }
+    .breadcrumb { font-size: 13px; opacity: 0.7; margin-bottom: 15px; }
+    .breadcrumb a { color: #333; text-decoration: none; }
+    .store-profile {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .store-big-logo {
+      width: 80px; height: 80px;
+      border-radius: 16px;
+      background: white;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+    .store-info h1 { font-size: 1.8rem; font-weight: 800; }
+    .store-info p { opacity: 0.8; }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .stat-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+    }
+    .stat-box-val { font-size: 1.6rem; font-weight: 800; color: var(--primary); }
+    .stat-box-label { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+    .section-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 20px; }
+    .cat-dist {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 30px;
+    }
+    .cat-dist h3 { font-weight: 800; margin-bottom: 16px; }
+    .cat-bar-item { margin-bottom: 12px; }
+    .cat-bar-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px; }
+    .cat-bar-track { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+    .cat-bar-fill { height: 100%; background: var(--primary); border-radius: 4px; transition: width 1s ease; }
+    .rep-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 30px;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .rep-score { font-size: 4rem; font-weight: 800; color: var(--primary); }
+    .rep-stars { font-size: 1.5rem; color: #f59e0b; }
+    .rep-detail { font-size: 13px; color: var(--text-light); }
+    .rep-bars { flex: 1; min-width: 200px; }
+    .rep-bar-item { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px; }
+    .rep-bar-track { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+    .rep-bar-fill { height: 100%; background: #f59e0b; border-radius: 3px; }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../../">📊 <strong>Radar de Preços</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+<section class="page-hero">
+<div class="container">
+<div class="breadcrumb"><a href="../../">Início</a> › <a href="../">Lojas</a> › Mercado Livre</div>
+<div class="store-profile">
+<div class="store-big-logo">🛒</div>
+<div class="store-info">
+<h1>Mercado Livre</h1>
+<p>Maior marketplace do Brasil • Monitorado pelo Radar de Preços</p>
+</div>
+</div>
+</div>
+</section>
+<main class="container">
+<!-- Estatísticas -->
+<div class="stats-row" id="statsRow">
+<div class="stat-box"><div class="stat-box-val" id="totalProds">-</div><div class="stat-box-label">Produtos Monitorados</div></div>
+<div class="stat-box"><div class="stat-box-val" id="avgDisc">-</div><div class="stat-box-label">Desconto Médio</div></div>
+<div class="stat-box"><div class="stat-box-val" id="maxDisc">-</div><div class="stat-box-label">Maior Desconto</div></div>
+<div class="stat-box"><div class="stat-box-val">⭐ 4.8</div><div class="stat-box-label">Reputação</div></div>
+<div class="stat-box"><div class="stat-box-val">24h</div><div class="stat-box-label">Entrega Média</div></div>
+<div class="stat-box"><div class="stat-box-val" id="catCount">-</div><div class="stat-box-label">Categorias</div></div>
+</div>
+<!-- Reputação -->
+<div class="rep-box">
+<div>
+<div class="rep-score">4.8</div>
+<div class="rep-stars">★★★★★</div>
+<div class="rep-detail">12.500+ avaliações</div>
+</div>
+<div class="rep-bars">
+<div class="rep-bar-item">5 ★ <div class="rep-bar-track"><div class="rep-bar-fill" style="width:78%"></div></div> 78%</div>
+<div class="rep-bar-item">4 ★ <div class="rep-bar-track"><div class="rep-bar-fill" style="width:14%"></div></div> 14%</div>
+<div class="rep-bar-item">3 ★ <div class="rep-bar-track"><div class="rep-bar-fill" style="width:5%"></div></div> 5%</div>
+<div class="rep-bar-item">2 ★ <div class="rep-bar-track"><div class="rep-bar-fill" style="width:2%"></div></div> 2%</div>
+<div class="rep-bar-item">1 ★ <div class="rep-bar-track"><div class="rep-bar-fill" style="width:1%"></div></div> 1%</div>
+</div>
+</div>
+<!-- Distribuição por categoria -->
+<div class="cat-dist">
+<h3>📊 Distribuição por Categoria</h3>
+<div id="catBars"><!-- Preenchido via JS --></div>
+</div>
+<!-- Produtos mais populares -->
+<h2 class="section-title">🔥 Produtos Mais Populares</h2>
+<div class="products-grid" id="popularProducts">
+<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-light);">Carregando...</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Atualizado via API oficial do Mercado Livre.</p>
+<div class="footer-links">
+<a href="../../sobre/">Sobre</a>
+<a href="../../contato/">Contato</a>
+<a href="../../privacidade/">Privacidade</a>
+<a href="../../indice-radar/">Índice Radar</a>
+<a href="../../tendencias/">Tendências</a>
+<a href="../">Lojas</a>
+</div>
+</div>
+</footer>
+<script>
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+    if (savedTheme === 'dark') document.getElementById('themeToggle').textContent = '☀️';
+    document.getElementById('searchInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') { const q = e.target.value.trim(); if (q) window.location.href = `../../?q=${encodeURIComponent(q)}`; }
+    });
+
+    const CAT_NAMES = {
+      'celulares':'📱 Celulares','informatica':'💻 Informática','tv-e-video':'📺 TV e Vídeo',
+      'eletrodomesticos':'🏠 Eletrodomésticos','games':'🎮 Games','beleza':'💄 Beleza',
+      'casa':'🛋️ Casa','ferramentas':'🔧 Ferramentas','outros':'📦 Outros'
+    };
+
+    fetch('../../data/products/offers.json').then(r=>r.json()).then(products => {
+      document.getElementById('totalProds').textContent = products.length;
+      const discs = products.map(p => p.custom_discount_pct || 0);
+      document.getElementById('avgDisc').textContent = Math.round(discs.reduce((a,b)=>a+b,0)/discs.length) + '%';
+      document.getElementById('maxDisc').textContent = Math.max(...discs) + '%';
+
+      const cats = {};
+      products.forEach(p => { const c = p.custom_category_slug||'outros'; cats[c]=(cats[c]||0)+1; });
+      document.getElementById('catCount').textContent = Object.keys(cats).length;
+
+      const sorted = Object.entries(cats).sort((a,b)=>b[1]-a[1]);
+      const max = sorted[0][1];
+      document.getElementById('catBars').innerHTML = sorted.map(([slug, count]) => `
+        <div class="cat-bar-item">
+          <div class="cat-bar-label"><span>${CAT_NAMES[slug]||slug}</span><span>${count} produtos</span></div>
+          <div class="cat-bar-track"><div class="cat-bar-fill" style="width:${Math.round(count/max*100)}%"></div></div>
+        </div>
+      `).join('');
+
+      const top = [...products].sort((a,b)=>(b.custom_discount_pct||0)-(a.custom_discount_pct||0)).slice(0,8);
+      document.getElementById('popularProducts').innerHTML = top.map(p => {
+        const url = p.custom_affiliate_url || p.permalink || '#';
+        const disc = p.custom_discount_pct || 0;
+        const price = parseFloat(p.price||0).toLocaleString('pt-BR',{minimumFractionDigits:2});
+        const orig = parseFloat(p.originalPrice||p.original_price||p.price||0).toLocaleString('pt-BR',{minimumFractionDigits:2});
+        return `
+<div class="product-card">
+<a href="${url}" rel="noopener sponsored" target="_blank">
+<img alt="${p.title}" height="120" loading="lazy" onerror="this.src='../../assets/img/placeholder.png'" src="${p.image||p.thumbnail}" style="width:100%;height:auto;" width="120"/>
+              ${disc&gt;0?</a></div>`<span class="badge-discount">-${disc}%</span>`:''}
+              <div class="product-info">
+                <h3 class="product-name">${(p.title||p.name||'').substring(0,70)}</h3>
+                <div class="product-price">
+                  ${orig!==price?`<span class="price-original">R$ ${orig}</span>`:''}
+                  <span class="price-current">R$ ${price}</span>
+                </div>
+                <a href="${url}" target="_blank" rel="noopener sponsored" class="btn-buy">Ver Oferta →</a>
+              </div>
+            </a>
+          </div>
+        `;
+      }).join('');
+    }).catch(err => console.error(err));
+  </script>
+</body>
+</html>

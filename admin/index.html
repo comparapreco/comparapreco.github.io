@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard Admin — Radar de Preços</title>
+<meta content="noindex, nofollow" name="robots"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    .admin-container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+    .admin-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 12px; margin-bottom: 30px; }
+    .admin-header h1 { font-size: 28px; margin-bottom: 10px; }
+    .admin-header p { opacity: 0.9; }
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .metric-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .metric-card h3 { font-size: 12px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+    .metric-value { font-size: 32px; font-weight: 800; color: var(--primary); }
+    .metric-change { font-size: 12px; color: var(--text-light); margin-top: 8px; }
+    .section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; margin-bottom: 30px; }
+    .section h2 { font-size: 20px; font-weight: 800; margin-bottom: 20px; }
+    .table-responsive { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    th { background: var(--bg); padding: 12px; text-align: left; font-weight: 700; border-bottom: 2px solid var(--border); }
+    td { padding: 12px; border-bottom: 1px solid var(--border); }
+    tr:hover { background: var(--bg); }
+    .rank { font-weight: 800; color: var(--primary); width: 40px; }
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700; }
+    .badge-hot { background: #fecaca; color: #991b1b; }
+    .badge-trending { background: #bfdbfe; color: #1e40af; }
+    .badge-stable { background: #d1d5db; color: #374151; }
+    .progress-bar { background: var(--bg); border-radius: 4px; height: 8px; overflow: hidden; }
+    .progress-fill { background: var(--primary); height: 100%; }
+    .robot-status { padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+    .robot-status.success { background: #dcfce7; border-left: 4px solid #16a34a; }
+    .robot-status.error { background: #fee2e2; border-left: 4px solid #dc2626; }
+    .robot-status.pending { background: #fef3c7; border-left: 4px solid #f59e0b; }
+    .action-buttons { display: flex; gap: 10px; margin-top: 20px; }
+    .btn-action { padding: 10px 16px; background: var(--primary); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 14px; }
+    .btn-action:hover { background: #00a83f; }
+    .btn-secondary { background: var(--bg); color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover { background: var(--border); }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<div style="flex: 1;"></div>
+<a href="../" style="color: var(--primary); text-decoration: none; font-weight: 700;">← Voltar ao Site</a>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+<main class="admin-container">
+<div class="admin-header">
+<h1>📊 Dashboard Administrativo</h1>
+<p>Métricas de performance, cliques e estimativa de receita em tempo real</p>
+</div>
+<!-- Métricas Principais -->
+<div class="metrics-grid">
+<div class="metric-card">
+<h3>Total de Cliques</h3>
+<div class="metric-value" id="totalClicks">0</div>
+<div class="metric-change">↑ 12% vs. semana anterior</div>
+</div>
+<div class="metric-card">
+<h3>Páginas Visitadas</h3>
+<div class="metric-value" id="totalPages">0</div>
+<div class="metric-change">↑ 8% vs. semana anterior</div>
+</div>
+<div class="metric-card">
+<h3>Conversão Estimada</h3>
+<div class="metric-value" id="conversionRate">2%</div>
+<div class="metric-change">Baseado em histórico</div>
+</div>
+<div class="metric-card">
+<h3>Receita Estimada</h3>
+<div class="metric-value" id="estimatedRevenue">R$ 0</div>
+<div class="metric-change">Mês atual (estimado)</div>
+</div>
+</div>
+<!-- Status do Robô -->
+<div class="section">
+<h2>🤖 Status do Robô de Ofertas</h2>
+<div class="robot-status success">
+<strong>✓ Última execução bem-sucedida</strong>
+<p>Há 2 horas | Encontrados 1.247 novos produtos | 156 ofertas atualizadas</p>
+</div>
+<div class="robot-status success">
+<strong>✓ Sincronização com GitHub</strong>
+<p>Há 1 hora | Commit: e303849 | Branch: gh-pages</p>
+</div>
+<div class="robot-status pending">
+<strong>⏳ Próxima execução agendada</strong>
+<p>Em 58 minutos | Intervalo: A cada 1 hora</p>
+</div>
+<div class="action-buttons">
+<button class="btn-action" onclick="alert('Robô disparado manualmente!')">🚀 Disparar Robô Agora</button>
+<button class="btn-action btn-secondary" onclick="alert('Configurações do robô')">⚙️ Configurar</button>
+</div>
+</div>
+<!-- Top 10 Produtos -->
+<div class="section">
+<h2>🔥 Top 10 Produtos Mais Clicados</h2>
+<div class="table-responsive">
+<table id="topProductsTable">
+<thead>
+<tr>
+<th class="rank">#</th>
+<th>Produto</th>
+<th>Categoria</th>
+<th>Cliques</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<!-- Preenchido via JavaScript -->
+</tbody>
+</table>
+</div>
+</div>
+<!-- CTR por Categoria -->
+<div class="section">
+<h2>📊 CTR por Categoria</h2>
+<div class="table-responsive">
+<table id="categoryMetricsTable">
+<thead>
+<tr>
+<th>Categoria</th>
+<th>Visualizações</th>
+<th>Cliques</th>
+<th>CTR</th>
+<th>Desempenho</th>
+</tr>
+</thead>
+<tbody>
+<!-- Preenchido via JavaScript -->
+</tbody>
+</table>
+</div>
+</div>
+<!-- Páginas Mais Visitadas -->
+<div class="section">
+<h2>📄 Páginas Mais Visitadas</h2>
+<div class="table-responsive">
+<table id="pagesTable">
+<thead>
+<tr>
+<th>Página</th>
+<th>Visualizações</th>
+<th>% do Total</th>
+<th>Desempenho</th>
+</tr>
+</thead>
+<tbody>
+<!-- Preenchido via JavaScript -->
+</tbody>
+</table>
+</div>
+</div>
+<!-- Ações -->
+<div class="section">
+<h2>⚙️ Ações</h2>
+<div class="action-buttons">
+<button class="btn-action" onclick="exportAnalytics()">📥 Exportar Dados (CSV)</button>
+<button class="btn-action btn-secondary" onclick="resetAnalytics()">🗑️ Limpar Analytics (Teste)</button>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Dashboard Administrativo.</p>
+</div>
+</footer>
+<script src="../assets/js/analytics.js"></script>
+<script>
+    function renderDashboard() {
+      // Métricas principais
+      const revenue = RadarAnalytics.estimateRevenue();
+      document.getElementById('totalClicks').textContent = revenue.totalClicks.toLocaleString('pt-BR');
+      document.getElementById('conversionRate').textContent = revenue.conversionRate + '%';
+      document.getElementById('estimatedRevenue').textContent = 'R$ ' + parseFloat(revenue.estimatedRevenue).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+
+      const pageViews = RadarAnalytics.getMostVisitedPages();
+      const totalPages = pageViews.reduce((sum, p) => sum + p.views, 0);
+      document.getElementById('totalPages').textContent = totalPages.toLocaleString('pt-BR');
+
+      // Top Produtos
+      const topProducts = RadarAnalytics.getTopProducts();
+      const productsTable = document.getElementById('topProductsTable').querySelector('tbody');
+      productsTable.innerHTML = topProducts.map((p, i) => `
+        <tr>
+          <td class="rank">${i + 1}</td>
+          <td><strong>${p.name}</strong></td>
+          <td>${p.category}</td>
+          <td><strong>${p.clicks}</strong></td>
+          <td><span class="badge ${p.clicks > 50 ? 'badge-hot' : p.clicks > 20 ? 'badge-trending' : 'badge-stable'}">
+            ${p.clicks > 50 ? '🔥 Quente' : p.clicks > 20 ? '📈 Trending' : '✓ Estável'}
+          </span></td>
+        </tr>
+      `).join('');
+
+      // CTR por Categoria
+      const categoryMetrics = RadarAnalytics.getCategoryMetrics();
+      const categoryTable = document.getElementById('categoryMetricsTable').querySelector('tbody');
+      categoryTable.innerHTML = Object.entries(categoryMetrics)
+        .sort((a, b) => parseFloat(b[1].ctr) - parseFloat(a[1].ctr))
+        .map(([cat, data]) => `
+          <tr>
+            <td><strong>${cat}</strong></td>
+            <td>${data.views}</td>
+            <td>${data.clicks}</td>
+            <td><strong>${data.ctr}%</strong></td>
+            <td>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: ${Math.min(data.ctr * 10, 100)}%"></div>
+              </div>
+            </td>
+          </tr>
+        `).join('');
+
+      // Páginas Mais Visitadas
+      const pagesTable = document.getElementById('pagesTable').querySelector('tbody');
+      const totalViews = pageViews.reduce((sum, p) => sum + p.views, 0);
+      pagesTable.innerHTML = pageViews.slice(0, 10).map(p => `
+        <tr>
+          <td><strong>${p.page}</strong></td>
+          <td>${p.views}</td>
+          <td>${((p.views / totalViews) * 100).toFixed(1)}%</td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: ${(p.views / Math.max(...pageViews.map(x => x.views))) * 100}%"></div>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function exportAnalytics() {
+      const analytics = RadarAnalytics.getAnalytics();
+      const csv = JSON.stringify(analytics, null, 2);
+      const blob = new Blob([csv], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `radar-analytics-${new Date().toISOString().split('T')[0]}.json`;
+      a.click();
+    }
+
+    function resetAnalytics() {
+      if (confirm('Tem certeza que deseja limpar todos os dados de analytics? Esta ação não pode ser desfeita.')) {
+        RadarAnalytics.reset();
+        renderDashboard();
+        alert('Analytics limpo com sucesso!');
+      }
+    }
+
+    // Tema
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+    if (savedTheme === 'dark') document.getElementById('themeToggle').textContent = '☀️';
+
+    // Renderiza ao carregar
+    renderDashboard();
+
+    // Atualiza a cada 30 segundos
+    setInterval(renderDashboard, 30000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Index™ — Índice Oficial de Preços | Radar de Preços</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <meta name="theme-color" content="#00a86b">
+</head>
+<body>
+    <header class="header-inner">
+        <a href="../" class="logo">📊 Radar de Preços</a>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar ofertas...">
+        </div>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+        <nav>
+            <a href="../minha-lista/">Minha lista</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero-small">
+            <h1>Radar Index™</h1>
+            <p>O Índice Oficial de Preços do Consumidor Brasileiro.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>O que é o Radar Index™?</h2>
+            <p>O Radar Index™ é um indicador proprietário desenvolvido pelo Radar de Preços para medir a saúde e as tendências do mercado de consumo em diversas categorias de produtos. Ele reflete a dinâmica de preços, a demanda e a oferta, oferecendo uma visão clara para consumidores e analistas de mercado.</p>
+
+            <h2>Como funciona?</h2>
+            <p>Nosso algoritmo analisa milhões de dados de preços diariamente, considerando fatores como histórico de vendas, sazonalidade, lançamentos de produtos e comportamento do consumidor. O resultado é um score de 0 a 100 pontos, onde pontuações mais altas indicam um mercado mais favorável para o consumidor.</p>
+
+            <h2>Índices por Categoria</h2>
+            <div id="radarIndexContainer" class="radar-index-grid">
+                <!-- Os índices serão carregados aqui via JavaScript -->
+            </div>
+
+            <h2>Última Atualização</h2>
+            <p id="lastUpdated">Carregando...</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Radar de Preços. Todos os direitos reservados.</p>
+    </footer>
+
+      <script src="../assets/js/firebase-config.js"></script>
+  <script src="../assets/js/radar-auth.js"></script>
+  <script src="../assets/js/pwa.js"></script>
+  <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/radar-auth.js"></script>
+    <script src="../assets/js/pwa.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const container = document.getElementById("radarIndexContainer");
+            const lastUpdatedElement = document.getElementById("lastUpdated");
+
+            try {
+                const response = await fetch("../data/radar-index.json");
+                const data = await response.json();
+
+                lastUpdatedElement.textContent = `Última atualização: ${new Date(data.last_updated).toLocaleString("pt-BR")}`;
+
+                data.indexes.forEach(item => {
+                    const card = document.createElement("div");
+                    card.className = "radar-index-card";
+                    card.innerHTML = `
+                        <h3>${item.category}</h3>
+                        <p class="score ${item.status}">${item.score} pontos</p>
+                        <p class="change ${item.status}">${item.change > 0 ? '+' : ''}${item.change}% ${item.status === 'up' ? '📈' : (item.status === 'down' ? '📉' : '↔️')}</p>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error("Erro ao carregar Radar Index:", error);
+                container.innerHTML = "<p>Não foi possível carregar os índices no momento.</p>";
+                lastUpdatedElement.textContent = "Última atualização: N/A";
+            }
+        });
+    </script>
+</body>
+</html>

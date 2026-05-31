@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login — Dashboard Radar de Preços</title>
+<meta content="noindex, nofollow" name="robots"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .login-container { background: var(--card); padding: 40px; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-width: 400px; width: 100%; }
+    .login-header { text-align: center; margin-bottom: 30px; }
+    .login-header h1 { font-size: 28px; font-weight: 800; margin-bottom: 10px; }
+    .login-header p { color: var(--text-light); }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-weight: 700; margin-bottom: 8px; }
+    .form-group input { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; }
+    .form-group input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0, 200, 83, 0.1); }
+    .login-btn { width: 100%; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 6px; font-weight: 700; font-size: 16px; cursor: pointer; transition: all 0.3s; }
+    .login-btn:hover { background: #00a83f; transform: translateY(-2px); }
+    .error { color: #dc2626; font-size: 14px; margin-top: 10px; }
+    .info { background: #dbeafe; border-left: 4px solid #3b82f6; padding: 12px; border-radius: 4px; margin-bottom: 20px; font-size: 13px; }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<div class="login-container">
+<div class="login-header">
+<h1>📊 Radar Admin</h1>
+<p>Dashboard de Performance</p>
+</div>
+<div class="info">
+<strong>Demo:</strong> Use qualquer senha para testar (em produção, isso seria seguro)
+    </div>
+<form onsubmit="handleLogin(event)">
+<div class="form-group">
+<label>Usuário</label>
+<input id="username" placeholder="admin" required="" type="text"/>
+</div>
+<div class="form-group">
+<label>Senha</label>
+<input id="password" placeholder="••••••••" required="" type="password"/>
+</div>
+<button class="login-btn" type="submit">Entrar</button>
+<div class="error" id="error"></div>
+</form>
+</div>
+<script>
+    function handleLogin(event) {
+      event.preventDefault();
+      
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const errorDiv = document.getElementById('error');
+
+      // Validação simples (em produção, seria via servidor)
+      if (username && password) {
+        // Salva token no localStorage
+        localStorage.setItem('radar_admin_token', btoa(`${username}:${password}`));
+        localStorage.setItem('radar_admin_user', username);
+        
+        // Redireciona para dashboard
+        window.location.href = './index.html';
+      } else {
+        errorDiv.textContent = 'Preencha todos os campos';
+      }
+    }
+
+    // Se já está logado, redireciona para dashboard
+    if (localStorage.getItem('radar_admin_token')) {
+      window.location.href = './index.html';
+    }
+  </script>
+</body>
+</html>

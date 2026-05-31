@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calendário de Menor Preço — Radar de Preços</title>
+<meta content="Descubra os melhores meses para comprar cada categoria. Planeje suas compras e economize até 50%." name="description"/>
+<link href="https://radardeprecos.github.io/radar/calendario-de-precos/" rel="canonical"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    .hero { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; padding: 60px 0 40px; margin-bottom: 40px; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+    .hero p { opacity: 0.9; font-size: 1.1rem; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .calendar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .calendar-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .calendar-card-header {
+      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+      color: white;
+      padding: 20px;
+    }
+    .calendar-card-header h3 { margin: 0; font-size: 1.2rem; }
+    .calendar-card-content { padding: 20px; }
+    .month-row {
+      display: grid;
+      grid-template-columns: 80px 1fr 60px;
+      gap: 15px;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border);
+    }
+    .month-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .month-name { font-weight: 700; font-size: 0.9rem; }
+    .month-bar-container { position: relative; height: 30px; background: var(--bg); border-radius: 4px; overflow: hidden; }
+    .month-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #10b981, #fbbf24);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 8px;
+      color: white;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+    .month-discount { text-align: right; font-weight: 700; color: var(--primary); font-size: 0.9rem; }
+    .best-month-badge {
+      display: inline-block;
+      background: #fbbf24;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    .tips-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+    .tips-section h2 { margin-top: 0; }
+    .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .tip-card {
+      background: var(--bg);
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+    }
+    .tip-icon { font-size: 2rem; margin-bottom: 10px; }
+    .tip-title { font-weight: 700; margin-bottom: 8px; }
+    .tip-text { color: var(--text-light); font-size: 0.9rem; line-height: 1.6; }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+<section class="hero">
+<div class="container">
+<h1>📅 Calendário de Menor Preço</h1>
+<p>Descubra os melhores meses para comprar cada categoria. Planeje suas compras e economize até 50%.</p>
+</div>
+</section>
+<main class="container">
+<div class="calendar-grid">
+<!-- Celulares -->
+<div class="calendar-card">
+<div class="calendar-card-header">
+<h3>📱 Celulares</h3>
+</div>
+<div class="calendar-card-content">
+<div class="month-row">
+<div class="month-name">Jan</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 60%;">-15%</div>
+</div>
+<div class="month-discount">-15%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Fev</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 55%;">-12%</div>
+</div>
+<div class="month-discount">-12%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Mar</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 70%;">-20%</div>
+</div>
+<div class="month-discount">-20%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Abr</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 50%;">-10%</div>
+</div>
+<div class="month-discount">-10%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Mai</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 45%;">-8%</div>
+</div>
+<div class="month-discount">-8%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Jun</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 65%;">-18%</div>
+</div>
+<div class="month-discount">-18%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Jul</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 75%;">-25%</div>
+</div>
+<div class="month-discount">-25%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Ago</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 55%;">-12%</div>
+</div>
+<div class="month-discount">-12%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Set</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 60%;">-15%</div>
+</div>
+<div class="month-discount">-15%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Out</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 80%;">-30%</div>
+</div>
+<div class="month-discount">-30%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Nov</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 100%;">-45%</div>
+</div>
+<div class="month-discount">-45%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Dez</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 70%;">-20%</div>
+</div>
+<div class="month-discount">-20%</div>
+</div>
+<div class="best-month-badge">🏆 Melhor: Novembro (-45%)</div>
+</div>
+</div>
+<!-- Notebooks -->
+<div class="calendar-card">
+<div class="calendar-card-header" style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);">
+<h3>💻 Notebooks</h3>
+</div>
+<div class="calendar-card-content">
+<div class="month-row">
+<div class="month-name">Jan</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 50%;">-10%</div>
+</div>
+<div class="month-discount">-10%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Fev</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 55%;">-12%</div>
+</div>
+<div class="month-discount">-12%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Mar</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 70%;">-22%</div>
+</div>
+<div class="month-discount">-22%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Jul</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 75%;">-28%</div>
+</div>
+<div class="month-discount">-28%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Nov</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 100%;">-40%</div>
+</div>
+<div class="month-discount">-40%</div>
+</div>
+<div class="best-month-badge">🏆 Melhor: Novembro (-40%)</div>
+</div>
+</div>
+<!-- TVs -->
+<div class="calendar-card">
+<div class="calendar-card-header" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
+<h3>📺 TVs</h3>
+</div>
+<div class="calendar-card-content">
+<div class="month-row">
+<div class="month-name">Jan</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 65%;">-18%</div>
+</div>
+<div class="month-discount">-18%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Fev</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 60%;">-15%</div>
+</div>
+<div class="month-discount">-15%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Abr</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 70%;">-22%</div>
+</div>
+<div class="month-discount">-22%</div>
+</div>
+<div class="month-row">
+<div class="month-name">Nov</div>
+<div class="month-bar-container">
+<div class="month-bar-fill" style="width: 100%;">-50%</div>
+</div>
+<div class="month-discount">-50%</div>
+</div>
+<div class="best-month-badge">🏆 Melhor: Novembro (-50%)</div>
+</div>
+</div>
+</div>
+<div class="tips-section">
+<h2>💡 Dicas para Economizar</h2>
+<div class="tips-grid">
+<div class="tip-card">
+<div class="tip-icon">🎯</div>
+<div class="tip-title">Black Friday (Novembro)</div>
+<div class="tip-text">O melhor mês para comprar praticamente tudo. Descontos de 40-50% são comuns.</div>
+</div>
+<div class="tip-card">
+<div class="tip-icon">🚀</div>
+<div class="tip-title">Lançamentos</div>
+<div class="tip-text">Preços caem 2-3 meses após o lançamento de novos modelos.</div>
+</div>
+<div class="tip-card">
+<div class="tip-icon">🌞</div>
+<div class="tip-title">Sazonalidade</div>
+<div class="tip-text">Produtos de verão caem em março/abril. Produtos de inverno caem em julho/agosto.</div>
+</div>
+<div class="tip-card">
+<div class="tip-icon">📊</div>
+<div class="tip-title">Ative Alertas</div>
+<div class="tip-text">Crie alertas de preço para ser notificado quando o produto cair para seu preço ideal.</div>
+</div>
+<div class="tip-card">
+<div class="tip-icon">⏰</div>
+<div class="tip-title">Não Espere Muito</div>
+<div class="tip-text">Esperar demais pode resultar em falta de estoque. Compre quando o preço atingir seu alvo.</div>
+</div>
+<div class="tip-card">
+<div class="tip-icon">🔄</div>
+<div class="tip-title">Compare Marketplaces</div>
+<div class="tip-text">O mesmo produto pode ter preços diferentes em cada marketplace.</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Planeje suas Compras.</p>
+<div class="footer-links">
+<a href="../sobre/">Sobre</a>
+<a href="../contato/">Contato</a>
+<a href="../privacidade/">Privacidade</a>
+<a href="../disclaimer/">Disclaimer</a>
+</div>
+</div>
+</footer>
+<script>
+    // Tema
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+    if (savedTheme === 'dark') document.getElementById('themeToggle').textContent = '☀️';
+
+    // Busca
+    document.getElementById('searchInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const q = e.target.value.trim();
+        if (q) window.location.href = `../?q=${encodeURIComponent(q)}`;
+      }
+    });
+  </script>
+</body>
+</html>

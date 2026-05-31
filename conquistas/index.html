@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sistema de Conquistas — Radar de Preços</title>
+<meta content="Desbloqueie badges e conquistas ao usar o Radar de Preços. Desafios gamificados para economizar mais." name="description"/>
+<link href="https://radardeprecos.github.io/radar/conquistas/" rel="canonical"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<style>
+.achievement-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--card);
+  border: 2px solid var(--border);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.achievement-badge:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+.achievement-badge.unlocked {
+  border-color: var(--primary);
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(76, 175, 80, 0.05));
+}
+.achievement-badge.locked {
+  opacity: 0.6;
+}
+.badge-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.badge-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text);
+}
+.badge-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+.badge-progress {
+  width: 100%;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.badge-progress-bar {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+.badge-status {
+  font-size: 11px;
+  margin-top: 8px;
+  font-weight: 600;
+}
+.status-unlocked {
+  color: #4CAF50;
+}
+.status-locked {
+  color: #999;
+}
+.leaderboard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.leaderboard-item {
+  padding: 15px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.leaderboard-item:last-child {
+  border-bottom: none;
+}
+.leaderboard-rank {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+  min-width: 30px;
+}
+.leaderboard-info {
+  flex: 1;
+  margin-left: 15px;
+}
+.leaderboard-name {
+  font-weight: 600;
+  color: var(--text);
+}
+.leaderboard-points {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.leaderboard-score {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 18px;
+}
+</style>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+
+<section class="main-hero">
+<div class="container">
+<h1>🏆 Sistema de Conquistas</h1>
+<p>Desbloqueie badges e desafios ao usar o Radar de Preços.</p>
+</div>
+</section>
+
+<main class="container">
+<section class="section">
+<div class="section-header">
+<h2>👤 Seu Progresso</h2>
+</div>
+<div style="background: var(--card); padding: 30px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 40px;">
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; text-align: center;">
+<div>
+<div style="font-size: 32px; font-weight: 800; color: var(--primary);">2.450</div>
+<div style="font-size: 12px; color: var(--text-secondary);">Pontos Totais</div>
+</div>
+<div>
+<div style="font-size: 32px; font-weight: 800; color: var(--primary);">12</div>
+<div style="font-size: 12px; color: var(--text-secondary);">Conquistas Desbloqueadas</div>
+</div>
+<div>
+<div style="font-size: 32px; font-weight: 800; color: var(--primary);">18</div>
+<div style="font-size: 12px; color: var(--text-secondary);">Desafios Restantes</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2>🎯 Conquistas Disponíveis</h2>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-bottom: 40px;">
+<!-- Caçador de Ofertas -->
+<div class="achievement-badge unlocked">
+<div class="badge-icon">🔍</div>
+<div class="badge-name">Caçador de Ofertas</div>
+<div class="badge-desc">Encontre 10 ofertas em um dia</div>
+<div class="badge-progress">
+<div class="badge-progress-bar" style="width: 100%;"></div>
+</div>
+<div class="badge-status status-unlocked">✅ Desbloqueado</div>
+</div>
+
+<!-- Mestre da Economia -->
+<div class="achievement-badge unlocked">
+<div class="badge-icon">💰</div>
+<div class="badge-name">Mestre da Economia</div>
+<div class="badge-desc">Economize R$ 1.000 em compras</div>
+<div class="badge-progress">
+<div class="badge-progress-bar" style="width: 100%;"></div>
+</div>
+<div class="badge-status status-unlocked">✅ Desbloqueado</div>
+</div>
+
+<!-- Radar Premium -->
+<div class="achievement-badge unlocked">
+<div class="badge-icon">👑</div>
+<div class="badge-name">Radar Premium</div>
+<div class="badge-desc">Crie 5 alertas personalizados</div>
+<div class="badge-progress">
+<div class="badge-progress-bar" style="width: 100%;"></div>
+</div>
+<div class="badge-status status-unlocked">✅ Desbloqueado</div>
+</div>
+
+<!-- Comparador Expert -->
+<div class="achievement-badge unlocked">
+<div class="badge-icon">⚖️</div>
+<div class="badge-name">Comparador Expert</div>
+<div class="badge-desc">Compare 20 produtos diferentes</div>
+<div class="badge-progress">
+<div class="badge-progress-bar" style="width: 65%;"></div>
+</div>
+<div class="badge-status status-locked">13/20</div>
+</div>
+
+<!-- Leitor Voraz -->
+<div class="achievement-badge">
+<div class="badge-icon">📚</div>
+<div class="badge-name">Leitor Voraz</div>
+<div class="badge-desc">Leia 10 artigos do blog</div>
+<div class="badge-progress">
+<div class="badge-progress-bar" style="width: 30%;"></div>
+</div>
+<div class="badge-status status-locked">3/10</div>
+</div>
+
+<!-- Black Friday Master -->
+<div class="achievement-badge">
+<div class="badge-icon">🛍️</div>
+<div class="badge-name">Black Friday Master</div>
+<div class="badge-desc">Economize 50% em Black Friday</div>
+<div class="badge-progress">
+<div class="badge-progress-bar" style="width: 0%;"></div>
+</div>
+<div class="badge-status status-locked">Bloqueado</div>
+</div>
+
+<!-- Cupom Hunter -->
+<div class="achievement-badge">
+<div class="badge-icon">🎟️</div>
+<div class="badge-name">Cupom Hunter</div>
+<div class="badge-desc">Use 5 cupons diferentes</div>
+<div class="badge-progress">
+<div class="badge-progress-bar" style="width: 20%;"></div>
+</div>
+<div class="badge-status status-locked">1/5</div>
+</div>
+
+<!-- Favoritos Collector -->
+<div class="achievement-badge">
+<div class="badge-icon">❤️</div>
+<div class="badge-name">Favoritos Collector</div>
+<div class="badge-desc">Adicione 50 produtos aos favoritos</div>
+<div class="badge-progress">
+<div class="badge-progress-bar" style="width: 10%;"></div>
+</div>
+<div class="badge-status status-locked">5/50</div>
+</div>
+
+<!-- Guru de Marcas -->
+<div class="achievement-badge">
+<div class="badge-icon">🏷️</div>
+<div class="badge-name">Guru de Marcas</div>
+<div class="badge-desc">Explore todas as 10 marcas top</div>
+<div class="badge-progress">
+<div class="badge-progress-bar" style="width: 40%;"></div>
+</div>
+<div class="badge-status status-locked">4/10</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2>🏅 Ranking de Usuários</h2>
+</div>
+
+<div class="leaderboard">
+<div class="leaderboard-item">
+<div class="leaderboard-rank">🥇</div>
+<div class="leaderboard-info">
+<div class="leaderboard-name">Você</div>
+<div class="leaderboard-points">12 Conquistas • 2.450 Pontos</div>
+</div>
+<div class="leaderboard-score">2.450 pts</div>
+</div>
+
+<div class="leaderboard-item">
+<div class="leaderboard-rank">🥈</div>
+<div class="leaderboard-info">
+<div class="leaderboard-name">João Silva</div>
+<div class="leaderboard-points">15 Conquistas • 3.200 Pontos</div>
+</div>
+<div class="leaderboard-score">3.200 pts</div>
+</div>
+
+<div class="leaderboard-item">
+<div class="leaderboard-rank">🥉</div>
+<div class="leaderboard-info">
+<div class="leaderboard-name">Maria Santos</div>
+<div class="leaderboard-points">14 Conquistas • 2.980 Pontos</div>
+</div>
+<div class="leaderboard-score">2.980 pts</div>
+</div>
+
+<div class="leaderboard-item">
+<div class="leaderboard-rank">4</div>
+<div class="leaderboard-info">
+<div class="leaderboard-name">Carlos Oliveira</div>
+<div class="leaderboard-points">11 Conquistas • 2.100 Pontos</div>
+</div>
+<div class="leaderboard-score">2.100 pts</div>
+</div>
+
+<div class="leaderboard-item">
+<div class="leaderboard-rank">5</div>
+<div class="leaderboard-info">
+<div class="leaderboard-name">Ana Costa</div>
+<div class="leaderboard-points">10 Conquistas • 1.950 Pontos</div>
+</div>
+<div class="leaderboard-score">1.950 pts</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Gamificação Inteligente.</p>
+<div class="footer-links">
+<a href="../noticias/">Blog</a>
+<a href="../sobre/">Sobre</a>
+<a href="../contato/">Contato</a>
+<a href="../privacidade/">Privacidade</a>
+<a href="../termos/">Termos</a>
+<a href="../quem-somos/">Quem Somos</a>
+</div>
+</div>
+</footer>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

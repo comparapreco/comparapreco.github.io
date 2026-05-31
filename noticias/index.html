@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notícias de Tecnologia e Promoções — Lançamentos e Cupons | Radar de Preços</title>
+<meta content="Fique por dentro dos lançamentos de produtos, promoções especiais, cupons de desconto e eventos de ofertas como Black Friday e Prime Day." name="description"/>
+<link href="https://radardeprecos.github.io/radar/noticias/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="https://radardeprecos.github.io/radar/noticias/" property="og:url"/>
+<meta content="Notícias de Tecnologia e Promoções | Radar de Preços" property="og:title"/>
+<meta content="Lançamentos, promoções, cupons e eventos de ofertas atualizados." property="og:description"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Radar de Preços — Centro de Notícias",
+    "description": "Lançamentos, promoções, cupons e eventos de ofertas.",
+    "url": "https://radardeprecos.github.io/radar/noticias/"
+  }
+  </script>
+<style>
+    .page-hero {
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+      color: white;
+      padding: 50px 0 40px;
+      margin-bottom: 40px;
+    }
+    .page-hero h1 { font-size: 2rem; margin-bottom: 10px; }
+    .breadcrumb { font-size: 13px; opacity: 0.8; margin-bottom: 15px; }
+    .breadcrumb a { color: white; text-decoration: none; }
+    .news-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 900px) { .news-layout { grid-template-columns: 1fr; } }
+    .news-main {}
+    .news-sidebar {}
+    .featured-news {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 25px;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.2s;
+    }
+    .featured-news:hover { transform: translateY(-3px); }
+    .featured-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: linear-gradient(135deg, var(--primary), #00a83f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+    .featured-img-placeholder {
+      width: 100%;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+    .featured-body { padding: 20px; }
+    .news-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .tag-lancamento { background: #dbeafe; color: #1d4ed8; }
+    .tag-promocao { background: #dcfce7; color: #15803d; }
+    .tag-cupom { background: #fef3c7; color: #b45309; }
+    .tag-evento { background: #fce7f3; color: #9d174d; }
+    .tag-analise { background: #f3e8ff; color: #7e22ce; }
+    .news-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; line-height: 1.4; }
+    .news-excerpt { font-size: 14px; color: var(--text-light); line-height: 1.6; margin-bottom: 12px; }
+    .news-meta { font-size: 12px; color: var(--text-light); display: flex; gap: 12px; align-items: center; }
+    .news-list { display: flex; flex-direction: column; gap: 15px; }
+    .news-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      gap: 15px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s;
+    }
+    .news-item:hover { border-color: var(--primary); }
+    .news-item-icon {
+      width: 60px; height: 60px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      background: var(--bg);
+    }
+    .news-item-body { flex: 1; }
+    .news-item-title { font-weight: 700; font-size: 14px; margin-bottom: 5px; line-height: 1.4; }
+    .news-item-meta { font-size: 12px; color: var(--text-light); }
+    .sidebar-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .sidebar-box h3 { font-weight: 800; margin-bottom: 15px; font-size: 1rem; }
+    .cupom-item {
+      background: var(--bg);
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+    .cupom-code {
+      font-family: monospace;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+    .cupom-desc { font-size: 12px; color: var(--text-light); }
+    .copy-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+    .event-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .event-item:last-child { border-bottom: none; }
+    .event-date {
+      background: var(--primary);
+      color: white;
+      border-radius: 8px;
+      padding: 6px 10px;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 800;
+      min-width: 50px;
+    }
+    .event-name { font-weight: 700; font-size: 13px; }
+    .event-desc { font-size: 11px; color: var(--text-light); }
+    .section-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 20px; }
+    .filter-tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .filter-tab {
+      padding: 7px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .filter-tab.active { background: var(--primary); color: white; border-color: var(--primary); }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+<section class="page-hero">
+<div class="container">
+<div class="breadcrumb"><a href="../">Início</a> › Notícias</div>
+<h1>📰 Centro de Notícias</h1>
+<p>Lançamentos, promoções, cupons e eventos de ofertas. Tudo o que você precisa saber para economizar.</p>
+</div>
+</section>
+<main class="container">
+<div class="filter-tabs" id="filterTabs">
+<button class="filter-tab active" data-filter="all">📰 Todas</button>
+<button class="filter-tab" data-filter="lancamento">🚀 Lançamentos</button>
+<button class="filter-tab" data-filter="promocao">💰 Promoções</button>
+<button class="filter-tab" data-filter="cupom">🎟️ Cupons</button>
+<button class="filter-tab" data-filter="evento">🎉 Eventos</button>
+</div>
+<div class="news-layout">
+<!-- Coluna principal -->
+<div class="news-main">
+<!-- Notícia em destaque -->
+<div class="featured-news" id="featuredNews">
+<!-- Preenchido via JS -->
+</div>
+<h2 class="section-title">Últimas Notícias</h2>
+<div class="news-list" id="newsList">
+<!-- Preenchido via JS -->
+</div>
+</div>
+<!-- Sidebar -->
+<div class="news-sidebar">
+<!-- Cupons ativos -->
+<div class="sidebar-box">
+<h3>🎟️ Cupons Ativos</h3>
+<div class="cupom-item">
+<div class="cupom-code">RADAR10</div>
+<div class="cupom-desc">10% extra em eletrônicos no Mercado Livre</div>
+<button class="copy-btn" onclick="copyCode('RADAR10', this)">Copiar</button>
+</div>
+<div class="cupom-item">
+<div class="cupom-code">TECH20</div>
+<div class="cupom-desc">R$20 off em compras acima de R$200</div>
+<button class="copy-btn" onclick="copyCode('TECH20', this)">Copiar</button>
+</div>
+<div class="cupom-item">
+<div class="cupom-code">FRETEGRATIS</div>
+<div class="cupom-desc">Frete grátis em qualquer produto</div>
+<button class="copy-btn" onclick="copyCode('FRETEGRATIS', this)">Copiar</button>
+</div>
+<div class="cupom-item">
+<div class="cupom-code">PRIMEDAY26</div>
+<div class="cupom-desc">15% off em produtos Amazon Prime</div>
+<button class="copy-btn" onclick="copyCode('PRIMEDAY26', this)">Copiar</button>
+</div>
+</div>
+<!-- Próximos eventos -->
+<div class="sidebar-box">
+<h3>📅 Próximos Eventos</h3>
+<div class="event-item">
+<div class="event-date">JUL<br/>15</div>
+<div>
+<div class="event-name">Amazon Prime Day</div>
+<div class="event-desc">48h de ofertas exclusivas</div>
+</div>
+</div>
+<div class="event-item">
+<div class="event-date">AGO<br/>01</div>
+<div>
+<div class="event-name">Mega Oferta ML</div>
+<div class="event-desc">Festival de descontos Mercado Livre</div>
+</div>
+</div>
+<div class="event-item">
+<div class="event-date">NOV<br/>28</div>
+<div>
+<div class="event-name">Black Friday 2026</div>
+<div class="event-desc">O maior evento de descontos do ano</div>
+</div>
+</div>
+<div class="event-item">
+<div class="event-date">DEZ<br/>12</div>
+<div>
+<div class="event-name">Cyber Monday</div>
+<div class="event-desc">Foco em eletrônicos e tech</div>
+</div>
+</div>
+</div>
+<!-- Produtos em destaque -->
+<div class="sidebar-box">
+<h3>🔥 Ofertas do Momento</h3>
+<div id="sidebarOffers">Carregando...</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Atualizado via API oficial do Mercado Livre.</p>
+<div class="footer-links">
+<a href="../sobre/">Sobre</a>
+<a href="../contato/">Contato</a>
+<a href="../privacidade/">Privacidade</a>
+<a href="../indice-radar/">Índice Radar</a>
+<a href="../tendencias/">Tendências</a>
+<a href="../noticias/">Notícias</a>
+</div>
+</div>
+</footer>
+<script>
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+    if (savedTheme === 'dark') document.getElementById('themeToggle').textContent = '☀️';
+    document.getElementById('searchInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') { const q = e.target.value.trim(); if (q) window.location.href = `../?q=${encodeURIComponent(q)}`; }
+    });
+
+    function copyCode(code, btn) {
+      navigator.clipboard.writeText(code).then(() => {
+        btn.textContent = '✅ Copiado!';
+        setTimeout(() => btn.textContent = 'Copiar', 2000);
+      });
+    }
+
+    // Notícias estáticas (em produção viriam de um JSON gerado automaticamente)
+    const NEWS = [
+      {
+        id: 0, tag: 'analise', tagLabel: '📊 Missão', tagClass: 'tag-analise',
+        icon: '🎯', title: 'Missão Radar de Preços: Qualidade, SEO e Transparência em Ofertas',
+        excerpt: 'Conheça nossa nova diretriz editorial focada em EEAT e valor real para o usuário. Transformamos ofertas em guias completos.',
+        date: '31 Mai 2026', readTime: '15 min', featured: true, url: 'posts/missao-projeto-radar-precos.html'
+      },
+      {
+        id: 1, tag: 'lancamento', tagLabel: '🚀 Lançamento', tagClass: 'tag-lancamento',
+        icon: '📱', title: 'Samsung Galaxy A17 5G chega ao Brasil com preço agressivo',
+        excerpt: 'O novo Galaxy A17 5G da Samsung foi lançado oficialmente no Brasil com câmera de 50MP, tela de 6.7" e processador de 6nm. Confira onde encontrar pelo menor preço.',
+        date: '31 Mai 2026', readTime: '12 min', featured: false, url: 'posts/samsung-galaxy-a17-5g-lancamento.html'
+      },
+      {
+        id: 2, tag: 'promocao', tagLabel: '💰 Promoção', tagClass: 'tag-promocao',
+        icon: '💻', title: 'Notebooks Lenovo com até 40% de desconto no Mercado Livre',
+        excerpt: 'O Mercado Livre está com uma mega promoção de notebooks Lenovo IdeaPad e ThinkPad. Descontos de até 40% com parcelamento em até 12x sem juros.',
+        date: '30 Mai 2026', readTime: '11 min', featured: false, url: 'posts/notebooks-lenovo-promocao.html'
+      },
+      {
+        id: 3, tag: 'cupom', tagLabel: '🎟️ Cupom', tagClass: 'tag-cupom',
+        icon: '🎟️', title: 'Cupons exclusivos para eletrônicos válidos em Maio 2026',
+        excerpt: 'Use os cupons RADAR10 e TECH20 para economizar ainda mais nas suas compras de eletrônicos. Confira a lista completa e atualizada.',
+        date: '31 Mai 2026', readTime: '12 min', featured: false, url: 'posts/cupons-exclusivos-maio.html'
+      },
+      {
+        id: 4, tag: 'evento', tagLabel: '🎉 Evento', tagClass: 'tag-evento',
+        icon: '🛒', title: 'Amazon Prime Day 2026 confirmado para julho — o que esperar',
+        excerpt: 'A Amazon confirmou o Prime Day 2026 para meados de julho. Especialistas esperam descontos históricos em eletrônicos, eletrodomésticos e mais.',
+        date: '28 Mai 2026', readTime: '13 min', featured: false, url: 'posts/amazon-prime-day-2026.html'
+      },
+      {
+        id: 5, tag: 'analise', tagLabel: '📊 Análise', tagClass: 'tag-analise',
+        icon: '📊', title: 'Preços de TVs sobem 2% em maio — entenda o motivo',
+        excerpt: 'Segundo o Índice Radar de Preços, as TVs foram a única categoria a registrar alta em maio de 2026. O aumento está relacionado à escassez de painéis OLED.',
+        date: '27 Mai 2026', readTime: '11 min', featured: false, url: 'posts/precos-tvs-maio-2026.html'
+      },
+      {
+        id: 6, tag: 'lancamento', tagLabel: '🚀 Lançamento', tagClass: 'tag-lancamento',
+        icon: '🎮', title: 'PlayStation 5 Pro no Brasil: Preço, Data e Onde Comprar',
+        excerpt: 'A Sony acaba de confirmar o lançamento do PS5 Pro no Brasil. Confira as especificações técnicas, tecnologias de IA e o preço oficial sugerido.',
+        date: '31 Mai 2026', readTime: '14 min', featured: false, url: 'posts/playstation-5-pro-brasil.html'
+      },
+      {
+        id: 7, tag: 'promocao', tagLabel: '💰 Promoção', tagClass: 'tag-promocao',
+        icon: '🏠', title: 'Eletrodomésticos em Promoção: Melhores Ofertas de Maio',
+        excerpt: 'Geladeiras, máquinas de lavar e fogões com descontos reais monitorados pelo Radar. Confira o que vale a pena comprar este mês.',
+        date: '31 Mai 2026', readTime: '13 min', featured: false, url: 'posts/eletrodomesticos-promocao-maio.html'
+      },
+      {
+        id: 8, tag: 'analise', tagLabel: '📊 Análise', tagClass: 'tag-analise',
+        icon: '💡', title: 'Games Registram Maior Queda de Preços em Maio 2026',
+        excerpt: 'O segmento de games registrou queda de 8% nos preços em maio, segundo o Índice Radar. Jogos e consoles estão no menor preço histórico.',
+        date: '24 Mai 2026', readTime: '12 min', featured: false, url: 'posts/games-queda-precos-maio.html'}],path:
+      }
+    ];
+
+    let currentFilter = 'all';
+
+    function renderNews(filter) {
+      const filtered = filter === 'all' ? NEWS : NEWS.filter(n => n.tag === filter);
+
+      // Notícia em destaque
+      const featured = filtered[0];
+      if (featured) {
+        document.getElementById('featuredNews').innerHTML = `
+          <div class="featured-img-placeholder" style="background:linear-gradient(135deg,#0f766e,#14b8a6);">${featured.icon}</div>
+          <div class="featured-body">
+            <span class="news-tag ${featured.tagClass}">${featured.tagLabel}</span>
+            <a href="${featured.url}" style="text-decoration:none; color:inherit;"><div class="news-title">${featured.title}</div></a>
+            <div class="news-excerpt">${featured.excerpt}</div>
+            <div class="news-meta">
+              <span>📅 ${featured.date}</span>
+              <span>⏱️ ${featured.readTime} de leitura</span>
+            </div>
+          </div>
+        `;
+      }
+
+      // Lista de notícias
+      const rest = filtered.slice(1);
+      document.getElementById('newsList').innerHTML = rest.map(n => `
+        <a href="${n.url}" style="text-decoration:none; color:inherit;">
+        <div class="news-item">
+          <div class="news-item-icon">${n.icon}</div>
+          <div class="news-item-body">
+            <span class="news-tag ${n.tagClass}" style="margin-bottom:5px;display:inline-block;">${n.tagLabel}</span>
+            <div class="news-item-title">${n.title}</div>
+            <div class="news-item-meta">📅 ${n.date} · ⏱️ ${n.readTime}</div>
+          </div>
+        </div>
+        </a>
+      `).join('');
+
+      if (rest.length === 0 && !featured) {
+        document.getElementById('newsList').innerHTML = '<div style="text-align:center;padding:30px;color:var(--text-light);">Nenhuma notícia nesta categoria no momento.</div>';
+      }
+    }
+
+    document.getElementById('filterTabs').addEventListener('click', e => {
+      const btn = e.target.closest('.filter-tab');
+      if (!btn) return;
+      document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.dataset.filter;
+      renderNews(currentFilter);
+    });
+
+    renderNews('all');
+
+    // Sidebar: produtos em destaque
+    fetch('../data/products/offers.json').then(r=>r.json()).then(products => {
+      const top3 = [...products].sort((a,b)=>(b.custom_discount_pct||0)-(a.custom_discount_pct||0)).slice(0,3);
+      document.getElementById('sidebarOffers').innerHTML = top3.map(p => {
+        const url = p.custom_affiliate_url || p.permalink || '#';
+        const disc = p.custom_discount_pct || 0;
+        const price = parseFloat(p.price||0).toLocaleString('pt-BR',{minimumFractionDigits:2});
+        return `
+<a href="${url}" rel="noopener sponsored" style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;" target="_blank">
+<img alt="${p.title}" height="120" loading="lazy" src="${p.image||p.thumbnail}" style="width:100%;height:auto;" width="120"/>
+<div>
+<div style="font-size:12px;font-weight:700;line-height:1.3;">${(p.title||p.name||'').substring(0,45)}...</div>
+<div style="color:var(--primary);font-weight:800;font-size:13px;">R$ ${price}</div>
+              ${disc>0?`<span style="font-size:11px;color:#16a34a;font-weight:700;">-${disc}% OFF</span>`:''}
+            </div>
+          </a>
+        `;
+      }).join('');
+    }).catch(()=>{});
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Radar de Mercado — Relatórios de Inteligência de Preços | Radar de Preços</title>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<style>
+    .report-card { background: var(--card); padding: 30px; border-radius: 15px; border: 1px solid var(--border); margin-bottom: 20px; }
+    .trend-up { color: #dc2626; font-weight: 800; }
+    .trend-down { color: #00a83f; font-weight: 800; }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header"><div class="container"><a class="logo" href="../">📊 Radar de Preços</a></div></header>
+<main class="container">
+<h1 style="margin: 40px 0;">📊 Radar de Mercado</h1>
+<p>Dados exclusivos baseados no monitoramento de mais de 50.000 produtos diariamente.</p>
+<div class="report-card">
+<h3>Relatório Mensal: Maio 2026</h3>
+<p>O setor de <strong>Celulares</strong> registrou uma queda média de <span class="trend-down">12.4%</span> nos preços reais, impulsionado pelo lançamento da linha Galaxy A07.</p>
+<p>Já os <strong>Notebooks Gamers</strong> tiveram uma alta de <span class="trend-up">5.2%</span> devido à baixa disponibilidade de componentes importados.</p>
+<a class="btn-outline" href="#">Ver Relatório Completo</a>
+</div>
+<div class="report-card">
+<h3>Monitor de Categorias (Últimos 7 dias)</h3>
+<ul>
+<li>📺 TVs OLED: <span class="trend-down">↓ 8%</span></li>
+<li>🎧 Fones Bluetooth: <span class="trend-down">↓ 15%</span></li>
+<li>💻 Hardware PC: <span class="trend-up">↑ 3%</span></li>
+</ul>
+</div>
+</main>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

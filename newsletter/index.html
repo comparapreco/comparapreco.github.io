@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Newsletter — Radar de Preços</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <meta name="theme-color" content="#00a86b">
+</head>
+<body>
+    <header class="header-inner">
+        <a href="../" class="logo">📊 Radar de Preços</a>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar ofertas...">
+        </div>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+        <nav>
+            <a href="../minha-lista/">Minha lista</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero-small">
+            <h1>Central de Newsletter</h1>
+            <p>Escolha os tópicos que você quer receber.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Selecione seus Interesses</h2>
+            <p>Personalize sua newsletter escolhendo as categorias que mais te interessam. Você receberá as melhores ofertas e notícias sobre os produtos que você ama.</p>
+
+            <div id="newsletterSegments" class="newsletter-segments">
+                <!-- Segmentos de newsletter serão carregados aqui -->
+            </div>
+
+            <h2>Frequência de Envio</h2>
+            <p>Escolha com que frequência deseja receber a newsletter:</p>
+            <div style="margin: 20px 0;">
+                <label style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <input type="radio" name="frequency" value="daily" checked> Diária
+                </label>
+                <label style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <input type="radio" name="frequency" value="weekly"> Semanal
+                </label>
+                <label style="display: flex; align-items: center;">
+                    <input type="radio" name="frequency" value="monthly"> Mensal
+                </label>
+            </div>
+
+            <button id="savePreferences" class="btn btn-primary" style="margin-top: 20px;">Salvar Preferências</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Radar de Preços. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/radar-auth.js"></script>
+    <script src="../assets/js/pwa.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const container = document.getElementById("newsletterSegments");
+            const saveBtn = document.getElementById("savePreferences");
+
+            try {
+                const response = await fetch("../data/segmented-newsletter.json");
+                const data = await response.json();
+
+                data.segments.forEach(segment => {
+                    const card = document.createElement("div");
+                    card.className = "newsletter-segment-card";
+                    card.innerHTML = `
+                        <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                            <input type="checkbox" name="segment" value="${segment.name}" checked>
+                            <span style="font-size: 1.5em;">${segment.emoji}</span>
+                            <div>
+                                <strong>${segment.name}</strong>
+                                <p style="margin: 0; font-size: 0.9em; color: #666;">${segment.description}</p>
+                            </div>
+                        </label>
+                    `;
+                    container.appendChild(card);
+                });
+
+                saveBtn.addEventListener("click", () => {
+                    const selected = Array.from(document.querySelectorAll('input[name="segment"]:checked'))
+                        .map(input => input.value);
+                    const frequency = document.querySelector('input[name="frequency"]:checked').value;
+                    
+                    RadarAuth.saveSettings({
+                        newsletter: true,
+                        newsletterSegments: selected,
+                        newsletterFrequency: frequency
+                    }).then(() => {
+                        alert("Preferências de newsletter salvas com sucesso!");
+                    });
+                });
+            } catch (error) {
+                console.error("Erro ao carregar segmentos de newsletter:", error);
+                container.innerHTML = "<p>Não foi possível carregar os segmentos no momento.</p>";
+            }
+        });
+    </script>
+</body>
+</html>

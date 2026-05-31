@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Inteligência — Radar de Preços</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <meta name="theme-color" content="#00a86b">
+</head>
+<body>
+    <header class="header-inner">
+        <a href="../" class="logo">📊 Radar de Preços</a>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar ofertas...">
+        </div>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+        <nav>
+            <a href="../minha-lista/">Minha lista</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero-small">
+            <h1>Centro de Inteligência</h1>
+            <p>Análises profundas do mercado de consumo brasileiro.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Produtos que Mais Caíram</h2>
+            <p>Veja quais produtos tiveram as maiores quedas de preço no período.</p>
+            <div id="fallingProducts" class="products-grid">
+                <!-- Produtos com maiores quedas serão carregados aqui -->
+            </div>
+
+            <h2>Categorias em Crescimento</h2>
+            <p>Descubra quais categorias estão em alta e apresentam as melhores oportunidades.</p>
+            <div id="growingCategories" class="content-list">
+                <!-- Categorias em crescimento serão carregadas aqui -->
+            </div>
+
+            <h2>Marcas com Melhor Desempenho</h2>
+            <p>As marcas que mais se destacam em qualidade e preço.</p>
+            <div id="topBrands" class="content-list">
+                <!-- Marcas com melhor desempenho serão carregadas aqui -->
+            </div>
+
+            <h2>Tendências de Preço</h2>
+            <p>Análise das tendências de preço por categoria.</p>
+            <div id="priceTrends" class="content-list">
+                <!-- Tendências de preço serão carregadas aqui -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Radar de Preços. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/radar-auth.js"></script>
+    <script src="../assets/js/pwa.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            try {
+                const response = await fetch("../data/market-intelligence.json");
+                const data = response.json();
+
+                // Carregar produtos que mais caíram
+                const fallingContainer = document.getElementById("fallingProducts");
+                data.then(d => {
+                    d.top_falling_products.forEach(product => {
+                        const card = document.createElement("div");
+                        card.className = "product-card";
+                        card.innerHTML = `
+                            <h3>${product.name}</h3>
+                            <p class="price-tag">R$ ${product.current_price.toFixed(2)} <span class="old-price">R$ ${product.previous_price.toFixed(2)}</span></p>
+                            <p style="color: #f44336; font-weight: bold;">↓ ${product.fall_percentage}%</p>
+                        `;
+                        fallingContainer.appendChild(card);
+                    });
+
+                    // Carregar categorias em crescimento
+                    const growingContainer = document.getElementById("growingCategories");
+                    d.growing_categories.forEach(cat => {
+                        const item = document.createElement("div");
+                        item.className = "content-item";
+                        item.innerHTML = `
+                            <p><strong>${cat.category}</strong>: +${cat.growth_percentage}% ${cat.trend === 'up' ? '📈' : '📉'}</p>
+                        `;
+                        growingContainer.appendChild(item);
+                    });
+
+                    // Carregar marcas com melhor desempenho
+                    const brandsContainer = document.getElementById("topBrands");
+                    d.top_brands.forEach(brand => {
+                        const item = document.createElement("div");
+                        item.className = "content-item";
+                        item.innerHTML = `
+                            <p><strong>${brand.brand}</strong>: Score ${brand.score}/100 | ${brand.products_monitored} produtos</p>
+                        `;
+                        brandsContainer.appendChild(item);
+                    });
+
+                    // Carregar tendências de preço
+                    const trendsContainer = document.getElementById("priceTrends");
+                    d.price_trends.forEach(trend => {
+                        const item = document.createElement("div");
+                        item.className = "content-item";
+                        item.innerHTML = `
+                            <p><strong>${trend.category}</strong>: ${trend.trend === 'down' ? '↓' : (trend.trend === 'up' ? '↑' : '↔')} ${Math.abs(trend.change_percentage)}%</p>
+                        `;
+                        trendsContainer.appendChild(item);
+                    });
+                });
+            } catch (error) {
+                console.error("Erro ao carregar dados de inteligência:", error);
+            }
+        });
+    </script>
+</body>
+</html>

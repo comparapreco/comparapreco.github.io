@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Central de Alertas Avançados — Radar de Preços</title>
+<meta content="Crie alertas personalizados por categoria, marca e faixa de preço. Receba notificações em tempo real quando encontrar a melhor oferta." name="description"/>
+<link href="https://radardeprecos.github.io/radar/alertas/" rel="canonical"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<style>
+.alert-form {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text);
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  background: var(--bg);
+  color: var(--text);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.alert-item {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alert-info h4 {
+  margin: 0 0 5px 0;
+  color: var(--text);
+}
+.alert-info p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.badge-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge-active {
+  background: #d4edda;
+  color: #155724;
+}
+.badge-inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+</style>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+
+<section class="main-hero">
+<div class="container">
+<h1>🔔 Central de Alertas Avançados</h1>
+<p>Crie alertas personalizados e receba notificações quando encontrar a melhor oferta.</p>
+</div>
+</section>
+
+<main class="container">
+<section class="section">
+<div class="section-header">
+<h2>⚙️ Criar Novo Alerta</h2>
+</div>
+
+<div class="alert-form">
+<form id="alertForm">
+<div class="form-row">
+<div class="form-group">
+<label for="alertType">Tipo de Alerta</label>
+<select id="alertType" required>
+<option value="">Selecione...</option>
+<option value="category">Por Categoria</option>
+<option value="brand">Por Marca</option>
+<option value="price">Por Faixa de Preço</option>
+</select>
+</div>
+<div class="form-group">
+<label for="alertCategory">Categoria</label>
+<select id="alertCategory">
+<option value="">Todas</option>
+<option value="celulares">📱 Celulares</option>
+<option value="notebooks">💻 Notebooks</option>
+<option value="tvs">📺 TVs</option>
+<option value="tablets">📱 Tablets</option>
+<option value="fones">🎧 Fones</option>
+<option value="games">🎮 Games</option>
+</select>
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label for="alertBrand">Marca (opcional)</label>
+<input type="text" id="alertBrand" placeholder="ex: Samsung, Apple, LG"/>
+</div>
+<div class="form-group">
+<label for="alertMaxPrice">Preço Máximo (R$)</label>
+<input type="number" id="alertMaxPrice" placeholder="ex: 1000" min="0"/>
+</div>
+</div>
+
+<div class="form-group">
+<label for="alertEmail">Email para Notificações</label>
+<input type="email" id="alertEmail" placeholder="seu@email.com" required/>
+</div>
+
+<div style="display: flex; gap: 10px;">
+<button type="submit" class="btn" style="background: var(--primary);">Criar Alerta</button>
+<button type="reset" class="btn" style="background: var(--text-secondary);">Limpar</button>
+</div>
+</form>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2>📋 Meus Alertas Ativos</h2>
+</div>
+
+<div id="alertsList">
+<div class="alert-item">
+<div class="alert-info">
+<h4>📱 Celulares Samsung</h4>
+<p>Notificar quando preço cair abaixo de R$ 1.500 | Criado há 3 dias</p>
+</div>
+<div>
+<span class="badge-status badge-active">Ativo</span>
+<button class="btn" style="margin-left: 10px; padding: 5px 15px; font-size: 12px;">Editar</button>
+</div>
+</div>
+
+<div class="alert-item">
+<div class="alert-info">
+<h4>💻 Notebooks Dell</h4>
+<p>Notificar quando preço cair abaixo de R$ 3.000 | Criado há 7 dias</p>
+</div>
+<div>
+<span class="badge-status badge-active">Ativo</span>
+<button class="btn" style="margin-left: 10px; padding: 5px 15px; font-size: 12px;">Editar</button>
+</div>
+</div>
+
+<div class="alert-item">
+<div class="alert-info">
+<h4>📺 TVs LG OLED</h4>
+<p>Notificar quando preço cair abaixo de R$ 4.000 | Criado há 15 dias</p>
+</div>
+<div>
+<span class="badge-status badge-inactive">Inativo</span>
+<button class="btn" style="margin-left: 10px; padding: 5px 15px; font-size: 12px;">Ativar</button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2>💡 Dicas para Usar Alertas</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+<div class="product-card">
+<h4>🎯 Seja Específico</h4>
+<p>Use marca e modelo exato para receber apenas ofertas relevantes.</p>
+</div>
+<div class="product-card">
+<h4>💰 Defina Limite de Preço</h4>
+<p>Estabeleça o preço máximo que você está disposto a pagar.</p>
+</div>
+<div class="product-card">
+<h4>📧 Confirme seu Email</h4>
+<p>Verifique sua caixa de entrada para não perder notificações.</p>
+</div>
+<div class="product-card">
+<h4>⏰ Monitore Períodos</h4>
+<p>Alertas são mais eficazes durante promoções e Black Friday.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Alertas Inteligentes.</p>
+<div class="footer-links">
+<a href="../noticias/">Blog</a>
+<a href="../sobre/">Sobre</a>
+<a href="../contato/">Contato</a>
+<a href="../privacidade/">Privacidade</a>
+<a href="../termos/">Termos</a>
+<a href="../quem-somos/">Quem Somos</a>
+</div>
+</div>
+</footer>
+
+<script src="../assets/js/app.js"></script>
+<script>
+document.getElementById('alertForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const type = document.getElementById('alertType').value;
+  const category = document.getElementById('alertCategory').value;
+  const brand = document.getElementById('alertBrand').value;
+  const maxPrice = document.getElementById('alertMaxPrice').value;
+  const email = document.getElementById('alertEmail').value;
+  
+  if (!type || !email) {
+    alert('Por favor, preencha todos os campos obrigatórios');
+    return;
+  }
+  
+  // Simular criação de alerta
+  alert(`✅ Alerta criado com sucesso!\n\nVocê receberá notificações em: ${email}`);
+  this.reset();
+});
+</script>
+</body>
+</html>

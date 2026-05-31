@@ -1,0 +1,23 @@
+[
+  {
+    "id": "MLB1",
+    "name": "Produto Teste",
+    "price": 100,
+    "custom_discount_pct": 10,
+    "permalink": "http://teste.com/p1"
+  },
+  {
+    "id": "MLB2",
+    "name": "Produto Teste",
+    "price": 100,
+    "custom_discount_pct": 20,
+    "permalink": "http://teste.com/p1?tracking=1"
+  },
+  {
+    "id": "MLB3",
+    "name": "Outro Produto",
+    "price": 200,
+    "custom_discount_pct": 5,
+    "permalink": "http://teste.com/p3"
+  }
+]

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Maiores Quedas de Preço Hoje | Radar de Preços</title>
+<meta content="Veja os produtos com maiores quedas de preço hoje. Ofertas que explodiram com descontos de até 80%. Atualizado em tempo real." name="description"/>
+<link href="https://radardeprecos.github.io/radar/quedas-hoje/" rel="canonical"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Maiores Quedas de Preço Hoje",
+    "description": "Produtos com maiores quedas de preço em tempo real",
+    "url": "https://radardeprecos.github.io/radar/quedas-hoje/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Radar de Preços"
+    }
+  }
+  </script>
+<style>
+    .hero-section {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      padding: 60px 0 40px;
+      margin-bottom: 40px;
+    }
+    .hero-section h1 { font-size: 2.5rem; margin-bottom: 15px; }
+    .hero-section p { opacity: 0.9; font-size: 1.1rem; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .filters { display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
+    .filter-btn { padding: 8px 16px; border-radius: 20px; border: 2px solid var(--border); background: var(--card); cursor: pointer; transition: all 0.3s; }
+    .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+    .drops-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .drop-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .drop-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .drop-image { width: 100%; height: 200px; object-fit: cover; background: var(--bg); }
+    .drop-content { padding: 16px; }
+    .drop-title { font-weight: 700; margin-bottom: 10px; font-size: 0.95rem; line-height: 1.4; }
+    .drop-price { display: flex; gap: 10px; align-items: center; margin-bottom: 12px; }
+    .old-price { text-decoration: line-through; color: var(--text-light); font-size: 0.9rem; }
+    .new-price { font-size: 1.3rem; font-weight: 800; color: var(--primary); }
+    .drop-badge { background: #ef4444; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; }
+    .drop-stats { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px; }
+    .drop-button { width: 100%; padding: 10px; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 700; transition: background 0.3s; }
+    .drop-button:hover { background: var(--primary-dark); }
+    .empty-state { text-align: center; padding: 60px 20px; }
+    .empty-state-icon { font-size: 4rem; margin-bottom: 20px; }
+    .empty-state-text { font-size: 1.1rem; color: var(--text-light); }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+<section class="hero-section">
+<div class="container">
+<h1>🔥 Maiores Quedas de Preço Hoje</h1>
+<p>Produtos com os maiores descontos em tempo real. Atualizado a cada hora.</p>
+</div>
+</section>
+<main class="container">
+<div class="filters">
+<button class="filter-btn active" data-filter="all">Todas as Categorias</button>
+<button class="filter-btn" data-filter="celulares">📱 Celulares</button>
+<button class="filter-btn" data-filter="informatica">💻 Informática</button>
+<button class="filter-btn" data-filter="tv">📺 TVs</button>
+<button class="filter-btn" data-filter="games">🎮 Games</button>
+</div>
+<div class="drops-grid" id="dropsGrid">
+<!-- Preenchido via JavaScript -->
+</div>
+<div class="empty-state" id="emptyState" style="display: none;">
+<div class="empty-state-icon">📊</div>
+<p class="empty-state-text">Nenhuma queda de preço encontrada nesta categoria.</p>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Atualizado em tempo real.</p>
+<div class="footer-links">
+<a href="../sobre/">Sobre</a>
+<a href="../contato/">Contato</a>
+<a href="../privacidade/">Privacidade</a>
+<a href="../disclaimer/">Disclaimer</a>
+</div>
+</div>
+</footer>
+<script>
+    // Dados simulados de quedas de preço (em produção, viriam da API)
+    const drops = [
+      {
+        id: 1,
+        title: "Samsung Galaxy A36 128GB",
+        category: "celulares",
+        oldPrice: 1899,
+        newPrice: 1299,
+        image: "https://via.placeholder.com/280x200?text=Samsung+Galaxy+A36",
+        discount: 32,
+        views: 1250,
+        affiliate_url: "#"
+      },
+      {
+        id: 2,
+        title: "LG 55\" OLED 4K 120Hz",
+        category: "tv",
+        oldPrice: 4999,
+        newPrice: 2999,
+        image: "https://via.placeholder.com/280x200?text=LG+OLED+55",
+        discount: 40,
+        views: 890,
+        affiliate_url: "#"
+      },
+      {
+        id: 3,
+        title: "Notebook Lenovo IdeaPad 3",
+        category: "informatica",
+        oldPrice: 3299,
+        newPrice: 1999,
+        image: "https://via.placeholder.com/280x200?text=Lenovo+IdeaPad",
+        discount: 39,
+        views: 2100,
+        affiliate_url: "#"
+      },
+      {
+        id: 4,
+        title: "PlayStation 5 Standard",
+        category: "games",
+        oldPrice: 4999,
+        newPrice: 3999,
+        image: "https://via.placeholder.com/280x200?text=PS5",
+        discount: 20,
+        views: 3400,
+        affiliate_url: "#"
+      },
+      {
+        id: 5,
+        title: "Xiaomi Redmi Note 13",
+        category: "celulares",
+        oldPrice: 1599,
+        newPrice: 899,
+        image: "https://via.placeholder.com/280x200?text=Xiaomi+Redmi",
+        discount: 44,
+        views: 1890,
+        affiliate_url: "#"
+      },
+      {
+        id: 6,
+        title: "Monitor Samsung 27\" 144Hz",
+        category: "informatica",
+        oldPrice: 1299,
+        newPrice: 699,
+        image: "https://via.placeholder.com/280x200?text=Monitor+Samsung",
+        discount: 46,
+        views: 1200,
+        affiliate_url: "#"
+      }
+    ];
+
+    function renderDrops(filter = 'all') {
+      const grid = document.getElementById('dropsGrid');
+      const empty = document.getElementById('emptyState');
+      
+      const filtered = filter === 'all' ? drops : drops.filter(d => d.category === filter);
+      
+      if (filtered.length === 0) {
+        grid.style.display = 'none';
+        empty.style.display = 'block';
+        return;
+      }
+      
+      grid.style.display = 'grid';
+      empty.style.display = 'none';
+      
+      grid.innerHTML = filtered
+        .sort((a, b) => b.discount - a.discount)
+        .map(drop => `
+<div class="drop-card">
+<img alt="${drop.title}" class="drop-image" height="120" src="${drop.image}" style="width:100%;height:auto;" width="120"/>
+<div class="drop-content">
+<div class="drop-title">${drop.title}</div>
+<div class="drop-price">
+<span class="old-price">R$ ${drop.oldPrice.toLocaleString('pt-BR')}</span>
+<span class="new-price">R$ ${drop.newPrice.toLocaleString('pt-BR')}</span>
+<span class="drop-badge">-${drop.discount}%</span>
+</div>
+<div class="drop-stats">
+<span>👁️ ${drop.views.toLocaleString('pt-BR')} visualizações</span>
+<span>💰 Economize R$ ${(drop.oldPrice - drop.newPrice).toLocaleString('pt-BR')}</span>
+</div>
+<a class="drop-button" href="${drop.affiliate_url}">Ver Oferta</a>
+</div>
+</div>
+`).join('');
+    }
+
+    // Event listeners dos filtros
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        renderDrops(e.target.dataset.filter);
+      });
+    });
+
+    // Busca
+    document.getElementById('searchInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const q = e.target.value.trim();
+        if (q) window.location.href = `../?q=${encodeURIComponent(q)}`;
+      }
+    });
+
+    // Tema
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+    if (savedTheme === 'dark') document.getElementById('themeToggle').textContent = '☀️';
+
+    // Render inicial
+    renderDrops();
+  </script>
+</body>
+</html>

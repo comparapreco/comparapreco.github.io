@@ -1,0 +1,43 @@
+{
+  "name": "Radar de Preços",
+  "short_name": "Radar",
+  "description": "Comparador inteligente com favoritos, alertas, recomendações e dashboard pessoal.",
+  "start_url": "/radar/?source=pwa",
+  "scope": "/radar/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#00c853",
+  "categories": ["shopping", "productivity", "utilities"],
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Minha Lista",
+      "short_name": "Lista",
+      "description": "Abrir favoritos e alertas",
+      "url": "/radar/minha-lista/",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Recomendados",
+      "short_name": "IA",
+      "description": "Abrir recomendações personalizadas",
+      "url": "/radar/recomendados/",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

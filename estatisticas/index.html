@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Estatísticas do Radar — Transparência e Dados | Radar de Preços</title>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<style>
+    .stats-hero { background: var(--card); padding: 80px 0; text-align: center; border-bottom: 1px solid var(--border); }
+    .big-stat { font-size: 64px; font-weight: 900; color: var(--primary); margin-bottom: 10px; }
+    .stat-desc { font-size: 18px; color: var(--text-light); }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 60px 0; }
+    .full-stat-card { background: var(--card); padding: 40px; border-radius: 20px; border: 1px solid var(--border); text-align: center; }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header"><div class="container"><a class="logo" href="../">📊 Radar de Preços</a></div></header>
+<section class="stats-hero">
+<div class="container">
+<h1>📊 Transparência em Dados</h1>
+<p>Monitoramos o mercado em tempo real para garantir que você pague o menor preço.</p>
+</div>
+</section>
+<main class="container">
+<div class="stats-grid">
+<div class="full-stat-card">
+<div class="big-stat" id="stat-total">5.420</div>
+<div class="stat-desc">Produtos Monitorados</div>
+</div>
+<div class="full-stat-card">
+<div class="big-stat" id="stat-savings">42%</div>
+<div class="stat-desc">Economia Média Real</div>
+</div>
+<div class="full-stat-card">
+<div class="big-stat" id="stat-updates">24/7</div>
+<div class="stat-desc">Atualização Automática</div>
+</div>
+</div>
+<section class="section">
+<h2>Por que confiar no Radar?</h2>
+<p>Diferente de outros sites, nosso robô verifica o histórico de preços oficial do Mercado Livre a cada hora. Só marcamos como "Oferta" produtos que realmente estão abaixo da média dos últimos 30 dias.</p>
+</section>
+</main>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

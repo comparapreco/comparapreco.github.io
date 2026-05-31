@@ -1,0 +1,59 @@
+{
+  "last_updated": "2026-05-31T20:09:55.405043",
+  "daily_metrics": {
+    "clicks": 45230,
+    "ctr": 3.2,
+    "estimated_revenue": 1245.5,
+    "top_products": [
+      {
+        "name": "Whey Protein 900g",
+        "clicks": 1245,
+        "revenue": 156.23
+      },
+      {
+        "name": "Smartphone Samsung Galaxy",
+        "clicks": 892,
+        "revenue": 234.56
+      },
+      {
+        "name": "Smart TV 43\"",
+        "clicks": 756,
+        "revenue": 198.45
+      }
+    ]
+  },
+  "category_performance": [
+    {
+      "category": "Celulares",
+      "clicks": 12450,
+      "revenue": 456.78,
+      "ctr": 4.2
+    },
+    {
+      "category": "Eletrônicos",
+      "clicks": 10234,
+      "revenue": 389.45,
+      "ctr": 3.8
+    },
+    {
+      "category": "Suplementos",
+      "clicks": 8956,
+      "revenue": 234.56,
+      "ctr": 3.1
+    }
+  ],
+  "top_lucrative_categories": [
+    {
+      "category": "Celulares",
+      "estimated_monthly_revenue": 13703.4
+    },
+    {
+      "category": "Eletrônicos",
+      "estimated_monthly_revenue": 11683.5
+    },
+    {
+      "category": "Suplementos",
+      "estimated_monthly_revenue": 7036.8
+    }
+  ]
+}

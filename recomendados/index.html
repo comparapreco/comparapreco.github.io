@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendados para você — Radar de Preços</title>
+  <meta name="description" content="Recomendações personalizadas do Radar de Preços com base em favoritos, cliques, categorias e alertas.">
+  <link rel="canonical" href="https://radardeprecos.github.io/radar/recomendados/">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta name="theme-color" content="#00c853">
+  <link rel="apple-touch-icon" href="../assets/icons/icon-192.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    .recommend-hero { background: linear-gradient(135deg, #111827 0%, #1976d2 55%, #00c853 100%); color:#fff; padding:64px 0 42px; }
+    .recommend-hero h1 { font-size:clamp(2rem, 5vw, 3.2rem); margin-bottom:12px; }
+    .reason-bar { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+    .reason-pill { background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.24); border-radius:999px; padding:7px 12px; font-weight:800; }
+    .recommend-layout { display:grid; grid-template-columns:280px 1fr; gap:22px; margin-top:28px; }
+    .profile-box, .rec-card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; }
+    .rec-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:18px; }
+    .rec-card { padding:14px; display:flex; flex-direction:column; gap:10px; }
+    .rec-card img { height:150px; width:100%; object-fit:contain; background:#f6f6f6; border-radius:10px; padding:10px; }
+    .score-line { height:8px; background:var(--bg); border-radius:99px; overflow:hidden; }
+    .score-line span { display:block; height:100%; background:linear-gradient(90deg,#1976d2,#00c853); }
+    @media(max-width:860px){.recommend-layout{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <header class="header"><div class="container header-inner"><a href="../" class="logo">📊 <strong>Radar de Preços</strong></a><div class="search-bar"><input id="searchInput" placeholder="Buscar recomendações..."></div><button id="themeToggle">🌙</button></div></header>
+  <section class="recommend-hero"><div class="container"><h1>Radar personalizado</h1><p>Produtos priorizados por categorias favoritas, histórico de cliques, favoritos e sinais de queda de preço.</p><div class="reason-bar" id="reasonBar"></div></div></section>
+  <main class="container recommend-layout">
+    <aside class="profile-box"><h2>Seu perfil de compra</h2><div id="profileInsights"></div><p style="margin-top:18px;"><a class="btn" style="background:var(--primary);color:white;width:100%;" href="../minha-lista/">Ajustar alertas</a></p></aside>
+    <section><div class="section-header"><h2>Recomendações de hoje</h2></div><div class="rec-grid" id="recommendationsGrid"></div></section>
+  </main>
+  <footer class="footer"><div class="container"><p>© 2026 Radar de Preços. Recomendações personalizadas.</p></div></footer>
+  <script src="../assets/js/firebase-config.js"></script>
+  <script src="../assets/js/radar-auth.js"></script>
+  <script src="../assets/js/pwa.js"></script>
+  <script>
+    const money = value => Number(value || 0).toLocaleString('pt-BR', { style:'currency', currency:'BRL' });
+    const safe = text => { const div=document.createElement('div'); div.textContent=text||''; return div.innerHTML; };
+    let products=[]; let favorites=[]; let alerts=[]; let recs=[];
+
+    function decision(product){ const discount=Number(product.custom_discount_pct||product.discount||0); const price=Number(product.price||0); const original=Number(product.originalPrice||product.original_price||product.price||0); const ratio=original?price/original:1; if(discount>=35||ratio<=.72)return{label:'Comprar agora',cls:''}; if(discount>=18||ratio<=.88)return{label:'Preço justo',cls:''}; if(discount>=8)return{label:'Esperar',cls:'wait'}; return{label:'Preço acima da média',cls:'expensive'}; }
+    function url(product){ return product.custom_affiliate_url || product.permalink || product.url || '#'; }
+    function snapshot(product){ return { id:product.id, productId:product.id, name:product.name||product.title, title:product.title||product.name, price:Number(product.price||0), originalPrice:Number(product.originalPrice||product.original_price||product.price||0), image:product.image||product.thumbnail||'', category:product.custom_category_slug||'', discount:Number(product.custom_discount_pct||0), url:url(product), addedAt:new Date().toISOString() }; }
+
+    function categoryWeights(){ const history=RadarAuth.getBehaviorHistory(); const weights={}; [...favorites, ...alerts.map(a=>a.product||a), ...history.clicks, ...history.views].forEach(item=>{ const cat=item.category||item.custom_category_slug; if(!cat)return; weights[cat]=(weights[cat]||0)+1; }); return weights; }
+    function scoreProduct(product, weights){ const cat=product.custom_category_slug||''; const discount=Number(product.custom_discount_pct||0); const price=Number(product.price||0); const original=Number(product.originalPrice||product.original_price||price); const ratio=original?1-(price/original):0; const favoriteBoost=favorites.some(f=>String(f.productId||f.id)===String(product.id))?35:0; const alertBoost=alerts.some(a=>String(a.productId||a.id)===String(product.id))?25:0; const categoryBoost=(weights[cat]||0)*12; return Math.round(discount*1.4 + ratio*55 + favoriteBoost + alertBoost + categoryBoost); }
+    function compute(){ const weights=categoryWeights(); recs=[...products].map(p=>({ ...p, radarPersonalScore:scoreProduct(p,weights) })).sort((a,b)=>b.radarPersonalScore-a.radarPersonalScore).slice(0,36); render(weights); }
+    function render(weights){ const topCats=Object.entries(weights).sort((a,b)=>b[1]-a[1]).slice(0,5); document.getElementById('reasonBar').innerHTML=(topCats.length?topCats:[['ofertas',1]]).map(([cat,count])=>`<span class="reason-pill">${safe(cat)} · ${count} sinal(is)</span>`).join(''); document.getElementById('profileInsights').innerHTML=`<p><strong>${favorites.length}</strong> favorito(s)</p><p><strong>${alerts.length}</strong> alerta(s)</p><p><strong>${topCats[0]?.[0]||'sem categoria dominante'}</strong> é sua categoria mais forte.</p><p>O Radar IA combina desconto, histórico, categoria e recorrência para priorizar recomendações.</p>`; document.getElementById('recommendationsGrid').innerHTML=recs.map(product=>{ const d=decision(product); const score=Math.min(100, product.radarPersonalScore); return `<article class="rec-card"><img src="${safe(product.image||product.thumbnail)}" alt="${safe(product.name||product.title)}" loading="lazy"><strong>${safe((product.name||product.title).slice(0,72))}</strong><div class="radar-decision ${d.cls}">${d.label}</div><div class="price-tag">${money(product.price)}</div><div class="score-line"><span style="width:${score}%"></span></div><small>Score pessoal: ${score}/100 · ${safe(product.custom_category_slug)}</small><button class="small-btn" onclick="fav('${product.id}')">Favoritar</button><button class="small-btn" onclick="alertFor('${product.id}')">Criar alerta</button><a class="small-btn primary" target="_blank" rel="nofollow sponsored" onclick="trackRec('${product.id}')" href="${safe(url(product))}">Ver oferta</a></article>`; }).join(''); }
+    function trackRec(id){ const p=products.find(x=>String(x.id)===String(id)); if(p) RadarAuth.trackProductClick(snapshot(p)); }
+    async function fav(id){ const p=products.find(x=>String(x.id)===String(id)); if(!p)return; await RadarAuth.upsertItem('favorites', snapshot(p)); alert('Produto salvo em Minha Lista.'); await load(); }
+    async function alertFor(id){ const p=products.find(x=>String(x.id)===String(id)); if(!p)return; const target=prompt('Preço desejado:', Math.floor(Number(p.price||0)*.92)); if(!target)return; await RadarAuth.upsertItem('alerts',{id:p.id, productId:p.id, product:snapshot(p), currentPrice:p.price, targetPrice:Number(target), active:true, createdAt:new Date().toISOString()}); alert('Alerta criado.'); await load(); }
+    async function load(){ await RadarAuth.init(); const res=await fetch('../data/products/offers.json?t='+Date.now()); products=await res.json(); [favorites,alerts]=await Promise.all([RadarAuth.getCollection('favorites',[]), RadarAuth.getCollection('alerts',[])]); compute(); }
+    document.getElementById('searchInput').addEventListener('input',e=>{ const q=e.target.value.toLowerCase(); document.querySelectorAll('.rec-card').forEach(card=>card.style.display=card.textContent.toLowerCase().includes(q)?'flex':'none'); });
+    const theme=localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme',theme); document.getElementById('themeToggle').textContent=theme==='dark'?'☀️':'🌙'; document.getElementById('themeToggle').addEventListener('click',()=>{const next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('theme',next);document.getElementById('themeToggle').textContent=next==='dark'?'☀️':'🌙';});
+    load();
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "last_updated": "2026-05-31T12:00:00Z",
+  "indexes": [
+    {
+      "category": "Celulares",
+      "score": 83,
+      "change": -2.07,
+      "status": "down"
+    },
+    {
+      "category": "TVs",
+      "score": 70,
+      "change": 1.78,
+      "status": "up"
+    },
+    {
+      "category": "Notebooks",
+      "score": 73,
+      "change": -2.5,
+      "status": "down"
+    },
+    {
+      "category": "Games",
+      "score": 71,
+      "change": -2.23,
+      "status": "down"
+    },
+    {
+      "category": "Eletrodomésticos",
+      "score": 76,
+      "change": 0.14,
+      "status": "up"
+    },
+    {
+      "category": "Informática",
+      "score": 80,
+      "change": -2.19,
+      "status": "down"
+    },
+    {
+      "category": "Livros",
+      "score": 73,
+      "change": -0.83,
+      "status": "down"
+    },
+    {
+      "category": "Moda",
+      "score": 84,
+      "change": 2.38,
+      "status": "up"
+    },
+    {
+      "category": "Esportes",
+      "score": 79,
+      "change": 1.5,
+      "status": "up"
+    },
+    {
+      "category": "Beleza",
+      "score": 70,
+      "change": 2.44,
+      "status": "up"
+    }
+  ]
+}

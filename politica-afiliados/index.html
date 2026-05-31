@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Política de Afiliados — Radar de Preços</title>
+<meta content="Conheça nossa política de afiliados, como funcionam as comissões e como mantemos a transparência com nossos usuários." name="description"/>
+<link href="https://radardeprecos.github.io/radar/politica-afiliados/" rel="canonical"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    .static-page { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+    .static-page h1 { font-size: 2rem; font-weight: 800; margin-bottom: 20px; color: var(--text); }
+    .static-page h2 { font-size: 1.3rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px; color: var(--text); }
+    .static-page h3 { font-size: 1.1rem; font-weight: 700; margin-top: 20px; margin-bottom: 10px; color: var(--text); }
+    .static-page p { line-height: 1.8; margin-bottom: 15px; color: var(--text-light); font-size: 15px; }
+    .static-page ul, .static-page ol { margin-left: 20px; margin-bottom: 15px; }
+    .static-page li { line-height: 1.8; margin-bottom: 10px; color: var(--text-light); }
+    .static-page strong { color: var(--text); font-weight: 700; }
+    .static-page em { font-style: italic; }
+    .highlight-box { background: var(--bg); border-left: 4px solid var(--primary); padding: 20px; border-radius: 8px; margin: 20px 0; }
+    .table-responsive { overflow-x: auto; margin: 20px 0; }
+    .table-responsive table { width: 100%; border-collapse: collapse; }
+    .table-responsive th { background: var(--bg); padding: 12px; text-align: left; font-weight: 700; border-bottom: 2px solid var(--border); }
+    .table-responsive td { padding: 12px; border-bottom: 1px solid var(--border); }
+    .last-updated { font-size: 13px; color: var(--text-light); margin-bottom: 30px; font-style: italic; }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+<main class="container static-page">
+<h1>💼 Política de Afiliados</h1>
+<p class="last-updated">Última atualização: 31 de maio de 2026</p>
+<div class="highlight-box">
+<strong>Transparência em Primeiro Lugar:</strong> O Radar de Preços acredita em total transparência com seus usuários sobre como geramos receita. Esta página explica como funcionam nossos programas de afiliados e como isso nos permite manter o serviço gratuito.
+    </div>
+<h2>1. O que é um Link de Afiliado?</h2>
+<p>Um link de afiliado é um URL especial que identifica o Radar de Preços como a fonte de referência quando você clica e realiza uma compra. Quando você compra através de um link de afiliado, o varejista reconhece que você foi referenciado por nós e nos concede uma comissão.</p>
+<h2>2. Como Mantemos Você Seguro</h2>
+<p>Você pode ter confiança ao usar o Radar de Preços porque:</p>
+<ul>
+<li><strong>Nenhuma alteração de preço:</strong> Os links de afiliado não aumentam o preço que você paga. Você paga exatamente o mesmo preço se clicar no nosso link ou acessar o site diretamente.</li>
+<li><strong>Sem coleta de dados pessoais:</strong> Não coletamos seus dados pessoais para fins de afiliação. O varejista coleta seus dados conforme sua própria política de privacidade.</li>
+<li><strong>Sem rastreamento intrusivo:</strong> Usamos apenas cookies necessários para rastrear a origem da compra.</li>
+<li><strong>Conformidade com LGPD:</strong> Todos os nossos processos estão em conformidade com a Lei Geral de Proteção de Dados do Brasil.</li>
+</ul>
+<h2>3. Programas de Afiliados Parceiros</h2>
+<p>O Radar de Preços participa dos seguintes programas de afiliados:</p>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>Varejista</th>
+<th>Programa</th>
+<th>Comissão Típica</th>
+<th>Política</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mercado Livre</strong></td>
+<td>Programa de Afiliados ML</td>
+<td>2-8% por venda</td>
+<td><a href="https://afiliados.mercadolivre.com.br" rel="noopener" target="_blank">Saiba mais</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Brasil</strong></td>
+<td>Programa de Associados</td>
+<td>5-10% por venda</td>
+<td><a href="https://associados.amazon.com.br" rel="noopener" target="_blank">Saiba mais</a></td>
+</tr>
+<tr>
+<td><strong>Shopee</strong></td>
+<td>Shopee Afiliados</td>
+<td>5-15% por venda</td>
+<td><a href="https://shopee.com.br/affiliate" rel="noopener" target="_blank">Saiba mais</a></td>
+</tr>
+<tr>
+<td><strong>Americanas</strong></td>
+<td>Programa de Afiliados</td>
+<td>3-7% por venda</td>
+<td><a href="https://www.americanas.com.br/afiliados" rel="noopener" target="_blank">Saiba mais</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>4. Como Usamos as Comissões</h2>
+<p>As comissões de afiliados são usadas para:</p>
+<ul>
+<li><strong>Manutenção do servidor:</strong> Manter o site online e rápido</li>
+<li><strong>Desenvolvimento:</strong> Criar novas funcionalidades e melhorias</li>
+<li><strong>Coleta de dados:</strong> Manter as APIs de preços atualizadas</li>
+<li><strong>Equipe:</strong> Pagar desenvolvedores, designers e analistas</li>
+<li><strong>Pesquisa:</strong> Investir em tecnologia e inteligência artificial</li>
+<li><strong>Conformidade:</strong> Garantir que estamos em conformidade com todas as leis</li>
+</ul>
+<h2>5. Identificação de Links de Afiliados</h2>
+<p>O Radar de Preços identifica claramente os links de afiliados:</p>
+<ul>
+<li>Botões "Ver Oferta" e "Comprar Agora" são links de afiliados</li>
+<li>Links em cards de produtos são links de afiliados</li>
+<li>Quando possível, exibimos a indicação "link de afiliado" ou "link patrocinado"</li>
+<li>Você pode verificar o URL para confirmar se é um link de afiliado</li>
+</ul>
+<h2>6. Seleção de Produtos</h2>
+<p>O Radar de Preços seleciona produtos para exibição com base em:</p>
+<ul>
+<li><strong>Qualidade:</strong> Produtos com boas avaliações e histórico positivo</li>
+<li><strong>Preço:</strong> Ofertas com desconto real em relação ao histórico</li>
+<li><strong>Relevância:</strong> Produtos que são populares e procurados</li>
+<li><strong>Disponibilidade:</strong> Produtos em estoque e disponíveis para compra</li>
+</ul>
+<p><strong>Importante:</strong> A presença de um programa de afiliados com um varejista <strong>não influencia</strong> se seus produtos são exibidos ou classificados no Radar de Preços. Nossas recomendações são baseadas em dados, não em comissões.</p>
+<h2>7. Conformidade com Regulamentações</h2>
+<p>O Radar de Preços cumpre todas as regulamentações relevantes:</p>
+<ul>
+<li><strong>FTC (Federal Trade Commission):</strong> Divulgamos claramente relacionamentos de afiliados</li>
+<li><strong>CONAR (Conselho Nacional de Autorregulamentação Publicitária):</strong> Seguimos as normas de publicidade brasileira</li>
+<li><strong>LGPD:</strong> Protegemos dados pessoais conforme exigido</li>
+<li><strong>Código de Defesa do Consumidor:</strong> Respeitamos os direitos dos consumidores</li>
+</ul>
+<h2>8. Política de Não-Discriminação</h2>
+<p>O Radar de Preços não discrimina varejistas com base em comissões de afiliados. Se um varejista oferece um produto com melhor preço, ele será exibido independentemente de:</p>
+<ul>
+<li>Ter um programa de afiliados conosco</li>
+<li>Oferecer uma comissão maior ou menor</li>
+<li>Ser um concorrente de outro varejista que nos paga mais</li>
+</ul>
+<h2>9. Divulgação de Conflitos de Interesse</h2>
+<p>Quando há um potencial conflito de interesse, o Radar de Preços o divulga claramente:</p>
+<ul>
+<li>Conteúdo patrocinado é claramente marcado como tal</li>
+<li>Resenhas de produtos indicam se há um link de afiliado</li>
+<li>Guias de compra revelam relacionamentos de afiliados</li>
+</ul>
+<h2>10. Direitos do Consumidor</h2>
+<p>Você tem direito a:</p>
+<ul>
+<li>Saber que está clicando em um link de afiliado</li>
+<li>Acessar diretamente o varejista sem usar nosso link</li>
+<li>Não ser rastreado além do necessário para confirmar a compra</li>
+<li>Ter seus dados pessoais protegidos conforme a LGPD</li>
+<li>Reclamar se sentir enganado ou prejudicado</li>
+</ul>
+<h2>11. Mudanças na Política</h2>
+<p>O Radar de Preços se reserva o direito de modificar esta política de afiliados a qualquer momento. Notificaremos os usuários sobre mudanças significativas através de:</p>
+<ul>
+<li>Atualização desta página</li>
+<li>Notificação no site</li>
+<li>Email (se aplicável)</li>
+</ul>
+<h2>12. Contato e Reclamações</h2>
+<p>Se você tiver dúvidas sobre nossa política de afiliados ou quiser fazer uma reclamação, entre em contato conosco através da <a href="../contato/">página de contato</a>.</p>
+<div class="highlight-box">
+<strong>Nosso Compromisso:</strong> O Radar de Preços se compromete a manter a transparência total sobre como geramos receita e como isso nos permite oferecer um serviço gratuito e de qualidade para todos os consumidores brasileiros.
+    </div>
+</main>
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Transparência e Tecnologia.</p>
+<div class="footer-links">
+<a href="../sobre/">Sobre</a>
+<a href="../contato/">Contato</a>
+<a href="../privacidade/">Privacidade</a>
+<a href="../termos/">Termos</a>
+<a href="../politica-afiliados/">Política de Afiliados</a>
+</div>
+</div>
+</footer>
+<script>
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+    if (savedTheme === 'dark') document.getElementById('themeToggle').textContent = '☀️';
+    document.getElementById('searchInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') { const q = e.target.value.trim(); if (q) window.location.href = `../?q=${encodeURIComponent(q)}`; }
+    });
+  </script>
+</body>
+</html>

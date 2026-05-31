@@ -1,0 +1,75 @@
+{
+  "last_generated": "2026-05-31T12:00:00Z",
+  "segments": [
+    {
+      "name": "Celulares",
+      "emoji": "📱",
+      "description": "Últimas novidades em smartphones, tablets e acessórios",
+      "top_offers": [
+        {
+          "name": "Samsung Galaxy A17",
+          "price": 809.1,
+          "discount": "35%"
+        },
+        {
+          "name": "Motorola Moto G35",
+          "price": 869.0,
+          "discount": "28%"
+        }
+      ]
+    },
+    {
+      "name": "TVs",
+      "emoji": "📺",
+      "description": "Smart TVs, OLED, 4K e as melhores promoções",
+      "top_offers": [
+        {
+          "name": "Smart TV 43\" Philco",
+          "price": 1451.0,
+          "discount": "28%"
+        },
+        {
+          "name": "Smart TV 50\" Philco",
+          "price": 1994.0,
+          "discount": "22%"
+        }
+      ]
+    },
+    {
+      "name": "Notebooks",
+      "emoji": "💻",
+      "description": "Laptops para trabalho, estudo e gaming",
+      "top_offers": [
+        {
+          "name": "Notebook ASUS VivoBook",
+          "price": 2899.0,
+          "discount": "22%"
+        }
+      ]
+    },
+    {
+      "name": "Games",
+      "emoji": "🎮",
+      "description": "Consoles, jogos e periféricos para gamers",
+      "top_offers": [
+        {
+          "name": "PlayStation 5",
+          "price": 4999.0,
+          "discount": "15%"
+        }
+      ]
+    },
+    {
+      "name": "Casa",
+      "emoji": "🏠",
+      "description": "Móveis, decoração e utensílios para sua casa",
+      "top_offers": [
+        {
+          "name": "Sofá 3 Lugares",
+          "price": 1299.0,
+          "discount": "20%"
+        }
+      ]
+    }
+  ]
+}

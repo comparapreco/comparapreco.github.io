@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guias de Compra — Radar de Preços</title>
+<meta content="Confira nossos guias completos para economizar e escolher o melhor produto." name="description"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header">
+<div class="container">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+</div>
+</header>
+<main class="container" style="padding: 40px 20px;">
+<h1>📚 Guias de Compra</h1>
+<p>Aprenda a escolher os melhores produtos com o menor preço.</p>
+<div style="margin-top: 30px;">
+<div class="card" style="padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+<h3>📱 Celulares</h3>
+<ul>
+<li><a href="melhor-celular-ate-1500/">Melhor Celular até R$ 1.500 (2026)</a></li>
+</ul>
+</div>
+</div>
+</main>
+</body>
+</html>

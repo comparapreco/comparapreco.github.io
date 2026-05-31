@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Central de Comparativos — Radar de Preços</title>
+<meta content="Compare produtos lado a lado. Análise detalhada de especificações, preços e avaliações. Encontre o melhor custo-benefício." name="description"/>
+<link href="https://radardeprecos.github.io/radar/comparativos/" rel="canonical"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+
+<section class="main-hero">
+<div class="container">
+<h1>⚖️ Central de Comparativos</h1>
+<p>Compare produtos lado a lado e encontre o melhor custo-benefício.</p>
+</div>
+</section>
+
+<main class="container">
+<section class="section">
+<div class="section-header">
+<h2>Filtrar por Categoria</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 40px;">
+<button class="btn" onclick="filterComparisons('todos')" style="background: var(--primary);">Todos</button>
+<button class="btn" onclick="filterComparisons('celulares')">📱 Celulares</button>
+<button class="btn" onclick="filterComparisons('notebooks')">💻 Notebooks</button>
+<button class="btn" onclick="filterComparisons('tvs')">📺 TVs</button>
+<button class="btn" onclick="filterComparisons('tablets')">📱 Tablets</button>
+<button class="btn" onclick="filterComparisons('fones')">🎧 Fones</button>
+</div>
+</section>
+
+<section class="section">
+<div class="section-header">
+<h2>📊 Comparativos Disponíveis</h2>
+</div>
+<div id="comparativesGrid" class="products-grid">
+<!-- Preenchido via JS -->
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Comparativos Inteligentes.</p>
+<div class="footer-links">
+<a href="../noticias/">Blog</a>
+<a href="../sobre/">Sobre</a>
+<a href="../contato/">Contato</a>
+<a href="../privacidade/">Privacidade</a>
+<a href="../termos/">Termos</a>
+<a href="../quem-somos/">Quem Somos</a>
+</div>
+</div>
+</footer>
+
+<script src="../assets/js/app.js"></script>
+<script>
+// Dados de comparativos disponíveis
+const comparatives = [
+  {category: 'celulares', name: 'Samsung Galaxy A36 vs Moto G35', url: 'galaxy-a36-vs-moto-g35/', icon: '📱'},
+  {category: 'celulares', name: 'iPhone 15 vs Samsung S24', url: 'iphone-15-vs-s24/', icon: '📱'},
+  {category: 'notebooks', name: 'MacBook Pro vs Dell XPS', url: 'macbook-pro-vs-dell-xps/', icon: '💻'},
+  {category: 'tvs', name: 'LG OLED vs Samsung QLED', url: 'lg-oled-vs-samsung-qled/', icon: '📺'},
+  {category: 'tablets', name: 'iPad Pro vs Samsung Tab S9', url: 'ipad-pro-vs-tab-s9/', icon: '📱'},
+  {category: 'fones', name: 'Sony WH-1000XM5 vs AirPods Pro', url: 'sony-vs-airpods/', icon: '🎧'},
+];
+
+function renderComparatives(category = 'todos') {
+  const grid = document.getElementById('comparativesGrid');
+  const filtered = category === 'todos' ? comparatives : comparatives.filter(c => c.category === category);
+  
+  grid.innerHTML = filtered.map(comp => `
+    <div class="product-card">
+      <div style="font-size: 40px; text-align: center; margin-bottom: 10px;">${comp.icon}</div>
+      <h3>${comp.name}</h3>
+      <p style="color: var(--text-secondary); margin-bottom: 15px;">Análise detalhada e comparação de preços</p>
+      <a href="${comp.url}" class="btn" style="width: 100%;">Ver Comparativo</a>
+    </div>
+  `).join('');
+}
+
+function filterComparisons(category) {
+  renderComparatives(category);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  renderComparatives();
+});
+</script>
+</body>
+</html>

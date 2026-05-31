@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glossário do Consumidor — Entenda a Tecnologia | Radar de Preços</title>
+<meta content="Aprenda o significado de termos técnicos como AMOLED, SSD, NVMe e outros para fazer a melhor escolha na sua compra." name="description"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<style>
+    .glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+    .term-card { background: var(--card); padding: 25px; border-radius: 12px; border: 1px solid var(--border); text-decoration: none; color: inherit; transition: transform 0.2s; }
+    .term-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+    .term-title { font-size: 20px; font-weight: 800; color: var(--primary); margin-bottom: 10px; }
+    .term-desc { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header"><div class="container"><a class="logo" href="../">📊 Radar de Preços</a></div></header>
+<main class="container">
+<h1 style="margin: 40px 0;">🎓 Glossário do Consumidor</h1>
+<p>Não seja enganado por termos técnicos. Nossa equipe explica de forma simples o que realmente importa na hora de escolher seu produto.</p>
+<div class="glossary-grid">
+<div class="term-card">
+<div class="term-title">AMOLED</div>
+<p class="term-desc">Tecnologia de tela que oferece cores mais vibrantes e pretos perfeitos, além de economizar bateria.</p>
+</div>
+<div class="term-card">
+<div class="term-title">SSD NVMe</div>
+<p class="term-desc">O tipo mais rápido de armazenamento para notebooks e PCs, sendo até 10x mais veloz que um SSD comum.</p>
+</div>
+<div class="term-card">
+<div class="term-title">Wi-Fi 6</div>
+<p class="term-desc">A nova geração de internet sem fio, focada em estabilidade e velocidade para muitos dispositivos conectados.</p>
+</div>
+<div class="term-card">
+<div class="term-title">RAM LPDDR5</div>
+<p class="term-desc">Memória de alta performance e baixo consumo de energia, ideal para smartphones e laptops premium.</p>
+</div>
+</div>
+</main>
+<footer class="footer"><div class="container"><p>© 2026 Radar de Preços. Conhecimento é economia.</p></div></footer>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-05-31T08:57:04.231323+00:00",
+  "catalogSize": 44,
+  "estimatedCtr": 9.96,
+  "estimatedConversions": 0.79,
+  "strongestCategories": [
+    {
+      "category": "outros",
+      "products": 16,
+      "averageDiscount": 42.44,
+      "estimatedClicks": 83
+    },
+    {
+      "category": "celulares",
+      "products": 9,
+      "averageDiscount": 39.56,
+      "estimatedClicks": 44
+    },
+    {
+      "category": "tv-e-video",
+      "products": 6,
+      "averageDiscount": 37.33,
+      "estimatedClicks": 28
+    },
+    {
+      "category": "informatica",
+      "products": 3,
+      "averageDiscount": 30.33,
+      "estimatedClicks": 12
+    },
+    {
+      "category": "beleza",
+      "products": 3,
+      "averageDiscount": 36.0,
+      "estimatedClicks": 13
+    },
+    {
+      "category": "eletrodomesticos",
+      "products": 2,
+      "averageDiscount": 42.0,
+      "estimatedClicks": 10
+    },
+    {
+      "category": "casa",
+      "products": 2,
+      "averageDiscount": 47.0,
+      "estimatedClicks": 11
+    },
+    {
+      "category": "games",
+      "products": 2,
+      "averageDiscount": 30.0,
+      "estimatedClicks": 8
+    },
+    {
+      "category": "ferramentas",
+      "products": 1,
+      "averageDiscount": 57.0,
+      "estimatedClicks": 6
+    }
+  ],
+  "mostVisitedPages": [
+    {
+      "page": "/",
+      "views": 4200
+    },
+    {
+      "page": "/minha-lista/",
+      "views": 1260
+    },
+    {
+      "page": "/recomendados/",
+      "views": 1180
+    },
+    {
+      "page": "/alertas/",
+      "views": 860
+    },
+    {
+      "page": "/ofertas-hoje/",
+      "views": 790
+    },
+    {
+      "page": "/quedas-hoje/",
+      "views": 740
+    }
+  ],
+  "retentionFeatures": {
+    "firebaseAuth": true,
+    "favorites": true,
+    "priceAlerts": true,
+    "personalDashboard": true,
+    "recommendations": true,
+    "pwa": true,
+    "pushReady": true,
+    "newsletter": true
+  }
+}

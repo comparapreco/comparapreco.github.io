@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Metodologia Radar Score™ — Como analisamos preços | Radar de Preços</title>
+<meta content="Entenda os critérios técnicos por trás do Radar Score, nossa coleta de dados e como garantimos a transparência nas ofertas." name="description"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<style>
+    .method-section { margin-bottom: 60px; }
+    .score-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    .score-table th, .score-table td { padding: 15px; border: 1px solid var(--border); text-align: left; }
+    .score-table th { background: var(--bg); }
+    .highlight-box { background: var(--card); padding: 30px; border-radius: 15px; border-left: 5px solid var(--primary); }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header"><div class="container"><a class="logo" href="../">📊 Radar de Preços</a></div></header>
+<main class="container">
+<h1 style="margin: 40px 0;">🛡️ Nossa Metodologia</h1>
+<p>A transparência é o nosso maior ativo. Aqui explicamos exatamente como nosso algoritmo funciona e por que você pode confiar no Radar Score™.</p>
+<div class="method-section">
+<h2>1. Coleta de Dados</h2>
+<p>Nosso robô utiliza APIs oficiais e web scraping ético para monitorar os maiores marketplaces do Brasil a cada hora. Não aceitamos pagamentos de lojas para "esconder" preços baixos de concorrentes.</p>
+</div>
+<div class="method-section">
+<h2>2. O Radar Score™ (0 a 10)</h2>
+<p>O Radar Score não é uma nota aleatória. Ele é calculado com base em quatro pilares matemáticos:</p>
+<table class="score-table">
+<tr><th>Pilar</th><th>Peso</th><th>O que avalia</th></tr>
+<tr><td>Histórico de 30 dias</td><td>40%</td><td>Se o preço atual é realmente o menor do último mês.</td></tr>
+<tr><td>Média do Mercado</td><td>30%</td><td>Comparação em tempo real com outras lojas confiáveis.</td></tr>
+<tr><td>Reputação do Vendedor</td><td>20%</td><td>Avaliações, tempo de entrega e taxa de devolução.</td></tr>
+<tr><td>Disponibilidade</td><td>10%</td><td>Estabilidade do estoque para evitar "ofertas fantasma".</td></tr>
+</table>
+</div>
+<div class="method-section">
+<h2>3. O Selo Radar Verificado</h2>
+<div class="highlight-box">
+<p>Apenas produtos com <strong>Radar Score acima de 8.5</strong> recebem nosso selo de verificação. Isso significa que a economia é real e a compra é segura.</p>
+</div>
+</div>
+</main>
+<footer class="footer"><div class="container"><p>© 2026 Radar de Preços. Transparência acima de tudo.</p></div></footer>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

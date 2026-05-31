@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meus Favoritos — Radar de Preços</title>
+<meta content="Gerencie seus produtos favoritos e lista de desejos. Acompanhe o histórico de preços e receba alertas." name="description"/>
+<link href="https://radardeprecos.github.io/radar/meus-favoritos/" rel="canonical"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    .hero { background: linear-gradient(135deg, #ec4899 0%, #be185d 100%); color: white; padding: 60px 0 40px; margin-bottom: 40px; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+    .hero p { opacity: 0.9; font-size: 1.1rem; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .tabs { display: flex; gap: 10px; margin-bottom: 30px; border-bottom: 2px solid var(--border); }
+    .tab { padding: 12px 20px; background: none; border: none; cursor: pointer; font-weight: 700; color: var(--text-light); border-bottom: 3px solid transparent; transition: all 0.3s; }
+    .tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+    .tab:hover { color: var(--text); }
+    .favorites-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .favorite-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .favorite-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .favorite-image { width: 100%; height: 200px; background: var(--bg); object-fit: cover; }
+    .favorite-content { padding: 16px; }
+    .favorite-title { font-weight: 700; margin-bottom: 10px; font-size: 0.95rem; line-height: 1.4; }
+    .favorite-price { display: flex; gap: 10px; align-items: center; margin-bottom: 12px; }
+    .current-price { font-size: 1.3rem; font-weight: 800; color: var(--primary); }
+    .old-price { text-decoration: line-through; color: var(--text-light); font-size: 0.9rem; }
+    .favorite-stats { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px; }
+    .favorite-actions { display: flex; gap: 8px; }
+    .action-btn { flex: 1; padding: 8px; border: 1px solid var(--border); background: var(--bg); border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 0.85rem; transition: all 0.3s; }
+    .action-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
+    .action-btn.remove { background: #fee2e2; color: #dc2626; }
+    .action-btn.remove:hover { background: #dc2626; color: white; }
+    .empty-state { text-align: center; padding: 60px 20px; }
+    .empty-state-icon { font-size: 4rem; margin-bottom: 20px; }
+    .empty-state-text { font-size: 1.1rem; color: var(--text-light); margin-bottom: 20px; }
+    .empty-state-btn { display: inline-block; padding: 12px 24px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 700; }
+    .alert-section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 30px; }
+    .alert-form { display: grid; grid-template-columns: 1fr 1fr auto; gap: 10px; align-items: flex-end; }
+    .alert-input { display: flex; flex-direction: column; }
+    .alert-input label { font-weight: 700; margin-bottom: 5px; font-size: 0.9rem; }
+    .alert-input input { padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; }
+    .alert-btn { padding: 8px 16px; background: var(--primary); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; }
+    .price-history { background: var(--bg); padding: 15px; border-radius: 8px; margin-top: 10px; }
+    .history-item { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    .history-item:last-child { border-bottom: none; }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+<section class="hero">
+<div class="container">
+<h1>❤️ Meus Favoritos</h1>
+<p>Gerencie seus produtos favoritos e receba alertas quando o preço cair. Tudo sincronizado localmente no seu navegador.</p>
+</div>
+</section>
+<main class="container">
+<div class="tabs">
+<button class="tab active" data-tab="favoritos">❤️ Favoritos</button>
+<button class="tab" data-tab="desejos">🎁 Lista de Desejos</button>
+<button class="tab" data-tab="alertas">🔔 Meus Alertas</button>
+</div>
+<!-- Favoritos -->
+<div class="tab-content" id="favoritos-tab">
+<div class="favorites-grid" id="favoritosGrid">
+<!-- Preenchido via JavaScript -->
+</div>
+<div class="empty-state" id="favoritosEmpty">
+<div class="empty-state-icon">❤️</div>
+<p class="empty-state-text">Você ainda não tem favoritos. Comece a adicionar produtos que você gosta!</p>
+<a class="empty-state-btn" href="../">Explorar Produtos</a>
+</div>
+</div>
+<!-- Lista de Desejos -->
+<div class="tab-content" id="desejos-tab" style="display: none;">
+<div class="favorites-grid" id="desejosGrid">
+<!-- Preenchido via JavaScript -->
+</div>
+<div class="empty-state" id="desejosEmpty">
+<div class="empty-state-icon">🎁</div>
+<p class="empty-state-text">Sua lista de desejos está vazia. Adicione produtos que você gostaria de comprar no futuro!</p>
+<a class="empty-state-btn" href="../">Explorar Produtos</a>
+</div>
+</div>
+<!-- Alertas -->
+<div class="tab-content" id="alertas-tab" style="display: none;">
+<div class="alert-section">
+<h2>🔔 Criar Novo Alerta</h2>
+<div class="alert-form">
+<div class="alert-input">
+<label>Produto</label>
+<input id="alertProduct" placeholder="Ex: Samsung Galaxy A36" type="text"/>
+</div>
+<div class="alert-input">
+<label>Preço Desejado (R$)</label>
+<input id="alertPrice" placeholder="Ex: 999" type="number"/>
+</div>
+<button class="alert-btn" onclick="createAlert()">Criar Alerta</button>
+</div>
+</div>
+<h2>📋 Meus Alertas Ativos</h2>
+<div id="alertsList">
+<div class="alert-section">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+<div>
+<div style="font-weight: 700; margin-bottom: 5px;">Samsung Galaxy A36</div>
+<div style="color: var(--text-light); font-size: 0.9rem;">Preço desejado: R$ 999</div>
+</div>
+<button class="action-btn remove" onclick="removeAlert(this)">Remover</button>
+</div>
+<div class="price-history">
+<div style="font-weight: 700; margin-bottom: 10px;">📊 Histórico de Preços</div>
+<div class="history-item">
+<span>Hoje</span>
+<span style="font-weight: 700; color: var(--primary);">R$ 1.299</span>
+</div>
+<div class="history-item">
+<span>Ontem</span>
+<span>R$ 1.299</span>
+</div>
+<div class="history-item">
+<span>7 dias atrás</span>
+<span>R$ 1.399</span>
+</div>
+<div class="history-item">
+<span>30 dias atrás</span>
+<span>R$ 1.499</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Seus Favoritos, Sempre à Mão.</p>
+<div class="footer-links">
+<a href="../sobre/">Sobre</a>
+<a href="../contato/">Contato</a>
+<a href="../privacidade/">Privacidade</a>
+<a href="../disclaimer/">Disclaimer</a>
+</div>
+</div>
+</footer>
+<script>
+    // LocalStorage Management
+    const STORAGE_KEYS = {
+      FAVORITOS: 'radar_favoritos',
+      DESEJOS: 'radar_desejos',
+      ALERTAS: 'radar_alertas'
+    };
+
+    // Exemplo de dados (em produção, viriam da API)
+    const sampleFavorites = [
+      {
+        id: 1,
+        title: 'Samsung Galaxy A36 128GB',
+        currentPrice: 1299,
+        oldPrice: 1499,
+        image: 'https://via.placeholder.com/250x200?text=Samsung+Galaxy+A36',
+        views: 1250,
+        category: 'celulares'
+      },
+      {
+        id: 2,
+        title: 'LG 55" OLED 4K 120Hz',
+        currentPrice: 2999,
+        oldPrice: 4999,
+        image: 'https://via.placeholder.com/250x200?text=LG+OLED+55',
+        views: 890,
+        category: 'tv'
+      }
+    ];
+
+    function renderFavorites() {
+      const favoritos = JSON.parse(localStorage.getItem(STORAGE_KEYS.FAVORITOS)) || sampleFavorites;
+      const grid = document.getElementById('favoritosGrid');
+      const empty = document.getElementById('favoritosEmpty');
+
+      if (favoritos.length === 0) {
+        grid.style.display = 'none';
+        empty.style.display = 'block';
+        return;
+      }
+
+      grid.style.display = 'grid';
+      empty.style.display = 'none';
+
+      grid.innerHTML = favoritos.map(fav => `
+<div class="favorite-card">
+<img alt="${fav.title}" class="favorite-image" height="120" src="${fav.image}" style="width:100%;height:auto;" width="120"/>
+<div class="favorite-content">
+<div class="favorite-title">${fav.title}</div>
+<div class="favorite-price">
+<span class="current-price">R$ ${fav.currentPrice.toLocaleString('pt-BR')}</span>
+<span class="old-price">R$ ${fav.oldPrice.toLocaleString('pt-BR')}</span>
+</div>
+<div class="favorite-stats">
+<span>👁️ ${fav.views.toLocaleString('pt-BR')} visualizações</span>
+<span>💰 Economize R$ ${(fav.oldPrice - fav.currentPrice).toLocaleString('pt-BR')}</span>
+</div>
+<div class="favorite-actions">
+<button class="action-btn" onclick="alert('Ir para produto')">Ver Oferta</button>
+<button class="action-btn remove" onclick="removeFavorite(${fav.id})">❌ Remover</button>
+</div>
+</div>
+</div>
+`).join('');
+    }
+
+    function removeFavorite(id) {
+      const favoritos = JSON.parse(localStorage.getItem(STORAGE_KEYS.FAVORITOS)) || sampleFavorites;
+      const updated = favoritos.filter(f => f.id !== id);
+      localStorage.setItem(STORAGE_KEYS.FAVORITOS, JSON.stringify(updated));
+      renderFavorites();
+    }
+
+    function createAlert() {
+      const product = document.getElementById('alertProduct').value.trim();
+      const price = document.getElementById('alertPrice').value.trim();
+
+      if (!product || !price) {
+        alert('Preencha todos os campos');
+        return;
+      }
+
+      const alerts = JSON.parse(localStorage.getItem(STORAGE_KEYS.ALERTAS)) || [];
+      alerts.push({
+        id: Date.now(),
+        product,
+        targetPrice: parseFloat(price),
+        createdAt: new Date().toLocaleString('pt-BR')
+      });
+
+      localStorage.setItem(STORAGE_KEYS.ALERTAS, JSON.stringify(alerts));
+      document.getElementById('alertProduct').value = '';
+      document.getElementById('alertPrice').value = '';
+      alert('Alerta criado com sucesso!');
+    }
+
+    function removeAlert(btn) {
+      btn.closest('.alert-section').remove();
+    }
+
+    // Tabs
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const tabName = tab.dataset.tab;
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+        tab.classList.add('active');
+        document.getElementById(`${tabName}-tab`).style.display = 'block';
+      });
+    });
+
+    // Tema
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+    if (savedTheme === 'dark') document.getElementById('themeToggle').textContent = '☀️';
+
+    // Busca
+    document.getElementById('searchInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const q = e.target.value.trim();
+        if (q) window.location.href = `../?q=${encodeURIComponent(q)}`;
+      }
+    });
+
+    // Render inicial
+    renderFavorites();
+  </script>
+</body>
+</html>

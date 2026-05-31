@@ -1,0 +1,82 @@
+{
+  "last_updated": "2026-05-31T20:09:55.404763",
+  "top_falling_products": [
+    {
+      "name": "Smartphone Samsung Galaxy A17",
+      "category": "Celulares",
+      "fall_percentage": 35.2,
+      "current_price": 809.1,
+      "previous_price": 1249.0
+    },
+    {
+      "name": "Smart TV 43\" Philco",
+      "category": "TVs",
+      "fall_percentage": 28.5,
+      "current_price": 1451.0,
+      "previous_price": 2029.0
+    },
+    {
+      "name": "Notebook ASUS VivoBook",
+      "category": "Notebooks",
+      "fall_percentage": 22.3,
+      "current_price": 2899.0,
+      "previous_price": 3729.0
+    }
+  ],
+  "growing_categories": [
+    {
+      "category": "Games",
+      "growth_percentage": 15.8,
+      "trend": "up"
+    },
+    {
+      "category": "Eletrônicos",
+      "growth_percentage": 12.4,
+      "trend": "up"
+    },
+    {
+      "category": "Casa e Jardim",
+      "growth_percentage": 9.7,
+      "trend": "up"
+    }
+  ],
+  "top_brands": [
+    {
+      "brand": "Samsung",
+      "score": 92,
+      "products_monitored": 245
+    },
+    {
+      "brand": "LG",
+      "score": 88,
+      "products_monitored": 198
+    },
+    {
+      "brand": "Sony",
+      "score": 85,
+      "products_monitored": 156
+    },
+    {
+      "brand": "Apple",
+      "score": 82,
+      "products_monitored": 89
+    }
+  ],
+  "price_trends": [
+    {
+      "category": "Celulares",
+      "trend": "down",
+      "change_percentage": -5.2
+    },
+    {
+      "category": "TVs",
+      "trend": "stable",
+      "change_percentage": 0.3
+    },
+    {
+      "category": "Notebooks",
+      "trend": "up",
+      "change_percentage": 2.1
+    }
+  ]
+}

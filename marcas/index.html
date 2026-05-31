@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ranking de Marcas 2026 — As Mais Confiáveis | Radar de Preços</title>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<style>
+    .brand-ranking { margin-top: 40px; }
+    .brand-row { display: grid; grid-template-columns: 80px 1fr 150px 150px; align-items: center; padding: 20px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 15px; }
+    .brand-pos { font-size: 24px; font-weight: 900; opacity: 0.3; }
+    .brand-name { font-weight: 800; font-size: 18px; }
+    .brand-stat { text-align: center; }
+    .stat-val { display: block; font-weight: 800; color: var(--primary); }
+    .stat-label { font-size: 11px; text-transform: uppercase; opacity: 0.6; }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header"><div class="container"><a class="logo" href="../">📊 Radar de Preços</a></div></header>
+<main class="container">
+<h1 style="margin: 40px 0;">🏆 Ranking de Marcas 2026</h1>
+<p>Analisamos o Radar Score médio e a taxa de desconto real das principais marcas do mercado brasileiro.</p>
+<div class="brand-ranking">
+<div class="brand-row">
+<div class="brand-pos">#1</div>
+<div class="brand-name">Samsung</div>
+<div class="brand-stat"><span class="stat-val">8.7</span><span class="stat-label">Radar Score</span></div>
+<div class="brand-stat"><span class="stat-val">32%</span><span class="stat-label">Desconto Médio</span></div>
+</div>
+<div class="brand-row">
+<div class="brand-pos">#2</div>
+<div class="brand-name">Motorola</div>
+<div class="brand-stat"><span class="stat-val">8.2</span><span class="stat-label">Radar Score</span></div>
+<div class="brand-stat"><span class="stat-val">28%</span><span class="stat-label">Desconto Médio</span></div>
+</div>
+<div class="brand-row">
+<div class="brand-pos">#3</div>
+<div class="brand-name">Lenovo</div>
+<div class="brand-stat"><span class="stat-val">7.9</span><span class="stat-label">Radar Score</span></div>
+<div class="brand-stat"><span class="stat-val">25%</span><span class="stat-label">Desconto Médio</span></div>
+</div>
+</div>
+</main>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

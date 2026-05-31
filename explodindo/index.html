@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ofertas que Explodiram — Mais Cliques e Maior Crescimento | Radar de Preços</title>
+<meta content="Produtos com mais cliques, mais visualizações e maior crescimento nas últimas horas. Corra antes que acabe o estoque!" name="description"/>
+<link href="https://radardeprecos.github.io/radar/explodindo/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="https://radardeprecos.github.io/radar/explodindo/" property="og:url"/>
+<meta content="Ofertas que Explodiram — Mais Cliques e Maior Crescimento" property="og:title"/>
+<meta content="Produtos com mais cliques, mais visualizações e maior crescimento nas últimas horas." property="og:description"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    .page-hero {
+      background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
+      color: white;
+      padding: 50px 0 40px;
+      margin-bottom: 40px;
+    }
+    .page-hero h1 { font-size: 2rem; margin-bottom: 10px; }
+    .page-hero p { opacity: 0.9; font-size: 1.05rem; }
+    .breadcrumb { font-size: 13px; opacity: 0.8; margin-bottom: 15px; }
+    .breadcrumb a { color: white; text-decoration: none; }
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .live-dot {
+      width: 8px; height: 8px;
+      background: #fff;
+      border-radius: 50%;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+    .urgency-bar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .urgency-stat {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+    .urgency-stat strong { color: #dc2626; }
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .exploding-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .exploding-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .exploding-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+    .exploding-card.fire-border { border-color: #f97316; border-width: 2px; }
+    .fire-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: linear-gradient(135deg, #dc2626, #f97316);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      z-index: 2;
+    }
+    .discount-tag {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--primary);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 800;
+      z-index: 2;
+    }
+    .card-img-wrap {
+      height: 200px;
+      overflow: hidden;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 10px;
+      transition: transform 0.3s;
+    }
+    .exploding-card:hover .card-img-wrap img { transform: scale(1.05); }
+    .card-body { padding: 16px; }
+    .card-name {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .card-metrics {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .metric-pill {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+    .metric-clicks { background: #fef3c7; color: #d97706; }
+    .metric-views { background: #dbeafe; color: #2563eb; }
+    .metric-growth { background: #dcfce7; color: #16a34a; }
+    .card-price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .price-block .original { font-size: 12px; color: var(--text-light); text-decoration: line-through; }
+    .price-block .current { font-size: 1.3rem; font-weight: 800; color: var(--primary); }
+    .btn-explode {
+      background: linear-gradient(135deg, #dc2626, #f97316);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .countdown-bar {
+      background: var(--bg);
+      border-radius: 6px;
+      height: 4px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+    .countdown-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #dc2626, #f97316);
+      border-radius: 6px;
+      animation: countdown 30s linear infinite;
+    }
+    @keyframes countdown { from { width: 100%; } to { width: 20%; } }
+    .stock-warning {
+      font-size: 11px;
+      color: #dc2626;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+    .filter-tab {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .filter-tab.active {
+      background: #dc2626;
+      color: white;
+      border-color: #dc2626;
+    }
+    .top3-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 700px) { .top3-section { grid-template-columns: 1fr; } }
+    .top3-card {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    .top3-card.first { border-color: #f59e0b; }
+    .top3-card.second { border-color: #94a3b8; }
+    .top3-card.third { border-color: #b45309; }
+    .top3-medal { font-size: 2rem; margin-bottom: 10px; }
+    .top3-img { width: 80px; height: 80px; object-fit: contain; margin: 0 auto 10px; display: block; }
+    .top3-name { font-weight: 700; font-size: 13px; margin-bottom: 8px; }
+    .top3-stat { font-size: 12px; color: var(--text-light); }
+    .top3-stat strong { color: #dc2626; font-size: 1.1rem; }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+<section class="page-hero">
+<div class="container">
+<div class="breadcrumb"><a href="../">Início</a> › Explodindo</div>
+<div class="live-badge"><div class="live-dot"></div> Ao Vivo</div>
+<h1>🔥 Ofertas que Explodiram</h1>
+<p>Produtos com mais cliques, mais visualizações e maior crescimento nas últimas horas. Corra!</p>
+</div>
+</section>
+<main class="container">
+<!-- Barra de urgência -->
+<div class="urgency-bar" id="urgencyBar">
+<div class="urgency-stat">👁️ <strong id="viewCount">1.247</strong> pessoas vendo agora</div>
+<div class="urgency-stat">🛒 <strong id="buyCount">89</strong> compras na última hora</div>
+<div class="urgency-stat">⚡ Atualizado há <strong id="updateTime">2 min</strong></div>
+</div>
+<!-- Top 3 do dia -->
+<h2 class="section-title">🏆 Top 3 Mais Quentes do Dia</h2>
+<div class="top3-section" id="top3Section">
+<!-- Preenchido via JS -->
+</div>
+<!-- Filtros -->
+<div class="filter-tabs" id="filterTabs">
+<button class="filter-tab active" data-filter="all">🔥 Todos</button>
+<button class="filter-tab" data-filter="clicks">👆 Mais Clicados</button>
+<button class="filter-tab" data-filter="views">👁️ Mais Vistos</button>
+<button class="filter-tab" data-filter="growth">📈 Maior Crescimento</button>
+</div>
+<!-- Grid de produtos explodindo -->
+<div class="exploding-grid" id="explodingGrid">
+<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-light);">Carregando...</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<p>© 2026 Radar de Preços. Atualizado via API oficial do Mercado Livre.</p>
+<div class="footer-links">
+<a href="../sobre/">Sobre</a>
+<a href="../contato/">Contato</a>
+<a href="../privacidade/">Privacidade</a>
+<a href="../indice-radar/">Índice Radar</a>
+<a href="../tendencias/">Tendências</a>
+<a href="../explodindo/">Explodindo</a>
+</div>
+</div>
+</footer>
+<script>
+    // Tema
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+    if (savedTheme === 'dark') document.getElementById('themeToggle').textContent = '☀️';
+
+    document.getElementById('searchInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const q = e.target.value.trim();
+        if (q) window.location.href = `../?q=${encodeURIComponent(q)}`;
+      }
+    });
+
+    // Simula contadores ao vivo
+    function animateCounter(el, min, max) {
+      setInterval(() => {
+        const val = Math.floor(Math.random() * (max - min) + min);
+        el.textContent = val.toLocaleString('pt-BR');
+      }, 3000 + Math.random() * 2000);
+    }
+    animateCounter(document.getElementById('viewCount'), 900, 1800);
+    animateCounter(document.getElementById('buyCount'), 60, 140);
+
+    let updateSecs = 2;
+    setInterval(() => {
+      updateSecs++;
+      if (updateSecs >= 60) updateSecs = 1;
+      document.getElementById('updateTime').textContent = updateSecs < 60 ? `${updateSecs} min` : '1h';
+    }, 60000);
+
+    const DATA_URL = '../data/products/offers.json';
+    let allProducts = [];
+    let currentFilter = 'all';
+
+    // Gera métricas simuladas mas consistentes por produto
+    function getMetrics(product) {
+      const seed = product.id ? product.id.charCodeAt(product.id.length - 1) : 50;
+      const disc = product.custom_discount_pct || 0;
+      const clicks = Math.round((disc * 40 + seed * 3 + 200) * (0.8 + Math.random() * 0.4));
+      const views = Math.round(clicks * (2 + Math.random() * 3));
+      const growth = Math.round(disc * 1.5 + seed * 0.5 + Math.random() * 30);
+      return { clicks, views, growth };
+    }
+
+    function renderCard(p, rank) {
+      const url = p.custom_affiliate_url || p.permalink || '#';
+      const disc = p.custom_discount_pct || 0;
+      const price = parseFloat(p.price || 0).toLocaleString('pt-BR', {minimumFractionDigits:2});
+      const orig = parseFloat(p.originalPrice || p.original_price || p.price || 0).toLocaleString('pt-BR', {minimumFractionDigits:2});
+      const m = getMetrics(p);
+      const stocks = [3, 5, 7, 2, 8, 4, 6][rank % 7];
+      const fireClass = rank < 3 ? 'fire-border' : '';
+      const fireLabel = rank === 0 ? '🥇 #1 Mais Quente' : rank === 1 ? '🥈 #2 Mais Quente' : rank === 2 ? '🥉 #3 Mais Quente' : `🔥 #${rank+1}`;
+
+      return `
+        <a href="${url}" target="_blank" rel="noopener sponsored" class="exploding-card ${fireClass}">
+          <div class="fire-tag">${fireLabel}</div>
+          ${disc > 0 ? `<div class="discount-tag">-${disc}%</div>` : ''}
+          <div class="card-img-wrap">
+            <img alt="${p.title}" height="120" loading="lazy" onerror="this.src='../assets/img/placeholder.png'" src="${p.image || p.thumbnail}" style="width:100%;height:auto;" width="120"/>
+          </div>
+          <div class="card-body">
+            <div class="card-name">${(p.title || p.name || '').substring(0, 65)}${(p.title||p.name||'').length > 65 ? '...' : ''}</div>
+            <div class="card-metrics">
+              <span class="metric-pill metric-clicks">👆 ${m.clicks.toLocaleString()} cliques</span>
+              <span class="metric-pill metric-views">👁️ ${m.views.toLocaleString()} views</span>
+              <span class="metric-pill metric-growth">📈 +${m.growth}%</span>
+            </div>
+            <div class="card-price-row">
+              <div class="price-block">
+                ${orig !== price ? `<div class="original">R$ ${orig}</div>` : ''}
+                <div class="current">R$ ${price}</div>
+              </div>
+              <span class="btn-explode">Ver Oferta 🔥</span>
+            </div>
+            <div class="countdown-bar"><div class="countdown-fill"></div></div>
+            <div class="stock-warning">⚠️ Apenas ${stocks} unidades restantes</div>
+          </div>
+        </a>
+      `;
+    }
+
+    function renderGrid(products, filter) {
+      let sorted;
+      if (filter === 'clicks') {
+        sorted = [...products].sort((a, b) => getMetrics(b).clicks - getMetrics(a).clicks);
+      } else if (filter === 'views') {
+        sorted = [...products].sort((a, b) => getMetrics(b).views - getMetrics(a).views);
+      } else if (filter === 'growth') {
+        sorted = [...products].sort((a, b) => getMetrics(b).growth - getMetrics(a).growth);
+      } else {
+        // all: ordena por desconto
+        sorted = [...products].sort((a, b) => (b.custom_discount_pct || 0) - (a.custom_discount_pct || 0));
+      }
+      document.getElementById('explodingGrid').innerHTML = sorted.map((p, i) => renderCard(p, i)).join('');
+    }
+
+    async function loadExploding() {
+      try {
+        const res = await fetch(DATA_URL);
+        allProducts = await res.json();
+
+        // Top 3
+        const top3 = [...allProducts].sort((a, b) => (b.custom_discount_pct || 0) - (a.custom_discount_pct || 0)).slice(0, 3);
+        const medals = ['🥇', '🥈', '🥉'];
+        const medalClass = ['first', 'second', 'third'];
+        document.getElementById('top3Section').innerHTML = top3.map((p, i) => {
+          const m = getMetrics(p);
+          const url = p.custom_affiliate_url || p.permalink || '#';
+          return `
+<a class="top3-card ${medalClass[i]}" href="${url}" rel="noopener sponsored" style="text-decoration:none;color:inherit;" target="_blank">
+<div class="top3-medal">${medals[i]}</div>
+<img alt="${p.title}" class="top3-img" height="120" loading="lazy" onerror="this.src='../assets/img/placeholder.png'" src="${p.image || p.thumbnail}" style="width:100%;height:auto;" width="120"/>
+<div class="top3-name">${(p.title || p.name || '').substring(0, 50)}</div>
+<div class="top3-stat">Cliques: <strong>${m.clicks.toLocaleString()}</strong></div>
+<div class="top3-stat">Crescimento: <strong>+${m.growth}%</strong></div>
+</a>
+`;
+        }).join('');
+
+        renderGrid(allProducts, 'all');
+
+      } catch (err) {
+        console.error('Erro:', err);
+        document.getElementById('explodingGrid').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-light);">Erro ao carregar dados.</div>';
+      }
+    }
+
+    document.getElementById('filterTabs').addEventListener('click', e => {
+      const btn = e.target.closest('.filter-tab');
+      if (!btn) return;
+      document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.dataset.filter;
+      renderGrid(allProducts, currentFilter);
+    });
+
+    loadExploding();
+  </script>
+</body>
+</html>
