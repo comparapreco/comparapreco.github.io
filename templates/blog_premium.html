@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Compara Preço | Guias, Análises e Dicas de Compra</title>
+  <meta name="description" content="Leia artigos profissionais sobre ofertas, comparação de preços, análises de produtos e dicas para economizar no Mercado Livre.">
+  <link href="https://comparapreco.github.io/noticias/" rel="canonical">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
+  <style>
+    .blog-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 20px; text-align: center; }
+    .blog-hero h1 { font-size: 48px; margin: 0 0 10px 0; font-weight: 800; }
+    .blog-hero p { font-size: 18px; margin: 0; opacity: 0.95; }
+    .blog-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
+    .blog-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s; border: 1px solid #e8e8e8; }
+    .blog-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
+    .blog-card-img { height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 64px; }
+    .blog-card-content { padding: 25px; }
+    .blog-tag { display: inline-block; background: #667eea; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 12px; }
+    .blog-card h3 { margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: #333; line-height: 1.4; }
+    .blog-card p { margin: 0 0 15px 0; color: #666; font-size: 14px; line-height: 1.6; }
+    .blog-meta { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #999; margin-bottom: 15px; }
+    .blog-card a { display: inline-block; background: #667eea; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s; }
+    .blog-card a:hover { background: #764ba2; }
+    .featured-badge { position: absolute; top: 15px; right: 15px; background: #ffd43b; color: #333; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="/">📊 <strong>Compara Preço</strong></a>
+      <div class="search-bar">
+        <input id="searchInput" placeholder="Buscar artigos..." type="text">
+      </div>
+      <button id="themeToggle">🌙</button>
+    </div>
+  </header>
+
+  <nav class="cat-nav">
+    <div class="container cat-tabs">
+      <a class="cat-tab" href="/">Início</a>
+      <a class="cat-tab active" href="/noticias/">📰 Blog</a>
+      <a class="cat-tab" href="/categorias/celulares/">Celulares</a>
+      <a class="cat-tab" href="/categorias/informatica/">Informática</a>
+      <a class="cat-tab" href="/categorias/eletrodomesticos/">Eletrodomésticos</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="blog-hero">
+    <div class="blog-container">
+      <h1>📚 Blog Compara Preço</h1>
+      <p>Análises profissionais, guias completos e dicas para você economizar nas melhores ofertas</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <div class="blog-container">
+    <div class="blog-grid" id="blogGrid">
+      <!-- Preenchido via JavaScript -->
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Compara Preço</h3>
+          <p>O seu assistente inteligente para compras online.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <a href="/">Início</a>
+          <a href="/noticias/">Blog</a>
+          <a href="/sobre/">Sobre</a>
+        </div>
+        <div class="footer-col">
+          <h4>Institucional</h4>
+          <a href="/privacidade/">Privacidade</a>
+          <a href="/termos/">Termos</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Compara Preço. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Array de notícias carregado dinamicamente
+    const NEWS = {{NEWS_JSON}};
+
+    function renderBlog() {
+      const grid = document.getElementById('blogGrid');
+      if (!grid || NEWS.length === 0) return;
+
+      grid.innerHTML = NEWS.map((item, idx) => `
+        <div class="blog-card" style="position: relative;">
+          ${item.featured ? '<div class="featured-badge">⭐ DESTAQUE</div>' : ''}
+          <div class="blog-card-img">${item.icon || '📰'}</div>
+          <div class="blog-card-content">
+            <span class="blog-tag">${item.tagLabel}</span>
+            <h3>${item.title}</h3>
+            <p>${item.excerpt}</p>
+            <div class="blog-meta">
+              <span>📅 ${item.date}</span>
+              <span>⏱️ ${item.readTime}</span>
+            </div>
+            <a href="${item.url}">Ler Artigo →</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', renderBlog);
+  </script>
+</body>
+</html>
