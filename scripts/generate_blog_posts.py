@@ -94,30 +94,99 @@ def generate_blog_content(count=1):
             <title>{post_title} | Compara Preço</title>
             <meta name="description" content="Análise aprofundada do {best_product.get('name')}. Descubra se vale a pena comprar com {best_product.get('custom_discount_pct')}% de desconto.">
             <link rel="stylesheet" href="../../assets/css/style.css">
+            <style>
+                .top-offer-box {{
+                    background: #fff8e1;
+                    border: 2px solid #ffc107;
+                    border-radius: 12px;
+                    padding: 20px;
+                    margin: 20px 0 30px 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                }}
+                .top-offer-img {{
+                    width: 100px;
+                    height: 100px;
+                    object-fit: contain;
+                    background: white;
+                    border-radius: 8px;
+                    border: 1px solid #eee;
+                }}
+                .top-offer-details {{
+                    flex: 1;
+                }}
+                .top-offer-price {{
+                    font-size: 24px;
+                    font-weight: 800;
+                    color: #d32f2f;
+                    margin: 5px 0;
+                }}
+                .btn-top-offer {{
+                    background: #00a83f;
+                    color: white !important;
+                    padding: 12px 24px;
+                    text-decoration: none;
+                    border-radius: 8px;
+                    font-weight: bold;
+                    display: inline-block;
+                    transition: transform 0.2s;
+                }}
+                .btn-top-offer:hover {{ transform: scale(1.05); }}
+                @media (max-width: 600px) {{
+                    .top-offer-box {{ flex-direction: column; text-align: center; }}
+                }}
+            </style>
         </head>
         <body>
             <header class="header"><div class="container"><a href="../../" class="logo">📊 Compara Preço</a></div></header>
             <main class="container" style="padding: 40px 20px; max-width: 900px; margin: 0 auto;">
                 <article>
                     <header style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+                        <div style="font-size: 14px; color: var(--primary); font-weight: bold; margin-bottom: 10px;">📊 ANÁLISE DE PRODUTO</div>
                         <h1>{post_title}</h1>
                         <p style="color: #666;">Publicado por Equipe Compara Preço em {now.strftime('%d/%m/%Y %H:%M')} | Leitura de 15 min</p>
                     </header>
+
+                    <!-- BOTÃO NO TOPO (TOP OFFER) -->
+                    <div class="top-offer-box">
+                        <img src="{best_product.get('image') or best_product.get('thumbnail')}" alt="{best_product.get('name')}" class="top-offer-img">
+                        <div class="top-offer-details">
+                            <div style="font-size: 14px; font-weight: bold; color: #555;">OFERTA DETECTADA:</div>
+                            <div class="top-offer-price">R$ {best_product.get('price')} <span style="font-size: 14px; color: #388e3c;">({best_product.get('custom_discount_pct')}% OFF)</span></div>
+                            <a href="{best_product.get('custom_affiliate_url')}" class="btn-top-offer" target="_blank" rel="noopener sponsored">VER OFERTA AGORA →</a>
+                        </div>
+                    </div>
+
                     <div class="content" style="line-height: 1.8; font-size: 16px; color: #333;">
                         {article_body}
                     </div>
-                    <div style="margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 10px; text-align: center;">
-                        <h3>🔥 Gostou desta oferta?</h3>
-                        <p>O {best_product.get('name')} está com estoque limitado!</p>
-                        <a href="{best_product.get('custom_affiliate_url')}" class="btn" style="background: #00a83f; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">VER OFERTA NO MERCADO LIVRE</a>
+
+                    <!-- BOTÃO NO FINAL -->
+                    <div style="margin-top: 40px; padding: 30px; background: #f9f9f9; border: 2px dashed #ddd; border-radius: 12px; text-align: center;">
+                        <h3 style="font-size: 22px; margin-bottom: 10px;">🔥 Não perca essa oportunidade!</h3>
+                        <p style="margin-bottom: 20px;">O <strong>{best_product.get('name')}</strong> está com um dos menores preços do ano.</p>
+                        <a href="{best_product.get('custom_affiliate_url')}" class="btn" style="background: #00a83f; color: white; padding: 18px 40px; text-decoration: none; border-radius: 8px; font-weight: 900; font-size: 18px; display: inline-block;">COMPRAR NO MERCADO LIVRE (SITE OFICIAL)</a>
+                        <p style="font-size: 12px; color: #888; margin-top: 15px;">* Preço e estoque sujeitos a alteração pelo vendedor.</p>
                     </div>
-                    <div style="margin-top: 40px;">
-                        <a href="../../" class="btn">← Voltar para a Home</a>
+
+                    <div style="margin-top: 40px; text-align: center;">
+                        <a href="../../" style="color: #666; text-decoration: none; font-weight: bold;">← Voltar para a Página Inicial</a>
                     </div>
                 </article>
             </main>
-            <footer class="footer" style="margin-top: 60px; padding: 40px 0; border-top: 1px solid #eee; text-align: center;">
-                <p>© 2026 Compara Preço - Conteúdo Original e Protegido.</p>
+            <footer class="footer" style="margin-top: 60px; padding: 40px 0; border-top: 1px solid #eee; text-align: center; background: #f4f7f6;">
+                <div class="container">
+                    <p style="font-weight: bold; color: #333;">Compara Preço — Seu Guia de Compras Inteligente</p>
+                    <div style="margin: 20px 0;">
+                        <a href="../../" style="margin: 0 10px; color: #666; text-decoration: none;">Início</a>
+                        <a href="../../noticias/" style="margin: 0 10px; color: #666; text-decoration: none;">Notícias</a>
+                        <a href="../../sobre/" style="margin: 0 10px; color: #666; text-decoration: none;">Sobre</a>
+                        <a href="../../contato/" style="margin: 0 10px; color: #666; text-decoration: none;">Contato</a>
+                    </div>
+                    <p style="font-size: 12px; color: #999;">© 2026 Compara Preço. Participamos do programa de afiliados e podemos receber comissão por compras qualificadas.</p>
+                </div>
             </footer>
         </body>
         </html>
