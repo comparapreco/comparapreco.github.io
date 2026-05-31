@@ -26,6 +26,13 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
     # Renderizar produtos da categoria
     category_products_html = ""
     for idx, p in enumerate(products):
+        # Pular produtos sem imagem ou link básico
+        img_url = p.get("image") or p.get("thumbnail")
+        product_url = _safe_url(p)
+        
+        if not img_url or not product_url:
+            continue
+
         discount = p.get("custom_discount_pct", 0)
         
         # Lógica de Selos Dinâmicos
@@ -41,10 +48,10 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         <div class="product-card">
             <span class="badge discount-badge">↓ {discount}% OFF</span>
             {extra_badge}
-            <div class="card-img"><img src="{p.get("image", p.get("thumbnail", ""))}" alt="{p.get("name", "")}"></div>
+            <div class="card-img"><img src="{img_url}" alt="{p.get("name", "")}"></div>
             <h3>{p.get("name", "")[:50]}...</h3>
             <div class="price-tag" style="font-size: 20px;">R$ {p.get("price", 0):.2f} <span class="old-price" style="font-size: 14px;">R$ {p.get("originalPrice", 0):.2f}</span></div>
-            <a href="{_safe_url(p)}" class="btn" style="width: 100%; text-align: center;" target="_blank">Ver</a>
+            <a href="{product_url}" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
         </div>
         """
         

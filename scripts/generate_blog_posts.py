@@ -2,14 +2,139 @@ import json
 import os
 import random
 from datetime import datetime
+import re # Importar regex para extração de specs
+
+def generate_product_specs(product):
+    specs = {
+        "Marca": product.get("brand", "Não Informado"),
+        "Modelo": product.get("model", product.get("name", "Não Informado")), # Usar nome como fallback
+        "Categoria": product.get("custom_category_slug", "Geral").replace("-", " ").title(),
+        "Preço Atual": f"R$ {product.get('price', 0):.2f}",
+        "Preço Original": f"R$ {product.get('originalPrice', 0):.2f}",
+        "Desconto": f"{product.get('custom_discount_pct', 0)}%",
+        "Condição": product.get("condition", "Novo").capitalize()
+    }
+    # Tentar extrair mais detalhes do nome do produto
+    name = product.get("name", "").lower()
+    if "gb" in name and "ram" in name:
+        specs["Armazenamento/RAM"] = f"{re.search(r'\\d+gb', name).group(0).upper()}/{re.search(r'\\d+gb ram', name).group(0).replace('gb ram', 'GB RAM').upper()}"
+    elif "gb" in name:
+        specs["Armazenamento"] = re.search(r'\\d+gb', name).group(0).upper()
+    if "polegadas" in name or '\"' in name:
+        specs["Tela"] = re.search(r'\\d+(\\.\\d+)?("| polegadas)', name).group(0).replace('"', '\"')
+    if "bocas" in name:
+        specs["Bocas (Cooktop)"] = re.search(r'\\d+ bocas', name).group(0).split(' ')[0]
+    if "w" in name and "v" in name:
+        specs["Potência/Voltagem"] = f"{re.search(r'\\d+w', name).group(0).upper()}/{re.search(r'\\d+v', name).group(0).upper()}"
+
+    return specs
+
+def generate_pros_cons(product):
+    pros = [
+        "Preço imbatível com {discount}% de desconto.",
+        "Qualidade de construção e durabilidade.",
+        "Performance consistente para o uso diário.",
+        "Reconhecimento positivo no mercado."
+    ]
+    cons = [
+        "Pode não atender a necessidades ultra-específicas.",
+        "Foco no essencial, sem funcionalidades extras de nicho.",
+        "Verificar compatibilidade com outros ecossistemas (se aplicável)."
+    ]
+
+    # Adicionar prós/contras específicos por categoria
+    category = product.get("custom_category_slug", "Geral")
+    if category == "celulares":
+        pros.append("Ótimo para multitarefas e redes sociais.")
+        cons.append("Câmera pode ser básica para fotógrafos profissionais.")
+    elif category == "eletrodomesticos":
+        pros.append("Eficiência energética e economia na conta de luz.")
+        cons.append("Instalação pode exigir profissional especializado.")
+    elif category == "informatica":
+        pros.append("Ideal para estudos e trabalho remoto.")
+        cons.append("Não recomendado para jogos de alta performance.")
+
+    return {"pros": pros, "cons": cons}
+import re # Importar regex para extração de specs
+
+def generate_product_specs(product):
+    specs = {
+        "Marca": product.get("brand", "Não Informado"),
+        "Modelo": product.get("model", product.get("name", "Não Informado")), # Usar nome como fallback
+        "Categoria": product.get("custom_category_slug", "Geral").replace("-", " ").title(),
+        "Preço Atual": f"R$ {product.get('price', 0):.2f}",
+        "Preço Original": f"R$ {product.get('originalPrice', 0):.2f}",
+        "Desconto": f"{product.get('custom_discount_pct', 0)}%",
+        "Condição": product.get("condition", "Novo").capitalize()
+    }
+    # Tentar extrair mais detalhes do nome do produto
+    name = product.get("name", "").lower()
+    if "gb" in name and "ram" in name:
+        specs["Armazenamento/RAM"] = f"{re.search(r'\\d+gb', name).group(0).upper()}/{re.search(r'\\d+gb ram', name).group(0).replace('gb ram', 'GB RAM').upper()}"
+    elif "gb" in name:
+        specs["Armazenamento"] = re.search(r'\\d+gb', name).group(0).upper()
+    if "polegadas" in name or '\"' in name:
+        specs["Tela"] = re.search(r'\\d+(\\.\\d+)?("| polegadas)', name).group(0).replace('"', '\"')
+    if "bocas" in name:
+        specs["Bocas (Cooktop)"] = re.search(r'\\d+ bocas', name).group(0).split(' ')[0]
+    if "w" in name and "v" in name:
+        specs["Potência/Voltagem"] = f"{re.search(r'\\d+w', name).group(0).upper()}/{re.search(r'\\d+v', name).group(0).upper()}"
+
+    return specs
+
+def generate_pros_cons(product):
+    pros = [
+        "Preço imbatível com {discount}% de desconto.",
+        "Qualidade de construção e durabilidade.",
+        "Performance consistente para o uso diário.",
+        "Reconhecimento positivo no mercado."
+    ]
+    cons = [
+        "Pode não atender a necessidades ultra-específicas.",
+        "Foco no essencial, sem funcionalidades extras de nicho.",
+        "Verificar compatibilidade com outros ecossistemas (se aplicável)."
+    ]
+
+    # Adicionar prós/contras específicos por categoria
+    category = product.get("custom_category_slug", "Geral")
+    if category == "celulares":
+        pros.append("Ótimo para multitarefas e redes sociais.")
+        cons.append("Câmera pode ser básica para fotógrafos profissionais.")
+    elif category == "eletrodomesticos":
+        pros.append("Eficiência energética e economia na conta de luz.")
+        cons.append("Instalação pode exigir profissional especializado.")
+    elif category == "informatica":
+        pros.append("Ideal para estudos e trabalho remoto.")
+        cons.append("Não recomendado para jogos de alta performance.")
+
+    return {"pros": pros, "cons": cons}
+
+
+
+
+
+
+
 
 def generate_long_content(product):
-    name = product.get('name', product.get('title'))
-    price = product.get('price')
-    old_price = product.get('original_price', product.get('originalPrice'))
-    discount = product.get('custom_discount_pct')
-    category = product.get('custom_category_slug', 'Geral')
-    
+    name = product.get("name", product.get("title"))
+    price = product.get("price")
+    old_price = product.get("original_price", product.get("originalPrice"))
+    discount = product.get("custom_discount_pct")
+    category = product.get("custom_category_slug", "Geral")
+    affiliate_url = product.get("custom_affiliate_url")
+    image_url = product.get("image") or product.get("thumbnail")
+
+    specs = generate_product_specs(product)
+    pros_cons = generate_pros_cons(product)
+
+    specs_html = ""
+    for key, value in specs.items():
+        specs_html += f"<li><strong>{key}:</strong> {value}</li>"
+
+    pros_html = "".join([f"<li>✅ {p}</li>" for p in pros_cons["pros"]])
+    cons_html = "".join([f"<li>❌ {c}</li>" for c in pros_cons["cons"]])
+
     content = f"""
     <p>No cenário atual de compras online, encontrar uma oferta é fácil, mas encontrar <strong>valor real</strong> e informação confiável é um desafio crescente. O Compara Preço identificou uma oportunidade imperdível para o <strong>{name}</strong>, que está com um desconto agressivo de {discount}%. Mas será que vale a pena para você? Nesta análise profunda, vamos explorar cada detalhe deste produto.</p>
 
@@ -18,36 +143,44 @@ def generate_long_content(product):
     <p>Abaixo, detalhamos por que este item se tornou um fenômeno de vendas e como você pode aproveitar esta janela de oportunidade antes que o estoque se esgote ou o preço retorne ao patamar original de R$ {old_price}.</p>
 
     <h2>2. Visão Geral e Público-Alvo</h2>
-    <p>Este produto pertence à categoria de {category} e foi desenhado para um público que não abre mão de eficiência. Seja para uso doméstico, profissional ou lazer, o {name} adapta-se a diferentes rotinas. Sua construção robusta e design intuitivo são pontos que frequentemente aparecem em avaliações positivas de consumidores reais.</p>
+    <p>Este produto pertence à categoria de {category}. Foi desenhado para um público que não abre mão de eficiência. Seja para uso doméstico, profissional ou lazer, o {name} adapta-se a diferentes rotinas. Sua construção robusta e design intuitivo são pontos que frequentemente aparecem em avaliações positivas de consumidores reais.</p>
     <p>As principais aplicações incluem o uso diário intenso, onde a durabilidade é testada. Para quem busca um upgrade em sua configuração atual, este modelo oferece uma transição suave com ganhos perceptíveis em produtividade e satisfação.</p>
 
-    <h2>3. Análise Completa: Funcionalidades e Recursos</h2>
-    <p>Ao analisar as funcionalidades do {name}, percebemos um cuidado especial com a experiência do usuário. Os recursos integrados permitem uma operação fluida, minimizando gargalos comuns em modelos de entrada. A tecnologia embarcada foca na resolução de problemas práticos do dia a dia, entregando benefícios reais em vez de apenas números em uma ficha técnica.</p>
-    <p>Em situações de uso extremo, o produto mantém a estabilidade, o que é um diferencial crucial. A integração com outros ecossistemas (quando aplicável) também é facilitada, permitindo que o {name} se torne uma peça central em sua rotina.</p>
+    <h2>3. Ficha Técnica Detalhada</h2>
+    <div class="specs-table">
+        <ul>
+            {specs_html}
+        </ul>
+    </div>
 
-    <h2>4. Pontos Positivos</h2>
-    <ul>
-        <li><strong>Custo-Benefício Imbatível:</strong> Com {discount}% de desconto, o valor por real investido é um dos melhores do mês.</li>
-        <li><strong>Qualidade de Construção:</strong> Materiais premium que garantem uma vida útil prolongada.</li>
-        <li><strong>Performance Consistente:</strong> Entrega o que promete sem oscilações de desempenho.</li>
-        <li><strong>Reconhecimento de Mercado:</strong> Alta taxa de recomendação entre especialistas e compradores.</li>
-    </ul>
+    <h2>4. Prós e Contras</h2>
+    <div class="pros-cons-section">
+        <div class="pros-box">
+            <h3>Vantagens</h3>
+            <ul>
+                {pros_html}
+            </ul>
+        </div>
+        <div class="cons-box">
+            <h3>Desvantagens</h3>
+            <ul>
+                {cons_html}
+            </ul>
+        </div>
+    </div>
 
-    <h2>5. Pontos de Atenção</h2>
-    <p>Embora seja um produto excelente, é importante notar que o {name} pode não ser a escolha ideal para quem busca funcionalidades ultra-específicas de nichos muito restritos. Além disso, em comparação com modelos que custam o triplo do preço, ele foca no essencial com perfeição, em vez de perfumarias desnecessárias. Verifique sempre se as dimensões e especificações técnicas atendem exatamente ao seu espaço ou necessidade técnica antes da compra.</p>
-
-    <h2>6. Comparação Inteligente</h2>
+    <h2>5. Comparação Inteligente</h2>
     <p>Comparado a outros produtos da mesma faixa de preço (sem o desconto), o {name} ganha destaque pela sua confiabilidade. Enquanto concorrentes diretos muitas vezes sacrificam a qualidade dos componentes para baixar o preço, este modelo mantém o padrão elevado, aproveitando a escala de produção para oferecer esta promoção especial no Mercado Livre.</p>
 
-    <h2>7. Custo-Benefício e Avaliação de Preço</h2>
-    <p>Atualmente, o {name} está sendo comercializado por <strong>R$ {price}</strong>. Considerando o preço original de R$ {old_price}, estamos falando de uma economia real de R$ {old_price - price}. Nossa metodologia de análise de mercado indica que este é o <strong>menor preço dos últimos 30 dias</strong>, o que configura uma oportunidade de compra imediata.</p>
+    <h2>6. Custo-Benefício e Avaliação de Preço</h2>
+    <p>Atualmente, o {name} está sendo comercializado por <strong>R$ {price}</strong>. Considerando o preço original de R$ {old_price}, estamos falando de uma economia real de R$ {old_price - price:.2f}. Nossa metodologia de análise de mercado indica que este é o <strong>menor preço dos últimos 30 dias</strong>, o que configura uma oportunidade de compra imediata.</p>
 
-    <h2>8. Perguntas Frequentes (FAQ)</h2>
+    <h2>7. Perguntas Frequentes (FAQ)</h2>
     <p><strong>O produto é original?</strong> Sim, o Compara Preço apenas monitora lojas oficiais e vendedores com alta reputação no Mercado Livre.</p>
     <p><strong>Qual o prazo de entrega?</strong> Depende da sua região, mas muitos destes itens possuem entrega Full, chegando em menos de 24h em grandes capitais.</p>
     <p><strong>Tem garantia?</strong> Sim, todos os produtos acompanham nota fiscal e garantia oficial do fabricante ou do vendedor conforme a lei brasileira.</p>
 
-    <h2>9. Conclusão: Vale a Pena?</h2>
+    <h2>8. Conclusão: Vale a Pena?</h2>
     <p>Sim, o <strong>{name}</strong> vale muito a pena, especialmente sob a ótica da nova missão editorial do Compara Preço. Ele atende ao perfil de usuário que busca inteligência na hora de gastar, unindo uma análise técnica favorável a uma condição comercial rara. Recomendamos a compra para quem busca um produto confiável e quer aproveitar o desconto de {discount}%.</p>
 
     <hr>
@@ -165,7 +298,7 @@ def generate_blog_content(count=1):
                         <div class="top-offer-details">
                             <div style="font-size: 14px; font-weight: bold; color: #555;">OFERTA DETECTADA:</div>
                             <div class="top-offer-price">R$ {best_product.get('price')} <span style="font-size: 14px; color: #388e3c;">({best_product.get('custom_discount_pct')}% OFF)</span></div>
-                            <a href="{best_product.get('custom_affiliate_url')}" class="btn-top-offer" target="_blank" rel="noopener sponsored">VER OFERTA AGORA →</a>
+                            <a href="{best_product.get('custom_affiliate_url')}" class="btn-top-offer" target="_blank" rel="noopener sponsored">COMPRAR AGORA →</a>
                         </div>
                     </div>
 
@@ -177,7 +310,7 @@ def generate_blog_content(count=1):
                     <div style="margin-top: 40px; padding: 30px; background: #f9f9f9; border: 2px dashed #ddd; border-radius: 12px; text-align: center;">
                         <h3 style="font-size: 22px; margin-bottom: 10px;">🔥 Não perca essa oportunidade!</h3>
                         <p style="margin-bottom: 20px;">O <strong>{best_product.get('name')}</strong> está com um dos menores preços do ano.</p>
-                        <a href="{best_product.get('custom_affiliate_url')}" class="btn" style="background: #00a83f; color: white; padding: 18px 40px; text-decoration: none; border-radius: 8px; font-weight: 900; font-size: 18px; display: inline-block;">COMPRAR NO MERCADO LIVRE (SITE OFICIAL)</a>
+                        <a href="{best_product.get('custom_affiliate_url')}" class="btn" style="background: #00a83f; color: white; padding: 18px 40px; text-decoration: none; border-radius: 8px; font-weight: 900; font-size: 18px; display: inline-block;">COMPRAR AGORA NO MERCADO LIVRE</a>
                         <p style="font-size: 12px; color: #888; margin-top: 15px;">* Preço e estoque sujeitos a alteração pelo vendedor.</p>
                     </div>
 
