@@ -124,5 +124,45 @@ def generate_blog_content():
         f.write(content)
     print(f"Artigo longo gerado: {file_path}")
 
+    # Atualizar o arquivo noticias/index.html com a nova notícia
+    index_path = 'noticias/index.html'
+    if os.path.exists(index_path):
+        with open(index_path, 'r', encoding='utf-8') as f:
+            index_content = f.read()
+        
+        new_post_entry = {
+            "id": int(now.timestamp()),
+            "tag": "analise",
+            "tagLabel": "📊 Análise",
+            "tagClass": "tag-analise",
+            "icon": "🔍",
+            "title": post_title,
+            "excerpt": f"Análise completa e profissional deste produto. Descubra se vale a pena comprar com {best_product.get('custom_discount_pct')}% de desconto.",
+            "date": now.strftime('%d %b %Y'),
+            "readTime": "15 min",
+            "featured": True,
+            "url": f"posts/{post_slug}.html"
+        }
+        
+        # Localizar o array NEWS no JS
+        import re
+        news_match = re.search(r'const NEWS = \[(.*?)\];', index_content, re.DOTALL)
+        if news_match:
+            try:
+                # Tenta converter o conteúdo atual em lista Python (simplificado)
+                # Como é JS, vamos apenas inserir no início da string do array
+                current_news_str = news_match.group(1).strip()
+                new_entry_json = json.dumps(new_post_entry, ensure_ascii=False, indent=8)
+                
+                # Inserir no início do array
+                updated_news_str = f"\n{new_entry_json}," + (f"\n{current_news_str}" if current_news_str else "")
+                new_index_content = index_content.replace(news_match.group(0), f"const NEWS = [{updated_news_str}\n    ];")
+                
+                with open(index_path, 'w', encoding='utf-8') as f:
+                    f.write(new_index_content)
+                print(f"noticias/index.html atualizado com o novo post.")
+            except Exception as e:
+                print(f"Erro ao atualizar noticias/index.html: {e}")
+
 if __name__ == "__main__":
     generate_blog_content()
