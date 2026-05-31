@@ -59,110 +59,116 @@ def generate_long_content(product):
     
     return content + filler
 
-def generate_blog_content():
+def generate_blog_content(count=1):
     posts_dir = 'noticias/posts'
     if not os.path.exists(posts_dir):
         os.makedirs(posts_dir)
 
-    now = datetime.now()
     offers_file = 'data/products/offers.json'
-    
     if not os.path.exists(offers_file):
         return
 
     with open(offers_file, 'r') as f:
         products = json.load(f)
     
-    # Seleciona o melhor produto para um artigo dedicado (maior desconto)
-    best_product = sorted(products, key=lambda x: x.get('custom_discount_pct', 0), reverse=True)[0]
+    # Seleciona os melhores produtos (maiores descontos)
+    top_products = sorted(products, key=lambda x: x.get('custom_discount_pct', 0), reverse=True)[:count]
     
-    post_title = f"Análise Completa: Vale a Pena Comprar o {best_product.get('name')} em 2026?"
-    post_slug = f"analise-completa-{best_product.get('id')}-{now.strftime('%Y-%m-%d-%H-%M-%S')}"
+    for best_product in top_products:
+        now = datetime.now()
+        # Adiciona um pequeno delay ou usa o ID do produto para evitar slugs idênticos se rodar rápido
+        import time
+        time.sleep(0.1)
     
-    article_body = generate_long_content(best_product)
-
-    content = f"""
-    <!DOCTYPE html>
-    <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{post_title} | Compara Preço</title>
-        <meta name="description" content="Análise aprofundada do {best_product.get('name')}. Descubra se vale a pena comprar com {best_product.get('custom_discount_pct')}% de desconto.">
-        <link rel="stylesheet" href="../../assets/css/style.css">
-    </head>
-    <body>
-        <header class="header"><div class="container"><a href="../../" class="logo">📊 Compara Preço</a></div></header>
-        <main class="container" style="padding: 40px 20px; max-width: 900px; margin: 0 auto;">
-            <article>
-                <header style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
-                    <h1>{post_title}</h1>
-                    <p style="color: #666;">Publicado por Equipe Compara Preço em {now.strftime('%d/%m/%Y %H:%M')} | Leitura de 15 min</p>
-                </header>
-                <div class="content" style="line-height: 1.8; font-size: 16px; color: #333;">
-                    {article_body}
-                </div>
-                <div style="margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 10px; text-align: center;">
-                    <h3>🔥 Gostou desta oferta?</h3>
-                    <p>O {best_product.get('name')} está com estoque limitado!</p>
-                    <a href="{best_product.get('custom_affiliate_url')}" class="btn" style="background: #00a83f; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">VER OFERTA NO MERCADO LIVRE</a>
-                </div>
-                <div style="margin-top: 40px;">
-                    <a href="../../" class="btn">← Voltar para a Home</a>
-                </div>
-            </article>
-        </main>
-        <footer class="footer" style="margin-top: 60px; padding: 40px 0; border-top: 1px solid #eee; text-align: center;">
-            <p>© 2026 Compara Preço - Conteúdo Original e Protegido.</p>
-        </footer>
-    </body>
-    </html>
-    """
-    
-    file_path = os.path.join(posts_dir, f"{post_slug}.html")
-    with open(file_path, 'w') as f:
-        f.write(content)
-    print(f"Artigo longo gerado: {file_path}")
-
-    # Atualizar o arquivo noticias/index.html com a nova notícia
-    index_path = 'noticias/index.html'
-    if os.path.exists(index_path):
-        with open(index_path, 'r', encoding='utf-8') as f:
-            index_content = f.read()
+        post_title = f"Análise Completa: Vale a Pena Comprar o {best_product.get('name')} em 2026?"
+        post_slug = f"analise-completa-{best_product.get('id')}-{now.strftime('%Y-%m-%d-%H-%M-%S')}"
         
-        new_post_entry = {
-            "id": int(now.timestamp()),
-            "tag": "analise",
-            "tagLabel": "📊 Análise",
-            "tagClass": "tag-analise",
-            "icon": "🔍",
-            "title": post_title,
-            "excerpt": f"Análise completa e profissional deste produto. Descubra se vale a pena comprar com {best_product.get('custom_discount_pct')}% de desconto.",
-            "date": now.strftime('%d %b %Y'),
-            "readTime": "15 min",
-            "featured": True,
-            "url": f"posts/{post_slug}.html"
-        }
+        article_body = generate_long_content(best_product)
+
+        content = f"""
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>{post_title} | Compara Preço</title>
+            <meta name="description" content="Análise aprofundada do {best_product.get('name')}. Descubra se vale a pena comprar com {best_product.get('custom_discount_pct')}% de desconto.">
+            <link rel="stylesheet" href="../../assets/css/style.css">
+        </head>
+        <body>
+            <header class="header"><div class="container"><a href="../../" class="logo">📊 Compara Preço</a></div></header>
+            <main class="container" style="padding: 40px 20px; max-width: 900px; margin: 0 auto;">
+                <article>
+                    <header style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+                        <h1>{post_title}</h1>
+                        <p style="color: #666;">Publicado por Equipe Compara Preço em {now.strftime('%d/%m/%Y %H:%M')} | Leitura de 15 min</p>
+                    </header>
+                    <div class="content" style="line-height: 1.8; font-size: 16px; color: #333;">
+                        {article_body}
+                    </div>
+                    <div style="margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 10px; text-align: center;">
+                        <h3>🔥 Gostou desta oferta?</h3>
+                        <p>O {best_product.get('name')} está com estoque limitado!</p>
+                        <a href="{best_product.get('custom_affiliate_url')}" class="btn" style="background: #00a83f; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">VER OFERTA NO MERCADO LIVRE</a>
+                    </div>
+                    <div style="margin-top: 40px;">
+                        <a href="../../" class="btn">← Voltar para a Home</a>
+                    </div>
+                </article>
+            </main>
+            <footer class="footer" style="margin-top: 60px; padding: 40px 0; border-top: 1px solid #eee; text-align: center;">
+                <p>© 2026 Compara Preço - Conteúdo Original e Protegido.</p>
+            </footer>
+        </body>
+        </html>
+        """
         
-        # Localizar o array NEWS no JS
-        import re
-        news_match = re.search(r'const NEWS = \[(.*?)\];', index_content, re.DOTALL)
-        if news_match:
-            try:
-                # Tenta converter o conteúdo atual em lista Python (simplificado)
-                # Como é JS, vamos apenas inserir no início da string do array
-                current_news_str = news_match.group(1).strip()
-                new_entry_json = json.dumps(new_post_entry, ensure_ascii=False, indent=8)
-                
-                # Inserir no início do array
-                updated_news_str = f"\n{new_entry_json}," + (f"\n{current_news_str}" if current_news_str else "")
-                new_index_content = index_content.replace(news_match.group(0), f"const NEWS = [{updated_news_str}\n    ];")
-                
-                with open(index_path, 'w', encoding='utf-8') as f:
-                    f.write(new_index_content)
-                print(f"noticias/index.html atualizado com o novo post.")
-            except Exception as e:
-                print(f"Erro ao atualizar noticias/index.html: {e}")
+        file_path = os.path.join(posts_dir, f"{post_slug}.html")
+        with open(file_path, 'w') as f:
+            f.write(content)
+        print(f"Artigo longo gerado: {file_path}")
+
+        # Atualizar o arquivo noticias/index.html com a nova notícia
+        index_path = 'noticias/index.html'
+        if os.path.exists(index_path):
+            with open(index_path, 'r', encoding='utf-8') as f:
+                index_content = f.read()
+            
+            new_post_entry = {
+                "id": int(now.timestamp()),
+                "tag": "analise",
+                "tagLabel": "📊 Análise",
+                "tagClass": "tag-analise",
+                "icon": "🔍",
+                "title": post_title,
+                "excerpt": f"Análise completa e profissional deste produto. Descubra se vale a pena comprar com {best_product.get('custom_discount_pct')}% de desconto.",
+                "date": now.strftime('%d %b %Y'),
+                "readTime": "15 min",
+                "featured": True,
+                "url": f"posts/{post_slug}.html"
+            }
+            
+            # Localizar o array NEWS no JS
+            import re
+            news_match = re.search(r'const NEWS = \[(.*?)\];', index_content, re.DOTALL)
+            if news_match:
+                try:
+                    # Tenta converter o conteúdo atual em lista Python (simplificado)
+                    # Como é JS, vamos apenas inserir no início da string do array
+                    current_news_str = news_match.group(1).strip()
+                    new_entry_json = json.dumps(new_post_entry, ensure_ascii=False, indent=8)
+                    
+                    # Inserir no início do array
+                    updated_news_str = f"\n{new_entry_json}," + (f"\n{current_news_str}" if current_news_str else "")
+                    index_content = index_content.replace(news_match.group(0), f"const NEWS = [{updated_news_str}\n    ];")
+                    
+                    with open(index_path, 'w', encoding='utf-8') as f:
+                        f.write(index_content)
+                    print(f"noticias/index.html atualizado com o novo post.")
+                except Exception as e:
+                    print(f"Erro ao atualizar noticias/index.html: {e}")
 
 if __name__ == "__main__":
-    generate_blog_content()
+    import sys
+    count = int(sys.argv[1]) if len(sys.argv) > 1 else 1
+    generate_blog_content(count)
