@@ -71,8 +71,18 @@ def generate_blog_content(count=1):
     with open(offers_file, 'r') as f:
         products = json.load(f)
     
-    # Seleciona os melhores produtos (maiores descontos)
-    top_products = sorted(products, key=lambda x: x.get('custom_discount_pct', 0), reverse=True)[:count]
+    # Filtrar por categorias prioritárias: celulares e eletrodomesticos
+    priority_categories = ['celulares', 'eletrodomesticos']
+    filtered_products = [p for p in products if p.get('custom_category_slug') in priority_categories]
+    
+    # Se não houver produtos suficientes nas categorias prioritárias, usa os outros
+    if len(filtered_products) < count:
+        remaining_needed = count - len(filtered_products)
+        other_products = [p for p in products if p.get('custom_category_slug') not in priority_categories]
+        filtered_products.extend(sorted(other_products, key=lambda x: x.get('custom_discount_pct', 0), reverse=True)[:remaining_needed])
+    
+    # Seleciona os melhores produtos (maiores descontos) das categorias filtradas
+    top_products = sorted(filtered_products, key=lambda x: x.get('custom_discount_pct', 0), reverse=True)[:count]
     
     for best_product in top_products:
         now = datetime.now()
