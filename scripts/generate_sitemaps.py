@@ -16,13 +16,17 @@ def generate_sitemap(filename, urls):
         content += '  </url>\n'
     content += '</urlset>'
     
-    with open(f"/home/ubuntu/comparadordepreco/{filename}", "w") as f:
+    # Usar caminho relativo ao diretório raiz do repositório
+    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    file_path = os.path.join(root_dir, filename)
+    with open(file_path, "w") as f:
         f.write(content)
     print(f"Sitemap {filename} gerado com {len(urls)} URLs.")
 
 def main():
+    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     # 1. Sitemap de Guias
-    guias_dir = "/home/ubuntu/comparadordepreco/guias"
+    guias_dir = os.path.join(root_dir, "guias")
     guia_urls = []
     if os.path.exists(guias_dir):
         for d in os.listdir(guias_dir):
@@ -31,7 +35,7 @@ def main():
     generate_sitemap("sitemap-guias.xml", guia_urls)
 
     # 2. Sitemap de Categorias
-    cat_dir = "/home/ubuntu/comparadordepreco/categorias"
+    cat_dir = os.path.join(root_dir, "categorias")
     cat_urls = []
     if os.path.exists(cat_dir):
         for d in os.listdir(cat_dir):
@@ -40,14 +44,14 @@ def main():
     generate_sitemap("sitemap-categorias.xml", cat_urls)
 
     # 3. Sitemap de Notícias
-    noticias_dir = "/home/ubuntu/comparadordepreco/noticias"
+    noticias_dir = os.path.join(root_dir, "noticias")
     noticia_urls = [f"{BASE_URL}noticias/"] # Hub principal
     # Se houver notícias individuais no futuro, adicionar aqui
     generate_sitemap("sitemap-noticias.xml", noticia_urls)
 
     # 4. Sitemap de Produtos
     produtos_urls = []
-    ofertas_dir = "/home/ubuntu/comparadordepreco/ofertas"
+    ofertas_dir = os.path.join(root_dir, "ofertas")
     if os.path.exists(ofertas_dir):
         for root, dirs, files in os.walk(ofertas_dir):
             for file in files:
@@ -66,7 +70,7 @@ def main():
         index_content += '  </sitemap>\n'
     index_content += '</sitemapindex>'
     
-    with open("/home/ubuntu/comparadordepreco/sitemap.xml", "w") as f:
+    with open(os.path.join(root_dir, "sitemap.xml"), "w") as f:
         f.write(index_content)
     print("Sitemap index gerado.")
 
