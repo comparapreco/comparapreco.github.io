@@ -2,7 +2,7 @@ import os
 import json
 from datetime import datetime
 
-BASE_URL = "https://radardeprecos.github.io/radar/"
+BASE_URL = "/"
 
 def generate_sitemap(filename, urls):
     content = '<?xml version="1.0" encoding="UTF-8"?>\n'

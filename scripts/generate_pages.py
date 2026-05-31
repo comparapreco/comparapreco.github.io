@@ -4,7 +4,7 @@ import random
 from typing import List, Dict, Any
 from logger import logger
 
-BASE_URL = "https://radardeprecos.github.io/radar/"
+BASE_URL = "/"
 
 def slugify(text: str) -> str:
     import unicodedata
