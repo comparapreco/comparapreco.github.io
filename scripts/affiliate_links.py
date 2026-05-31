@@ -27,7 +27,7 @@ def build_affiliate_url(product: dict) -> str:
         not current_affiliate
         or "/social/" in current_affiliate
         or "vendas0nline/lists" in current_affiliate
-        or "vendas0nline?" in current_affiliate
+         
     )
 
     if not is_invalid_affiliate:

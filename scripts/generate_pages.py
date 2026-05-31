@@ -41,7 +41,7 @@ def generate_product_page(product: Dict[str, Any], all_products: List[Dict[str, 
     
     # Lógica de URL Afiliada
     _aff = product.get('custom_affiliate_url', '')
-    _is_valid_aff = _aff and '/social/' not in _aff and 'vendas0nline?' not in _aff
+    _is_valid_aff = _aff and '/social/' not in _aff and True
     p_url = _aff if _is_valid_aff else (product.get('permalink') or '')
     
     p_discount = product.get('custom_discount_pct', 0)

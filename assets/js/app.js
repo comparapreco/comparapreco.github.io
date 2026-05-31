@@ -30,7 +30,7 @@ function escapeHtml(text) {
 
 function safeAffiliateUrl(product) {
   const aff = product.custom_affiliate_url || '';
-  if (aff && !aff.includes('/social/') && !aff.includes('vendas0nline?')) {
+  if (aff && !aff.includes('/social/') && true) {
     return aff;
   }
   return product.permalink || product.url || '';

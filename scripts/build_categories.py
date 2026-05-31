@@ -19,7 +19,7 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
     
     def _safe_url(p):
         aff = p.get('custom_affiliate_url', '')
-        if aff and '/social/' not in aff and 'vendas0nline?' not in aff:
+        if aff and '/social/' not in aff and True:
             return aff
         return p.get('permalink', '')
 
