@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Radar de Mercado — Inteligência de Preços | Compara Preço</title>
+<meta content="Análise em tempo real do mercado. Veja tendências de preço, produtos em alta e oportunidades de compra no Mercado Livre." name="description"/>
+<link href="https://comparapreco.github.io/radar-de-mercado/" rel="canonical"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+<style>
+  .hero { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; padding: 60px 0 40px; margin-bottom: 40px; }
+  .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+  .hero p { opacity: 0.9; font-size: 1.1rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  .filters { display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
+  .filter-btn { padding: 8px 16px; border-radius: 20px; border: 2px solid var(--border); background: var(--card); cursor: pointer; transition: all 0.3s; font-weight: 600; }
+  .filter-btn.active, .filter-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
+  .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-bottom: 40px; }
+  .product-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: all 0.3s; }
+  .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+  .product-badge { background: #e11d48; color: white; padding: 4px 10px; font-size: 0.8rem; font-weight: 800; display: inline-block; border-radius: 4px; margin-bottom: 8px; }
+  .product-img { width: 100%; height: 200px; object-fit: contain; background: #f8f8f8; padding: 15px; }
+  .product-body { padding: 15px; }
+  .product-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 8px; line-height: 1.4; }
+  .product-price { font-size: 1.4rem; font-weight: 800; color: #00a83f; margin-bottom: 12px; }
+  .btn-ml { display: block; background: #00a83f; color: white; text-align: center; padding: 12px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: background 0.3s; }
+  .btn-ml:hover { background: #008f35; }
+  .section-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; border-left: 4px solid var(--primary); padding-left: 15px; }
+  .stats-bar { display: flex; gap: 30px; flex-wrap: wrap; margin-top: 20px; }
+  .stat-item { text-align: center; }
+  .stat-num { font-size: 2rem; font-weight: 800; }
+  .stat-label { font-size: 0.85rem; opacity: 0.8; }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+<meta name="google-adsense-account" content="ca-pub-4896859041377751">
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../">📊 <strong>Compara Preço</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<div style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 10px;"><a href="../" style="color:white; text-decoration:none;">Início</a> › 📡 Radar de Mercado</div>
+<h1>📡 📡 Radar de Mercado</h1>
+<p>Inteligência de mercado em tempo real. Tendências, análises e oportunidades.</p>
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">+500</div><div class="stat-label">Produtos</div></div>
+  <div class="stat-item"><div class="stat-num">Até 70%</div><div class="stat-label">De Desconto</div></div>
+  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Mercado Livre</div></div>
+</div>
+</div>
+</section>
+
+<main class="container">
+<h2 class="section-title">📡 Destaques</h2>
+<div class="products-grid" id="productsGrid">
+  <!-- Carregado via JavaScript -->
+</div>
+<div style="text-align: center; margin: 40px 0;">
+  <a href="https://www.mercadolivre.com.br/ofertas?matt_tool=vendas0nline" target="_blank" rel="noopener sponsored" class="btn-ml" style="display: inline-block; padding: 15px 40px; font-size: 1.1rem;">
+    🛒 Ver Todas as Ofertas no Mercado Livre →
+  </a>
+</div>
+</main>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+  <div class="footer-col">
+    <h3>Compara Preço</h3>
+    <p>Monitoramos as melhores ofertas do Mercado Livre para você economizar sempre.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Navegação</h4>
+    <a href="../">Início</a>
+    <a href="../noticias/">Blog</a>
+    <a href="../melhores-2026/">Melhores de 2026</a>
+    <a href="../mais-clicados/">Mais Clicados</a>
+  </div>
+  <div class="footer-col">
+    <h4>Institucional</h4>
+    <a href="../privacidade/">Privacidade</a>
+    <a href="../termos/">Termos de Uso</a>
+    <a href="../metodologia/">Metodologia</a>
+    <a href="../disclaimer/">Disclaimer</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <p>© 2026 Compara Preço. Este site contém links de afiliado do Mercado Livre. Ao clicar e comprar, você nos ajuda a manter o site gratuito.</p>
+</div>
+</div>
+</footer>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>
