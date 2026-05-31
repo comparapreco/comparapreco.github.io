@@ -1,78 +1,250 @@
+#!/usr/bin/env python3
+"""
+Gerador Automático de Sitemaps - Compara Preço
+Detecta automaticamente novos posts, produtos e páginas e regenera todos os sitemaps.
+Executado a cada hora via GitHub Actions.
+"""
 import os
-import json
+import re
 from datetime import datetime
+from pathlib import Path
 
-BASE_URL = "https://comparapreco.github.io/"
+BASE_URL = "https://comparapreco.github.io"
+ROOT = Path(__file__).resolve().parents[1]
+NOW_DATE = datetime.now().strftime("%Y-%m-%d")
+NOW_DATETIME = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+00:00")
 
-def generate_sitemap(filename, urls):
-    content = '<?xml version="1.0" encoding="UTF-8"?>\n'
-    content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    for url in urls:
-        content += '  <url>\n'
-        content += f'    <loc>{url}</loc>\n'
-        content += f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>\n'
-        content += '    <changefreq>daily</changefreq>\n'
-        content += '    <priority>0.8</priority>\n'
-        content += '  </url>\n'
-    content += '</urlset>'
-    
-    # Usar caminho relativo ao diretório raiz do repositório
-    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    file_path = os.path.join(root_dir, filename)
-    with open(file_path, "w") as f:
-        f.write(content)
-    print(f"Sitemap {filename} gerado com {len(urls)} URLs.")
+
+def write_sitemap(filename: str, urls: list) -> None:
+    """Escreve um arquivo sitemap XML com as URLs fornecidas."""
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for u in urls:
+        lines.append("  <url>")
+        lines.append(f"    <loc>{u['loc']}</loc>")
+        lines.append(f"    <lastmod>{u.get('lastmod', NOW_DATE)}</lastmod>")
+        lines.append(f"    <changefreq>{u.get('changefreq', 'weekly')}</changefreq>")
+        lines.append(f"    <priority>{u.get('priority', '0.6')}</priority>")
+        lines.append("  </url>")
+    lines.append("</urlset>")
+    out_path = ROOT / filename
+    out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"[OK] {filename} -> {len(urls)} URLs")
+
+
+def extract_date_from_filename(filename: str) -> str:
+    """Extrai data do nome do arquivo - busca padrao YYYYMMDD no final (antes do .html)."""
+    # Busca YYYYMMDD no final do nome (ex: analise-MLB123-20260531.html)
+    m = re.search(r"-(\d{4})(\d{2})(\d{2})(?:\.html)?$", filename)
+    if m:
+        year, month, day = m.group(1), m.group(2), m.group(3)
+        # Validar que é uma data razoável
+        y, mo, d = int(year), int(month), int(day)
+        if 2020 <= y <= 2030 and 1 <= mo <= 12 and 1 <= d <= 31:
+            return f"{year}-{month}-{day}"
+    # Busca YYYY-MM-DD no nome
+    m = re.search(r"(\d{4}-\d{2}-\d{2})", filename)
+    if m:
+        return m.group(1)
+    return NOW_DATE
+
+
+def collect_posts() -> list:
+    """Coleta todos os posts individuais de noticias/posts/."""
+    posts_dir = ROOT / "noticias" / "posts"
+    urls = []
+    if not posts_dir.exists():
+        return urls
+    for f in sorted(posts_dir.glob("*.html")):
+        date = extract_date_from_filename(f.name)
+        urls.append({
+            "loc": f"{BASE_URL}/noticias/posts/{f.name}",
+            "lastmod": date,
+            "changefreq": "monthly",
+            "priority": "0.8",
+        })
+    return urls
+
+
+def collect_ofertas() -> list:
+    """Coleta todas as páginas de ofertas/produtos."""
+    ofertas_dir = ROOT / "ofertas"
+    urls = []
+    if not ofertas_dir.exists():
+        return urls
+    for html_file in sorted(ofertas_dir.rglob("*.html")):
+        rel = html_file.relative_to(ROOT)
+        urls.append({
+            "loc": f"{BASE_URL}/{rel}",
+            "lastmod": NOW_DATE,
+            "changefreq": "daily",
+            "priority": "0.7",
+        })
+    return urls
+
+
+def collect_produtos_intel() -> list:
+    """Coleta páginas de inteligência de produtos (produtos/)."""
+    produtos_dir = ROOT / "produtos"
+    urls = []
+    if not produtos_dir.exists():
+        return urls
+    for html_file in sorted(produtos_dir.rglob("*.html")):
+        rel = html_file.relative_to(ROOT)
+        urls.append({
+            "loc": f"{BASE_URL}/{rel}",
+            "lastmod": NOW_DATE,
+            "changefreq": "daily",
+            "priority": "0.7",
+        })
+    return urls
+
+
+def collect_categorias() -> list:
+    """Coleta páginas de categorias."""
+    cat_dir = ROOT / "categorias"
+    urls = []
+    if not cat_dir.exists():
+        return urls
+    for index_file in sorted(cat_dir.glob("*/index.html")):
+        cat_name = index_file.parent.name
+        urls.append({
+            "loc": f"{BASE_URL}/categorias/{cat_name}/",
+            "lastmod": NOW_DATE,
+            "changefreq": "daily",
+            "priority": "0.8",
+        })
+    return urls
+
+
+def collect_guias() -> list:
+    """Coleta páginas de guias."""
+    guias_dir = ROOT / "guias"
+    urls = []
+    if not guias_dir.exists():
+        return urls
+    for index_file in sorted(guias_dir.glob("*/index.html")):
+        guia_name = index_file.parent.name
+        urls.append({
+            "loc": f"{BASE_URL}/guias/{guia_name}/",
+            "lastmod": NOW_DATE,
+            "changefreq": "monthly",
+            "priority": "0.9",
+        })
+    return urls
+
+
+def collect_static_pages() -> list:
+    """Coleta páginas estáticas importantes do site."""
+    static_pages = [
+        # Páginas principais (alta prioridade)
+        {"loc": f"{BASE_URL}/", "changefreq": "hourly", "priority": "1.0"},
+        {"loc": f"{BASE_URL}/melhores-ofertas/", "changefreq": "hourly", "priority": "0.9"},
+        {"loc": f"{BASE_URL}/ofertas-hoje/", "changefreq": "hourly", "priority": "0.9"},
+        {"loc": f"{BASE_URL}/quedas-hoje/", "changefreq": "hourly", "priority": "0.9"},
+        {"loc": f"{BASE_URL}/noticias/", "changefreq": "daily", "priority": "0.9"},
+        {"loc": f"{BASE_URL}/guias/", "changefreq": "weekly", "priority": "0.8"},
+        {"loc": f"{BASE_URL}/rankings/", "changefreq": "daily", "priority": "0.8"},
+        {"loc": f"{BASE_URL}/comparativos/", "changefreq": "weekly", "priority": "0.8"},
+        {"loc": f"{BASE_URL}/melhores-2026/", "changefreq": "weekly", "priority": "0.8"},
+        {"loc": f"{BASE_URL}/black-friday/", "changefreq": "weekly", "priority": "0.7"},
+        {"loc": f"{BASE_URL}/cupons/", "changefreq": "daily", "priority": "0.7"},
+        # Páginas institucionais
+        {"loc": f"{BASE_URL}/sobre/", "changefreq": "monthly", "priority": "0.5"},
+        {"loc": f"{BASE_URL}/contato/", "changefreq": "monthly", "priority": "0.5"},
+        {"loc": f"{BASE_URL}/privacidade/", "changefreq": "monthly", "priority": "0.4"},
+        {"loc": f"{BASE_URL}/termos/", "changefreq": "monthly", "priority": "0.4"},
+        {"loc": f"{BASE_URL}/metodologia/", "changefreq": "monthly", "priority": "0.5"},
+    ]
+    # Adicionar apenas páginas que realmente existem
+    result = []
+    for page in static_pages:
+        path_part = page["loc"].replace(f"{BASE_URL}/", "").rstrip("/")
+        if not path_part:
+            result.append(dict(page, lastmod=NOW_DATE))
+            continue
+        page_path = ROOT / path_part / "index.html"
+        if page_path.exists():
+            result.append(dict(page, lastmod=NOW_DATE))
+    return result
+
+
+def generate_sitemap_index(sitemaps: list) -> None:
+    """Gera o sitemap index principal."""
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for s in sitemaps:
+        lines.append("  <sitemap>")
+        lines.append(f"    <loc>{BASE_URL}/{s}</loc>")
+        lines.append(f"    <lastmod>{NOW_DATE}</lastmod>")
+        lines.append("  </sitemap>")
+    lines.append("</sitemapindex>")
+    out_path = ROOT / "sitemap.xml"
+    out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"[OK] sitemap.xml (index com {len(sitemaps)} sitemaps)")
+
 
 def main():
-    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    # 1. Sitemap de Guias
-    guias_dir = os.path.join(root_dir, "guias")
-    guia_urls = []
-    if os.path.exists(guias_dir):
-        for d in os.listdir(guias_dir):
-            if os.path.isdir(os.path.join(guias_dir, d)):
-                guia_urls.append(f"{BASE_URL}guias/{d}/")
-    generate_sitemap("sitemap-guias.xml", guia_urls)
+    print(f"\n{'='*60}")
+    print(f"  Gerador de Sitemaps - Compara Preco")
+    print(f"  {NOW_DATETIME}")
+    print(f"{'='*60}\n")
 
-    # 2. Sitemap de Categorias
-    cat_dir = os.path.join(root_dir, "categorias")
-    cat_urls = []
-    if os.path.exists(cat_dir):
-        for d in os.listdir(cat_dir):
-            if os.path.isdir(os.path.join(cat_dir, d)):
-                cat_urls.append(f"{BASE_URL}categorias/{d}/")
-    generate_sitemap("sitemap-categorias.xml", cat_urls)
+    # 1. Sitemap de Postagens (posts individuais + hub)
+    post_urls = collect_posts()
+    noticias_urls = [
+        {"loc": f"{BASE_URL}/noticias/", "changefreq": "daily", "priority": "0.9", "lastmod": NOW_DATE}
+    ] + post_urls
+    write_sitemap("sitemap-noticias.xml", noticias_urls)
 
-    # 3. Sitemap de Notícias
-    noticias_dir = os.path.join(root_dir, "noticias")
-    noticia_urls = [f"{BASE_URL}noticias/"] # Hub principal
-    # Se houver notícias individuais no futuro, adicionar aqui
-    generate_sitemap("sitemap-noticias.xml", noticia_urls)
+    # 2. Sitemap de Produtos (ofertas + páginas de inteligência)
+    ofertas_urls = collect_ofertas()
+    produtos_intel_urls = collect_produtos_intel()
+    all_produtos = ofertas_urls + produtos_intel_urls
+    # Deduplicar por loc
+    seen = set()
+    unique_produtos = []
+    for u in all_produtos:
+        if u["loc"] not in seen:
+            seen.add(u["loc"])
+            unique_produtos.append(u)
+    write_sitemap("sitemap-produtos.xml", unique_produtos)
 
-    # 4. Sitemap de Produtos
-    produtos_urls = []
-    ofertas_dir = os.path.join(root_dir, "ofertas")
-    if os.path.exists(ofertas_dir):
-        for root, dirs, files in os.walk(ofertas_dir):
-            for file in files:
-                if file.endswith(".html"):
-                    rel_path = os.path.relpath(os.path.join(root, file), ofertas_dir)
-                    produtos_urls.append(f"{BASE_URL}ofertas/{rel_path}")
-    generate_sitemap("sitemap-produtos.xml", produtos_urls)
+    # 3. Sitemap de Categorias
+    cat_urls = collect_categorias()
+    write_sitemap("sitemap-categorias.xml", cat_urls)
 
-    # 5. Sitemap Index
-    index_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
-    index_content += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    for s in ["sitemap-guias.xml", "sitemap-categorias.xml", "sitemap-noticias.xml", "sitemap-produtos.xml"]:
-        index_content += '  <sitemap>\n'
-        index_content += f'    <loc>{BASE_URL}{s}</loc>\n'
-        index_content += f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>\n'
-        index_content += '  </sitemap>\n'
-    index_content += '</sitemapindex>'
-    
-    with open(os.path.join(root_dir, "sitemap.xml"), "w") as f:
-        f.write(index_content)
-    print("Sitemap index gerado.")
+    # 4. Sitemap de Guias
+    guia_urls = collect_guias()
+    write_sitemap("sitemap-guias.xml", guia_urls)
+
+    # 5. Sitemap de Páginas Estáticas
+    static_urls = collect_static_pages()
+    write_sitemap("sitemap-paginas.xml", static_urls)
+
+    # 6. Sitemap Index
+    all_sitemaps = [
+        "sitemap-paginas.xml",
+        "sitemap-noticias.xml",
+        "sitemap-produtos.xml",
+        "sitemap-categorias.xml",
+        "sitemap-guias.xml",
+    ]
+    generate_sitemap_index(all_sitemaps)
+
+    # Resumo
+    total = (len(noticias_urls) + len(unique_produtos) +
+             len(cat_urls) + len(guia_urls) + len(static_urls))
+    print(f"\n{'='*60}")
+    print(f"  RESUMO:")
+    print(f"  - Posts/Noticias : {len(noticias_urls)} URLs")
+    print(f"  - Produtos       : {len(unique_produtos)} URLs")
+    print(f"  - Categorias     : {len(cat_urls)} URLs")
+    print(f"  - Guias          : {len(guia_urls)} URLs")
+    print(f"  - Paginas        : {len(static_urls)} URLs")
+    print(f"  - TOTAL          : {total} URLs indexadas")
+    print(f"{'='*60}\n")
+
 
 if __name__ == "__main__":
     main()
