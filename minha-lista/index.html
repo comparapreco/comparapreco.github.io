@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha Lista — Central de Alertas e Favoritos | Radar de Preços</title>
-  <meta name="description" content="Acompanhe seus produtos favoritos, alertas de preço, histórico de quedas e recomendações personalizadas no Radar de Preços.">
-  <link rel="canonical" href="https://radardeprecos.github.io/minha-lista/">
+  <title>Minha Lista — Central de Alertas e Favoritos | Compara Preço</title>
+  <meta name="description" content="Acompanhe seus produtos favoritos, alertas de preço, histórico de quedas e recomendações personalizadas no Compara Preço.">
+  <link rel="canonical" href="https://comparadordepreco.github.io/minha-lista/">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="manifest" href="../manifest.webmanifest">
   <meta name="theme-color" content="#00c853">
@@ -50,7 +50,7 @@
 <body>
   <header class="header">
     <div class="container header-inner">
-      <a href="../" class="logo">📊 <strong>Radar de Preços</strong></a>
+      <a href="../" class="logo">📊 <strong>Compara Preço</strong></a>
       <div class="search-bar"><input type="text" id="searchInput" placeholder="Buscar ofertas..."></div>
       <button id="themeToggle">🌙</button>
     </div>
@@ -59,7 +59,7 @@
   <section class="account-hero">
     <div class="container account-summary">
       <div>
-        <h1>Central de Alertas Radar</h1>
+        <h1>Central de Alertas Compara Preço</h1>
         <p>Monitore produtos, receba alertas de queda, acompanhe sua economia potencial e mantenha uma lista inteligente sincronizada com sua conta.</p>
       </div>
       <div class="account-panel">
@@ -132,10 +132,10 @@
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><p>© 2026 Radar de Preços. Plataforma de inteligência e retenção.</p></div></footer>
+  <footer class="footer"><div class="container"><p>© 2026 Compara Preço. Plataforma de inteligência e retenção.</p></div></footer>
 
   <script src="../assets/js/firebase-config.js"></script>
-  <script src="../assets/js/radar-auth.js"></script>
+  <script src="../assets/js/compara-auth.js"></script>
   <script src="../assets/js/pwa.js"></script>
   <script>
     const DATA_URL = '../data/products/offers.json';
@@ -192,7 +192,7 @@
         <img src="${safe(item.image || item.thumbnail)}" alt="${safe(item.name || item.title)}" loading="lazy">
         <div class="tracked-content">
           <div class="tracked-title">${safe(item.name || item.title)}</div>
-          <div class="radar-decision ${d.cls}">${d.label}</div>
+          <div class="compara-decision ${d.cls}">${d.label}</div>
           <div class="tracked-price">${money(item.price)}</div>
           <small>Categoria: ${safe(item.category || item.custom_category_slug || 'geral')} · Desconto: ${Number(item.discount || item.custom_discount_pct || 0)}%</small>
           <div class="tracked-actions">
@@ -204,10 +204,10 @@
     }
 
     function renderProfile() {
-      const user = RadarAuth.getUser();
-      const ready = RadarAuth.isFirebaseReady();
+      const user = Compara PreçoAuth.getUser();
+      const ready = Compara PreçoAuth.isFirebaseReady();
       const avatar = user && user.photoURL ? `<img src="${safe(user.photoURL)}" alt="${safe(user.displayName)}">` : '<span class="profile-avatar">R</span>';
-      document.getElementById('profileLine').innerHTML = `${avatar}<div><strong>${safe(user?.displayName || 'Visitante Radar')}</strong><br><small>${ready ? 'Conta Google sincronizada com Firebase.' : 'Modo local ativo. Configure o Firebase para sincronizar entre dispositivos.'}</small></div>`;
+      document.getElementById('profileLine').innerHTML = `${avatar}<div><strong>${safe(user?.displayName || 'Visitante Compara Preço')}</strong><br><small>${ready ? 'Conta Google sincronizada com Firebase.' : 'Modo local ativo. Configure o Firebase para sincronizar entre dispositivos.'}</small></div>`;
     }
 
     function renderDashboard() {
@@ -226,7 +226,7 @@
 
       document.getElementById('smartSummary').textContent = monitoredItems.length
         ? `Você acompanha ${monitoredItems.length} produto(s). A economia potencial estimada é de ${money(economy)}. Priorize itens com recomendação “Comprar agora”.`
-        : 'Adicione favoritos ou crie alertas para o Radar começar a montar seu histórico de economia.';
+        : 'Adicione favoritos ou crie alertas para o Compara Preço começar a montar seu histórico de economia.';
 
       document.getElementById('dashboardProducts').innerHTML = monitoredItems.length ? monitoredItems.slice(0, 6).map(item => card(item)).join('') : empty('Nenhum produto monitorado ainda.', 'Explore ofertas e clique em favoritar ou criar alerta.');
     }
@@ -258,12 +258,12 @@
     }
 
     function renderHistory() {
-      const history = RadarAuth.getBehaviorHistory();
+      const history = Compara PreçoAuth.getBehaviorHistory();
       const rows = [
         ...history.clicks.map(item => ({ ...item, type: 'Clique em oferta', at: item.clickedAt })),
         ...history.views.map(item => ({ ...item, type: 'Produto visto', at: item.viewedAt }))
       ].sort((a,b) => new Date(b.at) - new Date(a.at)).slice(0, 40);
-      document.getElementById('historyTimeline').innerHTML = rows.length ? rows.map(item => `<div class="timeline-item"><div><strong>${safe(item.type)}</strong><br>${safe(item.name)}</div><small>${new Date(item.at).toLocaleString('pt-BR')}</small></div>`).join('') : empty('Sem histórico ainda.', 'Seu histórico será construído conforme você usa o Radar.');
+      document.getElementById('historyTimeline').innerHTML = rows.length ? rows.map(item => `<div class="timeline-item"><div><strong>${safe(item.type)}</strong><br>${safe(item.name)}</div><small>${new Date(item.at).toLocaleString('pt-BR')}</small></div>`).join('') : empty('Sem histórico ainda.', 'Seu histórico será construído conforme você usa o Compara Preço.');
     }
 
     function renderSettings() {
@@ -276,26 +276,26 @@
     function empty(title, text) { return `<div class="empty-state"><h3>${title}</h3><p>${text}</p><p><a class="small-btn primary" href="../">Explorar ofertas</a></p></div>`; }
 
     async function loadAll() {
-      await RadarAuth.init();
+      await Compara PreçoAuth.init();
       renderProfile();
       const res = await fetch(DATA_URL + '?t=' + Date.now());
       products = await res.json();
       [favorites, alerts, settings] = await Promise.all([
-        RadarAuth.getCollection('favorites', []),
-        RadarAuth.getCollection('alerts', []),
-        RadarAuth.getSettings()
+        Compara PreçoAuth.getCollection('favorites', []),
+        Compara PreçoAuth.getCollection('alerts', []),
+        Compara PreçoAuth.getSettings()
       ]);
       renderDashboard(); renderFavorites(); renderAlertProductSelect(); renderAlerts(); renderHistory(); renderSettings();
     }
 
-    async function removeFavorite(id) { await RadarAuth.removeItem('favorites', id); await loadAll(); }
-    async function removeAlert(id) { await RadarAuth.removeItem('alerts', id); await loadAll(); }
+    async function removeFavorite(id) { await Compara PreçoAuth.removeItem('favorites', id); await loadAll(); }
+    async function removeAlert(id) { await Compara PreçoAuth.removeItem('alerts', id); await loadAll(); }
     async function createAlertFromProduct(id) {
       const product = byId(id) || favorites.find(item => String(item.productId || item.id) === String(id));
       if (!product) return;
       const target = prompt('Preço desejado para este alerta:', Math.floor(Number(product.price || 0) * .92));
       if (!target) return;
-      await RadarAuth.upsertItem('alerts', { id: product.productId || product.id, productId: product.productId || product.id, product: snapshot(product), currentPrice: product.price, targetPrice: Number(target), active: true, createdAt: new Date().toISOString(), history: buildHistory(product) });
+      await Compara PreçoAuth.upsertItem('alerts', { id: product.productId || product.id, productId: product.productId || product.id, product: snapshot(product), currentPrice: product.price, targetPrice: Number(target), active: true, createdAt: new Date().toISOString(), history: buildHistory(product) });
       await loadAll();
     }
 
@@ -303,13 +303,13 @@
       const product = byId(document.getElementById('alertProductSelect').value);
       const target = Number(document.getElementById('alertTargetPrice').value);
       if (!product || !target) return alert('Selecione um produto e informe um preço desejado.');
-      await RadarAuth.upsertItem('alerts', { id: product.id, productId: product.id, product: snapshot(product), currentPrice: product.price, targetPrice: target, active: document.getElementById('alertStatus').value === 'active', status: document.getElementById('alertStatus').value, createdAt: new Date().toISOString(), history: buildHistory(product) });
+      await Compara PreçoAuth.upsertItem('alerts', { id: product.id, productId: product.id, product: snapshot(product), currentPrice: product.price, targetPrice: target, active: document.getElementById('alertStatus').value === 'active', status: document.getElementById('alertStatus').value, createdAt: new Date().toISOString(), history: buildHistory(product) });
       document.getElementById('alertTargetPrice').value = '';
       await loadAll();
     });
 
     document.getElementById('saveSettingsBtn').addEventListener('click', async () => {
-      settings = await RadarAuth.saveSettings({
+      settings = await Compara PreçoAuth.saveSettings({
         newsletter: document.getElementById('newsletterSetting').value === 'true',
         dailyDigest: document.getElementById('digestSetting').value === 'true',
         pushNotifications: document.getElementById('pushSetting').value === 'true',
@@ -319,9 +319,9 @@
       renderSettings();
     });
 
-    document.getElementById('loginBtn').addEventListener('click', () => RadarAuth.signInGoogle());
-    document.getElementById('logoutBtn').addEventListener('click', () => RadarAuth.signOut());
-    window.addEventListener('radar:auth-change', loadAll);
+    document.getElementById('loginBtn').addEventListener('click', () => Compara PreçoAuth.signInGoogle());
+    document.getElementById('logoutBtn').addEventListener('click', () => Compara PreçoAuth.signOut());
+    window.addEventListener('compara:auth-change', loadAll);
 
     document.querySelectorAll('.tab').forEach(tab => tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));

@@ -19,7 +19,7 @@ def analyze_error(error_log):
     client = OpenAI(api_key=api_key)
     
     prompt = f"""
-    Você é o engenheiro de manutenção do 'Radar de Preços', um robô em Python que coleta ofertas do Mercado Livre.
+    Você é o engenheiro de manutenção do 'Compara Preço', um robô em Python que coleta ofertas do Mercado Livre.
     O pipeline de automação falhou com o seguinte erro:
     
     {error_log}

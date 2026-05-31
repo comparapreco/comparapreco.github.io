@@ -8,9 +8,9 @@ Disallow: /*.json$
 # Crawl delay
 Crawl-delay: 1
 
-# Sitemaps do Portal Radar de Preços
-Sitemap: https://radardeprecos.github.io/radar/sitemap.xml
-Sitemap: https://radardeprecos.github.io/radar/sitemap-categorias.xml
-Sitemap: https://radardeprecos.github.io/radar/sitemap-produtos.xml
-Sitemap: https://radardeprecos.github.io/radar/sitemap-guias.xml
-Sitemap: https://radardeprecos.github.io/radar/sitemap-noticias.xml
+# Sitemaps do Portal Compara Preço
+Sitemap: https://comparadordepreco.github.io/sitemap.xml
+Sitemap: https://comparadordepreco.github.io/sitemap-categorias.xml
+Sitemap: https://comparadordepreco.github.io/sitemap-produtos.xml
+Sitemap: https://comparadordepreco.github.io/sitemap-guias.xml
+Sitemap: https://comparadordepreco.github.io/sitemap-noticias.xml

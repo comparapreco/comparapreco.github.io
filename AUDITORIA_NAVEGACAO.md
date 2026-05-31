@@ -1,4 +1,4 @@
-# 🕵️ Auditoria de Navegação - Radar de Preços
+# 🕵️ Auditoria de Navegação - Compara Preço
 
 | Página | Arquivo | Menu/Footer | Explorar | Status |
 | :--- | :--- | :---: | :---: | :---: |
@@ -14,8 +14,8 @@
 | Calendário de Preços | `calendario-de-precos/index.html` | Não | Sim | ✅ OK |
 | Melhores 2026 | `melhores-2026/index.html` | Sim | Sim | ✅ OK |
 | Estatísticas | `estatisticas/index.html` | Não | Sim | ✅ OK |
-| Radar de Mercado | `radar-de-mercado/index.html` | Não | Sim | ✅ OK |
-| Prêmio Radar 2026 | `premio-radar-2026/index.html` | Não | Sim | ✅ OK |
+| Compara Preço de Mercado | `monitor-de-mercado/index.html` | Não | Sim | ✅ OK |
+| Prêmio Compara Preço 2026 | `premio-compara-2026/index.html` | Não | Sim | ✅ OK |
 | Simulador Economia | `ferramentas/economia/index.html` | Não | Sim | ✅ OK |
 | Metodologia | `metodologia/index.html` | Sim | Sim | ✅ OK |
 | O Que Está em Alta | `o-que-esta-em-alta/index.html` | Não | Sim | ✅ OK |

@@ -13,15 +13,15 @@ def add_social_meta_tags():
     
     # Tags Open Graph e Twitter Card para adicionar
     og_twitter_tags = '''  <meta property="og:type" content="website">
-  <meta property="og:title" content="Radar de Preços — As Melhores Ofertas do Mercado Livre Hoje">
+  <meta property="og:title" content="Compara Preço — As Melhores Ofertas do Mercado Livre Hoje">
   <meta property="og:description" content="Economize com as melhores ofertas curadas do Mercado Livre. Descubra produtos com desconto de até 70% em eletrônicos, casa, beleza e muito mais.">
-  <meta property="og:url" content="https://radardeprecos.github.io/radar/">
-  <meta property="og:image" content="https://radardeprecos.github.io/radar/assets/images/og-image.png">
-  <meta property="og:site_name" content="Radar de Preços">
+  <meta property="og:url" content="https://comparadordepreco.github.io/">
+  <meta property="og:image" content="https://comparadordepreco.github.io/assets/images/og-image.png">
+  <meta property="og:site_name" content="Compara Preço">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Radar de Preços — As Melhores Ofertas do Mercado Livre Hoje">
+  <meta name="twitter:title" content="Compara Preço — As Melhores Ofertas do Mercado Livre Hoje">
   <meta name="twitter:description" content="Economize com as melhores ofertas curadas do Mercado Livre. Descubra produtos com desconto de até 70%.">
-  <meta name="twitter:image" content="https://radardeprecos.github.io/radar/assets/images/og-image.png">
+  <meta name="twitter:image" content="https://comparadordepreco.github.io/assets/images/og-image.png">
   <link rel="icon" type="image/png" href="./assets/images/favicon.png">
   <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">'''
     

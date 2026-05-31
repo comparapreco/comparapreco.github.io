@@ -12,7 +12,7 @@
 
 class RotationEngine {
   constructor() {
-    this.storageKey = 'radarRotationData';
+    this.storageKey = 'comparaRotationData';
     this.rotationInterval = 60000; // 1 minuto (ajustável)
     this.data = this.loadData();
     this.currentVariant = this.selectVariant();

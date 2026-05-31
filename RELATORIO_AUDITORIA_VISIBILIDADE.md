@@ -1,6 +1,6 @@
-# 🕵️ Relatório de Auditoria de Visibilidade — Radar de Preços
+# 🕵️ Relatório de Auditoria de Visibilidade — Compara Preço
 
-Após uma análise detalhada do site publicado (https://radardeprecos.github.io/radar/) e da estrutura de arquivos no repositório, identificamos as seguintes lacunas entre o que foi desenvolvido nas fases anteriores e o que está realmente acessível ao usuário final.
+Após uma análise detalhada do site publicado (https://comparadordepreco.github.io/) e da estrutura de arquivos no repositório, identificamos as seguintes lacunas entre o que foi desenvolvido nas fases anteriores e o que está realmente acessível ao usuário final.
 
 ## 🔴 Problemas Críticos de Visibilidade
 
@@ -21,7 +21,7 @@ Após uma análise detalhada do site publicado (https://radardeprecos.github.io/
 
 ## 🚀 Plano de Correção Imediata (Antes da Fase 14)
 
-1.  **Injeção do Menu de Exploração:** Atualizar o script `scripts/build_homepage.py` e o template `templates/homepage.html` para incluir a seção "Explorar o Radar".
+1.  **Injeção do Menu de Exploração:** Atualizar o script `scripts/build_homepage.py` e o template `templates/homepage.html` para incluir a seção "Explorar o Compara Preço".
 2.  **Unificação do Header/Footer:** Criar um sistema de inclusão de componentes ou atualizar todos os arquivos `index.html` das subpastas para refletir a nova navegação.
 3.  **Correção de Links Relativos:** Garantir que todos os links no menu de exploração funcionem tanto na home quanto nas subpáginas.
 

@@ -2,7 +2,7 @@
 
 ## 🚀 Status: Concluído e Validado em Produção
 
-A Fase 12 foi executada com foco total na **resolução de impedimentos técnicos** identificados na auditoria do site publicado. Todas as ações foram validadas diretamente no domínio [https://radardeprecos.github.io/radar/](https://radardeprecos.github.io/radar/).
+A Fase 12 foi executada com foco total na **resolução de impedimentos técnicos** identificados na auditoria do site publicado. Todas as ações foram validadas diretamente no domínio [https://comparadordepreco.github.io/](https://comparadordepreco.github.io/).
 
 ---
 
@@ -25,7 +25,7 @@ A Fase 12 foi executada com foco total na **resolução de impedimentos técnico
 ## 🛠️ Detalhamento das Ações Executadas
 
 ### 1. Blindagem de Monetização e Indexação
-* **Ação:** O arquivo `ads.txt` foi movido para a raiz do domínio principal (`radardeprecos.github.io`).
+* **Ação:** O arquivo `ads.txt` foi movido para a raiz do domínio principal (`comparadordepreco.github.io`).
 * **Ação:** O arquivo `robots.txt` foi atualizado para declarar explicitamente os sitemaps de categorias, produtos, guias e notícias.
 * **Validação:** Confirmado acesso via `curl` no domínio ativo.
 
@@ -43,7 +43,7 @@ A Fase 12 foi executada com foco total na **resolução de impedimentos técnico
 * **Ação:** Ajuste global de contraste no CSS (`style.css`) para garantir legibilidade.
 
 ### 5. Infraestrutura de Administração
-* **Ação:** Criado o **Painel Executivo** em `https://radardeprecos.github.io/radar/admin/executivo/`. Este painel permite monitorar o status de saúde do site sem necessidade de ferramentas externas pesadas.
+* **Ação:** Criado o **Painel Executivo** em `https://comparadordepreco.github.io/admin/executivo/`. Este painel permite monitorar o status de saúde do site sem necessidade de ferramentas externas pesadas.
 
 ---
 

@@ -1,4 +1,4 @@
-# Radar de Preços - Projeto Replicável
+# Compara Preço - Projeto Replicável
 
 Este repositório contém o código-fonte de um site de curadoria de ofertas, otimizado para SEO e AdSense, com um robô de geração de conteúdo longo. Ele foi projetado para ser facilmente replicado em outras contas do GitHub para criar novos projetos de nicho.
 
@@ -19,7 +19,7 @@ Siga os passos abaixo para configurar este projeto em sua nova conta do GitHub:
 
 1.  Faça login na sua conta do GitHub.
 2.  Clique no botão `+` no canto superior direito e selecione `New repository`.
-3.  Dê um nome ao seu repositório (ex: `meu-radar-de-ofertas`).
+3.  Dê um nome ao seu repositório (ex: `meu-compara-de-ofertas`).
 4.  **Marque-o como `Public`** (necessário para o GitHub Pages).
 5.  Não inicialize o repositório com README, .gitignore ou licença.
 6.  Clique em `Create repository`.
@@ -30,8 +30,8 @@ No seu terminal local, execute os seguintes comandos:
 
 ```bash
 # Clone o repositório original (se ainda não o fez)
-git clone https://github.com/radardeprecos/radar.git
-cd radar
+git clone https://github.com/comparadordepreco/compara.git
+cd compara
 
 # Remova o histórico do git para iniciar um novo projeto
 rm -rf .git
@@ -39,7 +39,7 @@ rm -rf .git
 # Inicialize um novo repositório git
 git init
 git add .
-git commit -m "Initial commit for new Radar project"
+git commit -m "Initial commit for new Compara Preço project"
 
 # Adicione o seu novo repositório remoto
 git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git

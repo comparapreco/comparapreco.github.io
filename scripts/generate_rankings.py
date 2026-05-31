@@ -30,7 +30,7 @@ def generate_rankings():
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Melhores {{ category_name }} de 2026 — Ranking Atualizado | Radar de Preços</title>
+        <title>Melhores {{ category_name }} de 2026 — Ranking Atualizado | Compara Preço</title>
         <link rel="stylesheet" href="../assets/css/style.css">
         <style>
             .rank-item { display: flex; align-items: center; gap: 20px; background: var(--card); padding: 20px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 20px; }
@@ -40,7 +40,7 @@ def generate_rankings():
         </style>
     </head>
     <body>
-        <header class="header"><div class="container"><a href="../" class="logo">📊 Radar de Preços</a></div></header>
+        <header class="header"><div class="container"><a href="../" class="logo">📊 Compara Preço</a></div></header>
         <main class="container">
             <h1 style="margin: 40px 0;">🏆 Melhores {{ category_name }} de 2026</h1>
             <p>Ranking baseado em custo-benefício, desconto real e avaliações no Mercado Livre.</p>

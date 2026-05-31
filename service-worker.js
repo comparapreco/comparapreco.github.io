@@ -1,18 +1,18 @@
-// Service Worker para Radar de Preços
-const CACHE_NAME = 'radar-precos-v1';
+// Service Worker para Compara Preço
+const CACHE_NAME = 'compara-precos-v1';
 const STATIC_ASSETS = [
-  '/radar/',
-  '/radar/index.html',
-  '/radar/assets/css/style.css',
-  '/radar/assets/js/app.js',
-  '/radar/noticias/',
-  '/radar/comparativos/',
-  '/radar/alertas/',
-  '/radar/rankings/',
-  '/radar/estatisticas/',
-  '/radar/black-friday/',
-  '/radar/cupons/',
-  '/radar/melhores-2026/'
+  '/',
+  '/index.html',
+  '/assets/css/style.css',
+  '/assets/js/app.js',
+  '/noticias/',
+  '/comparativos/',
+  '/alertas/',
+  '/rankings/',
+  '/estatisticas/',
+  '/black-friday/',
+  '/cupons/',
+  '/melhores-2026/'
 ];
 
 // Instalação do Service Worker
@@ -55,7 +55,7 @@ self.addEventListener('fetch', (event) => {
   }
 
   // Ignorar requisições externas
-  if (!event.request.url.includes('/radar/')) {
+  if (!event.request.url.includes('/')) {
     return;
   }
 
@@ -103,8 +103,8 @@ self.addEventListener('push', (event) => {
     const data = event.data.json();
     const options = {
       body: data.body || 'Nova oferta encontrada!',
-      icon: '/radar/assets/icon-192.png',
-      badge: '/radar/assets/badge-72.png',
+      icon: '/assets/icon-192.png',
+      badge: '/assets/badge-72.png',
       tag: 'price-alert',
       requireInteraction: true,
       actions: [
@@ -118,12 +118,12 @@ self.addEventListener('push', (event) => {
         }
       ],
       data: {
-        url: data.url || '/radar/'
+        url: data.url || '/'
       }
     };
 
     event.waitUntil(
-      self.registration.showNotification(data.title || 'Radar de Preços', options)
+      self.registration.showNotification(data.title || 'Compara Preço', options)
     );
   }
 });
@@ -136,7 +136,7 @@ self.addEventListener('notificationclick', (event) => {
     return;
   }
 
-  const urlToOpen = event.notification.data.url || '/radar/';
+  const urlToOpen = event.notification.data.url || '/';
 
   event.waitUntil(
     clients.matchAll({
@@ -162,7 +162,7 @@ self.addEventListener('notificationclick', (event) => {
 self.addEventListener('sync', (event) => {
   if (event.tag === 'sync-alerts') {
     event.waitUntil(
-      fetch('/radar/api/sync-alerts/')
+      fetch('/api/sync-alerts/')
         .then((response) => {
           if (response.ok) {
             return response.json();
@@ -175,7 +175,7 @@ self.addEventListener('sync', (event) => {
             data.alerts.forEach((alert) => {
               self.registration.showNotification('🔥 Oferta Encontrada!', {
                 body: `${alert.product} caiu para R$ ${alert.price}!`,
-                icon: '/radar/assets/icon-192.png',
+                icon: '/assets/icon-192.png',
                 tag: `alert-${alert.id}`,
                 data: { url: alert.url }
               });

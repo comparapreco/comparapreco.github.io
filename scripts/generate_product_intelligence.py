@@ -17,7 +17,7 @@ def generate_intelligence():
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Análise de Oferta: {{ p.name }} | Radar de Preços</title>
+        <title>Análise de Oferta: {{ p.name }} | Compara Preço</title>
         <link rel="stylesheet" href="../../assets/css/style.css">
         <style>
             .intel-box { background: var(--card); padding: 30px; border-radius: 16px; border: 1px solid var(--border); margin-top: 30px; }
@@ -32,7 +32,7 @@ def generate_intelligence():
         </style>
     </head>
     <body>
-        <header class="header"><div class="container"><a href="../../" class="logo">📊 Radar de Preços</a></div></header>
+        <header class="header"><div class="container"><a href="../../" class="logo">📊 Compara Preço</a></div></header>
         <main class="container">
             <div class="intel-box">
                 <div class="product-header">
@@ -82,7 +82,7 @@ def generate_intelligence():
                 </div>
             </div>
         </main>
-        <footer class="footer" style="margin-top: 50px;"><div class="container"><p>© 2026 Radar de Preços. Transparência e Tecnologia.</p></div></footer>
+        <footer class="footer" style="margin-top: 50px;"><div class="container"><p>© 2026 Compara Preço. Transparência e Tecnologia.</p></div></footer>
     </body>
     </html>
     """

@@ -1,5 +1,5 @@
 /*
- * Configuração Firebase do Radar de Preços.
+ * Configuração Firebase do Compara Preço.
  *
  * Para ativar Login Google, Firestore e sincronização real entre dispositivos:
  * 1. Crie um projeto no Firebase Console.
@@ -11,7 +11,7 @@
  * Observação: estes valores de configuração não são senha. As regras do Firestore
  * e os domínios autorizados são o que protegem o acesso real aos dados.
  */
-window.RADAR_FIREBASE_CONFIG = {
+window.COMPARA_FIREBASE_CONFIG = {
   apiKey: "",
   authDomain: "",
   projectId: "",
@@ -20,7 +20,7 @@ window.RADAR_FIREBASE_CONFIG = {
   appId: ""
 };
 
-window.RADAR_FIREBASE_OPTIONS = {
+window.COMPARA_FIREBASE_OPTIONS = {
   enabled: false,
   collectionsRoot: "users",
   publicProfilesRoot: "publicProfiles"

@@ -56,18 +56,18 @@ for p in products:
 
 newsletter = {
     'generatedAt': datetime.now(timezone.utc).isoformat(),
-    'subject': 'Top 10 ofertas, maiores quedas e oportunidades do Radar',
+    'subject': 'Top 10 ofertas, maiores quedas e oportunidades do Compara Preço',
     'top10Offers': [item(p) for p in ranked[:10]],
     'biggestDrops': [item(p) for p in sorted(products, key=lambda p: max(0, original(p)-price(p)), reverse=True)[:10]],
     'newComparatives': [
         {'title': 'Comparativo de preços por categoria', 'url': './comparativos/'},
         {'title': 'Guias de compra por oportunidade', 'url': './guias/'},
-        {'title': 'Radar personalizado com IA', 'url': './recomendados/'}
+        {'title': 'Compara Preço personalizado com IA', 'url': './recomendados/'}
     ],
     'guides': [
         {'title': 'Como saber se uma oferta é realmente boa', 'url': './guias/'},
         {'title': 'Como configurar alertas e economizar mais', 'url': './alertas/'},
-        {'title': 'Como usar a Minha Lista do Radar', 'url': './minha-lista/'}
+        {'title': 'Como usar a Minha Lista do Compara Preço', 'url': './minha-lista/'}
     ]
 }
 

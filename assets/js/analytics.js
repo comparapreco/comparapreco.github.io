@@ -1,10 +1,10 @@
 /**
- * Sistema de Analytics - Radar de Preços
+ * Sistema de Analytics - Compara Preço
  * Rastreia cliques, visualizações e gera métricas de performance
  */
 
-const RadarAnalytics = {
-  STORAGE_KEY: 'radar_analytics',
+const Compara PreçoAnalytics = {
+  STORAGE_KEY: 'compara_analytics',
   
   /**
    * Inicializa o sistema de analytics
@@ -185,7 +185,7 @@ const RadarAnalytics = {
 
 // Inicializa quando o DOM está pronto
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => RadarAnalytics.init());
+  document.addEventListener('DOMContentLoaded', () => Compara PreçoAnalytics.init());
 } else {
-  RadarAnalytics.init();
+  Compara PreçoAnalytics.init();
 }

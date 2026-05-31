@@ -9,7 +9,7 @@ import re
 from pathlib import Path
 from html.parser import HTMLParser
 
-BASE_DIR = Path("/home/ubuntu/radar")
+BASE_DIR = Path("/home/ubuntu/compara")
 REPORT = {
     "total_pages": 0,
     "excellent": [],

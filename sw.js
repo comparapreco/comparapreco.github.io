@@ -1,4 +1,4 @@
-const CACHE_NAME = 'radar-pwa-v10';
+const CACHE_NAME = 'compara-pwa-v10';
 const ROOT = self.registration.scope;
 const CORE_ASSETS = [
   ROOT,
@@ -9,7 +9,7 @@ const CORE_ASSETS = [
   ROOT + 'pro/',
   ROOT + 'academia/',
   ROOT + 'exclusivos/',
-  ROOT + 'radar-index/',
+  ROOT + 'precos-index/',
   ROOT + 'inteligencia/',
   ROOT + 'newsletter/',
   ROOT + 'imprensa/',
@@ -18,12 +18,12 @@ const CORE_ASSETS = [
   ROOT + 'assets/css/style.css',
   ROOT + 'assets/js/app.js',
   ROOT + 'assets/js/firebase-config.js',
-  ROOT + 'assets/js/radar-auth.js',
+  ROOT + 'assets/js/compara-auth.js',
   ROOT + 'assets/js/pwa.js',
   ROOT + 'data/products/offers.json',
   ROOT + 'data/retention/newsletter-daily.json',
   ROOT + 'data/retention/admin-metrics.json',
-  ROOT + 'data/radar-index.json',
+  ROOT + 'data/precos-index.json',
   ROOT + 'data/market-intelligence.json',
   ROOT + 'data/revenue-metrics.json',
   ROOT + 'data/segmented-newsletter.json',

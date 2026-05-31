@@ -5,8 +5,8 @@
   // Registrar Service Worker
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/radar/service-worker.js', {
-        scope: '/radar/'
+      navigator.serviceWorker.register('/service-worker.js', {
+        scope: '/'
       }).then(function(registration) {
         console.log('Service Worker registrado com sucesso:', registration);
 
@@ -26,7 +26,7 @@
 
       // Verificar atualizações a cada 1 hora
       setInterval(function() {
-        navigator.serviceWorker.getRegistration('/radar/').then(function(registration) {
+        navigator.serviceWorker.getRegistration('/').then(function(registration) {
           if (registration) {
             registration.update();
           }
@@ -50,7 +50,7 @@
   // Habilitar notificações push
   function enablePushNotifications() {
     if ('serviceWorker' in navigator && 'PushManager' in window) {
-      navigator.serviceWorker.getRegistration('/radar/').then(function(registration) {
+      navigator.serviceWorker.getRegistration('/').then(function(registration) {
         if (registration) {
           registration.pushManager.getSubscription().then(function(subscription) {
             if (!subscription) {
@@ -91,7 +91,7 @@
 
   // Enviar subscription para servidor
   function sendSubscriptionToServer(subscription) {
-    fetch('/radar/api/subscribe-push/', {
+    fetch('/api/subscribe-push/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -196,7 +196,7 @@
   }
 
   // Expor funções globalmente
-  window.RadarPWA = {
+  window.Compara PreçoPWA = {
     requestNotificationPermission: requestNotificationPermission,
     enablePushNotifications: enablePushNotifications,
     showUpdateNotification: showUpdateNotification

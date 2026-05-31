@@ -1,9 +1,9 @@
 {
-  "name": "Radar de Preços",
-  "short_name": "Radar",
+  "name": "Compara Preço",
+  "short_name": "Compara Preço",
   "description": "Comparador inteligente com favoritos, alertas, recomendações e dashboard pessoal.",
-  "start_url": "/radar/?source=pwa",
-  "scope": "/radar/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#ffffff",
@@ -29,14 +29,14 @@
       "name": "Minha Lista",
       "short_name": "Lista",
       "description": "Abrir favoritos e alertas",
-      "url": "/radar/minha-lista/",
+      "url": "/minha-lista/",
       "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Recomendados",
       "short_name": "IA",
       "description": "Abrir recomendações personalizadas",
-      "url": "/radar/recomendados/",
+      "url": "/recomendados/",
       "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
     }
   ]

@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prêmio Compara Preço 2026 — Os Melhores do Ano | Compara Preço</title>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<style>
+    .award-hero { background: linear-gradient(135deg, #ffd700, #ffa500); color: black; padding: 60px 0; text-align: center; border-radius: 20px; margin-top: 20px; }
+    .winner-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+    .winner-card { background: var(--card); padding: 30px; border-radius: 20px; border: 2px solid #ffd700; position: relative; }
+    .award-badge { position: absolute; top: -15px; right: -15px; background: #ffd700; color: black; padding: 5px 15px; border-radius: 50px; font-weight: 900; font-size: 12px; }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header class="header"><div class="container"><a class="logo" href="../">📊 Compara Preço</a></div></header>
+<main class="container">
+<div class="award-hero">
+<h1>🏆 Prêmio Compara Preço 2026</h1>
+<p>A curadoria definitiva dos produtos que realmente valem o seu dinheiro.</p>
+</div>
+<div class="winner-grid">
+<div class="winner-card">
+<span class="award-badge">MELHOR CUSTO-BENEFÍCIO</span>
+<h3>Samsung Galaxy A36</h3>
+<p>O equilíbrio perfeito entre performance e preço em 2026. Dominou os rankings de Compara Preço Score por 4 meses seguidos.</p>
+<a class="btn" href="../categorias/celulares/">Ver Ofertas</a>
+</div>
+<div class="winner-card">
+<span class="award-badge">MELHOR NOTEBOOK ESTUDANTE</span>
+<h3>Lenovo IdeaPad 3i (Geração 2026)</h3>
+<p>Preço imbatível para quem precisa de produtividade básica com tela de alta qualidade.</p>
+<a class="btn" href="../categorias/informatica/">Ver Ofertas</a>
+</div>
+</div>
+</main>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

@@ -12,7 +12,7 @@ TARGETS = [
     ROOT / 'imprensa' / 'index.html',
     ROOT / 'parcerias' / 'index.html',
     ROOT / 'midia-kit' / 'index.html',
-    ROOT / 'radar-index' / 'index.html',
+    ROOT / 'precos-index' / 'index.html',
     ROOT / 'academia' / 'index.html',
     ROOT / 'exclusivos' / 'index.html',
 ]
@@ -51,7 +51,7 @@ def process(path: Path) -> None:
         html = html.replace('</head>', f'  {manifest}\n  {theme}\n  {icon}\n</head>', 1)
 
     config = f'<script src="{prefix}assets/js/firebase-config.js"></script>'
-    auth = f'<script src="{prefix}assets/js/radar-auth.js"></script>'
+    auth = f'<script src="{prefix}assets/js/compara-auth.js"></script>'
     pwa = f'<script src="{prefix}assets/js/pwa.js"></script>'
     app_marker = f'<script src="{prefix}assets/js/app.js"></script>'
 

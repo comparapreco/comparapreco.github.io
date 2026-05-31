@@ -4,7 +4,7 @@ import unicodedata
 import random
 from logger import logger
 
-BASE_URL = "/"
+BASE_URL = "https://comparadordepreco.github.io/"
 
 def slugify(text: str) -> str:
     text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
@@ -52,7 +52,7 @@ def build_homepage(input_path: str, template_path: str, output_path: str) -> Non
     # Frases dinâmicas para o destaque
     badges = ["🔥 DESTAQUE DO DIA", "⚡ PREÇO BAIXOU!", "✨ NOVIDADE NO RADAR", "💎 ACHADO IMPERDÍVEL", "🚀 MELHOR DESCONTO"]
     catchy_phrases = [
-        "Aproveite o maior desconto de hoje no Radar de Preços!",
+        "Aproveite o maior desconto de hoje no Compara Preço!",
         "Economize agora com esta oferta selecionada pelo nosso robô.",
         "Preço imbatível detectado! Confira os detalhes abaixo.",
         "Não perca essa oportunidade de pagar menos hoje.",
@@ -71,7 +71,7 @@ def build_homepage(input_path: str, template_path: str, output_path: str) -> Non
     # Grid de produtos - agora gerenciado pelo app.js para ser 100% dinâmico
     products_html = '<div id="featuredGrid" class="products-grid"></div>'
     
-    seo_title = "Radar de Preços — As Melhores Ofertas do Mercado Livre Hoje"
+    seo_title = "Compara Preço — As Melhores Ofertas do Mercado Livre Hoje"
     meta_description = "Economize com as melhores ofertas curadas do Mercado Livre. Descubra produtos com desconto de até 70% em eletrônicos, casa, beleza e muito mais."
     canonical_url = BASE_URL
     

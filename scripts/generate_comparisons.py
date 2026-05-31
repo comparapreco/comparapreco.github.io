@@ -33,7 +33,7 @@ def generate_comparisons():
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ p1.name }} vs {{ p2.name }} — Qual o melhor? | Radar de Preços</title>
+        <title>{{ p1.name }} vs {{ p2.name }} — Qual o melhor? | Compara Preço</title>
         <link rel="stylesheet" href="../assets/css/style.css">
         <style>
             .comp-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
@@ -47,7 +47,7 @@ def generate_comparisons():
         </style>
     </head>
     <body>
-        <header class="header"><div class="container"><a href="../" class="logo">📊 Radar de Preços</a></div></header>
+        <header class="header"><div class="container"><a href="../" class="logo">📊 Compara Preço</a></div></header>
         <main class="container">
             <h1 style="text-align:center; margin-top:40px;">{{ p1.name }} <span style="color:var(--primary)">vs</span> {{ p2.name }}</h1>
             <div class="comp-container">

@@ -1,5 +1,5 @@
 # ads.txt - Arquivo de autorização de publicidade
-# Radar de Preços
+# Compara Preço
 # Gerado em: 30/05/2026
 
 # Google AdSense

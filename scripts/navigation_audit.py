@@ -20,7 +20,7 @@ def audit_navigation():
         with open(explorar_path, 'r') as f: explorar_content = f.read()
     
     # 3. Gerar Relatório
-    report = "# 🕵️ Auditoria de Navegação - Radar de Preços\n\n"
+    report = "# 🕵️ Auditoria de Navegação - Compara Preço\n\n"
     report += "| Página | Arquivo | Menu/Footer | Explorar | Status |\n"
     report += "| :--- | :--- | :---: | :---: | :---: |\n"
     
@@ -37,8 +37,8 @@ def audit_navigation():
         {"name": "Calendário de Preços", "path": "calendario-de-precos/index.html", "url": "calendario-de-precos/"},
         {"name": "Melhores 2026", "path": "melhores-2026/index.html", "url": "melhores-2026/"},
         {"name": "Estatísticas", "path": "estatisticas/index.html", "url": "estatisticas/"},
-        {"name": "Radar de Mercado", "path": "radar-de-mercado/index.html", "url": "radar-de-mercado/"},
-        {"name": "Prêmio Radar 2026", "path": "premio-radar-2026/index.html", "url": "premio-radar-2026/"},
+        {"name": "Compara Preço de Mercado", "path": "monitor-de-mercado/index.html", "url": "monitor-de-mercado/"},
+        {"name": "Prêmio Compara Preço 2026", "path": "premio-compara-2026/index.html", "url": "premio-compara-2026/"},
         {"name": "Simulador Economia", "path": "ferramentas/economia/index.html", "url": "ferramentas/economia/"},
         {"name": "Metodologia", "path": "metodologia/index.html", "url": "metodologia/"},
         {"name": "O Que Está em Alta", "path": "o-que-esta-em-alta/index.html", "url": "o-que-esta-em-alta/"},

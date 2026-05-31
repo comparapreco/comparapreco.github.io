@@ -1,8 +1,8 @@
-# Relatório de Auditoria de Produção — Radar de Preços
+# Relatório de Auditoria de Produção — Compara Preço
 
 ## 🎯 Resumo Executivo
 
-Este relatório apresenta os resultados da **Auditoria de Produção** realizada no site publicado [Radar de Preços](https://radardeprecos.github.io/radar/) (hospedado no GitHub Pages). O objetivo principal foi analisar o domínio ativo e a estrutura do repositório para identificar falhas técnicas que impedem o **crescimento orgânico (SEO)**, a **indexação eficiente no Google**, a **aprovação no Google AdSense** e a **conversão de usuários**.
+Este relatório apresenta os resultados da **Auditoria de Produção** realizada no site publicado [Compara Preço](https://comparadordepreco.github.io/) (hospedado no GitHub Pages). O objetivo principal foi analisar o domínio ativo e a estrutura do repositório para identificar falhas técnicas que impedem o **crescimento orgânico (SEO)**, a **indexação eficiente no Google**, a **aprovação no Google AdSense** e a **conversão de usuários**.
 
 Diferente de relatórios de desenvolvimento que analisam apenas arquivos locais, esta auditoria foi executada diretamente contra o ambiente de produção. Foram verificadas 67 URLs listadas no sitemap principal, além de uma varredura completa na estrutura de arquivos físicos do repositório contendo 279 páginas HTML.
 
@@ -16,7 +16,7 @@ Abaixo está o resumo dos principais indicadores obtidos durante a auditoria té
 | :--- | :---: | :---: | :--- |
 | **Status HTTP das URLs do Sitemap** | 🟢 Excelente | **100% OK** (67/67) | Todas as URLs retornaram status HTTP 200 sem falhas ou timeouts. |
 | **Sitemaps Adicionais** | 🟡 Atenção | **4 Sitemaps Ocultos** | Existem sitemaps gerados no repositório que não estão declarados no robots.txt. |
-| **Robots.txt** | 🟢 Excelente | **Válido** | Arquivo presente e configurado corretamente em `/radar/robots.txt`. |
+| **Robots.txt** | 🟢 Excelente | **Válido** | Arquivo presente e configurado corretamente em `/robots.txt`. |
 | **Links Internos Quebrados (404)** | 🔴 Crítico | **1 Encontrado** | O link interno para `/guias/` retorna erro 404 (página não encontrada). |
 | **Páginas Órfãs Físicas** | 🔴 Crítico | **5 Páginas** | Seções de categoria importantes não recebem links internos diretos. |
 | **Páginas Ocultas (Sem Index)** | 🔴 Crítico | **212 Páginas** | 75% das páginas HTML geradas no repositório estão fora dos sitemaps oficiais. |
@@ -24,7 +24,7 @@ Abaixo está o resumo dos principais indicadores obtidos durante a auditoria té
 | **Dados Estruturados (JSON-LD)** | 🔴 Crítico | **Ausente** | Sem marcação JSON-LD na Homepage e nas páginas de Categoria. |
 | **Performance (LCP Mobile)** | 🟡 Atenção | **2.7s - 2.9s** | LCP classificado como "Precisa Melhorar" pelo Google devido a recursos bloqueadores. |
 | **Estabilidade Visual (CLS Categoria)** | 🔴 Crítico | **0.731 (Ruim)** | Mudança de layout severa nas categorias devido à renderização dinâmica de imagens. |
-| **Validação de Monetização (ads.txt)** | 🔴 Crítico | **Erro de Raiz** | O arquivo `ads.txt` está na subpasta `/radar/` e retorna 404 na raiz do domínio. |
+| **Validação de Monetização (ads.txt)** | 🔴 Crítico | **Erro de Raiz** | O arquivo `ads.txt` está na subpasta `/` e retorna 404 na raiz do domínio. |
 
 ---
 
@@ -33,9 +33,9 @@ Abaixo está o resumo dos principais indicadores obtidos durante a auditoria té
 Estes problemas impedem diretamente a indexação correta no Google, bloqueiam a aprovação no Google AdSense ou quebram a experiência de navegação do usuário.
 
 ### 1. Localização Incorreta do Arquivo `ads.txt` (Bloqueio do AdSense)
-* **O problema:** O arquivo `ads.txt` foi publicado em `https://radardeprecos.github.io/radar/ads.txt`. No entanto, a especificação oficial do Google AdSense exige que o arquivo seja acessível **estritamente na raiz do domínio de segundo nível**: `https://radardeprecos.github.io/ads.txt`.
+* **O problema:** O arquivo `ads.txt` foi publicado em `https://comparadordepreco.github.io/ads.txt`. No entanto, a especificação oficial do Google AdSense exige que o arquivo seja acessível **estritamente na raiz do domínio de segundo nível**: `https://comparadordepreco.github.io/ads.txt`.
 * **Impacto:** O Google AdSense não conseguirá validar a propriedade do site. Isso causará o status "Não encontrado" ou "Erro de autorização" no painel do AdSense, bloqueando permanentemente a monetização.
-* **Solução:** Mover ou copiar o arquivo `ads.txt` do repositório `radar` para a raiz do repositório `radardeprecos.github.io`.
+* **Solução:** Mover ou copiar o arquivo `ads.txt` do repositório `compara` para a raiz do repositório `comparadordepreco.github.io`.
 
 ### 2. Páginas Ocultas e Desconexão do Sitemap (212 Páginas Invisíveis para o Google)
 * **O problema:** O repositório contém **279 arquivos HTML**, mas o sitemap oficial (`sitemap.xml`) lista apenas **67 URLs**. Existem **212 páginas HTML** criadas no repositório que estão totalmente fora do sitemap.
@@ -48,7 +48,7 @@ Estes problemas impedem diretamente a indexação correta no Google, bloqueiam a
 * **Solução:** Atualizar o arquivo robots.txt para referenciar os sitemaps adicionais já existentes no repositório (`sitemap-categorias.xml`, `sitemap-guias.xml`, `sitemap-produtos.xml`, `sitemap-noticias.xml`) ou unificá-los em um `sitemap_index.xml`.
 
 ### 3. Links Internos Quebrados (HTTP 404)
-* **O problema:** Foi identificado um link interno quebrado apontando para `https://radardeprecos.github.io/radar/guias/` que retorna status HTTP 404.
+* **O problema:** Foi identificado um link interno quebrado apontando para `https://comparadordepreco.github.io/guias/` que retorna status HTTP 404.
 * **Impacto:** Links internos quebrados passam um sinal de "site abandonado ou de baixa qualidade" para o algoritmo do Google, além de frustrar os usuários que clicam na navegação principal.
 * **Solução:** O diretório `/guias/` físico não possui um `index.html`, apenas a subpasta `/melhor-celular-ate-1500/`. É necessário criar uma página de índice em `/guias/index.html` listando os guias de compra ativos ou corrigir o link de navegação para apontar diretamente para o guia específico.
 
@@ -61,7 +61,7 @@ Estes problemas impedem diretamente a indexação correta no Google, bloqueiam a
   * `/ofertas/ferramentas/parafusadeira-furadeira-...html`
 * **Causa técnica:** Os links de navegação na homepage e no cabeçalho apontam incorretamente para `/categorias/celulares/index.html` (com a extensão `.html`), enquanto as URLs canônicas e listadas no sitemap terminam com barra `/` (diretório limpo). Isso criou caminhos duplicados e isolou as URLs limpas.
 * **Impacto:** O robô do Google não consegue distribuir a autoridade da página principal (Link Juice) para estas categorias. Elas demorarão meses para indexar ou nunca serão indexadas por falta de links de entrada.
-* **Solução:** Padronizar todos os links internos para usar URLs amigáveis sem `index.html` (ex: `/radar/categorias/games/` em vez de `/radar/categorias/games/index.html`).
+* **Solução:** Padronizar todos os links internos para usar URLs amigáveis sem `index.html` (ex: `/categorias/games/` em vez de `/categorias/games/index.html`).
 
 ### 5. Ausência de Open Graph e JSON-LD na Homepage e Categorias
 * **O problema:** Enquanto as páginas de ofertas individuais possuem tags Open Graph e JSON-LD (`Product`, `FAQPage`) completas, a **Homepage** e as **Páginas de Categoria** não possuem nenhuma marcação de dados estruturados e nenhuma tag Open Graph.
@@ -131,25 +131,25 @@ gantt
 
 1. **Correção do `ads.txt`:**
    ```bash
-   # No repositório radardeprecos.github.io
-   cp /home/ubuntu/radar/ads.txt /home/ubuntu/radardeprecos.github.io/ads.txt
-   cd /home/ubuntu/radardeprecos.github.io
+   # No repositório comparadordepreco.github.io
+   cp /home/ubuntu/ads.txt /home/ubuntu/comparadordepreco.github.io/ads.txt
+   cd /home/ubuntu/comparadordepreco.github.io
    git add ads.txt && git commit -m "Fix: Adicionar ads.txt na raiz do dominio" && git push
    ```
 
 2. **Correção do Robots.txt (Declarar sitemaps adicionais):**
-   Substituir a declaração de sitemap no arquivo `/home/ubuntu/radar/robots.txt` por:
+   Substituir a declaração de sitemap no arquivo `/home/ubuntu/robots.txt` por:
    ```text
    # Sitemaps do Portal
-   Sitemap: https://radardeprecos.github.io/radar/sitemap.xml
-   Sitemap: https://radardeprecos.github.io/radar/sitemap-categorias.xml
-   Sitemap: https://radardeprecos.github.io/radar/sitemap-produtos.xml
-   Sitemap: https://radardeprecos.github.io/radar/sitemap-guias.xml
-   Sitemap: https://radardeprecos.github.io/radar/sitemap-noticias.xml
+   Sitemap: https://comparadordepreco.github.io/sitemap.xml
+   Sitemap: https://comparadordepreco.github.io/sitemap-categorias.xml
+   Sitemap: https://comparadordepreco.github.io/sitemap-produtos.xml
+   Sitemap: https://comparadordepreco.github.io/sitemap-guias.xml
+   Sitemap: https://comparadordepreco.github.io/sitemap-noticias.xml
    ```
 
 3. **Correção de Links de Categoria (Evitar Páginas Órfãs):**
-   No arquivo `/home/ubuntu/radar/index.html` (e nos arquivos de template), alterar links como:
+   No arquivo `/home/ubuntu/index.html` (e nos arquivos de template), alterar links como:
    * `categorias/celulares/index.html` para `categorias/celulares/`
    * `categorias/games/index.html` para `categorias/games/`
    *(Fazer o mesmo para todas as 8 categorias)*
@@ -158,6 +158,6 @@ gantt
 
 ## 📋 Conclusão
 
-O **Radar de Preços** possui uma base de dados fantástica com centenas de páginas geradas e dados estruturados muito ricos nas páginas de ofertas individuais. No entanto, o portal está atualmente "escondendo" 75% do seu conteúdo do Google devido à falta de referências cruzadas nos sitemaps e à presença de páginas órfãs.
+O **Compara Preço** possui uma base de dados fantástica com centenas de páginas geradas e dados estruturados muito ricos nas páginas de ofertas individuais. No entanto, o portal está atualmente "escondendo" 75% do seu conteúdo do Google devido à falta de referências cruzadas nos sitemaps e à presença de páginas órfãs.
 
 A correção do arquivo `ads.txt` na raiz e a unificação dos sitemaps no robots.txt são os passos mais baratos e de maior impacto que você pode dar hoje para destravar a monetização e o crescimento orgânico do portal.

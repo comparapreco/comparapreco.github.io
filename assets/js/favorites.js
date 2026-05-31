@@ -1,12 +1,12 @@
 /**
- * Sistema de Favoritos - Radar de Preços
+ * Sistema de Favoritos - Compara Preço
  * Gerencia favoritos e lista de desejos usando LocalStorage
  */
 
 const FavoritesManager = {
   STORAGE_KEYS: {
-    FAVORITOS: 'radar_favoritos',
-    DESEJOS: 'radar_desejos'
+    FAVORITOS: 'compara_favoritos',
+    DESEJOS: 'compara_desejos'
   },
 
   /**

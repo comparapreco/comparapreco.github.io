@@ -1,10 +1,10 @@
 /**
- * Sistema de Comentários e Avaliações - Radar de Preços
+ * Sistema de Comentários e Avaliações - Compara Preço
  * Gerencia avaliações de produtos com estrelas e comentários usando LocalStorage
  */
 
 const ReviewsManager = {
-  STORAGE_KEY: 'radar_reviews',
+  STORAGE_KEY: 'compara_reviews',
 
   /**
    * Inicializa o sistema de avaliações

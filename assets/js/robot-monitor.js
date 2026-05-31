@@ -14,8 +14,8 @@ class RobotMonitor {
   constructor(config = {}) {
     this.config = {
       githubToken: config.githubToken || '',
-      owner: 'radardeprecos',
-      repo: 'radar',
+      owner: 'comparadordepreco',
+      repo: 'compara',
       checkInterval: config.checkInterval || 5 * 60 * 1000, // 5 minutos
       maxHistoryItems: config.maxHistoryItems || 50,
       ...config

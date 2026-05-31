@@ -27,12 +27,12 @@ TEMPLATE = '''<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Melhores Ofertas {name} — Desconto Real | Radar de Preços</title>
+  <title>Melhores Ofertas {name} — Desconto Real | Compara Preço</title>
   <meta name="description" content="{desc}">
-  <link rel="canonical" href="https://radardeprecos.github.io/radar/melhores-ofertas/{slug}/">
+  <link rel="canonical" href="https://comparadordepreco.github.io/melhores-ofertas/{slug}/">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://radardeprecos.github.io/radar/melhores-ofertas/{slug}/">
-  <meta property="og:title" content="Melhores Ofertas {name} | Radar de Preços">
+  <meta property="og:url" content="https://comparadordepreco.github.io/melhores-ofertas/{slug}/">
+  <meta property="og:title" content="Melhores Ofertas {name} | Compara Preço">
   <meta property="og:description" content="{desc}">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -43,12 +43,12 @@ TEMPLATE = '''<!DOCTYPE html>
     "@type": "WebPage",
     "name": "Melhores Ofertas {name}",
     "description": "{desc}",
-    "url": "https://radardeprecos.github.io/radar/melhores-ofertas/{slug}/",
+    "url": "https://comparadordepreco.github.io/melhores-ofertas/{slug}/",
     "breadcrumb": {{
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://radardeprecos.github.io/radar/"}},
-        {{"@type": "ListItem", "position": 2, "name": "Melhores Ofertas", "item": "https://radardeprecos.github.io/radar/melhores-ofertas/"}},
+        {{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://comparadordepreco.github.io/"}},
+        {{"@type": "ListItem", "position": 2, "name": "Melhores Ofertas", "item": "https://comparadordepreco.github.io/melhores-ofertas/"}},
         {{"@type": "ListItem", "position": 3, "name": "{name}"}}
       ]
     }}
@@ -116,7 +116,7 @@ TEMPLATE = '''<!DOCTYPE html>
 <body>
   <header class="header">
     <div class="container header-inner">
-      <a href="../../" class="logo">📊 <strong>Radar de Preços</strong></a>
+      <a href="../../" class="logo">📊 <strong>Compara Preço</strong></a>
       <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Buscar ofertas...">
       </div>
@@ -161,7 +161,7 @@ TEMPLATE = '''<!DOCTYPE html>
       <h2 class="section-title">❓ Perguntas Frequentes sobre {name}</h2>
       <div class="faq-item">
         <div class="faq-q">Onde encontrar as melhores ofertas {name}?</div>
-        <div class="faq-a">O Radar de Preços monitora automaticamente os produtos {name} no Mercado Livre e outros grandes varejistas, exibindo apenas as ofertas com desconto real em relação ao preço histórico.</div>
+        <div class="faq-a">O Compara Preço monitora automaticamente os produtos {name} no Mercado Livre e outros grandes varejistas, exibindo apenas as ofertas com desconto real em relação ao preço histórico.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Como saber se o desconto {name} é real?</div>
@@ -177,12 +177,12 @@ TEMPLATE = '''<!DOCTYPE html>
 
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Radar de Preços. Atualizado via API oficial do Mercado Livre.</p>
+      <p>© 2026 Compara Preço. Atualizado via API oficial do Mercado Livre.</p>
       <div class="footer-links">
         <a href="../../sobre/">Sobre</a>
         <a href="../../contato/">Contato</a>
         <a href="../../privacidade/">Privacidade</a>
-        <a href="../../indice-radar/">Índice Radar</a>
+        <a href="../../indice-compara/">Índice Compara Preço</a>
         <a href="../../tendencias/">Tendências</a>
       </div>
     </div>
@@ -297,9 +297,9 @@ def build_hub():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Melhores Ofertas por Marca — Samsung, LG, Lenovo e mais | Radar de Preços</title>
-  <meta name="description" content="Encontre as melhores ofertas por marca: Samsung, LG, Lenovo, Apple, Xiaomi, Sony e muito mais. Descontos reais verificados pelo Radar de Preços.">
-  <link rel="canonical" href="https://radardeprecos.github.io/radar/melhores-ofertas/">
+  <title>Melhores Ofertas por Marca — Samsung, LG, Lenovo e mais | Compara Preço</title>
+  <meta name="description" content="Encontre as melhores ofertas por marca: Samsung, LG, Lenovo, Apple, Xiaomi, Sony e muito mais. Descontos reais verificados pelo Compara Preço.">
+  <link rel="canonical" href="https://comparadordepreco.github.io/melhores-ofertas/">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <meta name="google-adsense-account" content="ca-pub-4896859041377751">
@@ -320,7 +320,7 @@ def build_hub():
 <body>
   <header class="header">
     <div class="container header-inner">
-      <a href="../" class="logo">📊 <strong>Radar de Preços</strong></a>
+      <a href="../" class="logo">📊 <strong>Compara Preço</strong></a>
       <div class="search-bar"><input type="text" id="searchInput" placeholder="Buscar ofertas..."></div>
       <button id="themeToggle">🌙</button>
     </div>
@@ -329,7 +329,7 @@ def build_hub():
     <div class="container">
       <div class="breadcrumb"><a href="../">Início</a> › Melhores Ofertas por Marca</div>
       <h1>🏷️ Melhores Ofertas por Marca</h1>
-      <p>Encontre as melhores promoções organizadas por fabricante. Descontos reais verificados pelo Radar.</p>
+      <p>Encontre as melhores promoções organizadas por fabricante. Descontos reais verificados pelo Compara Preço.</p>
     </div>
   </section>
   <main class="container">
@@ -340,11 +340,11 @@ def build_hub():
   </main>
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Radar de Preços.</p>
+      <p>© 2026 Compara Preço.</p>
       <div class="footer-links">
         <a href="../sobre/">Sobre</a>
         <a href="../contato/">Contato</a>
-        <a href="../indice-radar/">Índice Radar</a>
+        <a href="../indice-compara/">Índice Compara Preço</a>
         <a href="../tendencias/">Tendências</a>
       </div>
     </div>

@@ -27,7 +27,7 @@ def generate_editorial_content():
                 "social_posts": [
                     {
                         "platform": "twitter",
-                        "content": "📱 ALERTA: Samsung Galaxy A17 com 35% de desconto! De R$ 1.249 por apenas R$ 809,10. Uma oportunidade imperdível! 🔥 #RadarDePreços #Promoção"
+                        "content": "📱 ALERTA: Samsung Galaxy A17 com 35% de desconto! De R$ 1.249 por apenas R$ 809,10. Uma oportunidade imperdível! 🔥 #Compara PreçoDePreços #Promoção"
                     },
                     {
                         "platform": "instagram",
@@ -49,7 +49,7 @@ def generate_editorial_content():
                 "social_posts": [
                     {
                         "platform": "twitter",
-                        "content": "📺 PROMOÇÃO: Smart TV 43\" Philco com 28% de desconto! De R$ 2.029 por R$ 1.451. Qualidade e economia! 🎉 #RadarDePreços #TV"
+                        "content": "📺 PROMOÇÃO: Smart TV 43\" Philco com 28% de desconto! De R$ 2.029 por R$ 1.451. Qualidade e economia! 🎉 #Compara PreçoDePreços #TV"
                     }
                 ]
             }

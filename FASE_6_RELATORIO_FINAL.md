@@ -7,7 +7,7 @@
 
 ## 🎯 Objetivo da Fase 6
 
-Executar uma auditoria completa do repositório Radar de Preços e implementar todas as otimizações técnicas necessárias para:
+Executar uma auditoria completa do repositório Compara Preço e implementar todas as otimizações técnicas necessárias para:
 1. Maximizar as chances de aprovação no Google AdSense
 2. Corrigir problemas de performance e layout shift
 3. Melhorar a experiência do usuário (UX)
@@ -41,7 +41,7 @@ Todas as 5 páginas institucionais foram completamente reescritas com conteúdo 
 
 **Canonical Tags:**
 - ✅ Adicionadas em 100% das páginas
-- ✅ URLs corretas: `https://radardeprecos.github.io/radar/[página]/`
+- ✅ URLs corretas: `https://comparadordepreco.github.io/[página]/`
 - ✅ Formato: `<link rel="canonical" href="...">`
 
 **Meta Descriptions:**
@@ -52,8 +52,8 @@ Todas as 5 páginas institucionais foram completamente reescritas com conteúdo 
 
 **Exemplo:**
 ```html
-<meta name="description" content="Conheça a política de privacidade do Radar de Preços e como protegemos seus dados pessoais em conformidade com a LGPD.">
-<link rel="canonical" href="https://radardeprecos.github.io/radar/privacidade/">
+<meta name="description" content="Conheça a política de privacidade do Compara Preço e como protegemos seus dados pessoais em conformidade com a LGPD.">
+<link rel="canonical" href="https://comparadordepreco.github.io/privacidade/">
 ```
 
 ### 3. Schema Markup Implementado
@@ -72,10 +72,10 @@ Adicionado em todas as páginas institucionais:
   "@type": "ContactPage",
   "mainEntity": {
     "@type": "Organization",
-    "name": "Radar de Preços",
+    "name": "Compara Preço",
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "contato@radardeprecos.com"
+      "email": "contato@comparadordepreco.com"
     }
   }
 }
@@ -273,13 +273,13 @@ Como o site ainda não possui aprovação do Google AdSense, foram removidas:
 
 ### 1. Google PageSpeed Insights
 ```
-URL: https://radardeprecos.github.io/radar/
+URL: https://comparadordepreco.github.io/
 Objetivo: Score >90 em Desktop e Mobile
 ```
 
 ### 2. Google Mobile-Friendly Test
 ```
-URL: https://radardeprecos.github.io/radar/
+URL: https://comparadordepreco.github.io/
 Objetivo: Compatível com dispositivos móveis
 ```
 
@@ -334,7 +334,7 @@ Ações:
 
 ## ✨ Conclusão
 
-O **Radar de Preços** agora está **100% otimizado** para:
+O **Compara Preço** agora está **100% otimizado** para:
 - ✅ Google Search Console
 - ✅ Google AdSense (quando aprovado)
 - ✅ Melhor experiência do usuário

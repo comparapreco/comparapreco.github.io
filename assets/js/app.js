@@ -1,16 +1,16 @@
 
-// Radar de Preços - Script Principal Profissional v2.1 (Correção de Scroll e Renderização)
+// Compara Preço - Script Principal Profissional v2.1 (Correção de Scroll e Renderização)
 
-function getRadarBasePrefix() {
+function getCompara PreçoBasePrefix() {
   const cleanPath = window.location.pathname.replace(/\/$/, '');
   let parts = cleanPath.split('/').filter(Boolean);
   if (parts.length && parts[parts.length - 1].includes('.')) parts = parts.slice(0, -1);
-  const radarIndex = parts.indexOf('radar');
-  const depth = radarIndex >= 0 ? Math.max(0, parts.length - radarIndex - 1) : Math.max(0, parts.length);
+  const comparaIndex = parts.indexOf('compara');
+  const depth = comparaIndex >= 0 ? Math.max(0, parts.length - comparaIndex - 1) : Math.max(0, parts.length);
   return '../'.repeat(depth);
 }
-const RADAR_BASE_PREFIX = getRadarBasePrefix();
-const DATA_URL = RADAR_BASE_PREFIX + 'data/products/offers.json';
+const COMPARA_BASE_PREFIX = getCompara PreçoBasePrefix();
+const DATA_URL = COMPARA_BASE_PREFIX + 'data/products/offers.json';
 let allProducts = [];
 let currentSlide = 0;
 let carouselInterval;
@@ -82,9 +82,9 @@ function renderStats(products) {
   `;
 }
 
-// --- Radar Premium ---
-function renderRadarPremium(products) {
-  const premiumContainer = document.getElementById('radarPremium');
+// --- Compara Preço Premium ---
+function renderCompara PreçoPremium(products) {
+  const premiumContainer = document.getElementById('comparaPremium');
   if (!premiumContainer) return [];
 
   const premiumItems = [...products]
@@ -92,11 +92,11 @@ function renderRadarPremium(products) {
     .slice(0, 5);
 
   premiumContainer.innerHTML = `
-    <div class="section-header"><h2>👑 Radar Premium</h2></div>
+    <div class="section-header"><h2>👑 Compara Preço Premium</h2></div>
     <div class="premium-grid">
       ${premiumItems.map(p => `
-        <div class="product-card radar-premium-card">
-          <span class="badge badge-premium-choice">👑 Escolha do Radar</span>
+        <div class="product-card compara-premium-card">
+          <span class="badge badge-premium-choice">👑 Escolha do Compara Preço</span>
           <div class="card-img"><img src="${escapeHtml(p.image || p.thumbnail)}" alt="${escapeHtml(p.name)}" loading="lazy"></div>
           <h3>${escapeHtml(p.name).substring(0, 50)}...</h3>
           <div class="price-tag">R$ ${formatPrice(p.price)}</div>
@@ -207,7 +207,7 @@ function renderGrid(products, excludeItems = []) {
     const badges = getProfessionalBadges(p, idx);
     const favClass = isFavorite(p.id) ? 'active' : '';
     const alertClass = hasAlert(p.id) ? 'active' : '';
-    const decision = getRadarDecision(p);
+    const decision = getCompara PreçoDecision(p);
     return `
       <div class="product-card" data-product-id="${escapeHtml(p.id)}" data-category="${escapeHtml(p.custom_category_slug || '')}">
         <button class="fav-btn ${favClass}" title="Favoritar" onclick="event.preventDefault(); toggleFavorite('${p.id}')">♥</button>
@@ -216,7 +216,7 @@ function renderGrid(products, excludeItems = []) {
         ${badges}
         <div class="card-img"><img src="${escapeHtml(p.image || p.thumbnail)}" alt="${escapeHtml(p.name)}" loading="lazy"></div>
         <h3>${escapeHtml(p.name).substring(0, 60)}...</h3>
-        <div class="radar-decision ${decision.className}">${decision.label}</div>
+        <div class="compara-decision ${decision.className}">${decision.label}</div>
         <div class="price-tag">R$ ${formatPrice(p.price)}</div>
         <a href="${escapeHtml(safeAffiliateUrl(p))}" class="btn" target="_blank" rel="nofollow sponsored" onclick="trackOfferClick('${p.id}')" style="width:100%">Ver Detalhes</a>
       </div>
@@ -230,9 +230,9 @@ function renderNews() {
   if (!main || document.getElementById('newsSection')) return;
 
   const newsData = [
-    { title: "Samsung Galaxy A17 5G Chega ao Brasil", summary: "Confira as especificações e o preço agressivo do novo intermediário da Samsung.", img: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400", url: "/radar/noticias/posts/samsung-galaxy-a17-5g-lancamento.html" },
-    { title: "Notebooks Lenovo com 40% de Desconto", summary: "IdeaPad e ThinkPad em promoção histórica no Mercado Livre. Confira!", img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400", url: "/radar/noticias/posts/notebooks-lenovo-promocao.html" },
-    { title: "Amazon Prime Day 2026 Confirmado", summary: "Tudo o que você precisa saber para economizar no maior evento da Amazon.", img: "https://images.unsplash.com/photo-1523475496153-3d6cc0f0bf19?w=400", url: "/radar/noticias/posts/amazon-prime-day-2026.html" }
+    { title: "Samsung Galaxy A17 5G Chega ao Brasil", summary: "Confira as especificações e o preço agressivo do novo intermediário da Samsung.", img: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400", url: "/noticias/posts/samsung-galaxy-a17-5g-lancamento.html" },
+    { title: "Notebooks Lenovo com 40% de Desconto", summary: "IdeaPad e ThinkPad em promoção histórica no Mercado Livre. Confira!", img: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400", url: "/noticias/posts/notebooks-lenovo-promocao.html" },
+    { title: "Amazon Prime Day 2026 Confirmado", summary: "Tudo o que você precisa saber para economizar no maior evento da Amazon.", img: "https://images.unsplash.com/photo-1523475496153-3d6cc0f0bf19?w=400", url: "/noticias/posts/amazon-prime-day-2026.html" }
   ];
 
   const newsHtml = `
@@ -283,7 +283,7 @@ async function init() {
     
     renderCarousel(sorted);
     renderStats(allProducts);
-    const premiumItems = renderRadarPremium(allProducts);
+    const premiumItems = renderCompara PreçoPremium(allProducts);
     renderGrid(allProducts, [...premiumItems, ...sorted.slice(0, 8)]);
     renderNews();
     
@@ -372,13 +372,13 @@ function setupSearch() {
   });
 }
 
-// --- Ecossistema Radar: favoritos, alertas e comportamento ---
+// --- Ecossistema Compara Preço: favoritos, alertas e comportamento ---
 async function loadUserState() {
-  if (!window.RadarAuth) return;
-  await window.RadarAuth.init();
+  if (!window.Compara PreçoAuth) return;
+  await window.Compara PreçoAuth.init();
   const [favorites, alerts] = await Promise.all([
-    window.RadarAuth.getCollection('favorites', []),
-    window.RadarAuth.getCollection('alerts', [])
+    window.Compara PreçoAuth.getCollection('favorites', []),
+    window.Compara PreçoAuth.getCollection('alerts', [])
   ]);
   favoriteIds = new Set(favorites.map(item => String(item.productId || item.id)));
   alertIds = new Set(alerts.filter(item => item.active !== false).map(item => String(item.productId || item.id)));
@@ -403,13 +403,13 @@ function productSnapshot(product) {
 
 async function toggleFavorite(productId) {
   const product = allProducts.find(item => String(item.id) === String(productId));
-  if (!product || !window.RadarAuth) return;
-  await window.RadarAuth.init();
+  if (!product || !window.Compara PreçoAuth) return;
+  await window.Compara PreçoAuth.init();
   if (favoriteIds.has(String(productId))) {
-    await window.RadarAuth.removeItem('favorites', productId);
+    await window.Compara PreçoAuth.removeItem('favorites', productId);
     favoriteIds.delete(String(productId));
   } else {
-    await window.RadarAuth.upsertItem('favorites', productSnapshot(product));
+    await window.Compara PreçoAuth.upsertItem('favorites', productSnapshot(product));
     favoriteIds.add(String(productId));
   }
   renderGrid(allProducts);
@@ -425,14 +425,14 @@ function hasAlert(productId) {
 
 async function openQuickAlert(productId) {
   const product = allProducts.find(item => String(item.id) === String(productId));
-  if (!product || !window.RadarAuth) return;
-  await window.RadarAuth.init();
+  if (!product || !window.Compara PreçoAuth) return;
+  await window.Compara PreçoAuth.init();
   const suggested = Math.max(1, Math.floor(Number(product.price || 0) * 0.92));
   const value = prompt(`Avisar quando ${product.name || product.title} chegar em qual preço?`, suggested);
   if (!value) return;
   const targetPrice = Number(String(value).replace(',', '.'));
   if (!targetPrice || targetPrice <= 0) return alert('Informe um preço válido.');
-  await window.RadarAuth.upsertItem('alerts', {
+  await window.Compara PreçoAuth.upsertItem('alerts', {
     id: product.id,
     productId: product.id,
     product: productSnapshot(product),
@@ -458,7 +458,7 @@ function buildPriceHistory(product) {
   ];
 }
 
-function getRadarDecision(product) {
+function getCompara PreçoDecision(product) {
   const discount = Number(product.custom_discount_pct || 0);
   const price = Number(product.price || 0);
   const original = Number(product.originalPrice || product.original_price || price);
@@ -471,7 +471,7 @@ function getRadarDecision(product) {
 
 function trackOfferClick(productId) {
   const product = allProducts.find(item => String(item.id) === String(productId));
-  if (product && window.RadarAuth) window.RadarAuth.trackProductClick(productSnapshot(product));
+  if (product && window.Compara PreçoAuth) window.Compara PreçoAuth.trackProductClick(productSnapshot(product));
 }
 
 // Theme Toggle
@@ -510,7 +510,7 @@ async function injectExplorarMenu() {
         let prefix = './';
         
         if (isGithub) {
-            // No GitHub Pages (/radar/...), o primeiro elemento é 'radar'
+            // No GitHub Pages (/...), o primeiro elemento é 'compara'
             const depth = pathParts.length - 1; 
             if (depth > 0) prefix = '../'.repeat(depth);
         } else {

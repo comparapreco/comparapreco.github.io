@@ -1,9 +1,9 @@
 {
-  "name": "Radar de Preços — Inteligência de Preços em Tempo Real",
-  "short_name": "Radar de Preços",
+  "name": "Compara Preço — Inteligência de Preços em Tempo Real",
+  "short_name": "Compara Preço",
   "description": "Encontre as melhores ofertas do Mercado Livre, compare preços e economize com alertas inteligentes.",
-  "start_url": "/radar/",
-  "scope": "/radar/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#ffffff",
@@ -25,13 +25,13 @@
   "categories": ["shopping", "productivity"],
   "screenshots": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%230f766e' width='540' height='720'/><text x='270' y='360' font-size='80' fill='white' text-anchor='middle' dominant-baseline='central' font-family='system-ui'>📊 Radar de Preços</text></svg>",
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%230f766e' width='540' height='720'/><text x='270' y='360' font-size='80' fill='white' text-anchor='middle' dominant-baseline='central' font-family='system-ui'>📊 Compara Preço</text></svg>",
       "sizes": "540x720",
       "type": "image/svg+xml",
       "form_factor": "narrow"
     },
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'><rect fill='%230f766e' width='1280' height='720'/><text x='640' y='360' font-size='80' fill='white' text-anchor='middle' dominant-baseline='central' font-family='system-ui'>📊 Radar de Preços</text></svg>",
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'><rect fill='%230f766e' width='1280' height='720'/><text x='640' y='360' font-size='80' fill='white' text-anchor='middle' dominant-baseline='central' font-family='system-ui'>📊 Compara Preço</text></svg>",
       "sizes": "1280x720",
       "type": "image/svg+xml",
       "form_factor": "wide"
@@ -42,7 +42,7 @@
       "name": "Ofertas de Hoje",
       "short_name": "Ofertas",
       "description": "Veja as melhores ofertas do dia",
-      "url": "/radar/ofertas-hoje/",
+      "url": "/ofertas-hoje/",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%23ff6b6b' width='192' height='192'/><text x='50%' y='50%' font-size='100' fill='white' text-anchor='middle' dominant-baseline='central' font-family='system-ui'>🔥</text></svg>",
@@ -55,7 +55,7 @@
       "name": "Meus Alertas",
       "short_name": "Alertas",
       "description": "Gerencie seus alertas de preço",
-      "url": "/radar/alertas/",
+      "url": "/alertas/",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%230f766e' width='192' height='192'/><text x='50%' y='50%' font-size='100' fill='white' text-anchor='middle' dominant-baseline='central' font-family='system-ui'>🔔</text></svg>",
@@ -68,7 +68,7 @@
       "name": "Comparativos",
       "short_name": "Comparar",
       "description": "Compare produtos lado a lado",
-      "url": "/radar/comparativos/",
+      "url": "/comparativos/",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%2310b981' width='192' height='192'/><text x='50%' y='50%' font-size='100' fill='white' text-anchor='middle' dominant-baseline='central' font-family='system-ui'>⚖️</text></svg>",
@@ -79,7 +79,7 @@
     }
   ],
   "share_target": {
-    "action": "/radar/compartilhar/",
+    "action": "/compartilhar/",
     "method": "POST",
     "enctype": "application/x-www-form-urlencoded",
     "params": {

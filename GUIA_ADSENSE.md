@@ -8,7 +8,7 @@ Criar conteúdo de **qualidade profissional** que atenda aos critérios rigoroso
 ## ✅ Páginas Já Criadas
 
 ### Institucionais
-- ✅ `/sobre/` - Sobre o Radar de Preços
+- ✅ `/sobre/` - Sobre o Compara Preço
 - ✅ `/privacidade/` - Política de Privacidade
 - ✅ `/termos/` - Termos de Uso
 - ✅ `/contato/` - Página de Contato
@@ -76,7 +76,7 @@ Criar conteúdo de **qualidade profissional** que atenda aos critérios rigoroso
 - Resumo executivo
 - Especificações técnicas (tabela)
 - Prós e Contras (com ícones)
-- Análise Radar IA (Radar Score)
+- Análise Compara Preço IA (Compara Preço Score)
 - Histórico de preço (gráfico)
 - Produtos similares
 - FAQ do produto

@@ -3,7 +3,7 @@ import json
 from typing import List, Dict, Any
 from logger import logger
 
-BASE_URL = "/"
+BASE_URL = "https://comparadordepreco.github.io/"
 
 def build_category_page(category_slug: str, products: List[Dict[str, Any]], template_path: str, output_dir: str) -> None:
     logger.info(f"Gerando página para a categoria: {category_slug}")
@@ -49,7 +49,7 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         """
         
     # SEO para categorias (Fase 1)
-    seo_title = f"Ofertas de {category_name} com Desconto no Radar de Preços"
+    seo_title = f"Ofertas de {category_name} com Desconto no Compara Preço"
     meta_description = f"Encontre as melhores ofertas de {category_name} no Mercado Livre. Descontos incríveis e produtos selecionados para você economizar."
     canonical_url = f"{BASE_URL}categorias/{category_slug}/"
 

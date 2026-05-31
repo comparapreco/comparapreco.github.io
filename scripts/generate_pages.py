@@ -4,7 +4,7 @@ import random
 from typing import List, Dict, Any
 from logger import logger
 
-BASE_URL = "/"
+BASE_URL = "https://comparadordepreco.github.io/"
 
 def slugify(text: str) -> str:
     import unicodedata
@@ -74,11 +74,11 @@ def generate_product_page(product: Dict[str, Any], all_products: List[Dict[str, 
         similars_html += '</div></div>'
 
     # SEO DINÂMICO
-    seo_title = f"{product_name} | Radar de Preços"
+    seo_title = f"{product_name} | Compara Preço"
     if p_status == 'active':
-        seo_title = f"{product_name} com {p_discount}% de Desconto | Radar de Preços"
+        seo_title = f"{product_name} com {p_discount}% de Desconto | Compara Preço"
     
-    meta_desc = f"Confira a oferta de {product_name} no Radar de Preços. Economize com os melhores descontos do Mercado Livre."
+    meta_desc = f"Confira a oferta de {product_name} no Compara Preço. Economize com os melhores descontos do Mercado Livre."
     canonical_url = f"{BASE_URL}ofertas/{p_cat_slug}/{p_slug}-{p_id}.html"
     
     # Substituições
@@ -99,7 +99,7 @@ def generate_product_page(product: Dict[str, Any], all_products: List[Dict[str, 
     content = content.replace('{{product.category}}', p_cat_slug)
     content = content.replace('{{product.discount}}', str(p_discount))
     
-    desc = product.get('description', f"Confira esta oferta de {product_name} no Mercado Livre! Produto selecionado pelo Radar de Preços.")
+    desc = product.get('description', f"Confira esta oferta de {product_name} no Mercado Livre! Produto selecionado pelo Compara Preço.")
     content = content.replace('{{product.description_content}}', desc)
     
     path = os.path.join(output_dir, p_cat_slug, f'{p_slug}-{p_id}.html')

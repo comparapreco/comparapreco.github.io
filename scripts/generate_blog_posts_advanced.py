@@ -4,7 +4,7 @@ from datetime import datetime
 import unicodedata
 from logger import logger
 
-BASE_URL = "/"
+BASE_URL = "https://comparadordepreco.github.io/"
 
 def slugify(text: str) -> str:
     """Converte texto em slug amigável para URL."""
@@ -67,7 +67,7 @@ def generate_breadcrumb_schema(breadcrumbs: list) -> str:
     return json.dumps(schema, ensure_ascii=False, indent=2)
 
 def generate_blog_article(title: str, description: str, content: str, category: str = "Ofertas", 
-                         author: str = "Radar de Preços", keywords: str = "") -> dict:
+                         author: str = "Compara Preço", keywords: str = "") -> dict:
     """Gera um artigo de blog completo com E-E-A-T."""
     
     now = datetime.now()
@@ -78,7 +78,7 @@ def generate_blog_article(title: str, description: str, content: str, category: 
     # URLs
     article_url = f"{BASE_URL}noticias/posts/{slug}/"
     breadcrumbs = [
-        ("Radar de Preços", f"{BASE_URL}"),
+        ("Compara Preço", f"{BASE_URL}"),
         ("Notícias", f"{BASE_URL}noticias/"),
         (title, article_url)
     ]
@@ -93,7 +93,7 @@ def generate_blog_article(title: str, description: str, content: str, category: 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title} | Radar de Preços</title>
+    <title>{title} | Compara Preço</title>
     <meta name="description" content="{description}">
     <meta name="keywords" content="{keywords}">
     <link rel="canonical" href="{article_url}">
@@ -119,7 +119,7 @@ def generate_blog_article(title: str, description: str, content: str, category: 
 <body>
     <header class="header">
         <div class="container header-inner">
-            <a href="../../" class="logo">📊 <strong>Radar de Preços</strong></a>
+            <a href="../../" class="logo">📊 <strong>Compara Preço</strong></a>
             <button id="themeToggle">🌙</button>
         </div>
     </header>
@@ -127,7 +127,7 @@ def generate_blog_article(title: str, description: str, content: str, category: 
     <!-- Breadcrumb Navigation -->
     <nav class="breadcrumb" style="background: var(--card); padding: 15px 0; border-bottom: 1px solid var(--border);">
         <div class="container" style="font-size: 14px;">
-            <a href="../../">Radar de Preços</a> › 
+            <a href="../../">Compara Preço</a> › 
             <a href="../../noticias/">Notícias</a> › 
             <span>{title}</span>
         </div>
@@ -172,7 +172,7 @@ def generate_blog_article(title: str, description: str, content: str, category: 
     
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Radar de Preços. Inteligência de Preços em Tempo Real.</p>
+            <p>© 2026 Compara Preço. Inteligência de Preços em Tempo Real.</p>
             <div class="footer-links">
                 <a href="../../noticias/">Blog</a>
                 <a href="../../sobre/">Sobre</a>
@@ -236,7 +236,7 @@ if __name__ == "__main__":
         description="Guia completo com 10 estratégias comprovadas para economizar ao comprar eletrônicos. Dicas de especialistas e dados reais do mercado.",
         content=article_content,
         category="Guias",
-        author="Radar de Preços",
+        author="Compara Preço",
         keywords="economizar eletrônicos, dicas compras, ofertas 2026"
     )
     

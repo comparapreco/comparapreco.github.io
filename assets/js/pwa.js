@@ -1,21 +1,21 @@
-// Fase 10 — PWA, instalação e notificações locais do Radar
+// Fase 10 — PWA, instalação e notificações locais do Compara Preço
 (function () {
   'use strict';
 
-  const ROOT_PATH = window.location.pathname.includes('/radar/') ? '/radar/' : '/';
+  const ROOT_PATH = window.location.pathname.includes('/') ? '/' : '/';
   let deferredPrompt = null;
 
   function createInstallButton() {
-    if (document.getElementById('radarInstallPwa')) return;
+    if (document.getElementById('comparaInstallPwa')) return;
     const button = document.createElement('button');
-    button.id = 'radarInstallPwa';
-    button.className = 'radar-auth-button';
+    button.id = 'comparaInstallPwa';
+    button.className = 'compara-auth-button';
     button.style.position = 'fixed';
     button.style.right = '16px';
     button.style.bottom = '16px';
     button.style.zIndex = '80';
     button.style.display = 'none';
-    button.textContent = 'Instalar Radar';
+    button.textContent = 'Instalar Compara Preço';
     button.addEventListener('click', async () => {
       if (!deferredPrompt) return;
       deferredPrompt.prompt();
@@ -59,11 +59,11 @@
   }
 
   function exposeApi() {
-    window.RadarPWA = {
+    window.Compara PreçoPWA = {
       requestNotifications,
       notify,
       async testPriceAlert() {
-        await notify('Radar de Preços', {
+        await notify('Compara Preço', {
           body: 'Exemplo de alerta: um produto monitorado atingiu o preço desejado.',
           data: { url: ROOT_PATH + 'minha-lista/' }
         });
@@ -75,13 +75,13 @@
     event.preventDefault();
     deferredPrompt = event;
     createInstallButton();
-    const button = document.getElementById('radarInstallPwa');
+    const button = document.getElementById('comparaInstallPwa');
     if (button) button.style.display = 'inline-flex';
   });
 
   window.addEventListener('appinstalled', () => {
     deferredPrompt = null;
-    const button = document.getElementById('radarInstallPwa');
+    const button = document.getElementById('comparaInstallPwa');
     if (button) button.style.display = 'none';
   });
 

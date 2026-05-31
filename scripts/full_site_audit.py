@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Auditoria de "Pente Fino" do Radar de Preços
+Auditoria de "Pente Fino" do Compara Preço
 Verifica integridade, SEO, AdSense e performance de todas as 208 páginas
 """
 

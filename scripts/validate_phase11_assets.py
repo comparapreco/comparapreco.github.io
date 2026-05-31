@@ -8,7 +8,7 @@ PHASE11_PAGES = [
     'imprensa/index.html',
     'parcerias/index.html',
     'midia-kit/index.html',
-    'radar-index/index.html',
+    'precos-index/index.html',
     'academia/index.html',
     'exclusivos/index.html',
     'inteligencia/index.html',
@@ -17,7 +17,7 @@ PHASE11_PAGES = [
 ]
 
 PHASE11_DATA = [
-    'data/radar-index.json',
+    'data/precos-index.json',
     'data/market-intelligence.json',
     'data/revenue-metrics.json',
     'data/segmented-newsletter.json',
@@ -34,8 +34,8 @@ def validate_pages():
             missing.append(page)
         else:
             content = path.read_text(encoding='utf-8')
-            if 'radar-auth.js' not in content:
-                print(f"  ⚠ {page}: Falta script radar-auth.js")
+            if 'compara-auth.js' not in content:
+                print(f"  ⚠ {page}: Falta script compara-auth.js")
             if 'pwa.js' not in content:
                 print(f"  ⚠ {page}: Falta script pwa.js")
     
@@ -78,7 +78,7 @@ def validate_css():
     content = css_path.read_text(encoding='utf-8')
     
     required_classes = [
-        '.radar-index-grid',
+        '.precos-index-grid',
         '.feature-card',
         '.newsletter-segment-card',
         '.content-section',
@@ -105,7 +105,7 @@ def validate_service_worker():
         'academia/',
         'inteligencia/',
         'newsletter/',
-        'radar-index.json',
+        'precos-index.json',
         'market-intelligence.json'
     ]
     

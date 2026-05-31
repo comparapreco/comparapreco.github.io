@@ -79,7 +79,7 @@ def add_img_dimensions_robust(file_path):
         print(f"- Nenhuma alteração necessária em {file_path}.")
 
 if __name__ == '__main__':
-    with open('/home/ubuntu/radar/html_files_to_correct.txt', 'r') as f:
+    with open('/home/ubuntu/html_files_to_correct.txt', 'r') as f:
         files = f.read().splitlines()
 
     for file in files:

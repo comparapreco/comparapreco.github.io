@@ -27,7 +27,7 @@ def migrate():
         path = os.path.join(posts_dir, filename)
         
         # Tentar identificar o produto pelo nome do arquivo ou conteúdo
-        # Como os nomes antigos eram radar-ofertas-..., vamos pegar um produto aleatório 
+        # Como os nomes antigos eram compara-ofertas-..., vamos pegar um produto aleatório 
         # ou os top produtos para preencher esses posts antigos com conteúdo de valor.
         
         target_product = random.choice(products)
@@ -42,17 +42,17 @@ def migrate():
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>{new_title} | Radar de Preços</title>
+            <title>{new_title} | Compara Preço</title>
             <meta name="description" content="Análise aprofundada do {target_product.get('name')}. Descubra se vale a pena comprar com {target_product.get('custom_discount_pct')}% de desconto.">
             <link rel="stylesheet" href="../../assets/css/style.css">
         </head>
         <body>
-            <header class="header"><div class="container"><a href="../../" class="logo">📊 Radar de Preços</a></div></header>
+            <header class="header"><div class="container"><a href="../../" class="logo">📊 Compara Preço</a></div></header>
             <main class="container" style="padding: 40px 20px; max-width: 900px; margin: 0 auto;">
                 <article>
                     <header style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
                         <h1>{new_title}</h1>
-                        <p style="color: #666;">Publicado por Equipe Radar em {now.strftime('%d/%m/%Y %H:%M')} | Leitura de 15 min</p>
+                        <p style="color: #666;">Publicado por Equipe Compara Preço em {now.strftime('%d/%m/%Y %H:%M')} | Leitura de 15 min</p>
                     </header>
                     <div class="content" style="line-height: 1.8; font-size: 16px; color: #333;">
                         {article_body}
@@ -68,7 +68,7 @@ def migrate():
                 </article>
             </main>
             <footer class="footer" style="margin-top: 60px; padding: 40px 0; border-top: 1px solid #eee; text-align: center;">
-                <p>© 2026 Radar de Preços - Conteúdo Original e Protegido.</p>
+                <p>© 2026 Compara Preço - Conteúdo Original e Protegido.</p>
             </footer>
         </body>
         </html>

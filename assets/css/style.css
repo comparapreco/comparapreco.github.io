@@ -571,13 +571,13 @@ ins.adsbygoogle {
     width: auto !important;
     object-fit: contain !important;
   }
-  .radar-premium-card .card-img {
+  .compara-premium-card .card-img {
     height: 100px !important;
     max-width: 100px !important;
     margin: 0 auto !important;
     background: #eee !important;
   }
-  .radar-premium-card .card-img img {
+  .compara-premium-card .card-img img {
     max-height: 80px !important;
     width: auto !important;
     object-fit: contain !important;

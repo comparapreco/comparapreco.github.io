@@ -1,6 +1,6 @@
-# Framework de Conteúdo Editorial para Radar de Preços
+# Framework de Conteúdo Editorial para Compara Preço
 
-Este documento descreve a estrutura e os requisitos para a geração de conteúdo editorial no blog do Radar de Preços, visando otimizar o SEO, aumentar a autoridade e engajar a audiência.
+Este documento descreve a estrutura e os requisitos para a geração de conteúdo editorial no blog do Compara Preço, visando otimizar o SEO, aumentar a autoridade e engajar a audiência.
 
 ## 1. Artigos Semanais (2 por semana)
 
@@ -33,7 +33,7 @@ Este documento descreve a estrutura e os requisitos para a geração de conteúd
 
 ## 2. Estudos Mensais (1 por mês)
 
-**Objetivo:** Posicionar o Radar de Preços como autoridade no mercado, gerando backlinks e citações, e fornecendo insights aprofundados.
+**Objetivo:** Posicionar o Compara Preço como autoridade no mercado, gerando backlinks e citações, e fornecendo insights aprofundados.
 
 **Estrutura:**
 
@@ -47,8 +47,8 @@ Este documento descreve a estrutura e os requisitos para a geração de conteúd
     *   **Interpretação:** Explicação dos dados e suas implicações.
 *   **Insights e Tendências:** O que os dados revelam sobre o mercado.
 *   **Recomendações:** Sugestões para consumidores e varejistas.
-*   **Conclusão:** Reforço da autoridade do Radar de Preços.
-*   **Referências:** Fontes de dados externas (se houver) e links para dados internos do Radar.
+*   **Conclusão:** Reforço da autoridade do Compara Preço.
+*   **Referências:** Fontes de dados externas (se houver) e links para dados internos do Compara Preço.
 *   **Informações do Autor:** Especialista responsável pelo estudo.
 *   **Data de Publicação:** Clara e visível.
 *   **Tempo de Leitura:** Estimativa.

@@ -61,7 +61,7 @@
 ./explodindo/index.html
 ./guias/melhor-celular-ate-1500/index.html
 ./index.html
-./indice-radar/index.html
+./indice-compara/index.html
 ./mais-clicados/index.html
 ./melhores-2026/index.html
 ./melhores-2026/melhores-beleza-2026.html
@@ -273,7 +273,7 @@
 ./marcas/index.html
 ./alertas/index.html
 ./metodologia/index.html
-./radar-de-mercado/index.html
-./premio-radar-2026/index.html
+./monitor-de-mercado/index.html
+./premio-compara-2026/index.html
 ./ferramentas/economia/index.html
 ./o-que-esta-em-alta/index.html

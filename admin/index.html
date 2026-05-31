@@ -4,7 +4,7 @@
 <head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Dashboard Admin — Radar de Preços</title>
+<title>Dashboard Admin — Compara Preço</title>
 <meta content="noindex, nofollow" name="robots"/>
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
@@ -70,7 +70,7 @@
 <body>
 <header class="header">
 <div class="container header-inner">
-<a class="logo" href="../">📊 <strong>Radar de Preços</strong></a>
+<a class="logo" href="../">📊 <strong>Compara Preço</strong></a>
 <div style="flex: 1;"></div>
 <a href="../" style="color: var(--primary); text-decoration: none; font-weight: 700;">← Voltar ao Site</a>
 <button id="themeToggle">🌙</button>
@@ -194,24 +194,24 @@
 </main>
 <footer class="footer">
 <div class="container">
-<p>© 2026 Radar de Preços. Dashboard Administrativo.</p>
+<p>© 2026 Compara Preço. Dashboard Administrativo.</p>
 </div>
 </footer>
 <script src="../assets/js/analytics.js"></script>
 <script>
     function renderDashboard() {
       // Métricas principais
-      const revenue = RadarAnalytics.estimateRevenue();
+      const revenue = Compara PreçoAnalytics.estimateRevenue();
       document.getElementById('totalClicks').textContent = revenue.totalClicks.toLocaleString('pt-BR');
       document.getElementById('conversionRate').textContent = revenue.conversionRate + '%';
       document.getElementById('estimatedRevenue').textContent = 'R$ ' + parseFloat(revenue.estimatedRevenue).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
 
-      const pageViews = RadarAnalytics.getMostVisitedPages();
+      const pageViews = Compara PreçoAnalytics.getMostVisitedPages();
       const totalPages = pageViews.reduce((sum, p) => sum + p.views, 0);
       document.getElementById('totalPages').textContent = totalPages.toLocaleString('pt-BR');
 
       // Top Produtos
-      const topProducts = RadarAnalytics.getTopProducts();
+      const topProducts = Compara PreçoAnalytics.getTopProducts();
       const productsTable = document.getElementById('topProductsTable').querySelector('tbody');
       productsTable.innerHTML = topProducts.map((p, i) => `
         <tr>
@@ -226,7 +226,7 @@
       `).join('');
 
       // CTR por Categoria
-      const categoryMetrics = RadarAnalytics.getCategoryMetrics();
+      const categoryMetrics = Compara PreçoAnalytics.getCategoryMetrics();
       const categoryTable = document.getElementById('categoryMetricsTable').querySelector('tbody');
       categoryTable.innerHTML = Object.entries(categoryMetrics)
         .sort((a, b) => parseFloat(b[1].ctr) - parseFloat(a[1].ctr))
@@ -262,19 +262,19 @@
     }
 
     function exportAnalytics() {
-      const analytics = RadarAnalytics.getAnalytics();
+      const analytics = Compara PreçoAnalytics.getAnalytics();
       const csv = JSON.stringify(analytics, null, 2);
       const blob = new Blob([csv], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `radar-analytics-${new Date().toISOString().split('T')[0]}.json`;
+      a.download = `compara-analytics-${new Date().toISOString().split('T')[0]}.json`;
       a.click();
     }
 
     function resetAnalytics() {
       if (confirm('Tem certeza que deseja limpar todos os dados de analytics? Esta ação não pode ser desfeita.')) {
-        RadarAnalytics.reset();
+        Compara PreçoAnalytics.reset();
         renderDashboard();
         alert('Analytics limpo com sucesso!');
       }

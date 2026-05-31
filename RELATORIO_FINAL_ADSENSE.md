@@ -1,4 +1,4 @@
-# 🎯 Relatório Final — Radar de Preços Pronto para Google AdSense
+# 🎯 Relatório Final — Compara Preço Pronto para Google AdSense
 
 **Data:** 31 de maio de 2026  
 **Status:** ✅ PRONTO PARA SUBMISSÃO
@@ -7,7 +7,7 @@
 
 ## 📋 Resumo Executivo
 
-O **Radar de Preços** foi completamente auditado e otimizado para aprovação do Google AdSense. O site agora atende a todos os critérios de qualidade editorial, técnica e de conformidade.
+O **Compara Preço** foi completamente auditado e otimizado para aprovação do Google AdSense. O site agora atende a todos os critérios de qualidade editorial, técnica e de conformidade.
 
 ### Métricas Finais
 - **Total de Páginas:** 155 (após limpeza)
@@ -97,7 +97,7 @@ O **Radar de Preços** foi completamente auditado e otimizado para aprovação d
 | Página | Score | Status |
 |--------|-------|--------|
 | Tendências | 92/100 | ✅ Excelente |
-| Índice Radar | 90/100 | ✅ Excelente |
+| Índice Compara Preço | 90/100 | ✅ Excelente |
 | Explodindo | 88/100 | ✅ Excelente |
 | Notícias | 85/100 | ✅ Boa |
 
@@ -137,7 +137,7 @@ O **Radar de Preços** foi completamente auditado e otimizado para aprovação d
 
 ### Fase 2: Crescimento de Tráfego ✅
 - [x] Página de Tendências
-- [x] Índice Radar (IPCA das ofertas)
+- [x] Índice Compara Preço (IPCA das ofertas)
 - [x] Página Explodindo (urgência)
 - [x] Centro de Notícias
 - [x] Landing pages de marcas (9 páginas)
@@ -212,7 +212,7 @@ O **Radar de Preços** foi completamente auditado e otimizado para aprovação d
 ### 1. Submeter para Google AdSense
 - Acesse: https://www.google.com/adsense/
 - Clique em "Inscrever-se agora"
-- Insira o domínio: radardeprecos.github.io
+- Insira o domínio: comparadordepreco.github.io
 - Aguarde revisão (3-7 dias)
 
 ### 2. Monitorar Aprovação
@@ -245,12 +245,12 @@ O **Radar de Preços** foi completamente auditado e otimizado para aprovação d
 
 ## 🎓 Conclusão
 
-O **Radar de Preços** está **100% pronto** para submissão ao Google AdSense. O site atende a todos os critérios de qualidade, conformidade legal e experiência do usuário.
+O **Compara Preço** está **100% pronto** para submissão ao Google AdSense. O site atende a todos os critérios de qualidade, conformidade legal e experiência do usuário.
 
 **Status:** ✅ **APROVADO PARA SUBMISSÃO**
 
 ---
 
-**Preparado por:** Equipe Radar de Preços  
+**Preparado por:** Equipe Compara Preço  
 **Data:** 31 de maio de 2026  
 **Versão:** 1.0 Final

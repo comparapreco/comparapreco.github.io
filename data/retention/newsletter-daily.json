@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-05-31T08:57:04.231323+00:00",
-  "subject": "Top 10 ofertas, maiores quedas e oportunidades do Radar",
+  "subject": "Top 10 ofertas, maiores quedas e oportunidades do Compara Preço",
   "top10Offers": [
     {
       "id": "MLB3755400429",
@@ -235,7 +235,7 @@
       "url": "./guias/"
     },
     {
-      "title": "Radar personalizado com IA",
+      "title": "Compara Preço personalizado com IA",
       "url": "./recomendados/"
     }
   ],
@@ -249,7 +249,7 @@
       "url": "./alertas/"
     },
     {
-      "title": "Como usar a Minha Lista do Radar",
+      "title": "Como usar a Minha Lista do Compara Preço",
       "url": "./minha-lista/"
     }
   ]
