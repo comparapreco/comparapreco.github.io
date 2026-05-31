@@ -3,7 +3,7 @@ import json
 from typing import List, Dict, Any
 from logger import logger
 
-BASE_URL = "https://comparadordepreco.github.io/"
+BASE_URL = "https://comparapreco.github.io/"
 
 def build_category_page(category_slug: str, products: List[Dict[str, Any]], template_path: str, output_dir: str) -> None:
     logger.info(f"Gerando página para a categoria: {category_slug}")

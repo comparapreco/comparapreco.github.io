@@ -4,7 +4,7 @@ from datetime import datetime
 import unicodedata
 from logger import logger
 
-BASE_URL = "https://comparadordepreco.github.io/"
+BASE_URL = "https://comparapreco.github.io/"
 
 def slugify(text: str) -> str:
     """Converte texto em slug amigável para URL."""

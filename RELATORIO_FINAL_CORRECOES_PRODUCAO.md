@@ -2,7 +2,7 @@
 
 ## 🚀 Status: Concluído e Validado em Produção
 
-A Fase 12 foi executada com foco total na **resolução de impedimentos técnicos** identificados na auditoria do site publicado. Todas as ações foram validadas diretamente no domínio [https://comparadordepreco.github.io/](https://comparadordepreco.github.io/).
+A Fase 12 foi executada com foco total na **resolução de impedimentos técnicos** identificados na auditoria do site publicado. Todas as ações foram validadas diretamente no domínio [https://comparapreco.github.io/](https://comparapreco.github.io/).
 
 ---
 
@@ -43,7 +43,7 @@ A Fase 12 foi executada com foco total na **resolução de impedimentos técnico
 * **Ação:** Ajuste global de contraste no CSS (`style.css`) para garantir legibilidade.
 
 ### 5. Infraestrutura de Administração
-* **Ação:** Criado o **Painel Executivo** em `https://comparadordepreco.github.io/admin/executivo/`. Este painel permite monitorar o status de saúde do site sem necessidade de ferramentas externas pesadas.
+* **Ação:** Criado o **Painel Executivo** em `https://comparapreco.github.io/admin/executivo/`. Este painel permite monitorar o status de saúde do site sem necessidade de ferramentas externas pesadas.
 
 ---
 

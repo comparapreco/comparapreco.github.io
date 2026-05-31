@@ -2,7 +2,7 @@
 
 ## 🎯 Resumo Executivo
 
-Este relatório apresenta os resultados da **Auditoria de Produção** realizada no site publicado [Compara Preço](https://comparadordepreco.github.io/) (hospedado no GitHub Pages). O objetivo principal foi analisar o domínio ativo e a estrutura do repositório para identificar falhas técnicas que impedem o **crescimento orgânico (SEO)**, a **indexação eficiente no Google**, a **aprovação no Google AdSense** e a **conversão de usuários**.
+Este relatório apresenta os resultados da **Auditoria de Produção** realizada no site publicado [Compara Preço](https://comparapreco.github.io/) (hospedado no GitHub Pages). O objetivo principal foi analisar o domínio ativo e a estrutura do repositório para identificar falhas técnicas que impedem o **crescimento orgânico (SEO)**, a **indexação eficiente no Google**, a **aprovação no Google AdSense** e a **conversão de usuários**.
 
 Diferente de relatórios de desenvolvimento que analisam apenas arquivos locais, esta auditoria foi executada diretamente contra o ambiente de produção. Foram verificadas 67 URLs listadas no sitemap principal, além de uma varredura completa na estrutura de arquivos físicos do repositório contendo 279 páginas HTML.
 
@@ -33,7 +33,7 @@ Abaixo está o resumo dos principais indicadores obtidos durante a auditoria té
 Estes problemas impedem diretamente a indexação correta no Google, bloqueiam a aprovação no Google AdSense ou quebram a experiência de navegação do usuário.
 
 ### 1. Localização Incorreta do Arquivo `ads.txt` (Bloqueio do AdSense)
-* **O problema:** O arquivo `ads.txt` foi publicado em `https://comparadordepreco.github.io/ads.txt`. No entanto, a especificação oficial do Google AdSense exige que o arquivo seja acessível **estritamente na raiz do domínio de segundo nível**: `https://comparadordepreco.github.io/ads.txt`.
+* **O problema:** O arquivo `ads.txt` foi publicado em `https://comparapreco.github.io/ads.txt`. No entanto, a especificação oficial do Google AdSense exige que o arquivo seja acessível **estritamente na raiz do domínio de segundo nível**: `https://comparapreco.github.io/ads.txt`.
 * **Impacto:** O Google AdSense não conseguirá validar a propriedade do site. Isso causará o status "Não encontrado" ou "Erro de autorização" no painel do AdSense, bloqueando permanentemente a monetização.
 * **Solução:** Mover ou copiar o arquivo `ads.txt` do repositório `compara` para a raiz do repositório `comparadordepreco.github.io`.
 
@@ -48,7 +48,7 @@ Estes problemas impedem diretamente a indexação correta no Google, bloqueiam a
 * **Solução:** Atualizar o arquivo robots.txt para referenciar os sitemaps adicionais já existentes no repositório (`sitemap-categorias.xml`, `sitemap-guias.xml`, `sitemap-produtos.xml`, `sitemap-noticias.xml`) ou unificá-los em um `sitemap_index.xml`.
 
 ### 3. Links Internos Quebrados (HTTP 404)
-* **O problema:** Foi identificado um link interno quebrado apontando para `https://comparadordepreco.github.io/guias/` que retorna status HTTP 404.
+* **O problema:** Foi identificado um link interno quebrado apontando para `https://comparapreco.github.io/guias/` que retorna status HTTP 404.
 * **Impacto:** Links internos quebrados passam um sinal de "site abandonado ou de baixa qualidade" para o algoritmo do Google, além de frustrar os usuários que clicam na navegação principal.
 * **Solução:** O diretório `/guias/` físico não possui um `index.html`, apenas a subpasta `/melhor-celular-ate-1500/`. É necessário criar uma página de índice em `/guias/index.html` listando os guias de compra ativos ou corrigir o link de navegação para apontar diretamente para o guia específico.
 
@@ -141,11 +141,11 @@ gantt
    Substituir a declaração de sitemap no arquivo `/home/ubuntu/robots.txt` por:
    ```text
    # Sitemaps do Portal
-   Sitemap: https://comparadordepreco.github.io/sitemap.xml
-   Sitemap: https://comparadordepreco.github.io/sitemap-categorias.xml
-   Sitemap: https://comparadordepreco.github.io/sitemap-produtos.xml
-   Sitemap: https://comparadordepreco.github.io/sitemap-guias.xml
-   Sitemap: https://comparadordepreco.github.io/sitemap-noticias.xml
+   Sitemap: https://comparapreco.github.io/sitemap.xml
+   Sitemap: https://comparapreco.github.io/sitemap-categorias.xml
+   Sitemap: https://comparapreco.github.io/sitemap-produtos.xml
+   Sitemap: https://comparapreco.github.io/sitemap-guias.xml
+   Sitemap: https://comparapreco.github.io/sitemap-noticias.xml
    ```
 
 3. **Correção de Links de Categoria (Evitar Páginas Órfãs):**

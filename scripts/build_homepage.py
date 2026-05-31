@@ -4,7 +4,7 @@ import unicodedata
 import random
 from logger import logger
 
-BASE_URL = "https://comparadordepreco.github.io/"
+BASE_URL = "https://comparapreco.github.io/"
 
 def slugify(text: str) -> str:
     text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')

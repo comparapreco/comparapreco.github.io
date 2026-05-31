@@ -5,7 +5,7 @@ from logger import logger
 
 def generate_sitemap():
     logger.info("Gerando sitemap.xml defensivo...")
-    base_url = "https://comparadordepreco.github.io/compara"
+    base_url = "https://comparapreco.github.io/compara"
     urls = [
         {"loc": f"{base_url}/", "priority": "1.0", "changefreq": "daily"},
         {"loc": f"{base_url}/noticias/", "priority": "0.8", "changefreq": "daily"},

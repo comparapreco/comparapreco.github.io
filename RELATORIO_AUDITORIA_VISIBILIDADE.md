@@ -1,6 +1,6 @@
 # 🕵️ Relatório de Auditoria de Visibilidade — Compara Preço
 
-Após uma análise detalhada do site publicado (https://comparadordepreco.github.io/) e da estrutura de arquivos no repositório, identificamos as seguintes lacunas entre o que foi desenvolvido nas fases anteriores e o que está realmente acessível ao usuário final.
+Após uma análise detalhada do site publicado (https://comparapreco.github.io/) e da estrutura de arquivos no repositório, identificamos as seguintes lacunas entre o que foi desenvolvido nas fases anteriores e o que está realmente acessível ao usuário final.
 
 ## 🔴 Problemas Críticos de Visibilidade
 
