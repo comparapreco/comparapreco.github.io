@@ -4,21 +4,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
-DATA_DIR.mkdir(exist_ok=True)
-
 RADAR_INDEX_FILE = DATA_DIR / "radar-index.json"
 
 categories = [
     "Celulares",
-    "TVs",
-    "Notebooks",
-    "Games",
-    "Eletrodomésticos",
-    "Informática",
-    "Livros",
-    "Moda",
-    "Esportes",
-    "Beleza"
+    "Eletrodomésticos"
 ]
 
 def generate_radar_index_data():
@@ -27,8 +17,8 @@ def generate_radar_index_data():
         "indexes": []
     }
     for category in categories:
-        score = random.randint(70, 99) # Score entre 70 e 99
-        change = round(random.uniform(-2.5, 2.5), 2) # Variação percentual
+        score = random.randint(70, 99)
+        change = round(random.uniform(-2.5, 2.5), 2)
         index_data["indexes"].append({
             "category": category,
             "score": score,
