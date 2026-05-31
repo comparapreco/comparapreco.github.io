@@ -17,15 +17,15 @@ def generate_product_specs(product):
     # Tentar extrair mais detalhes do nome do produto
     name = product.get("name", "").lower()
     if "gb" in name and "ram" in name:
-        specs["Armazenamento/RAM"] = f"{re.search(r'\\d+gb', name).group(0).upper()}/{re.search(r'\\d+gb ram', name).group(0).replace('gb ram', 'GB RAM').upper()}"
+        specs["Armazenamento/RAM"] = re.search(r'\d+gb', name).group(0).upper() + "/" + re.search(r'\d+gb ram', name).group(0).replace('gb ram', 'GB RAM').upper()
     elif "gb" in name:
-        specs["Armazenamento"] = re.search(r'\\d+gb', name).group(0).upper()
+        specs["Armazenamento"] = re.search(r'\d+gb', name).group(0).upper()
     if "polegadas" in name or '\"' in name:
-        specs["Tela"] = re.search(r'\\d+(\\.\\d+)?("| polegadas)', name).group(0).replace('"', '\"')
+        specs["Tela"] = re.search(r'\d+(\.\d+)?("| polegadas)', name).group(0).replace('"', '\"')
     if "bocas" in name:
-        specs["Bocas (Cooktop)"] = re.search(r'\\d+ bocas', name).group(0).split(' ')[0]
+        specs["Bocas (Cooktop)"] = re.search(r'\d+ bocas', name).group(0).split(' ')[0]
     if "w" in name and "v" in name:
-        specs["Potência/Voltagem"] = f"{re.search(r'\\d+w', name).group(0).upper()}/{re.search(r'\\d+v', name).group(0).upper()}"
+        specs["Potência/Voltagem"] = re.search(r'\d+w', name).group(0).upper() + "/" + re.search(r'\d+v', name).group(0).upper()
 
     return specs
 
@@ -70,15 +70,15 @@ def generate_product_specs(product):
     # Tentar extrair mais detalhes do nome do produto
     name = product.get("name", "").lower()
     if "gb" in name and "ram" in name:
-        specs["Armazenamento/RAM"] = f"{re.search(r'\\d+gb', name).group(0).upper()}/{re.search(r'\\d+gb ram', name).group(0).replace('gb ram', 'GB RAM').upper()}"
+        specs["Armazenamento/RAM"] = re.search(r'\d+gb', name).group(0).upper() + "/" + re.search(r'\d+gb ram', name).group(0).replace('gb ram', 'GB RAM').upper()
     elif "gb" in name:
-        specs["Armazenamento"] = re.search(r'\\d+gb', name).group(0).upper()
+        specs["Armazenamento"] = re.search(r'\d+gb', name).group(0).upper()
     if "polegadas" in name or '\"' in name:
-        specs["Tela"] = re.search(r'\\d+(\\.\\d+)?("| polegadas)', name).group(0).replace('"', '\"')
+        specs["Tela"] = re.search(r'\d+(\.\d+)?("| polegadas)', name).group(0).replace('"', '\"')
     if "bocas" in name:
-        specs["Bocas (Cooktop)"] = re.search(r'\\d+ bocas', name).group(0).split(' ')[0]
+        specs["Bocas (Cooktop)"] = re.search(r'\d+ bocas', name).group(0).split(' ')[0]
     if "w" in name and "v" in name:
-        specs["Potência/Voltagem"] = f"{re.search(r'\\d+w', name).group(0).upper()}/{re.search(r'\\d+v', name).group(0).upper()}"
+        specs["Potência/Voltagem"] = re.search(r'\d+w', name).group(0).upper() + "/" + re.search(r'\d+v', name).group(0).upper()
 
     return specs
 
