@@ -33,7 +33,11 @@ function getOfferBadges(product, index) {
   
   // Badge de Atualizado (novo)
   if (daysAgo !== null && daysAgo <= 3) {
-    badges.push('<span class="badge badge-new" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; margin: 2px; display: inline-block;">✨ ATUALIZADO</span>');
+    let daysText = 'Hoje';
+    if (daysAgo === 1) daysText = 'Ontem';
+    if (daysAgo === 2) daysText = '2d atrás';
+    if (daysAgo === 3) daysText = '3d atrás';
+    badges.push(`<span class="badge badge-new" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; margin: 2px; display: inline-block;">✨ ATUALIZADO ${daysText}</span>`);
   }
   
   // Menor Preço da História
