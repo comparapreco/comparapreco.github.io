@@ -1,16 +1,8 @@
+# Robots.txt - Configuração automática do SEOPróprio
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /api/
-Disallow: /temp/
-Disallow: /*.json$
-# Crawl delay
-Crawl-delay: 1
 
-# Sitemaps do Portal Compara Preço
 Sitemap: https://comparapreco.github.io/sitemap.xml
-Sitemap: https://comparapreco.github.io/sitemap-paginas.xml
-Sitemap: https://comparapreco.github.io/sitemap-noticias.xml
-Sitemap: https://comparapreco.github.io/sitemap-produtos.xml
-Sitemap: https://comparapreco.github.io/sitemap-categorias.xml
-Sitemap: https://comparapreco.github.io/sitemap-guias.xml
+
+# Crawl-delay para respeitar recursos do servidor
+Crawl-delay: 1
