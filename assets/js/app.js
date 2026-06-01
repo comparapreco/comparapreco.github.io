@@ -244,6 +244,35 @@ function setupTheme() {
   });
 }
 
+
+function renderFeaturedBanner(products) {
+  const bannerContainer = document.getElementById('featuredBanner');
+  if (!bannerContainer || products.length === 0) return;
+
+  // Pegar o produto com maior desconto para ser o destaque
+  const featured = [...products].sort((a, b) => (b.custom_discount_pct || 0) - (a.custom_discount_pct || 0))[0];
+  const affiliate = featured.custom_affiliate_url || featured.permalink || '#';
+
+  bannerContainer.innerHTML = `
+    <div class="modern-banner" onclick="window.open('${escapeHtml(affiliate)}', '_blank', 'noopener noreferrer')" style="cursor: pointer;">
+      <div class="banner-content">
+        <span class="banner-badge">🔥 Oferta Imbatível</span>
+        <h2 class="banner-title">${escapeHtml(featured.name)}</h2>
+        <div class="banner-price-container">
+          <span class="banner-old-price">De R$ ${formatPrice(featured.original_price || featured.originalPrice || featured.price)}</span>
+          <span class="banner-new-price">Por R$ ${formatPrice(featured.price)}</span>
+        </div>
+        <a href="${escapeHtml(affiliate)}" target="_blank" rel="noopener noreferrer" class="btn btn-white" style="background: #667eea; color: white; border: none; padding: 15px 30px; font-size: 18px;" onclick="event.stopPropagation()">
+          Aproveitar Agora no ML
+        </a>
+      </div>
+      <div class="banner-image-container">
+        <img src="${escapeHtml(featured.image || featured.thumbnail)}" alt="${escapeHtml(featured.name)}">
+      </div>
+    </div>
+  `;
+}
+
 // ========== INICIALIZAÇÃO ==========
 async function init() {
   try {
@@ -261,6 +290,7 @@ async function init() {
     
     renderStats(allProducts);
     renderProducts(allProducts);
+    renderFeaturedBanner(allProducts);
     await renderBlog();
     setupSearch();
     setupTheme();

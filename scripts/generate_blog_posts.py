@@ -1,4 +1,10 @@
 import os
+try:
+    from openai import OpenAI
+    AI_ENABLED = True
+except:
+    AI_ENABLED = False
+import os
 import json
 import re
 from datetime import datetime
@@ -36,6 +42,24 @@ def generate_pros_cons(product: Dict[str, Any]) -> Dict[str, List[str]]:
         pros.extend(["Qualidade de imagem cinematográfica.", "Sistema Smart fluido e atualizado."])
     return {"pros": pros, "cons": cons}
 
+
+def generate_ai_content(product: Dict[str, Any]) -> str:
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not AI_ENABLED or not api_key:
+        return None
+    
+    client = OpenAI(api_key=api_key)
+    prompt = f"Escreva uma análise curta e persuasiva para o blog Compara Preço sobre o produto: {product.get('name')}. O desconto atual é de {product.get('custom_discount_pct')}% e o preço é R$ {product.get('price')}. Foque no custo-benefício. Responda apenas com o texto do artigo em parágrafos, sem títulos."
+    
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4.1-mini",
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return response.choices[0].message.content
+    except:
+        return None
+
 def generate_long_content(product: Dict[str, Any]) -> str:
     name = product.get("name", "Produto")
     discount = product.get("custom_discount_pct", 0)
@@ -47,8 +71,10 @@ def generate_long_content(product: Dict[str, Any]) -> str:
     pros_html = "".join([f"<li>✅ {p}</li>" for p in pros_cons["pros"]])
     cons_html = "".join([f"<li>❌ {c}</li>" for c in pros_cons["cons"]])
 
+    ai_text = generate_ai_content(product)
+    intro_text = ai_text if ai_text else f"O {name} acaba de entrar no radar..."
     content = f"""
-    <p>O <strong>{name}</strong> acaba de entrar no radar de ofertas do Compara Preço com um desconto impressionante de <strong>{discount}%</strong>. Nesta análise técnica, avaliamos se este é o momento ideal para você realizar o investimento ou se deve esperar por uma queda maior.</p>
+    <p>O <strong>{name}</strong> acaba de entrar no radar de ofertas do Compara Preço com um desconto impressionante de <strong>{discount}%</strong>. {intro_text}</p>
     
     <h2>1. Por que este produto é destaque hoje?</h2>
     <p>Na categoria de {category}, o {name} sempre foi uma referência de qualidade. Com a redução de preço detectada pelo nosso robô de monitoramento, o produto atingiu um patamar de custo-benefício que raramente vemos fora de épocas como a Black Friday.</p>
@@ -97,7 +123,9 @@ def generate_blog_content(count=1):
         post_slug = f"analise-{p_id}-{now.strftime('%Y%m%d')}"
         article_body = generate_long_content(product)
         
-        content = f"""
+        ai_text = generate_ai_content(product)
+    intro_text = ai_text if ai_text else f"O {name} acaba de entrar no radar..."
+    content = f"""
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

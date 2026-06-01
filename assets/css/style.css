@@ -865,3 +865,123 @@ ins.adsbygoogle {
 .product-card-btn:hover {
   background: #5a6fd6;
 }
+
+/* Novo Banner de Destaque Moderno */
+.featured-banner-container {
+  margin: 20px 0 40px 0;
+  width: 100%;
+}
+
+.modern-banner {
+  display: flex;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  min-height: 350px;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .modern-banner {
+  background: linear-gradient(135deg, #1e1e1e 0%, #252a3a 100%);
+  border-color: rgba(102, 126, 234, 0.1);
+}
+
+.banner-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-badge {
+  display: inline-block;
+  background: #ff6b6b;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  width: fit-content;
+}
+
+.banner-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.banner-price-container {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.banner-old-price {
+  font-size: 16px;
+  color: var(--text-light);
+  text-decoration: line-through;
+}
+
+.banner-new-price {
+  font-size: 36px;
+  font-weight: 900;
+  color: #ff6b6b;
+}
+
+.banner-image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="dark"] .banner-image-container {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.banner-image-container img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+  transition: transform 0.5s ease;
+}
+
+.modern-banner:hover .banner-image-container img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .modern-banner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .banner-content {
+    padding: 30px 20px;
+    align-items: center;
+  }
+  .banner-title {
+    font-size: 22px;
+  }
+  .banner-new-price {
+    font-size: 28px;
+  }
+  .banner-image-container {
+    padding: 20px;
+    width: 100%;
+  }
+  .banner-image-container img {
+    max-height: 200px;
+  }
+}

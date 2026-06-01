@@ -1,84 +1,85 @@
 import json
+import os
 from datetime import datetime
 from pathlib import Path
+from logger import logger
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
-DATA_DIR.mkdir(exist_ok=True)
-
+DATABASE_FILE = DATA_DIR / "database" / "all_products.json"
 EDITORIAL_FILE = DATA_DIR / "editorial-automation.json"
 
 def generate_editorial_content():
-    """Gera conteúdo editorial automaticamente quando detecta quedas > 30%"""
-    data = {
+    """Gera conteúdo editorial real baseado nos produtos com maiores descontos."""
+    if not DATABASE_FILE.exists():
+        logger.error(f"Banco de dados não encontrado em {DATABASE_FILE}")
+        return None
+
+    try:
+        with open(DATABASE_FILE, "r", encoding="utf-8") as f:
+            products = json.load(f)
+    except Exception as e:
+        logger.error(f"Erro ao ler banco de dados: {e}")
+        return None
+
+    # Filtrar apenas produtos ativos e com desconto relevante (> 30%)
+    active_offers = [p for p in products if p.get('status') == 'active' and p.get('custom_discount_pct', 0) >= 30]
+    
+    # Ordenar pelos maiores descontos
+    top_offers = sorted(active_offers, key=lambda x: x.get('custom_discount_pct', 0), reverse=True)[:5]
+
+    articles = []
+    triggers = []
+
+    for p in top_offers:
+        p_id = p.get('id')
+        name = p.get('name')
+        discount = p.get('custom_discount_pct')
+        price = p.get('price')
+        old_price = p.get('original_price') or p.get('originalPrice')
+        category = p.get('custom_category_slug', 'Geral').title()
+        
+        slug = f"{name.lower().replace(' ', '-')[:50]}-queda-{discount}"
+        
+        article = {
+            "id": f"article-{p_id}",
+            "title": f"{name}: Queda Histórica de {discount}% OFF!",
+            "slug": slug,
+            "category": category,
+            "price_drop": discount,
+            "current_price": price,
+            "previous_price": old_price,
+            "status": "published",
+            "generated_at": datetime.now().isoformat(),
+            "content": f"O {name} atingiu uma queda de {discount}% em seu preço. Agora disponível por apenas R$ {price:.2f}, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
+            "social_posts": [
+                {
+                    "platform": "twitter",
+                    "content": f"📱 ALERTA: {name} com {discount}% de desconto! De R$ {old_price:.2f} por apenas R$ {price:.2f}. Aproveite! 🔥 #ComparaPreço #Oferta"
+                }
+            ]
+        }
+        articles.append(article)
+        
+        triggers.append({
+            "product_id": p_id,
+            "product_name": name,
+            "price_drop_threshold": 30,
+            "current_drop": discount,
+            "alert_sent": True,
+            "alert_timestamp": datetime.now().isoformat()
+        })
+
+    return {
         "last_generated": datetime.now().isoformat(),
-        "automated_articles": [
-            {
-                "id": "article-001",
-                "title": "Samsung Galaxy A17 em Queda Histórica: 35% de Desconto!",
-                "slug": "samsung-galaxy-a17-queda-35-porcento",
-                "category": "Celulares",
-                "price_drop": 35.2,
-                "current_price": 809.10,
-                "previous_price": 1249.00,
-                "status": "published",
-                "generated_at": datetime.now().isoformat(),
-                "content": "O Samsung Galaxy A17 atingiu uma queda histórica de 35% em seu preço. Agora disponível por apenas R$ 809,10, este é o melhor momento para adquirir este smartphone com excelente custo-benefício.",
-                "social_posts": [
-                    {
-                        "platform": "twitter",
-                        "content": "📱 ALERTA: Samsung Galaxy A17 com 35% de desconto! De R$ 1.249 por apenas R$ 809,10. Uma oportunidade imperdível! 🔥 #Compara PreçoDePreços #Promoção"
-                    },
-                    {
-                        "platform": "instagram",
-                        "content": "Samsung Galaxy A17 em queda histórica! 35% de desconto. Não perca essa oportunidade! Link na bio 🔗 #Promoção #Celular #Desconto"
-                    }
-                ]
-            },
-            {
-                "id": "article-002",
-                "title": "Smart TV 43\" Philco com 28% de Desconto: Aproveite!",
-                "slug": "smart-tv-43-philco-queda-28-porcento",
-                "category": "TVs",
-                "price_drop": 28.5,
-                "current_price": 1451.00,
-                "previous_price": 2029.00,
-                "status": "published",
-                "generated_at": datetime.now().isoformat(),
-                "content": "A Smart TV 43\" Philco caiu 28% de preço! Agora por R$ 1.451,00, é a melhor oportunidade para quem quer uma TV de qualidade com preço acessível.",
-                "social_posts": [
-                    {
-                        "platform": "twitter",
-                        "content": "📺 PROMOÇÃO: Smart TV 43\" Philco com 28% de desconto! De R$ 2.029 por R$ 1.451. Qualidade e economia! 🎉 #Compara PreçoDePreços #TV"
-                    }
-                ]
-            }
-        ],
-        "alert_triggers": [
-            {
-                "product_id": "samsung-galaxy-a17",
-                "product_name": "Samsung Galaxy A17",
-                "price_drop_threshold": 30,
-                "current_drop": 35.2,
-                "alert_sent": True,
-                "alert_timestamp": datetime.now().isoformat()
-            },
-            {
-                "product_id": "smart-tv-43-philco",
-                "product_name": "Smart TV 43\" Philco",
-                "price_drop_threshold": 30,
-                "current_drop": 28.5,
-                "alert_sent": True,
-                "alert_timestamp": datetime.now().isoformat()
-            }
-        ]
+        "automated_articles": articles,
+        "alert_triggers": triggers
     }
-    return data
 
 if __name__ == "__main__":
     data = generate_editorial_content()
-    with open(EDITORIAL_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"Conteúdo editorial automatizado gerado em {EDITORIAL_FILE}")
-    print(f"Total de artigos gerados: {len(data['automated_articles'])}")
-    print(f"Total de alertas disparados: {len(data['alert_triggers'])}")
+    if data:
+        os.makedirs(DATA_DIR, exist_ok=True)
+        with open(EDITORIAL_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        logger.info(f"Sucesso: {len(data['automated_articles'])} artigos reais gerados em {EDITORIAL_FILE}")

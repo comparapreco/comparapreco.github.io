@@ -35,47 +35,18 @@
   });
 </script>
   <meta name="google-adsense-account" content="ca-pub-4896859041377751">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Compara Preço",
-  "url": "https://comparapreco.github.io",
-  "logo": "https://comparapreco.github.io/assets/logo.png",
-  "description": "As melhores ofertas do Mercado Livre com atualização automática",
-  "sameAs": [
-    "https://www.instagram.com/comparapreco",
-    "https://www.facebook.com/comparapreco"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Customer Service",
-    "email": "contato@comparapreco.github.io"
-  }
-}
-</script>
-    <!-- Open Graph Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Compara Preço — As Melhores Ofertas do Mercado Livre">
-    <meta property="og:description" content="Economize com as melhores ofertas curadas do Mercado Livre. Descubra produtos com desconto de até 70%.">
-    <meta property="og:image" content="https://comparapreco.github.io/assets/og-image.png">
-    <meta property="og:url" content="https://comparapreco.github.io">
-    <meta property="og:site_name" content="Compara Preço">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Compara Preço — Melhores Ofertas">
-    <meta name="twitter:description" content="Economize com as melhores ofertas do Mercado Livre">
-    <meta name="twitter:image" content="https://comparapreco.github.io/assets/og-image.png">
+  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
+
+<style>#heroProduct, .hero-placeholder { display: none !important; visibility: hidden !important; height: 0 !important; overflow: hidden !important; }</style>
 </head>
 <body>
 <header class="header">
 <div class="container header-inner">
 <a class="logo" href="./">📊 <strong>Compara Preço</strong></a>
 <div class="search-bar">
-<label for="searchInput" class="sr-only">Buscar ofertas</label><input id="searchInput" placeholder="Buscar ofertas..." type="text" aria-label="Buscar ofertas no site">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
 </div>
-<button id="themeToggle" aria-label="Alternar tema escuro">🌙</button>
+<button id="themeToggle">🌙</button>
 </div>
 </header>
 <!-- Novo Hero Banner Profissional -->
@@ -120,10 +91,9 @@
 </div>
 </nav>
 <main class="container">
+    <section id="featuredBanner" class="featured-banner-container"></section>
 <!-- Carrossel de Destaques -->
-<section class="hero" id="heroProduct">
-      <div id="heroProductPlaceholder" class="hero-placeholder" style="min-height: 450px; display: flex; align-items: center; justify-content: center; background: var(--card); border-radius: 16px; border: 1px solid var(--border);"><p>Carregando as melhores ofertas do dia...</p></div>
-    </section>
+
 <!-- Compara Preço Premium -->
 <section class="compara-premium" id="comparaPremium">
 <!-- Preenchido via JS -->
@@ -133,7 +103,7 @@
 <h2>🔥 Melhores Ofertas</h2>
 </div>
 <div class="products-grid" id="featuredGrid">
-        
+        <div id="featuredGrid" class="products-grid"></div>
       </div>
 </section>
 <!-- Menu de Exploração -->
