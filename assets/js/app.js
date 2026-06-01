@@ -40,6 +40,7 @@ function getOfferBadges(product, index) {
 }
 
 // ========== RENDERIZAÇÃO DE PRODUTOS ==========
+
 function renderProducts(products) {
   const grid = document.getElementById('featuredGrid');
   if (!grid) return;
@@ -48,6 +49,43 @@ function renderProducts(products) {
     grid.innerHTML = '<p style="text-align: center; padding: 40px;">Nenhuma oferta encontrada.</p>';
     return;
   }
+
+  const sorted = [...products].sort((a, b) => (b.custom_discount_pct || 0) - (a.custom_discount_pct || 0));
+  const limited = sorted.slice(0, 24);
+
+  grid.innerHTML = limited.map((p, idx) => {
+    const badges = getOfferBadges(p, idx);
+    const affiliate = p.custom_affiliate_url || p.permalink || '#';
+    
+    return `
+      <div class="product-card-refactored" onclick="window.open('${escapeHtml(affiliate)}', '_blank', 'noopener noreferrer')">
+        <div class="product-card-img-container">
+          <img src="${escapeHtml(p.image || p.thumbnail)}" alt="${escapeHtml(p.name)}" loading="lazy">
+          <div class="product-card-discount">
+            ↓ ${p.custom_discount_pct || 0}% OFF
+          </div>
+          <div class="product-card-badges">
+            ${badges}
+          </div>
+        </div>
+        <div class="product-card-content">
+          <h3 class="product-card-title">
+            ${escapeHtml(p.name)}
+          </h3>
+          <div class="product-card-old-price">
+            R$ ${formatPrice(p.original_price || p.originalPrice || p.price)}
+          </div>
+          <div class="product-card-price">
+            R$ ${formatPrice(p.price)}
+          </div>
+          <a href="${escapeHtml(affiliate)}" target="_blank" rel="noopener noreferrer" class="product-card-btn" onclick="event.stopPropagation()">
+            Ver Oferta no ML
+          </a>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
 
   const sorted = [...products].sort((a, b) => (b.custom_discount_pct || 0) - (a.custom_discount_pct || 0));
   const limited = sorted.slice(0, 24);

@@ -35,7 +35,6 @@
   });
 </script>
   <meta name="google-adsense-account" content="ca-pub-4896859041377751">
-  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,9 +73,9 @@
 <div class="container header-inner">
 <a class="logo" href="./">📊 <strong>Compara Preço</strong></a>
 <div class="search-bar">
-<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+<label for="searchInput" class="sr-only">Buscar ofertas</label><input id="searchInput" placeholder="Buscar ofertas..." type="text" aria-label="Buscar ofertas no site">
 </div>
-<button id="themeToggle">🌙</button>
+<button id="themeToggle" aria-label="Alternar tema escuro">🌙</button>
 </div>
 </header>
 <!-- Novo Hero Banner Profissional -->
@@ -123,7 +122,7 @@
 <main class="container">
 <!-- Carrossel de Destaques -->
 <section class="hero" id="heroProduct">
-      <div id="heroProduct" class="hero-placeholder" style="min-height: 450px; display: flex; align-items: center; justify-content: center; background: var(--card); border-radius: 16px; border: 1px solid var(--border);"><p>Carregando as melhores ofertas do dia...</p></div>
+      <div id="heroProductPlaceholder" class="hero-placeholder" style="min-height: 450px; display: flex; align-items: center; justify-content: center; background: var(--card); border-radius: 16px; border: 1px solid var(--border);"><p>Carregando as melhores ofertas do dia...</p></div>
     </section>
 <!-- Compara Preço Premium -->
 <section class="compara-premium" id="comparaPremium">
@@ -134,7 +133,7 @@
 <h2>🔥 Melhores Ofertas</h2>
 </div>
 <div class="products-grid" id="featuredGrid">
-        <div id="featuredGrid" class="products-grid"></div>
+        
       </div>
 </section>
 <!-- Menu de Exploração -->
