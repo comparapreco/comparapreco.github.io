@@ -4,279 +4,97 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Melhores Produtos de 2026 — Compara Preço</title>
-    <meta content="Os melhores celulares, notebooks, TVs e produtos de 2026. Análise completa, comparações e recomendações." name="description"/>
+    <meta content="Análise completa dos melhores celulares, notebooks, TVs e produtos do ano. Recomendações baseadas em performance, preço e satisfação." name="description"/>
     <link href="https://comparapreco.github.io/melhores-2026/" rel="canonical"/>
     <link href="/assets/css/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
-    <meta content="ca-pub-4896859041377751" name="google-adsense-account"/>
+    <style>
+        .rank-hero {
+            background: #0f172a;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .rank-hero::after {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, rgba(37, 99, 235, 0.2) 0%, transparent 70%);
+        }
+        .rank-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; position: relative; z-index: 1; }
+        .rank-hero p { font-size: 1.2rem; opacity: 0.8; max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+        .category-section { margin: 60px 0; }
+        .category-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 30px; padding-bottom: 10px; border-bottom: 2px solid var(--border);
+        }
+        .category-header h2 { font-size: 1.8rem; display: flex; align-items: center; gap: 10px; }
+        .rank-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+        .rank-card {
+            background: white; border-radius: 20px; padding: 25px; border: 1px solid var(--border);
+            position: relative; transition: all 0.3s;
+        }
+        .rank-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-xl); border-color: var(--primary); }
+        .rank-badge {
+            position: absolute; top: -15px; left: 20px; background: var(--accent);
+            color: white; padding: 5px 15px; border-radius: 10px; font-weight: 800; font-size: 14px;
+            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+        }
+        .rank-card.gold { border-top: 5px solid #fbbf24; }
+        .rank-card.gold .rank-badge { background: #fbbf24; }
+        .rank-img { width: 100%; height: 200px; object-fit: contain; margin-bottom: 20px; }
+        .rank-info h3 { font-size: 1.2rem; margin-bottom: 10px; height: 50px; overflow: hidden; }
+        .rank-price { font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 20px; }
+        .btn-affiliate {
+            display: block; background: var(--cta-gradient); color: white;
+            text-align: center; padding: 15px; border-radius: 12px; text-decoration: none;
+            font-weight: 700; transition: 0.3s;
+        }
+        .btn-affiliate:hover { opacity: 0.9; transform: scale(1.02); }
+        .trust-box { background: #f1f5f9; padding: 30px; border-radius: 20px; margin: 60px 0; text-align: center; }
+    </style>
 </head>
 <body>
-    <!-- Header será injetado aqui -->
     <header class="header"></header>
-
-    <section class="hero">
+    <section class="rank-hero">
         <div class="container">
-            <h1>🏆 Melhores Produtos de 2026</h1>
-            <p>Análise completa dos melhores celulares, notebooks, TVs e produtos do ano. Recomendações baseadas em performance, preço e satisfação de usuários.</p>
+            <h1>🏆 Melhores de 2026</h1>
+            <p>Nossa curadoria especializada selecionou os produtos que realmente valem o seu dinheiro este ano.</p>
         </div>
     </section>
-
     <main class="container">
-        <p style="margin-bottom: 30px; font-size: 1.1rem; line-height: 1.8; color: var(--text-muted);">Nossa equipe de especialistas analisa centenas de produtos anualmente para trazer a você os rankings mais precisos e imparciais. Avaliamos performance, custo-benefício, inovação e feedback de usuários para garantir que você faça a melhor escolha.</p>
-
-        <div class="categories-grid">
-            <!-- Celulares -->
-            <div class="category-card">
-                <div class="category-header">
-                    <h3>📱 Melhores Celulares 2026</h3>
-                </div>
-                <div class="category-content">
-                    <div class="product-list">
-                        <div class="product-item">
-                            <div class="product-rank">🥇 #1</div>
-                            <div class="product-name">Samsung Galaxy S24 Ultra</div>
-                            <div class="product-meta">Melhor em tudo • R$ 5.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/samsung-galaxy-s24-ultra/p/MLB123456789" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">🥈 #2</div>
-                            <div class="product-name">iPhone 15 Pro Max</div>
-                            <div class="product-meta">Melhor câmera • R$ 7.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/iphone-15-pro-max/p/MLB987654321" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">🥉 #3</div>
-                            <div class="product-name">Samsung Galaxy A36</div>
-                            <div class="product-meta">Melhor custo-benefício • R$ 1.299</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/samsung-galaxy-a36/p/MLB112233445" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">4️⃣ #4</div>
-                            <div class="product-name">Xiaomi 14 Ultra</div>
-                            <div class="product-meta">Melhor bateria • R$ 3.499</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/xiaomi-14-ultra/p/MLB556677889" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">5️⃣ #5</div>
-                            <div class="product-name">Motorola Moto G35</div>
-                            <div class="product-meta">Melhor orçamento • R$ 1.099</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/motorola-moto-g35/p/MLB998877665" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                    </div>
-                    <a class="view-all-btn" href="/comparar/">Ver Comparações</a>
-                </div>
+        <div class="trust-box">
+            <p><strong>Transparência:</strong> Todos os links abaixo incluem nosso código de afiliado oficial.</p>
+        </div>
+        <div class="category-section">
+            <div class="category-header">
+                <h2>📱 Smartphones</h2>
+                <a href="/categorias/celulares" style="color: var(--primary); font-weight: 600; text-decoration: none;">Ver Ranking Completo →</a>
             </div>
-            <!-- Notebooks -->
-            <div class="category-card">
-                <div class="category-header">
-                    <h3>💻 Melhores Notebooks 2026</h3>
-                </div>
-                <div class="category-content">
-                    <div class="product-list">
-                        <div class="product-item">
-                            <div class="product-rank">🥇 #1</div>
-                            <div class="product-name">MacBook Pro 16" M3 Max</div>
-                            <div class="product-meta">Melhor performance • R$ 12.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/macbook-pro-m3-max/p/MLB123456789" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">🥈 #2</div>
-                            <div class="product-name">Dell XPS 15</div>
-                            <div class="product-meta">Melhor Windows • R$ 8.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/dell-xps-15/p/MLB987654321" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">🥉 #3</div>
-                            <div class="product-name">Lenovo IdeaPad Pro</div>
-                            <div class="product-meta">Melhor custo-benefício • R$ 4.499</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/lenovo-ideapad-pro/p/MLB112233445" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">4️⃣ #4</div>
-                            <div class="product-name">ASUS VivoBook 15</div>
-                            <div class="product-meta">Melhor para estudar • R$ 3.299</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/asus-vivobook-15/p/MLB556677889" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">5️⃣ #5</div>
-                            <div class="product-name">Samsung Galaxy Book 3</div>
-                            <div class="product-meta">Melhor design • R$ 5.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/samsung-galaxy-book-3/p/MLB998877665" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
+            <div class="rank-grid">
+                <div class="rank-card gold">
+                    <span class="rank-badge">#1 MELHOR ESCOLHA</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_705075-MLA99943632917_112025-AB.webp" class="rank-img" alt="Galaxy A36">
+                    <div class="rank-info">
+                        <h3>Samsung Galaxy A36 5G</h3>
+                        <div class="rank-price">R$ 1.349,00</div>
+                        <a href="https://www.mercadolivre.com.br/smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-cmera-tripla-de-ate-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranca-snapdragon-preto/p/MLB47115842?matt_tool=vendas0nline" class="btn-affiliate" target="_blank">Ver Melhor Preço no ML</a>
                     </div>
-                    <a class="view-all-btn" href="/comparar/">Ver Comparações</a>
                 </div>
-            </div>
-            <!-- TVs -->
-            <div class="category-card">
-                <div class="category-header">
-                    <h3>📺 Melhores TVs 2026</h3>
-                </div>
-                <div class="category-content">
-                    <div class="product-list">
-                        <div class="product-item">
-                            <div class="product-rank">🥇 #1</div>
-                            <div class="product-name">LG OLED 55" C3</div>
-                            <div class="product-meta">Melhor imagem • R$ 4.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/lg-oled-c3/p/MLB123456789" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">🥈 #2</div>
-                            <div class="product-name">Samsung QN55" S95C</div>
-                            <div class="product-meta">Melhor brilho • R$ 5.499</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/samsung-qn55-s95c/p/MLB987654321" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">🥉 #3</div>
-                            <div class="product-name">TCL 55" Mini LED</div>
-                            <div class="product-meta">Melhor custo-benefício • R$ 2.299</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/tcl-mini-led/p/MLB112233445" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">4️⃣ #4</div>
-                            <div class="product-name">Sony 55" X95L</div>
-                            <div class="product-meta">Melhor processamento • R$ 4.299</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/sony-x95l/p/MLB556677889" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">5️⃣ #5</div>
-                            <div class="product-name">Philco 50" Smart TV</div>
-                            <div class="product-meta">Melhor orçamento • R$ 1.299</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/philco-smart-tv/p/MLB998877665" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
+                <div class="rank-card">
+                    <span class="rank-badge">#2 PREMIUM</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_895724-MLA91526198522_092025-AB.webp" class="rank-img" alt="Galaxy S24 Ultra">
+                    <div class="rank-info">
+                        <h3>Samsung Galaxy S24 Ultra</h3>
+                        <div class="rank-price">R$ 5.999,00</div>
+                        <a href="https://www.mercadolivre.com.br/samsung-galaxy-s24-ultra/p/MLB123456789?matt_tool=vendas0nline" class="btn-affiliate" target="_blank">Ver Melhor Preço no ML</a>
                     </div>
-                    <a class="view-all-btn" href="/comparar/">Ver Comparações</a>
-                </div>
-            </div>
-            <!-- Games -->
-            <div class="category-card">
-                <div class="category-header">
-                    <h3>🎮 Melhores Consoles 2026</h3>
-                </div>
-                <div class="category-content">
-                    <div class="product-list">
-                        <div class="product-item">
-                            <div class="product-rank">🥇 #1</div>
-                            <div class="product-name">PlayStation 5 Pro</div>
-                            <div class="product-meta">Melhor performance • R$ 4.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/playstation-5-pro/p/MLB123456789" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">🥈 #2</div>
-                            <div class="product-name">Xbox Series X</div>
-                            <div class="product-meta">Melhor Game Pass • R$ 3.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/xbox-series-x/p/MLB987654321" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">🥉 #3</div>
-                            <div class="product-name">Nintendo Switch 2</div>
-                            <div class="product-meta">Melhor portabilidade • R$ 2.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/nintendo-switch-2/p/MLB112233445" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">4️⃣ #4</div>
-                            <div class="product-name">PlayStation 5 Standard</div>
-                            <div class="product-meta">Melhor custo-benefício • R$ 3.499</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/playstation-5-standard/p/MLB556677889" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">5️⃣ #5</div>
-                            <div class="product-name">Steam Deck OLED</div>
-                            <div class="product-meta">Melhor PC portátil • R$ 3.299</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/steam-deck-oled/p/MLB998877665" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                    </div>
-                    <a class="view-all-btn" href="/comparar/">Ver Comparações</a>
-                </div>
-            </div>
-            <!-- Fones -->
-            <div class="category-card">
-                <div class="category-header">
-                    <h3>🎧 Melhores Fones 2026</h3>
-                </div>
-                <div class="category-content">
-                    <div class="product-list">
-                        <div class="product-item">
-                            <div class="product-rank">🥇 #1</div>
-                            <div class="product-name">Sony WH-1000XM5</div>
-                            <div class="product-meta">Melhor cancelamento • R$ 1.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/sony-wh-1000xm5/p/MLB123456789" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">🥈 #2</div>
-                            <div class="product-name">Apple AirPods Pro 2</div>
-                            <div class="product-meta">Melhor para iPhone • R$ 1.899</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/apple-airpods-pro-2/p/MLB987654321" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">🥉 #3</div>
-                            <div class="product-name">Bose QuietComfort 45</div>
-                            <div class="product-meta">Melhor conforto • R$ 1.699</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/bose-quietcomfort-45/p/MLB112233445" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">4️⃣ #4</div>
-                            <div class="product-name">JBL Tune 770NC</div>
-                            <div class="product-meta">Melhor custo-benefício • R$ 799</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/jbl-tune-770nc/p/MLB556677889" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">5️⃣ #5</div>
-                            <div class="product-name">Anker Soundcore Space Q45</div>
-                            <div class="product-meta">Melhor orçamento • R$ 399</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/anker-soundcore-space-q45/p/MLB998877665" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                    </div>
-                    <a class="view-all-btn" href="/comparar/">Ver Comparações</a>
-                </div>
-            </div>
-            <!-- Tablets -->
-            <div class="category-card">
-                <div class="category-header">
-                    <h3>📱 Melhores Tablets 2026</h3>
-                </div>
-                <div class="category-content">
-                    <div class="product-list">
-                        <div class="product-item">
-                            <div class="product-rank">🥇 #1</div>
-                            <div class="product-name">iPad Pro 12.9" M2</div>
-                            <div class="product-meta">Melhor em tudo • R$ 7.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/ipad-pro-m2/p/MLB123456789" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">🥈 #2</div>
-                            <div class="product-name">Samsung Galaxy Tab S9 Ultra</div>
-                            <div class="product-meta">Melhor Android • R$ 5.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/samsung-galaxy-tab-s9-ultra/p/MLB987654321" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">🥉 #3</div>
-                            <div class="product-name">iPad Air 11"</div>
-                            <div class="product-meta">Melhor custo-benefício • R$ 4.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/ipad-air-11/p/MLB112233445" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">4️⃣ #4</div>
-                            <div class="product-name">Lenovo Tab P11 Pro</div>
-                            <div class="product-meta">Melhor tela • R$ 2.999</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/lenovo-tab-p11-pro/p/MLB556677889" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-rank">5️⃣ #5</div>
-                            <div class="product-name">Samsung Galaxy Tab A8</div>
-                            <div class="product-meta">Melhor orçamento • R$ 1.299</div>
-                            <a class="btn-buy" href="https://www.mercadolivre.com.br/samsung-galaxy-tab-a8/p/MLB998877665" target="_blank" rel="noopener noreferrer">Ver Oferta</a>
-                        </div>
-                    </div>
-                    <a class="view-all-btn" href="/comparar/">Ver Comparações</a>
                 </div>
             </div>
         </div>
     </main>
-
-    <!-- Footer será injetado aqui -->
     <footer class="footer"></footer>
-
     <script src="/assets/js/app.js"></script>
 </body>
 </html>

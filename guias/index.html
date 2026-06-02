@@ -4,76 +4,57 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Guias de Compra — Compara Preço</title>
-    <meta content="Confira nossos guias completos para economizar e escolher o melhor produto." name="description"/>
+    <meta content="Aprenda a escolher os melhores produtos com o menor preço." name="description"/>
     <link href="https://comparapreco.github.io/guias/" rel="canonical"/>
     <link href="/assets/css/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
-    <meta content="ca-pub-4896859041377751" name="google-adsense-account"/>
+    <style>
+        .guides-hero { background: linear-gradient(135deg, #059669 0%, #065f46 100%); color: white; padding: 60px 0; text-align: center; }
+        .guides-hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; margin: 40px 0; }
+        .guide-card { background: white; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); transition: 0.3s; display: flex; flex-direction: column; }
+        .guide-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .guide-thumb { width: 100%; height: 200px; background: #f1f5f9; display: flex; align-items: center; justify-content: center; font-size: 50px; }
+        .guide-body { padding: 25px; flex: 1; display: flex; flex-direction: column; }
+        .guide-body h3 { font-size: 1.4rem; margin-bottom: 12px; color: var(--text); }
+        .guide-body p { color: var(--text-muted); margin-bottom: 20px; line-height: 1.6; }
+        .btn-guide { margin-top: auto; display: inline-block; padding: 12px 25px; background: var(--primary); color: white; text-decoration: none; border-radius: 10px; font-weight: 700; text-align: center; }
+        .newsletter-box { background: var(--secondary); color: white; padding: 40px; border-radius: 20px; text-align: center; margin: 60px 0; }
+    </style>
 </head>
 <body>
-    <!-- Header será injetado aqui -->
     <header class="header"></header>
-
-    <section class="hero">
+    <section class="guides-hero">
         <div class="container">
-            <h1>📚 Guias de Compra</h1>
-            <p>Aprenda a escolher os melhores produtos com o menor preço e a melhor qualidade. Nossos guias completos te ajudam a tomar decisões inteligentes.</p>
+            <h1>📚 Guias de Compra Definitivos</h1>
+            <p>Economize tempo e dinheiro com nossas análises profundas.</p>
         </div>
     </section>
-
     <main class="container">
-        <div class="categories-grid">
-            <div class="category-card">
-                <div class="category-header">
-                    <h3>📱 Guia de Celulares</h3>
-                </div>
-                <div class="category-content">
-                    <p>Descubra como escolher o celular ideal para suas necessidades, comparando câmeras, processadores e baterias.</p>
-                    <a class="view-all-btn" href="https://www.mercadolivre.com.br/celulares/guia-completo" target="_blank" rel="noopener noreferrer">Ler Guia Completo</a>
-                </div>
-            </div>
-            <div class="category-card">
-                <div class="category-header">
-                    <h3>💻 Guia de Notebooks</h3>
-                </div>
-                <div class="category-content">
-                    <p>Encontre o notebook perfeito para trabalho, estudo ou jogos. Dicas sobre memória RAM, armazenamento e placas de vídeo.</p>
-                    <a class="view-all-btn" href="https://www.mercadolivre.com.br/notebooks/guia-completo" target="_blank" rel="noopener noreferrer">Ler Guia Completo</a>
+        <div class="guide-grid">
+            <div class="guide-card">
+                <div class="guide-thumb">📱</div>
+                <div class="guide-body">
+                    <h3>Como escolher o melhor celular em 2026</h3>
+                    <p>O que realmente importa na hora de trocar de aparelho este ano?</p>
+                    <a href="/guias/melhor-celular-ate-1500/" class="btn-guide">Ler Guia Completo</a>
                 </div>
             </div>
-            <div class="category-card">
-                <div class="category-header">
-                    <h3>📺 Guia de Smart TVs</h3>
-                </div>
-                <div class="category-content">
-                    <p>Saiba o que considerar ao comprar uma Smart TV: resolução, tamanho, tecnologias de imagem e recursos inteligentes.</p>
-                    <a class="view-all-btn" href="https://www.mercadolivre.com.br/smart-tvs/guia-completo" target="_blank" rel="noopener noreferrer">Ler Guia Completo</a>
-                </div>
-            </div>
-            <div class="category-card">
-                <div class="category-header">
-                    <h3>🎧 Guia de Fones de Ouvido</h3>
-                </div>
-                <div class="category-content">
-                    <p>Escolha o fone de ouvido ideal para cada ocasião: sem fio, com cancelamento de ruído, para esportes e muito mais.</p>
-                    <a class="view-all-btn" href="https://www.mercadolivre.com.br/fones-de-ouvido/guia-completo" target="_blank" rel="noopener noreferrer">Ler Guia Completo</a>
-                </div>
-            </div>
-            <div class="category-card">
-                <div class="category-header">
-                    <h3>🎮 Guia de Consoles e Games</h3>
-                </div>
-                <div class="category-content">
-                    <p>Tudo o que você precisa saber para escolher seu próximo console ou os melhores jogos do momento.</p>
-                    <a class="view-all-btn" href="https://www.mercadolivre.com.br/consoles-e-games/guia-completo" target="_blank" rel="noopener noreferrer">Ler Guia Completo</a>
+            <div class="guide-card">
+                <div class="guide-thumb">🎧</div>
+                <div class="guide-body">
+                    <h3>Fones Bluetooth: O Guia de Compra</h3>
+                    <p>Cancelamento de ruído ou fidelidade sonora?</p>
+                    <a href="https://www.mercadolivre.com.br/fones-de-ouvido/guia-completo?matt_tool=vendas0nline" class="btn-guide" target="_blank">Ver no Mercado Livre</a>
                 </div>
             </div>
         </div>
+        <div class="newsletter-box">
+            <h2>Receba as melhores ofertas no seu e-mail</h2>
+            <button class="btn" style="min-width: 200px; margin-top: 15px;">Quero economizar!</button>
+        </div>
     </main>
-
-    <!-- Footer será injetado aqui -->
     <footer class="footer"></footer>
-
     <script src="/assets/js/app.js"></script>
 </body>
 </html>
