@@ -240,21 +240,53 @@ def generate_product_page(product: dict, category: str) -> tuple:
                 </table>
             </section>
             
-            <!-- Análise -->
+            <!-- Análise e Conversão -->
             <section style="margin-bottom: 40px;">
                 <h2 style="font-size: 22px; border-bottom: 2px solid #0f766e; padding-bottom: 10px; margin-bottom: 20px;">
-                    Vale a Pena?
+                    Análise do Especialista Ninja
                 </h2>
-                <p style="line-height: 1.8; color: #333; margin-bottom: 15px;">
-                    Este produto está com um preço altamente competitivo no Mercado Livre. 
-                    Baseado em nosso histórico de monitoramento, esta é uma excelente oportunidade 
-                    para adquirir um item de qualidade com economia significativa.
-                </p>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-bottom:30px;">
+                    <div style="background:#f0fff4; padding:20px; border-radius:12px; border-left:5px solid #22c55e;">
+                        <h4 style="margin:0 0 10px 0; color:#166534;">✅ Prós</h4>
+                        <ul style="margin:0; padding-left:20px; font-size:14px;">
+                            <li>Melhor preço dos últimos 30 dias</li>
+                            <li>Vendedor com excelente reputação</li>
+                            <li>Entrega Full disponível</li>
+                        </ul>
+                    </div>
+                    <div style="background:#fff5f5; padding:20px; border-radius:12px; border-left:5px solid #ef4444;">
+                        <h4 style="margin:0 0 10px 0; color:#991b1b;">❌ Contras</h4>
+                        <ul style="margin:0; padding-left:20px; font-size:14px;">
+                            <li>Estoque limitado</li>
+                            <li>Alta demanda nas últimas horas</li>
+                        </ul>
+                    </div>
+                </div>
+                
                 <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; border-left: 4px solid #388e3c; margin-bottom: 20px;">
-                    <strong style="color: #2e7d32;">✅ Recomendação: COMPRE AGORA</strong>
+                    <strong style="color: #2e7d32;">🏆 VEREDITO: MELHOR CUSTO-BENEFÍCIO</strong>
                     <p style="margin: 10px 0 0 0; color: #333;">
-                        O desconto é significativo e a entrega rápida do Mercado Livre garante uma boa experiência de compra.
+                        Se você busca economia sem abrir mão da qualidade, esta é a escolha certa hoje.
                     </p>
+                </div>
+            </section>
+
+            <!-- Alternativas Recomendadas -->
+            <section style="margin-bottom: 40px; background:#f8fafc; padding:25px; border-radius:16px;">
+                <h3 style="margin-top:0;">🎯 Melhores Alternativas</h3>
+                <p style="font-size:14px; color:#64748b;">Não era o que buscava? Veja estas opções:</p>
+                <div style="display:flex; gap:15px; overflow-x:auto; padding-bottom:10px;">
+                    <!-- Blocos dinâmicos seriam inseridos aqui -->
+                    <div style="min-width:150px; background:white; padding:10px; border-radius:8px; border:1px solid #e2e8f0; text-align:center;">
+                        <span style="font-size:10px; background:#dcfce7; color:#166534; padding:2px 6px; border-radius:10px;">MAIS BARATO</span>
+                        <div style="height:80px; margin:10px 0; background:#eee; border-radius:4px;"></div>
+                        <div style="font-size:12px; font-weight:bold;">Opção Econômica</div>
+                    </div>
+                    <div style="min-width:150px; background:white; padding:10px; border-radius:8px; border:1px solid #e2e8f0; text-align:center;">
+                        <span style="font-size:10px; background:#f1f5f9; color:#475569; padding:2px 6px; border-radius:10px;">PREMIUM</span>
+                        <div style="height:80px; margin:10px 0; background:#eee; border-radius:4px;"></div>
+                        <div style="font-size:12px; font-weight:bold;">Opção Top de Linha</div>
+                    </div>
                 </div>
             </section>
             

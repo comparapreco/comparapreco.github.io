@@ -21,11 +21,14 @@ def run_portal_generation():
         "apply_breadcrumbs.py",
         "smart_interlinking.py",
         "build_eeat_pages.py",
+        "build_stats_center.py",
+        "build_alerts.py",
         "opportunity_engine.py",
         "seo_dashboard.py",
         "generate_pages_enhanced.py",
         "build_homepage.py",
-        "generate_sitemaps.py"
+        "generate_sitemaps.py",
+        "executive_report.py"
     ]
     
     for script in scripts_to_run:

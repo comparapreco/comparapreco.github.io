@@ -1,491 +1,161 @@
-<!DOCTYPE html>
 
-<html lang="pt-BR">
-<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tendências de Produtos — O que está em alta esta semana | Compara Preço</title>
-<meta content="Descubra os produtos mais buscados da semana, categorias em alta e o crescimento de interesse dos consumidores brasileiros. Atualizado automaticamente." name="description"/>
-<link href="https://comparapreco.github.io/tendencias/" rel="canonical"/>
-<meta content="website" property="og:type"/>
-<meta content="https://comparapreco.github.io/tendencias/" property="og:url"/>
-<meta content="Tendências de Produtos — O que está em alta esta semana" property="og:title"/>
-<meta content="Produtos mais buscados, categorias em alta e crescimento de interesse dos consumidores." property="og:description"/>
-<link href="../assets/css/style.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Tendências de Produtos da Semana",
-    "description": "Produtos mais buscados, categorias em alta e crescimento de interesse dos consumidores brasileiros.",
-    "url": "https://comparapreco.github.io/tendencias/",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://comparapreco.github.io/"},
-        {"@type": "ListItem", "position": 2, "name": "Tendências"}
-      ]
-    }
-  }
-  </script>
-<style>
-    .page-hero {
-      background: linear-gradient(135deg, #6c3fc5 0%, #a855f7 100%);
-      color: white;
-      padding: 50px 0 40px;
-      margin-bottom: 40px;
-    }
-    .page-hero h1 { font-size: 2rem; margin-bottom: 10px; }
-    .page-hero p { opacity: 0.9; font-size: 1.05rem; }
-    .breadcrumb { font-size: 13px; opacity: 0.8; margin-bottom: 15px; }
-    .breadcrumb a { color: white; text-decoration: none; }
-    .trends-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-    .trend-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .trend-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
-    .trend-rank {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background: var(--primary);
-      color: white;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 13px;
-    }
-    .trend-rank.gold { background: #f59e0b; }
-    .trend-rank.silver { background: #94a3b8; }
-    .trend-rank.bronze { background: #b45309; }
-    .trend-img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      border-radius: 8px;
-      margin-bottom: 12px;
-      background: var(--bg);
-      padding: 4px;
-    }
-    .trend-name { font-weight: 700; font-size: 14px; margin-bottom: 8px; line-height: 1.4; }
-    .trend-meta { display: flex; gap: 10px; flex-wrap: wrap; }
-    .trend-badge {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 20px;
-      font-weight: 600;
-    }
-    .badge-hot { background: #fee2e2; color: #dc2626; }
-    .badge-up { background: #dcfce7; color: #16a34a; }
-    .badge-new { background: #dbeafe; color: #2563eb; }
-    .trend-growth {
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--text-light);
-    }
-    .trend-growth strong { color: #16a34a; }
-    .growth-bar {
-      height: 6px;
-      background: var(--border);
-      border-radius: 3px;
-      margin-top: 6px;
-      overflow: hidden;
-    }
-    .growth-bar-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--primary), #00e676);
-      border-radius: 3px;
-      transition: width 1s ease;
-    }
-    .section-title {
-      font-size: 1.4rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .cat-trends {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 15px;
-      margin-bottom: 40px;
-    }
-    .cat-trend-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.2s;
-      text-decoration: none;
-      color: var(--text);
-      display: block;
-    }
-    .cat-trend-card:hover { border-color: var(--primary); transform: translateY(-2px); }
-    .cat-icon { font-size: 2rem; margin-bottom: 8px; }
-    .cat-trend-name { font-weight: 700; font-size: 14px; margin-bottom: 5px; }
-    .cat-trend-change {
-      font-size: 13px;
-      font-weight: 600;
-      padding: 3px 10px;
-      border-radius: 20px;
-      display: inline-block;
-    }
-    .change-up { background: #dcfce7; color: #16a34a; }
-    .change-down { background: #fee2e2; color: #dc2626; }
-    .change-neutral { background: #f1f5f9; color: #64748b; }
-    .searches-list { list-style: none; }
-    .searches-list li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .searches-list li:last-child { border-bottom: none; }
-    .search-pos {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 12px;
-      flex-shrink: 0;
-    }
-    .search-term { flex: 1; font-weight: 600; font-size: 14px; }
-    .search-volume {
-      font-size: 12px;
-      color: var(--text-light);
-    }
-    .search-trend-icon { font-size: 16px; }
-    .last-update {
-      font-size: 12px;
-      color: var(--text-light);
-      margin-bottom: 30px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .pulse-dot {
-      width: 8px; height: 8px;
-      background: var(--primary);
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.3); }
-    }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; }
-    @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
-    .card-box {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-    }
-    .card-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 16px; }
-  </style>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-P0X4Z9Y7B2');
-</script>
-<script>
-  // Rastreamento de cliques em afiliados
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        gtag('event', 'affiliate_click', {
-          'event_category': 'engagement',
-          'event_label': this.href,
-          'link_url': this.href,
-          'product_name': this.getAttribute('title') || this.innerText
-        });
-      });
-    });
-  });
-</script>
-  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
-</head>
-<body>
-<header class="header">
-<div class="container header-inner">
-<a class="logo" href="../">📊 <strong>Compara Preço</strong></a>
-<div class="search-bar">
-<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
-</div>
-<button id="themeToggle">🌙</button>
-</div>
-</header>
-<section class="page-hero">
-<div class="container">
-<div class="breadcrumb"><a href="../">Início</a> › Tendências</div>
-<h1>🌍 Tendências da Semana</h1>
-<p>Produtos mais buscados, categorias em alta e o que os brasileiros estão comprando agora.</p>
-</div>
-</section>
-<main class="container">
-<div class="last-update">
-<div class="pulse-dot"></div>
-<span id="lastUpdateText">Atualizado agora</span>
-</div>
-<!-- Produtos em Alta -->
-<h2 class="section-title">🔥 Produtos Mais Buscados da Semana</h2>
-<div class="trends-grid" id="trendingProducts">
-<div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--text-light);">Carregando tendências...</div>
-</div>
-<!-- Categorias em Alta -->
-<h2 class="section-title">📈 Categorias em Alta</h2>
-<div class="cat-trends" id="catTrends">
-<!-- Preenchido via JS -->
-</div>
-<!-- Dois painéis lado a lado -->
-<div class="two-col">
-<div class="card-box">
-<h3>🔍 Termos Mais Buscados</h3>
-<ul class="searches-list" id="searchTerms">
-<!-- Preenchido via JS -->
-</ul>
-</div>
-<div class="card-box">
-<h3>🚀 Crescimento de Interesse (7 dias)</h3>
-<ul class="searches-list" id="growthList">
-<!-- Preenchido via JS -->
-</ul>
-</div>
-</div>
-<!-- Produtos das tendências -->
-<h2 class="section-title">🛒 Ofertas Relacionadas às Tendências</h2>
-<div class="products-grid" id="trendOffers">
-<!-- Preenchido via JS -->
-</div>
-</main>
-<footer class="footer">
-<div class="container">
-<p>© 2026 Compara Preço. Atualizado via API oficial do Mercado Livre.</p>
-<div class="footer-links">
-<a href="../sobre/">Sobre</a>
-<a href="../contato/">Contato</a>
-<a href="../privacidade/">Privacidade</a>
-<a href="../termos/">Termos</a>
-<a href="../indice-compara/">Índice Compara Preço</a>
-<a href="../tendencias/">Tendências</a>
-</div>
-</div>
-</footer>
-<script>
-    // Tema
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    document.getElementById('themeToggle').addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      document.getElementById('themeToggle').textContent = next === 'dark' ? '☀️' : '🌙';
-    });
-    if (savedTheme === 'dark') document.getElementById('themeToggle').textContent = '☀️';
-
-    // Busca
-    document.getElementById('searchInput').addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
-        const q = e.target.value.trim();
-        if (q) window.location.href = `../?q=${encodeURIComponent(q)}`;
-      }
-    });
-
-    // Dados de tendências baseados nos produtos reais
-    const DATA_URL = '../data/products/offers.json';
-
-    const CATEGORY_META = {
-      'celulares':       { icon: '📱', name: 'Celulares' },
-      'informatica':     { icon: '💻', name: 'Informática' },
-      'tv-e-video':      { icon: '📺', name: 'TV e Vídeo' },
-      'eletrodomesticos':{ icon: '🏠', name: 'Eletrodomésticos' },
-      'games':           { icon: '🎮', name: 'Games' },
-      'beleza':          { icon: '💄', name: 'Beleza' },
-      'casa':            { icon: '🛋️', name: 'Casa' },
-      'ferramentas':     { icon: '🔧', name: 'Ferramentas' },
-      'outros':          { icon: '📦', name: 'Outros' }
-    };
-
-    // Simula crescimento semanal por categoria (dados realistas)
-    const CATEGORY_GROWTH = {
-      'celulares':       +18,
-      'informatica':     +12,
-      'tv-e-video':      -3,
-      'eletrodomesticos':+7,
-      'games':           +25,
-      'beleza':          +9,
-      'casa':            +4,
-      'ferramentas':     -1,
-      'outros':          +2
-    };
-
-    const SEARCH_TERMS = [
-      { term: 'Samsung Galaxy A17', volume: '48K buscas', trend: '🔥', growth: +34 },
-      { term: 'iPhone 15 Pro', volume: '41K buscas', trend: '📈', growth: +22 },
-      { term: 'Notebook Lenovo', volume: '37K buscas', trend: '📈', growth: +18 },
-      { term: 'Fone Bluetooth', volume: '29K buscas', trend: '🔥', growth: +41 },
-      { term: 'TV 55 polegadas', volume: '24K buscas', trend: '➡️', growth: +3 },
-      { term: 'Aspirador robô', volume: '21K buscas', trend: '📈', growth: +15 },
-      { term: 'PlayStation 5', volume: '19K buscas', trend: '🔥', growth: +28 },
-      { term: 'Air Fryer', volume: '17K buscas', trend: '➡️', growth: +5 }
-    ];
-
-    const GROWTH_TERMS = [
-      { term: 'Fone Bluetooth', growth: +41, cat: 'celulares' },
-      { term: 'Samsung Galaxy A17', growth: +34, cat: 'celulares' },
-      { term: 'PlayStation 5', growth: +28, cat: 'games' },
-      { term: 'iPhone 15 Pro', growth: +22, cat: 'celulares' },
-      { term: 'Notebook Lenovo', growth: +18, cat: 'informatica' },
-      { term: 'Aspirador robô', growth: +15, cat: 'eletrodomesticos' },
-      { term: 'Smartwatch', growth: +12, cat: 'celulares' },
-      { term: 'Monitor Gamer', growth: +10, cat: 'informatica' }
-    ];
-
-    async function loadTrends() {
-      try {
-        const res = await fetch(DATA_URL);
-        const products = await res.json();
-
-        // Atualiza timestamp
-        const now = new Date();
-        document.getElementById('lastUpdateText').textContent =
-          `Atualizado em ${now.toLocaleDateString('pt-BR')} às ${now.toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'})}`;
-
-        // Ordena por desconto para simular "mais buscados"
-        const sorted = [...products].sort((a, b) => (b.custom_discount_pct || 0) - (a.custom_discount_pct || 0));
-        const top = sorted.slice(0, 9);
-
-        // Renderiza produtos em alta
-        const grid = document.getElementById('trendingProducts');
-        grid.innerHTML = top.map((p, i) => {
-          const rankClass = i === 0 ? 'gold' : i === 1 ? 'silver' : i === 2 ? 'bronze' : '';
-          const disc = p.custom_discount_pct || 0;
-          const growth = Math.round(disc * 0.8 + Math.random() * 20);
-          const url = p.custom_affiliate_url || p.permalink || '#';
-          return `
-<a class="trend-card" href="${url}" rel="noopener sponsored" style="text-decoration:none;color:inherit;" target="_blank">
-<div class="trend-rank ${rankClass}">${i + 1}</div>
-<img alt="${p.title}" class="trend-img" height="120" loading="lazy" onerror="this.src='../assets/img/placeholder.png'" src="${p.image || p.thumbnail}" style="width:100%;height:auto;" width="120"/>
-<div class="trend-name">${(p.title || p.name || '').substring(0, 60)}${(p.title||p.name||'').length &gt; 60 ? '...' : ''}</div>
-<div class="trend-meta">
-<span class="trend-badge badge-hot">-${disc}% OFF</span>
-<span class="trend-badge badge-up">Em alta</span>
-</div>
-<div class="trend-growth">
-                Interesse: <strong>+${growth}%</strong> esta semana
-                <div class="growth-bar"><div class="growth-bar-fill" style="width:${Math.min(growth, 100)}%"></div></div>
-</div>
-</a>
-`;
-        }).join('');
-
-        // Renderiza categorias em alta
-        const catCounts = {};
-        products.forEach(p => {
-          const c = p.custom_category_slug || 'outros';
-          catCounts[c] = (catCounts[c] || 0) + 1;
-        });
-        const catGrid = document.getElementById('catTrends');
-        catGrid.innerHTML = Object.entries(CATEGORY_META).map(([slug, meta]) => {
-          const growth = CATEGORY_GROWTH[slug] || 0;
-          const changeClass = growth > 0 ? 'change-up' : growth < 0 ? 'change-down' : 'change-neutral';
-          const changeText = growth > 0 ? `+${growth}%` : `${growth}%`;
-          return `
-            <a href="../categorias/${slug}/index.html" class="cat-trend-card">
-              <div class="cat-icon">${meta.icon}</div>
-              <div class="cat-trend-name">${meta.name}</div>
-              <span class="cat-trend-change ${changeClass}">${changeText} esta semana</span>
-            </a>
-          `;
-        }).join('');
-
-        // Termos mais buscados
-        const searchList = document.getElementById('searchTerms');
-        searchList.innerHTML = SEARCH_TERMS.map((s, i) => `
-          <li>
-            <div class="search-pos">${i + 1}</div>
-            <span class="search-term">${s.term}</span>
-            <span class="search-volume">${s.volume}</span>
-            <span class="search-trend-icon">${s.trend}</span>
-          </li>
-        `).join('');
-
-        // Crescimento de interesse
-        const growthList = document.getElementById('growthList');
-        growthList.innerHTML = GROWTH_TERMS.map((g, i) => {
-          const meta = CATEGORY_META[g.cat] || { icon: '📦' };
-          return `
-            <li>
-              <div class="search-pos">${meta.icon}</div>
-              <span class="search-term">${g.term}</span>
-              <span class="search-volume" style="color:#16a34a;font-weight:700;">+${g.growth}%</span>
-              <span class="search-trend-icon">📈</span>
-            </li>
-          `;
-        }).join('');
-
-        // Ofertas relacionadas às tendências (top 8 com maior desconto)
-        const offersGrid = document.getElementById('trendOffers');
-        const offerItems = sorted.slice(0, 8);
-        offersGrid.innerHTML = offerItems.map(p => {
-          const url = p.custom_affiliate_url || p.permalink || '#';
-          const disc = p.custom_discount_pct || 0;
-          const price = parseFloat(p.price || 0).toLocaleString('pt-BR', {minimumFractionDigits:2});
-          const orig = parseFloat(p.originalPrice || p.original_price || p.price || 0).toLocaleString('pt-BR', {minimumFractionDigits:2});
-          return `
-<div class="product-card">
-<a href="${url}" rel="noopener sponsored" target="_blank">
-<img alt="${p.title}" height="120" loading="lazy" onerror="this.src='../assets/img/placeholder.png'" src="${p.image || p.thumbnail}" style="width:100%;height:auto;" width="120"/>
-                ${disc &gt; 0 ? </a></div>`<span class="badge-discount">-${disc}%</span>` : ''}
-                <div class="product-info">
-                  <h3 class="product-name">${(p.title || p.name || '').substring(0, 70)}</h3>
-                  <div class="product-price">
-                    ${orig !== price ? `<span class="price-original">R$ ${orig}</span>` : ''}
-                    <span class="price-current">R$ ${price}</span>
-                  </div>
-                  <a href="${url}" target="_blank" rel="noopener sponsored" class="btn-buy">Ver Oferta →</a>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tendências da Semana — Radar Ninja</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+    <body>
+        <header class="header"><div class="container"><a href="/" class="logo">📊 Radar Ninja</a></div></header>
+        <main class="container">
+            <h1>Tendências da Semana</h1>
+            <p>Análise em tempo real de 73 produtos monitorados.</p>
+            
+            <div class="grid">
+                
+                <div class="card">
+                    <span class="badge">68% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_760779-MLA99484493666_112025-AB.webp" style="width:100px">
+                    <h3>Whey Protein Concentrado 100% 900g Refil Dark Lab Sabor Morango</h3>
+                    <a href="https://www.mercadolivre.com.br/whey-protein-concentrado-100-900g-refil-dark-lab-sabor-morango/p/MLB26454796?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
                 </div>
-              </a>
+                
+                <div class="card">
+                    <span class="badge">67% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_760779-MLA99484493666_112025-AB.webp" style="width:100px">
+                    <h3>Whey Protein Concentrado 100% 900g Dark Lab</h3>
+                    <a href="https://www.mercadolivre.com.br/p/MLB26454796?matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">65% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_942122-MLA99923169249_112025-AB.webp" style="width:100px">
+                    <h3>Creatina Monohidratada Pura 500g Dark Lab Unidade Sem Sabor</h3>
+                    <a href="https://www.mercadolivre.com.br/creatina-monohidratada-pura-500g-dark-lab-unidade/p/MLB26796581?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">59% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_609133-MLA100033485209_122025-AB.webp" style="width:100px">
+                    <h3>Cooktop A Gás Fischer 4 Bocas Fit Line Trempe Esmaltada Aramado Preto 127/220v</h3>
+                    <a href="https://www.mercadolivre.com.br/cooktop-a-gas-fischer-4-bocas-fit-line-trempe-esmaltada-aramado/p/MLB42641505?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">59% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_609133-MLA100033485209_122025-AB.webp" style="width:100px">
+                    <h3>Cooktop A Gás Fischer 4 Bocas Fit Line</h3>
+                    <a href="https://www.mercadolivre.com.br/p/MLB42641505?matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">57% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_761825-MLA111240637734_052026-AB.webp" style="width:100px">
+                    <h3>Kit 10 Pote De Vidro Marmita Hermético 370ml Freezer Fitness Rishon Transparente</h3>
+                    <a href="https://www.mercadolivre.com.br/kit-10-pote-de-vidro-marmita-hermetico-370ml-freezer-fitness-rishon/p/MLB66060206?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">57% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_828436-MLA100007265481_122025-AB.webp" style="width:100px">
+                    <h3>Parafusadeira Furadeira C/ 2 Baterias Maleta Kit Completo Led Eixo Flexível Vários Níveis Torque Amarelo 127/220v 60 Hz</h3>
+                    <a href="https://www.mercadolivre.com.br/parafusadeira-furadeira-c-2-baterias-maleta-kit-completo-led-eixo-flexivel-varios-niveis-torque/p/MLB50181290?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">57% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_761825-MLA111240637734_052026-AB.webp" style="width:100px">
+                    <h3>Kit 10 Pote De Vidro Marmita Hermético</h3>
+                    <a href="https://www.mercadolivre.com.br/p/MLB66060206?matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">56% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_848860-MLA99964507641_112025-AB.webp" style="width:100px">
+                    <h3>Creatina Monohidratada Pura 1kg Dark Lab Unidade Sem Sabor</h3>
+                    <a href="https://www.mercadolivre.com.br/creatina-monohidratada-pura-1kg-dark-lab-unidade-sem-sabor/p/MLB25929487?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">55% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_895724-MLA91526198522_092025-AB.webp" style="width:100px">
+                    <h3>Celular Samsung Galaxy A07 256gb, 8gb, Câmera 50mp, Tela 6.7 , Proteção Ip54, Processador 6nm - Preto</h3>
+                    <a href="https://www.mercadolivre.com.br/celular-samsung-galaxy-a07-256gb-8gb-cmera-50mp-tela-67-proteco-ip54-processador-6nm-preto/p/MLB54961556?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">55% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_873869-MLA92299394919_092025-AB.webp" style="width:100px">
+                    <h3>Celular Samsung Galaxy A17 5g Com Ia, 128gb, 4gb Ram, Câm De 50mp, Tela De 6.7 , Nfc, Ip54 - Cinza</h3>
+                    <a href="https://www.mercadolivre.com.br/celular-samsung-galaxy-a17-5g-com-ia-128gb-4gb-ram-cm-de-50mp-tela-de-67-nfc-ip54-cinza/p/MLB55521828?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">55% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_895724-MLA91526198522_092025-AB.webp" style="width:100px">
+                    <h3>Samsung Galaxy A07 256GB 8GB Preto</h3>
+                    <a href="https://www.mercadolivre.com.br/p/MLB54961556?matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">54% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_882989-MLA106924265722_022026-AB.webp" style="width:100px">
+                    <h3>Jogo 6 Copos Diamond Egipcio 300ml Vidro Grosso Diamante Luxo Transparente Vitrex</h3>
+                    <a href="https://www.mercadolivre.com.br/jogo-6-copos-diamond-egipcio-300ml-vidro-grosso-diamante-luxo-transparente-vitrex/p/MLB65966191?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">50% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_781165-MLA70966453667_082023-AB.webp" style="width:100px">
+                    <h3>Furadeira Parafusadeira Impacto Bateria 21v Bivolt</h3>
+                    <a href="https://www.mercadolivre.com.br/p/MLB3386925565?matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">49% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_753960-MLB78002610612_082024-AB.webp" style="width:100px">
+                    <h3>Perfume Sedutor Árabe Sabah 100ml Original Feminino</h3>
+                    <a href="https://www.mercadolivre.com.br/perfume-sedutor-arabe-sabah-100ml-original-feminino/up/MLBU3054985330?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">49% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_784513-MLA107202361084_032026-AB.webp" style="width:100px">
+                    <h3>Samsung Galaxy Tab A11+ 5g 6gb, 128gb Cinza</h3>
+                    <a href="https://www.mercadolivre.com.br/samsung-galaxy-tab-a11-5g-6gb-128gb-cinza/p/MLB63783529?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">49% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_693436-MLB109274954182_042026-AB.webp" style="width:100px">
+                    <h3>Kit C/ 36 Envelopes (252 Cromos) - Copa Do Mundo Fifa 2026</h3>
+                    <a href="https://www.mercadolivre.com.br/kit-c-36-envelopes-252-cromos--copa-do-mundo-fifa-2026/up/MLBU3881327409?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">48% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_767880-MLA99418713376_112025-AB.webp" style="width:100px">
+                    <h3>Cadeira Escritório Ergonômica Giratória Com Apoio Lombar Da Python Fly Preto Malha</h3>
+                    <a href="https://www.mercadolivre.com.br/cadeira-escritorio-ergonmica-giratoria-com-apoio-lombar-da-python-fly/p/MLB54575876?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">48% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_705075-MLA99943632917_112025-AB.webp" style="width:100px">
+                    <h3>Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram Câmera Tripla De Até 50mp Selfie De 12mp Ip67 Super Amoled 6.7'' Nfc Recursos Ai Android E Segurança Snapdragon - Preto</h3>
+                    <a href="https://www.mercadolivre.com.br/smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-cmera-tripla-de-ate-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranca-snapdragon-preto/p/MLB47115842?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">48% OFF</span>
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_767880-MLA99418713376_112025-AB.webp" style="width:100px">
+                    <h3>Cadeira Escritório Ergonômica Python Fly</h3>
+                    <a href="https://www.mercadolivre.com.br/p/MLB54575876?matt_tool=vendas0nline" class="btn">Ver Preço</a>
+                </div>
+                
             </div>
-          `;
-        }).join('');
-
-      } catch (err) {
-        console.error('Erro ao carregar tendências:', err);
-        document.getElementById('trendingProducts').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-light);">Não foi possível carregar as tendências agora.</div>';
-      }
-    }
-
-    loadTrends();
-  </script>
-</body>
-</html>
+        </main>
+    </body>
+    </html>
+    
