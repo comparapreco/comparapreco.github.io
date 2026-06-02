@@ -50,6 +50,9 @@ def deep_clean(db_path):
         def super_normalize(s):
             s = s.replace('promocao-especial', '').replace('oferta', '').replace('desconto', '')
             s = s.replace('frete-gratis', '').replace('original', '').replace('lacrado', '')
+            s = s.replace('unidade', '').replace('kit', '').replace('com-ia', '')
+            # Remover palavras muito curtas (ruído)
+            s = '-'.join([w for w in s.split('-') if len(w) > 2])
             return s.strip('-')
 
         p_norm = super_normalize(p_slug)
@@ -69,9 +72,13 @@ def deep_clean(db_path):
                 is_duplicate = True
                 break
                 
-            # 3. Similaridade de Início de Nome
-            # Se os primeiros 30 caracteres do slug forem iguais, é o mesmo produto
-            if p_slug[:30] == e_slug[:30] and len(p_slug) > 30:
+            # 3. Similaridade de Início de Nome (Agressiva: 20 chars)
+            if p_slug[:20] == e_slug[:20] and len(p_slug) > 20:
+                is_duplicate = True
+                break
+            
+            # 4. Detecção de "Whey Protein" ou nomes muito parecidos
+            if p_norm[:15] == e_norm[:15] and len(p_norm) > 15:
                 is_duplicate = True
                 break
 
