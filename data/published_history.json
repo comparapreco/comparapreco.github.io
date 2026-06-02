@@ -1,12 +1,4 @@
 {
-  "published_ids": [
-    "MLB65030699",
-    "MLB49089309",
-    "MLB54963045"
-  ],
-  "price_history": {
-    "MLB65030699": 4540.0,
-    "MLB49089309": 2847.0,
-    "MLB54963045": 1299.0
-  }
+  "published_ids": [],
+  "price_history": {}
 }

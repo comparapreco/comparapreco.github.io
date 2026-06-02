@@ -1,42 +1,112 @@
+"""
+sync_database.py
+Sincroniza os produtos aprovados (affiliate_products.json) com o banco
+principal (all_products.json), mantendo um histórico rotativo de até 500
+produtos e garantindo que o banco nunca fique vazio.
+"""
+
 import os
 import json
-from logger import logger
+from datetime import datetime, timedelta
 
-RAW_FILE = "data/raw_products.json"
+try:
+    from logger import logger
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
+    logging.basicConfig(level=logging.INFO, format='%(levelname)s %(message)s')
+
+# Prioridade de entrada: affiliate > scored > raw
+INPUT_FILES = [
+    "data/affiliate_products.json",
+    "data/scored_products.json",
+    "data/raw_products.json",
+]
 DATABASE_FILE = "data/database/all_products.json"
+MAX_DB_SIZE = 500          # Máximo de produtos no banco
+MAX_AGE_DAYS = 30          # Remover produtos com mais de 30 dias sem atualização
+
+
+def load_json(filepath, default):
+    if os.path.exists(filepath):
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return default
+
 
 def sync():
-    if not os.path.exists(RAW_FILE):
-        logger.warning("Arquivo raw_products.json não encontrado.")
+    # Carregar novos produtos (usar o arquivo mais completo disponível)
+    new_products = []
+    source_used = None
+    for input_file in INPUT_FILES:
+        data = load_json(input_file, [])
+        if data:
+            new_products = data
+            source_used = input_file
+            break
+
+    if not new_products:
+        logger.warning("Nenhum produto novo encontrado em nenhum arquivo de entrada.")
         return
 
-    with open(RAW_FILE, "r", encoding="utf-8") as f:
-        new_products = json.load(f)
+    logger.info(f"Carregando {len(new_products)} produtos de: {source_used}")
 
+    # Carregar banco existente
     os.makedirs(os.path.dirname(DATABASE_FILE), exist_ok=True)
-    
-    # No novo modelo, o fetch_products_realtime.py já filtrou por ID e Queda de Preço.
-    # Portanto, o sync_database apenas atualiza o banco de dados principal.
-    
-    existing_products = []
-    if os.path.exists(DATABASE_FILE):
-        with open(DATABASE_FILE, "r", encoding="utf-8") as f:
-            existing_products = json.load(f)
-            
-    existing_dict = {p['id']: p for p in existing_products}
-    
+    existing_products = load_json(DATABASE_FILE, [])
+    existing_dict = {p["id"]: p for p in existing_products if "id" in p}
+
+    # Adicionar/atualizar produtos novos
+    updated = 0
+    added = 0
     for p in new_products:
-        # Se for queda de preço, atualizamos o existente
-        # Se for novo, adicionamos
-        existing_dict[p['id']] = p
-        
-    final_list = list(existing_dict.values())
-    
+        p_id = p.get("id")
+        if not p_id:
+            continue
+        if p_id in existing_dict:
+            existing_dict[p_id] = p
+            updated += 1
+        else:
+            existing_dict[p_id] = p
+            added += 1
+
+    # Remover produtos muito antigos (mais de MAX_AGE_DAYS dias)
+    cutoff = datetime.now() - timedelta(days=MAX_AGE_DAYS)
+    removed = 0
+    filtered = {}
+    for p_id, p in existing_dict.items():
+        data_coleta = p.get("data_coleta", "")
+        if data_coleta:
+            try:
+                coleta_dt = datetime.fromisoformat(data_coleta[:19])
+                if coleta_dt < cutoff:
+                    removed += 1
+                    continue
+            except Exception:
+                pass
+        filtered[p_id] = p
+
+    # Limitar tamanho do banco — manter os mais recentes
+    final_list = list(filtered.values())
+    if len(final_list) > MAX_DB_SIZE:
+        # Ordenar por data de coleta (mais recentes primeiro)
+        def sort_key(p):
+            dc = p.get("data_coleta", "")
+            return dc if dc else "0"
+        final_list.sort(key=sort_key, reverse=True)
+        final_list = final_list[:MAX_DB_SIZE]
+
     with open(DATABASE_FILE, "w", encoding="utf-8") as f:
         json.dump(final_list, f, ensure_ascii=False, indent=2)
-        
-    logger.info(f"Sincronização concluída: {len(new_products)} produtos processados.")
-    logger.info(f"Total no banco de dados: {len(final_list)}")
+
+    logger.info(
+        f"Sincronização concluída: +{added} novos, ~{updated} atualizados, "
+        f"-{removed} expirados. Total no banco: {len(final_list)}"
+    )
+
 
 if __name__ == "__main__":
     sync()
