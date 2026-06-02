@@ -847,9 +847,11 @@ body {
 
 /* CORREÇÕES FINAIS DE ROLAGEM HORIZONTAL */
 html, body {
-    overflow-x: hidden;
-    width: 100%;
+    overflow-x: hidden !important;
+    width: 100% !important;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -863,8 +865,13 @@ html, body {
 
 /* Garantir que nada vaze para fora da tela no mobile */
 * {
-    max-width: 100vw;
-    box-sizing: border-box;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 @media (max-width: 768px) {
