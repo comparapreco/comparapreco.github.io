@@ -294,3 +294,57 @@ body {
     .product-card h3 { font-size: 13px; height: 36px; }
     .price-tag { font-size: 18px !important; }
 }
+
+/* ========== MELHORIAS MOBILE ROBUSTAS ========== */
+@media (max-width: 640px) {
+    .hero-premium h1 { font-size: 2.2rem !important; }
+    .hero-premium p { font-size: 1rem !important; padding: 0 10px; }
+    .stats-badge { flex-direction: column; gap: 10px; width: 90%; }
+    
+    .cat-grid { 
+        grid-template-columns: repeat(3, 1fr) !important; 
+        gap: 8px !important; 
+        margin-top: -30px !important;
+    }
+    .cat-item { padding: 12px 5px !important; font-size: 0.8rem !important; }
+    
+    .section-title { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .section-title h2 { font-size: 1.5rem !important; }
+    
+    .products-grid { 
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 10px !important; 
+    }
+    
+    .product-card { padding: 10px !important; }
+    .product-card h3 { font-size: 0.85rem !important; height: 40px !important; margin-bottom: 8px !important; }
+    .card-img { height: 120px !important; }
+    
+    .footer-grid { 
+        grid-template-columns: 1fr !important; 
+        text-align: center; 
+    }
+    
+    .header .container { 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    .nav-links {
+        display: flex;
+        overflow-x: auto;
+        width: 100%;
+        padding-bottom: 5px;
+        gap: 15px;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .nav-links a { font-size: 0.9rem; white-space: nowrap; }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 380px) {
+    .products-grid { grid-template-columns: 1fr !important; }
+    .cat-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
