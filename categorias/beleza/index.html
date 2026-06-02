@@ -1,116 +1,193 @@
+<!DOCTYPE html>
 
-    <!DOCTYPE html>
-    <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <title>Ninja Beleza — Radar Ninja</title>
-        <link rel="stylesheet" href="/assets/css/style.css">
-    </head>
-    <body>
-        <header class="header"><div class="container"><a href="/" class="logo">📊 Radar Ninja</a></div></header>
-        <main class="container">
-            <nav class="breadcrumb"><a href="/">Home</a> / Ninja Beleza</nav>
-            <h1>Ninja Beleza</h1>
-            <p>Central de ofertas, comparativos e guias para Ninja Beleza.</p>
+<html lang="pt-BR">
+<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ofertas de Beleza com Desconto no Compara Preço</title>
+<meta content="Encontre as melhores ofertas de Beleza no Mercado Livre. Descontos incríveis e produtos selecionados para você economizar." name="description"/>
+<link href="https://comparapreco.github.io/categorias/beleza/" rel="canonical"/>
+<link href="../../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0X4Z9Y7B2');
+</script>
+<script>
+  // Rastreamento de cliques em afiliados
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        gtag('event', 'affiliate_click', {
+          'event_category': 'engagement',
+          'event_label': this.href,
+          'link_url': this.href,
+          'product_name': this.getAttribute('title') || this.innerText
+        });
+      });
+    });
+  });
+</script>
+  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
+  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../../">📊 <strong>Compara Preço</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+<nav class="cat-nav">
+<div class="container cat-tabs" id="catTabs">
+<button class="cat-tab active" data-cat="todos">Todos</button>
+<a class="cat-tab" href="../../categorias/celulares/index.html">Celulares</a>
+<a class="cat-tab" href="../../categorias/informatica/index.html">Informática</a>
+<a class="cat-tab" href="../../categorias/eletrodomesticos/index.html">Eletrodomésticos</a>
+<a class="cat-tab" href="../../categorias/games/index.html">Games</a>
+<a class="cat-tab" href="../../categorias/tv-e-video/index.html">TV e Vídeo</a>
+<a class="cat-tab" href="../../categorias/ferramentas/index.html">Ferramentas</a>
+<a class="cat-tab" href="../../categorias/beleza/index.html">Beleza</a>
+<a class="cat-tab" href="../../categorias/casa/index.html">Casa</a>
+</div>
+</nav>
+<main class="container">
+<nav class="breadcrumb">
+<a href="../../">Home</a> &gt; Beleza
+    </nav>
+<section class="section">
+<h1>Ofertas de Beleza</h1>
+<div class="products-grid" id="categoryGrid">
+        <div class="product-card">
+            <span class="badge discount-badge">↓ 68% OFF</span>
+            <span class="badge badge-menor-preco">💎 MENOR PREÇO</span>
+            <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_760779-MLA99484493666_112025-AB.webp" alt="Whey Protein Concentrado 100% 900g Refil Dark Lab Sabor Morango"></div>
+            <h3>Whey Protein Concentrado 100% 900g Refil Dark Lab ...</h3>
+            <div class="price-tag" style="font-size: 20px;">R$ 159.90 <span class="old-price" style="font-size: 14px;">R$ 499.99</span></div>
+            <a href="https://www.mercadolivre.com.br/whey-protein-concentrado-100-900g-refil-dark-lab-sabor-morango/p/MLB26454796?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+        </div>
+        
+        <div class="product-card">
+            <span class="badge discount-badge">↓ 49% OFF</span>
+            <span class="badge badge-baixou">📉 BAIXOU!</span>
+            <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_753960-MLB78002610612_082024-AB.webp" alt="Perfume Sedutor Árabe Sabah 100ml Original Feminino"></div>
+            <h3>Perfume Sedutor Árabe Sabah 100ml Original Feminin...</h3>
+            <div class="price-tag" style="font-size: 20px;">R$ 116.10 <span class="old-price" style="font-size: 14px;">R$ 230.00</span></div>
+            <a href="https://www.mercadolivre.com.br/perfume-sedutor-arabe-sabah-100ml-original-feminino/up/MLBU3054985330?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+        </div>
+        
+        <div class="product-card">
+            <span class="badge discount-badge">↓ 36% OFF</span>
+            <span class="badge badge-promo-dia">🌟 PROMOÇÃO DO DIA</span>
+            <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_871708-MLA100016593317_122025-AB.webp" alt="Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor bldc Prateado Bege 127v"></div>
+            <h3>Secador De Cabelos Philco psc3500 4 Em 1 dobrável ...</h3>
+            <div class="price-tag" style="font-size: 20px;">R$ 382.50 <span class="old-price" style="font-size: 14px;">R$ 599.00</span></div>
+            <a href="https://www.mercadolivre.com.br/secador-de-cabelos-philcopsc3500-4-em-1dobravelmotorbldc-prateado/p/MLB49652036?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+        </div>
+        
+        <div class="product-card">
+            <span class="badge discount-badge">↓ 36% OFF</span>
             
-            <section class="hub-section">
-                <h2>🏆 Melhores Produtos</h2>
-                <div class="grid">
-                    
-                    <div class="card">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_760779-MLA99484493666_112025-AB.webp" style="width:100px">
-                        <h3>Whey Protein Concentrado 100% 900g Refil Dark Lab Sabor Morango</h3>
-                        <p class="price">R$ 159,90</p>
-                        <a href="https://www.mercadolivre.com.br/whey-protein-concentrado-100-900g-refil-dark-lab-sabor-morango/p/MLB26454796?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Oferta</a>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_760779-MLA99484493666_112025-AB.webp" style="width:100px">
-                        <h3>Whey Protein Concentrado 100% 900g Dark Lab</h3>
-                        <p class="price">R$ 159,90</p>
-                        <a href="https://www.mercadolivre.com.br/p/MLB26454796?matt_tool=vendas0nline" class="btn">Ver Oferta</a>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_942122-MLA99923169249_112025-AB.webp" style="width:100px">
-                        <h3>Creatina Monohidratada Pura 500g Dark Lab Unidade Sem Sabor</h3>
-                        <p class="price">R$ 44,90</p>
-                        <a href="https://www.mercadolivre.com.br/creatina-monohidratada-pura-500g-dark-lab-unidade/p/MLB26796581?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Oferta</a>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_848860-MLA99964507641_112025-AB.webp" style="width:100px">
-                        <h3>Creatina Monohidratada Pura 1kg Dark Lab Unidade Sem Sabor</h3>
-                        <p class="price">R$ 69,90</p>
-                        <a href="https://www.mercadolivre.com.br/creatina-monohidratada-pura-1kg-dark-lab-unidade-sem-sabor/p/MLB25929487?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Oferta</a>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_753960-MLB78002610612_082024-AB.webp" style="width:100px">
-                        <h3>Perfume Sedutor Árabe Sabah 100ml Original Feminino</h3>
-                        <p class="price">R$ 116,10</p>
-                        <a href="https://www.mercadolivre.com.br/perfume-sedutor-arabe-sabah-100ml-original-feminino/up/MLBU3054985330?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Oferta</a>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_871498-MLB89720767443_082025-AB.webp" style="width:100px">
-                        <h3>Aparador De Pelos Multigroom 8 Em 1 Mg3917/15 Philips Preto 127/220v</h3>
-                        <p class="price">R$ 122,31</p>
-                        <a href="https://www.mercadolivre.com.br/aparador-de-pelos-multigroom-8-em-1-mg391715-philips/up/MLBU3347036149?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Oferta</a>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_662415-MLA97812910758_112025-AB.webp" style="width:100px">
-                        <h3>Creatina Monohidratada 250g Growth Supplements - Sem Sabor Em Pó</h3>
-                        <p class="price">R$ 39,90</p>
-                        <a href="https://www.mercadolivre.com.br/creatina-monohidratada-250g-growth-supplements-sem-sabor-em-po/p/MLB19603205?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Oferta</a>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_871708-MLA100016593317_122025-AB.webp" style="width:100px">
-                        <h3>Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor bldc Prateado Bege 127v</h3>
-                        <p class="price">R$ 382,50</p>
-                        <a href="https://www.mercadolivre.com.br/secador-de-cabelos-philcopsc3500-4-em-1dobravelmotorbldc-prateado/p/MLB49652036?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Oferta</a>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_997574-MLA109633443994_042026-AB.webp" style="width:100px">
-                        <h3>Kit Body Splash Masculino Barbarius + Enigma + Midtown 200ml</h3>
-                        <p class="price">R$ 89,02</p>
-                        <a href="https://www.mercadolivre.com.br/kit-body-splash-masculino-barbarius-enigma-midtown-200ml/p/MLB68104527?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Oferta</a>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_662200-MLA44567890136_022025-AB.webp" style="width:100px">
-                        <h3>Kit Shampoo e Condicionador Pantene Hidratação 400ml</h3>
-                        <p class="price">R$ 35,90</p>
-                        <a href="https://www.mercadolivre.com.br/p/MLB3456789025?matt_tool=vendas0nline" class="btn">Ver Oferta</a>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_943083-MLB99905915023_112025-AB.webp" style="width:100px">
-                        <h3>Perfume Arabe Yara Lattafa Eau De Parfum 100ml Original C Nf</h3>
-                        <p class="price">R$ 184,48</p>
-                        <a href="https://www.mercadolivre.com.br/perfume-arabe-yara-lattafa-eau-de-parfum-100ml-original-c-nf/up/MLBU3619526469?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn">Ver Oferta</a>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_773311-MLA44567890135_012025-AB.webp" style="width:100px">
-                        <h3>Perfume Carolina Herrera 212 VIP Men 100ml</h3>
-                        <p class="price">R$ 499,00</p>
-                        <a href="https://www.mercadolivre.com.br/p/MLB3456789024?matt_tool=vendas0nline" class="btn">Ver Oferta</a>
-                    </div>
-                    
-                </div>
-            </section>
-
-            <section class="hub-section">
-                <h2>🔄 Comparativos Populares</h2>
-                <ul>
-                    
-                </ul>
-            </section>
-        </main>
-    </body>
-    </html>
-    
+            <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_997574-MLA109633443994_042026-AB.webp" alt="Kit Body Splash Masculino Barbarius + Enigma + Midtown 200ml"></div>
+            <h3>Kit Body Splash Masculino Barbarius + Enigma + Mid...</h3>
+            <div class="price-tag" style="font-size: 20px;">R$ 89.02 <span class="old-price" style="font-size: 14px;">R$ 140.00</span></div>
+            <a href="https://www.mercadolivre.com.br/kit-body-splash-masculino-barbarius-enigma-midtown-200ml/p/MLB68104527?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+        </div>
+        
+        <div class="product-card">
+            <span class="badge discount-badge">↓ 47% OFF</span>
+            <span class="badge badge-baixou">📉 BAIXOU!</span>
+            <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_871498-MLB89720767443_082025-AB.webp" alt="Aparador De Pelos Multigroom 8 Em 1 Mg3917/15 Philips Preto 127/220v"></div>
+            <h3>Aparador De Pelos Multigroom 8 Em 1 Mg3917/15 Phil...</h3>
+            <div class="price-tag" style="font-size: 20px;">R$ 122.31 <span class="old-price" style="font-size: 14px;">R$ 233.63</span></div>
+            <a href="https://www.mercadolivre.com.br/aparador-de-pelos-multigroom-8-em-1-mg391715-philips/up/MLBU3347036149?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+        </div>
+        
+        <div class="product-card">
+            <span class="badge discount-badge">↓ 38% OFF</span>
+            
+            <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_662415-MLA97812910758_112025-AB.webp" alt="Creatina Monohidratada 250g Growth Supplements - Sem Sabor Em Pó"></div>
+            <h3>Creatina Monohidratada 250g Growth Supplements - S...</h3>
+            <div class="price-tag" style="font-size: 20px;">R$ 39.90 <span class="old-price" style="font-size: 14px;">R$ 64.90</span></div>
+            <a href="https://www.mercadolivre.com.br/creatina-monohidratada-250g-growth-supplements-sem-sabor-em-po/p/MLB19603205?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+        </div>
+        
+        <div class="product-card">
+            <span class="badge discount-badge">↓ 65% OFF</span>
+            <span class="badge badge-menor-preco">💎 MENOR PREÇO</span>
+            <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_942122-MLA99923169249_112025-AB.webp" alt="Creatina Monohidratada Pura 500g Dark Lab Unidade Sem Sabor"></div>
+            <h3>Creatina Monohidratada Pura 500g Dark Lab Unidade ...</h3>
+            <div class="price-tag" style="font-size: 20px;">R$ 44.90 <span class="old-price" style="font-size: 14px;">R$ 129.90</span></div>
+            <a href="https://www.mercadolivre.com.br/creatina-monohidratada-pura-500g-dark-lab-unidade/p/MLB26796581?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+        </div>
+        
+        <div class="product-card">
+            <span class="badge discount-badge">↓ 23% OFF</span>
+            
+            <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_943083-MLB99905915023_112025-AB.webp" alt="Perfume Arabe Yara Lattafa Eau De Parfum 100ml Original C Nf"></div>
+            <h3>Perfume Arabe Yara Lattafa Eau De Parfum 100ml Ori...</h3>
+            <div class="price-tag" style="font-size: 20px;">R$ 184.48 <span class="old-price" style="font-size: 14px;">R$ 239.90</span></div>
+            <a href="https://www.mercadolivre.com.br/perfume-arabe-yara-lattafa-eau-de-parfum-100ml-original-c-nf/up/MLBU3619526469?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+        </div>
+        
+        <div class="product-card">
+            <span class="badge discount-badge">↓ 56% OFF</span>
+            <span class="badge badge-baixou">📉 BAIXOU!</span>
+            <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_848860-MLA99964507641_112025-AB.webp" alt="Creatina Monohidratada Pura 1kg Dark Lab Unidade Sem Sabor"></div>
+            <h3>Creatina Monohidratada Pura 1kg Dark Lab Unidade S...</h3>
+            <div class="price-tag" style="font-size: 20px;">R$ 69.90 <span class="old-price" style="font-size: 14px;">R$ 159.90</span></div>
+            <a href="https://www.mercadolivre.com.br/creatina-monohidratada-pura-1kg-dark-lab-unidade-sem-sabor/p/MLB25929487?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+        </div>
+        
+        <div class="product-card">
+            <span class="badge discount-badge">↓ 67% OFF</span>
+            <span class="badge badge-menor-preco">💎 MENOR PREÇO</span>
+            <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_760779-MLA99484493666_112025-AB.webp" alt="Whey Protein Concentrado 100% 900g Dark Lab"></div>
+            <h3>Whey Protein Concentrado 100% 900g Dark Lab...</h3>
+            <div class="price-tag" style="font-size: 20px;">R$ 159.90 <span class="old-price" style="font-size: 14px;">R$ 499.00</span></div>
+            <a href="https://www.mercadolivre.com.br/p/MLB26454796?matt_tool=vendas0nline" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+        </div>
+        
+        <div class="product-card">
+            <span class="badge discount-badge">↓ 28% OFF</span>
+            
+            <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_662200-MLA44567890136_022025-AB.webp" alt="Kit Shampoo e Condicionador Pantene Hidratação 400ml"></div>
+            <h3>Kit Shampoo e Condicionador Pantene Hidratação 400...</h3>
+            <div class="price-tag" style="font-size: 20px;">R$ 35.90 <span class="old-price" style="font-size: 14px;">R$ 49.90</span></div>
+            <a href="https://www.mercadolivre.com.br/p/MLB3456789025?matt_tool=vendas0nline" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+        </div>
+        
+        <div class="product-card">
+            <span class="badge discount-badge">↓ 23% OFF</span>
+            
+            <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_773311-MLA44567890135_012025-AB.webp" alt="Perfume Carolina Herrera 212 VIP Men 100ml"></div>
+            <h3>Perfume Carolina Herrera 212 VIP Men 100ml...</h3>
+            <div class="price-tag" style="font-size: 20px;">R$ 499.00 <span class="old-price" style="font-size: 14px;">R$ 650.00</span></div>
+            <a href="https://www.mercadolivre.com.br/p/MLB3456789024?matt_tool=vendas0nline" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+        </div>
+        </div>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<p>© 2026 Compara Preço. Atualizado via API oficial do Mercado Livre.</p>
+<div class="footer-links">
+<a href="../../sobre/">Sobre</a>
+<a href="../../contato/">Contato</a>
+<a href="../../privacidade/">Privacidade</a>
+<a href="../../termos/">Termos</a>
+<a href="../../quem-somos/">Quem Somos</a>
+</div>
+</div>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

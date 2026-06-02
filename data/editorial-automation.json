@@ -1,5 +1,5 @@
 {
-  "last_generated": "2026-06-02T03:35:40.917598",
+  "last_generated": "2026-06-02T05:17:50.711943",
   "automated_articles": [
     {
       "id": "article-MLB3755400429",
@@ -10,7 +10,7 @@
       "current_price": 159.9,
       "previous_price": 499.99,
       "status": "published",
-      "generated_at": "2026-06-02T03:35:40.917543",
+      "generated_at": "2026-06-02T05:17:50.711892",
       "content": "O Whey Protein Concentrado 100% 900g Refil Dark Lab Sabor Morango atingiu uma queda de 68% em seu preço. Agora disponível por apenas R$ 159.90, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
@@ -28,7 +28,7 @@
       "current_price": 44.9,
       "previous_price": 129.9,
       "status": "published",
-      "generated_at": "2026-06-02T03:35:40.917568",
+      "generated_at": "2026-06-02T05:17:50.711914",
       "content": "O Creatina Monohidratada Pura 500g Dark Lab Unidade Sem Sabor atingiu uma queda de 65% em seu preço. Agora disponível por apenas R$ 44.90, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
@@ -46,7 +46,7 @@
       "current_price": 332.1,
       "previous_price": 814.14,
       "status": "published",
-      "generated_at": "2026-06-02T03:35:40.917576",
+      "generated_at": "2026-06-02T05:17:50.711922",
       "content": "O Cooktop A Gás Fischer 4 Bocas Fit Line Trempe Esmaltada Aramado Preto 127/220v atingiu uma queda de 59% em seu preço. Agora disponível por apenas R$ 332.10, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
@@ -64,7 +64,7 @@
       "current_price": 67.16,
       "previous_price": 159.9,
       "status": "published",
-      "generated_at": "2026-06-02T03:35:40.917583",
+      "generated_at": "2026-06-02T05:17:50.711929",
       "content": "O Kit 10 Pote De Vidro Marmita Hermético 370ml Freezer Fitness Rishon Transparente atingiu uma queda de 57% em seu preço. Agora disponível por apenas R$ 67.16, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
@@ -82,7 +82,7 @@
       "current_price": 125.99,
       "previous_price": 299.0,
       "status": "published",
-      "generated_at": "2026-06-02T03:35:40.917593",
+      "generated_at": "2026-06-02T05:17:50.711938",
       "content": "O Parafusadeira Furadeira C/ 2 Baterias Maleta Kit Completo Led Eixo Flexível Vários Níveis Torque Amarelo 127/220v 60 Hz atingiu uma queda de 57% em seu preço. Agora disponível por apenas R$ 125.99, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
@@ -99,7 +99,7 @@
       "price_drop_threshold": 30,
       "current_drop": 68,
       "alert_sent": true,
-      "alert_timestamp": "2026-06-02T03:35:40.917564"
+      "alert_timestamp": "2026-06-02T05:17:50.711910"
     },
     {
       "product_id": "MLB4812143184",
@@ -107,7 +107,7 @@
       "price_drop_threshold": 30,
       "current_drop": 65,
       "alert_sent": true,
-      "alert_timestamp": "2026-06-02T03:35:40.917571"
+      "alert_timestamp": "2026-06-02T05:17:50.711917"
     },
     {
       "product_id": "MLB4292031849",
@@ -115,7 +115,7 @@
       "price_drop_threshold": 30,
       "current_drop": 59,
       "alert_sent": true,
-      "alert_timestamp": "2026-06-02T03:35:40.917579"
+      "alert_timestamp": "2026-06-02T05:17:50.711925"
     },
     {
       "product_id": "MLB4371605519",
@@ -123,7 +123,7 @@
       "price_drop_threshold": 30,
       "current_drop": 57,
       "alert_sent": true,
-      "alert_timestamp": "2026-06-02T03:35:40.917586"
+      "alert_timestamp": "2026-06-02T05:17:50.711932"
     },
     {
       "product_id": "MLB4345564271",
@@ -131,7 +131,7 @@
       "price_drop_threshold": 30,
       "current_drop": 57,
       "alert_sent": true,
-      "alert_timestamp": "2026-06-02T03:35:40.917596"
+      "alert_timestamp": "2026-06-02T05:17:50.711942"
     }
   ]
 }
