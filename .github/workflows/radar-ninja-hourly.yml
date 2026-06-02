@@ -2,7 +2,7 @@ name: Radar Ninja Hourly Publisher
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '33 05 * * *'
   workflow_dispatch:
 
 permissions:
