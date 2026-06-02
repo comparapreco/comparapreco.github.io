@@ -5,40 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compara Preço — As Melhores Ofertas do Mercado Livre Hoje</title>
     <meta name="description" content="Economize com as melhores ofertas curadas do Mercado Livre. Descubra produtos com desconto de até 70% em eletrônicos, casa, beleza e muito mais.">
+    <meta name="theme-color" content="#0f766e">
     <link rel="canonical" href="https://comparapreco.github.io/">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
 </head>
 <body>
+    <!-- ========== CABEÇALHO PREMIUM ========== -->
     <header class="header">
         <div class="container">
             <a href="/" class="logo">📊 Radar Ninja</a>
             <div class="search-bar">
-                <input type="text" id="mainSearch" placeholder="O que você quer comprar hoje?">
+                <input type="text" id="mainSearch" placeholder="O que você quer comprar hoje?" aria-label="Buscar produtos">
             </div>
             <nav class="nav-links">
-                <a href="/ofertas-hoje">Ofertas</a>
-                <a href="/comparar">Comparar</a>
-                <a href="/melhores-2026">Rankings</a>
-                <a href="/guias">Guias</a>
+                <a href="/ofertas-hoje">🔥 Ofertas</a>
+                <a href="/comparar">⚖️ Comparar</a>
+                <a href="/melhores-2026">🏆 Rankings</a>
+                <a href="/guias">📚 Guias</a>
             </nav>
         </div>
     </header>
 
+    <!-- ========== HERO SECTION PREMIUM ========== -->
     <section class="hero">
         <div class="container">
             <h1>Economize como um Ninja 🥷</h1>
             <p>Monitoramento 24/7 das melhores ofertas e comparativos reais.</p>
+            
             <div class="stats-grid">
-                <div class="stat-item"><span class="stat-val">5.000+</span><span class="stat-label">Ofertas</span></div>
-                <div class="stat-item"><span class="stat-val">300+</span><span class="stat-label">Comparativos</span></div>
-                <div class="stat-item"><span class="stat-val">1.000+</span><span class="stat-label">Produtos</span></div>
+                <div class="stat-item">
+                    <span class="stat-val" id="totalOffers">5.000+</span>
+                    <span class="stat-label">Ofertas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val" id="totalComparatives">300+</span>
+                    <span class="stat-label">Comparativos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val" id="totalProducts">1.000+</span>
+                    <span class="stat-label">Produtos</span>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="/ofertas-hoje" class="btn-primary">🔥 Ver Ofertas do Dia</a>
+                <a href="/comparar" class="btn-secondary">⚖️ Comparar Produtos</a>
             </div>
         </div>
     </section>
 
     <div class="container">
-        <section style="margin-bottom: 40px;">
+        <!-- ========== CATEGORIAS ========== -->
+        <section style="margin-bottom: 50px;">
+            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 16px; color: var(--text-muted);">Navegue por Categoria</h2>
             <div class="categories-scroll">
                 <a href="/categorias/tecnologia" class="cat-card">📱 Tecnologia</a>
                 <a href="/categorias/gamer" class="cat-card">🎮 Gamer</a>
@@ -51,56 +71,75 @@
             </div>
         </section>
 
+        <!-- ========== OFERTAS EM DESTAQUE ========== -->
         <section class="section">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div class="section-header">
                 <h2>🔥 Ofertas em Destaque</h2>
-                <a href="/ofertas-hoje" style="color: var(--primary); font-weight: bold; text-decoration: none;">Ver todas →</a>
+                <a href="/ofertas-hoje" class="view-all-link">Ver todas →</a>
             </div>
             <div id="featuredGrid" class="products-grid"></div>
         </section>
 
+        <!-- ========== COMPARATIVOS POPULARES ========== -->
         <section class="section">
-            <h2>🔍 Comparativos Populares</h2>
-            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                <!-- Links para comparativos seriam injetados aqui -->
+            <div class="section-header">
+                <h2>⚖️ Comparativos Populares</h2>
+                <a href="/comparar" class="view-all-link">Ver todos →</a>
             </div>
+            <div id="comparativesGrid" class="products-grid"></div>
+        </section>
+
+        <!-- ========== GUIAS DE COMPRA ========== -->
+        <section class="section">
+            <div class="section-header">
+                <h2>📚 Guias de Compra</h2>
+                <a href="/guias" class="view-all-link">Ver todos →</a>
+            </div>
+            <div id="guidesGrid" class="products-grid"></div>
         </section>
     </div>
 
+    <!-- ========== RODAPÉ PREMIUM ========== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>📊 Radar Ninja</h4>
-                    <p>O maior portal de curadoria e inteligência de compras do Brasil. Monitoramos milhares de produtos para você economizar de verdade.</p>
+                    <p>O maior portal de curadoria e inteligência de compras do Brasil. Monitoramos milhares de produtos para você economizar de verdade. Comparativos reais, ofertas verificadas e análises profundas.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Explorar</h4>
+                    <h4>🔍 Explorar</h4>
                     <ul>
-                        <li><a href="/ofertas-hoje">Ofertas do Dia</a></li>
-                        <li><a href="/comparar">Comparativos</a></li>
-                        <li><a href="/melhores-2026">Rankings 2026</a></li>
-                        <li><a href="/guias">Guias de Compra</a></li>
+                        <li><a href="/ofertas-hoje">🔥 Ofertas do Dia</a></li>
+                        <li><a href="/ofertas-explodindo">💥 Explodindo</a></li>
+                        <li><a href="/comparar">⚖️ Comparativos</a></li>
+                        <li><a href="/melhores-2026">🏆 Rankings 2026</a></li>
+                        <li><a href="/guias">📚 Guias de Compra</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Institucional</h4>
+                    <h4>ℹ️ Institucional</h4>
                     <ul>
-                        <li><a href="/metodologia">Como avaliamos</a></li>
-                        <li><a href="/equipe">Equipe Editorial</a></li>
-                        <li><a href="/politica-atualizacao">Atualização 24/7</a></li>
+                        <li><a href="/metodologia">📋 Nossa Metodologia</a></li>
+                        <li><a href="/equipe">👥 Equipe Editorial</a></li>
+                        <li><a href="/politica-atualizacao">⏰ Atualização 24/7</a></li>
+                        <li><a href="/sobre">ℹ️ Sobre o Radar</a></li>
+                        <li><a href="/imprensa">📰 Imprensa</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Legal</h4>
+                    <h4>⚖️ Legal</h4>
                     <ul>
-                        <li><a href="/privacidade">Privacidade</a></li>
-                        <li><a href="/termos">Termos de Uso</a></li>
+                        <li><a href="/privacidade">🔒 Privacidade</a></li>
+                        <li><a href="/termos">📜 Termos de Uso</a></li>
+                        <li><a href="/politica-afiliados">🤝 Política de Afiliados</a></li>
+                        <li><a href="/disclaimer">⚠️ Disclaimer</a></li>
+                        <li><a href="/contato">💬 Contato</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2026 Radar Ninja — Inteligência em Compras.
+                &copy; 2026 Radar Ninja — Inteligência em Compras. Todos os direitos reservados.
             </div>
         </div>
     </footer>
