@@ -1,0 +1,53 @@
+[
+  {
+    "timestamp": "2026-06-02T18:52:05.929257",
+    "produtos_processados": 0,
+    "publicados": 0,
+    "bloqueados": 0,
+    "duplicados": 0,
+    "recategorizados": 0,
+    "detalhes": {
+      "total_raw": 0,
+      "blocked_duplicate": 0,
+      "blocked_blacklist": 0,
+      "blocked_stock": 0,
+      "blocked_price_anomaly": 0,
+      "blocked_low_quality": 0,
+      "approved": 0
+    }
+  },
+  {
+    "timestamp": "2026-06-02T18:52:59.775755",
+    "produtos_processados": 0,
+    "publicados": 0,
+    "bloqueados": 0,
+    "duplicados": 0,
+    "recategorizados": 0,
+    "detalhes": {
+      "total_raw": 0,
+      "blocked_duplicate": 0,
+      "blocked_blacklist": 0,
+      "blocked_stock": 0,
+      "blocked_price_anomaly": 0,
+      "blocked_low_quality": 0,
+      "approved": 0
+    }
+  },
+  {
+    "timestamp": "2026-06-02T18:54:12.894510",
+    "produtos_processados": 7,
+    "publicados": 3,
+    "bloqueados": 4,
+    "duplicados": 0,
+    "recategorizados": 0,
+    "detalhes": {
+      "total_raw": 7,
+      "blocked_duplicate": 0,
+      "blocked_blacklist": 1,
+      "blocked_stock": 1,
+      "blocked_price_anomaly": 1,
+      "blocked_low_quality": 1,
+      "approved": 3
+    }
+  }
+]
