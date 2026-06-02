@@ -167,7 +167,14 @@ def render_post(product: Dict[str, Any], now: datetime, sequence: int) -> tuple[
                     <a href="{offer_url}" class="btn" style="margin-top: 15px; display: inline-block;">Ver Oferta no Mercado Livre</a>
                 </div>
             </section>
-            <div class="content">{article_body}</div>
+            <div class="content">
+                {article_body}
+                <div style="margin-top: 30px; padding: 25px; background: #fffbeb; border: 2px solid #f59e0b; border-radius: 15px; text-align: center;">
+                    <h3 style="color: #92400e; margin-bottom: 15px;">🔥 Aproveite antes que acabe!</h3>
+                    <p style="margin-bottom: 20px;">Este preço foi capturado pelo nosso robô e pode sofrer alteração a qualquer momento.</p>
+                    <a href="{offer_url}" class="btn" style="background: var(--cta-gradient); color: white; padding: 15px 30px; font-size: 18px; width: 100%; display: block;">Ver Preço Atualizado no Mercado Livre 🚀</a>
+                </div>
+            </div>
             <footer style="margin-top: 40px; text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
                 <a href="../../noticias/" style="color: var(--primary); text-decoration: none; font-weight: bold;">← Ver todas as notícias</a>
             </footer>

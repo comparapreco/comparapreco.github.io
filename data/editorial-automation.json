@@ -1,31 +1,31 @@
 {
-  "last_generated": "2026-06-02T15:10:59.080827",
+  "last_generated": "2026-06-02T15:13:12.481927",
   "automated_articles": [
     {
-      "id": "article-MLB3994439565",
-      "title": "Perfume Sedutor Árabe Sabah 100ml Original Feminino: Queda Histórica de 49% OFF!",
-      "slug": "perfume-sedutor-árabe-sabah-100ml-original-feminin-queda-49",
-      "category": "Beleza",
-      "price_drop": 49,
-      "current_price": 116.1,
-      "previous_price": 230.0,
+      "id": "article-MLB3386925565",
+      "title": "Furadeira Parafusadeira Impacto Bateria 21v Bivolt: Queda Histórica de 50% OFF!",
+      "slug": "furadeira-parafusadeira-impacto-bateria-21v-bivolt-queda-50",
+      "category": "Ferramentas",
+      "price_drop": 50,
+      "current_price": 149.9,
+      "previous_price": 299.9,
       "status": "published",
-      "generated_at": "2026-06-02T15:10:59.080804",
-      "content": "O Perfume Sedutor Árabe Sabah 100ml Original Feminino atingiu uma queda de 49% em seu preço. Agora disponível por apenas R$ 116.10, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
+      "generated_at": "2026-06-02T15:13:12.481906",
+      "content": "O Furadeira Parafusadeira Impacto Bateria 21v Bivolt atingiu uma queda de 50% em seu preço. Agora disponível por apenas R$ 149.90, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
           "platform": "twitter",
-          "content": "📱 ALERTA: Perfume Sedutor Árabe Sabah 100ml Original Feminino com 49% de desconto! De R$ 230.00 por apenas R$ 116.10. Aproveite! 🔥 #ComparaPreço #Oferta"
+          "content": "📱 ALERTA: Furadeira Parafusadeira Impacto Bateria 21v Bivolt com 50% de desconto! De R$ 299.90 por apenas R$ 149.90. Aproveite! 🔥 #ComparaPreço #Oferta"
         }
       ]
     }
   ],
   "alert_triggers": [
     {
-      "product_id": "MLB3994439565",
-      "product_name": "Perfume Sedutor Árabe Sabah 100ml Original Feminino",
-      "current_drop": 49,
-      "alert_timestamp": "2026-06-02T15:10:59.080829"
+      "product_id": "MLB3386925565",
+      "product_name": "Furadeira Parafusadeira Impacto Bateria 21v Bivolt",
+      "current_drop": 50,
+      "alert_timestamp": "2026-06-02T15:13:12.481929"
     }
   ]
 }
