@@ -33,7 +33,7 @@ def run_script_protected(script, timeout=DEFAULT_TIMEOUT):
 def run_pipeline():
     """Pipeline imparável com isolamento de falhas."""
     scripts = [
-        "fetch_products.py", "score_products.py", "affiliate_links.py",
+        "fetch_products_realtime.py", "score_products.py", "affiliate_links.py",
         "validate_products.py", "deduplicate.py", "deep_clean_duplicates.py", "clean_orphan_pages.py", "clean_duplicate_comparisons.py", "sync_database.py",
         "editorial_automation.py", "generate_blog_posts.py",
         "generate_pages.py", "build_categories.py", "build_homepage.py",
@@ -43,7 +43,7 @@ def run_pipeline():
     ]
     
     failed_essential = [
-        "fetch_products.py", "sync_database.py", "generate_blog_posts.py",
+        "fetch_products_realtime.py", "sync_database.py", "generate_blog_posts.py",
         "generate_pages.py", "build_categories.py", "build_homepage.py",
         "generate_sitemaps.py", "generate_feeds.py"
     ] # Scripts que não podem falhar para publicação automática
