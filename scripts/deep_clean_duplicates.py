@@ -3,6 +3,7 @@ import os
 import unicodedata
 from collections import defaultdict
 from logger import logger
+from difflib import SequenceMatcher
 
 def slugify(text: str) -> str:
     if not text: return ""
@@ -79,6 +80,11 @@ def deep_clean(db_path):
             
             # 4. Detecção de "Whey Protein" ou nomes muito parecidos
             if p_norm[:15] == e_norm[:15] and len(p_norm) > 15:
+                is_duplicate = True
+                break
+
+            # 5. Similaridade de String Real (Levenshtein/SequenceMatcher)
+            if SequenceMatcher(None, p_norm, e_norm).ratio() > 0.85:
                 is_duplicate = True
                 break
 
