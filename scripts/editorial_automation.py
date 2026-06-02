@@ -1,5 +1,6 @@
 import json
 import os
+import random
 from datetime import datetime
 from pathlib import Path
 from logger import logger
@@ -9,8 +10,11 @@ DATA_DIR = ROOT / "data"
 DATABASE_FILE = DATA_DIR / "database" / "all_products.json"
 EDITORIAL_FILE = DATA_DIR / "editorial-automation.json"
 
+# Termos proibidos para evitar repetição excessiva (como solicitado pelo usuário)
+FORBIDDEN_TERMS = ["whey", "creatina", "dark lab", "suplemento"]
+
 def generate_editorial_content():
-    """Gera conteúdo editorial real baseado nos produtos com maiores descontos."""
+    """Gera conteúdo editorial real com DIVERSIFICAÇÃO de categorias."""
     if not DATABASE_FILE.exists():
         logger.error(f"Banco de dados não encontrado em {DATABASE_FILE}")
         return None
@@ -22,11 +26,40 @@ def generate_editorial_content():
         logger.error(f"Erro ao ler banco de dados: {e}")
         return None
 
-    # Filtrar apenas produtos ativos e com desconto relevante (> 30%)
-    active_offers = [p for p in products if p.get('status') == 'active' and p.get('custom_discount_pct', 0) >= 30]
+    # 1. Filtrar apenas produtos ativos e com desconto relevante (> 30%)
+    # 2. Excluir termos proibidos (Whey/Vírus)
+    active_offers = []
+    for p in products:
+        name_lower = p.get('name', '').lower()
+        is_forbidden = any(term in name_lower for term in FORBIDDEN_TERMS)
+        
+        if p.get('status') == 'active' and p.get('custom_discount_pct', 0) >= 30 and not is_forbidden:
+            active_offers.append(p)
     
-    # Ordenar pelos maiores descontos
-    top_offers = sorted(active_offers, key=lambda x: x.get('custom_discount_pct', 0), reverse=True)[:5]
+    if not active_offers:
+        logger.warning("Nenhuma oferta encontrada após filtrar termos proibidos. Relaxando filtros...")
+        active_offers = [p for p in products if p.get('status') == 'active' and p.get('custom_discount_pct', 0) >= 20]
+
+    # 3. Agrupar por categoria para garantir diversidade
+    by_category = {}
+    for p in active_offers:
+        cat = p.get('custom_category_slug', 'geral')
+        if cat not in by_category:
+            by_category[cat] = []
+        by_category[cat].append(p)
+
+    # 4. Escolher o melhor de cada categoria (máximo 5 categorias diferentes)
+    diverse_offers = []
+    categories = list(by_category.keys())
+    random.shuffle(categories) # Aleatoriedade para não vir sempre a mesma ordem
+    
+    for cat in categories[:5]:
+        # Pegar o melhor desconto desta categoria
+        best_in_cat = sorted(by_category[cat], key=lambda x: x.get('custom_discount_pct', 0), reverse=True)[0]
+        diverse_offers.append(best_in_cat)
+
+    # 5. Ordenar a seleção final pelo maior desconto entre as escolhidas
+    top_offers = sorted(diverse_offers, key=lambda x: x.get('custom_discount_pct', 0), reverse=True)
 
     articles = []
     triggers = []
@@ -39,7 +72,9 @@ def generate_editorial_content():
         old_price = p.get('original_price') or p.get('originalPrice')
         category = p.get('custom_category_slug', 'Geral').title()
         
-        slug = f"{name.lower().replace(' ', '-')[:50]}-queda-{discount}"
+        # Criar slug limpo
+        clean_name = "".join([c if c.isalnum() else "-" for c in name.lower()]).replace("--", "-")
+        slug = f"{clean_name[:50]}-queda-{discount}"
         
         article = {
             "id": f"article-{p_id}",
@@ -82,4 +117,4 @@ if __name__ == "__main__":
         os.makedirs(DATA_DIR, exist_ok=True)
         with open(EDITORIAL_FILE, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
-        logger.info(f"Sucesso: {len(data['automated_articles'])} artigos reais gerados em {EDITORIAL_FILE}")
+        logger.info(f"Sucesso: {len(data['automated_articles'])} artigos diversificados gerados em {EDITORIAL_FILE}")
