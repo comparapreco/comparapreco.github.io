@@ -12,13 +12,9 @@ from pathlib import Path
 BASE_URL = "https://comparapreco.github.io"
 ROOT = Path(__file__).resolve().parents[1]
 
-# Configuração Multi-Site
-SITE_KEY = os.environ.get("SITE_KEY")
-if SITE_KEY:
-    BASE_URL = f"https://comparapreco.github.io/sites/{SITE_KEY}"
-    OUTPUT_ROOT = ROOT / "sites" / SITE_KEY
-else:
-    OUTPUT_ROOT = ROOT
+# Configuração Portal Único
+BASE_URL = "https://comparapreco.github.io"
+OUTPUT_ROOT = ROOT
 
 NOW_DATE = datetime.now().strftime("%Y-%m-%d")
 NOW_DATETIME = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+00:00")
@@ -60,7 +56,7 @@ def extract_date_from_filename(filename: str) -> str:
 
 def collect_posts() -> list:
     """Coleta todos os posts individuais de noticias/posts/."""
-    posts_dir = OUTPUT_ROOT / "noticias" / "posts"
+    posts_dir = ROOT / "noticias" / "posts"
     urls = []
     if not posts_dir.exists():
         return urls
@@ -77,12 +73,12 @@ def collect_posts() -> list:
 
 def collect_ofertas() -> list:
     """Coleta todas as páginas de ofertas/produtos."""
-    ofertas_dir = OUTPUT_ROOT / "ofertas"
+    ofertas_dir = ROOT / "ofertas"
     urls = []
     if not ofertas_dir.exists():
         return urls
     for html_file in sorted(ofertas_dir.rglob("*.html")):
-        rel = html_file.relative_to(OUTPUT_ROOT)
+        rel = html_file.relative_to(ROOT)
         urls.append({
             "loc": f"{BASE_URL}/{rel}",
             "lastmod": NOW_DATE,
@@ -94,12 +90,12 @@ def collect_ofertas() -> list:
 
 def collect_produtos_intel() -> list:
     """Coleta páginas de inteligência de produtos (produtos/)."""
-    produtos_dir = OUTPUT_ROOT / "produtos"
+    produtos_dir = ROOT / "produtos"
     urls = []
     if not produtos_dir.exists():
         return urls
     for html_file in sorted(produtos_dir.rglob("*.html")):
-        rel = html_file.relative_to(OUTPUT_ROOT)
+        rel = html_file.relative_to(ROOT)
         urls.append({
             "loc": f"{BASE_URL}/{rel}",
             "lastmod": NOW_DATE,
@@ -111,7 +107,7 @@ def collect_produtos_intel() -> list:
 
 def collect_categorias() -> list:
     """Coleta páginas de categorias."""
-    cat_dir = OUTPUT_ROOT / "categorias"
+    cat_dir = ROOT / "categorias"
     urls = []
     if not cat_dir.exists():
         return urls
@@ -128,7 +124,7 @@ def collect_categorias() -> list:
 
 def collect_guias() -> list:
     """Coleta páginas de guias."""
-    guias_dir = OUTPUT_ROOT / "guias"
+    guias_dir = ROOT / "guias"
     urls = []
     if not guias_dir.exists():
         return urls
@@ -145,7 +141,7 @@ def collect_guias() -> list:
 
 def collect_comparativos() -> list:
     """Coleta páginas de comparativos (A vs B)."""
-    comp_dir = OUTPUT_ROOT / "comparar"
+    comp_dir = ROOT / "comparar"
     urls = []
     if not comp_dir.exists():
         return urls
@@ -161,7 +157,7 @@ def collect_comparativos() -> list:
 
 def collect_rankings() -> list:
     """Coleta páginas de rankings (Melhores 2026)."""
-    rank_dir = OUTPUT_ROOT / "melhores-2026"
+    rank_dir = ROOT / "melhores-2026"
     urls = []
     if not rank_dir.exists():
         return urls

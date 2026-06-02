@@ -12,12 +12,8 @@ SITE_KEY = os.environ.get("SITE_KEY")
 SITE_CATEGORIES = os.environ.get("SITE_CATEGORIES", "").split(",")
 PRODUCTS_FILE = ROOT / "data" / "database" / "all_products.json"
 
-if SITE_KEY:
-    OUTPUT_BASE = ROOT / "sites" / SITE_KEY
-    BASE_URL = f"https://comparapreco.github.io/sites/{SITE_KEY}/"
-else:
-    OUTPUT_BASE = ROOT
-    BASE_URL = "https://comparapreco.github.io/"
+OUTPUT_BASE = ROOT
+BASE_URL = "https://comparapreco.github.io/"
 
 def money(value):
     try:
@@ -30,10 +26,6 @@ def load_products():
         return []
     with open(PRODUCTS_FILE, 'r', encoding='utf-8') as f:
         products = json.load(f)
-    
-    if SITE_KEY and SITE_CATEGORIES and SITE_CATEGORIES != [""]:
-        products = [p for p in products if p.get("custom_category_slug") in SITE_CATEGORIES]
-    
     return [p for p in products if p.get("status") == "active"]
 
 def generate_comparisons(products):
@@ -127,7 +119,7 @@ def generate_comparisons(products):
     template = Template(template_str)
     for cat, items in cats.items():
         items.sort(key=lambda x: float(x.get("custom_discount_pct", 0)), reverse=True)
-        top = items[:8] # Aumentado para 8 para mais combinações
+        top = items[:15] # Aumentado para 15 para o portal gigante
         for i in range(len(top)):
             for j in range(i+1, len(top)):
                 p1, p2 = top[i], top[j]
@@ -174,7 +166,10 @@ def generate_rankings(products):
                 <div class="rank-number">#{{ loop.index }}</div>
                 <img src="{{ p.image }}" class="rank-img">
                 <div class="rank-info">
-                    <span class="rank-badge">{{ p.custom_discount_pct }}% DE DESCONTO</span>
+                    {% if p.is_best_value %}<span class="rank-badge" style="background:var(--primary)">🏆 MELHOR CUSTO-BENEFÍCIO</span>
+                    {% elif p.is_premium %}<span class="rank-badge" style="background:#6f42c1">💎 ESCOLHA PREMIUM</span>
+                    {% elif p.is_budget %}<span class="rank-badge" style="background:#20c997">💰 MELHOR PREÇO</span>
+                    {% else %}<span class="rank-badge">{{ p.custom_discount_pct }}% DE DESCONTO</span>{% endif %}
                     <h3>{{ p.name }}</h3>
                     <div class="price-tag" style="font-size:22px; margin:10px 0;">{{ money(p.price) }}</div>
                     <a href="{{ p.custom_affiliate_url }}" class="btn">Ver Melhor Preço</a>
@@ -187,10 +182,25 @@ def generate_rankings(products):
     """
     template = Template(template_str)
     for cat, items in cats.items():
-        items.sort(key=lambda x: float(x.get("custom_discount_pct", 0)), reverse=True)
-        top_10 = items[:10]
-        if not top_10: continue
+        # Filtrar apenas produtos com preço válido
+        valid_items = [p for p in items if p.get("price") and float(p.get("price")) > 0]
+        if not valid_items: continue
         
+        valid_items.sort(key=lambda x: float(x.get("custom_discount_pct", 0)), reverse=True)
+        
+        # Identificar destaques
+        prices = [float(p["price"]) for p in valid_items]
+        avg_price = sum(prices) / len(prices)
+        
+        for p in valid_items:
+            p_price = float(p["price"])
+            p_discount = float(p.get("custom_discount_pct", 0))
+            
+            p["is_best_value"] = p_discount > 15 and p_price <= avg_price
+            p["is_premium"] = p_price > avg_price * 1.5
+            p["is_budget"] = p_price < avg_price * 0.6
+            
+        top_10 = valid_items[:10]
         fname = f"melhores-{cat}-2026.html"
         (out_dir / fname).write_text(template.render(category_name=cat.replace('-', ' ').title(), products=top_10, money=money))
 

@@ -1,0 +1,16 @@
+{
+  "portal_name": "Radar Ninja",
+  "base_url": "https://comparapreco.github.io/",
+  "themes": {
+    "tech": { "name": "Ninja Tech", "categories": ["informatica", "celulares", "tv-e-video"] },
+    "gamer": { "name": "Ninja Gamer", "categories": ["games", "informatica"] },
+    "casa": { "name": "Ninja Casa", "categories": ["casa", "eletrodomesticos"] },
+    "eletro": { "name": "Ninja Eletro", "categories": ["eletrodomesticos"] },
+    "pet": { "name": "Ninja Pet", "categories": ["pet"] },
+    "bebe": { "name": "Ninja Bebê", "categories": ["bebe", "brinquedos"] },
+    "beleza": { "name": "Ninja Beleza", "categories": ["beleza", "saude"] },
+    "fitness": { "name": "Ninja Fitness", "categories": ["fitness", "saude"] },
+    "auto": { "name": "Ninja Auto", "categories": ["auto", "ferramentas"] },
+    "ferramentas": { "name": "Ninja Ferramentas", "categories": ["ferramentas"] }
+  }
+}

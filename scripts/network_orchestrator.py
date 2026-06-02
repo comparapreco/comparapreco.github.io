@@ -11,15 +11,8 @@ def load_config():
     with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def run_site_generation(site_key, site_config):
-    print(f"\n🚀 Iniciando geração para: {site_config['name']} ({site_key})")
-    
-    # Criar ambiente para o site (variáveis de ambiente ou argumentos)
-    env = os.environ.copy()
-    env["SITE_KEY"] = site_key
-    env["SITE_NAME"] = site_config["name"]
-    env["SITE_CATEGORIES"] = ",".join(site_config["categories"])
-    env["SITE_ROOT"] = str(ROOT / "sites" / site_key)
+def run_portal_generation():
+    print(f"\n🚀 Iniciando geração centralizada do Portal Radar Ninja")
     
     scripts_to_run = [
         "generate_blog_posts.py",
@@ -37,13 +30,11 @@ def run_site_generation(site_key, site_config):
             
         print(f"  - Executando {script}...")
         try:
-            # Passamos o SITE_KEY como argumento para os scripts que suportarem
             result = subprocess.run(
-                [sys.executable, str(script_path), site_key],
-                env=env,
+                [sys.executable, str(script_path)],
                 capture_output=True,
                 text=True,
-                timeout=300
+                timeout=600
             )
             if result.returncode != 0:
                 print(f"  ❌ Erro em {script}: {result.stderr[:200]}")
@@ -53,9 +44,7 @@ def run_site_generation(site_key, site_config):
             print(f"  ❌ Falha crítica em {script}: {str(e)}")
 
 def main():
-    config = load_config()
-    for site_key, site_config in config["sites"].items():
-        run_site_generation(site_key, site_config)
+    run_portal_generation()
 
 if __name__ == "__main__":
     main()

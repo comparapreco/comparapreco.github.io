@@ -18,16 +18,10 @@ from logger import logger
 BASE_URL = "https://comparapreco.github.io/"
 ROOT = Path(__file__).resolve().parents[1]
 
-# Configuração Multi-Site
-SITE_KEY = os.environ.get("SITE_KEY")
-if SITE_KEY:
-    SITE_ROOT = ROOT / "sites" / SITE_KEY
-    POSTS_DIR = SITE_ROOT / "noticias" / "posts"
-    NEWS_INDEX = SITE_ROOT / "noticias" / "index.html"
-    BASE_URL = f"https://comparapreco.github.io/sites/{SITE_KEY}/"
-else:
-    POSTS_DIR = ROOT / "noticias" / "posts"
-    NEWS_INDEX = ROOT / "noticias" / "index.html"
+# Configuração Portal Único
+POSTS_DIR = ROOT / "noticias" / "posts"
+NEWS_INDEX = ROOT / "noticias" / "index.html"
+BASE_URL = "https://comparapreco.github.io/"
 
 PRODUCTS_FILE = ROOT / "data" / "database" / "all_products.json"
 
@@ -52,13 +46,6 @@ def load_products() -> List[Dict[str, Any]]:
     with PRODUCTS_FILE.open("r", encoding="utf-8") as f:
         products = json.load(f)
     
-    # Filtrar por categorias do nicho se estivermos em modo multi-site
-    categories_env = os.environ.get("SITE_CATEGORIES", "")
-    if SITE_KEY and categories_env:
-        categories = categories_env.split(",")
-        products = [p for p in products if p.get("custom_category_slug") in categories]
-        logger.info(f"Filtrados {len(products)} produtos para o nicho {SITE_KEY}")
-
     active = [p for p in products if p.get("status", "active") == "active" and p.get("name")]
     active.sort(key=lambda p: float(p.get("custom_discount_pct") or 0), reverse=True)
     return active
@@ -242,24 +229,5 @@ def generate_blog_content(count: int = 1) -> List[Path]:
 
 if __name__ == "__main__":
     import sys
-
-    # Em modo multi-site, o primeiro argumento pode ser o SITE_KEY
-    # Verificamos se o argumento é um número (count) ou uma string (site_key)
-    count = 1
-    if len(sys.argv) > 1:
-        try:
-            count = int(sys.argv[1])
-        except ValueError:
-            # Se não for número, é o SITE_KEY (já tratado via env var no orquestrador)
-            # Mas podemos ter um segundo argumento para o count
-            if len(sys.argv) > 2:
-                try:
-                    count = int(sys.argv[2])
-                except ValueError:
-                    pass
-    
-    env_count = os.environ.get("BLOG_POST_COUNT")
-    if env_count:
-        count = int(env_count)
-        
+    count = int(sys.argv[1]) if len(sys.argv) > 1 else int(os.environ.get("BLOG_POST_COUNT", "1"))
     generate_blog_content(max(1, count))
