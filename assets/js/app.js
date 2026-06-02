@@ -79,10 +79,22 @@ function renderProducts(products, gridId = 'featuredGrid', limit = 24) {
         return;
     }
 
-    // Ordenar por desconto
+    // Ordenar por desconto com DIVERSIFICAÇÃO
     const sorted = [...products].sort((a, b) => (b.custom_discount_pct || 0) - (a.custom_discount_pct || 0));
-    const limited = sorted.slice(0, limit);
-    grid.innerHTML = limited.map(p => createProductCard(p)).join('');
+    
+    const diversified = [];
+    const seenCats = {};
+    for (const p of sorted) {
+        const cat = p.custom_category_slug || 'outros';
+        seenCats[cat] = (seenCats[cat] || 0) + 1;
+        // Permitir no máximo 4 produtos da mesma categoria no grid principal
+        if (seenCats[cat] <= 4) {
+            diversified.push(p);
+        }
+        if (diversified.length >= limit) break;
+    }
+    
+    grid.innerHTML = diversified.map(p => createProductCard(p)).join('');
     
     // Adicionar animação fade-in
     const cards = grid.querySelectorAll('.product-card');

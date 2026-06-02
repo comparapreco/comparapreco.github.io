@@ -40,15 +40,26 @@ def build_homepage(input_path: str, template_path: str, output_path: str) -> Non
     # Ordenar por desconto
     sorted_products = sorted(products, key=lambda x: x.get("custom_discount_pct", 0), reverse=True)
     
+    # DIVERSIFICAÇÃO: Garantir que produtos repetitivos (como Whey) não dominem o topo
+    diversified_top = []
+    seen_categories = {}
+    for p in sorted_products:
+        cat = p.get("custom_category_slug", "outros")
+        # Limitar a 3 produtos por categoria no pool de destaques
+        seen_categories[cat] = seen_categories.get(cat, 0) + 1
+        if seen_categories[cat] <= 3:
+            diversified_top.append(p)
+        if len(diversified_top) >= 40:
+            break
+            
     # Selecionar o destaque (Hero Section)
     # ROTATIVIDADE MÁXIMA: Usamos a hora atual como semente para garantir que o destaque mude a cada execução,
     # mas que seja consistente dentro de uma mesma rodada de geração.
     import time
     random.seed(int(time.time()))
     
-    # Selecionamos entre os TOP 50 produtos com maior desconto para máxima variedade
-    pool_size = min(len(sorted_products), 50)
-    top_candidates = sorted_products[:pool_size]
+    # Selecionamos entre os candidatos diversificados para o destaque
+    top_candidates = diversified_top[:15]
     hero_product = random.choice(top_candidates)
     logger.info(f"Destaque rotativo escolhido: {hero_product.get('name')} (ID: {hero_product.get('id')})")
     
