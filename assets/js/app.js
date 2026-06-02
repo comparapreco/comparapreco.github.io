@@ -53,7 +53,7 @@ function createProductCard(p) {
                 ${savings > 0 ? `<span class="savings">💰 Economize R$ ${formatPrice(savings)}</span>` : ''}
             </div>
             <a href="${p.custom_affiliate_url}" class="btn-buy" target="_blank" rel="noopener noreferrer">
-                🛒 Ver Oferta
+                Ver Oferta Ninja 🚀
             </a>
         </div>
     `;
