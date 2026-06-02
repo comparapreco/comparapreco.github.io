@@ -1,126 +1,110 @@
-
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>{{seo.title}}</title>
-<meta content="{{meta.description}}" name="description"/>
-<link href="{{canonical.url}}" rel="canonical"/>
-<link href="assets/css/style.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-P0X4Z9Y7B2');
-</script>
-<script>
-  // Rastreamento de cliques em afiliados
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        gtag('event', 'affiliate_click', {
-          'event_category': 'engagement',
-          'event_label': this.href,
-          'link_url': this.href,
-          'product_name': this.getAttribute('title') || this.innerText
-        });
-      });
-    });
-  });
-</script>
-  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
-  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{seo.title}}</title>
+    <meta name="description" content="{{meta.description}}">
+    <link rel="canonical" href="{{canonical.url}}">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
 </head>
 <body>
-<header class="header">
-<div class="container header-inner">
-<a class="logo" href="./">📊 <strong>Compara Preço</strong></a>
-<div class="search-bar">
-<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
-</div>
-<button id="themeToggle">🌙</button>
-</div>
-</header>
-<!-- Novo Hero Banner Profissional -->
-<section class="main-hero">
-<div class="container">
-<h1>🔥 As Melhores Ofertas do Dia</h1>
-<p>+ de 5.000 ofertas curadas e atualizadas automaticamente pelo nosso robô.</p>
-<div class="hero-btns">
-<a class="btn btn-white" href="#featuredGrid">Ver Promoções</a>
-<a class="btn btn-outline-white" href="categorias/celulares/index.html">Celulares</a>
-<a class="btn btn-outline-white" href="categorias/informatica/index.html">Informática</a>
-</div>
-</div>
-</section>
-<!-- Dashboard de Estatísticas -->
-<div class="container">
-<div class="stats-bar" id="statsBar">
-<!-- Preenchido via JS -->
-</div>
-</div>
-<!-- Barra de Confiança -->
-<div class="container">
-<div class="trust-bar">
-<div class="trust-item">✓ Atualização automática</div>
-<div class="trust-item">✓ Dados oficiais ML</div>
-<div class="trust-item">✓ Comparação real</div>
-<div class="trust-item">✓ Ofertas verificadas</div>
-</div>
-</div>
-<nav class="cat-nav">
-<div class="container cat-tabs" id="catTabs">
-<button class="cat-tab active" data-cat="todos">Todos</button>
-<a class="cat-tab" href="categorias/celulares/index.html">Celulares</a>
-<a class="cat-tab" href="categorias/informatica/index.html">Informática</a>
-<a class="cat-tab" href="categorias/eletrodomesticos/index.html">Eletrodomésticos</a>
-<a class="cat-tab" href="categorias/games/index.html">Games</a>
-<a class="cat-tab" href="categorias/tv-e-video/index.html">TV e Vídeo</a>
-<a class="cat-tab" href="categorias/ferramentas/index.html">Ferramentas</a>
-<a class="cat-tab" href="categorias/beleza/index.html">Beleza</a>
-<a class="cat-tab" href="categorias/casa/index.html">Casa</a>
-<a class="cat-tab" href="noticias/index.html">📰 Blog</a>
-</div>
-</nav>
-<main class="container">
-<!-- Carrossel de Destaques -->
-<section class="hero" id="heroProduct">
-      {{hero_section}}
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">📊 Radar Ninja</a>
+            <div class="search-bar">
+                <input type="text" id="mainSearch" placeholder="O que você quer comprar hoje?">
+            </div>
+            <nav class="nav-links">
+                <a href="/ofertas-hoje">Ofertas</a>
+                <a href="/comparar">Comparar</a>
+                <a href="/melhores-2026">Rankings</a>
+                <a href="/guias">Guias</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Economize como um Ninja 🥷</h1>
+            <p>Monitoramento 24/7 das melhores ofertas e comparativos reais.</p>
+            <div class="stats-grid">
+                <div class="stat-item"><span class="stat-val">5.000+</span><span class="stat-label">Ofertas</span></div>
+                <div class="stat-item"><span class="stat-val">300+</span><span class="stat-label">Comparativos</span></div>
+                <div class="stat-item"><span class="stat-val">1.000+</span><span class="stat-label">Produtos</span></div>
+            </div>
+        </div>
     </section>
-<!-- Compara Preço Premium -->
-<section class="compara-premium" id="comparaPremium">
-<!-- Preenchido via JS -->
-</section>
-<section class="section">
-<div class="section-header">
-<h2>🔥 Melhores Ofertas</h2>
-</div>
-<div class="products-grid" id="featuredGrid">
-        {{featured_products_grid}}
-      </div>
-</section>
-<!-- Menu de Exploração -->
-{{explorar_menu}}
-</main>
-<footer class="footer">
-<div class="container">
-<p>© 2026 Compara Preço. Atualizado via API oficial do Mercado Livre.</p>
-<div class="footer-links">
-<a href="noticias/index.html">Blog</a>
-<a href="sobre/">Sobre</a>
-<a href="contato/">Contato</a>
-<a href="privacidade/">Privacidade</a>
-<a href="termos/">Termos</a>
-<a href="quem-somos/">Quem Somos</a>
-</div>
-</div>
-</footer>
-<script src="assets/js/app.js"></script>
+
+    <div class="container">
+        <section style="margin-bottom: 40px;">
+            <div class="categories-scroll">
+                <a href="/categorias/tecnologia" class="cat-card">📱 Tecnologia</a>
+                <a href="/categorias/gamer" class="cat-card">🎮 Gamer</a>
+                <a href="/categorias/casa" class="cat-card">🏠 Casa</a>
+                <a href="/categorias/eletrodomesticos" class="cat-card">🔌 Eletro</a>
+                <a href="/categorias/pet" class="cat-card">🐶 Pet</a>
+                <a href="/categorias/beleza" class="cat-card">💄 Beleza</a>
+                <a href="/categorias/fitness" class="cat-card">💪 Fitness</a>
+                <a href="/categorias/auto" class="cat-card">🚗 Auto</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2>🔥 Ofertas em Destaque</h2>
+                <a href="/ofertas-hoje" style="color: var(--primary); font-weight: bold; text-decoration: none;">Ver todas →</a>
+            </div>
+            {{featured_products_grid}}
+        </section>
+
+        <section class="section">
+            <h2>🔍 Comparativos Populares</h2>
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                <!-- Links para comparativos seriam injetados aqui -->
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>📊 Radar Ninja</h4>
+                    <p>O maior portal de curadoria e inteligência de compras do Brasil. Monitoramos milhares de produtos para você economizar de verdade.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="/ofertas-hoje">Ofertas do Dia</a></li>
+                        <li><a href="/comparar">Comparativos</a></li>
+                        <li><a href="/melhores-2026">Rankings 2026</a></li>
+                        <li><a href="/guias">Guias de Compra</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="/metodologia">Como avaliamos</a></li>
+                        <li><a href="/equipe">Equipe Editorial</a></li>
+                        <li><a href="/politica-atualizacao">Atualização 24/7</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacidade">Privacidade</a></li>
+                        <li><a href="/termos">Termos de Uso</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Radar Ninja — Inteligência em Compras.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/assets/js/app.js"></script>
 </body>
 </html>
