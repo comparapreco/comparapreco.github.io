@@ -1,31 +1,73 @@
 {
-  "last_generated": "2026-06-02T16:46:05.750294",
+  "last_generated": "2026-06-02T17:01:15.025009",
   "automated_articles": [
     {
-      "id": "article-MLB3456789013",
-      "title": "Fritadeira Air Fryer Mondial 4L Inox AF-31: Queda Histórica de 34% OFF!",
-      "slug": "fritadeira-air-fryer-mondial-4l-inox-af-31-queda-34",
-      "category": "Eletrodomesticos",
-      "price_drop": 34,
-      "current_price": 329.0,
-      "previous_price": 499.0,
+      "id": "article-MLB3755400429",
+      "title": "OFERTA: Whey Protein Concentrado 100% 900g Refil Dark Lab Sabor Morango com 68% de Desconto",
+      "slug": "whey-protein-concentrado-100-900g-refil-dark-lab-s-queda-68",
+      "category": "Beleza",
+      "price_drop": 68,
+      "current_price": 159.9,
+      "previous_price": 499.99,
       "status": "published",
-      "generated_at": "2026-06-02T16:46:05.750275",
-      "content": "O Fritadeira Air Fryer Mondial 4L Inox AF-31 atingiu uma queda de 34% em seu preço. Agora disponível por apenas R$ 329.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
+      "generated_at": "2026-06-02T17:01:15.024963",
+      "content": "O Whey Protein Concentrado 100% 900g Refil Dark Lab Sabor Morango atingiu uma queda de 68% em seu preço. Agora disponível por apenas R$ 159.90, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
       "social_posts": [
         {
           "platform": "twitter",
-          "content": "📱 ALERTA: Fritadeira Air Fryer Mondial 4L Inox AF-31 com 34% de desconto! De R$ 499.00 por apenas R$ 329.00. Aproveite! 🔥 #ComparaPreço #Oferta"
+          "content": "🔥 OFERTA: Whey Protein Concentrado 100% 900g Refil Dark Lab Sabor Morango com 68% de Desconto por apenas R$ 159.90! Confira no Radar Ninja."
+        }
+      ]
+    },
+    {
+      "id": "article-MLB4812143184",
+      "title": "OFERTA: Creatina Monohidratada Pura 500g Dark Lab Unidade Sem Sabor com 65% de Desconto",
+      "slug": "creatina-monohidratada-pura-500g-dark-lab-unidade--queda-65",
+      "category": "Beleza",
+      "price_drop": 65,
+      "current_price": 44.9,
+      "previous_price": 129.9,
+      "status": "published",
+      "generated_at": "2026-06-02T17:01:15.024990",
+      "content": "O Creatina Monohidratada Pura 500g Dark Lab Unidade Sem Sabor atingiu uma queda de 65% em seu preço. Agora disponível por apenas R$ 44.90, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "content": "🔥 OFERTA: Creatina Monohidratada Pura 500g Dark Lab Unidade Sem Sabor com 65% de Desconto por apenas R$ 44.90! Confira no Radar Ninja."
+        }
+      ]
+    },
+    {
+      "id": "article-MLB4292031849",
+      "title": "OFERTA: Cooktop A Gás Fischer 4 Bocas Fit Line Trempe Esmaltada Aramado Preto 127/220v com 59% de Desconto",
+      "slug": "cooktop-a-gás-fischer-4-bocas-fit-line-trempe-esma-queda-59",
+      "category": "Eletrodomesticos",
+      "price_drop": 59,
+      "current_price": 332.1,
+      "previous_price": 814.14,
+      "status": "published",
+      "generated_at": "2026-06-02T17:01:15.025004",
+      "content": "O Cooktop A Gás Fischer 4 Bocas Fit Line Trempe Esmaltada Aramado Preto 127/220v atingiu uma queda de 59% em seu preço. Agora disponível por apenas R$ 332.10, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "content": "🔥 OFERTA: Cooktop A Gás Fischer 4 Bocas Fit Line Trempe Esmaltada Aramado Preto 127/220v com 59% de Desconto por apenas R$ 332.10! Confira no Radar Ninja."
         }
       ]
     }
   ],
   "alert_triggers": [
     {
-      "product_id": "MLB3456789013",
-      "product_name": "Fritadeira Air Fryer Mondial 4L Inox AF-31",
-      "current_drop": 34,
-      "alert_timestamp": "2026-06-02T16:46:05.750295"
+      "product_id": "MLB3755400429",
+      "product_name": "Whey Protein Concentrado 100% 900g Refil Dark Lab Sabor Morango"
+    },
+    {
+      "product_id": "MLB4812143184",
+      "product_name": "Creatina Monohidratada Pura 500g Dark Lab Unidade Sem Sabor"
+    },
+    {
+      "product_id": "MLB4292031849",
+      "product_name": "Cooktop A Gás Fischer 4 Bocas Fit Line Trempe Esmaltada Aramado Preto 127/220v"
     }
   ]
 }
