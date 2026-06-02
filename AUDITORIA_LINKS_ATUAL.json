@@ -1,10 +1,10 @@
 {
   "summary": {
     "html_files": 311,
-    "internal_unique_targets": 259,
+    "internal_unique_targets": 256,
     "external_unique_targets": 80,
-    "broken_internal_total_occurrences": 51,
-    "broken_internal_unique_targets": 35,
+    "broken_internal_total_occurrences": 46,
+    "broken_internal_unique_targets": 30,
     "empty_href_total": 0,
     "anchor_only_total": 5,
     "text_issue_total": 0
@@ -45,41 +45,6 @@
       "occurrences": 1,
       "sample_files": [
         "/templates/product_template.html"
-      ]
-    },
-    {
-      "target": "/comparar/ipad-air-vs-samsung-tab-s9",
-      "occurrences": 1,
-      "sample_files": [
-        "/comparar/index.html"
-      ]
-    },
-    {
-      "target": "/comparar/iphone-15-vs-galaxy-s24",
-      "occurrences": 1,
-      "sample_files": [
-        "/comparar/index.html"
-      ]
-    },
-    {
-      "target": "/comparar/lenovo-ideapad-vs-samsung-book",
-      "occurrences": 1,
-      "sample_files": [
-        "/comparar/index.html"
-      ]
-    },
-    {
-      "target": "/comparar/lg-oled-55-vs-samsung-qn55",
-      "occurrences": 1,
-      "sample_files": [
-        "/comparar/index.html"
-      ]
-    },
-    {
-      "target": "/comparar/ps5-vs-xbox-series-x",
-      "occurrences": 1,
-      "sample_files": [
-        "/comparar/index.html"
       ]
     },
     {
@@ -266,36 +231,6 @@
     }
   ],
   "broken_internal_samples": [
-    {
-      "file": "/comparar/index.html",
-      "href": "lg-oled-55-vs-samsung-qn55/",
-      "target": "/comparar/lg-oled-55-vs-samsung-qn55",
-      "label": "📺 TVs LG OLED 55\" Samsung QN55\" Comparação completa com veredito final"
-    },
-    {
-      "file": "/comparar/index.html",
-      "href": "lenovo-ideapad-vs-samsung-book/",
-      "target": "/comparar/lenovo-ideapad-vs-samsung-book",
-      "label": "💻 Notebooks Lenovo IdeaPad Samsung Book Comparação completa com veredito final"
-    },
-    {
-      "file": "/comparar/index.html",
-      "href": "iphone-15-vs-galaxy-s24/",
-      "target": "/comparar/iphone-15-vs-galaxy-s24",
-      "label": "📱 Celulares Premium iPhone 15 Galaxy S24 Comparação completa com veredito final"
-    },
-    {
-      "file": "/comparar/index.html",
-      "href": "ps5-vs-xbox-series-x/",
-      "target": "/comparar/ps5-vs-xbox-series-x",
-      "label": "🎮 Consoles PlayStation 5 Xbox Series X Comparação completa com veredito final"
-    },
-    {
-      "file": "/comparar/index.html",
-      "href": "ipad-air-vs-samsung-tab-s9/",
-      "target": "/comparar/ipad-air-vs-samsung-tab-s9",
-      "label": "📱 Tablets iPad Air Samsung Tab S9 Comparação completa com veredito final"
-    },
     {
       "file": "/ofertas/celulares/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110220v-MLB6444937486.html",
       "href": "../../ofertas/celulares/celular-samsung-galaxy-a17-com-ia-256gb-8gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---cinza-MLB4594905683.html",
@@ -581,11 +516,11 @@
     ],
     [
       "/comparar",
-      299
+      300
     ],
     [
       "/privacidade",
-      143
+      144
     ],
     [
       "/contato",
@@ -597,14 +532,14 @@
     ],
     [
       "/melhores-2026",
+      39
+    ],
+    [
+      "/termos",
       38
     ],
     [
       "/noticias",
-      37
-    ],
-    [
-      "/termos",
       37
     ],
     [
@@ -676,11 +611,15 @@
       10
     ],
     [
+      "/ofertas-hoje",
+      10
+    ],
+    [
       "/comparar/secador-de-cabelos-p-vs-perfume-arabe-yara-l.html",
       9
     ],
     [
-      "/ofertas-hoje",
+      "/guias",
       9
     ],
     [
@@ -721,10 +660,6 @@
     ],
     [
       "/categorias/eletrodomesticos",
-      8
-    ],
-    [
-      "/guias",
       8
     ],
     [

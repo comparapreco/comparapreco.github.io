@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recomendados para você — Compara Preço</title>
-  <meta name="description" content="Recomendações personalizadas do Compara Preço com base em favoritos, cliques, categorias e alertas.">
-  <link rel="canonical" href="https://comparapreco.github.io/recomendados/">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="manifest" href="../manifest.webmanifest">
-  <meta name="theme-color" content="#00c853">
-  <link rel="apple-touch-icon" href="../assets/icons/icon-192.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recomendados para você — Compara Preço</title>
+<meta content="Recomendações personalizadas do Compara Preço com base em favoritos, cliques, categorias e alertas." name="description"/>
+<link href="https://comparapreco.github.io/recomendados/" rel="canonical"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="../manifest.webmanifest" rel="manifest"/>
+<meta content="#00c853" name="theme-color"/>
+<link href="../assets/icons/icon-192.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
     .recommend-hero { background: linear-gradient(135deg, #111827 0%, #1976d2 55%, #00c853 100%); color:#fff; padding:64px 0 42px; }
     .recommend-hero h1 { font-size:clamp(2rem, 5vw, 3.2rem); margin-bottom:12px; }
     .reason-bar { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
@@ -25,20 +26,20 @@
     .score-line span { display:block; height:100%; background:linear-gradient(90deg,#1976d2,#00c853); }
     @media(max-width:860px){.recommend-layout{grid-template-columns:1fr;}}
   </style>
-  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
+<meta content="ca-pub-4896859041377751" name="google-adsense-account"/>
 </head>
 <body>
-  <header class="header"><div class="container header-inner"><a href="../" class="logo">📊 <strong>Compara Preço</strong></a><div class="search-bar"><input id="searchInput" placeholder="Buscar recomendações..."></div><button id="themeToggle">🌙</button></div></header>
-  <section class="recommend-hero"><div class="container"><h1>Compara Preço personalizado</h1><p>Produtos priorizados por categorias favoritas, histórico de cliques, favoritos e sinais de queda de preço.</p><div class="reason-bar" id="reasonBar"></div></div></section>
-  <main class="container recommend-layout">
-    <aside class="profile-box"><h2>Seu perfil de compra</h2><div id="profileInsights"></div><p style="margin-top:18px;"><a class="btn" style="background:var(--primary);color:white;width:100%;" href="../minha-lista/">Ajustar alertas</a></p></aside>
-    <section><div class="section-header"><h2>Recomendações de hoje</h2></div><div class="rec-grid" id="recommendationsGrid"></div></section>
-  </main>
-  <footer class="footer"><div class="container"><p>© 2026 Compara Preço. Recomendações personalizadas.</p></div></footer>
-  <script src="../assets/js/firebase-config.js"></script>
-  <script src="../assets/js/compara-auth.js"></script>
-  <script src="../assets/js/pwa.js"></script>
-  <script>
+<header class="header"><div class="container header-inner"><div class="search-bar"><input id="searchInput" placeholder="Buscar recomendações..."/></div><button id="themeToggle">🌙</button></div></header>
+<section class="recommend-hero"><div class="container"><h1>Compara Preço personalizado</h1><p>Produtos priorizados por categorias favoritas, histórico de cliques, favoritos e sinais de queda de preço.</p><div class="reason-bar" id="reasonBar"></div></div></section>
+<main class="container recommend-layout">
+<aside class="profile-box"><h2>Seu perfil de compra</h2><div id="profileInsights"></div><p style="margin-top:18px;"><a class="btn" href="../minha-lista/" style="background:var(--primary);color:white;width:100%;">Ajustar alertas</a></p></aside>
+<section><div class="section-header"><h2>Recomendações de hoje</h2></div><div class="rec-grid" id="recommendationsGrid"></div></section>
+</main>
+<footer class="footer"><div class="container"><p>© 2026 Compara Preço. Recomendações personalizadas.</p></div></footer>
+<script src="../assets/js/firebase-config.js"></script>
+<script src="../assets/js/compara-auth.js"></script>
+<script src="../assets/js/pwa.js"></script>
+<script>
     const money = value => Number(value || 0).toLocaleString('pt-BR', { style:'currency', currency:'BRL' });
     const safe = text => { const div=document.createElement('div'); div.textContent=text||''; return div.innerHTML; };
     let products=[]; let favorites=[]; let alerts=[]; let recs=[];

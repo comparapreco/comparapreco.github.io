@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"/>
@@ -7,9 +8,9 @@
 <meta content="Crie alertas personalizados por categoria, marca e faixa de preço. Receba notificações em tempo real quando encontrar a melhor oferta." name="description"/>
 <link href="https://comparapreco.github.io/alertas/" rel="canonical"/>
 <link href="../assets/css/style.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -83,38 +84,35 @@
   color: #721c24;
 }
 </style>
-  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
+<meta content="ca-pub-4896859041377751" name="google-adsense-account"/>
 </head>
 <body>
 <header class="header">
 <div class="container header-inner">
-<a class="logo" href="../">📊 <strong>Compara Preço</strong></a>
+
 <div class="search-bar">
 <input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
 </div>
 <button id="themeToggle">🌙</button>
 </div>
 </header>
-
 <section class="main-hero">
 <div class="container">
 <h1>🔔 Central de Alertas Avançados</h1>
 <p>Crie alertas personalizados e receba notificações quando encontrar a melhor oferta.</p>
 </div>
 </section>
-
 <main class="container">
 <section class="section">
 <div class="section-header">
 <h2>⚙️ Criar Novo Alerta</h2>
 </div>
-
 <div class="alert-form">
 <form id="alertForm">
 <div class="form-row">
 <div class="form-group">
 <label for="alertType">Tipo de Alerta</label>
-<select id="alertType" required>
+<select id="alertType" required="">
 <option value="">Selecione...</option>
 <option value="category">Por Categoria</option>
 <option value="brand">Por Marca</option>
@@ -134,36 +132,31 @@
 </select>
 </div>
 </div>
-
 <div class="form-row">
 <div class="form-group">
 <label for="alertBrand">Marca (opcional)</label>
-<input type="text" id="alertBrand" placeholder="ex: Samsung, Apple, LG"/>
+<input id="alertBrand" placeholder="ex: Samsung, Apple, LG" type="text"/>
 </div>
 <div class="form-group">
 <label for="alertMaxPrice">Preço Máximo (R$)</label>
-<input type="number" id="alertMaxPrice" placeholder="ex: 1000" min="0"/>
+<input id="alertMaxPrice" min="0" placeholder="ex: 1000" type="number"/>
 </div>
 </div>
-
 <div class="form-group">
 <label for="alertEmail">Email para Notificações</label>
-<input type="email" id="alertEmail" placeholder="seu@email.com" required/>
+<input id="alertEmail" placeholder="seu@email.com" required="" type="email"/>
 </div>
-
 <div style="display: flex; gap: 10px;">
-<button type="submit" class="btn" style="background: var(--primary);">Criar Alerta</button>
-<button type="reset" class="btn" style="background: var(--text-secondary);">Limpar</button>
+<button class="btn" style="background: var(--primary);" type="submit">Criar Alerta</button>
+<button class="btn" style="background: var(--text-secondary);" type="reset">Limpar</button>
 </div>
 </form>
 </div>
 </section>
-
 <section class="section">
 <div class="section-header">
 <h2>📋 Meus Alertas Ativos</h2>
 </div>
-
 <div id="alertsList">
 <div class="alert-item">
 <div class="alert-info">
@@ -175,7 +168,6 @@
 <button class="btn" style="margin-left: 10px; padding: 5px 15px; font-size: 12px;">Editar</button>
 </div>
 </div>
-
 <div class="alert-item">
 <div class="alert-info">
 <h4>💻 Notebooks Dell</h4>
@@ -186,7 +178,6 @@
 <button class="btn" style="margin-left: 10px; padding: 5px 15px; font-size: 12px;">Editar</button>
 </div>
 </div>
-
 <div class="alert-item">
 <div class="alert-info">
 <h4>📺 TVs LG OLED</h4>
@@ -199,7 +190,6 @@
 </div>
 </div>
 </section>
-
 <section class="section">
 <div class="section-header">
 <h2>💡 Dicas para Usar Alertas</h2>
@@ -224,7 +214,6 @@
 </div>
 </section>
 </main>
-
 <footer class="footer">
 <div class="container">
 <p>© 2026 Compara Preço. Alertas Inteligentes.</p>
@@ -238,7 +227,6 @@
 </div>
 </div>
 </footer>
-
 <script src="../assets/js/app.js"></script>
 <script>
 document.getElementById('alertForm').addEventListener('submit', function(e) {

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🥷 Radar Ninja - Dashboard de Integridade</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>🥷 Radar Ninja - Dashboard de Integridade</title>
+<style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -149,114 +150,104 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🥷 Radar Ninja</h1>
-            <p>Dashboard de Integridade e Saúde do Portal</p>
-        </div>
-
-        <div class="grid">
-            <div class="card">
-                <div class="card-title">Total de Produtos</div>
-                <div class="card-value" id="totalProducts">-</div>
-                <div class="card-subtitle">No banco de dados</div>
-                <div class="status-badge status-good">✓ Operacional</div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Produtos Ativos</div>
-                <div class="card-value" id="activeProducts">-</div>
-                <div class="card-subtitle">Prontos para publicação</div>
-                <div class="status-badge status-good">✓ Saudável</div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Duplicados Detectados</div>
-                <div class="card-value" id="duplicateCount">0</div>
-                <div class="card-subtitle">Últimas 24 horas</div>
-                <div class="status-badge status-warning">⚠ Monitorando</div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Taxa de Duplicação</div>
-                <div class="card-value" id="duplicateRate">0%</div>
-                <div class="card-subtitle">Produtos duplicados / Total</div>
-                <div class="status-badge status-good">✓ Baixa</div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Última Execução</div>
-                <div class="card-value" id="lastExecution">-</div>
-                <div class="card-subtitle">Atualização do motor</div>
-                <div class="status-badge status-good">✓ Ativo</div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Posts Gerados</div>
-                <div class="card-value" id="postsGenerated">-</div>
-                <div class="card-subtitle">Últimas 24 horas</div>
-                <div class="status-badge status-good">✓ Publicando</div>
-            </div>
-        </div>
-
-        <div class="chart-section">
-            <div class="chart-title">📊 Saúde do Banco de Dados</div>
-            <div style="margin-bottom: 32px;">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                    <span style="font-weight: 600; color: #0f172a;">Produtos Ativos</span>
-                    <span id="activePercentage" style="font-weight: 700; color: #2563eb;">-</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" id="activeBar" style="width: 0%;">0%</div>
-                </div>
-            </div>
-            <div style="margin-bottom: 32px;">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                    <span style="font-weight: 600; color: #0f172a;">Produtos Expirados</span>
-                    <span id="expiredPercentage" style="font-weight: 700; color: #f59e0b;">-</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" id="expiredBar" style="width: 0%; background: linear-gradient(90deg, #f59e0b, #fbbf24);"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="chart-section">
-            <div class="chart-title">🔍 Últimas Detecções de Duplicados</div>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Tipo</th>
-                        <th>Quantidade</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Duplicados por SKU</td>
-                        <td id="skuDuplicates">0</td>
-                        <td><span class="badge badge-active">✓ Bloqueado</span></td>
-                    </tr>
-                    <tr>
-                        <td>Duplicados por Permalink</td>
-                        <td id="permalinkDuplicates">0</td>
-                        <td><span class="badge badge-active">✓ Bloqueado</span></td>
-                    </tr>
-                    <tr>
-                        <td>Duplicados por Similaridade de Nome</td>
-                        <td id="nameDuplicates">0</td>
-                        <td><span class="badge badge-active">✓ Bloqueado</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="footer">
-            <p>🤖 Radar Ninja - Automação 24/7 | Última atualização: <span id="updateTime">-</span></p>
-        </div>
-    </div>
-
-    <script>
+<div class="container">
+<div class="header">
+<h1>🥷 Radar Ninja</h1>
+<p>Dashboard de Integridade e Saúde do Portal</p>
+</div>
+<div class="grid">
+<div class="card">
+<div class="card-title">Total de Produtos</div>
+<div class="card-value" id="totalProducts">-</div>
+<div class="card-subtitle">No banco de dados</div>
+<div class="status-badge status-good">✓ Operacional</div>
+</div>
+<div class="card">
+<div class="card-title">Produtos Ativos</div>
+<div class="card-value" id="activeProducts">-</div>
+<div class="card-subtitle">Prontos para publicação</div>
+<div class="status-badge status-good">✓ Saudável</div>
+</div>
+<div class="card">
+<div class="card-title">Duplicados Detectados</div>
+<div class="card-value" id="duplicateCount">0</div>
+<div class="card-subtitle">Últimas 24 horas</div>
+<div class="status-badge status-warning">⚠ Monitorando</div>
+</div>
+<div class="card">
+<div class="card-title">Taxa de Duplicação</div>
+<div class="card-value" id="duplicateRate">0%</div>
+<div class="card-subtitle">Produtos duplicados / Total</div>
+<div class="status-badge status-good">✓ Baixa</div>
+</div>
+<div class="card">
+<div class="card-title">Última Execução</div>
+<div class="card-value" id="lastExecution">-</div>
+<div class="card-subtitle">Atualização do motor</div>
+<div class="status-badge status-good">✓ Ativo</div>
+</div>
+<div class="card">
+<div class="card-title">Posts Gerados</div>
+<div class="card-value" id="postsGenerated">-</div>
+<div class="card-subtitle">Últimas 24 horas</div>
+<div class="status-badge status-good">✓ Publicando</div>
+</div>
+</div>
+<div class="chart-section">
+<div class="chart-title">📊 Saúde do Banco de Dados</div>
+<div style="margin-bottom: 32px;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+<span style="font-weight: 600; color: #0f172a;">Produtos Ativos</span>
+<span id="activePercentage" style="font-weight: 700; color: #2563eb;">-</span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" id="activeBar" style="width: 0%;">0%</div>
+</div>
+</div>
+<div style="margin-bottom: 32px;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+<span style="font-weight: 600; color: #0f172a;">Produtos Expirados</span>
+<span id="expiredPercentage" style="font-weight: 700; color: #f59e0b;">-</span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" id="expiredBar" style="width: 0%; background: linear-gradient(90deg, #f59e0b, #fbbf24);"></div>
+</div>
+</div>
+</div>
+<div class="chart-section">
+<div class="chart-title">🔍 Últimas Detecções de Duplicados</div>
+<table class="table">
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Quantidade</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duplicados por SKU</td>
+<td id="skuDuplicates">0</td>
+<td><span class="badge badge-active">✓ Bloqueado</span></td>
+</tr>
+<tr>
+<td>Duplicados por Permalink</td>
+<td id="permalinkDuplicates">0</td>
+<td><span class="badge badge-active">✓ Bloqueado</span></td>
+</tr>
+<tr>
+<td>Duplicados por Similaridade de Nome</td>
+<td id="nameDuplicates">0</td>
+<td><span class="badge badge-active">✓ Bloqueado</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="footer">
+<p>🤖 Radar Ninja - Automação 24/7 | Última atualização: <span id="updateTime">-</span></p>
+</div>
+</div>
+<script>
         // Simular dados (em produção, isso viria de uma API)
         function updateDashboard() {
             // Ler dados do arquivo de relatório ou de uma API

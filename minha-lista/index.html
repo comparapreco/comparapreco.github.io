@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha Lista — Central de Alertas e Favoritos | Compara Preço</title>
-  <meta name="description" content="Acompanhe seus produtos favoritos, alertas de preço, histórico de quedas e recomendações personalizadas no Compara Preço.">
-  <link rel="canonical" href="https://comparapreco.github.io/minha-lista/">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="manifest" href="../manifest.webmanifest">
-  <meta name="theme-color" content="#00c853">
-  <link rel="apple-touch-icon" href="../assets/icons/icon-192.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Minha Lista — Central de Alertas e Favoritos | Compara Preço</title>
+<meta content="Acompanhe seus produtos favoritos, alertas de preço, histórico de quedas e recomendações personalizadas no Compara Preço." name="description"/>
+<link href="https://comparapreco.github.io/minha-lista/" rel="canonical"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="../manifest.webmanifest" rel="manifest"/>
+<meta content="#00c853" name="theme-color"/>
+<link href="../assets/icons/icon-192.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
     .account-hero { background: linear-gradient(135deg, #0f9b0f 0%, #00c853 100%); color: #fff; padding: 56px 0 36px; margin-bottom: 28px; }
     .account-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 10px; }
     .account-hero p { max-width: 760px; opacity: 0.92; }
@@ -46,99 +47,89 @@
     .newsletter-box { background: linear-gradient(135deg, rgba(25,118,210,.12), rgba(0,200,83,.12)); border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-bottom: 18px; }
     @media (max-width: 760px) { .account-summary { grid-template-columns: 1fr; } .alert-head, .timeline-item { flex-direction: column; } }
   </style>
-  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
+<meta content="ca-pub-4896859041377751" name="google-adsense-account"/>
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="../" class="logo">📊 <strong>Compara Preço</strong></a>
-      <div class="search-bar"><input type="text" id="searchInput" placeholder="Buscar ofertas..."></div>
-      <button id="themeToggle">🌙</button>
-    </div>
-  </header>
+<header class="header">
+<div class="container header-inner">
 
-  <section class="account-hero">
-    <div class="container account-summary">
-      <div>
-        <h1>Central de Alertas Compara Preço</h1>
-        <p>Monitore produtos, receba alertas de queda, acompanhe sua economia potencial e mantenha uma lista inteligente sincronizada com sua conta.</p>
-      </div>
-      <div class="account-panel">
-        <div class="profile-line" id="profileLine"><span class="profile-avatar">R</span><div><strong>Carregando perfil...</strong><br><small>Sincronização segura com Firebase quando configurado.</small></div></div>
-        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn btn-white" id="loginBtn">Entrar com Google</button>
-          <button class="btn btn-outline-white" id="logoutBtn">Sair</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <main class="container">
-    <section class="ecosystem-grid" id="dashboardCards"></section>
-
-    <div class="tabs">
-      <button class="tab active" data-tab="dashboard">Dashboard</button>
-      <button class="tab" data-tab="favoritos">Favoritos</button>
-      <button class="tab" data-tab="alertas">Alertas</button>
-      <button class="tab" data-tab="historico">Histórico</button>
-      <button class="tab" data-tab="configuracoes">Configurações</button>
-    </div>
-
-    <section id="dashboard" class="tab-panel active">
-      <div class="newsletter-box">
-        <h2>Resumo inteligente</h2>
-        <p id="smartSummary">Analisando seus produtos monitorados para sugerir as melhores ações.</p>
-      </div>
-      <h2>Produtos monitorados recentemente</h2>
-      <div class="list-grid" id="dashboardProducts"></div>
-    </section>
-
-    <section id="favoritos" class="tab-panel">
-      <h2>Favoritos sincronizados</h2>
-      <p style="color:var(--text-light); margin-bottom:18px;">Os favoritos adicionados nos cards do site aparecem aqui automaticamente.</p>
-      <div class="list-grid" id="favoritesGrid"></div>
-    </section>
-
-    <section id="alertas" class="tab-panel">
-      <div class="alert-card">
-        <h2>Criar alerta manual</h2>
-        <div class="form-row">
-          <label>Produto <select id="alertProductSelect"></select></label>
-          <label>Preço desejado <input id="alertTargetPrice" type="number" min="1" step="0.01" placeholder="Ex.: 999.90"></label>
-          <label>Status <select id="alertStatus"><option value="active">Ativo</option><option value="paused">Pausado</option></select></label>
-        </div>
-        <button class="btn" id="createAlertBtn" style="background:var(--primary);color:#fff;">Criar alerta</button>
-      </div>
-      <h2>Alertas ativos</h2>
-      <div id="alertsList"></div>
-    </section>
-
-    <section id="historico" class="tab-panel">
-      <h2>Histórico de visualizações e cliques</h2>
-      <div class="timeline" id="historyTimeline"></div>
-    </section>
-
-    <section id="configuracoes" class="tab-panel">
-      <h2>Configurações de retenção</h2>
-      <div class="alert-card">
-        <div class="form-row">
-          <label><span>Newsletter diária</span><select id="newsletterSetting"><option value="true">Ativada</option><option value="false">Desativada</option></select></label>
-          <label><span>Resumo diário</span><select id="digestSetting"><option value="true">Ativado</option><option value="false">Desativado</option></select></label>
-          <label><span>Notificações push</span><select id="pushSetting"><option value="true">Ativadas</option><option value="false">Desativadas</option></select></label>
-          <label><span>Perfil público futuro</span><select id="publicProfileSetting"><option value="false">Privado</option><option value="true">Público</option></select></label>
-        </div>
-        <button class="btn" id="saveSettingsBtn" style="background:var(--primary);color:#fff;">Salvar configurações</button>
-      </div>
-      <blockquote style="margin-top:18px; color:var(--text-light);">Quando o Firebase estiver configurado, estas preferências poderão alimentar a newsletter diária, alertas reais e perfis públicos opcionais.</blockquote>
-    </section>
-  </main>
-
-  <footer class="footer"><div class="container"><p>© 2026 Compara Preço. Plataforma de inteligência e retenção.</p></div></footer>
-
-  <script src="../assets/js/firebase-config.js"></script>
-  <script src="../assets/js/compara-auth.js"></script>
-  <script src="../assets/js/pwa.js"></script>
-  <script>
+<div class="search-bar"><input id="searchInput" placeholder="Buscar ofertas..." type="text"/></div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+<section class="account-hero">
+<div class="container account-summary">
+<div>
+<h1>Central de Alertas Compara Preço</h1>
+<p>Monitore produtos, receba alertas de queda, acompanhe sua economia potencial e mantenha uma lista inteligente sincronizada com sua conta.</p>
+</div>
+<div class="account-panel">
+<div class="profile-line" id="profileLine"><span class="profile-avatar">R</span><div><strong>Carregando perfil...</strong><br/><small>Sincronização segura com Firebase quando configurado.</small></div></div>
+<div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+<button class="btn btn-white" id="loginBtn">Entrar com Google</button>
+<button class="btn btn-outline-white" id="logoutBtn">Sair</button>
+</div>
+</div>
+</div>
+</section>
+<main class="container">
+<section class="ecosystem-grid" id="dashboardCards"></section>
+<div class="tabs">
+<button class="tab active" data-tab="dashboard">Dashboard</button>
+<button class="tab" data-tab="favoritos">Favoritos</button>
+<button class="tab" data-tab="alertas">Alertas</button>
+<button class="tab" data-tab="historico">Histórico</button>
+<button class="tab" data-tab="configuracoes">Configurações</button>
+</div>
+<section class="tab-panel active" id="dashboard">
+<div class="newsletter-box">
+<h2>Resumo inteligente</h2>
+<p id="smartSummary">Analisando seus produtos monitorados para sugerir as melhores ações.</p>
+</div>
+<h2>Produtos monitorados recentemente</h2>
+<div class="list-grid" id="dashboardProducts"></div>
+</section>
+<section class="tab-panel" id="favoritos">
+<h2>Favoritos sincronizados</h2>
+<p style="color:var(--text-light); margin-bottom:18px;">Os favoritos adicionados nos cards do site aparecem aqui automaticamente.</p>
+<div class="list-grid" id="favoritesGrid"></div>
+</section>
+<section class="tab-panel" id="alertas">
+<div class="alert-card">
+<h2>Criar alerta manual</h2>
+<div class="form-row">
+<label>Produto <select id="alertProductSelect"></select></label>
+<label>Preço desejado <input id="alertTargetPrice" min="1" placeholder="Ex.: 999.90" step="0.01" type="number"/></label>
+<label>Status <select id="alertStatus"><option value="active">Ativo</option><option value="paused">Pausado</option></select></label>
+</div>
+<button class="btn" id="createAlertBtn" style="background:var(--primary);color:#fff;">Criar alerta</button>
+</div>
+<h2>Alertas ativos</h2>
+<div id="alertsList"></div>
+</section>
+<section class="tab-panel" id="historico">
+<h2>Histórico de visualizações e cliques</h2>
+<div class="timeline" id="historyTimeline"></div>
+</section>
+<section class="tab-panel" id="configuracoes">
+<h2>Configurações de retenção</h2>
+<div class="alert-card">
+<div class="form-row">
+<label><span>Newsletter diária</span><select id="newsletterSetting"><option value="true">Ativada</option><option value="false">Desativada</option></select></label>
+<label><span>Resumo diário</span><select id="digestSetting"><option value="true">Ativado</option><option value="false">Desativado</option></select></label>
+<label><span>Notificações push</span><select id="pushSetting"><option value="true">Ativadas</option><option value="false">Desativadas</option></select></label>
+<label><span>Perfil público futuro</span><select id="publicProfileSetting"><option value="false">Privado</option><option value="true">Público</option></select></label>
+</div>
+<button class="btn" id="saveSettingsBtn" style="background:var(--primary);color:#fff;">Salvar configurações</button>
+</div>
+<blockquote style="margin-top:18px; color:var(--text-light);">Quando o Firebase estiver configurado, estas preferências poderão alimentar a newsletter diária, alertas reais e perfis públicos opcionais.</blockquote>
+</section>
+</main>
+<footer class="footer"><div class="container"><p>© 2026 Compara Preço. Plataforma de inteligência e retenção.</p></div></footer>
+<script src="../assets/js/firebase-config.js"></script>
+<script src="../assets/js/compara-auth.js"></script>
+<script src="../assets/js/pwa.js"></script>
+<script>
     const DATA_URL = '../data/products/offers.json';
     let products = [];
     let favorites = [];
