@@ -2,7 +2,7 @@ name: Radar Ninja Hourly Publisher
 
 on:
   schedule:
-    - cron: '33 05 * * *'
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -71,7 +71,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No generated changes to publish."
           else
-            git commit -m "chore: publicação automática Radar Ninja $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git commit -m "chore: publicacao automatica Radar Ninja $(date -u +'%Y-%m-%d %H:%M UTC')"
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
