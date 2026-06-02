@@ -1,115 +1,15 @@
 {
   "summary": {
     "html_files": 311,
-    "internal_unique_targets": 256,
+    "internal_unique_targets": 239,
     "external_unique_targets": 80,
-    "broken_internal_total_occurrences": 46,
-    "broken_internal_unique_targets": 30,
+    "broken_internal_total_occurrences": 20,
+    "broken_internal_unique_targets": 13,
     "empty_href_total": 0,
     "anchor_only_total": 5,
     "text_issue_total": 0
   },
   "broken_internal_by_target": [
-    {
-      "target": "/ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "occurrences": 6,
-      "sample_files": [
-        "/ofertas/outros/creatina-monohidratada-pura-500g-dark-lab-unidade-sem-sabor-MLB4812143184.html",
-        "/ofertas/outros/impressora-multifuncional-cor-epson-ecotank-l3250-preto-127220v-MLB5275428302.html",
-        "/ofertas/outros/jogo-6-copos-diamond-egipcio-300ml-vidro-grosso-diamante-luxo-transparente-vitrex-MLB6600589630.html",
-        "/ofertas/outros/kit-280-figurinhas-do-album-copa-do-mundo-2026--40-envelopes-MLB6657082608.html",
-        "/ofertas/outros/kit-420-figurinhas-do-album-copa-do-mundo-2026--60-envelopes-MLB4627337165.html",
-        "/ofertas/outros/kit-body-splash-masculino-barbarius--enigma--midtown-200ml-MLB4645102377.html"
-      ]
-    },
-    {
-      "target": "/ofertas/outros/creatina-monohidratada-250g-growth-supplements---sem-sabor-em-po-MLB5872060016.html",
-      "occurrences": 4,
-      "sample_files": [
-        "/ofertas/outros/kit-70-figurinhas-do-album-copa-do-mundo-2026-pronta-entrega-MLB4627310495.html",
-        "/ofertas/outros/kit-body-splash-masculino-barbarius--enigma--midtown-200ml-MLB4645102377.html",
-        "/ofertas/outros/kit-c-36-envelopes-252-cromos---copa-do-mundo-fifa-2026-MLB6582857986.html",
-        "/ofertas/outros/kit-com-48-pacotes-de-figurinhas-panini-para-o-album-copa-do-mundo-fifa-2026-MLB4674562069.html"
-      ]
-    },
-    {
-      "target": "/ofertas/outros/creatina-monohidratada-pura-1kg-dark-lab-unidade-sem-sabor-MLB4812130742.html",
-      "occurrences": 2,
-      "sample_files": [
-        "/ofertas/outros/kit-280-figurinhas-do-album-copa-do-mundo-2026--40-envelopes-MLB6657082608.html",
-        "/ofertas/outros/whey-protein-concentrado-100-900g-refil-dark-lab-sabor-morango-MLB3755400429.html"
-      ]
-    },
-    {
-      "target": "/categorias/{{product.category}}/index.html",
-      "occurrences": 1,
-      "sample_files": [
-        "/templates/product_template.html"
-      ]
-    },
-    {
-      "target": "/ofertas/celulares/celular-samsung-galaxy-a17-com-ia-256gb-8gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---cinza-MLB4594905683.html",
-      "occurrences": 1,
-      "sample_files": [
-        "/ofertas/celulares/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110220v-MLB6444937486.html"
-      ]
-    },
-    {
-      "target": "/ofertas/celulares/iphone-15-pro-max-256gb---promocao-especial-MLB2467084779.html",
-      "occurrences": 1,
-      "sample_files": [
-        "/ofertas/celulares/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110220v-MLB6444937486.html"
-      ]
-    },
-    {
-      "target": "/ofertas/celulares/iphone-15-pro-max-256gb---promocao-especial-MLB4581911048.html",
-      "occurrences": 1,
-      "sample_files": [
-        "/ofertas/celulares/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110220v-MLB6444937486.html"
-      ]
-    },
-    {
-      "target": "/ofertas/celulares/samsung-galaxy-a06-5g-dual-sim-128gb-preto-MLB4475360653.html",
-      "occurrences": 1,
-      "sample_files": [
-        "/ofertas/celulares/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110220v-MLB6444937486.html"
-      ]
-    },
-    {
-      "target": "/ofertas/games/playstation-5-slim-1tb---promocao-especial-MLB1801291889.html",
-      "occurrences": 1,
-      "sample_files": [
-        "/ofertas/games/asus-consola-portatil-512-gb-white-z2-rc73ya-nh003w-rog-xbox-ally-asus-ryzen-z2-wh-branco-MLB6070039800.html"
-      ]
-    },
-    {
-      "target": "/ofertas/games/playstation-5-slim-1tb---promocao-especial-MLB1984595103.html",
-      "occurrences": 1,
-      "sample_files": [
-        "/ofertas/games/asus-consola-portatil-512-gb-white-z2-rc73ya-nh003w-rog-xbox-ally-asus-ryzen-z2-wh-branco-MLB6070039800.html"
-      ]
-    },
-    {
-      "target": "/ofertas/games/playstation-5-slim-1tb---promocao-especial-MLB3760680874.html",
-      "occurrences": 1,
-      "sample_files": [
-        "/ofertas/games/asus-consola-portatil-512-gb-white-z2-rc73ya-nh003w-rog-xbox-ally-asus-ryzen-z2-wh-branco-MLB6070039800.html"
-      ]
-    },
-    {
-      "target": "/ofertas/games/playstation-5-slim-1tb---promocao-especial-MLB4584973216.html",
-      "occurrences": 1,
-      "sample_files": [
-        "/ofertas/games/asus-consola-portatil-512-gb-white-z2-rc73ya-nh003w-rog-xbox-ally-asus-ryzen-z2-wh-branco-MLB6070039800.html"
-      ]
-    },
-    {
-      "target": "/ofertas/outros/whey-protein-concentrado-100-900g-dark-lab-MLB26454796.html",
-      "occurrences": 1,
-      "sample_files": [
-        "/ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-370ml-freezer-fitness-rishon-transparente-MLB4371605519.html"
-      ]
-    },
     {
       "target": "/templates/categorias/beleza",
       "occurrences": 1,
@@ -200,163 +100,9 @@
       "sample_files": [
         "/templates/homepage_novo.html"
       ]
-    },
-    {
-      "target": "/templates/{{product.url}}",
-      "occurrences": 1,
-      "sample_files": [
-        "/templates/product_template.html"
-      ]
-    },
-    {
-      "target": "/vendedor/amazon",
-      "occurrences": 1,
-      "sample_files": [
-        "/vendedor/index.html"
-      ]
-    },
-    {
-      "target": "/vendedor/americanas",
-      "occurrences": 1,
-      "sample_files": [
-        "/vendedor/index.html"
-      ]
-    },
-    {
-      "target": "/vendedor/shopee",
-      "occurrences": 1,
-      "sample_files": [
-        "/vendedor/index.html"
-      ]
     }
   ],
   "broken_internal_samples": [
-    {
-      "file": "/ofertas/celulares/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110220v-MLB6444937486.html",
-      "href": "../../ofertas/celulares/celular-samsung-galaxy-a17-com-ia-256gb-8gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---cinza-MLB4594905683.html",
-      "target": "/ofertas/celulares/celular-samsung-galaxy-a17-com-ia-256gb-8gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---cinza-MLB4594905683.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/celulares/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110220v-MLB6444937486.html",
-      "href": "../../ofertas/celulares/samsung-galaxy-a06-5g-dual-sim-128gb-preto-MLB4475360653.html",
-      "target": "/ofertas/celulares/samsung-galaxy-a06-5g-dual-sim-128gb-preto-MLB4475360653.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/celulares/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110220v-MLB6444937486.html",
-      "href": "../../ofertas/celulares/iphone-15-pro-max-256gb---promocao-especial-MLB4581911048.html",
-      "target": "/ofertas/celulares/iphone-15-pro-max-256gb---promocao-especial-MLB4581911048.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/celulares/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110220v-MLB6444937486.html",
-      "href": "../../ofertas/celulares/iphone-15-pro-max-256gb---promocao-especial-MLB2467084779.html",
-      "target": "/ofertas/celulares/iphone-15-pro-max-256gb---promocao-especial-MLB2467084779.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/games/asus-consola-portatil-512-gb-white-z2-rc73ya-nh003w-rog-xbox-ally-asus-ryzen-z2-wh-branco-MLB6070039800.html",
-      "href": "../../ofertas/games/playstation-5-slim-1tb---promocao-especial-MLB4584973216.html",
-      "target": "/ofertas/games/playstation-5-slim-1tb---promocao-especial-MLB4584973216.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/games/asus-consola-portatil-512-gb-white-z2-rc73ya-nh003w-rog-xbox-ally-asus-ryzen-z2-wh-branco-MLB6070039800.html",
-      "href": "../../ofertas/games/playstation-5-slim-1tb---promocao-especial-MLB1801291889.html",
-      "target": "/ofertas/games/playstation-5-slim-1tb---promocao-especial-MLB1801291889.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/games/asus-consola-portatil-512-gb-white-z2-rc73ya-nh003w-rog-xbox-ally-asus-ryzen-z2-wh-branco-MLB6070039800.html",
-      "href": "../../ofertas/games/playstation-5-slim-1tb---promocao-especial-MLB1984595103.html",
-      "target": "/ofertas/games/playstation-5-slim-1tb---promocao-especial-MLB1984595103.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/games/asus-consola-portatil-512-gb-white-z2-rc73ya-nh003w-rog-xbox-ally-asus-ryzen-z2-wh-branco-MLB6070039800.html",
-      "href": "../../ofertas/games/playstation-5-slim-1tb---promocao-especial-MLB3760680874.html",
-      "target": "/ofertas/games/playstation-5-slim-1tb---promocao-especial-MLB3760680874.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/creatina-monohidratada-pura-500g-dark-lab-unidade-sem-sabor-MLB4812143184.html",
-      "href": "../../ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "target": "/ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/impressora-multifuncional-cor-epson-ecotank-l3250-preto-127220v-MLB5275428302.html",
-      "href": "../../ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "target": "/ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/jogo-6-copos-diamond-egipcio-300ml-vidro-grosso-diamante-luxo-transparente-vitrex-MLB6600589630.html",
-      "href": "../../ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "target": "/ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-370ml-freezer-fitness-rishon-transparente-MLB4371605519.html",
-      "href": "../../ofertas/outros/whey-protein-concentrado-100-900g-dark-lab-MLB26454796.html",
-      "target": "/ofertas/outros/whey-protein-concentrado-100-900g-dark-lab-MLB26454796.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/kit-280-figurinhas-do-album-copa-do-mundo-2026--40-envelopes-MLB6657082608.html",
-      "href": "../../ofertas/outros/creatina-monohidratada-pura-1kg-dark-lab-unidade-sem-sabor-MLB4812130742.html",
-      "target": "/ofertas/outros/creatina-monohidratada-pura-1kg-dark-lab-unidade-sem-sabor-MLB4812130742.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/kit-280-figurinhas-do-album-copa-do-mundo-2026--40-envelopes-MLB6657082608.html",
-      "href": "../../ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "target": "/ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/kit-420-figurinhas-do-album-copa-do-mundo-2026--60-envelopes-MLB4627337165.html",
-      "href": "../../ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "target": "/ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/kit-70-figurinhas-do-album-copa-do-mundo-2026-pronta-entrega-MLB4627310495.html",
-      "href": "../../ofertas/outros/creatina-monohidratada-250g-growth-supplements---sem-sabor-em-po-MLB5872060016.html",
-      "target": "/ofertas/outros/creatina-monohidratada-250g-growth-supplements---sem-sabor-em-po-MLB5872060016.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/kit-body-splash-masculino-barbarius--enigma--midtown-200ml-MLB4645102377.html",
-      "href": "../../ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "target": "/ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-MLB66060206.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/kit-body-splash-masculino-barbarius--enigma--midtown-200ml-MLB4645102377.html",
-      "href": "../../ofertas/outros/creatina-monohidratada-250g-growth-supplements---sem-sabor-em-po-MLB5872060016.html",
-      "target": "/ofertas/outros/creatina-monohidratada-250g-growth-supplements---sem-sabor-em-po-MLB5872060016.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/kit-c-36-envelopes-252-cromos---copa-do-mundo-fifa-2026-MLB6582857986.html",
-      "href": "../../ofertas/outros/creatina-monohidratada-250g-growth-supplements---sem-sabor-em-po-MLB5872060016.html",
-      "target": "/ofertas/outros/creatina-monohidratada-250g-growth-supplements---sem-sabor-em-po-MLB5872060016.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/kit-com-48-pacotes-de-figurinhas-panini-para-o-album-copa-do-mundo-fifa-2026-MLB4674562069.html",
-      "href": "../../ofertas/outros/creatina-monohidratada-250g-growth-supplements---sem-sabor-em-po-MLB5872060016.html",
-      "target": "/ofertas/outros/creatina-monohidratada-250g-growth-supplements---sem-sabor-em-po-MLB5872060016.html",
-      "label": "Ver Oferta"
-    },
-    {
-      "file": "/ofertas/outros/whey-protein-concentrado-100-900g-refil-dark-lab-sabor-morango-MLB3755400429.html",
-      "href": "../../ofertas/outros/creatina-monohidratada-pura-1kg-dark-lab-unidade-sem-sabor-MLB4812130742.html",
-      "target": "/ofertas/outros/creatina-monohidratada-pura-1kg-dark-lab-unidade-sem-sabor-MLB4812130742.html",
-      "label": "Ver Oferta"
-    },
     {
       "file": "/templates/homepage_novo.html",
       "href": "noticias/",
@@ -476,44 +222,10 @@
       "href": "metodologia/",
       "target": "/templates/metodologia",
       "label": "Metodologia"
-    },
-    {
-      "file": "/templates/product_template.html",
-      "href": "../../categorias/{{product.category}}/index.html",
-      "target": "/categorias/{{product.category}}/index.html",
-      "label": "Categoria"
-    },
-    {
-      "file": "/templates/product_template.html",
-      "href": "{{product.url}}",
-      "target": "/templates/{{product.url}}",
-      "label": "🛒 Ir para o Mercado Livre"
-    },
-    {
-      "file": "/vendedor/index.html",
-      "href": "amazon/",
-      "target": "/vendedor/amazon",
-      "label": "📦 E-commerce 320+ Produtos 22% Desc. Médio ⭐ 4.7 Reputação 2 dias Entrega ✅ Prime 🔄 Devolução 💳 Parcelamento"
-    },
-    {
-      "file": "/vendedor/index.html",
-      "href": "shopee/",
-      "target": "/vendedor/shopee",
-      "label": "🧡 Marketplace 500+ Produtos 35% Desc. Médio ⭐ 4.5 Reputação 5-10d Entrega 💰 Preço Baixo 🎁 Cupons 🚚 Frete Grátis"
-    },
-    {
-      "file": "/vendedor/index.html",
-      "href": "americanas/",
-      "target": "/vendedor/americanas",
-      "label": "🏬 E-commerce 280+ Produtos 25% Desc. Médio ⭐ 4.4 Reputação 1-3d Entrega 🏷️ Promoções 💳 Ame Digital 🚚 Retirada"
     }
   ],
   "text_issues": [],
   "top_internal_targets": [
-    [
-      "/",
-      790
-    ],
     [
       "/comparar",
       300
@@ -604,6 +316,10 @@
     ],
     [
       "/comparar/creatina-monohidratada-pura-1k-vs-aparador-de-pelos-multigroom-8.html",
+      11
+    ],
+    [
+      "/",
       11
     ],
     [

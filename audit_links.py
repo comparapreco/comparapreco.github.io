@@ -55,6 +55,9 @@ for p in html_files:
         parsed = urlparse(href_no_frag)
         if parsed.scheme in SKIP_SCHEMES:
             continue
+        # Ignorar links com variáveis de template
+        if "{{" in href and "}}" in href:
+            continue
         if parsed.scheme in ['http','https'] and parsed.netloc and parsed.netloc != 'comparapreco.github.io':
             external_counts[href_no_frag] += 1
             continue
