@@ -11,6 +11,15 @@ from pathlib import Path
 
 BASE_URL = "https://comparapreco.github.io"
 ROOT = Path(__file__).resolve().parents[1]
+
+# Configuração Multi-Site
+SITE_KEY = os.environ.get("SITE_KEY")
+if SITE_KEY:
+    BASE_URL = f"https://comparapreco.github.io/sites/{SITE_KEY}"
+    OUTPUT_ROOT = ROOT / "sites" / SITE_KEY
+else:
+    OUTPUT_ROOT = ROOT
+
 NOW_DATE = datetime.now().strftime("%Y-%m-%d")
 NOW_DATETIME = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+00:00")
 
@@ -27,7 +36,7 @@ def write_sitemap(filename: str, urls: list) -> None:
         lines.append(f"    <priority>{u.get('priority', '0.6')}</priority>")
         lines.append("  </url>")
     lines.append("</urlset>")
-    out_path = ROOT / filename
+    out_path = OUTPUT_ROOT / filename
     out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"[OK] {filename} -> {len(urls)} URLs")
 
@@ -51,7 +60,7 @@ def extract_date_from_filename(filename: str) -> str:
 
 def collect_posts() -> list:
     """Coleta todos os posts individuais de noticias/posts/."""
-    posts_dir = ROOT / "noticias" / "posts"
+    posts_dir = OUTPUT_ROOT / "noticias" / "posts"
     urls = []
     if not posts_dir.exists():
         return urls
@@ -68,12 +77,12 @@ def collect_posts() -> list:
 
 def collect_ofertas() -> list:
     """Coleta todas as páginas de ofertas/produtos."""
-    ofertas_dir = ROOT / "ofertas"
+    ofertas_dir = OUTPUT_ROOT / "ofertas"
     urls = []
     if not ofertas_dir.exists():
         return urls
     for html_file in sorted(ofertas_dir.rglob("*.html")):
-        rel = html_file.relative_to(ROOT)
+        rel = html_file.relative_to(OUTPUT_ROOT)
         urls.append({
             "loc": f"{BASE_URL}/{rel}",
             "lastmod": NOW_DATE,
@@ -85,12 +94,12 @@ def collect_ofertas() -> list:
 
 def collect_produtos_intel() -> list:
     """Coleta páginas de inteligência de produtos (produtos/)."""
-    produtos_dir = ROOT / "produtos"
+    produtos_dir = OUTPUT_ROOT / "produtos"
     urls = []
     if not produtos_dir.exists():
         return urls
     for html_file in sorted(produtos_dir.rglob("*.html")):
-        rel = html_file.relative_to(ROOT)
+        rel = html_file.relative_to(OUTPUT_ROOT)
         urls.append({
             "loc": f"{BASE_URL}/{rel}",
             "lastmod": NOW_DATE,
@@ -102,7 +111,7 @@ def collect_produtos_intel() -> list:
 
 def collect_categorias() -> list:
     """Coleta páginas de categorias."""
-    cat_dir = ROOT / "categorias"
+    cat_dir = OUTPUT_ROOT / "categorias"
     urls = []
     if not cat_dir.exists():
         return urls
@@ -119,7 +128,7 @@ def collect_categorias() -> list:
 
 def collect_guias() -> list:
     """Coleta páginas de guias."""
-    guias_dir = ROOT / "guias"
+    guias_dir = OUTPUT_ROOT / "guias"
     urls = []
     if not guias_dir.exists():
         return urls
@@ -129,6 +138,38 @@ def collect_guias() -> list:
             "loc": f"{BASE_URL}/guias/{guia_name}/",
             "lastmod": NOW_DATE,
             "changefreq": "monthly",
+            "priority": "0.9",
+        })
+    return urls
+
+
+def collect_comparativos() -> list:
+    """Coleta páginas de comparativos (A vs B)."""
+    comp_dir = OUTPUT_ROOT / "comparar"
+    urls = []
+    if not comp_dir.exists():
+        return urls
+    for f in sorted(comp_dir.glob("*.html")):
+        urls.append({
+            "loc": f"{BASE_URL}/comparar/{f.name}",
+            "lastmod": NOW_DATE,
+            "changefreq": "weekly",
+            "priority": "0.8",
+        })
+    return urls
+
+
+def collect_rankings() -> list:
+    """Coleta páginas de rankings (Melhores 2026)."""
+    rank_dir = OUTPUT_ROOT / "melhores-2026"
+    urls = []
+    if not rank_dir.exists():
+        return urls
+    for f in sorted(rank_dir.glob("*.html")):
+        urls.append({
+            "loc": f"{BASE_URL}/melhores-2026/{f.name}",
+            "lastmod": NOW_DATE,
+            "changefreq": "daily",
             "priority": "0.9",
         })
     return urls
@@ -163,7 +204,7 @@ def collect_static_pages() -> list:
         if not path_part:
             result.append(dict(page, lastmod=NOW_DATE))
             continue
-        page_path = ROOT / path_part / "index.html"
+        page_path = OUTPUT_ROOT / path_part / "index.html"
         if page_path.exists():
             result.append(dict(page, lastmod=NOW_DATE))
     return result
@@ -179,7 +220,7 @@ def generate_sitemap_index(sitemaps: list) -> None:
         lines.append(f"    <lastmod>{NOW_DATE}</lastmod>")
         lines.append("  </sitemap>")
     lines.append("</sitemapindex>")
-    out_path = ROOT / "sitemap.xml"
+    out_path = OUTPUT_ROOT / "sitemap.xml"
     out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"[OK] sitemap.xml (index com {len(sitemaps)} sitemaps)")
 
@@ -222,13 +263,23 @@ def main():
     static_urls = collect_static_pages()
     write_sitemap("sitemap-paginas.xml", static_urls)
 
-    # 6. Sitemap Index
+    # 6. Sitemap de Comparativos
+    comp_urls = collect_comparativos()
+    write_sitemap("sitemap-comparativos.xml", comp_urls)
+
+    # 7. Sitemap de Rankings
+    rank_urls = collect_rankings()
+    write_sitemap("sitemap-rankings.xml", rank_urls)
+
+    # 8. Sitemap Index
     all_sitemaps = [
         "sitemap-paginas.xml",
         "sitemap-noticias.xml",
         "sitemap-produtos.xml",
         "sitemap-categorias.xml",
         "sitemap-guias.xml",
+        "sitemap-comparativos.xml",
+        "sitemap-rankings.xml",
     ]
     generate_sitemap_index(all_sitemaps)
 

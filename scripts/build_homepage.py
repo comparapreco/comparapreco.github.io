@@ -2,9 +2,16 @@ import os
 import json
 import unicodedata
 import random
+from pathlib import Path
 from logger import logger
 
 BASE_URL = "https://comparapreco.github.io/"
+ROOT = Path(__file__).resolve().parents[1] if "__file__" in locals() else Path(".")
+
+# Configuração Multi-Site
+SITE_KEY = os.environ.get("SITE_KEY")
+if SITE_KEY:
+    BASE_URL = f"https://comparapreco.github.io/sites/{SITE_KEY}/"
 
 def slugify(text: str) -> str:
     text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
@@ -13,6 +20,13 @@ def slugify(text: str) -> str:
 
 def build_homepage(input_path: str, template_path: str, output_path: str) -> None:
     logger.info(f"Construindo página inicial dinâmica a partir de {input_path}...")
+    
+    # Se estivermos em um site de nicho, ajustar os caminhos
+    if SITE_KEY:
+        template_path = os.path.join("templates", f"homepage_{SITE_KEY}.html")
+        if not os.path.exists(template_path):
+            template_path = "templates/homepage.html"
+            
     if not os.path.exists(template_path):
         logger.error(f"Template {template_path} não encontrado!")
         return
@@ -24,6 +38,13 @@ def build_homepage(input_path: str, template_path: str, output_path: str) -> Non
         try:
             with open(input_path, "r", encoding="utf-8") as f:
                 products = json.load(f)
+                
+            # Filtrar por categorias do nicho
+            categories_env = os.environ.get("SITE_CATEGORIES", "")
+            if SITE_KEY and categories_env:
+                categories = categories_env.split(",")
+                products = [p for p in products if p.get("custom_category_slug") in categories]
+                logger.info(f"Filtrados {len(products)} produtos para a homepage do nicho {SITE_KEY}")
         except Exception as e:
             logger.error(f"Erro ao carregar {input_path}: {e}")
     
@@ -97,4 +118,13 @@ def build_homepage(input_path: str, template_path: str, output_path: str) -> Non
     logger.info(f"Homepage dinâmica gerada com sucesso: {output_path}")
 
 if __name__ == "__main__":
-    build_homepage("data/database/all_products.json", "templates/homepage.html", "index.html")
+    import sys
+    
+    input_file = "data/database/all_products.json"
+    template_file = "templates/homepage.html"
+    output_file = "index.html"
+    
+    if SITE_KEY:
+        output_file = f"sites/{SITE_KEY}/index.html"
+        
+    build_homepage(input_file, template_file, output_file)

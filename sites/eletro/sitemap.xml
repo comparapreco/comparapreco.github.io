@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://comparapreco.github.io/sites/eletro/sitemap-paginas.xml</loc>
+    <lastmod>2026-06-02</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://comparapreco.github.io/sites/eletro/sitemap-noticias.xml</loc>
+    <lastmod>2026-06-02</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://comparapreco.github.io/sites/eletro/sitemap-produtos.xml</loc>
+    <lastmod>2026-06-02</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://comparapreco.github.io/sites/eletro/sitemap-categorias.xml</loc>
+    <lastmod>2026-06-02</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://comparapreco.github.io/sites/eletro/sitemap-guias.xml</loc>
+    <lastmod>2026-06-02</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://comparapreco.github.io/sites/eletro/sitemap-comparativos.xml</loc>
+    <lastmod>2026-06-02</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://comparapreco.github.io/sites/eletro/sitemap-rankings.xml</loc>
+    <lastmod>2026-06-02</lastmod>
+  </sitemap>
+</sitemapindex>

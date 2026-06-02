@@ -1,0 +1,126 @@
+{
+  "network_name": "Radar Ninja Network",
+  "base_domain": "comparapreco.github.io",
+  "sites": {
+    "tech": {
+      "name": "Ninja Tech",
+      "slug": "tech",
+      "niche": "Tecnologia e Eletrônicos",
+      "colors": {
+        "primary": "#007bff",
+        "secondary": "#6c757d",
+        "accent": "#ffc107"
+      },
+      "categories": ["informatica", "celulares", "tv-e-video"],
+      "description": "O radar definitivo para tecnologia e gadgets."
+    },
+    "gamer": {
+      "name": "Ninja Gamer",
+      "slug": "gamer",
+      "niche": "Games e Setup",
+      "colors": {
+        "primary": "#6f42c1",
+        "secondary": "#20c997",
+        "accent": "#e83e8c"
+      },
+      "categories": ["games", "informatica"],
+      "description": "Sua vantagem competitiva começa no preço."
+    },
+    "casa": {
+      "name": "Ninja Casa",
+      "slug": "casa",
+      "niche": "Casa e Decoração",
+      "colors": {
+        "primary": "#28a745",
+        "secondary": "#fd7e14",
+        "accent": "#20c997"
+      },
+      "categories": ["casa", "eletrodomesticos"],
+      "description": "Transforme sua casa sem esvaziar o bolso."
+    },
+    "eletro": {
+      "name": "Ninja Eletro",
+      "slug": "eletro",
+      "niche": "Eletrodomésticos",
+      "colors": {
+        "primary": "#dc3545",
+        "secondary": "#343a40",
+        "accent": "#ffc107"
+      },
+      "categories": ["eletrodomesticos"],
+      "description": "Eficiência e economia para sua cozinha e lavanderia."
+    },
+    "pet": {
+      "name": "Ninja Pet",
+      "slug": "pet",
+      "niche": "Mundo Pet",
+      "colors": {
+        "primary": "#fd7e14",
+        "secondary": "#6f42c1",
+        "accent": "#ffc107"
+      },
+      "categories": ["pet"],
+      "description": "Tudo para o seu melhor amigo pelo melhor preço."
+    },
+    "bebe": {
+      "name": "Ninja Bebê",
+      "slug": "bebe",
+      "niche": "Bebês e Crianças",
+      "colors": {
+        "primary": "#e83e8c",
+        "secondary": "#007bff",
+        "accent": "#20c997"
+      },
+      "categories": ["bebe", "brinquedos"],
+      "description": "Economia real para o futuro da sua família."
+    },
+    "beleza": {
+      "name": "Ninja Beleza",
+      "slug": "beleza",
+      "niche": "Beleza e Cuidados Pessoais",
+      "colors": {
+        "primary": "#d63384",
+        "secondary": "#6610f2",
+        "accent": "#ffc107"
+      },
+      "categories": ["beleza", "saude"],
+      "description": "Sua melhor versão com o melhor custo-benefício."
+    },
+    "fitness": {
+      "name": "Ninja Fitness",
+      "slug": "fitness",
+      "niche": "Esportes e Suplementos",
+      "colors": {
+        "primary": "#198754",
+        "secondary": "#212529",
+        "accent": "#ffc107"
+      },
+      "categories": ["fitness", "saude"],
+      "description": "Performance máxima com gasto mínimo."
+    },
+    "auto": {
+      "name": "Ninja Auto",
+      "slug": "auto",
+      "niche": "Automotivo",
+      "colors": {
+        "primary": "#212529",
+        "secondary": "#adb5bd",
+        "accent": "#dc3545"
+      },
+      "categories": ["auto", "ferramentas"],
+      "description": "Mantenha seu motor rodando por menos."
+    },
+    "ferramentas": {
+      "name": "Ninja Ferramentas",
+      "slug": "ferramentas",
+      "niche": "Ferramentas e DIY",
+      "colors": {
+        "primary": "#ffc107",
+        "secondary": "#212529",
+        "accent": "#fd7e14"
+      },
+      "categories": ["ferramentas"],
+      "description": "Equipe sua oficina com inteligência."
+    }
+  }
+}
