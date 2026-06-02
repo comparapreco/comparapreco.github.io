@@ -67,6 +67,13 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
     page_content = page_content.replace("{{category.name}}", category_name)
     page_content = page_content.replace("{{category.slug}}", category_slug)
     page_content = page_content.replace("{{category.products}}", category_products_html)
+
+    # Marcar categoria ativa no menu
+    categories_list = ["tecnologia", "gamer", "casa", "eletrodomesticos", "pet", "beleza", "fitness", "auto"]
+    for cat in categories_list:
+        placeholder = f"{{{{cat_{cat}_active}}}}"
+        active_class = "active" if cat == category_slug else ""
+        page_content = page_content.replace(placeholder, active_class)
     
     # Salvar página
     page_path = os.path.join(output_dir, category_slug, "index.html")

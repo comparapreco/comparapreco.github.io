@@ -88,8 +88,8 @@ def build_homepage(input_path: str, template_path: str, output_path: str) -> Non
     # Grid de produtos - agora gerenciado pelo app.js para ser 100% dinâmico
     products_html = '<div id="featuredGrid" class="products-grid"></div>'
     
-    seo_title = "Compara Preço — As Melhores Ofertas do Mercado Livre Hoje"
-    meta_description = "Economize com as melhores ofertas curadas do Mercado Livre. Descubra produtos com desconto de até 70% em eletrônicos, casa, beleza e muito mais."
+    seo_title = "Radar Ninja — As Melhores Ofertas do Mercado Livre Hoje"
+    meta_description = "Radar Ninja: O seu rastreador de ofertas em tempo real. Economize com as melhores ofertas curadas do Mercado Livre com descontos de até 70%."
     canonical_url = BASE_URL
     
     # Carregar o menu de exploração
