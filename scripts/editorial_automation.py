@@ -28,7 +28,7 @@ def save_history(history):
         json.dump(history, f, ensure_ascii=False, indent=2)
 
 def generate_editorial_content():
-    """Gera conteúdo com RODÍZIO de categorias e NÃO REPETIÇÃO de produtos."""
+    """Gera conteúdo com RODÍZIO de categorias e PRIORIDADE em nichos específicos."""
     if not DATABASE_FILE.exists():
         logger.error(f"Banco de dados não encontrado em {DATABASE_FILE}")
         return None
@@ -44,7 +44,7 @@ def generate_editorial_content():
     published_ids = set(history.get("published_ids", []))
     last_categories = history.get("last_categories", [])
 
-    # 1. Filtrar produtos válidos
+    # 1. Filtrar produtos válidos (Limite reduzido para 15% conforme solicitado)
     valid_products = []
     for p in products:
         p_id = p.get('id')
@@ -58,9 +58,8 @@ def generate_editorial_content():
             valid_products.append(p)
     
     if not valid_products:
-        logger.warning("Sem produtos novos! Resetando histórico de IDs para permitir re-postagem...")
+        logger.warning("Sem produtos novos! Resetando histórico de IDs...")
         published_ids = set()
-        # Tentar filtrar novamente
         valid_products = [p for p in products if p.get('status') == 'active' and not any(t in p.get('name','').lower() for t in FORBIDDEN_TERMS)]
 
     # 2. Agrupar por categoria
@@ -71,12 +70,20 @@ def generate_editorial_content():
             by_category[cat] = []
         by_category[cat].append(p)
 
-    # 3. Escolher a categoria da vez (Rodízio)
-    available_categories = [c for c in by_category.keys() if c not in last_categories[-3:]]
+    # 3. Escolher a categoria da vez (Prioridade em Móveis, Eletrodomésticos, TV)
+    priority_categories = ['moveis', 'eletrodomesticos', 'tv-e-video', 'eletroportateis']
+    available_categories = [c for c in by_category.keys() if c not in last_categories[-5:]]
+    
     if not available_categories:
         available_categories = list(by_category.keys())
     
-    chosen_category = random.choice(available_categories)
+    # Filtrar as prioridades disponíveis
+    available_priority = [c for c in available_categories if c in priority_categories]
+    
+    if available_priority:
+        chosen_category = random.choice(available_priority)
+    else:
+        chosen_category = random.choice(available_categories)
     
     # 4. Pegar o melhor produto dessa categoria
     best_product = sorted(by_category[chosen_category], key=lambda x: x.get('custom_discount_pct', 0), reverse=True)[0]
@@ -84,12 +91,11 @@ def generate_editorial_content():
     # 5. Atualizar histórico
     history["published_ids"].append(best_product['id'])
     history["last_categories"].append(chosen_category)
-    # Manter histórico limpo
     if len(history["published_ids"]) > 500: history["published_ids"] = history["published_ids"][-500:]
     if len(history["last_categories"]) > 10: history["last_categories"] = history["last_categories"][-10:]
     save_history(history)
 
-    # 6. Gerar o artigo único (um por vez como solicitado)
+    # 6. Gerar o artigo único
     p = best_product
     p_id = p.get('id')
     name = p.get('name')
