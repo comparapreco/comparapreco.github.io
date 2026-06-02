@@ -54,11 +54,25 @@ def load_products() -> List[Dict[str, Any]]:
 def select_products(products: List[Dict[str, Any]], count: int) -> List[Dict[str, Any]]:
     if not products:
         return []
-    existing_count = len(list(POSTS_DIR.glob("*.html"))) if POSTS_DIR.exists() else 0
-    selected: List[Dict[str, Any]] = []
-    for i in range(count):
-        selected.append(products[(existing_count + i) % len(products)])
-    return selected
+    
+    # Lista de IDs de produtos que já possuem posts
+    existing_ids = set()
+    if POSTS_DIR.exists():
+        for post in POSTS_DIR.glob("*.html"):
+            # O slug contém o ID no formato: analise-slug-ID-timestamp-seq
+            match = re.search(r"-([A-Z0-9]+)-\d{14}-\d+", post.name)
+            if match:
+                existing_ids.add(match.group(1))
+    
+    # Selecionar apenas produtos que ainda não têm post
+    available = [p for p in products if str(p.get("id")) not in existing_ids]
+    
+    # Se todos os produtos já tiverem posts, resetamos a lista para não travar o robô
+    if not available:
+        logger.info("Todos os produtos já possuem posts. Reiniciando ciclo.")
+        available = products
+        
+    return available[:count]
 
 
 def generate_product_specs(product: Dict[str, Any]) -> Dict[str, str]:
