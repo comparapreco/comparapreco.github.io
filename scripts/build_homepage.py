@@ -34,10 +34,8 @@ def build_homepage(input_path, template_path, output_path):
         logger.warning("Nenhum produto para a home.")
         return
 
-    # Ordenar por qualidade e desconto
     sorted_products = sorted(products, key=lambda x: (x.get("quality_score", 0), x.get("custom_discount_pct", 0)), reverse=True)
 
-    # DIVERSIFICAÇÃO POR MARCA (Máximo 2 por marca)
     diversified = []
     brand_counts = {}
     for p in sorted_products:
@@ -45,29 +43,29 @@ def build_homepage(input_path, template_path, output_path):
         brand_counts[brand] = brand_counts.get(brand, 0) + 1
         if brand_counts[brand] <= 2:
             diversified.append(p)
-        if len(diversified) >= 50: # Limite de produtos na home
+        if len(diversified) >= 50:
             break
 
-    # Se sobrar pouco, preencher com o resto
     if len(diversified) < 20:
         for p in sorted_products:
             if p not in diversified:
                 diversified.append(p)
             if len(diversified) >= 40: break
 
-    # Escolher Hero
     random.seed(os.getpid())
     hero_product = random.choice(diversified[:10]) if diversified else sorted_products[0]
 
-    # Renderizar (Simulado para este ambiente, o app.js faz o grosso no client-side)
-    # Mas vamos garantir que o HTML estático tenha as metas corretas
     template = template.replace("{{hero_id}}", hero_product.get("id", ""))
     
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    # CORREÇÃO: Tratar diretório vazio
+    output_dir = os.path.dirname(output_path)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
+        
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(template)
     
     logger.info(f"Home gerada com {len(diversified)} produtos diversificados.")
 
 if __name__ == "__main__":
-    build_homepage("data/scored_products.json", "templates/index.html", "index.html")
+    build_homepage("data/database/all_products.json", "templates/index.html", "index.html")
