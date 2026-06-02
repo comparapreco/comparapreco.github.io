@@ -154,5 +154,57 @@
         "discount": 55
       }
     ]
+  },
+  {
+    "timestamp": "2026-06-02 04:40:56",
+    "total_urls": 640,
+    "total_products": 73,
+    "total_comparisons": 316,
+    "total_rankings": 11,
+    "total_guides": 1,
+    "total_categories": 23,
+    "total_brands": 1,
+    "top_drops": [
+      {
+        "name": "Whey Protein Concentrado 100% 900g Refil Dark Lab Sabor Morango",
+        "discount": 68
+      },
+      {
+        "name": "Whey Protein Concentrado 100% 900g Dark Lab",
+        "discount": 67
+      },
+      {
+        "name": "Creatina Monohidratada Pura 500g Dark Lab Unidade Sem Sabor",
+        "discount": 65
+      },
+      {
+        "name": "Cooktop A G\u00e1s Fischer 4 Bocas Fit Line Trempe Esmaltada Aramado Preto 127/220v",
+        "discount": 59
+      },
+      {
+        "name": "Cooktop A G\u00e1s Fischer 4 Bocas Fit Line",
+        "discount": 59
+      },
+      {
+        "name": "Kit 10 Pote De Vidro Marmita Herm\u00e9tico 370ml Freezer Fitness Rishon Transparente",
+        "discount": 57
+      },
+      {
+        "name": "Parafusadeira Furadeira C/ 2 Baterias Maleta Kit Completo Led Eixo Flex\u00edvel V\u00e1rios N\u00edveis Torque Amarelo 127/220v 60 Hz",
+        "discount": 57
+      },
+      {
+        "name": "Kit 10 Pote De Vidro Marmita Herm\u00e9tico",
+        "discount": 57
+      },
+      {
+        "name": "Creatina Monohidratada Pura 1kg Dark Lab Unidade Sem Sabor",
+        "discount": 56
+      },
+      {
+        "name": "Celular Samsung Galaxy A07 256gb, 8gb, C\u00e2mera 50mp, Tela 6.7 , Prote\u00e7\u00e3o Ip54, Processador 6nm - Preto",
+        "discount": 55
+      }
+    ]
   }
 ]
