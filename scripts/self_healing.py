@@ -37,7 +37,7 @@ def run_pipeline():
         "validate_products.py", "deduplicate.py", "deep_clean_duplicates.py", "clean_orphan_pages.py", "clean_duplicate_comparisons.py", "sync_database.py",
         "editorial_automation.py", "generate_blog_posts.py",
         "generate_pages.py", "build_categories.py", "build_homepage.py",
-        "generate_compara_index.py", "generate_sitemaps.py", "generate_feeds.py",
+        "generate_compara_index.py", "generate_rankings.py", "generate_sitemaps.py", "generate_feeds.py",
         "generate_duplicate_report.py", # Novo: Gerar relatório de duplicados
         "health_monitor.py"
     ]

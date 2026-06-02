@@ -1,31 +1,31 @@
 {
-  "last_generated": "2026-06-02T15:06:27.002240",
+  "last_generated": "2026-06-02T15:08:50.066513",
   "automated_articles": [
     {
-      "id": "article-MLB6070039800",
-      "title": "Asus Consola Portátil 512 Gb White Z2 Rc73ya-nh003w Rog Xbox Ally Asus Ryzen Z2 Wh Branco: Queda Histórica de 46% OFF!",
-      "slug": "asus-consola-portátil-512-gb-white-z2-rc73ya-nh003-queda-46",
-      "category": "Informatica",
-      "price_drop": 46,
-      "current_price": 4223.0,
-      "previous_price": 7849.0,
+      "id": "article-MLB6582857986",
+      "title": "Kit C/ 36 Envelopes (252 Cromos) - Copa Do Mundo Fifa 2026: Queda Histórica de 49% OFF!",
+      "slug": "kit-c-36-envelopes-252-cromos--copa-do-mundo-fifa--queda-49",
+      "category": "Games",
+      "price_drop": 49,
+      "current_price": 242.0,
+      "previous_price": 479.0,
       "status": "published",
-      "generated_at": "2026-06-02T15:06:27.002223",
-      "content": "O Asus Consola Portátil 512 Gb White Z2 Rc73ya-nh003w Rog Xbox Ally Asus Ryzen Z2 Wh Branco atingiu uma queda de 46% em seu preço. Agora disponível por apenas R$ 4223.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
+      "generated_at": "2026-06-02T15:08:50.066491",
+      "content": "O Kit C/ 36 Envelopes (252 Cromos) - Copa Do Mundo Fifa 2026 atingiu uma queda de 49% em seu preço. Agora disponível por apenas R$ 242.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
           "platform": "twitter",
-          "content": "📱 ALERTA: Asus Consola Portátil 512 Gb White Z2 Rc73ya-nh003w Rog Xbox Ally Asus Ryzen Z2 Wh Branco com 46% de desconto! De R$ 7849.00 por apenas R$ 4223.00. Aproveite! 🔥 #ComparaPreço #Oferta"
+          "content": "📱 ALERTA: Kit C/ 36 Envelopes (252 Cromos) - Copa Do Mundo Fifa 2026 com 49% de desconto! De R$ 479.00 por apenas R$ 242.00. Aproveite! 🔥 #ComparaPreço #Oferta"
         }
       ]
     }
   ],
   "alert_triggers": [
     {
-      "product_id": "MLB6070039800",
-      "product_name": "Asus Consola Portátil 512 Gb White Z2 Rc73ya-nh003w Rog Xbox Ally Asus Ryzen Z2 Wh Branco",
-      "current_drop": 46,
-      "alert_timestamp": "2026-06-02T15:06:27.002242"
+      "product_id": "MLB6582857986",
+      "product_name": "Kit C/ 36 Envelopes (252 Cromos) - Copa Do Mundo Fifa 2026",
+      "current_drop": 49,
+      "alert_timestamp": "2026-06-02T15:08:50.066515"
     }
   ]
 }
