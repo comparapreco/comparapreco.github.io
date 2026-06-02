@@ -1,3 +1,14 @@
+async function loadTemplate(url, targetSelector) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const html = await response.text();
+        document.querySelector(targetSelector).innerHTML = html;
+    } catch (error) {
+        console.error(`Erro ao carregar template ${url}:`, error);
+    }
+}
+
 // ========== CONFIGURAÇÃO ==========
 const DATA_URL = '/data/database/all_products.json';
 
@@ -134,8 +145,15 @@ async function init() {
         // Atualizar estatísticas
         updateStats(allProducts);
 
-        // Renderizar produtos
-        renderProducts(allProducts, 'featuredGrid', 24);
+        // Renderizar produtos na página inicial
+        if (document.getElementById('featuredGrid')) {
+            renderProducts(allProducts, 'featuredGrid', 24);
+        }
+
+        // Renderizar ofertas na página de ofertas
+        if (document.getElementById('offersGrid')) {
+            renderProducts(allProducts, 'offersGrid', 50); // Aumentar limite para ofertas
+        }
         
         // Renderizar comparativos (produtos aleatórios)
         if (document.getElementById('comparativesGrid')) {
@@ -169,6 +187,10 @@ if (document.readyState === 'loading') {
 } else {
     init();
 }
+
+// Carregar templates de cabeçalho e rodapé
+loadTemplate('/templates/header.html', 'header');
+loadTemplate('/templates/footer.html', 'footer');
 
 // ========== LAZY LOADING OTIMIZADO ==========
 if ('IntersectionObserver' in window) {
