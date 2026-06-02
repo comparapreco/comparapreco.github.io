@@ -1,31 +1,31 @@
 {
-  "last_generated": "2026-06-02T15:13:12.481927",
+  "last_generated": "2026-06-02T16:02:03.863375",
   "automated_articles": [
     {
-      "id": "article-MLB3386925565",
-      "title": "Furadeira Parafusadeira Impacto Bateria 21v Bivolt: Queda Histórica de 50% OFF!",
-      "slug": "furadeira-parafusadeira-impacto-bateria-21v-bivolt-queda-50",
-      "category": "Ferramentas",
-      "price_drop": 50,
-      "current_price": 149.9,
-      "previous_price": 299.9,
+      "id": "article-MLB6539025322",
+      "title": "Smart Tv Philco 50 P50vik 4k Uhd Led Roku Dolby Audio Wi-fi Hdr10 110/220v: Queda Histórica de 43% OFF!",
+      "slug": "smart-tv-philco-50-p50vik-4k-uhd-led-roku-dolby-au-queda-43",
+      "category": "Tv-E-Video",
+      "price_drop": 43,
+      "current_price": 1994.0,
+      "previous_price": 3499.0,
       "status": "published",
-      "generated_at": "2026-06-02T15:13:12.481906",
-      "content": "O Furadeira Parafusadeira Impacto Bateria 21v Bivolt atingiu uma queda de 50% em seu preço. Agora disponível por apenas R$ 149.90, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
+      "generated_at": "2026-06-02T16:02:03.863364",
+      "content": "O Smart Tv Philco 50 P50vik 4k Uhd Led Roku Dolby Audio Wi-fi Hdr10 110/220v atingiu uma queda de 43% em seu preço. Agora disponível por apenas R$ 1994.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
           "platform": "twitter",
-          "content": "📱 ALERTA: Furadeira Parafusadeira Impacto Bateria 21v Bivolt com 50% de desconto! De R$ 299.90 por apenas R$ 149.90. Aproveite! 🔥 #ComparaPreço #Oferta"
+          "content": "📱 ALERTA: Smart Tv Philco 50 P50vik 4k Uhd Led Roku Dolby Audio Wi-fi Hdr10 110/220v com 43% de desconto! De R$ 3499.00 por apenas R$ 1994.00. Aproveite! 🔥 #ComparaPreço #Oferta"
         }
       ]
     }
   ],
   "alert_triggers": [
     {
-      "product_id": "MLB3386925565",
-      "product_name": "Furadeira Parafusadeira Impacto Bateria 21v Bivolt",
-      "current_drop": 50,
-      "alert_timestamp": "2026-06-02T15:13:12.481929"
+      "product_id": "MLB6539025322",
+      "product_name": "Smart Tv Philco 50 P50vik 4k Uhd Led Roku Dolby Audio Wi-fi Hdr10 110/220v",
+      "current_drop": 43,
+      "alert_timestamp": "2026-06-02T16:02:03.863376"
     }
   ]
 }

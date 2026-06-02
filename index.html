@@ -9,24 +9,105 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
     <style>
-        /* Estilos específicos da homepage que complementam o style.css */
-        .hero-premium { padding: 80px 0; }
+        :root {
+            --primary: #00c853;
+            --primary-dark: #00a443;
+            --accent: #ffab00;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #0f172a;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .hero-premium { 
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
+            color: white; 
+            padding: 80px 0; 
+            text-align: center;
+            border-bottom: 5px solid var(--primary);
+        }
+        .hero-premium h1 { font-size: 3.5rem; font-weight: 900; margin-bottom: 20px; letter-spacing: -1px; }
+        .hero-premium p { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 0 auto 40px; }
+        
+        .stats-badge { 
+            display: inline-flex; 
+            gap: 20px; 
+            background: rgba(255,255,255,0.1); 
+            padding: 15px 30px; 
+            border-radius: 50px; 
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .stat-val { font-weight: 800; color: var(--primary); margin-right: 5px; }
+
+        .section-title { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin: 60px 0 30px; 
+            border-left: 5px solid var(--primary);
+            padding-left: 20px;
+        }
+        .section-title h2 { font-size: 2rem; font-weight: 800; margin: 0; }
+
+        .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; margin-top: -40px; }
+        .cat-item { 
+            background: var(--card); 
+            padding: 20px; 
+            border-radius: 16px; 
+            text-align: center; 
+            text-decoration: none; 
+            color: var(--text);
+            font-weight: 700;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+            border: 1px solid var(--border);
+        }
+        .cat-item:hover { transform: translateY(-5px); border-color: var(--primary); }
+
+        .featured-card {
+            background: var(--card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+        .featured-card:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); transform: scale(1.02); }
+
+        .footer-premium { background: #0f172a; color: white; padding: 80px 0 40px; margin-top: 100px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+        .footer-col h4 { color: var(--primary); font-size: 1.2rem; margin-bottom: 25px; }
+        .footer-col ul { list-style: none; padding: 0; }
+        .footer-col ul li { margin-bottom: 12px; opacity: 0.7; transition: 0.2s; }
+        .footer-col ul li:hover { opacity: 1; color: var(--primary); cursor: pointer; }
+
+        .btn-ninja { 
+            background: var(--primary); 
+            color: white; 
+            padding: 12px 25px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.2s;
+        }
+        .btn-ninja:hover { background: var(--primary-dark); transform: scale(1.05); }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <a href="/" class="logo">🥷 RADAR NINJA</a>
-            <button class="menu-toggle" aria-label="Menu">☰</button>
-            <div class="search-bar">
-                <input id="mainSearch" type="text" placeholder="Busque ofertas ninjas...">
-            </div>
-            <nav class="nav-links">
-                <a href="/ofertas-hoje">🔥 Ofertas</a>
-                <a href="/comparar">🔍 Comparar</a>
-                <a href="/melhores-2026">🏆 Rankings</a>
-                <a href="/guias">📖 Guias</a>
-                <a href="/pro" class="btn-primary">Ninja PRO 🚀</a>
+    <header class="header" style="background: #0f172a; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" class="logo" style="font-size: 1.5rem; font-weight: 900; color: white; text-decoration: none;">🥷 RADAR NINJA</a>
+            <nav style="display: flex; gap: 25px; align-items: center;">
+                <a href="/ofertas-hoje" style="color: white; text-decoration: none; font-weight: 600;">Ofertas</a>
+                <a href="/comparar" style="color: white; text-decoration: none; font-weight: 600;">Comparar</a>
+                <a href="/melhores-2026" style="color: white; text-decoration: none; font-weight: 600;">Rankings</a>
+                <a href="/pro" class="btn-ninja">NINJA PRO 🚀</a>
             </nav>
         </div>
     </header>
@@ -55,7 +136,7 @@
 
         <div class="section-title">
             <h2>🔥 Ofertas Ninja do Momento</h2>
-            <a href="/ofertas-hoje" class="btn-buy" style="background: transparent; border: 2px solid var(--primary); color: var(--primary); display: inline-block; padding: 10px 18px;">Ver Todas as Ofertas →</a>
+            <a href="/ofertas-hoje" class="btn-ninja" style="background: transparent; border: 2px solid var(--primary); color: var(--primary);">Ver Todas as Ofertas →</a>
         </div>
         
         <div id="featuredGrid" class="products-grid"></div>
