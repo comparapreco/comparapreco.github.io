@@ -7,6 +7,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/categorias/auto/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/categorias/bebe/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/categorias/beleza/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>daily</changefreq>
@@ -25,6 +37,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/categorias/eletro/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/categorias/eletrodomesticos/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>daily</changefreq>
@@ -32,6 +50,18 @@
   </url>
   <url>
     <loc>https://comparapreco.github.io/categorias/ferramentas/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/categorias/fitness/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/categorias/gamer/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -79,6 +109,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/categorias/pet/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/categorias/philco/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>daily</changefreq>
@@ -86,6 +122,12 @@
   </url>
   <url>
     <loc>https://comparapreco.github.io/categorias/samsung/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/categorias/tech/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>

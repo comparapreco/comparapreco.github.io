@@ -17,6 +17,9 @@ def run_portal_generation():
     scripts_to_run = [
         "generate_blog_posts.py",
         "generate_programmatic_seo.py",
+        "build_hubs.py",
+        "apply_breadcrumbs.py",
+        "smart_interlinking.py",
         "generate_pages_enhanced.py",
         "build_homepage.py",
         "generate_sitemaps.py"
