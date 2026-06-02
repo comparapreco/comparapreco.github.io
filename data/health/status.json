@@ -1,6 +1,79 @@
 {
-  "status": "OK",
-  "timestamp": "2026-06-02T17:01:23.728329",
-  "issues": [],
-  "audit": []
+  "status": "WARNING",
+  "timestamp": "2026-06-02T23:11:31.906142",
+  "issues": [
+    "Produto MLB27174916 capturado mas n\u00e3o publicado totalmente."
+  ],
+  "audit": [
+    {
+      "id": "MLB54961556",
+      "name": "Celular Samsung Galaxy A07 256gb, 8gb, C\u00e2mera 50mp, Tela 6.7 , Prote\u00e7\u00e3o Ip54, Processador 6nm - Preto",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB48946861",
+      "name": "Samsung Galaxy A06 5g Dual Sim 128gb Preto",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB54963045",
+      "name": "Celular Samsung Galaxy A07 256gb 8gb C\u00e2mera 50mp Verde",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB58353028",
+      "name": "Smartphone Motorola Moto G06 - 128gb 12gb (4gb Ram + 8gb Ram Boost) E Camera 50mp Com Ai Bateria De 5200 Mah Tela 6.9 - Azul Marinho",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB47115842",
+      "name": "Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram C\u00e2mera Tripla De At\u00e9 50mp Selfie De 12mp Ip67 Super Amoled 6.7'' Nfc Recursos Ai Android E Seguran\u00e7a Snapdragon - Preto",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB1027172667",
+      "name": "Apple iPhone 15 (128 Gb) - Azul - Distribuidor Autorizado",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB55521828",
+      "name": "Celular Samsung Galaxy A17 5g Com Ia, 128gb, 4gb Ram, C\u00e2m De 50mp, Tela De 6.7 , Nfc, Ip54 - Cinza",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB1040287791",
+      "name": "Apple iPhone 16 (128 Gb) - Branco - Distribuidor Autorizado",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB1027172677",
+      "name": "Apple iPhone 15 (128 Gb) - Preto - Distribuidor Autorizado",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB27174916",
+      "name": "Fone De Ouvido Sem Fio Bluetooth F9-5 Pares Som Imersivo Powerbank Moderno Bateria Longa Dura\u00e7\u00e3o Academia Compativel Com Todos Celulares Preto",
+      "captured": true,
+      "processed": false,
+      "published": false
+    }
+  ]
 }

@@ -1,0 +1,12 @@
+[
+  {
+    "timestamp": "2026-06-02T23:11:31.010919",
+    "subject": "Pipeline Error",
+    "message": "Falha no script fetch_products_realtime.py: Traceback (most recent call last):\n  File \"/home/runner/work/comparapreco.github.io/comparapreco.github.io/scripts/fetch_products_realtime.py\", line 15, in <module>\n    from bs4 import BeautifulSoup\nM"
+  },
+  {
+    "timestamp": "2026-06-02T23:11:31.879741",
+    "subject": "Pipeline Error",
+    "message": "Falha no script seo_health_check.py: Traceback (most recent call last):\n  File \"/home/runner/work/comparapreco.github.io/comparapreco.github.io/scripts/seo_health_check.py\", line 3, in <module>\n    from bs4 import BeautifulSoup\nModuleNot"
+  }
+]
