@@ -5,15 +5,16 @@ from difflib import SequenceMatcher
 from logger import logger
 import unicodedata
 import re
+from datetime import datetime
 
 DB_PATH = "data/database/all_products.json"
 REPORT_PATH = "reports/duplicate_report.md"
 SIMILARITY_THRESHOLD = 0.9 # Limiar para similaridade de nomes
 
 def slugify(text: str) -> str:
-    text = unicodedata.normalize(\'NFKD\', text).encode(\'ascii\', \'ignore\').decode(\'ascii\')
-    text = re.sub(r\'[^\\w\\s-]\', \'\', text).strip().lower()
-    text = re.sub(r\'[-\\s]+\', \'-\', text)
+    text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
+    text = re.sub(r'[^\w\s-]', '', text).strip().lower()
+    text = re.sub(r'[-\s]+', '-', text)
     return text
 
 def generate_duplicate_report():
@@ -69,8 +70,7 @@ def generate_duplicate_report():
 
     total_duplicates_found = len(duplicate_skus) + len(duplicate_permalinks) + len(duplicate_names)
 
-    report_content = f"""
-# 📊 Relatório de Duplicação do Radar Ninja - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+    report_content = f"""# 📊 Relatório de Duplicação do Radar Ninja - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 
 Este relatório detalha a saúde do banco de dados de produtos, identificando e categorizando possíveis duplicados.
 
@@ -87,40 +87,46 @@ Este relatório detalha a saúde do banco de dados de produtos, identificando e 
 
 ### Duplicados por SKU
 
-{f"Nenhum duplicado por SKU encontrado." if not duplicate_skus else ""}
 """
-    for sku, prods in duplicate_skus.items():
-        report_content += f"\n#### SKU: `{sku}`\n"
-        report_content += "| ID | Nome do Produto | Permalink | Status |\n"
-        report_content += "|---|---|---|---|\n"
-        for p in prods:
-            report_content += f"| {p.get(\'id\', \'N/A\')} | {p.get(\'name\', \'N/A\')} | {p.get(\'permalink\', \'N/A\')} | {p.get(\'status\', \'N/A\')} |\n"
+    if not duplicate_skus:
+        report_content += "Nenhum duplicado por SKU encontrado.\n"
+    else:
+        for sku, prods in duplicate_skus.items():
+            report_content += f"\n#### SKU: `{sku}`\n"
+            report_content += "| ID | Nome do Produto | Permalink | Status |\n"
+            report_content += "|---|---|---|---|\n"
+            for p in prods:
+                report_content += f"| {p.get('id', 'N/A')} | {p.get('name', 'N/A')} | {p.get('permalink', 'N/A')} | {p.get('status', 'N/A')} |\n"
 
     report_content += f"""
 
 ### Duplicados por Permalink
 
-{f"Nenhum duplicado por Permalink encontrado." if not duplicate_permalinks else ""}
 """
-    for pl, prods in duplicate_permalinks.items():
-        report_content += f"\n#### Permalink: `{pl}`\n"
-        report_content += "| ID | Nome do Produto | SKU | Status |\n"
-        report_content += "|---|---|---|---|\n"
-        for p in prods:
-            report_content += f"| {p.get(\'id\', \'N/A\')} | {p.get(\'name\', \'N/A\')} | {p.get(\'sku\', \'N/A\')} | {p.get(\'status\', \'N/A\')} |\n"
+    if not duplicate_permalinks:
+        report_content += "Nenhum duplicado por Permalink encontrado.\n"
+    else:
+        for pl, prods in duplicate_permalinks.items():
+            report_content += f"\n#### Permalink: `{pl}`\n"
+            report_content += "| ID | Nome do Produto | SKU | Status |\n"
+            report_content += "|---|---|---|---|\n"
+            for p in prods:
+                report_content += f"| {p.get('id', 'N/A')} | {p.get('name', 'N/A')} | {p.get('sku', 'N/A')} | {p.get('status', 'N/A')} |\n"
 
     report_content += f"""
 
 ### Duplicados por Nome Similar (Acima de {SIMILARITY_THRESHOLD*100:.0f}% de similaridade)
 
-{f"Nenhum duplicado por nome similar encontrado." if not duplicate_names else ""}
 """
-    for name_slug, prods in duplicate_names.items():
-        report_content += f"\n#### Nome Slug: `{name_slug}`\n"
-        report_content += "| ID | Nome do Produto | SKU | Permalink | Status |\n"
-        report_content += "|---|---|---|---|---|\n"
-        for p in prods:
-            report_content += f"| {p.get(\'id\', \'N/A\')} | {p.get(\'name\', \'N/A\')} | {p.get(\'sku\', \'N/A\')} | {p.get(\'permalink\', \'N/A\')} | {p.get(\'status\', \'N/A\')} |\n"
+    if not duplicate_names:
+        report_content += "Nenhum duplicado por nome similar encontrado.\n"
+    else:
+        for name_slug, prods in duplicate_names.items():
+            report_content += f"\n#### Nome Slug: `{name_slug}`\n"
+            report_content += "| ID | Nome do Produto | SKU | Permalink | Status |\n"
+            report_content += "|---|---|---|---|---|\n"
+            for p in prods:
+                report_content += f"| {p.get('id', 'N/A')} | {p.get('name', 'N/A')} | {p.get('sku', 'N/A')} | {p.get('permalink', 'N/A')} | {p.get('status', 'N/A')} |\n"
 
     os.makedirs(os.path.dirname(REPORT_PATH), exist_ok=True)
     with open(REPORT_PATH, "w", encoding="utf-8") as f:

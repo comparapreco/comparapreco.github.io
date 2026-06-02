@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥷 Radar Ninja - Dashboard de Integridade</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 50%, #2563eb 100%);
+            color: #0f172a;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        .header h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        .card-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+        .card-value {
+            font-size: 36px;
+            font-weight: 900;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+        .card-subtitle {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+        .status-good { background: #dcfce7; color: #166534; }
+        .status-warning { background: #fef3c7; color: #92400e; }
+        .status-danger { background: #fee2e2; color: #991b1b; }
+        .chart-section {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            margin-bottom: 40px;
+        }
+        .chart-title {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #0f172a;
+        }
+        .progress-bar {
+            background: #e2e8f0;
+            border-radius: 12px;
+            height: 24px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2563eb, #60a5fa);
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table th {
+            background: #f8fafc;
+            padding: 12px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 13px;
+            color: #64748b;
+            border-bottom: 2px solid #e2e8f0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 14px;
+        }
+        .table tr:hover {
+            background: #f8fafc;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .badge-active { background: #dcfce7; color: #166534; }
+        .badge-expired { background: #fee2e2; color: #991b1b; }
+        .footer {
+            text-align: center;
+            color: white;
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🥷 Radar Ninja</h1>
+            <p>Dashboard de Integridade e Saúde do Portal</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-title">Total de Produtos</div>
+                <div class="card-value" id="totalProducts">-</div>
+                <div class="card-subtitle">No banco de dados</div>
+                <div class="status-badge status-good">✓ Operacional</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Produtos Ativos</div>
+                <div class="card-value" id="activeProducts">-</div>
+                <div class="card-subtitle">Prontos para publicação</div>
+                <div class="status-badge status-good">✓ Saudável</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Duplicados Detectados</div>
+                <div class="card-value" id="duplicateCount">0</div>
+                <div class="card-subtitle">Últimas 24 horas</div>
+                <div class="status-badge status-warning">⚠ Monitorando</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Taxa de Duplicação</div>
+                <div class="card-value" id="duplicateRate">0%</div>
+                <div class="card-subtitle">Produtos duplicados / Total</div>
+                <div class="status-badge status-good">✓ Baixa</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Última Execução</div>
+                <div class="card-value" id="lastExecution">-</div>
+                <div class="card-subtitle">Atualização do motor</div>
+                <div class="status-badge status-good">✓ Ativo</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Posts Gerados</div>
+                <div class="card-value" id="postsGenerated">-</div>
+                <div class="card-subtitle">Últimas 24 horas</div>
+                <div class="status-badge status-good">✓ Publicando</div>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <div class="chart-title">📊 Saúde do Banco de Dados</div>
+            <div style="margin-bottom: 32px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="font-weight: 600; color: #0f172a;">Produtos Ativos</span>
+                    <span id="activePercentage" style="font-weight: 700; color: #2563eb;">-</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="activeBar" style="width: 0%;">0%</div>
+                </div>
+            </div>
+            <div style="margin-bottom: 32px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="font-weight: 600; color: #0f172a;">Produtos Expirados</span>
+                    <span id="expiredPercentage" style="font-weight: 700; color: #f59e0b;">-</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="expiredBar" style="width: 0%; background: linear-gradient(90deg, #f59e0b, #fbbf24);"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <div class="chart-title">🔍 Últimas Detecções de Duplicados</div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Quantidade</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Duplicados por SKU</td>
+                        <td id="skuDuplicates">0</td>
+                        <td><span class="badge badge-active">✓ Bloqueado</span></td>
+                    </tr>
+                    <tr>
+                        <td>Duplicados por Permalink</td>
+                        <td id="permalinkDuplicates">0</td>
+                        <td><span class="badge badge-active">✓ Bloqueado</span></td>
+                    </tr>
+                    <tr>
+                        <td>Duplicados por Similaridade de Nome</td>
+                        <td id="nameDuplicates">0</td>
+                        <td><span class="badge badge-active">✓ Bloqueado</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>🤖 Radar Ninja - Automação 24/7 | Última atualização: <span id="updateTime">-</span></p>
+        </div>
+    </div>
+
+    <script>
+        // Simular dados (em produção, isso viria de uma API)
+        function updateDashboard() {
+            // Ler dados do arquivo de relatório ou de uma API
+            const data = {
+                totalProducts: 62,
+                activeProducts: 60,
+                expiredProducts: 2,
+                duplicateCount: 0,
+                skuDuplicates: 0,
+                permalinkDuplicates: 0,
+                nameDuplicates: 0,
+                postsGenerated: 24,
+                lastExecution: new Date().toLocaleString('pt-BR')
+            };
+
+            // Atualizar cards
+            document.getElementById('totalProducts').textContent = data.totalProducts;
+            document.getElementById('activeProducts').textContent = data.activeProducts;
+            document.getElementById('duplicateCount').textContent = data.duplicateCount;
+            document.getElementById('postsGenerated').textContent = data.postsGenerated;
+            document.getElementById('lastExecution').textContent = 'Agora';
+            document.getElementById('updateTime').textContent = new Date().toLocaleString('pt-BR');
+
+            // Calcular percentuais
+            const activePercentage = (data.activeProducts / data.totalProducts * 100).toFixed(1);
+            const expiredPercentage = (data.expiredProducts / data.totalProducts * 100).toFixed(1);
+            const duplicateRate = (data.duplicateCount / data.totalProducts * 100).toFixed(2);
+
+            document.getElementById('activePercentage').textContent = activePercentage + '%';
+            document.getElementById('expiredPercentage').textContent = expiredPercentage + '%';
+            document.getElementById('duplicateRate').textContent = duplicateRate + '%';
+
+            // Atualizar barras de progresso
+            document.getElementById('activeBar').style.width = activePercentage + '%';
+            document.getElementById('activeBar').textContent = activePercentage + '%';
+            document.getElementById('expiredBar').style.width = expiredPercentage + '%';
+            document.getElementById('expiredBar').textContent = expiredPercentage + '%';
+
+            // Atualizar tabela de duplicados
+            document.getElementById('skuDuplicates').textContent = data.skuDuplicates;
+            document.getElementById('permalinkDuplicates').textContent = data.permalinkDuplicates;
+            document.getElementById('nameDuplicates').textContent = data.nameDuplicates;
+        }
+
+        // Atualizar ao carregar
+        updateDashboard();
+
+        // Atualizar a cada 5 minutos
+        setInterval(updateDashboard, 5 * 60 * 1000);
+    </script>
+</body>
+</html>
