@@ -1,31 +1,31 @@
 {
-  "last_generated": "2026-06-02T16:02:03.863375",
+  "last_generated": "2026-06-02T16:46:05.750294",
   "automated_articles": [
     {
-      "id": "article-MLB6539025322",
-      "title": "Smart Tv Philco 50 P50vik 4k Uhd Led Roku Dolby Audio Wi-fi Hdr10 110/220v: Queda Histórica de 43% OFF!",
-      "slug": "smart-tv-philco-50-p50vik-4k-uhd-led-roku-dolby-au-queda-43",
-      "category": "Tv-E-Video",
-      "price_drop": 43,
-      "current_price": 1994.0,
-      "previous_price": 3499.0,
+      "id": "article-MLB3456789013",
+      "title": "Fritadeira Air Fryer Mondial 4L Inox AF-31: Queda Histórica de 34% OFF!",
+      "slug": "fritadeira-air-fryer-mondial-4l-inox-af-31-queda-34",
+      "category": "Eletrodomesticos",
+      "price_drop": 34,
+      "current_price": 329.0,
+      "previous_price": 499.0,
       "status": "published",
-      "generated_at": "2026-06-02T16:02:03.863364",
-      "content": "O Smart Tv Philco 50 P50vik 4k Uhd Led Roku Dolby Audio Wi-fi Hdr10 110/220v atingiu uma queda de 43% em seu preço. Agora disponível por apenas R$ 1994.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
+      "generated_at": "2026-06-02T16:46:05.750275",
+      "content": "O Fritadeira Air Fryer Mondial 4L Inox AF-31 atingiu uma queda de 34% em seu preço. Agora disponível por apenas R$ 329.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
           "platform": "twitter",
-          "content": "📱 ALERTA: Smart Tv Philco 50 P50vik 4k Uhd Led Roku Dolby Audio Wi-fi Hdr10 110/220v com 43% de desconto! De R$ 3499.00 por apenas R$ 1994.00. Aproveite! 🔥 #ComparaPreço #Oferta"
+          "content": "📱 ALERTA: Fritadeira Air Fryer Mondial 4L Inox AF-31 com 34% de desconto! De R$ 499.00 por apenas R$ 329.00. Aproveite! 🔥 #ComparaPreço #Oferta"
         }
       ]
     }
   ],
   "alert_triggers": [
     {
-      "product_id": "MLB6539025322",
-      "product_name": "Smart Tv Philco 50 P50vik 4k Uhd Led Roku Dolby Audio Wi-fi Hdr10 110/220v",
-      "current_drop": 43,
-      "alert_timestamp": "2026-06-02T16:02:03.863376"
+      "product_id": "MLB3456789013",
+      "product_name": "Fritadeira Air Fryer Mondial 4L Inox AF-31",
+      "current_drop": 34,
+      "alert_timestamp": "2026-06-02T16:46:05.750295"
     }
   ]
 }

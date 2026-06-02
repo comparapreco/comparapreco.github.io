@@ -103,6 +103,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/categorias/moveis/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/categorias/outros/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>daily</changefreq>
