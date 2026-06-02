@@ -20,6 +20,9 @@ def run_portal_generation():
         "build_hubs.py",
         "apply_breadcrumbs.py",
         "smart_interlinking.py",
+        "build_eeat_pages.py",
+        "opportunity_engine.py",
+        "seo_dashboard.py",
         "generate_pages_enhanced.py",
         "build_homepage.py",
         "generate_sitemaps.py"
