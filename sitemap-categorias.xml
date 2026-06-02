@@ -133,6 +133,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/categorias/tecnologia/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/categorias/tv-e-video/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>daily</changefreq>

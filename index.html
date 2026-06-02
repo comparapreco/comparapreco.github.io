@@ -1,215 +1,112 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Compara Preço — As Melhores Ofertas do Mercado Livre Hoje</title>
-<meta content="ca-pub-4896859041377751" name="google-adsense-account"/>
-<meta content="Economize com as melhores ofertas curadas do Mercado Livre. Descubra produtos com desconto de até 70% em eletrônicos, casa, beleza e muito mais." name="description"/>
-<link href="https://comparapreco.github.io/" rel="canonical"/>
-<link href="/assets/css/style.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compara Preço — As Melhores Ofertas do Mercado Livre Hoje</title>
+    <meta name="description" content="Economize com as melhores ofertas curadas do Mercado Livre. Descubra produtos com desconto de até 70% em eletrônicos, casa, beleza e muito mais.">
+    <link rel="canonical" href="https://comparapreco.github.io/">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
 </head>
 <body>
-<header class="header">
-<div class="container">
-<div class="search-bar">
-<input id="mainSearch" placeholder="Busque ofertas ninjas..." type="text"/>
-</div>
-<button aria-label="Menu" class="menu-toggle">☰</button>
-<nav class="nav-links">
-<a href="/ofertas-hoje">🔥 Ofertas</a>
-<a href="/comparar">🔍 Comparar</a>
-<a href="/melhores-2026">🏆 Rankings</a>
-<a href="/guias">📖 Guias</a>
-<a class="btn-primary" href="/pro">Ninja PRO</a>
-</nav>
-</div>
-</header>
-<section class="hero">
-<div class="container">
-<h1>Economize como um Ninja 🥷</h1>
-<p>Monitoramento 24/7 das melhores ofertas e comparativos reais.</p>
-<div class="stats-grid">
-<div class="stat-item"><span class="stat-val">5.000+</span><span class="stat-label">Ofertas</span></div>
-<div class="stat-item"><span class="stat-val">300+</span><span class="stat-label">Comparativos</span></div>
-<div class="stat-item"><span class="stat-val">1.000+</span><span class="stat-label">Produtos</span></div>
-</div>
-</div>
-</section>
-<div class="container">
-<section style="margin-bottom: 40px;">
-<div class="categories-scroll">
-<a class="cat-card" href="/categorias/tecnologia">📱 Tecnologia</a>
-<a class="cat-card" href="/categorias/gamer">🎮 Gamer</a>
-<a class="cat-card" href="/categorias/casa">🏠 Casa</a>
-<a class="cat-card" href="/categorias/eletrodomesticos">🔌 Eletro</a>
-<a class="cat-card" href="/categorias/pet">🐶 Pet</a>
-<a class="cat-card" href="/categorias/beleza">💄 Beleza</a>
-<a class="cat-card" href="/categorias/fitness">💪 Fitness</a>
-<a class="cat-card" href="/categorias/auto">🚗 Auto</a>
-</div>
-</section>
-<section class="section">
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-<h2>🔥 Ofertas em Destaque</h2>
-<a href="/ofertas-hoje" style="color: var(--primary); font-weight: bold; text-decoration: none;">Ver todas →</a>
-</div>
-<div class="products-grid" id="featuredGrid"></div>
-</section>
-<section class="section">
-<h2>🔍 Comparativos Populares</h2>
-<div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-<!-- Links para comparativos seriam injetados aqui -->
-</div>
-</section>
-
-<section class="section" id="categorias-estrategicas">
-  <h2>🎯 Guias estratégicos de compra</h2>
-  <p style="color: var(--text-light); margin-bottom: 18px;">Páginas fortes com links HTML diretos para ajudar usuários e buscadores a encontrar as ofertas mais importantes.</p>
-  <div class="categories-scroll">
-        <a class="cat-card" href="/melhores-ofertas/melhores-celulares-samsung/">📱 Melhores Celulares Samsung em Promoção</a>
-        <a class="cat-card" href="/melhores-ofertas/melhores-notebooks-ate-3000/">💻 Melhores Notebooks até R$ 3.000</a>
-        <a class="cat-card" href="/melhores-ofertas/melhores-tvs-4k/">📺 Melhores TVs 4K em Promoção</a>
-        <a class="cat-card" href="/melhores-ofertas/melhores-fones-bluetooth/">🎧 Melhores Fones Bluetooth em Promoção</a>
-  </div>
-</section>
-
-<section class="section">
-<h2>📚 Artigos Mais Recentes</h2>
-<div class="articles-grid">
-<a class="article-card" href="/aprender/como-identificar-promocao-falsa/">
-<h3>Como Identificar Promoções Falsas</h3>
-</a>
-<a class="article-card" href="/aprender/como-comparar-precos/">
-<h3>Como Comparar Preços Online</h3>
-</a>
-<a class="article-card" href="/aprender/como-comprar-na-black-friday/">
-<h3>Como Comprar na Black Friday</h3>
-</a>
-<a class="article-card" href="/aprender/como-economizar-em-compras/">
-<h3>Como Economizar em Compras Online</h3>
-</a>
-<a class="article-card" href="/aprender/como-escolher-celular/">
-<h3>Como Escolher o Celular Ideal</h3>
-</a>
-<a class="article-card" href="/aprender/como-escolher-notebook/">
-<h3>Como Escolher o Notebook Ideal</h3>
-</a>
-<a class="article-card" href="/aprender/direitos-do-consumidor/">
-<h3>Direitos do Consumidor Online</h3>
-</a>
-<a class="article-card" href="/aprender/frete-e-entrega/">
-<h3>Guia Completo sobre Frete e Entrega</h3>
-</a>
-</div>
-</section>
-
-<section class="section">
-<h2>✨ Produtos Mais Recentes</h2>
-<div class="products-grid">
-<a class="product-card" href="https://www.mercadolivre.com.br/galaxy-buds-core-preto/p/MLB58315694?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Galaxy Buds Core Preto</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/console-playstation-5-slim-edico-digital-825-gb/p/MLB54963150?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Console Playstation 5 Slim Edição Digital 825 Gb Branco</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/p/MLB3456789022?matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Controle DualSense PS5 Branco Original</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/notebook-asus-vivobook-15-ryzen-7-8gb-512gb-15-w11h-bq966w-cool-silver/p/MLB68606855?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Notebook Asus Vivobook 15 Ryzen 7 8gb 512gb 15 W11h Bq966w Cool Silver</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/p/MLB3456789015?matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Notebook Lenovo Inspiron 15 Core i5 8GB 256GB SSD</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/impressora-multifuncional-cor-epson-ecotank-l3250/p/MLB26986602?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Impressora Multifuncional Cor Epson Ecotank L3250 Preto 127/220v</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/p/MLB3456789012?matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Micro-ondas Brastemp 32 Litros Espelhado BMS45</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/smart-tv-43-britnia-hdr10-dolby-audio-roku-tv-b43kra/p/MLB65529879?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Smart Tv 43 Britânia Hdr10 Dolby Áudio Roku Tv B43kra</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/p/MLB3456789024?matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Perfume Carolina Herrera 212 VIP Men 100ml</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/perfume-arabe-yara-lattafa-eau-de-parfum-100ml-original-c-nf/up/MLBU3619526469?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Perfume Arabe Yara Lattafa Eau De Parfum 100ml Original C Nf</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/p/MLB3456789028?matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Smart TV LG 55 4K UHD ThinQ AI HDR Bluetooth</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/chuveiro-eletrnico-lorenzetti-acqua-duo-ultra-7800w-branco-220v/p/MLB12543508?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Chuveiro Eletrônico Lorenzetti Acqua Duo Ultra 7800w Branco 220v 7.8 Kw</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/p/MLB3456789023?matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Headset Gamer HyperX Cloud Stinger Core PC/PS4/Xbox</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/p/MLB3456789020?matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Fone de Ouvido Bluetooth JBL Wave Buds Preto</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/p/MLB3456789021?matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Jogo God of War Ragnarok PS5 Mídia Física</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/p/MLB3456789025?matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Kit Shampoo e Condicionador Pantene Hidratação 400ml</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/p/MLB3456789014?matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Liquidificador Oster Turbo Power 2.2L Vermelho</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/kit-70-figurinhas-do-album-copa-do-mundo-2026-pronta-entrega/up/MLBU3923294598?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Kit 70 Figurinhas Do Álbum Copa Do Mundo 2026 Pronta Entrega</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/p/MLB3456789026?matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Jogo de Cama Casal Queen 4 Peças Algodão 200 Fios</h3>
-</a>
-<a class="product-card" href="https://www.mercadolivre.com.br/kit-420-figurinhas-do-album-copa-do-mundo-2026-60-envelopes/up/MLBU3923332394?pdp_filters=deal%3AMLB779362-1&matt_tool=vendas0nline" target="_blank" rel="noopener noreferrer">
-<h3>Kit 420 Figurinhas Do Álbum Copa Do Mundo 2026- 60 Envelopes</h3>
-</a>
-</div>
-</section>
-
-</div>
-<footer class="footer">
-<div class="container">
-<div class="footer-grid">
-<div class="footer-col">
-<h4>📊 Radar Ninja</h4>
-<p>O maior portal de curadoria e inteligência de compras do Brasil. Monitoramos milhares de produtos para você economizar de verdade.</p>
-</div>
-<div class="footer-col">
-<h4>Explorar</h4>
-<ul>
-<li><a href="/ofertas-hoje">Ofertas do Dia</a></li>
-<li><a href="/comparar">Comparativos</a></li>
-<li><a href="/melhores-2026">Rankings 2026</a></li>
-<li><a href="/guias">Guias de Compra</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Institucional</h4>
-<ul>
-<li><a href="/metodologia">Como avaliamos</a></li>
-<li><a href="/equipe">Equipe Editorial</a></li>
-<li><a href="/politica-atualizacao">Atualização 24/7</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Legal</h4>
-<ul>
-<li><a href="/privacidade">Privacidade</a></li>
-<li><a href="/termos">Termos de Uso</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-                © 2026 Compara Preço — Inteligência em Compras.
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">📊 Radar Ninja</a>
+            <div class="search-bar">
+                <input type="text" id="mainSearch" placeholder="Busque ofertas ninjas...">
             </div>
-</div>
-</footer>
-<script src="/assets/js/app.js"></script>
+            <button class="menu-toggle" aria-label="Menu">☰</button>
+            <nav class="nav-links">
+                <a href="/ofertas-hoje">🔥 Ofertas</a>
+                <a href="/comparar">🔍 Comparar</a>
+                <a href="/melhores-2026">🏆 Rankings</a>
+                <a href="/guias">📖 Guias</a>
+                <a href="/pro" class="btn-primary">Ninja PRO</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Economize como um Ninja 🥷</h1>
+            <p>Monitoramento 24/7 das melhores ofertas e comparativos reais.</p>
+            <div class="stats-grid">
+                <div class="stat-item"><span class="stat-val">5.000+</span><span class="stat-label">Ofertas</span></div>
+                <div class="stat-item"><span class="stat-val">300+</span><span class="stat-label">Comparativos</span></div>
+                <div class="stat-item"><span class="stat-val">1.000+</span><span class="stat-label">Produtos</span></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section style="margin-bottom: 40px;">
+            <div class="categories-scroll">
+                <a href="/categorias/tecnologia" class="cat-card">📱 Tecnologia</a>
+                <a href="/categorias/gamer" class="cat-card">🎮 Gamer</a>
+                <a href="/categorias/casa" class="cat-card">🏠 Casa</a>
+                <a href="/categorias/eletrodomesticos" class="cat-card">🔌 Eletro</a>
+                <a href="/categorias/pet" class="cat-card">🐶 Pet</a>
+                <a href="/categorias/beleza" class="cat-card">💄 Beleza</a>
+                <a href="/categorias/fitness" class="cat-card">💪 Fitness</a>
+                <a href="/categorias/auto" class="cat-card">🚗 Auto</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2>🔥 Ofertas em Destaque</h2>
+                <a href="/ofertas-hoje" style="color: var(--primary); font-weight: bold; text-decoration: none;">Ver todas →</a>
+            </div>
+            <div id="featuredGrid" class="products-grid"></div>
+        </section>
+
+        <section class="section">
+            <h2>🔍 Comparativos Populares</h2>
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                <!-- Links para comparativos seriam injetados aqui -->
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>📊 Radar Ninja</h4>
+                    <p>O maior portal de curadoria e inteligência de compras do Brasil. Monitoramos milhares de produtos para você economizar de verdade.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul>
+                        
+                        
+                        
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <ul>
+                        
+                        
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Radar Ninja — Inteligência em Compras.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/assets/js/app.js"></script>
 </body>
 </html>
