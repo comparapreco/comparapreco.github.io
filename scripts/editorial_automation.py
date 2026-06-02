@@ -52,7 +52,7 @@ def generate_editorial_content():
         is_forbidden = any(term in name_lower for term in FORBIDDEN_TERMS)
         
         if (p.get('status') == 'active' and 
-            p.get('custom_discount_pct', 0) >= 20 and 
+            p.get('custom_discount_pct', 0) >= 15 and 
             not is_forbidden and 
             p_id not in published_ids):
             valid_products.append(p)
