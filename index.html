@@ -36,8 +36,6 @@
 </script>
   <meta name="google-adsense-account" content="ca-pub-4896859041377751">
   <meta name="google-adsense-account" content="ca-pub-4896859041377751">
-
-<style>#heroProduct, .hero-placeholder { display: none !important; visibility: hidden !important; height: 0 !important; overflow: hidden !important; }</style>
 </head>
 <body>
 <header class="header">
@@ -91,9 +89,10 @@
 </div>
 </nav>
 <main class="container">
-    <section id="featuredBanner" class="featured-banner-container"></section>
 <!-- Carrossel de Destaques -->
-
+<section class="hero" id="heroProduct">
+      <div id="heroProduct" class="hero-placeholder" style="min-height: 450px; display: flex; align-items: center; justify-content: center; background: var(--card); border-radius: 16px; border: 1px solid var(--border);"><p>Carregando as melhores ofertas do dia...</p></div>
+    </section>
 <!-- Compara Preço Premium -->
 <section class="compara-premium" id="comparaPremium">
 <!-- Preenchido via JS -->
@@ -103,7 +102,7 @@
 <h2>🔥 Melhores Ofertas</h2>
 </div>
 <div class="products-grid" id="featuredGrid">
-        </div>
+        <div id="featuredGrid" class="products-grid"></div>
       </div>
 </section>
 <!-- Menu de Exploração -->
@@ -177,7 +176,6 @@
 </div>
 </div>
 </footer>
-<script src="assets/js/product-updater.js"></script>
-<script src="assets/js/app.js?v=2"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
