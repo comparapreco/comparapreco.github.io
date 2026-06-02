@@ -1,0 +1,4 @@
+{
+  "brands": ["Samsung", "LG", "Apple", "Xiaomi", "Dell", "Lenovo", "Asus"],
+  "min_commission": 0.05
+}
