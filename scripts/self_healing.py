@@ -38,6 +38,7 @@ def run_pipeline():
         "editorial_automation.py", "generate_blog_posts.py",
         "generate_pages.py", "build_categories.py", "build_homepage.py",
         "generate_compara_index.py", "generate_sitemaps.py", "generate_feeds.py",
+        "generate_duplicate_report.py", # Novo: Gerar relatório de duplicados
         "health_monitor.py"
     ]
     
