@@ -40,16 +40,23 @@ def build_homepage(input_path: str, template_path: str, output_path: str) -> Non
     # Ordenar por desconto
     sorted_products = sorted(products, key=lambda x: x.get("custom_discount_pct", 0), reverse=True)
     
-    # DIVERSIFICAÇÃO: Garantir que produtos repetitivos (como Whey) não dominem o topo
+    # DIVERSIFICAÇÃO: Remover suplementos do topo e garantir variedade
+    FORBIDDEN_HERO = ["whey", "creatina", "dark lab", "suplemento"]
     diversified_top = []
     seen_categories = {}
+    
     for p in sorted_products:
+        name_lower = p.get("name", "").lower()
+        if any(term in name_lower for term in FORBIDDEN_HERO):
+            continue
+            
         cat = p.get("custom_category_slug", "outros")
-        # Limitar a 3 produtos por categoria no pool de destaques
         seen_categories[cat] = seen_categories.get(cat, 0) + 1
-        if seen_categories[cat] <= 3:
+        
+        # Máximo de 2 por categoria no topo para máxima variedade
+        if seen_categories[cat] <= 2:
             diversified_top.append(p)
-        if len(diversified_top) >= 40:
+        if len(diversified_top) >= 30:
             break
             
     # Selecionar o destaque (Hero Section)
