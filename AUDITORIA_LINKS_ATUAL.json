@@ -1,10 +1,10 @@
 {
   "summary": {
-    "html_files": 303,
+    "html_files": 311,
     "internal_unique_targets": 259,
     "external_unique_targets": 80,
-    "broken_internal_total_occurrences": 60,
-    "broken_internal_unique_targets": 43,
+    "broken_internal_total_occurrences": 51,
+    "broken_internal_unique_targets": 35,
     "empty_href_total": 0,
     "anchor_only_total": 5,
     "text_issue_total": 0
@@ -33,68 +33,11 @@
       ]
     },
     {
-      "target": "/categorias/tecnologia",
-      "occurrences": 2,
-      "sample_files": [
-        "/index.html",
-        "/templates/homepage.html"
-      ]
-    },
-    {
       "target": "/ofertas/outros/creatina-monohidratada-pura-1kg-dark-lab-unidade-sem-sabor-MLB4812130742.html",
       "occurrences": 2,
       "sample_files": [
         "/ofertas/outros/kit-280-figurinhas-do-album-copa-do-mundo-2026--40-envelopes-MLB6657082608.html",
         "/ofertas/outros/whey-protein-concentrado-100-900g-refil-dark-lab-sabor-morango-MLB3755400429.html"
-      ]
-    },
-    {
-      "target": "/aprender/como-comparar-precos",
-      "occurrences": 1,
-      "sample_files": [
-        "/aprender/index.html"
-      ]
-    },
-    {
-      "target": "/aprender/como-comprar-na-black-friday",
-      "occurrences": 1,
-      "sample_files": [
-        "/aprender/index.html"
-      ]
-    },
-    {
-      "target": "/aprender/como-economizar-em-compras",
-      "occurrences": 1,
-      "sample_files": [
-        "/aprender/index.html"
-      ]
-    },
-    {
-      "target": "/aprender/como-escolher-celular",
-      "occurrences": 1,
-      "sample_files": [
-        "/aprender/index.html"
-      ]
-    },
-    {
-      "target": "/aprender/como-escolher-notebook",
-      "occurrences": 1,
-      "sample_files": [
-        "/aprender/index.html"
-      ]
-    },
-    {
-      "target": "/aprender/direitos-do-consumidor",
-      "occurrences": 1,
-      "sample_files": [
-        "/aprender/index.html"
-      ]
-    },
-    {
-      "target": "/aprender/frete-e-entrega",
-      "occurrences": 1,
-      "sample_files": [
-        "/aprender/index.html"
       ]
     },
     {
@@ -324,48 +267,6 @@
   ],
   "broken_internal_samples": [
     {
-      "file": "/aprender/index.html",
-      "href": "como-comparar-precos/",
-      "target": "/aprender/como-comparar-precos",
-      "label": "⚖️ Como Comparar Preços Corretamente 📚 Educação do Consumidor Guia completo para comparar preços entre marketplaces. Sai"
-    },
-    {
-      "file": "/aprender/index.html",
-      "href": "como-comprar-na-black-friday/",
-      "target": "/aprender/como-comprar-na-black-friday",
-      "label": "🛍️ Como Comprar na Black Friday 📚 Educação do Consumidor Estratégias para aproveitar a Black Friday sem cair em armadilh"
-    },
-    {
-      "file": "/aprender/index.html",
-      "href": "como-escolher-notebook/",
-      "target": "/aprender/como-escolher-notebook",
-      "label": "💻 Como Escolher um Notebook 📚 Guia de Compra Guia técnico para escolher o notebook ideal. Processador, RAM, SSD, tela: e"
-    },
-    {
-      "file": "/aprender/index.html",
-      "href": "como-escolher-celular/",
-      "target": "/aprender/como-escolher-celular",
-      "label": "📱 Como Escolher um Celular 📚 Guia de Compra Tudo que você precisa saber para escolher o celular perfeito. Câmera, bateri"
-    },
-    {
-      "file": "/aprender/index.html",
-      "href": "como-economizar-em-compras/",
-      "target": "/aprender/como-economizar-em-compras",
-      "label": "💰 Como Economizar em Compras Online 📚 Educação do Consumidor 10 estratégias comprovadas para economizar em compras onlin"
-    },
-    {
-      "file": "/aprender/index.html",
-      "href": "direitos-do-consumidor/",
-      "target": "/aprender/direitos-do-consumidor",
-      "label": "⚖️ Seus Direitos como Consumidor 📚 Educação do Consumidor Conheça seus direitos garantidos pelo Código de Defesa do Cons"
-    },
-    {
-      "file": "/aprender/index.html",
-      "href": "frete-e-entrega/",
-      "target": "/aprender/frete-e-entrega",
-      "label": "📦 Guia Completo de Frete e Entrega 📚 Educação do Consumidor Entenda como funciona o frete, prazos de entrega, rastreamen"
-    },
-    {
       "file": "/comparar/index.html",
       "href": "lg-oled-55-vs-samsung-qn55/",
       "target": "/comparar/lg-oled-55-vs-samsung-qn55",
@@ -394,12 +295,6 @@
       "href": "ipad-air-vs-samsung-tab-s9/",
       "target": "/comparar/ipad-air-vs-samsung-tab-s9",
       "label": "📱 Tablets iPad Air Samsung Tab S9 Comparação completa com veredito final"
-    },
-    {
-      "file": "/index.html",
-      "href": "/categorias/tecnologia",
-      "target": "/categorias/tecnologia",
-      "label": "📱 Tecnologia"
     },
     {
       "file": "/ofertas/celulares/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110220v-MLB6444937486.html",
@@ -526,12 +421,6 @@
       "href": "../../ofertas/outros/creatina-monohidratada-pura-1kg-dark-lab-unidade-sem-sabor-MLB4812130742.html",
       "target": "/ofertas/outros/creatina-monohidratada-pura-1kg-dark-lab-unidade-sem-sabor-MLB4812130742.html",
       "label": "Ver Oferta"
-    },
-    {
-      "file": "/templates/homepage.html",
-      "href": "/categorias/tecnologia",
-      "target": "/categorias/tecnologia",
-      "label": "📱 Tecnologia"
     },
     {
       "file": "/templates/homepage_novo.html",
@@ -688,23 +577,23 @@
   "top_internal_targets": [
     [
       "/",
-      782
+      790
     ],
     [
       "/comparar",
       299
     ],
     [
+      "/privacidade",
+      143
+    ],
+    [
       "/contato",
       142
     ],
     [
-      "/privacidade",
-      142
-    ],
-    [
       "/sobre",
-      139
+      140
     ],
     [
       "/melhores-2026",
@@ -716,7 +605,7 @@
     ],
     [
       "/termos",
-      36
+      37
     ],
     [
       "/categorias/games/index.html",
