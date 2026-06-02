@@ -1,5 +1,5 @@
 {
-  "last_generated": "2026-06-02T05:39:09.915165",
+  "last_generated": "2026-06-02T06:52:12.993583",
   "automated_articles": [
     {
       "id": "article-MLB3755400429",
@@ -10,7 +10,7 @@
       "current_price": 159.9,
       "previous_price": 499.99,
       "status": "published",
-      "generated_at": "2026-06-02T05:39:09.915114",
+      "generated_at": "2026-06-02T06:52:12.993512",
       "content": "O Whey Protein Concentrado 100% 900g Refil Dark Lab Sabor Morango atingiu uma queda de 68% em seu preço. Agora disponível por apenas R$ 159.90, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
@@ -28,7 +28,7 @@
       "current_price": 44.9,
       "previous_price": 129.9,
       "status": "published",
-      "generated_at": "2026-06-02T05:39:09.915134",
+      "generated_at": "2026-06-02T06:52:12.993552",
       "content": "O Creatina Monohidratada Pura 500g Dark Lab Unidade Sem Sabor atingiu uma queda de 65% em seu preço. Agora disponível por apenas R$ 44.90, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
@@ -46,30 +46,12 @@
       "current_price": 332.1,
       "previous_price": 814.14,
       "status": "published",
-      "generated_at": "2026-06-02T05:39:09.915143",
+      "generated_at": "2026-06-02T06:52:12.993561",
       "content": "O Cooktop A Gás Fischer 4 Bocas Fit Line Trempe Esmaltada Aramado Preto 127/220v atingiu uma queda de 59% em seu preço. Agora disponível por apenas R$ 332.10, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
           "platform": "twitter",
           "content": "📱 ALERTA: Cooktop A Gás Fischer 4 Bocas Fit Line Trempe Esmaltada Aramado Preto 127/220v com 59% de desconto! De R$ 814.14 por apenas R$ 332.10. Aproveite! 🔥 #ComparaPreço #Oferta"
-        }
-      ]
-    },
-    {
-      "id": "article-MLB4371605519",
-      "title": "Kit 10 Pote De Vidro Marmita Hermético 370ml Freezer Fitness Rishon Transparente: Queda Histórica de 57% OFF!",
-      "slug": "kit-10-pote-de-vidro-marmita-hermético-370ml-freez-queda-57",
-      "category": "Casa",
-      "price_drop": 57,
-      "current_price": 67.16,
-      "previous_price": 159.9,
-      "status": "published",
-      "generated_at": "2026-06-02T05:39:09.915150",
-      "content": "O Kit 10 Pote De Vidro Marmita Hermético 370ml Freezer Fitness Rishon Transparente atingiu uma queda de 57% em seu preço. Agora disponível por apenas R$ 67.16, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
-      "social_posts": [
-        {
-          "platform": "twitter",
-          "content": "📱 ALERTA: Kit 10 Pote De Vidro Marmita Hermético 370ml Freezer Fitness Rishon Transparente com 57% de desconto! De R$ 159.90 por apenas R$ 67.16. Aproveite! 🔥 #ComparaPreço #Oferta"
         }
       ]
     },
@@ -82,12 +64,30 @@
       "current_price": 125.99,
       "previous_price": 299.0,
       "status": "published",
-      "generated_at": "2026-06-02T05:39:09.915160",
+      "generated_at": "2026-06-02T06:52:12.993571",
       "content": "O Parafusadeira Furadeira C/ 2 Baterias Maleta Kit Completo Led Eixo Flexível Vários Níveis Torque Amarelo 127/220v 60 Hz atingiu uma queda de 57% em seu preço. Agora disponível por apenas R$ 125.99, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
           "platform": "twitter",
           "content": "📱 ALERTA: Parafusadeira Furadeira C/ 2 Baterias Maleta Kit Completo Led Eixo Flexível Vários Níveis Torque Amarelo 127/220v 60 Hz com 57% de desconto! De R$ 299.00 por apenas R$ 125.99. Aproveite! 🔥 #ComparaPreço #Oferta"
+        }
+      ]
+    },
+    {
+      "id": "article-MLB66060206",
+      "title": "Kit 10 Pote De Vidro Marmita Hermético: Queda Histórica de 57% OFF!",
+      "slug": "kit-10-pote-de-vidro-marmita-hermético-queda-57",
+      "category": "Casa",
+      "price_drop": 57,
+      "current_price": 67.16,
+      "previous_price": 159.0,
+      "status": "published",
+      "generated_at": "2026-06-02T06:52:12.993578",
+      "content": "O Kit 10 Pote De Vidro Marmita Hermético atingiu uma queda de 57% em seu preço. Agora disponível por apenas R$ 67.16, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "content": "📱 ALERTA: Kit 10 Pote De Vidro Marmita Hermético com 57% de desconto! De R$ 159.00 por apenas R$ 67.16. Aproveite! 🔥 #ComparaPreço #Oferta"
         }
       ]
     }
@@ -99,7 +99,7 @@
       "price_drop_threshold": 30,
       "current_drop": 68,
       "alert_sent": true,
-      "alert_timestamp": "2026-06-02T05:39:09.915130"
+      "alert_timestamp": "2026-06-02T06:52:12.993547"
     },
     {
       "product_id": "MLB4812143184",
@@ -107,7 +107,7 @@
       "price_drop_threshold": 30,
       "current_drop": 65,
       "alert_sent": true,
-      "alert_timestamp": "2026-06-02T05:39:09.915138"
+      "alert_timestamp": "2026-06-02T06:52:12.993556"
     },
     {
       "product_id": "MLB4292031849",
@@ -115,15 +115,7 @@
       "price_drop_threshold": 30,
       "current_drop": 59,
       "alert_sent": true,
-      "alert_timestamp": "2026-06-02T05:39:09.915147"
-    },
-    {
-      "product_id": "MLB4371605519",
-      "product_name": "Kit 10 Pote De Vidro Marmita Hermético 370ml Freezer Fitness Rishon Transparente",
-      "price_drop_threshold": 30,
-      "current_drop": 57,
-      "alert_sent": true,
-      "alert_timestamp": "2026-06-02T05:39:09.915153"
+      "alert_timestamp": "2026-06-02T06:52:12.993566"
     },
     {
       "product_id": "MLB4345564271",
@@ -131,7 +123,15 @@
       "price_drop_threshold": 30,
       "current_drop": 57,
       "alert_sent": true,
-      "alert_timestamp": "2026-06-02T05:39:09.915163"
+      "alert_timestamp": "2026-06-02T06:52:12.993574"
+    },
+    {
+      "product_id": "MLB66060206",
+      "product_name": "Kit 10 Pote De Vidro Marmita Hermético",
+      "price_drop_threshold": 30,
+      "current_drop": 57,
+      "alert_sent": true,
+      "alert_timestamp": "2026-06-02T06:52:12.993582"
     }
   ]
 }
