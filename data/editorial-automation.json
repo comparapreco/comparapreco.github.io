@@ -1,31 +1,31 @@
 {
-  "last_generated": "2026-06-02T15:08:50.066513",
+  "last_generated": "2026-06-02T15:10:59.080827",
   "automated_articles": [
     {
-      "id": "article-MLB6582857986",
-      "title": "Kit C/ 36 Envelopes (252 Cromos) - Copa Do Mundo Fifa 2026: Queda Histórica de 49% OFF!",
-      "slug": "kit-c-36-envelopes-252-cromos--copa-do-mundo-fifa--queda-49",
-      "category": "Games",
+      "id": "article-MLB3994439565",
+      "title": "Perfume Sedutor Árabe Sabah 100ml Original Feminino: Queda Histórica de 49% OFF!",
+      "slug": "perfume-sedutor-árabe-sabah-100ml-original-feminin-queda-49",
+      "category": "Beleza",
       "price_drop": 49,
-      "current_price": 242.0,
-      "previous_price": 479.0,
+      "current_price": 116.1,
+      "previous_price": 230.0,
       "status": "published",
-      "generated_at": "2026-06-02T15:08:50.066491",
-      "content": "O Kit C/ 36 Envelopes (252 Cromos) - Copa Do Mundo Fifa 2026 atingiu uma queda de 49% em seu preço. Agora disponível por apenas R$ 242.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
+      "generated_at": "2026-06-02T15:10:59.080804",
+      "content": "O Perfume Sedutor Árabe Sabah 100ml Original Feminino atingiu uma queda de 49% em seu preço. Agora disponível por apenas R$ 116.10, este é um dos melhores momentos para adquirir este produto monitorado pelo Compara Preço.",
       "social_posts": [
         {
           "platform": "twitter",
-          "content": "📱 ALERTA: Kit C/ 36 Envelopes (252 Cromos) - Copa Do Mundo Fifa 2026 com 49% de desconto! De R$ 479.00 por apenas R$ 242.00. Aproveite! 🔥 #ComparaPreço #Oferta"
+          "content": "📱 ALERTA: Perfume Sedutor Árabe Sabah 100ml Original Feminino com 49% de desconto! De R$ 230.00 por apenas R$ 116.10. Aproveite! 🔥 #ComparaPreço #Oferta"
         }
       ]
     }
   ],
   "alert_triggers": [
     {
-      "product_id": "MLB6582857986",
-      "product_name": "Kit C/ 36 Envelopes (252 Cromos) - Copa Do Mundo Fifa 2026",
+      "product_id": "MLB3994439565",
+      "product_name": "Perfume Sedutor Árabe Sabah 100ml Original Feminino",
       "current_drop": 49,
-      "alert_timestamp": "2026-06-02T15:08:50.066515"
+      "alert_timestamp": "2026-06-02T15:10:59.080829"
     }
   ]
 }
