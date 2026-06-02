@@ -40,16 +40,23 @@ def deep_clean(db_path):
         p_url = clean_url(p.get('permalink') or p.get('url') or p.get('custom_affiliate_url'))
         
         # Chave de consolidação: slug (nome)
-        # Se o slug for muito curto, ignorar
-        if len(p_slug) < 5:
+        if not p_slug:
             consolidated[p_id] = p
             continue
 
         is_duplicate = False
         
-        # Verificar se já existe um produto com slug idêntico ou URL idêntica
+        # Normalização agressiva: remover "promoção especial", "oferta", etc.
+        def super_normalize(s):
+            s = s.replace('promocao-especial', '').replace('oferta', '').replace('desconto', '')
+            s = s.replace('frete-gratis', '').replace('original', '').replace('lacrado', '')
+            return s.strip('-')
+
+        p_norm = super_normalize(p_slug)
+        
         for existing_id, existing_p in consolidated.items():
             e_slug = slugify(existing_p.get('name', ''))
+            e_norm = super_normalize(e_slug)
             e_url = clean_url(existing_p.get('permalink') or existing_p.get('url') or existing_p.get('custom_affiliate_url'))
             
             # 1. Mesma URL
@@ -57,17 +64,16 @@ def deep_clean(db_path):
                 is_duplicate = True
                 break
             
-            # 2. Mesmo Nome (Slug)
-            if p_slug == e_slug:
+            # 2. Mesmo Nome Normalizado (Agressivo)
+            if p_norm == e_norm and len(p_norm) > 10:
                 is_duplicate = True
                 break
                 
-            # 3. Detecção de "Promoção Especial" ou nomes genéricos repetidos
-            if "promocao-especial" in p_slug and "promocao-especial" in e_slug:
-                # Se os primeiros 20 caracteres do nome original forem iguais
-                if p_name[:20] == existing_p.get('name', '')[:20]:
-                    is_duplicate = True
-                    break
+            # 3. Similaridade de Início de Nome
+            # Se os primeiros 30 caracteres do slug forem iguais, é o mesmo produto
+            if p_slug[:30] == e_slug[:30] and len(p_slug) > 30:
+                is_duplicate = True
+                break
 
         if is_duplicate:
             removed_count += 1
