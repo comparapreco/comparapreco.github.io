@@ -844,3 +844,57 @@ body {
 
     .cat-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* CORREÇÕES FINAIS DE ROLAGEM HORIZONTAL */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+/* Garantir que nada vaze para fora da tela no mobile */
+* {
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+        order: 3;
+    }
+    
+    .nav-links {
+        width: 100%;
+        order: 4;
+    }
+
+    .stats-badge {
+        flex-direction: column;
+        width: calc(100% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+        border-radius: 15px;
+    }
+
+    .cat-grid {
+        padding: 0 10px;
+    }
+}
