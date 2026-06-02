@@ -41,7 +41,7 @@ def build_homepage(input_path: str, template_path: str, output_path: str) -> Non
     sorted_products = sorted(products, key=lambda x: x.get("custom_discount_pct", 0), reverse=True)
     
     # DIVERSIFICAÇÃO: Remover suplementos do topo e garantir variedade
-    FORBIDDEN_HERO = ["whey", "creatina", "dark lab", "suplemento"]
+    FORBIDDEN_HERO = []
     diversified_top = []
     seen_categories = {}
     
