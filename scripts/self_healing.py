@@ -34,7 +34,7 @@ def run_pipeline():
     """Pipeline imparável com isolamento de falhas."""
     scripts = [
         "fetch_products.py", "score_products.py", "affiliate_links.py",
-        "validate_products.py", "deduplicate.py", "sync_database.py",
+        "validate_products.py", "deduplicate.py", "deep_clean_duplicates.py", "clean_orphan_pages.py", "clean_duplicate_comparisons.py", "sync_database.py",
         "editorial_automation.py", "generate_blog_posts.py",
         "generate_pages.py", "build_categories.py", "build_homepage.py",
         "generate_compara_index.py", "generate_sitemaps.py", "generate_feeds.py",
