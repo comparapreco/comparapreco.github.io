@@ -69,7 +69,7 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
     page_content = page_content.replace("{{category.products}}", category_products_html)
 
     # Marcar categoria ativa no menu
-    categories_list = ["tecnologia", "gamer", "casa", "eletrodomesticos", "pet", "beleza", "fitness", "auto"]
+    categories_list = ["tecnologia", "gamer", "casa", "eletrodomesticos", "pet", "beleza", "fitness", "auto", "moveis"]
     for cat in categories_list:
         placeholder = f"{{{{cat_{cat}_active}}}}"
         active_class = "active" if cat == category_slug else ""
