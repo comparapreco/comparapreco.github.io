@@ -1,79 +1,85 @@
 {
   "status": "WARNING",
-  "timestamp": "2026-06-02T23:11:31.906142",
+  "timestamp": "2026-06-03T09:04:32.733291",
   "issues": [
-    "Produto MLB27174916 capturado mas n\u00e3o publicado totalmente."
+    "Produto MLB46671029 capturado mas n\u00e3o publicado totalmente.",
+    "Produto MLB35556218 capturado mas n\u00e3o publicado totalmente.",
+    "Produto MLB49652036 capturado mas n\u00e3o publicado totalmente.",
+    "Produto MLB13409957 capturado mas n\u00e3o publicado totalmente.",
+    "Produto MLB53303401 capturado mas n\u00e3o publicado totalmente.",
+    "Produto MLB62173623 capturado mas n\u00e3o publicado totalmente.",
+    "Produto MLB66484708 capturado mas n\u00e3o publicado totalmente."
   ],
   "audit": [
     {
-      "id": "MLB54961556",
-      "name": "Celular Samsung Galaxy A07 256gb, 8gb, C\u00e2mera 50mp, Tela 6.7 , Prote\u00e7\u00e3o Ip54, Processador 6nm - Preto",
-      "captured": true,
-      "processed": true,
-      "published": true
-    },
-    {
-      "id": "MLB48946861",
-      "name": "Samsung Galaxy A06 5g Dual Sim 128gb Preto",
-      "captured": true,
-      "processed": true,
-      "published": true
-    },
-    {
-      "id": "MLB54963045",
-      "name": "Celular Samsung Galaxy A07 256gb 8gb C\u00e2mera 50mp Verde",
-      "captured": true,
-      "processed": true,
-      "published": true
-    },
-    {
-      "id": "MLB58353028",
-      "name": "Smartphone Motorola Moto G06 - 128gb 12gb (4gb Ram + 8gb Ram Boost) E Camera 50mp Com Ai Bateria De 5200 Mah Tela 6.9 - Azul Marinho",
-      "captured": true,
-      "processed": true,
-      "published": true
-    },
-    {
-      "id": "MLB47115842",
-      "name": "Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram C\u00e2mera Tripla De At\u00e9 50mp Selfie De 12mp Ip67 Super Amoled 6.7'' Nfc Recursos Ai Android E Seguran\u00e7a Snapdragon - Preto",
-      "captured": true,
-      "processed": true,
-      "published": true
-    },
-    {
-      "id": "MLB1027172667",
-      "name": "Apple iPhone 15 (128 Gb) - Azul - Distribuidor Autorizado",
-      "captured": true,
-      "processed": true,
-      "published": true
-    },
-    {
-      "id": "MLB55521828",
-      "name": "Celular Samsung Galaxy A17 5g Com Ia, 128gb, 4gb Ram, C\u00e2m De 50mp, Tela De 6.7 , Nfc, Ip54 - Cinza",
-      "captured": true,
-      "processed": true,
-      "published": true
-    },
-    {
-      "id": "MLB1040287791",
-      "name": "Apple iPhone 16 (128 Gb) - Branco - Distribuidor Autorizado",
-      "captured": true,
-      "processed": true,
-      "published": true
-    },
-    {
-      "id": "MLB1027172677",
-      "name": "Apple iPhone 15 (128 Gb) - Preto - Distribuidor Autorizado",
-      "captured": true,
-      "processed": true,
-      "published": true
-    },
-    {
-      "id": "MLB27174916",
-      "name": "Fone De Ouvido Sem Fio Bluetooth F9-5 Pares Som Imersivo Powerbank Moderno Bateria Longa Dura\u00e7\u00e3o Academia Compativel Com Todos Celulares Preto",
+      "id": "MLB46671029",
+      "name": "Ar Split Electrolux Color Adapt Wi-fi 12k Inverter R-32 220v Branca 220v",
       "captured": true,
       "processed": false,
       "published": false
+    },
+    {
+      "id": "MLB35556218",
+      "name": "Cooktop 4 Bocas Atlas Agile Up Mesa Vidro Mega Chama Bivolt Preto",
+      "captured": true,
+      "processed": false,
+      "published": false
+    },
+    {
+      "id": "MLB49652036",
+      "name": "Ventilador De Teto C\\u002F Controle 6 Vel. Fenix Ventisol 127\\u002F220v",
+      "captured": true,
+      "processed": true,
+      "published": false
+    },
+    {
+      "id": "MLB13409957",
+      "name": "Secador De Cabelos Philco\u00a0psc3500 4 Em 1\u00a0dobr\u00e1vel\u00a0motor\u00a0bldc Prateado Bege 127v",
+      "captured": true,
+      "processed": false,
+      "published": false
+    },
+    {
+      "id": "MLB53303401",
+      "name": "Chaleira El\u00e9trica 1,8l 1200w Unitermi Atacama Prateado 127v",
+      "captured": true,
+      "processed": false,
+      "published": false
+    },
+    {
+      "id": "MLB19055866",
+      "name": "Fritadeira Air Fryer Forno Oven 12l Mondial Afon-12l-ab Preto 127v",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB62173623",
+      "name": "Nescaf\u00e9 Dolce Gusto Arno Genio S Basic Branca Dgs1 Cor Branco 127v",
+      "captured": true,
+      "processed": false,
+      "published": false
+    },
+    {
+      "id": "MLB19479467",
+      "name": "Ar-condicionado Hw LG Dual Inverter Voice +ai 9.000 Fr Branco 220v",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB66484708",
+      "name": "Cafeteira Nespresso Essenza Mini Preta Preto 127v",
+      "captured": true,
+      "processed": false,
+      "published": false
+    },
+    {
+      "id": "MLB8923610",
+      "name": "Micro-ondas Electrolux De Bancada Branco Com Fun\u00e7\u00e3o Tira Odor E Manter Aquecido 34l Meo44 127v",
+      "captured": true,
+      "processed": true,
+      "published": true
     }
   ]
 }

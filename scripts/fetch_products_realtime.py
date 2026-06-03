@@ -60,7 +60,9 @@ SEARCH_STRATEGIES = [
 BLOCKED_TERMS = [
     "whey", "dark lab", "capinha", "película", "pelicula",
     "usado", "recondicionado", "vitrine", "quebrado", "defeito",
-    "esgotado", "sem estoque"
+    "esgotado", "sem estoque", "digital", "curso", "e-book", "ebook",
+    "serviço", "aluguel", "conserto", "manutenção", "instalação",
+    "pdf", "link", "acesso", "conta", "premium", "assinatura"
 ]
 
 

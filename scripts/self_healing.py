@@ -27,7 +27,7 @@ def run_script_protected(script, timeout=DEFAULT_TIMEOUT):
 def run_pipeline():
     # Pipeline completo com travas de segurança
     scripts = [
-        "fetch_products_realtime.py", # Comentado para teste de mock
+        "fetch_products_realtime.py",
         "score_products.py",
         "affiliate_links.py",
         "validate_products.py", 
@@ -85,6 +85,13 @@ def run_pipeline():
 
     logger.info("✅ ASSERTIONS PASS: Banco e Site atualizados com sucesso.")
     run_backup()
+    
+    # Gerar relatório de execução
+    try:
+        subprocess.run([sys.executable, "scripts/execution_reporter.py"])
+    except:
+        pass
+        
     return True
 
 if __name__ == "__main__":
