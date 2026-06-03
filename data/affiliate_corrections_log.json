@@ -1,0 +1,149 @@
+{
+  "tag_afiliado_adicionada": [
+    {
+      "arquivo": "ofertas/informatica/notebook-asus-vivobook-15-m1502-amd-ryzen-7-8-gb-ram-512-gb-ssd-MLB49089309.html",
+      "produto": "Notebook Asus Vivobook 15 M1502, Amd Ryzen 7, 8 Gb Ram, 512 Gb Ssd com 18% de Desconto | Compara Preço",
+      "url_original": "https://www.mercadolivre.com.br/notebook-asus-vivobook-15-m1502-amd-ryzen-7-8-gb-ram-512-gb-ssd-keepos-linux-cool-silver-m1502ya-nj611/p/MLB49089309",
+      "url_corrigida": "https://www.mercadolivre.com.br/notebook-asus-vivobook-15-m1502-amd-ryzen-7-8-gb-ram-512-gb-ssd-keepos-linux-cool-silver-m1502ya-nj611/p/MLB49089309?matt_tool=vendas0nline"
+    },
+    {
+      "arquivo": "ofertas/informatica/notebook-gamer-asus-tuf-gaming-a15-amd-ryzen-7-rtx-3050-8gb-ram-512gb-ssd-MLB65030699.html",
+      "produto": "Notebook Gamer Asus Tuf Gaming A15, Amd Ryzen 7, Rtx 3050, 8gb Ram, 512gb Ssd com 16% de Desconto | Compara Preço",
+      "url_original": "https://www.mercadolivre.com.br/notebook-gamer-asus-tuf-gaming-a15-amd-ryzen-7-rtx-3050-8gb-ram-512gb-ssd-linux-keepos-graphite-black-fa506ncg-hn216/p/MLB65030699",
+      "url_corrigida": "https://www.mercadolivre.com.br/notebook-gamer-asus-tuf-gaming-a15-amd-ryzen-7-rtx-3050-8gb-ram-512gb-ssd-linux-keepos-graphite-black-fa506ncg-hn216/p/MLB65030699?matt_tool=vendas0nline"
+    }
+  ],
+  "duplicados_removidos": [
+    {
+      "arquivo": "ofertas/outros/papel-higienico-familiar-folha-dupla-24-rolos-MLB25708528.html",
+      "motivo": "ID MLB25708528 pertence ao perfume (categoria beleza), não ao papel higiênico"
+    },
+    {
+      "arquivo": "ofertas/outros/secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-220v-MLB66453791.html",
+      "motivo": "ID MLB66453791 pertence ao perfume (categoria beleza), não ao secador"
+    },
+    {
+      "arquivo": "ofertas/informatica/notebook-asus-vivobook-15-m1502-amd-ryzen-7-8-gb-ram-512-gb-ssd-MLB49089309.html",
+      "motivo": "ID MLB49089309 pertence ao Samsung Galaxy A07, não ao notebook Asus"
+    },
+    {
+      "arquivo": "ofertas/outros/jogo-toalhas-banho-grossas-macias-algodao-4pc-absorventes-MLB46220740.html",
+      "motivo": "ID MLB46220740 pertence ao Samsung Galaxy A06 5G, não ao jogo de toalhas"
+    },
+    {
+      "arquivo": "ofertas/outros/jogo-de-jantar-e-cha-oxford-mendi-marfim-de-ceramica-com-20-pecas-bege-marfim-MLB42835779.html",
+      "motivo": "ID MLB42835779 pertence à fritadeira Mondial, não ao jogo de jantar"
+    },
+    {
+      "arquivo": "ofertas/outros/testo-essencial---formula-exclusiva-com-feno-grego--boro--arginina--zma---precursor-da-testosterona---60-capsulas-sem-sabor-MLB65664882.html",
+      "motivo": "ID MLB65664882 pertence ao computador BluePc, não ao suplemento Testo"
+    },
+    {
+      "arquivo": "ofertas/outros/jogo-toalhas-banho-grossas-macias-algodao-4pc-absorventes-MLB19479467.html",
+      "motivo": "ID MLB19479467 pertence ao ar-condicionado LG, não ao jogo de toalhas"
+    },
+    {
+      "arquivo": "ofertas/outros/aparador-de-pelos-multigroom-8-em-1-mg391715-philips-preto-127220v-MLB5556558810.html",
+      "motivo": "Mesmo produto (MLB5556558810) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/outros/creatina-monohidratada-pura-500g-dark-lab-unidade-sem-sabor-MLB4812143184.html",
+      "motivo": "Mesmo produto (MLB4812143184) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/outros/kit-body-splash-masculino-barbarius--enigma--midtown-200ml-MLB4645102377.html",
+      "motivo": "Mesmo produto (MLB4645102377) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/outros/whey-protein-concentrado-100-900g-refil-dark-lab-sabor-morango-MLB3755400429.html",
+      "motivo": "Mesmo produto (MLB3755400429) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/outros/jogo-6-copos-diamond-egipcio-300ml-vidro-grosso-diamante-luxo-transparente-vitrex-MLB6600589630.html",
+      "motivo": "Mesmo produto (MLB6600589630) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/outros/kit-10-pote-de-vidro-marmita-hermetico-370ml-freezer-fitness-rishon-transparente-MLB4371605519.html",
+      "motivo": "Mesmo produto (MLB4371605519) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/celulares/samsung-galaxy-a07-256gb-8gb-preto-MLB54961556.html",
+      "motivo": "Produto duplicado (MLB54961556) em múltiplas categorias - mantendo apenas uma cópia"
+    },
+    {
+      "arquivo": "ofertas/tv-e-video/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110220v-MLB6444937486.html",
+      "motivo": "Produto duplicado (MLB6444937486) em múltiplas categorias - mantendo apenas uma cópia"
+    },
+    {
+      "arquivo": "ofertas/outros/caixa-de-som-boombox-aiwa-aws-bbs-01b-200w-ip66-30hs-de-bateria-preto-127220v-MLB4056119063.html",
+      "motivo": "Mesmo produto (MLB4056119063) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/informatica/asus-consola-portatil-512-gb-white-z2-rc73ya-nh003w-rog-xbox-ally-asus-ryzen-z2-wh-branco-MLB6070039800.html",
+      "motivo": "Produto duplicado (MLB6070039800) em múltiplas categorias - mantendo apenas uma cópia"
+    },
+    {
+      "arquivo": "ofertas/outros/kit-280-figurinhas-do-album-copa-do-mundo-2026--40-envelopes-MLB6657082608.html",
+      "motivo": "Mesmo produto (MLB6657082608) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/outros/kit-420-figurinhas-do-album-copa-do-mundo-2026--60-envelopes-MLB4627337165.html",
+      "motivo": "Mesmo produto (MLB4627337165) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/outros/kit-70-figurinhas-do-album-copa-do-mundo-2026-pronta-entrega-MLB4627310495.html",
+      "motivo": "Mesmo produto (MLB4627310495) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/outros/kit-700-figurinha-do-album-copa-do-mundo-2026--100-envelopes-MLB4627337521.html",
+      "motivo": "Mesmo produto (MLB4627337521) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/outros/kit-c-36-envelopes-252-cromos---copa-do-mundo-fifa-2026-MLB6582857986.html",
+      "motivo": "Mesmo produto (MLB6582857986) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/outros/kit-com-48-pacotes-de-figurinhas-panini-para-o-album-copa-do-mundo-fifa-2026-MLB4674562069.html",
+      "motivo": "Mesmo produto (MLB4674562069) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/outros/impressora-multifuncional-cor-epson-ecotank-l3250-preto-127220v-MLB5275428302.html",
+      "motivo": "Mesmo produto (MLB5275428302) em categoria específica e em 'outros' - removendo de 'outros'"
+    },
+    {
+      "arquivo": "ofertas/informatica/notebook-gamer-asus-tuf-gaming-a15-amd-ryzen-7-rtx-3050-8gb-ram-512gb-ssd-linux-keepos-graphite-black---fa506ncg-hn216-preto-grafite-MLB65030699.html",
+      "motivo": "Produto duplicado (MLB65030699) em múltiplas categorias - mantendo apenas uma cópia"
+    }
+  ],
+  "produtos_removidos_json": [
+    {
+      "arquivo_json": "data/database/all_products.json",
+      "id": "MLB46220740",
+      "nome": "jogo toalhas banho grossas macias algodão 4pç absorventes"
+    },
+    {
+      "arquivo_json": "data/database/all_products.json",
+      "id": "MLB42835779",
+      "nome": "jogo de jantar e chá oxford mendi marfim de cerâmica com 20 "
+    },
+    {
+      "arquivo_json": "data/database/all_products.json",
+      "id": "MLB66453791",
+      "nome": "secador de cabelos philco psc3500 4 em 1 dobrável motor bldc"
+    },
+    {
+      "arquivo_json": "data/products/offers.json",
+      "motivo": "Removidos 1 produtos de teste (ID TESTE_*)",
+      "ids_removidos": [
+        "TESTE_20260601221803"
+      ]
+    }
+  ],
+  "erros": [],
+  "resumo": {
+    "tags_afiliado_adicionadas": 2,
+    "duplicados_removidos": 25,
+    "produtos_removidos_json": 4,
+    "erros": 0
+  }
+}
