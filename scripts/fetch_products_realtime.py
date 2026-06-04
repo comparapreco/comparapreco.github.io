@@ -87,7 +87,11 @@ def classify_category(title: str) -> str:
     t = title.lower()
     if any(k in t for k in ["celular", "smartphone", "iphone", "galaxy", "motorola moto", "redmi", "poco"]):
         return "celulares"
-    if any(k in t for k in ["notebook", "computador", "pc gamer", "monitor", "teclado", "mouse", "ssd", "processador"]):
+    if any(k in t for k in ["notebook", "ultrabook", "macbook", "chromebook", "laptop"]):
+        return "notebooks"
+    if any(k in t for k in ["monitor", "tela gamer", "display 4k"]):
+        return "monitores"
+    if any(k in t for k in ["computador", "pc gamer", "desktop", "teclado", "mouse", "ssd", "processador", "placa de vídeo", "memória ram"]):
         return "informatica"
     if any(k in t for k in ["smart tv", "tv ", "televisão", "televisor", "projetor"]):
         return "tv-e-video"

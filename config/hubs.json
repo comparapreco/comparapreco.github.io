@@ -1,5 +1,7 @@
 {
   "celulares": {
+    "name": "Celulares",
+    "icon": "📱",
     "title": "Celulares: Guia Completo, Ofertas e Comparativos",
     "description": "Encontre os melhores celulares, compare preços, veja guias de compra e as ofertas mais quentes de smartphones no Radar Ninja.",
     "guide_path": "noticias/posts/como-escolher-um-celular-2026-guia-completo.md",
@@ -11,6 +13,8 @@
     ]
   },
   "notebooks": {
+    "name": "Notebooks",
+    "icon": "💻",
     "title": "Notebooks: Melhores Ofertas, Guia de Compra e Comparativos",
     "description": "Encontre o notebook ideal para trabalho, estudo ou games. Compare preços e veja as melhores ofertas de notebooks no Radar Ninja.",
     "guide_path": "noticias/posts/guia-notebooks-2026.md",
@@ -19,6 +23,45 @@
     "related_comparisons": [
       {"title": "Melhores Notebooks Gamer", "url": "comparar/notebooks-gamer.html"},
       {"title": "Notebooks para Trabalho", "url": "comparar/notebooks-trabalho.html"}
+    ]
+  },
+  "tv-e-video": {
+    "name": "TVs",
+    "icon": "📺",
+    "title": "Smart TVs: Melhores Preços, Guia de Compra e Comparativos",
+    "description": "Compare preços de Smart TVs, veja guias de compra e encontre as melhores ofertas de televisores no Radar Ninja.",
+    "guide_path": "noticias/posts/guia-smart-tvs-2026.md",
+    "faq_path": "noticias/posts/tvs-faq.html",
+    "og_image": "assets/images/tvs-hub-og.jpg",
+    "related_comparisons": [
+      {"title": "Melhores Smart TVs 4K", "url": "comparar/smart-tvs-4k.html"},
+      {"title": "TVs Custo-Benefício", "url": "comparar/tvs-custo-beneficio.html"}
+    ]
+  },
+  "monitores": {
+    "name": "Monitores",
+    "icon": "🖥️",
+    "title": "Monitores: Melhores Preços, Guia de Compra e Comparativos",
+    "description": "Encontre o monitor ideal para trabalho, design ou games. Compare preços e veja as melhores ofertas de monitores no Radar Ninja.",
+    "guide_path": "noticias/posts/guia-monitores-2026.md",
+    "faq_path": "noticias/posts/monitores-faq.html",
+    "og_image": "assets/images/monitores-hub-og.jpg",
+    "related_comparisons": [
+      {"title": "Monitores Gamer", "url": "comparar/monitores-gamer.html"},
+      {"title": "Monitores para Trabalho", "url": "comparar/monitores-trabalho.html"}
+    ]
+  },
+  "eletrodomesticos": {
+    "name": "Air Fryers",
+    "icon": "🍳",
+    "title": "Air Fryers e Eletrodomésticos: Melhores Preços e Guia de Compra",
+    "description": "Compare preços de air fryers, fritadeiras e eletrodomésticos. Veja guias de compra e as melhores ofertas no Radar Ninja.",
+    "guide_path": "noticias/posts/guia-air-fryers-2026.md",
+    "faq_path": "noticias/posts/eletrodomesticos-faq.html",
+    "og_image": "assets/images/eletrodomesticos-hub-og.jpg",
+    "related_comparisons": [
+      {"title": "Melhores Air Fryers", "url": "comparar/air-fryers.html"},
+      {"title": "Eletrodomésticos em Promoção", "url": "comparar/eletrodomesticos-promocao.html"}
     ]
   }
 }

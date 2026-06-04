@@ -62,23 +62,19 @@
     </header>
     <nav class="cat-nav">
         <div class="container cat-tabs">
-            <a class="cat-tab active" href="../../categorias/celulares/">📱 Celulares</a>
-            <a class="cat-tab" href="../../categorias/notebooks/">💻 Notebooks</a>
-            <a class="cat-tab" href="../../categorias/tv-e-video/">📺 TVs</a>
-            <a class="cat-tab" href="../../categorias/monitores/">🖥️ Monitores</a>
-            <a class="cat-tab" href="../../categorias/eletrodomesticos/">🍳 Air Fryers</a>
+            {{nav.tabs}}
         </div>
     </nav>
     <main class="container">
         <nav class="breadcrumb">
-            <a href="../../">Home</a> &gt; <a href="../../categorias/">Categorias</a> &gt; Celulares
+            <a href="../../">Home</a> &gt; <a href="../../categorias/">Categorias</a> &gt; {{hub.name}}
         </nav>
         <section class="section">
             <div class="hub-content">
                 {{hub.content}}
 
                 <div class="faq-section">
-                    <h2>Perguntas Frequentes sobre Celulares</h2>
+                    <h2>Perguntas Frequentes sobre {{hub.name}}</h2>
                     {{faq.content}}
                 </div>
 
