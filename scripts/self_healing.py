@@ -38,7 +38,8 @@ def run_pipeline():
         "generate_pages.py",
         "build_categories.py",
         "build_homepage.py", 
-        "generate_sitemaps.py",
+        "generate_celulares_hub.py",
+        "build_sitemap.py",
         "seo_health_check.py",
         "health_monitor.py"
     ]
