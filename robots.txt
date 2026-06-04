@@ -1,8 +1,14 @@
-# Robots.txt - Configuração automática do SEOPróprio
+# Robots.txt - Configuração automática do Radar Ninja
 User-agent: *
 Allow: /
 
 Sitemap: https://comparapreco.github.io/sitemap.xml
+Sitemap: https://comparapreco.github.io/sitemap-produtos.xml
+Sitemap: https://comparapreco.github.io/sitemap-categorias.xml
+Sitemap: https://comparapreco.github.io/sitemap-noticias.xml
+Sitemap: https://comparapreco.github.io/sitemap-guias.xml
+Sitemap: https://comparapreco.github.io/sitemap-paginas.xml
+Sitemap: https://comparapreco.github.io/sitemap-comparativos.xml
+Sitemap: https://comparapreco.github.io/sitemap-rankings.xml
 
-# Crawl-delay para respeitar recursos do servidor
 Crawl-delay: 1
