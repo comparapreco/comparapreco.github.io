@@ -106,11 +106,19 @@ def generate_hubs():
             discount = p.get("custom_discount_pct", 0)
             if product_name and product_url:
                 discount_badge = f' <span style="color:#22c55e;font-size:12px;">-{discount:.0f}%</span>' if discount > 0 else ""
-                related_links_html += f'<li><a href="../../{product_url}">{product_name}{discount_badge}</a></li>\n'
+                # Corrigido: Apenas adiciona ../../ se for um link interno relativo
+                final_url = product_url if product_url.startswith("http") else f"../../{product_url}"
+                related_links_html += f'<li><a href="{final_url}">{product_name}{discount_badge}</a></li>\n'
 
-        # 5. Links de Comparativos (da config)
+        # 5. Links de Comparativos (da config) - Validar existência antes de linkar
         for comp in config.get("related_comparisons", []):
-            related_links_html += f'<li><a href="../../{comp["url"]}">{comp["title"]}</a></li>\n'
+            comp_url = comp["url"]
+            # Tenta encontrar o arquivo físico para evitar 404
+            check_path = comp_url.replace("../../", "")
+            if os.path.exists(check_path) or comp_url.startswith("http"):
+                related_links_html += f'<li><a href="{comp_url}">{comp["title"]}</a></li>\n'
+            else:
+                logger.warning(f"Link de comparativo ignorado (404 preventivo): {comp_url}")
 
         # 6. Schema FAQ (se existir arquivo JSON de schema)
         faq_schema_json = ""

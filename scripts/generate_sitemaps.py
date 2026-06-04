@@ -64,8 +64,20 @@ def collect_urls():
     # 3. Categorias
     cat_dir = ROOT / "categorias"
     if cat_dir.exists():
+        # Incluir a página principal de categorias
+        if (cat_dir / "index.html").exists():
+            all_urls["categorias"].append({
+                "loc": f"{BASE_URL}/categorias/",
+                "priority": "0.9",
+                "changefreq": "weekly"
+            })
+            
         for d in cat_dir.iterdir():
+            # Validar se é um diretório e se possui o index.html gerado
             if d.is_dir() and (d / "index.html").exists():
+                # Evitar incluir pastas de sistema ou temporárias
+                if d.name in ["assets", "css", "js"]: continue
+                
                 all_urls["categorias"].append({
                     "loc": f"{BASE_URL}/categorias/{d.name}/",
                     "priority": "0.8",
