@@ -6,6 +6,15 @@
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$PROJECT_DIR"
 
+# Trava de segurança para evitar sobreposição
+LOCKFILE="/tmp/radar_ninja.lock"
+if [ -f "$LOCKFILE" ]; then
+    echo "[$(date)] ⚠️ Já existe uma execução em curso. Abortando." >> logs/execution.log
+    exit 1
+fi
+touch "$LOCKFILE"
+trap "rm -f $LOCKFILE" EXIT
+
 # Garantir que as pastas necessárias existam
 mkdir -p logs
 mkdir -p data/database
