@@ -1,108 +1,711 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Ofertas de Outros | Compara Preço</title>
-    <link href="/assets/css/style.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas de Outros — Radar Ninja</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+    <style>
+        :root {
+            --primary: #00c853;
+            --primary-dark: #00a443;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #0f172a;
+            --border: #e2e8f0;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header { background: #0f172a; padding: 15px 0; }
+        .hero-mini { background: #1e293b; color: white; padding: 40px 0; text-align: center; border-bottom: 4px solid var(--primary); }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; margin: 40px 0; }
+        .product-card { background: var(--card); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .card-img { height: 200px; background: #f1f5f9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-title { font-weight: 700; font-size: 1rem; margin-bottom: 10px; line-height: 1.4; }
+        .card-price { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-top: auto; }
+        .btn-ninja { background: var(--primary); color: white; padding: 10px; border-radius: 8px; text-decoration: none; text-align: center; font-weight: 700; margin-top: 15px; }
+    </style>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="/" style="text-decoration: none; font-weight: 800; font-size: 1.5rem; color: var(--primary);">Compara Preço</a>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" style="font-size: 1.5rem; font-weight: 900; color: white; text-decoration: none;">🥷 RADAR NINJA</a>
+            <nav style="display: flex; gap: 20px;">
+                <a href="/ofertas-hoje/" style="color: white; text-decoration: none; font-weight: 600;">Ofertas</a>
+                <a href="/noticias/" style="color: white; text-decoration: none; font-weight: 600;">Notícias</a>
+            </nav>
         </div>
     </header>
-    <main class="container">
-        <h1 style="margin-top: 40px;">Ofertas de Outros</h1>
-        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
-            <div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="aparador-de-pelos-multigroom-8-em-1-mg3917u002f15-philips-preto-127u002f220v-MLB15238956.html" style="text-decoration: none; color: inherit; font-weight: 600;">Aparador De Pelos Multigroom 8 Em 1 Mg3917U002F15 Philips Preto 127U002F220V Mlb15238956</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="aquecedor-de-agua-eletrico-lorenzetti-versatil-3-temperaturas-branco-220v-5500w-gn-MLB17449992.html" style="text-decoration: none; color: inherit; font-weight: 600;">Aquecedor De Agua Eletrico Lorenzetti Versatil 3 Temperaturas Branco 220V 5500W Gn Mlb17449992</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="aquecedor-portatil-wap-air-heat-ceramic-elatrico-3-em-1-cor-preto-127v-MLB8923631.html" style="text-decoration: none; color: inherit; font-weight: 600;">Aquecedor Portatil Wap Air Heat Ceramic Elatrico 3 Em 1 Cor Preto 127V Mlb8923631</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="aquecedor-portatil-wap-air-heat-ceramic-eletrico-3-em-1-cor-preto-127v-MLB8923631.html" style="text-decoration: none; color: inherit; font-weight: 600;">Aquecedor Portatil Wap Air Heat Ceramic Eletrico 3 Em 1 Cor Preto 127V Mlb8923631</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="ar-condicionado-hw-lg-dual-inverter-voice-ai-9000-fr-branco-220v-MLB19479467.html" style="text-decoration: none; color: inherit; font-weight: 600;">Ar Condicionado Hw Lg Dual Inverter Voice Ai 9000 Fr Branco 220V Mlb19479467</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="aspirador-de-pa3-e-agua-wap-gtw-10-1400w-de-potaancia-com-bocal-de-sopro-amarelopreto-220v-MLB19731776.html" style="text-decoration: none; color: inherit; font-weight: 600;">Aspirador De Pa3 E Agua Wap Gtw 10 1400W De Potaancia Com Bocal De Sopro Amarelopreto 220V Mlb19731776</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="aspirador-de-po-e-agua-wap-gtw-10-1400w-de-potencia-com-bocal-de-sopro-amarelou002fpreto-220v-MLB19731776.html" style="text-decoration: none; color: inherit; font-weight: 600;">Aspirador De Po E Agua Wap Gtw 10 1400W De Potencia Com Bocal De Sopro Amarelou002Fpreto 220V Mlb19731776</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="aspirador-de-po-e-agua-wap-gtw-10-1400w-de-potencia-com-bocal-de-sopro-amarelou002fpreto-220v-MLB8923631.html" style="text-decoration: none; color: inherit; font-weight: 600;">Aspirador De Po E Agua Wap Gtw 10 1400W De Potencia Com Bocal De Sopro Amarelou002Fpreto 220V Mlb8923631</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="aspirador-de-po-vertical-e-portatil-wap-high-speed-plus-1350w-3-em-1-cinzau002fvermelho-127v-MLB22511808.html" style="text-decoration: none; color: inherit; font-weight: 600;">Aspirador De Po Vertical E Portatil Wap High Speed Plus 1350W 3 Em 1 Cinzau002Fvermelho 127V Mlb22511808</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="barbeador-elatrico-power-adapt-auto-afiavel-a-prova-dagua-bivolt-s588020-philips-cinza-escuro-MLB26000295.html" style="text-decoration: none; color: inherit; font-weight: 600;">Barbeador Elatrico Power Adapt Auto Afiavel A Prova Dagua Bivolt S588020 Philips Cinza Escuro Mlb26000295</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="barbeador-eletrico-power-adapt-auto-afiavel-a-prova-dagua-bivolt-s5880u002f20-philips-cinza-escuro-MLB26000295.html" style="text-decoration: none; color: inherit; font-weight: 600;">Barbeador Eletrico Power Adapt Auto Afiavel A Prova Dagua Bivolt S5880U002F20 Philips Cinza Escuro Mlb26000295</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="britania-bas1295p-aspirador-de-po-2-em-1-1250w-preto-127v-MLB44897592.html" style="text-decoration: none; color: inherit; font-weight: 600;">Britania Bas1295P Aspirador De Po 2 Em 1 1250W Preto 127V Mlb44897592</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="camera-seguranaa-wifi-ip-lente-dupla-2x-3mp-externa-360a-a-prova-dagua-cor-cinza-MLB46836439.html" style="text-decoration: none; color: inherit; font-weight: 600;">Camera Seguranaa Wifi Ip Lente Dupla 2X 3Mp Externa 360A A Prova Dagua Cor Cinza Mlb46836439</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="camera-seguranca-wifi-ip-lente-dupla-2x-3mp-externa-360-a-prova-dagua-cor-cinza-MLB46836439.html" style="text-decoration: none; color: inherit; font-weight: 600;">Camera Seguranca Wifi Ip Lente Dupla 2X 3Mp Externa 360 A Prova Dagua Cor Cinza Mlb46836439</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cartao-de-memoria-micro-sd-kateluo-ultra-128-gb-com-adaptador-sd-MLB65035474.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cartao De Memoria Micro Sd Kateluo Ultra 128 Gb Com Adaptador Sd Mlb65035474</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="chapinha-de-cabelo-mq-professional-titanium-pro-480-cor-chumbo-127220v-MLB15238956.html" style="text-decoration: none; color: inherit; font-weight: 600;">Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127220V Mlb15238956</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="chapinha-de-cabelo-mq-professional-titanium-pro-480-cor-chumbo-127220v-MLB25850957.html" style="text-decoration: none; color: inherit; font-weight: 600;">Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127220V Mlb25850957</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="chapinha-de-cabelo-mq-professional-titanium-pro-480-cor-chumbo-127u002f220v-MLB15238956.html" style="text-decoration: none; color: inherit; font-weight: 600;">Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127U002F220V Mlb15238956</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="chapinha-de-cabelo-mq-professional-titanium-pro-480-cor-chumbo-127u002f220v-MLB19479467.html" style="text-decoration: none; color: inherit; font-weight: 600;">Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127U002F220V Mlb19479467</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="chapinha-de-cabelo-mq-professional-titanium-pro-480-cor-chumbo-127u002f220v-MLB25850957.html" style="text-decoration: none; color: inherit; font-weight: 600;">Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127U002F220V Mlb25850957</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="chapinha-de-cabelo-mq-professional-titanium-pro-480-cor-chumbo-127u002f220v-MLB6122462.html" style="text-decoration: none; color: inherit; font-weight: 600;">Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127U002F220V Mlb6122462</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="escova-progressiva-150g-fashion-gold-MLB25708528.html" style="text-decoration: none; color: inherit; font-weight: 600;">Escova Progressiva 150G Fashion Gold Mlb25708528</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="fone-de-ouvido-headphone-dapon-h02d-bluetooth-51-over-ear-22h-preto-MLB24117280.html" style="text-decoration: none; color: inherit; font-weight: 600;">Fone De Ouvido Headphone Dapon H02D Bluetooth 51 Over Ear 22H Preto Mlb24117280</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="fone-de-ouvido-soundcore-by-anker-p20i-graves-poderosos-e-impactantes-bluetooth-53-30h-de-reproduaao-resistaancia-a-agua-2-mics-ia-para-chamadas-claras-personalizaaao-de-som-via-app-cor-preto-MLB24028629.html" style="text-decoration: none; color: inherit; font-weight: 600;">Fone De Ouvido Soundcore By Anker P20I Graves Poderosos E Impactantes Bluetooth 53 30H De Reproduaao Resistaancia A Agua 2 Mics Ia Para Chamadas Claras Personalizaaao De Som Via App Cor Preto Mlb24028629</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="fone-de-ouvido-soundcore-by-anker-p20i-graves-poderosos-e-impactantes-bluetooth-53-30h-de-reproducao-resistencia-a-agua-2-mics-ia-para-chamadas-claras-personalizacao-de-som-via-app-cor-preto-MLB24028629.html" style="text-decoration: none; color: inherit; font-weight: 600;">Fone De Ouvido Soundcore By Anker P20I Graves Poderosos E Impactantes Bluetooth 53 30H De Reproducao Resistencia A Agua 2 Mics Ia Para Chamadas Claras Personalizacao De Som Via App Cor Preto Mlb24028629</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="fone-de-ouvido-soundcore-by-anker-p20i-graves-poderosos-e-impactantes-bluetooth-53-30h-de-reproducao-resistencia-a-agua-2-mics-ia-para-chamadas-claras-personalizacao-de-som-via-app-cor-preto-MLB47428342.html" style="text-decoration: none; color: inherit; font-weight: 600;">Fone De Ouvido Soundcore By Anker P20I Graves Poderosos E Impactantes Bluetooth 53 30H De Reproducao Resistencia A Agua 2 Mics Ia Para Chamadas Claras Personalizacao De Som Via App Cor Preto Mlb47428342</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="grill-sanduicheira-cadence-san400-elatrica-chapa-misteira-tostex-tostequeira-hambaorguer-click-preto-127v-MLB41541009.html" style="text-decoration: none; color: inherit; font-weight: 600;">Grill Sanduicheira Cadence San400 Elatrica Chapa Misteira Tostex Tostequeira Hambaorguer Click Preto 127V Mlb41541009</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="grill-sanduicheira-cadence-san400-eletrica-chapa-misteira-tostex-tostequeira-hamburguer-click-preto-127v-MLB25850957.html" style="text-decoration: none; color: inherit; font-weight: 600;">Grill Sanduicheira Cadence San400 Eletrica Chapa Misteira Tostex Tostequeira Hamburguer Click Preto 127V Mlb25850957</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="grill-sanduicheira-cadence-san400-eletrica-chapa-misteira-tostex-tostequeira-hamburguer-click-preto-127v-MLB41541009.html" style="text-decoration: none; color: inherit; font-weight: 600;">Grill Sanduicheira Cadence San400 Eletrica Chapa Misteira Tostex Tostequeira Hamburguer Click Preto 127V Mlb41541009</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="hidratante-facial-hydro-boost-water-gel-50g-neutrogena-todo-tipo-de-pele-diau002fnoite-MLB52363091.html" style="text-decoration: none; color: inherit; font-weight: 600;">Hidratante Facial Hydro Boost Water Gel 50G Neutrogena Todo Tipo De Pele Diau002Fnoite Mlb52363091</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="hidratante-facial-hydro-boost-water-gel-50g-neutrogena-todo-tipo-de-pele-diau002fnoite-MLB6122462.html" style="text-decoration: none; color: inherit; font-weight: 600;">Hidratante Facial Hydro Boost Water Gel 50G Neutrogena Todo Tipo De Pele Diau002Fnoite Mlb6122462</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="impressora-multifuncional-wi-fi-epson-ecotank-l3250-mod-c11cj67301-preto-127v-MLB18446928.html" style="text-decoration: none; color: inherit; font-weight: 600;">Impressora Multifuncional Wi Fi Epson Ecotank L3250 Mod C11Cj67301 Preto 127V Mlb18446928</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="inalador-nebulizador-gtech-bivolt-infantil-adulto-silencioso-branco-127u002f220v-MLB25860033.html" style="text-decoration: none; color: inherit; font-weight: 600;">Inalador Nebulizador Gtech Bivolt Infantil Adulto Silencioso Branco 127U002F220V Mlb25860033</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="jogo-de-jantar-e-cha-oxford-mendi-marfim-de-ceramica-com-20-peaas-bege-marfim-MLB42835779.html" style="text-decoration: none; color: inherit; font-weight: 600;">Jogo De Jantar E Cha Oxford Mendi Marfim De Ceramica Com 20 Peaas Bege Marfim Mlb42835779</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="jogo-de-jantar-e-cha-oxford-mendi-marfim-de-ceramica-com-20-pecas-bege-marfim-MLB42835779.html" style="text-decoration: none; color: inherit; font-weight: 600;">Jogo De Jantar E Cha Oxford Mendi Marfim De Ceramica Com 20 Pecas Bege Marfim Mlb42835779</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="jogo-toalhas-banho-grossas-macias-algodao-4pa-absorventes-MLB46220740.html" style="text-decoration: none; color: inherit; font-weight: 600;">Jogo Toalhas Banho Grossas Macias Algodao 4Pa Absorventes Mlb46220740</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="jogo-toalhas-banho-grossas-macias-algodao-4pc-absorventes-MLB46220740.html" style="text-decoration: none; color: inherit; font-weight: 600;">Jogo Toalhas Banho Grossas Macias Algodao 4Pc Absorventes Mlb46220740</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="joystick-sem-fio-vermelho-sony-ps5-MLB44885058.html" style="text-decoration: none; color: inherit; font-weight: 600;">Joystick Sem Fio Vermelho Sony Ps5 Mlb44885058</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-10-pote-de-vidro-marmita-hermatico-640ml-freezer-fitness-rishon-azul-escuro-MLB32551422.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit 10 Pote De Vidro Marmita Hermatico 640Ml Freezer Fitness Rishon Azul Escuro Mlb32551422</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-10-pote-de-vidro-marmita-hermetico-640ml-freezer-fitness-rishon-azul-escuro-MLB32551422.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit 10 Pote De Vidro Marmita Hermetico 640Ml Freezer Fitness Rishon Azul Escuro Mlb32551422</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-2-camera-seguranaa-ip-interna-externa-wifi-icsee-infravermelho-prova-dagua---hw-branco-MLB55477372.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit 2 Camera Seguranaa Ip Interna Externa Wifi Icsee Infravermelho Prova Dagua   Hw Branco Mlb55477372</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-2-camera-seguranaa-ip-interna-externa-wifi-icsee-infravermelho-prova-dagua-hw-branco-MLB55477372.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit 2 Camera Seguranaa Ip Interna Externa Wifi Icsee Infravermelho Prova Dagua Hw Branco Mlb55477372</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-2-camera-seguranca-ip-interna-externa-wifi-icsee-infravermelho-prova-dagua-hw-branco-MLB55477372.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit 2 Camera Seguranca Ip Interna Externa Wifi Icsee Infravermelho Prova Dagua Hw Branco Mlb55477372</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-2-camera-wifi-externa-a28-app-icsee-dupla-visao-3mp-prova-dagua-cor-branco-MLB44906664.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit 2 Camera Wifi Externa A28 App Icsee Dupla Visao 3Mp Prova Dagua Cor Branco Mlb44906664</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-4-radio-comunicador-baofeng-walkie-talkie-bf-777s-profissional-16-canais-16ch-5w-longo-alcance-ata-12km-preto-hardline-127220v-MLB67540101.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit 4 Radio Comunicador Baofeng Walkie Talkie Bf 777S Profissional 16 Canais 16Ch 5W Longo Alcance Ata 12Km Preto Hardline 127220V Mlb67540101</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-4-radio-comunicador-baofeng-walkie-talkie-bf-777s-profissional-16-canais-16ch-5w-longo-alcance-ate-12km-preto---hardline-127u002f220v-MLB67540101.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit 4 Radio Comunicador Baofeng Walkie Talkie Bf 777S Profissional 16 Canais 16Ch 5W Longo Alcance Ate 12Km Preto   Hardline 127U002F220V Mlb67540101</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-4-radio-comunicador-baofeng-walkie-talkie-bf-777s-profissional-16-canais-16ch-5w-longo-alcance-ate-12km-preto-hardline-127u002f220v-MLB67540101.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit 4 Radio Comunicador Baofeng Walkie Talkie Bf 777S Profissional 16 Canais 16Ch 5W Longo Alcance Ate 12Km Preto Hardline 127U002F220V Mlb67540101</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-body-splash-masculino-barbarius--enigma--midtown-200ml-MLB68104527.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit Body Splash Masculino Barbarius  Enigma  Midtown 200Ml Mlb68104527</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-body-splash-masculino-barbarius-enigma-midtown-200ml-MLB68104527.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit Body Splash Masculino Barbarius Enigma Midtown 200Ml Mlb68104527</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="malbec-100ml-boticario-MLB9033853.html" style="text-decoration: none; color: inherit; font-weight: 600;">Malbec 100Ml Boticario Mlb9033853</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="micro-ondas-cm020bf-20-litros-espelhado-com-funcao-descongelar-cor-cinza-e-inox-consul-127v-MLB6207755.html" style="text-decoration: none; color: inherit; font-weight: 600;">Micro Ondas Cm020Bf 20 Litros Espelhado Com Funcao Descongelar Cor Cinza E Inox Consul 127V Mlb6207755</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="micro-ondas-electrolux-de-bancada-branco-com-funaao-tira-odor-e-manter-aquecido-34l-meo44-127v-MLB8923610.html" style="text-decoration: none; color: inherit; font-weight: 600;">Micro Ondas Electrolux De Bancada Branco Com Funaao Tira Odor E Manter Aquecido 34L Meo44 127V Mlb8923610</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="micro-ondas-electrolux-de-bancada-branco-com-funcao-tira-odor-e-manter-aquecido-34l-meo44-127v-MLB8742310.html" style="text-decoration: none; color: inherit; font-weight: 600;">Micro Ondas Electrolux De Bancada Branco Com Funcao Tira Odor E Manter Aquecido 34L Meo44 127V Mlb8742310</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="micro-ondas-electrolux-de-bancada-branco-com-funcao-tira-odor-e-manter-aquecido-34l-meo44-127v-MLB8923610.html" style="text-decoration: none; color: inherit; font-weight: 600;">Micro Ondas Electrolux De Bancada Branco Com Funcao Tira Odor E Manter Aquecido 34L Meo44 127V Mlb8923610</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="microfone-gamer-pc-com-braao-articulado-condensador-rgb-preto-MLB65342537.html" style="text-decoration: none; color: inherit; font-weight: 600;">Microfone Gamer Pc Com Braao Articulado Condensador Rgb Preto Mlb65342537</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="microfone-gamer-pc-com-braco-articulado-condensador-rgb-preto-MLB65342537.html" style="text-decoration: none; color: inherit; font-weight: 600;">Microfone Gamer Pc Com Braco Articulado Condensador Rgb Preto Mlb65342537</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="modelador-decachos2em1u002fpente-de-ar-quente-com-ions-negativos-preto-127u002f220v-MLB19612966.html" style="text-decoration: none; color: inherit; font-weight: 600;">Modelador Decachos2Em1U002Fpente De Ar Quente Com Ions Negativos Preto 127U002F220V Mlb19612966</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="modelador-decachos2em1u002fpente-de-ar-quente-com-ions-negativos-preto-127u002f220v-MLB64192083.html" style="text-decoration: none; color: inherit; font-weight: 600;">Modelador Decachos2Em1U002Fpente De Ar Quente Com Ions Negativos Preto 127U002F220V Mlb64192083</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="modelador-decachos2em1u002fpente-de-ar-quente-com-ions-negativos-preto-127u002f220v-MLB9033853.html" style="text-decoration: none; color: inherit; font-weight: 600;">Modelador Decachos2Em1U002Fpente De Ar Quente Com Ions Negativos Preto 127U002F220V Mlb9033853</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="philco-pas4000v-aspirador-de-po-cor-preto-127-v-127v-MLB22511802.html" style="text-decoration: none; color: inherit; font-weight: 600;">Philco Pas4000V Aspirador De Po Cor Preto 127 V 127V Mlb22511802</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="purificador-agua-e-due-equilibrium-grafite-ibbl-bivolt-127u002f220v-MLB68765218.html" style="text-decoration: none; color: inherit; font-weight: 600;">Purificador Agua E Due Equilibrium Grafite Ibbl Bivolt 127U002F220V Mlb68765218</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="refil-pu002f-filtro-pe12b-electrolux-acqua-pure-cu002f-carvao-ativo-prateado-MLB24233730.html" style="text-decoration: none; color: inherit; font-weight: 600;">Refil Pu002F Filtro Pe12B Electrolux Acqua Pure Cu002F Carvao Ativo Prateado Mlb24233730</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="relogio-microwear-smartwatch-s11-mini-series-11-42mm-whatsapp-gps-nfc-2026-preto-MLB24028629.html" style="text-decoration: none; color: inherit; font-weight: 600;">Relogio Microwear Smartwatch S11 Mini Series 11 42Mm Whatsapp Gps Nfc 2026 Preto Mlb24028629</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="sapateira-organizador-sapatos-empilhavel-vertical-6-andares-MLB63904966.html" style="text-decoration: none; color: inherit; font-weight: 600;">Sapateira Organizador Sapatos Empilhavel Vertical 6 Andares Mlb63904966</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelo-stylle-profissional-motor-ac-2000w-taiff-cor-preto-220v-MLB15238956.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelo Stylle Profissional Motor Ac 2000W Taiff Cor Preto 220V Mlb15238956</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelo-stylle-profissional-motor-ac-2000w-taiff-cor-preto-220v-MLB19612966.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelo Stylle Profissional Motor Ac 2000W Taiff Cor Preto 220V Mlb19612966</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelo-stylle-profissional-motor-ac-2000w-taiff-cor-preto-220v-MLB45617876.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelo Stylle Profissional Motor Ac 2000W Taiff Cor Preto 220V Mlb45617876</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-127v-MLB19612966.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelos Philco Psc3500 4 Em 1 Dobravel Motor Bldc Prateado Bege 127V Mlb19612966</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-127v-MLB49652036.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelos Philco Psc3500 4 Em 1 Dobravel Motor Bldc Prateado Bege 127V Mlb49652036</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-220v-MLB18927373.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelos Philco Psc3500 4 Em 1 Dobravel Motor Bldc Prateado Bege 220V Mlb18927373</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-220v-MLB50269368.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelos Philco Psc3500 4 Em 1 Dobravel Motor Bldc Prateado Bege 220V Mlb50269368</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-220v-MLB66453791.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelos Philco Psc3500 4 Em 1 Dobravel Motor Bldc Prateado Bege 220V Mlb66453791</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-220v-MLB67320358.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelos Philco Psc3500 4 Em 1 Dobravel Motor Bldc Prateado Bege 220V Mlb67320358</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelos-philcoa-psc3500-4-em-1a-dobravela-motora-bldc-prateado-bege-127v-MLB19612966.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelos Philcoa Psc3500 4 Em 1A Dobravela Motora Bldc Prateado Bege 127V Mlb19612966</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelos-philcoa-psc3500-4-em-1a-dobravela-motora-bldc-prateado-bege-127v-MLB49652036.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelos Philcoa Psc3500 4 Em 1A Dobravela Motora Bldc Prateado Bege 127V Mlb49652036</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelos-philcoa-psc3500-4-em-1a-dobravela-motora-bldc-prateado-bege-220v-MLB18927373.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelos Philcoa Psc3500 4 Em 1A Dobravela Motora Bldc Prateado Bege 220V Mlb18927373</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelos-philcoa-psc3500-4-em-1a-dobravela-motora-bldc-prateado-bege-220v-MLB66453791.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelos Philcoa Psc3500 4 Em 1A Dobravela Motora Bldc Prateado Bege 220V Mlb66453791</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="tanquinho-lcs15-15kg-semiautomatica-colormaq-cor-branco-127v-MLB25676946.html" style="text-decoration: none; color: inherit; font-weight: 600;">Tanquinho Lcs15 15Kg Semiautomatica Colormaq Cor Branco 127V Mlb25676946</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="walkie-talkie-radios-comunicador-kit-com-2-unidades-radinho-walk-talk-completo-fone-microfone-e-acessa3rios-radio-de-comunicaaao-longo-alcance-comunicaaao-segura-com-16-canais-preto-127220v-MLB67737386.html" style="text-decoration: none; color: inherit; font-weight: 600;">Walkie Talkie Radios Comunicador Kit Com 2 Unidades Radinho Walk Talk Completo Fone Microfone E Acessa3Rios Radio De Comunicaaao Longo Alcance Comunicaaao Segura Com 16 Canais Preto 127220V Mlb67737386</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="walkie-talkie-radios-comunicador-kit-com-2-unidades-radinho-walk-talk-completo-fone-microfone-e-acessorios---radio-de-comunicacao-longo-alcance-comunicacao-segura-com-16-canais-preto-127u002f220v-MLB67737386.html" style="text-decoration: none; color: inherit; font-weight: 600;">Walkie Talkie Radios Comunicador Kit Com 2 Unidades Radinho Walk Talk Completo Fone Microfone E Acessorios   Radio De Comunicacao Longo Alcance Comunicacao Segura Com 16 Canais Preto 127U002F220V Mlb67737386</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="walkie-talkie-radios-comunicador-kit-com-2-unidades-radinho-walk-talk-completo-fone-microfone-e-acessorios-radio-de-comunicacao-longo-alcance-comunicacao-segura-com-16-canais-preto-127u002f220v-MLB67737386.html" style="text-decoration: none; color: inherit; font-weight: 600;">Walkie Talkie Radios Comunicador Kit Com 2 Unidades Radinho Walk Talk Completo Fone Microfone E Acessorios Radio De Comunicacao Longo Alcance Comunicacao Segura Com 16 Canais Preto 127U002F220V Mlb67737386</a></div>
 
+    <section class="hero-mini">
+        <div class="container">
+            <h1>Ofertas de Outros</h1>
+            <p>Os melhores preços encontrados pela nossa IA em Outros</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_614724-MLA99489875538_112025-O.webp" alt="Aparador De Pelos Multigroom 8 Em 1 Mg3917\u002F15 Philip..."></div>
+                <div class="card-body">
+                    <div class="card-title">Aparador De Pelos Multigroom 8 Em 1 Mg3917\u002F15 Philip...</div>
+                    <div class="card-price">R$</div>
+                    <a href="aparador-de-pelos-multigroom-8-em-1-mg3917u002f15-philips-preto-127u002f220v-MLB15238956.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_881915-MLA100668638384_122025-O.webp" alt="Aquecedor De Água Elétrico Lorenzetti Versátil 3 Temperat..."></div>
+                <div class="card-body">
+                    <div class="card-title">Aquecedor De Água Elétrico Lorenzetti Versátil 3 Temperat...</div>
+                    <div class="card-price">R$</div>
+                    <a href="aquecedor-de-agua-eletrico-lorenzetti-versatil-3-temperaturas-branco-220v-5500w-gn-MLB17449992.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_748103-MLA99906601653_112025-O.webp" alt="Aquecedor PortÃ¡til Wap Air Heat Ceramic ElÃ©trico 3 Em 1..."></div>
+                <div class="card-body">
+                    <div class="card-title">Aquecedor PortÃ¡til Wap Air Heat Ceramic ElÃ©trico 3 Em 1...</div>
+                    <div class="card-price">R$</div>
+                    <a href="aquecedor-portatil-wap-air-heat-ceramic-elatrico-3-em-1-cor-preto-127v-MLB8923631.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_748103-MLA99906601653_112025-O.webp" alt="Aquecedor Portátil Wap Air Heat Ceramic Elétrico 3 Em 1 C..."></div>
+                <div class="card-body">
+                    <div class="card-title">Aquecedor Portátil Wap Air Heat Ceramic Elétrico 3 Em 1 C...</div>
+                    <div class="card-price">R$</div>
+                    <a href="aquecedor-portatil-wap-air-heat-ceramic-eletrico-3-em-1-cor-preto-127v-MLB8923631.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_981622-MLA99466692460_112025-O.webp" alt="Ar-condicionado Hw LG Dual Inverter Voice +ai 9.000 Fr Br..."></div>
+                <div class="card-body">
+                    <div class="card-title">Ar-condicionado Hw LG Dual Inverter Voice +ai 9.000 Fr Br...</div>
+                    <div class="card-price">R$</div>
+                    <a href="ar-condicionado-hw-lg-dual-inverter-voice-ai-9000-fr-branco-220v-MLB19479467.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_771780-MLA106680953163_022026-O.webp" alt="Aspirador De PÃ³ E Ãgua Wap Gtw 10 1400w De PotÃªncia Co..."></div>
+                <div class="card-body">
+                    <div class="card-title">Aspirador De PÃ³ E Ãgua Wap Gtw 10 1400w De PotÃªncia Co...</div>
+                    <div class="card-price">R$</div>
+                    <a href="aspirador-de-pa3-e-agua-wap-gtw-10-1400w-de-potaancia-com-bocal-de-sopro-amarelopreto-220v-MLB19731776.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_771780-MLA106680953163_022026-O.webp" alt="Aspirador De Pó E Água Wap Gtw 10 1400w De Potência Com B..."></div>
+                <div class="card-body">
+                    <div class="card-title">Aspirador De Pó E Água Wap Gtw 10 1400w De Potência Com B...</div>
+                    <div class="card-price">R$</div>
+                    <a href="aspirador-de-po-e-agua-wap-gtw-10-1400w-de-potencia-com-bocal-de-sopro-amarelou002fpreto-220v-MLB19731776.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_985627-MLA100060225801_122025-O.webp" alt="Aspirador De Pó E Água Wap Gtw 10 1400w De Potência Com B..."></div>
+                <div class="card-body">
+                    <div class="card-title">Aspirador De Pó E Água Wap Gtw 10 1400w De Potência Com B...</div>
+                    <div class="card-price">R$</div>
+                    <a href="aspirador-de-po-e-agua-wap-gtw-10-1400w-de-potencia-com-bocal-de-sopro-amarelou002fpreto-220v-MLB8923631.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_887734-MLA99375017938_112025-O.webp" alt="Aspirador De Pó Vertical E Portátil Wap High Speed Plus 1..."></div>
+                <div class="card-body">
+                    <div class="card-title">Aspirador De Pó Vertical E Portátil Wap High Speed Plus 1...</div>
+                    <div class="card-price">R$</div>
+                    <a href="aspirador-de-po-vertical-e-portatil-wap-high-speed-plus-1350w-3-em-1-cinzau002fvermelho-127v-MLB22511808.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_872557-MLA110598029518_052026-O.webp" alt="Barbeador ElÃ©trico Power Adapt Auto AfiÃ¡vel, Ã Prova D..."></div>
+                <div class="card-body">
+                    <div class="card-title">Barbeador ElÃ©trico Power Adapt Auto AfiÃ¡vel, Ã Prova D...</div>
+                    <div class="card-price">R$</div>
+                    <a href="barbeador-elatrico-power-adapt-auto-afiavel-a-prova-dagua-bivolt-s588020-philips-cinza-escuro-MLB26000295.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_872557-MLA110598029518_052026-O.webp" alt="Barbeador Elétrico Power Adapt Auto Afiável, À Prova Dágu..."></div>
+                <div class="card-body">
+                    <div class="card-title">Barbeador Elétrico Power Adapt Auto Afiável, À Prova Dágu...</div>
+                    <div class="card-price">R$</div>
+                    <a href="barbeador-eletrico-power-adapt-auto-afiavel-a-prova-dagua-bivolt-s5880u002f20-philips-cinza-escuro-MLB26000295.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_603572-MLA99545946946_122025-O.webp" alt="Britânia Bas1295p Aspirador De Pó 2 Em 1 1250w Preto 127v"></div>
+                <div class="card-body">
+                    <div class="card-title">Britânia Bas1295p Aspirador De Pó 2 Em 1 1250w Preto 127v</div>
+                    <div class="card-price">R$</div>
+                    <a href="britania-bas1295p-aspirador-de-po-2-em-1-1250w-preto-127v-MLB44897592.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_901090-MLA99414404486_112025-O.webp" alt="CÃ¢mera SeguranÃ§a Wifi Ip Lente Dupla 2x 3mp Externa 360..."></div>
+                <div class="card-body">
+                    <div class="card-title">CÃ¢mera SeguranÃ§a Wifi Ip Lente Dupla 2x 3mp Externa 360...</div>
+                    <div class="card-price">R$</div>
+                    <a href="camera-seguranaa-wifi-ip-lente-dupla-2x-3mp-externa-360a-a-prova-dagua-cor-cinza-MLB46836439.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_901090-MLA99414404486_112025-O.webp" alt="Câmera Segurança Wifi Ip Lente Dupla 2x 3mp Externa 360° ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Câmera Segurança Wifi Ip Lente Dupla 2x 3mp Externa 360° ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="camera-seguranca-wifi-ip-lente-dupla-2x-3mp-externa-360-a-prova-dagua-cor-cinza-MLB46836439.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_975641-MLA105479640228_012026-O.webp" alt="Cartão De Memória Micro Sd Kateluo Ultra 128 Gb Com Adapt..."></div>
+                <div class="card-body">
+                    <div class="card-title">Cartão De Memória Micro Sd Kateluo Ultra 128 Gb Com Adapt...</div>
+                    <div class="card-price">R$</div>
+                    <a href="cartao-de-memoria-micro-sd-kateluo-ultra-128-gb-com-adaptador-sd-MLB65035474.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_614724-MLA99489875538_112025-O.webp" alt="Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor C..."></div>
+                <div class="card-body">
+                    <div class="card-title">Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor C...</div>
+                    <div class="card-price">R$</div>
+                    <a href="chapinha-de-cabelo-mq-professional-titanium-pro-480-cor-chumbo-127220v-MLB15238956.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_720624-MLA99531483484_122025-O.webp" alt="Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor C..."></div>
+                <div class="card-body">
+                    <div class="card-title">Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor C...</div>
+                    <div class="card-price">R$</div>
+                    <a href="chapinha-de-cabelo-mq-professional-titanium-pro-480-cor-chumbo-127220v-MLB25850957.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_614724-MLA99489875538_112025-O.webp" alt="Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor C..."></div>
+                <div class="card-body">
+                    <div class="card-title">Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor C...</div>
+                    <div class="card-price">R$</div>
+                    <a href="chapinha-de-cabelo-mq-professional-titanium-pro-480-cor-chumbo-127u002f220v-MLB15238956.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_981622-MLA99466692460_112025-O.webp" alt="Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor C..."></div>
+                <div class="card-body">
+                    <div class="card-title">Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor C...</div>
+                    <div class="card-price">R$</div>
+                    <a href="chapinha-de-cabelo-mq-professional-titanium-pro-480-cor-chumbo-127u002f220v-MLB19479467.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_720624-MLA99531483484_122025-O.webp" alt="Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor C..."></div>
+                <div class="card-body">
+                    <div class="card-title">Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor C...</div>
+                    <div class="card-price">R$</div>
+                    <a href="chapinha-de-cabelo-mq-professional-titanium-pro-480-cor-chumbo-127u002f220v-MLB25850957.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_722248-MLA99466586714_112025-O.webp" alt="Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor C..."></div>
+                <div class="card-body">
+                    <div class="card-title">Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor C...</div>
+                    <div class="card-price">R$</div>
+                    <a href="chapinha-de-cabelo-mq-professional-titanium-pro-480-cor-chumbo-127u002f220v-MLB6122462.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_631595-MLA99350047876_112025-O.webp" alt="Escova Progressiva 150g - Fashion Gold"></div>
+                <div class="card-body">
+                    <div class="card-title">Escova Progressiva 150g - Fashion Gold</div>
+                    <div class="card-price">R$</div>
+                    <a href="escova-progressiva-150g-fashion-gold-MLB25708528.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_871158-MLA99870084511_112025-O.webp" alt="Fone De Ouvido Headphone Dapon H02d Bluetooth 5.1 Over-ea..."></div>
+                <div class="card-body">
+                    <div class="card-title">Fone De Ouvido Headphone Dapon H02d Bluetooth 5.1 Over-ea...</div>
+                    <div class="card-price">R$</div>
+                    <a href="fone-de-ouvido-headphone-dapon-h02d-bluetooth-51-over-ear-22h-preto-MLB24117280.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_730568-MLA99983575997_112025-O.webp" alt="Fone De Ouvido Soundcore By Anker P20i Graves Poderosos E..."></div>
+                <div class="card-body">
+                    <div class="card-title">Fone De Ouvido Soundcore By Anker P20i Graves Poderosos E...</div>
+                    <div class="card-price">R$</div>
+                    <a href="fone-de-ouvido-soundcore-by-anker-p20i-graves-poderosos-e-impactantes-bluetooth-53-30h-de-reproduaao-resistaancia-a-agua-2-mics-ia-para-chamadas-claras-personalizaaao-de-som-via-app-cor-preto-MLB24028629.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_730568-MLA99983575997_112025-O.webp" alt="Fone De Ouvido Soundcore By Anker P20i Graves Poderosos E..."></div>
+                <div class="card-body">
+                    <div class="card-title">Fone De Ouvido Soundcore By Anker P20i Graves Poderosos E...</div>
+                    <div class="card-price">R$</div>
+                    <a href="fone-de-ouvido-soundcore-by-anker-p20i-graves-poderosos-e-impactantes-bluetooth-53-30h-de-reproducao-resistencia-a-agua-2-mics-ia-para-chamadas-claras-personalizacao-de-som-via-app-cor-preto-MLB24028629.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_844806-MLA99457494578_112025-O.webp" alt="Fone De Ouvido Soundcore By Anker P20i Graves Poderosos E..."></div>
+                <div class="card-body">
+                    <div class="card-title">Fone De Ouvido Soundcore By Anker P20i Graves Poderosos E...</div>
+                    <div class="card-price">R$</div>
+                    <a href="fone-de-ouvido-soundcore-by-anker-p20i-graves-poderosos-e-impactantes-bluetooth-53-30h-de-reproducao-resistencia-a-agua-2-mics-ia-para-chamadas-claras-personalizacao-de-som-via-app-cor-preto-MLB47428342.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_923263-MLA99474168604_112025-O.webp" alt="Grill Sanduicheira Cadence San400 ElÃ©trica Chapa Misteir..."></div>
+                <div class="card-body">
+                    <div class="card-title">Grill Sanduicheira Cadence San400 ElÃ©trica Chapa Misteir...</div>
+                    <div class="card-price">R$</div>
+                    <a href="grill-sanduicheira-cadence-san400-elatrica-chapa-misteira-tostex-tostequeira-hambaorguer-click-preto-127v-MLB41541009.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_901582-MLA84838790809_052025-O.webp" alt="Grill Sanduicheira Cadence San400 Elétrica Chapa Misteira..."></div>
+                <div class="card-body">
+                    <div class="card-title">Grill Sanduicheira Cadence San400 Elétrica Chapa Misteira...</div>
+                    <div class="card-price">R$</div>
+                    <a href="grill-sanduicheira-cadence-san400-eletrica-chapa-misteira-tostex-tostequeira-hamburguer-click-preto-127v-MLB25850957.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_923263-MLA99474168604_112025-O.webp" alt="Grill Sanduicheira Cadence San400 Elétrica Chapa Misteira..."></div>
+                <div class="card-body">
+                    <div class="card-title">Grill Sanduicheira Cadence San400 Elétrica Chapa Misteira...</div>
+                    <div class="card-price">R$</div>
+                    <a href="grill-sanduicheira-cadence-san400-eletrica-chapa-misteira-tostex-tostequeira-hamburguer-click-preto-127v-MLB41541009.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_861957-MLA108178234350_032026-O.webp" alt="Hidratante Facial Hydro Boost Water Gel 50g Neutrogena To..."></div>
+                <div class="card-body">
+                    <div class="card-title">Hidratante Facial Hydro Boost Water Gel 50g Neutrogena To...</div>
+                    <div class="card-price">R$</div>
+                    <a href="hidratante-facial-hydro-boost-water-gel-50g-neutrogena-todo-tipo-de-pele-diau002fnoite-MLB52363091.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_855356-MLA99920310273_112025-O.webp" alt="Hidratante Facial Hydro Boost Water Gel 50g Neutrogena To..."></div>
+                <div class="card-body">
+                    <div class="card-title">Hidratante Facial Hydro Boost Water Gel 50g Neutrogena To...</div>
+                    <div class="card-price">R$</div>
+                    <a href="hidratante-facial-hydro-boost-water-gel-50g-neutrogena-todo-tipo-de-pele-diau002fnoite-MLB6122462.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_885225-MLA99998218631_112025-O.webp" alt="Impressora Multifuncional Wi-fi Epson Ecotank L3250 Mod C..."></div>
+                <div class="card-body">
+                    <div class="card-title">Impressora Multifuncional Wi-fi Epson Ecotank L3250 Mod C...</div>
+                    <div class="card-price">R$</div>
+                    <a href="impressora-multifuncional-wi-fi-epson-ecotank-l3250-mod-c11cj67301-preto-127v-MLB18446928.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_880671-MLA104339500010_012026-O.webp" alt="Inalador Nebulizador Gtech Bivolt Infantil Adulto Silenci..."></div>
+                <div class="card-body">
+                    <div class="card-title">Inalador Nebulizador Gtech Bivolt Infantil Adulto Silenci...</div>
+                    <div class="card-price">R$</div>
+                    <a href="inalador-nebulizador-gtech-bivolt-infantil-adulto-silencioso-branco-127u002f220v-MLB25860033.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_783554-MLA95668214622_102025-O.webp" alt="Jogo De Jantar E ChÃ¡ Oxford Mendi Marfim De CerÃ¢mica Co..."></div>
+                <div class="card-body">
+                    <div class="card-title">Jogo De Jantar E ChÃ¡ Oxford Mendi Marfim De CerÃ¢mica Co...</div>
+                    <div class="card-price">R$</div>
+                    <a href="jogo-de-jantar-e-cha-oxford-mendi-marfim-de-ceramica-com-20-peaas-bege-marfim-MLB42835779.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_783554-MLA95668214622_102025-O.webp" alt="Jogo De Jantar E Chá Oxford Mendi Marfim De Cerâmica Com ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Jogo De Jantar E Chá Oxford Mendi Marfim De Cerâmica Com ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="jogo-de-jantar-e-cha-oxford-mendi-marfim-de-ceramica-com-20-pecas-bege-marfim-MLB42835779.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_764756-MLA96570589252_112025-O.webp" alt="Jogo Toalhas Banho Grossas Macias AlgodÃ£o 4pÃ§ Absorventes"></div>
+                <div class="card-body">
+                    <div class="card-title">Jogo Toalhas Banho Grossas Macias AlgodÃ£o 4pÃ§ Absorventes</div>
+                    <div class="card-price">R$</div>
+                    <a href="jogo-toalhas-banho-grossas-macias-algodao-4pa-absorventes-MLB46220740.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_764756-MLA96570589252_112025-O.webp" alt="Jogo Toalhas Banho Grossas Macias Algodão 4pç Absorventes"></div>
+                <div class="card-body">
+                    <div class="card-title">Jogo Toalhas Banho Grossas Macias Algodão 4pç Absorventes</div>
+                    <div class="card-price">R$</div>
+                    <a href="jogo-toalhas-banho-grossas-macias-algodao-4pc-absorventes-MLB46220740.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_747852-MLA99992544257_112025-O.webp" alt="Joystick Sem Fio Vermelho Sony Ps5"></div>
+                <div class="card-body">
+                    <div class="card-title">Joystick Sem Fio Vermelho Sony Ps5</div>
+                    <div class="card-price">R$</div>
+                    <a href="joystick-sem-fio-vermelho-sony-ps5-MLB44885058.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_636799-MLA95689845192_102025-O.webp" alt="Kit 10 Pote De Vidro Marmita HermÃ©tico 640ml Freezer Fit..."></div>
+                <div class="card-body">
+                    <div class="card-title">Kit 10 Pote De Vidro Marmita HermÃ©tico 640ml Freezer Fit...</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-10-pote-de-vidro-marmita-hermatico-640ml-freezer-fitness-rishon-azul-escuro-MLB32551422.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_636799-MLA95689845192_102025-O.webp" alt="Kit 10 Pote De Vidro Marmita Hermético 640ml Freezer Fitn..."></div>
+                <div class="card-body">
+                    <div class="card-title">Kit 10 Pote De Vidro Marmita Hermético 640ml Freezer Fitn...</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-10-pote-de-vidro-marmita-hermetico-640ml-freezer-fitness-rishon-azul-escuro-MLB32551422.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_932146-MLA107702958232_032026-O.webp" alt="Kit 2 CÃ¢mera SeguranÃ§a Ip Interna Externa Wifi Icsee In..."></div>
+                <div class="card-body">
+                    <div class="card-title">Kit 2 CÃ¢mera SeguranÃ§a Ip Interna Externa Wifi Icsee In...</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-2-camera-seguranaa-ip-interna-externa-wifi-icsee-infravermelho-prova-dagua---hw-branco-MLB55477372.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_932146-MLA107702958232_032026-O.webp" alt="Kit 2 CÃ¢mera SeguranÃ§a Ip Interna Externa Wifi Icsee In..."></div>
+                <div class="card-body">
+                    <div class="card-title">Kit 2 CÃ¢mera SeguranÃ§a Ip Interna Externa Wifi Icsee In...</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-2-camera-seguranaa-ip-interna-externa-wifi-icsee-infravermelho-prova-dagua-hw-branco-MLB55477372.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_932146-MLA107702958232_032026-O.webp" alt="Kit 2 Câmera Segurança Ip Interna Externa Wifi Icsee Infr..."></div>
+                <div class="card-body">
+                    <div class="card-title">Kit 2 Câmera Segurança Ip Interna Externa Wifi Icsee Infr...</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-2-camera-seguranca-ip-interna-externa-wifi-icsee-infravermelho-prova-dagua-hw-branco-MLB55477372.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_617999-MLA107805745177_022026-O.webp" alt="Kit 2 CÃ¢mera Wifi Externa A28 App Icsee Dupla VisÃ£o 3mp..."></div>
+                <div class="card-body">
+                    <div class="card-title">Kit 2 CÃ¢mera Wifi Externa A28 App Icsee Dupla VisÃ£o 3mp...</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-2-camera-wifi-externa-a28-app-icsee-dupla-visao-3mp-prova-dagua-cor-branco-MLB44906664.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_809560-MLA110029226330_042026-O.webp" alt="Kit 4 RÃ¡dio Comunicador Baofeng Walkie Talkie Bf-777s Pr..."></div>
+                <div class="card-body">
+                    <div class="card-title">Kit 4 RÃ¡dio Comunicador Baofeng Walkie Talkie Bf-777s Pr...</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-4-radio-comunicador-baofeng-walkie-talkie-bf-777s-profissional-16-canais-16ch-5w-longo-alcance-ata-12km-preto-hardline-127220v-MLB67540101.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_809560-MLA110029226330_042026-O.webp" alt="Kit 4 Rádio Comunicador Baofeng Walkie Talkie Bf-777s Pro..."></div>
+                <div class="card-body">
+                    <div class="card-title">Kit 4 Rádio Comunicador Baofeng Walkie Talkie Bf-777s Pro...</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-4-radio-comunicador-baofeng-walkie-talkie-bf-777s-profissional-16-canais-16ch-5w-longo-alcance-ate-12km-preto---hardline-127u002f220v-MLB67540101.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_809560-MLA110029226330_042026-O.webp" alt="Kit 4 Rádio Comunicador Baofeng Walkie Talkie Bf-777s Pro..."></div>
+                <div class="card-body">
+                    <div class="card-title">Kit 4 Rádio Comunicador Baofeng Walkie Talkie Bf-777s Pro...</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-4-radio-comunicador-baofeng-walkie-talkie-bf-777s-profissional-16-canais-16ch-5w-longo-alcance-ate-12km-preto-hardline-127u002f220v-MLB67540101.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_997574-MLA109633443994_042026-O.webp" alt="Kit Body Splash Masculino Barbarius + Enigma + Midtown 200ml"></div>
+                <div class="card-body">
+                    <div class="card-title">Kit Body Splash Masculino Barbarius + Enigma + Midtown 200ml</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-body-splash-masculino-barbarius--enigma--midtown-200ml-MLB68104527.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_997574-MLA109633443994_042026-O.webp" alt="Kit Body Splash Masculino Barbarius + Enigma + Midtown 200ml"></div>
+                <div class="card-body">
+                    <div class="card-title">Kit Body Splash Masculino Barbarius + Enigma + Midtown 200ml</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-body-splash-masculino-barbarius-enigma-midtown-200ml-MLB68104527.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_860901-MLA99936562703_112025-O.webp" alt="Malbec 100ml Boticário"></div>
+                <div class="card-body">
+                    <div class="card-title">Malbec 100ml Boticário</div>
+                    <div class="card-price">R$</div>
+                    <a href="malbec-100ml-boticario-MLB9033853.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_770046-MLA99932123957_112025-O.webp" alt="Micro-ondas Cm020bf 20 Litros Espelhado Com Função Descon..."></div>
+                <div class="card-body">
+                    <div class="card-title">Micro-ondas Cm020bf 20 Litros Espelhado Com Função Descon...</div>
+                    <div class="card-price">R$</div>
+                    <a href="micro-ondas-cm020bf-20-litros-espelhado-com-funcao-descongelar-cor-cinza-e-inox-consul-127v-MLB6207755.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_743646-MLA109935249388_042026-O.webp" alt="Micro-ondas Electrolux De Bancada Branco Com FunÃ§Ã£o Tir..."></div>
+                <div class="card-body">
+                    <div class="card-title">Micro-ondas Electrolux De Bancada Branco Com FunÃ§Ã£o Tir...</div>
+                    <div class="card-price">R$</div>
+                    <a href="micro-ondas-electrolux-de-bancada-branco-com-funaao-tira-odor-e-manter-aquecido-34l-meo44-127v-MLB8923610.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_889684-MLA99475706302_112025-O.webp" alt="Micro-ondas Electrolux De Bancada Branco Com Função Tira ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Micro-ondas Electrolux De Bancada Branco Com Função Tira ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="micro-ondas-electrolux-de-bancada-branco-com-funcao-tira-odor-e-manter-aquecido-34l-meo44-127v-MLB8742310.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_743646-MLA109935249388_042026-O.webp" alt="Micro-ondas Electrolux De Bancada Branco Com Função Tira ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Micro-ondas Electrolux De Bancada Branco Com Função Tira ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="micro-ondas-electrolux-de-bancada-branco-com-funcao-tira-odor-e-manter-aquecido-34l-meo44-127v-MLB8923610.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_618425-MLA106695031651_022026-O.webp" alt="Microfone Gamer Pc Com BraÃ§o Articulado Condensador Rgb ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Microfone Gamer Pc Com BraÃ§o Articulado Condensador Rgb ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="microfone-gamer-pc-com-braao-articulado-condensador-rgb-preto-MLB65342537.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_618425-MLA106695031651_022026-O.webp" alt="Microfone Gamer Pc Com Braço Articulado Condensador Rgb P..."></div>
+                <div class="card-body">
+                    <div class="card-title">Microfone Gamer Pc Com Braço Articulado Condensador Rgb P...</div>
+                    <div class="card-price">R$</div>
+                    <a href="microfone-gamer-pc-com-braco-articulado-condensador-rgb-preto-MLB65342537.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_722248-MLA99466586714_112025-O.webp" alt="Modelador Decachos2em1\u002Fpente De Ar Quente Com Íons N..."></div>
+                <div class="card-body">
+                    <div class="card-title">Modelador Decachos2em1\u002Fpente De Ar Quente Com Íons N...</div>
+                    <div class="card-price">R$</div>
+                    <a href="modelador-decachos2em1u002fpente-de-ar-quente-com-ions-negativos-preto-127u002f220v-MLB19612966.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_772176-MLA104031174038_012026-O.webp" alt="Modelador Decachos2em1\u002Fpente De Ar Quente Com Íons N..."></div>
+                <div class="card-body">
+                    <div class="card-title">Modelador Decachos2em1\u002Fpente De Ar Quente Com Íons N...</div>
+                    <div class="card-price">R$</div>
+                    <a href="modelador-decachos2em1u002fpente-de-ar-quente-com-ions-negativos-preto-127u002f220v-MLB64192083.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_849828-MLA93387691711_092025-O.webp" alt="Modelador Decachos2em1\u002Fpente De Ar Quente Com Íons N..."></div>
+                <div class="card-body">
+                    <div class="card-title">Modelador Decachos2em1\u002Fpente De Ar Quente Com Íons N...</div>
+                    <div class="card-price">R$</div>
+                    <a href="modelador-decachos2em1u002fpente-de-ar-quente-com-ions-negativos-preto-127u002f220v-MLB9033853.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_866250-MLA99535827666_122025-O.webp" alt="Philco Pas4000v Aspirador De Pó Cor Preto 127 V 127v"></div>
+                <div class="card-body">
+                    <div class="card-title">Philco Pas4000v Aspirador De Pó Cor Preto 127 V 127v</div>
+                    <div class="card-price">R$</div>
+                    <a href="philco-pas4000v-aspirador-de-po-cor-preto-127-v-127v-MLB22511802.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_954441-MLA111001402715_042026-O.webp" alt="Purificador Água E-due Equilibrium Grafite Ibbl Bivolt 12..."></div>
+                <div class="card-body">
+                    <div class="card-title">Purificador Água E-due Equilibrium Grafite Ibbl Bivolt 12...</div>
+                    <div class="card-price">R$</div>
+                    <a href="purificador-agua-e-due-equilibrium-grafite-ibbl-bivolt-127u002f220v-MLB68765218.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_849194-MLA99496642800_112025-O.webp" alt="Refil P\u002F Filtro Pe12b Electrolux Acqua Pure C\u002F ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Refil P\u002F Filtro Pe12b Electrolux Acqua Pure C\u002F ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="refil-pu002f-filtro-pe12b-electrolux-acqua-pure-cu002f-carvao-ativo-prateado-MLB24233730.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_730568-MLA99983575997_112025-O.webp" alt="Relógio Microwear Smartwatch S11 Mini Series 11 42mm What..."></div>
+                <div class="card-body">
+                    <div class="card-title">Relógio Microwear Smartwatch S11 Mini Series 11 42mm What...</div>
+                    <div class="card-price">R$</div>
+                    <a href="relogio-microwear-smartwatch-s11-mini-series-11-42mm-whatsapp-gps-nfc-2026-preto-MLB24028629.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_830343-MLA104536987832_012026-O.webp" alt="Sapateira Organizador Sapatos EmpilhÃ¡vel Vertical 6 Andares"></div>
+                <div class="card-body">
+                    <div class="card-title">Sapateira Organizador Sapatos EmpilhÃ¡vel Vertical 6 Andares</div>
+                    <div class="card-price">R$</div>
+                    <a href="sapateira-organizador-sapatos-empilhavel-vertical-6-andares-MLB63904966.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_614724-MLA99489875538_112025-O.webp" alt="Secador De Cabelo Stylle Profissional Motor Ac 2000w Taif..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelo Stylle Profissional Motor Ac 2000w Taif...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelo-stylle-profissional-motor-ac-2000w-taiff-cor-preto-220v-MLB15238956.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_790904-MLA108570211465_032026-O.webp" alt="Secador De Cabelo Stylle Profissional Motor Ac 2000w Taif..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelo Stylle Profissional Motor Ac 2000w Taif...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelo-stylle-profissional-motor-ac-2000w-taiff-cor-preto-220v-MLB19612966.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_939921-MLA97856026459_112025-O.webp" alt="Secador De Cabelo Stylle Profissional Motor Ac 2000w Taif..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelo Stylle Profissional Motor Ac 2000w Taif...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelo-stylle-profissional-motor-ac-2000w-taiff-cor-preto-220v-MLB45617876.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_908487-MLA108910007890_032026-O.webp" alt="Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-127v-MLB19612966.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_871708-MLA100016593317_122025-O.webp" alt="Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-127v-MLB49652036.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_770046-MLA99932123957_112025-O.webp" alt="Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-220v-MLB18927373.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_720624-MLA99531483484_122025-O.webp" alt="Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-220v-MLB50269368.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_939921-MLA97856026459_112025-O.webp" alt="Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-220v-MLB66453791.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_631595-MLA99350047876_112025-O.webp" alt="Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-220v-MLB67320358.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_908487-MLA108910007890_032026-O.webp" alt="Secador De Cabelos PhilcoÂ psc3500 4 Em 1Â dobrÃ¡velÂ mot..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelos PhilcoÂ psc3500 4 Em 1Â dobrÃ¡velÂ mot...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelos-philcoa-psc3500-4-em-1a-dobravela-motora-bldc-prateado-bege-127v-MLB19612966.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_871708-MLA100016593317_122025-O.webp" alt="Secador De Cabelos PhilcoÂ psc3500 4 Em 1Â dobrÃ¡velÂ mot..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelos PhilcoÂ psc3500 4 Em 1Â dobrÃ¡velÂ mot...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelos-philcoa-psc3500-4-em-1a-dobravela-motora-bldc-prateado-bege-127v-MLB49652036.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_770046-MLA99932123957_112025-O.webp" alt="Secador De Cabelos PhilcoÂ psc3500 4 Em 1Â dobrÃ¡velÂ mot..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelos PhilcoÂ psc3500 4 Em 1Â dobrÃ¡velÂ mot...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelos-philcoa-psc3500-4-em-1a-dobravela-motora-bldc-prateado-bege-220v-MLB18927373.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_790904-MLA108570211465_032026-O.webp" alt="Secador De Cabelos PhilcoÂ psc3500 4 Em 1Â dobrÃ¡velÂ mot..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelos PhilcoÂ psc3500 4 Em 1Â dobrÃ¡velÂ mot...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelos-philcoa-psc3500-4-em-1a-dobravela-motora-bldc-prateado-bege-220v-MLB66453791.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_604741-MLA99517794948_112025-O.webp" alt="Tanquinho Lcs15 15kg Semiautomática Colormaq Cor Branco 127v"></div>
+                <div class="card-body">
+                    <div class="card-title">Tanquinho Lcs15 15kg Semiautomática Colormaq Cor Branco 127v</div>
+                    <div class="card-price">R$</div>
+                    <a href="tanquinho-lcs15-15kg-semiautomatica-colormaq-cor-branco-127v-MLB25676946.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_713059-MLA109481421132_042026-O.webp" alt="Walkie Talkie RÃ¡dios Comunicador Kit Com 2 Unidades Radi..."></div>
+                <div class="card-body">
+                    <div class="card-title">Walkie Talkie RÃ¡dios Comunicador Kit Com 2 Unidades Radi...</div>
+                    <div class="card-price">R$</div>
+                    <a href="walkie-talkie-radios-comunicador-kit-com-2-unidades-radinho-walk-talk-completo-fone-microfone-e-acessa3rios-radio-de-comunicaaao-longo-alcance-comunicaaao-segura-com-16-canais-preto-127220v-MLB67737386.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_713059-MLA109481421132_042026-O.webp" alt="Walkie Talkie Rádios Comunicador Kit Com 2 Unidades Radin..."></div>
+                <div class="card-body">
+                    <div class="card-title">Walkie Talkie Rádios Comunicador Kit Com 2 Unidades Radin...</div>
+                    <div class="card-price">R$</div>
+                    <a href="walkie-talkie-radios-comunicador-kit-com-2-unidades-radinho-walk-talk-completo-fone-microfone-e-acessorios---radio-de-comunicacao-longo-alcance-comunicacao-segura-com-16-canais-preto-127u002f220v-MLB67737386.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_713059-MLA109481421132_042026-O.webp" alt="Walkie Talkie Rádios Comunicador Kit Com 2 Unidades Radin..."></div>
+                <div class="card-body">
+                    <div class="card-title">Walkie Talkie Rádios Comunicador Kit Com 2 Unidades Radin...</div>
+                    <div class="card-price">R$</div>
+                    <a href="walkie-talkie-radios-comunicador-kit-com-2-unidades-radinho-walk-talk-completo-fone-microfone-e-acessorios-radio-de-comunicacao-longo-alcance-comunicacao-segura-com-16-canais-preto-127u002f220v-MLB67737386.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
         </div>
     </main>
-    <footer class="footer" style="margin-top: 60px; padding: 40px 0; border-top: 1px solid var(--border);">
+
+    <footer style="background: #0f172a; color: white; padding: 40px 0; margin-top: 60px; text-align: center;">
         <div class="container">
-            <p>© 2026 Compara Preço</p>
+            <p>&copy; 2026 Radar Ninja</p>
         </div>
     </footer>
 </body>

@@ -1,40 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Ofertas de Eletrodomesticos | Compara Preço</title>
-    <link href="/assets/css/style.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas de Eletrodomesticos — Radar Ninja</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+    <style>
+        :root {
+            --primary: #00c853;
+            --primary-dark: #00a443;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #0f172a;
+            --border: #e2e8f0;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header { background: #0f172a; padding: 15px 0; }
+        .hero-mini { background: #1e293b; color: white; padding: 40px 0; text-align: center; border-bottom: 4px solid var(--primary); }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; margin: 40px 0; }
+        .product-card { background: var(--card); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .card-img { height: 200px; background: #f1f5f9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-title { font-weight: 700; font-size: 1rem; margin-bottom: 10px; line-height: 1.4; }
+        .card-price { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-top: auto; }
+        .btn-ninja { background: var(--primary); color: white; padding: 10px; border-radius: 8px; text-decoration: none; text-align: center; font-weight: 700; margin-top: 15px; }
+    </style>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="/" style="text-decoration: none; font-weight: 800; font-size: 1.5rem; color: var(--primary);">Compara Preço</a>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" style="font-size: 1.5rem; font-weight: 900; color: white; text-decoration: none;">🥷 RADAR NINJA</a>
+            <nav style="display: flex; gap: 20px;">
+                <a href="/ofertas-hoje/" style="color: white; text-decoration: none; font-weight: 600;">Ofertas</a>
+                <a href="/noticias/" style="color: white; text-decoration: none; font-weight: 600;">Notícias</a>
+            </nav>
         </div>
     </header>
-    <main class="container">
-        <h1 style="margin-top: 40px;">Ofertas de Eletrodomesticos</h1>
-        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
-            <div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="ar-condicionado-split-hi-wall-samsung-ultra-ai-inverter-9000-btus-frio-r-32-branco-220v-MLB15977315.html" style="text-decoration: none; color: inherit; font-weight: 600;">Ar Condicionado Split Hi Wall Samsung Ultra Ai Inverter 9000 Btus Frio R 32 Branco 220V Mlb15977315</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="ar-condicionado-split-hi-wall-samsung-ultra-ai-inverter-9000-btus-frio-r-32-branco-220v-MLB42193461.html" style="text-decoration: none; color: inherit; font-weight: 600;">Ar Condicionado Split Hi Wall Samsung Ultra Ai Inverter 9000 Btus Frio R 32 Branco 220V Mlb42193461</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cafeteira-elatrica-electrolux-jarra-vidro-acabamento-inox-filtro-permanente-removavel-sistema-corta-pingos-capacidade-15-xicaras-600ml-ecm10-preto-127v-MLB66154233.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cafeteira Elatrica Electrolux Jarra Vidro Acabamento Inox Filtro Permanente Removavel Sistema Corta Pingos Capacidade 15 Xicaras 600Ml Ecm10 Preto 127V Mlb66154233</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cafeteira-eletrica-electrolux-jarra-vidro-acabamento-inox-filtro-permanente-removivel-sistema-corta-pingos-capacidade-15-xicaras-600ml-ecm10-preto-127v-MLB66154233.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cafeteira Eletrica Electrolux Jarra Vidro Acabamento Inox Filtro Permanente Removivel Sistema Corta Pingos Capacidade 15 Xicaras 600Ml Ecm10 Preto 127V Mlb66154233</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cafeteira-expresso-dolce-gusto-arno-genio-s-basic-automatica-cinza-escuro-127v-MLB26441604.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cafeteira Expresso Dolce Gusto Arno Genio S Basic Automatica Cinza Escuro 127V Mlb26441604</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cafeteira-nespresso-essenza-mini-preta-preto-127v-MLB67638659.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cafeteira Nespresso Essenza Mini Preta Preto 127V Mlb67638659</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="caixa-de-som-boombox-aiwa-aws-bbs-01b-200w-ip66-30hs-de-bateria-preto-127220v-MLB4056119063.html" style="text-decoration: none; color: inherit; font-weight: 600;">Caixa De Som Boombox Aiwa Aws Bbs 01B 200W Ip66 30Hs De Bateria Preto 127220V Mlb4056119063</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="chuveiro-eletra-nico-lorenzetti-acqua-duo-ultra-7800w-branco-220v-78-kw-MLB5978099410.html" style="text-decoration: none; color: inherit; font-weight: 600;">Chuveiro Eletra Nico Lorenzetti Acqua Duo Ultra 7800W Branco 220V 78 Kw Mlb5978099410</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="chuveiro-eletronico-lorenzetti-acqua-duo-ultra-7800w-branco-220v-78-kw-MLB5978099410.html" style="text-decoration: none; color: inherit; font-weight: 600;">Chuveiro Eletronico Lorenzetti Acqua Duo Ultra 7800W Branco 220V 78 Kw Mlb5978099410</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cooktop-a-gas-fischer-4-bocas-fit-line-trempe-esmaltada-aramado-preto-127220v-MLB4292031849.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cooktop A Gas Fischer 4 Bocas Fit Line Trempe Esmaltada Aramado Preto 127220V Mlb4292031849</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="fritadeira-a-ar-mondial-family-puff---4l-preto-1500w---af-31-AMZ-B09B2Y9Z79.html" style="text-decoration: none; color: inherit; font-weight: 600;">Fritadeira A Ar Mondial Family Puff   4L Preto 1500W   Af 31 Amz B09B2Y9Z79</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="fritadeira-a-ar-mondial-family-puff-4l-preto-1500w-af-31-AMZ-B09B2Y9Z79.html" style="text-decoration: none; color: inherit; font-weight: 600;">Fritadeira A Ar Mondial Family Puff 4L Preto 1500W Af 31 Amz B09B2Y9Z79</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="fritadeira-air-fryer-forno-oven-12l-mondial-afon-12l-ab-preto-127v-MLB19055866.html" style="text-decoration: none; color: inherit; font-weight: 600;">Fritadeira Air Fryer Forno Oven 12L Mondial Afon 12L Ab Preto 127V Mlb19055866</a></div>
 
+    <section class="hero-mini">
+        <div class="container">
+            <h1>Ofertas de Eletrodomesticos</h1>
+            <p>Os melhores preços encontrados pela nossa IA em Eletrodomesticos</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_771780-MLA106680953163_022026-O.webp" alt="Ar Condicionado Split Hi Wall Samsung Ultra Ai Inverter 9..."></div>
+                <div class="card-body">
+                    <div class="card-title">Ar Condicionado Split Hi Wall Samsung Ultra Ai Inverter 9...</div>
+                    <div class="card-price">R$</div>
+                    <a href="ar-condicionado-split-hi-wall-samsung-ultra-ai-inverter-9000-btus-frio-r-32-branco-220v-MLB15977315.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_610301-MLA88963661475_072025-O.webp" alt="Ar Condicionado Split Hi Wall Samsung Ultra Ai Inverter 9..."></div>
+                <div class="card-body">
+                    <div class="card-title">Ar Condicionado Split Hi Wall Samsung Ultra Ai Inverter 9...</div>
+                    <div class="card-price">R$</div>
+                    <a href="ar-condicionado-split-hi-wall-samsung-ultra-ai-inverter-9000-btus-frio-r-32-branco-220v-MLB42193461.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_614829-MLA110791527994_052026-O.webp" alt="Cafeteira ElÃ©trica Electrolux Jarra Vidro, Acabamento In..."></div>
+                <div class="card-body">
+                    <div class="card-title">Cafeteira ElÃ©trica Electrolux Jarra Vidro, Acabamento In...</div>
+                    <div class="card-price">R$</div>
+                    <a href="cafeteira-elatrica-electrolux-jarra-vidro-acabamento-inox-filtro-permanente-removavel-sistema-corta-pingos-capacidade-15-xicaras-600ml-ecm10-preto-127v-MLB66154233.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_614829-MLA110791527994_052026-O.webp" alt="Cafeteira Elétrica Electrolux Jarra Vidro, Acabamento Ino..."></div>
+                <div class="card-body">
+                    <div class="card-title">Cafeteira Elétrica Electrolux Jarra Vidro, Acabamento Ino...</div>
+                    <div class="card-price">R$</div>
+                    <a href="cafeteira-eletrica-electrolux-jarra-vidro-acabamento-inox-filtro-permanente-removivel-sistema-corta-pingos-capacidade-15-xicaras-600ml-ecm10-preto-127v-MLB66154233.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_860901-MLA99936562703_112025-O.webp" alt="Cafeteira Expresso Dolce Gusto Arno Genio S Basic Automát..."></div>
+                <div class="card-body">
+                    <div class="card-title">Cafeteira Expresso Dolce Gusto Arno Genio S Basic Automát...</div>
+                    <div class="card-price">R$</div>
+                    <a href="cafeteira-expresso-dolce-gusto-arno-genio-s-basic-automatica-cinza-escuro-127v-MLB26441604.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_626778-MLA110082705357_042026-O.webp" alt="Cafeteira Nespresso Essenza Mini Preta Preto 127v"></div>
+                <div class="card-body">
+                    <div class="card-title">Cafeteira Nespresso Essenza Mini Preta Preto 127v</div>
+                    <div class="card-price">R$</div>
+                    <a href="cafeteira-nespresso-essenza-mini-preta-preto-127v-MLB67638659.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_864411-MLA99591392870_122025-AB.webp" alt="Caixa De Som Boombox Aiwa Aws-bbs-01b 200w Ip66 30hs De B..."></div>
+                <div class="card-body">
+                    <div class="card-title">Caixa De Som Boombox Aiwa Aws-bbs-01b 200w Ip66 30hs De B...</div>
+                    <div class="card-price">R$</div>
+                    <a href="caixa-de-som-boombox-aiwa-aws-bbs-01b-200w-ip66-30hs-de-bateria-preto-127220v-MLB4056119063.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_850738-MLA94955143798_102025-AB.webp" alt="Chuveiro EletrÃ´nico Lorenzetti Acqua Duo Ultra 7800w Bra..."></div>
+                <div class="card-body">
+                    <div class="card-title">Chuveiro EletrÃ´nico Lorenzetti Acqua Duo Ultra 7800w Bra...</div>
+                    <div class="card-price">R$</div>
+                    <a href="chuveiro-eletra-nico-lorenzetti-acqua-duo-ultra-7800w-branco-220v-78-kw-MLB5978099410.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_850738-MLA94955143798_102025-AB.webp" alt="Chuveiro Eletrônico Lorenzetti Acqua Duo Ultra 7800w Bran..."></div>
+                <div class="card-body">
+                    <div class="card-title">Chuveiro Eletrônico Lorenzetti Acqua Duo Ultra 7800w Bran...</div>
+                    <div class="card-price">R$</div>
+                    <a href="chuveiro-eletronico-lorenzetti-acqua-duo-ultra-7800w-branco-220v-78-kw-MLB5978099410.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_609133-MLA100033485209_122025-AB.webp" alt="Cooktop A GÃ¡s Fischer 4 Bocas Fit Line Trempe Esmaltada ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Cooktop A GÃ¡s Fischer 4 Bocas Fit Line Trempe Esmaltada ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="cooktop-a-gas-fischer-4-bocas-fit-line-trempe-esmaltada-aramado-preto-127220v-MLB4292031849.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://m.media-amazon.com/images/I/71Xm6G263XL._AC_SL1500_.jpg" alt="Fritadeira a Ar Mondial, Family Puff - 4L, Preto, 1500W -..."></div>
+                <div class="card-body">
+                    <div class="card-title">Fritadeira a Ar Mondial, Family Puff - 4L, Preto, 1500W -...</div>
+                    <div class="card-price">R$</div>
+                    <a href="fritadeira-a-ar-mondial-family-puff---4l-preto-1500w---af-31-AMZ-B09B2Y9Z79.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://m.media-amazon.com/images/I/71Xm6G263XL._AC_SL1500_.jpg" alt="Fritadeira a Ar Mondial, Family Puff - 4L, Preto, 1500W -..."></div>
+                <div class="card-body">
+                    <div class="card-title">Fritadeira a Ar Mondial, Family Puff - 4L, Preto, 1500W -...</div>
+                    <div class="card-price">R$</div>
+                    <a href="fritadeira-a-ar-mondial-family-puff-4l-preto-1500w-af-31-AMZ-B09B2Y9Z79.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_687549-MLA99986849451_112025-O.webp" alt="Fritadeira Air Fryer Forno Oven 12l Mondial Afon-12l-ab P..."></div>
+                <div class="card-body">
+                    <div class="card-title">Fritadeira Air Fryer Forno Oven 12l Mondial Afon-12l-ab P...</div>
+                    <div class="card-price">R$</div>
+                    <a href="fritadeira-air-fryer-forno-oven-12l-mondial-afon-12l-ab-preto-127v-MLB19055866.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
         </div>
     </main>
-    <footer class="footer" style="margin-top: 60px; padding: 40px 0; border-top: 1px solid var(--border);">
+
+    <footer style="background: #0f172a; color: white; padding: 40px 0; margin-top: 60px; text-align: center;">
         <div class="container">
-            <p>© 2026 Compara Preço</p>
+            <p>&copy; 2026 Radar Ninja</p>
         </div>
     </footer>
 </body>

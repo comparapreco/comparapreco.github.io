@@ -1,53 +1,271 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Ofertas de Beleza | Compara Preço</title>
-    <link href="/assets/css/style.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas de Beleza — Radar Ninja</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+    <style>
+        :root {
+            --primary: #00c853;
+            --primary-dark: #00a443;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #0f172a;
+            --border: #e2e8f0;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header { background: #0f172a; padding: 15px 0; }
+        .hero-mini { background: #1e293b; color: white; padding: 40px 0; text-align: center; border-bottom: 4px solid var(--primary); }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; margin: 40px 0; }
+        .product-card { background: var(--card); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .card-img { height: 200px; background: #f1f5f9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-title { font-weight: 700; font-size: 1rem; margin-bottom: 10px; line-height: 1.4; }
+        .card-price { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-top: auto; }
+        .btn-ninja { background: var(--primary); color: white; padding: 10px; border-radius: 8px; text-decoration: none; text-align: center; font-weight: 700; margin-top: 15px; }
+    </style>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="/" style="text-decoration: none; font-weight: 800; font-size: 1.5rem; color: var(--primary);">Compara Preço</a>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" style="font-size: 1.5rem; font-weight: 900; color: white; text-decoration: none;">🥷 RADAR NINJA</a>
+            <nav style="display: flex; gap: 20px;">
+                <a href="/ofertas-hoje/" style="color: white; text-decoration: none; font-weight: 600;">Ofertas</a>
+                <a href="/noticias/" style="color: white; text-decoration: none; font-weight: 600;">Notícias</a>
+            </nav>
         </div>
     </header>
-    <main class="container">
-        <h1 style="margin-top: 40px;">Ofertas de Beleza</h1>
-        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
-            <div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="aparador-de-pelos-multigroom-8-em-1-mg391715-philips-preto-127220v-MLB5556558810.html" style="text-decoration: none; color: inherit; font-weight: 600;">Aparador De Pelos Multigroom 8 Em 1 Mg391715 Philips Preto 127220V Mlb5556558810</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="creatina-monohidratada-pura-500g-dark-lab-unidade-sem-sabor-MLB4812143184.html" style="text-decoration: none; color: inherit; font-weight: 600;">Creatina Monohidratada Pura 500G Dark Lab Unidade Sem Sabor Mlb4812143184</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-body-splash-masculino-barbarius--enigma--midtown-200ml-MLB4645102377.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit Body Splash Masculino Barbarius  Enigma  Midtown 200Ml Mlb4645102377</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="kit-body-splash-masculino-barbarius-enigma-midtown-200ml-MLB4645102377.html" style="text-decoration: none; color: inherit; font-weight: 600;">Kit Body Splash Masculino Barbarius Enigma Midtown 200Ml Mlb4645102377</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-arabe-feminino-yara-lattafa-eau-de-parfum-100-ml-MLB20962585.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Arabe Feminino Yara Lattafa Eau De Parfum 100 Ml Mlb20962585</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-arabe-feminino-yara-lattafa-eau-de-parfum-100-ml-MLB25708528.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Arabe Feminino Yara Lattafa Eau De Parfum 100 Ml Mlb25708528</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-arabe-feminino-yara-lattafa-eau-de-parfum-100-ml-original-lacrado-MLB17460955.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Arabe Feminino Yara Lattafa Eau De Parfum 100 Ml Original Lacrado Mlb17460955</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-arabe-yara-lattafa-eau-de-parfum-100ml-original-c-nf-MLB4350686819.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Arabe Yara Lattafa Eau De Parfum 100Ml Original C Nf Mlb4350686819</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-asad-elixir-lattafa-arabe-original-nota-fiscal-MLB25708528.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Asad Elixir Lattafa Arabe Original Nota Fiscal Mlb25708528</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-banderas-blue-seduction-eau-de-toilette-200-ml-masculino-MLB1036512204.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Banderas Blue Seduction Eau De Toilette 200 Ml Masculino Mlb1036512204</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-carolina-herrera-212-vip-black-eau-de-parfum-200-ml-masculino-MLB45617876.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Carolina Herrera 212 Vip Black Eau De Parfum 200 Ml Masculino Mlb45617876</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-carolina-herrera-212-vip-black-eau-de-parfum-200-ml-masculino-MLB48515682.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Carolina Herrera 212 Vip Black Eau De Parfum 200 Ml Masculino Mlb48515682</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-carolina-herrera-212-vip-black-eau-de-parfum-200-ml-masculino-MLB9033853.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Carolina Herrera 212 Vip Black Eau De Parfum 200 Ml Masculino Mlb9033853</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-lattafa-asad-100ml-eau-de-parfum-original-arabe-original-com-nota-fiscal-e-selo-original-lataffa-MLB26441604.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Lattafa Asad 100Ml Eau De Parfum Original Arabe Original Com Nota Fiscal E Selo Original Lataffa Mlb26441604</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-lattafa-asad-100ml-eau-de-parfum-original-arabe-original-com-nota-fiscal-e-selo-original-lataffa-MLB52363091.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Lattafa Asad 100Ml Eau De Parfum Original Arabe Original Com Nota Fiscal E Selo Original Lataffa Mlb52363091</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-masculino-arabe-salvo-intense-100ml-original-c-nf-MLB38655102.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Masculino Arabe Salvo Intense 100Ml Original C Nf Mlb38655102</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-masculino-arabe-salvo-intense-100ml-original-cu002f-nf-MLB19899495.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Masculino Arabe Salvo Intense 100Ml Original Cu002F Nf Mlb19899495</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-masculino-arabe-salvo-intense-100ml-original-cu002f-nf-MLB38655102.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Masculino Arabe Salvo Intense 100Ml Original Cu002F Nf Mlb38655102</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-masculino-arabe-salvo-intense-100ml-original-cu002f-nf-MLB50269368.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Masculino Arabe Salvo Intense 100Ml Original Cu002F Nf Mlb50269368</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-masculino-emporio-armani-stronger-with-you-edt-100ml-MLB17460955.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Masculino Emporio Armani Stronger With You Edt 100Ml Mlb17460955</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-sedutor-arabe-sabah-100ml-original-feminino-MLB19899495.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Sedutor Arabe Sabah 100Ml Original Feminino Mlb19899495</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-sedutor-arabe-sabah-100ml-original-feminino-MLB20962585.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Sedutor Arabe Sabah 100Ml Original Feminino Mlb20962585</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-sedutor-arabe-sabah-100ml-original-feminino-MLB3994439565.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Sedutor Arabe Sabah 100Ml Original Feminino Mlb3994439565</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="perfume-sedutor-arabe-sabah-100ml-original-feminino-MLB55145898.html" style="text-decoration: none; color: inherit; font-weight: 600;">Perfume Sedutor Arabe Sabah 100Ml Original Feminino Mlb55145898</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-127v-MLB6486861240.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelos Philco Psc3500 4 Em 1 Dobravel Motor Bldc Prateado Bege 127V Mlb6486861240</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="secador-de-cabelos-philcoa-psc3500-4-em-1a-dobravela-motora-bldc-prateado-bege-127v-MLB6486861240.html" style="text-decoration: none; color: inherit; font-weight: 600;">Secador De Cabelos Philcoa Psc3500 4 Em 1A Dobravela Motora Bldc Prateado Bege 127V Mlb6486861240</a></div>
 
+    <section class="hero-mini">
+        <div class="container">
+            <h1>Ofertas de Beleza</h1>
+            <p>Os melhores preços encontrados pela nossa IA em Beleza</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_871498-MLB89720767443_082025-AB.webp" alt="Aparador De Pelos Multigroom 8 Em 1 Mg3917/15 Philips Pre..."></div>
+                <div class="card-body">
+                    <div class="card-title">Aparador De Pelos Multigroom 8 Em 1 Mg3917/15 Philips Pre...</div>
+                    <div class="card-price">R$</div>
+                    <a href="aparador-de-pelos-multigroom-8-em-1-mg391715-philips-preto-127220v-MLB5556558810.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_942122-MLA99923169249_112025-AB.webp" alt="Creatina Monohidratada Pura 500g Dark Lab Unidade Sem Sabor"></div>
+                <div class="card-body">
+                    <div class="card-title">Creatina Monohidratada Pura 500g Dark Lab Unidade Sem Sabor</div>
+                    <div class="card-price">R$</div>
+                    <a href="creatina-monohidratada-pura-500g-dark-lab-unidade-sem-sabor-MLB4812143184.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_997574-MLA109633443994_042026-AB.webp" alt="Kit Body Splash Masculino Barbarius + Enigma + Midtown 200ml"></div>
+                <div class="card-body">
+                    <div class="card-title">Kit Body Splash Masculino Barbarius + Enigma + Midtown 200ml</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-body-splash-masculino-barbarius--enigma--midtown-200ml-MLB4645102377.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_997574-MLA109633443994_042026-AB.webp" alt="Kit Body Splash Masculino Barbarius + Enigma + Midtown 200ml"></div>
+                <div class="card-body">
+                    <div class="card-title">Kit Body Splash Masculino Barbarius + Enigma + Midtown 200ml</div>
+                    <div class="card-price">R$</div>
+                    <a href="kit-body-splash-masculino-barbarius-enigma-midtown-200ml-MLB4645102377.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_948198-MLA81769955450_012025-O.webp" alt="Perfume Árabe Feminino Yara Lattafa Eau De Parfum 100 Ml"></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Árabe Feminino Yara Lattafa Eau De Parfum 100 Ml</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-arabe-feminino-yara-lattafa-eau-de-parfum-100-ml-MLB20962585.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_908487-MLA108910007890_032026-O.webp" alt="Perfume Árabe Feminino Yara Lattafa Eau De Parfum 100 Ml"></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Árabe Feminino Yara Lattafa Eau De Parfum 100 Ml</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-arabe-feminino-yara-lattafa-eau-de-parfum-100-ml-MLB25708528.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_991342-MLA100361366272_122025-O.webp" alt="Perfume Árabe Feminino Yara Lattafa Eau De Parfum 100 Ml ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Árabe Feminino Yara Lattafa Eau De Parfum 100 Ml ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-arabe-feminino-yara-lattafa-eau-de-parfum-100-ml-original-lacrado-MLB17460955.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_943083-MLB99905915023_112025-AB.webp" alt="Perfume Arabe Yara Lattafa Eau De Parfum 100ml Original C Nf"></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Arabe Yara Lattafa Eau De Parfum 100ml Original C Nf</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-arabe-yara-lattafa-eau-de-parfum-100ml-original-c-nf-MLB4350686819.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_631595-MLA99350047876_112025-O.webp" alt="Perfume Asad Elixir Lattafa Ãrabe Original Nota Fiscal"></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Asad Elixir Lattafa Ãrabe Original Nota Fiscal</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-asad-elixir-lattafa-arabe-original-nota-fiscal-MLB25708528.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_618941-MLA87726824011_072025-O.webp" alt="Perfume Banderas Blue Seduction Eau De Toilette 200 Ml Ma..."></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Banderas Blue Seduction Eau De Toilette 200 Ml Ma...</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-banderas-blue-seduction-eau-de-toilette-200-ml-masculino-MLB1036512204.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_908487-MLA108910007890_032026-O.webp" alt="Perfume Carolina Herrera 212 Vip Black Eau De Parfum 200 ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Carolina Herrera 212 Vip Black Eau De Parfum 200 ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-carolina-herrera-212-vip-black-eau-de-parfum-200-ml-masculino-MLB45617876.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_948198-MLA81769955450_012025-O.webp" alt="Perfume Carolina Herrera 212 Vip Black Eau De Parfum 200 ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Carolina Herrera 212 Vip Black Eau De Parfum 200 ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-carolina-herrera-212-vip-black-eau-de-parfum-200-ml-masculino-MLB48515682.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_849828-MLA93387691711_092025-O.webp" alt="Perfume Carolina Herrera 212 Vip Black Eau De Parfum 200 ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Carolina Herrera 212 Vip Black Eau De Parfum 200 ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-carolina-herrera-212-vip-black-eau-de-parfum-200-ml-masculino-MLB9033853.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_860901-MLA99936562703_112025-O.webp" alt="Perfume Lattafa Asad 100ml Eau De Parfum Original Árabe O..."></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Lattafa Asad 100ml Eau De Parfum Original Árabe O...</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-lattafa-asad-100ml-eau-de-parfum-original-arabe-original-com-nota-fiscal-e-selo-original-lataffa-MLB26441604.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_720624-MLA99531483484_122025-O.webp" alt="Perfume Lattafa Asad 100ml Eau De Parfum Original Árabe O..."></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Lattafa Asad 100ml Eau De Parfum Original Árabe O...</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-lattafa-asad-100ml-eau-de-parfum-original-arabe-original-com-nota-fiscal-e-selo-original-lataffa-MLB52363091.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_968384-MLA109938381052_042026-O.webp" alt="Perfume Masculino Arabe Salvo Intense 100ml Original C/ Nf"></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Masculino Arabe Salvo Intense 100ml Original C/ Nf</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-masculino-arabe-salvo-intense-100ml-original-c-nf-MLB38655102.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_849828-MLA93387691711_092025-O.webp" alt="Perfume Masculino Arabe Salvo Intense 100ml Original C\u0..."></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Masculino Arabe Salvo Intense 100ml Original C\u0...</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-masculino-arabe-salvo-intense-100ml-original-cu002f-nf-MLB19899495.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_968384-MLA109938381052_042026-O.webp" alt="Perfume Masculino Arabe Salvo Intense 100ml Original C\u0..."></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Masculino Arabe Salvo Intense 100ml Original C\u0...</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-masculino-arabe-salvo-intense-100ml-original-cu002f-nf-MLB38655102.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_720624-MLA99531483484_122025-O.webp" alt="Perfume Masculino Arabe Salvo Intense 100ml Original C\u0..."></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Masculino Arabe Salvo Intense 100ml Original C\u0...</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-masculino-arabe-salvo-intense-100ml-original-cu002f-nf-MLB50269368.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_991342-MLA100361366272_122025-O.webp" alt="Perfume Masculino Emporio Armani Stronger With You Edt 100ml"></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Masculino Emporio Armani Stronger With You Edt 100ml</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-masculino-emporio-armani-stronger-with-you-edt-100ml-MLB17460955.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_672438-MLA99599575504_122025-O.webp" alt="Perfume Sedutor Árabe Sabah 100ml Original Feminino"></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Sedutor Árabe Sabah 100ml Original Feminino</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-sedutor-arabe-sabah-100ml-original-feminino-MLB19899495.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_861957-MLA108178234350_032026-O.webp" alt="Perfume Sedutor Árabe Sabah 100ml Original Feminino"></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Sedutor Árabe Sabah 100ml Original Feminino</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-sedutor-arabe-sabah-100ml-original-feminino-MLB20962585.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_753960-MLB78002610612_082024-AB.webp" alt="Perfume Sedutor Ãrabe Sabah 100ml Original Feminino"></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Sedutor Ãrabe Sabah 100ml Original Feminino</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-sedutor-arabe-sabah-100ml-original-feminino-MLB3994439565.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_854620-MLA91562643946_092025-O.webp" alt="Perfume Sedutor Ãrabe Sabah 100ml Original Feminino"></div>
+                <div class="card-body">
+                    <div class="card-title">Perfume Sedutor Ãrabe Sabah 100ml Original Feminino</div>
+                    <div class="card-price">R$</div>
+                    <a href="perfume-sedutor-arabe-sabah-100ml-original-feminino-MLB55145898.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_871708-MLA100016593317_122025-AB.webp" alt="Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor b...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-127v-MLB6486861240.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_871708-MLA100016593317_122025-AB.webp" alt="Secador De Cabelos PhilcoÂ psc3500 4 Em 1Â dobrÃ¡velÂ mot..."></div>
+                <div class="card-body">
+                    <div class="card-title">Secador De Cabelos PhilcoÂ psc3500 4 Em 1Â dobrÃ¡velÂ mot...</div>
+                    <div class="card-price">R$</div>
+                    <a href="secador-de-cabelos-philcoa-psc3500-4-em-1a-dobravela-motora-bldc-prateado-bege-127v-MLB6486861240.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
         </div>
     </main>
-    <footer class="footer" style="margin-top: 60px; padding: 40px 0; border-top: 1px solid var(--border);">
+
+    <footer style="background: #0f172a; color: white; padding: 40px 0; margin-top: 60px; text-align: center;">
         <div class="container">
-            <p>© 2026 Compara Preço</p>
+            <p>&copy; 2026 Radar Ninja</p>
         </div>
     </footer>
 </body>

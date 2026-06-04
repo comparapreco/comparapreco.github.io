@@ -1,117 +1,783 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Ofertas de Celulares | Compara Preço</title>
-    <link href="/assets/css/style.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas de Celulares — Radar Ninja</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+    <style>
+        :root {
+            --primary: #00c853;
+            --primary-dark: #00a443;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #0f172a;
+            --border: #e2e8f0;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header { background: #0f172a; padding: 15px 0; }
+        .hero-mini { background: #1e293b; color: white; padding: 40px 0; text-align: center; border-bottom: 4px solid var(--primary); }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; margin: 40px 0; }
+        .product-card { background: var(--card); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .card-img { height: 200px; background: #f1f5f9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-title { font-weight: 700; font-size: 1rem; margin-bottom: 10px; line-height: 1.4; }
+        .card-price { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-top: auto; }
+        .btn-ninja { background: var(--primary); color: white; padding: 10px; border-radius: 8px; text-decoration: none; text-align: center; font-weight: 700; margin-top: 15px; }
+    </style>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="/" style="text-decoration: none; font-weight: 800; font-size: 1.5rem; color: var(--primary);">Compara Preço</a>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" style="font-size: 1.5rem; font-weight: 900; color: white; text-decoration: none;">🥷 RADAR NINJA</a>
+            <nav style="display: flex; gap: 20px;">
+                <a href="/ofertas-hoje/" style="color: white; text-decoration: none; font-weight: 600;">Ofertas</a>
+                <a href="/noticias/" style="color: white; text-decoration: none; font-weight: 600;">Notícias</a>
+            </nav>
         </div>
     </header>
-    <main class="container">
-        <h1 style="margin-top: 40px;">Ofertas de Celulares</h1>
-        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
-            <div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-15-128-gb---azul---distribuidor-autorizado-MLB1027172667.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 15 128 Gb   Azul   Distribuidor Autorizado Mlb1027172667</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-15-128-gb---preto---distribuidor-autorizado-MLB1027172677.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 15 128 Gb   Preto   Distribuidor Autorizado Mlb1027172677</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-15-128-gb-azul-distribuidor-autorizado-MLB1027172667.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 15 128 Gb Azul Distribuidor Autorizado Mlb1027172667</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-15-128-gb-preto-distribuidor-autorizado-MLB1027172677.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 15 128 Gb Preto Distribuidor Autorizado Mlb1027172677</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-15-256-gb---preto---distribuidor-autorizado-MLB1027172669.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 15 256 Gb   Preto   Distribuidor Autorizado Mlb1027172669</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-15-256-gb-preto-distribuidor-autorizado-MLB1027172669.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 15 256 Gb Preto Distribuidor Autorizado Mlb1027172669</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-16-128-gb---branco---distribuidor-autorizado-MLB1040287791.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 16 128 Gb   Branco   Distribuidor Autorizado Mlb1040287791</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-16-128-gb---preto---distribuidor-autorizado-MLB1040287808.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 16 128 Gb   Preto   Distribuidor Autorizado Mlb1040287808</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-16-128-gb---rosa---distribuidor-autorizado-MLB1040287802.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 16 128 Gb   Rosa   Distribuidor Autorizado Mlb1040287802</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-16-128-gb---ultramarine---distribuidor-autorizado-MLB1040287800.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 16 128 Gb   Ultramarine   Distribuidor Autorizado Mlb1040287800</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-16-128-gb---verde-acinzentado---distribuidor-autorizado-MLB1040287792.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 16 128 Gb   Verde Acinzentado   Distribuidor Autorizado Mlb1040287792</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-16-128-gb-branco-distribuidor-autorizado-MLB1040287791.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 16 128 Gb Branco Distribuidor Autorizado Mlb1040287791</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-16-128-gb-preto-distribuidor-autorizado-MLB1040287808.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 16 128 Gb Preto Distribuidor Autorizado Mlb1040287808</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-16-128-gb-rosa-distribuidor-autorizado-MLB1040287802.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 16 128 Gb Rosa Distribuidor Autorizado Mlb1040287802</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-16-128-gb-ultramarine-distribuidor-autorizado-MLB1040287800.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 16 128 Gb Ultramarine Distribuidor Autorizado Mlb1040287800</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="apple-iphone-16-128-gb-verde-acinzentado-distribuidor-autorizado-MLB1040287792.html" style="text-decoration: none; color: inherit; font-weight: 600;">Apple Iphone 16 128 Gb Verde Acinzentado Distribuidor Autorizado Mlb1040287792</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="carregador-30w-turbo-para-iphone-8-x-xr-11-12-13-14-pro-max-fonte-usb-c-cor-branca-dtimp-branco-MLB47814270.html" style="text-decoration: none; color: inherit; font-weight: 600;">Carregador 30W Turbo Para Iphone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp Branco Mlb47814270</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="carregador-portatil-20000-turbo-225w-power-bank-premium-universal-rapido-para-samsung-iphone-xiaomi-motorola-celular-smartwatch-tablet-casenn-preto-MLB50853162.html" style="text-decoration: none; color: inherit; font-weight: 600;">Carregador Portatil 20000 Turbo 225W Power Bank Premium Universal Rapido Para Samsung Iphone Xiaomi Motorola Celular Smartwatch Tablet Casenn Preto Mlb50853162</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="carregador-portatil-power-bank-turbo-20000mah-225w-universal-para-iphone-samsung-motorlola-xiaomi-com-display-digital-preto-ou-branco--hardline-pretobranco-MLB65588451.html" style="text-decoration: none; color: inherit; font-weight: 600;">Carregador Portatil Power Bank Turbo 20000Mah 225W Universal Para Iphone Samsung Motorlola Xiaomi Com Display Digital Preto Ou Branco  Hardline Pretobranco Mlb65588451</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="carregador-portatil-power-bank-turbo-20000mah-225w-universal-para-iphone-samsung-motorlola-xiaomi-com-display-digital-preto-ou-branco-hardline-pretobranco-MLB65588451.html" style="text-decoration: none; color: inherit; font-weight: 600;">Carregador Portatil Power Bank Turbo 20000Mah 225W Universal Para Iphone Samsung Motorlola Xiaomi Com Display Digital Preto Ou Branco Hardline Pretobranco Mlb65588451</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="carregador-portatil-power-bank-turbo-20000mah-225w-universal-para-iphone-samsung-motorlola-xiaomi-com-display-digital-preto-ou-branco-hardline-pretou002fbranco-MLB65588451.html" style="text-decoration: none; color: inherit; font-weight: 600;">Carregador Portatil Power Bank Turbo 20000Mah 225W Universal Para Iphone Samsung Motorlola Xiaomi Com Display Digital Preto Ou Branco Hardline Pretou002Fbranco Mlb65588451</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="carregador-portatil-power-bank-turbo-20000mah-universal-para-iphone-samsung-motorola-xiaomi-20w-com-display-digital-cor-branco-dtimp-MLB58899457.html" style="text-decoration: none; color: inherit; font-weight: 600;">Carregador Portatil Power Bank Turbo 20000Mah Universal Para Iphone Samsung Motorola Xiaomi 20W Com Display Digital Cor Branco Dtimp Mlb58899457</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a07-128gb-4gb-ram-preto-MLB55034955.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A07 128Gb 4Gb Ram Preto Mlb55034955</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67--proteaao-ip54-processador-6nm---preto-MLB49089309.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A07 256Gb 8Gb Camera 50Mp Tela 67  Proteaao Ip54 Processador 6Nm   Preto Mlb49089309</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67--proteaao-ip54-processador-6nm---preto-MLB6443434920.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A07 256Gb 8Gb Camera 50Mp Tela 67  Proteaao Ip54 Processador 6Nm   Preto Mlb6443434920</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67--protecao-ip54-processador-6nm---preto-MLB54961556.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A07 256Gb 8Gb Camera 50Mp Tela 67  Protecao Ip54 Processador 6Nm   Preto Mlb54961556</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67-proteaao-ip54-processador-6nm-preto-MLB49089309.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A07 256Gb 8Gb Camera 50Mp Tela 67 Proteaao Ip54 Processador 6Nm Preto Mlb49089309</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67-proteaao-ip54-processador-6nm-preto-MLB54961556.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A07 256Gb 8Gb Camera 50Mp Tela 67 Proteaao Ip54 Processador 6Nm Preto Mlb54961556</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67-proteaao-ip54-processador-6nm-preto-MLB6443434920.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A07 256Gb 8Gb Camera 50Mp Tela 67 Proteaao Ip54 Processador 6Nm Preto Mlb6443434920</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67-protecao-ip54-processador-6nm-preto-MLB49089309.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A07 256Gb 8Gb Camera 50Mp Tela 67 Protecao Ip54 Processador 6Nm Preto Mlb49089309</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67-protecao-ip54-processador-6nm-preto-MLB54961556.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A07 256Gb 8Gb Camera 50Mp Tela 67 Protecao Ip54 Processador 6Nm Preto Mlb54961556</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67-protecao-ip54-processador-6nm-preto-MLB6443434920.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A07 256Gb 8Gb Camera 50Mp Tela 67 Protecao Ip54 Processador 6Nm Preto Mlb6443434920</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-verde-MLB54963045.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A07 256Gb 8Gb Camera 50Mp Verde Mlb54963045</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a17-5g-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---cinza-MLB55521828.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A17 5G Com Ia 128Gb 4Gb Ram Cam De 50Mp Tela De 67  Nfc Ip54   Cinza Mlb55521828</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a17-5g-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---preto-MLB55027309.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A17 5G Com Ia 128Gb 4Gb Ram Cam De 50Mp Tela De 67  Nfc Ip54   Preto Mlb55027309</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a17-5g-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67-nfc-ip54-cinza-MLB55521828.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A17 5G Com Ia 128Gb 4Gb Ram Cam De 50Mp Tela De 67 Nfc Ip54 Cinza Mlb55521828</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a17-5g-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67-nfc-ip54-preto-MLB55027309.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A17 5G Com Ia 128Gb 4Gb Ram Cam De 50Mp Tela De 67 Nfc Ip54 Preto Mlb55027309</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a17-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---preto-MLB54987753.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A17 Com Ia 128Gb 4Gb Ram Cam De 50Mp Tela De 67  Nfc Ip54   Preto Mlb54987753</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a17-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67-nfc-ip54-preto-MLB54987753.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A17 Com Ia 128Gb 4Gb Ram Cam De 50Mp Tela De 67 Nfc Ip54 Preto Mlb54987753</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a36-5g-256gb-8gb-ram-branco-MLB47106610.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A36 5G 256Gb 8Gb Ram Branco Mlb47106610</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a57-5g-256gb-8gb-ram-cor-gray-MLB45680390.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A57 5G 256Gb 8Gb Ram Cor Gray Mlb45680390</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-a57-5g-256gb-8gb-ram-cor-gray-MLB68202517.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy A57 5G 256Gb 8Gb Ram Cor Gray Mlb68202517</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-samsung-galaxy-s25-ultra-5g-256gb-12gb-cam-quad-cor-titanium-gray-MLB45514086.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Samsung Galaxy S25 Ultra 5G 256Gb 12Gb Cam Quad Cor Titanium Gray Mlb45514086</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="celular-smartphone-realme-c73-256gb-8gb-ram-dual-sim-120hz-6000mah-verde-MLB50853162.html" style="text-decoration: none; color: inherit; font-weight: 600;">Celular Smartphone Realme C73 256Gb 8Gb Ram Dual Sim 120Hz 6000Mah Verde Mlb50853162</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="controle-gamesir-t4-nova-lite-sem-fio-para-pc-switch-android-ios-steam-celular-hall-effect-cor-branco-MLB36695087.html" style="text-decoration: none; color: inherit; font-weight: 600;">Controle Gamesir T4 Nova Lite Sem Fio Para Pc Switch Android Ios Steam Celular Hall Effect Cor Branco Mlb36695087</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="controle-gamesir-t4-nova-lite-sem-fio-para-pc-switch-android-ios-steam-celular-hall-effect-cor-space-purple-MLB35655836.html" style="text-decoration: none; color: inherit; font-weight: 600;">Controle Gamesir T4 Nova Lite Sem Fio Para Pc Switch Android Ios Steam Celular Hall Effect Cor Space Purple Mlb35655836</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="controle-sem-fio-joystick-bluetooth-para-ps4-videogame-tv-samsung-pc-p4-ps-4-dual-shock-manete-pc-gamer-tv-smart-controle-bluetooth-celular-headset-sem-fio-com-p2---marca-redfin-preto-MLB39960346.html" style="text-decoration: none; color: inherit; font-weight: 600;">Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2   Marca Redfin Preto Mlb39960346</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="controle-sem-fio-joystick-bluetooth-para-ps4-videogame-tv-samsung-pc-p4-ps-4-dual-shock-manete-pc-gamer-tv-smart-controle-bluetooth-celular-headset-sem-fio-com-p2-marca-redfin-preto-MLB39960346.html" style="text-decoration: none; color: inherit; font-weight: 600;">Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart Controle Bluetooth Celular Headset Sem Fio Com P2 Marca Redfin Preto Mlb39960346</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="fone-de-ouvido-bluetooth-54-soundcore-p30i-da-anker-cancelamento-de-ruido-adaptativo-graves-poderosos-45h-de-reproducao-estojo-2-em-1-com-suporte-para-celular-ip54-fone-sem-fio-tws-preto-MLB38176139.html" style="text-decoration: none; color: inherit; font-weight: 600;">Fone De Ouvido Bluetooth 54 Soundcore P30I Da Anker Cancelamento De Ruido Adaptativo Graves Poderosos 45H De Reproducao Estojo 2 Em 1 Com Suporte Para Celular Ip54 Fone Sem Fio Tws Preto Mlb38176139</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="fone-de-ouvido-sem-fio-bluetooth-f9-5-pares-som-imersivo-powerbank-moderno-bateria-longa-duracao-academia-compativel-com-todos-celulares-preto-MLB27174916.html" style="text-decoration: none; color: inherit; font-weight: 600;">Fone De Ouvido Sem Fio Bluetooth F9 5 Pares Som Imersivo Powerbank Moderno Bateria Longa Duracao Academia Compativel Com Todos Celulares Preto Mlb27174916</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="galaxy-buds-core-preto-MLB5783097440.html" style="text-decoration: none; color: inherit; font-weight: 600;">Galaxy Buds Core Preto Mlb5783097440</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="microfone-lapela-redondo-sem-fio-tipo-c-duplo-anti-ruado-p-android-e-iphone-15-16-17-com-caixinha-para-carregamento-cor-preto-micgeek-MLB66852007.html" style="text-decoration: none; color: inherit; font-weight: 600;">Microfone Lapela Redondo Sem Fio Tipo C Duplo Anti Ruado P Android E Iphone 15 16 17 Com Caixinha Para Carregamento Cor Preto Micgeek Mlb66852007</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="microfone-lapela-redondo-sem-fio-tipo-c-duplo-anti-ruido-pu002f-android-e-iphone-15-16-17-com-caixinha-para-carregamento-cor-preto-micgeek-MLB66852007.html" style="text-decoration: none; color: inherit; font-weight: 600;">Microfone Lapela Redondo Sem Fio Tipo C Duplo Anti Ruido Pu002F Android E Iphone 15 16 17 Com Caixinha Para Carregamento Cor Preto Micgeek Mlb66852007</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="power-bank-20000mah-portatil-carga-rapida-leve-seus-cabos-embutidos-usb-c-e-o-display-pratico-carregamento-rapido-225w-para-iphone-samsung-e-mais-essencial-para-viagem-preto-MLB50592250.html" style="text-decoration: none; color: inherit; font-weight: 600;">Power Bank 20000Mah Portatil Carga Rapida Leve Seus Cabos Embutidos Usb C E O Display Pratico Carregamento Rapido 225W Para Iphone Samsung E Mais Essencial Para Viagem Preto Mlb50592250</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="relogio-smartwatch-redmi-watch-5-lite-com-gps-caixa-black-preto-MLB56513939.html" style="text-decoration: none; color: inherit; font-weight: 600;">Relogio Smartwatch Redmi Watch 5 Lite Com Gps Caixa Black Preto Mlb56513939</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="samsung-galaxy-a06-5g-128gb-cinza-MLB47428342.html" style="text-decoration: none; color: inherit; font-weight: 600;">Samsung Galaxy A06 5G 128Gb Cinza Mlb47428342</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="samsung-galaxy-a06-5g-128gb-cinza-MLB69626508.html" style="text-decoration: none; color: inherit; font-weight: 600;">Samsung Galaxy A06 5G 128Gb Cinza Mlb69626508</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="samsung-galaxy-a06-5g-dual-sim-128gb-preto-MLB48946861.html" style="text-decoration: none; color: inherit; font-weight: 600;">Samsung Galaxy A06 5G Dual Sim 128Gb Preto Mlb48946861</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="samsung-galaxy-a17-a175f-preto-67-4gwi-finfc---android-1-preto-MLB65114795.html" style="text-decoration: none; color: inherit; font-weight: 600;">Samsung Galaxy A17 A175F Preto 67 4Gwi Finfc   Android 1 Preto Mlb65114795</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="samsung-galaxy-a17-a175f-preto-67-4gwi-finfc-android-1-preto-MLB65114795.html" style="text-decoration: none; color: inherit; font-weight: 600;">Samsung Galaxy A17 A175F Preto 67 4Gwi Finfc Android 1 Preto Mlb65114795</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="samsung-galaxy-tab-a11-5g-6gb-128gb-cinza-MLB48955624.html" style="text-decoration: none; color: inherit; font-weight: 600;">Samsung Galaxy Tab A11 5G 6Gb 128Gb Cinza Mlb48955624</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="samsung-galaxy-watch7-smartwatch-44mm-bt-galaxy-ai---verde-MLB38058572.html" style="text-decoration: none; color: inherit; font-weight: 600;">Samsung Galaxy Watch7 Smartwatch 44Mm Bt Galaxy Ai   Verde Mlb38058572</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="samsung-galaxy-watch7-smartwatch-44mm-bt-galaxy-ai---verde-MLB65770866.html" style="text-decoration: none; color: inherit; font-weight: 600;">Samsung Galaxy Watch7 Smartwatch 44Mm Bt Galaxy Ai   Verde Mlb65770866</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="samsung-galaxy-watch7-smartwatch-44mm-bt-galaxy-ai-verde-MLB65770866.html" style="text-decoration: none; color: inherit; font-weight: 600;">Samsung Galaxy Watch7 Smartwatch 44Mm Bt Galaxy Ai Verde Mlb65770866</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-gamer-infinix-gt30-pro-5g---12gb-ram-256gb-camera-dupla-108mp-selfie-13mp-nfc-678--amoled-144hz-dual-chip---memoria-ram-expansivel-ate-24gb---chumbo-MLB62253296.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Gamer Infinix Gt30 Pro 5G   12Gb Ram 256Gb Camera Dupla 108Mp Selfie 13Mp Nfc 678  Amoled 144Hz Dual Chip   Memoria Ram Expansivel Ate 24Gb   Chumbo Mlb62253296</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-gamer-infinix-gt30-pro-5g-12gb-ram-256gb-camera-dupla-108mp-selfie-13mp-nfc-678-amoled-144hz-dual-chip-mema3ria-ram-expansavel-ata-24gb-chumbo-MLB62253296.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Gamer Infinix Gt30 Pro 5G 12Gb Ram 256Gb Camera Dupla 108Mp Selfie 13Mp Nfc 678 Amoled 144Hz Dual Chip Mema3Ria Ram Expansavel Ata 24Gb Chumbo Mlb62253296</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-gamer-infinix-gt30-pro-5g-12gb-ram-256gb-camera-dupla-108mp-selfie-13mp-nfc-678-amoled-144hz-dual-chip-memoria-ram-expansivel-ate-24gb-chumbo-MLB62253296.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Gamer Infinix Gt30 Pro 5G 12Gb Ram 256Gb Camera Dupla 108Mp Selfie 13Mp Nfc 678 Amoled 144Hz Dual Chip Memoria Ram Expansivel Ate 24Gb Chumbo Mlb62253296</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-infinix-smart-10-4gb-ram-256gb-ssd-camera-8mp--ia-tela-667-hd-120hz-bateria-5000mah-processador-t7250-android-15-go-dual-chip---preto-MLB56327005.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Infinix Smart 10 4Gb Ram 256Gb Ssd Camera 8Mp  Ia Tela 667 Hd 120Hz Bateria 5000Mah Processador T7250 Android 15 Go Dual Chip   Preto Mlb56327005</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-infinix-smart-10-4gb-ram-256gb-ssd-camera-8mp-ia-tela-667-hd-120hz-bateria-5000mah-processador-t7250-android-15-go-dual-chip-preto-MLB56327005.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Infinix Smart 10 4Gb Ram 256Gb Ssd Camera 8Mp Ia Tela 667 Hd 120Hz Bateria 5000Mah Processador T7250 Android 15 Go Dual Chip Preto Mlb56327005</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="xiaomi-poco-c85-256gb-16gb-ram-lancamento-2026-brinde-top1-preto-MLB68202517.html" style="text-decoration: none; color: inherit; font-weight: 600;">Xiaomi Poco C85 256Gb 16Gb Ram Lancamento 2026 Brinde Top1 Preto Mlb68202517</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="xiaomi-poco-x7-pro-amarelo-MLB45680390.html" style="text-decoration: none; color: inherit; font-weight: 600;">Xiaomi Poco X7 Pro Amarelo Mlb45680390</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-motorola-moto-g06---128gb-12gb-4gb-ram--8gb-ram-boost-e-camera-50mp-com-ai-bateria-de-5200-mah-tela-69---azul-marinho-MLB58353028.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Motorola Moto G06   128Gb 12Gb 4Gb Ram  8Gb Ram Boost E Camera 50Mp Com Ai Bateria De 5200 Mah Tela 69   Azul Marinho Mlb58353028</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-motorola-moto-g06-128gb-12gb-4gb-ram-8gb-ram-boost-e-camera-50mp-com-ai-bateria-de-5200-mah-tela-69-azul-marinho-MLB58353028.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Motorola Moto G06 128Gb 12Gb 4Gb Ram 8Gb Ram Boost E Camera 50Mp Com Ai Bateria De 5200 Mah Tela 69 Azul Marinho Mlb58353028</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-motorola-moto-g35-5g---128gb-12gb-4gb-ram8gb-ram-boost-e-camera-50mp-com-ai-nfc-tela-67-com-superbrilho---grafite---vegan-leather-MLB4079715491.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Motorola Moto G35 5G   128Gb 12Gb 4Gb Ram8Gb Ram Boost E Camera 50Mp Com Ai Nfc Tela 67 Com Superbrilho   Grafite   Vegan Leather Mlb4079715491</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-motorola-moto-g35-5g---128gb-12gb-4gb-ram8gb-ram-boost-e-camera-50mp-com-ai-nfc-tela-67-com-superbrilho---grafite---vegan-leather-MLB41540844.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Motorola Moto G35 5G   128Gb 12Gb 4Gb Ram8Gb Ram Boost E Camera 50Mp Com Ai Nfc Tela 67 Com Superbrilho   Grafite   Vegan Leather Mlb41540844</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-motorola-moto-g35-5g-128gb-12gb-4gb-ram8gb-ram-boost-e-camera-50mp-com-ai-nfc-tela-67-com-superbrilho-grafite-vegan-leather-MLB4079715491.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Motorola Moto G35 5G 128Gb 12Gb 4Gb Ram8Gb Ram Boost E Camera 50Mp Com Ai Nfc Tela 67 Com Superbrilho Grafite Vegan Leather Mlb4079715491</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-motorola-moto-g35-5g-128gb-12gb-4gb-ram8gb-ram-boost-e-camera-50mp-com-ai-nfc-tela-67-com-superbrilho-grafite-vegan-leather-MLB41540844.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Motorola Moto G35 5G 128Gb 12Gb 4Gb Ram8Gb Ram Boost E Camera 50Mp Com Ai Nfc Tela 67 Com Superbrilho Grafite Vegan Leather Mlb41540844</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ata-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranaa-snapdragon---branco-MLB47109375.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Samsung Galaxy A36 5G 128Gb 6Gb Ram Camera Tripla De Ata 50Mp Selfie De 12Mp Ip67 Super Amoled 67 Nfc Recursos Ai Android E Seguranaa Snapdragon   Branco Mlb47109375</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ata-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranaa-snapdragon---preto-MLB47115842.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Samsung Galaxy A36 5G 128Gb 6Gb Ram Camera Tripla De Ata 50Mp Selfie De 12Mp Ip67 Super Amoled 67 Nfc Recursos Ai Android E Seguranaa Snapdragon   Preto Mlb47115842</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ata-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranaa-snapdragon---preto-MLB6756182602.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Samsung Galaxy A36 5G 128Gb 6Gb Ram Camera Tripla De Ata 50Mp Selfie De 12Mp Ip67 Super Amoled 67 Nfc Recursos Ai Android E Seguranaa Snapdragon   Preto Mlb6756182602</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ata-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranaa-snapdragon-branco-MLB47109375.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Samsung Galaxy A36 5G 128Gb 6Gb Ram Camera Tripla De Ata 50Mp Selfie De 12Mp Ip67 Super Amoled 67 Nfc Recursos Ai Android E Seguranaa Snapdragon Branco Mlb47109375</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ata-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranaa-snapdragon-preto-MLB47115842.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Samsung Galaxy A36 5G 128Gb 6Gb Ram Camera Tripla De Ata 50Mp Selfie De 12Mp Ip67 Super Amoled 67 Nfc Recursos Ai Android E Seguranaa Snapdragon Preto Mlb47115842</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ata-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranaa-snapdragon-preto-MLB6756182602.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Samsung Galaxy A36 5G 128Gb 6Gb Ram Camera Tripla De Ata 50Mp Selfie De 12Mp Ip67 Super Amoled 67 Nfc Recursos Ai Android E Seguranaa Snapdragon Preto Mlb6756182602</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ate-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranca-snapdragon-branco-MLB47109375.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Samsung Galaxy A36 5G 128Gb 6Gb Ram Camera Tripla De Ate 50Mp Selfie De 12Mp Ip67 Super Amoled 67 Nfc Recursos Ai Android E Seguranca Snapdragon Branco Mlb47109375</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ate-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranca-snapdragon-preto-MLB47115842.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Samsung Galaxy A36 5G 128Gb 6Gb Ram Camera Tripla De Ate 50Mp Selfie De 12Mp Ip67 Super Amoled 67 Nfc Recursos Ai Android E Seguranca Snapdragon Preto Mlb47115842</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ate-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranca-snapdragon-preto-MLB6756182602.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smartphone Samsung Galaxy A36 5G 128Gb 6Gb Ram Camera Tripla De Ate 50Mp Selfie De 12Mp Ip67 Super Amoled 67 Nfc Recursos Ai Android E Seguranca Snapdragon Preto Mlb6756182602</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="xiaomi-poco-x7-pro-5g-256gb-amarelo-12ram-50mpx-MLB45680390.html" style="text-decoration: none; color: inherit; font-weight: 600;">Xiaomi Poco X7 Pro 5G 256Gb Amarelo 12Ram 50Mpx Mlb45680390</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="xiaomi-poco-x7-pro-5g-256gb-amarelo-12ram-50mpx-MLB62149637.html" style="text-decoration: none; color: inherit; font-weight: 600;">Xiaomi Poco X7 Pro 5G 256Gb Amarelo 12Ram 50Mpx Mlb62149637</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="xiaomi-pocofone-xiaomi-poco-c85-dual-sim-256-gb-8-gb-cor-preto-MLB54068750.html" style="text-decoration: none; color: inherit; font-weight: 600;">Xiaomi Pocofone Xiaomi Poco C85 Dual Sim 256 Gb 8 Gb Cor Preto Mlb54068750</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="xiaomi-redmi-15c-8gb-ram-256gb-dual-sim-50mp-fm-impressao-digital-dimm-azul-MLB54099424.html" style="text-decoration: none; color: inherit; font-weight: 600;">Xiaomi Redmi 15C 8Gb Ram 256Gb Dual Sim 50Mp Fm Impressao Digital Dimm Azul Mlb54099424</a></div>
 
+    <section class="hero-mini">
+        <div class="container">
+            <h1>Ofertas de Celulares</h1>
+            <p>Os melhores preços encontrados pela nossa IA em Celulares</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_831434-MLA96401363339_102025-O.webp" alt="Apple iPhone 15 (128 Gb) - Azul - Distribuidor Autorizado"></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 15 (128 Gb) - Azul - Distribuidor Autorizado</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-15-128-gb---azul---distribuidor-autorizado-MLB1027172667.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_680991-MLA95497804976_102025-O.webp" alt="Apple iPhone 15 (128 Gb) - Preto - Distribuidor Autorizado"></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 15 (128 Gb) - Preto - Distribuidor Autorizado</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-15-128-gb---preto---distribuidor-autorizado-MLB1027172677.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_831434-MLA96401363339_102025-O.webp" alt="Apple iPhone 15 (128 Gb) - Azul - Distribuidor Autorizado"></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 15 (128 Gb) - Azul - Distribuidor Autorizado</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-15-128-gb-azul-distribuidor-autorizado-MLB1027172667.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_680991-MLA95497804976_102025-O.webp" alt="Apple iPhone 15 (128 Gb) - Preto - Distribuidor Autorizado"></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 15 (128 Gb) - Preto - Distribuidor Autorizado</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-15-128-gb-preto-distribuidor-autorizado-MLB1027172677.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_841858-MLA95934002967_102025-O.webp" alt="Apple iPhone 15 (256 Gb) - Preto - Distribuidor Autorizado"></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 15 (256 Gb) - Preto - Distribuidor Autorizado</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-15-256-gb---preto---distribuidor-autorizado-MLB1027172669.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_841858-MLA95934002967_102025-O.webp" alt="Apple iPhone 15 (256 Gb) - Preto - Distribuidor Autorizado"></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 15 (256 Gb) - Preto - Distribuidor Autorizado</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-15-256-gb-preto-distribuidor-autorizado-MLB1027172669.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_809936-MLA96419773842_102025-O.webp" alt="Apple iPhone 16 (128 Gb) - Branco - Distribuidor Autorizado"></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 16 (128 Gb) - Branco - Distribuidor Autorizado</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-16-128-gb---branco---distribuidor-autorizado-MLB1040287791.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_673808-MLA99443133132_112025-O.webp" alt="Apple iPhone 16 (128 Gb) - Preto - Distribuidor Autorizado"></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 16 (128 Gb) - Preto - Distribuidor Autorizado</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-16-128-gb---preto---distribuidor-autorizado-MLB1040287808.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_814556-MLA95640549800_102025-O.webp" alt="Apple iPhone 16 (128 Gb) - Rosa - Distribuidor Autorizado"></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 16 (128 Gb) - Rosa - Distribuidor Autorizado</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-16-128-gb---rosa---distribuidor-autorizado-MLB1040287802.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_842494-MLA96419095420_102025-O.webp" alt="Apple iPhone 16 (128 Gb) - Ultramarine - Distribuidor Aut..."></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 16 (128 Gb) - Ultramarine - Distribuidor Aut...</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-16-128-gb---ultramarine---distribuidor-autorizado-MLB1040287800.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp" alt="Apple iPhone 16 (128 Gb) - Verde-acinzentado - Distribuid..."></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 16 (128 Gb) - Verde-acinzentado - Distribuid...</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-16-128-gb---verde-acinzentado---distribuidor-autorizado-MLB1040287792.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_809936-MLA96419773842_102025-O.webp" alt="Apple iPhone 16 (128 Gb) - Branco - Distribuidor Autorizado"></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 16 (128 Gb) - Branco - Distribuidor Autorizado</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-16-128-gb-branco-distribuidor-autorizado-MLB1040287791.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_673808-MLA99443133132_112025-O.webp" alt="Apple iPhone 16 (128 Gb) - Preto - Distribuidor Autorizado"></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 16 (128 Gb) - Preto - Distribuidor Autorizado</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-16-128-gb-preto-distribuidor-autorizado-MLB1040287808.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_814556-MLA95640549800_102025-O.webp" alt="Apple iPhone 16 (128 Gb) - Rosa - Distribuidor Autorizado"></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 16 (128 Gb) - Rosa - Distribuidor Autorizado</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-16-128-gb-rosa-distribuidor-autorizado-MLB1040287802.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_842494-MLA96419095420_102025-O.webp" alt="Apple iPhone 16 (128 Gb) - Ultramarine - Distribuidor Aut..."></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 16 (128 Gb) - Ultramarine - Distribuidor Aut...</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-16-128-gb-ultramarine-distribuidor-autorizado-MLB1040287800.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_687325-MLA96079610055_102025-O.webp" alt="Apple iPhone 16 (128 Gb) - Verde-acinzentado - Distribuid..."></div>
+                <div class="card-body">
+                    <div class="card-title">Apple iPhone 16 (128 Gb) - Verde-acinzentado - Distribuid...</div>
+                    <div class="card-price">R$</div>
+                    <a href="apple-iphone-16-128-gb-verde-acinzentado-distribuidor-autorizado-MLB1040287792.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_606748-MLA111187910741_052026-O.webp" alt="Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro M..."></div>
+                <div class="card-body">
+                    <div class="card-title">Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro M...</div>
+                    <div class="card-price">R$</div>
+                    <a href="carregador-30w-turbo-para-iphone-8-x-xr-11-12-13-14-pro-max-fonte-usb-c-cor-branca-dtimp-branco-MLB47814270.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_614937-MLA96889123348_112025-O.webp" alt="Carregador PortÃ¡til 20000 Turbo 22.5w Power Bank Premium..."></div>
+                <div class="card-body">
+                    <div class="card-title">Carregador PortÃ¡til 20000 Turbo 22.5w Power Bank Premium...</div>
+                    <div class="card-price">R$</div>
+                    <a href="carregador-portatil-20000-turbo-225w-power-bank-premium-universal-rapido-para-samsung-iphone-xiaomi-motorola-celular-smartwatch-tablet-casenn-preto-MLB50853162.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_753409-MLA110029138996_042026-O.webp" alt="Carregador PortÃ¡til Power Bank Turbo 20000mah 22.5w Univ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Carregador PortÃ¡til Power Bank Turbo 20000mah 22.5w Univ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="carregador-portatil-power-bank-turbo-20000mah-225w-universal-para-iphone-samsung-motorlola-xiaomi-com-display-digital-preto-ou-branco--hardline-pretobranco-MLB65588451.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_753409-MLA110029138996_042026-O.webp" alt="Carregador PortÃ¡til Power Bank Turbo 20000mah 22.5w Univ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Carregador PortÃ¡til Power Bank Turbo 20000mah 22.5w Univ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="carregador-portatil-power-bank-turbo-20000mah-225w-universal-para-iphone-samsung-motorlola-xiaomi-com-display-digital-preto-ou-branco-hardline-pretobranco-MLB65588451.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_753409-MLA110029138996_042026-O.webp" alt="Carregador Portátil Power Bank Turbo 20000mah 22.5w Unive..."></div>
+                <div class="card-body">
+                    <div class="card-title">Carregador Portátil Power Bank Turbo 20000mah 22.5w Unive...</div>
+                    <div class="card-price">R$</div>
+                    <a href="carregador-portatil-power-bank-turbo-20000mah-225w-universal-para-iphone-samsung-motorlola-xiaomi-com-display-digital-preto-ou-branco-hardline-pretou002fbranco-MLB65588451.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_951945-MLA99924065771_112025-O.webp" alt="Carregador PortÃ¡til Power Bank Turbo 20000mah Universal ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Carregador PortÃ¡til Power Bank Turbo 20000mah Universal ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="carregador-portatil-power-bank-turbo-20000mah-universal-para-iphone-samsung-motorola-xiaomi-20w-com-display-digital-cor-branco-dtimp-MLB58899457.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_678247-MLA99491753898_112025-O.webp" alt="Celular Samsung Galaxy A07 128gb 4gb Ram Preto"></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A07 128gb 4gb Ram Preto</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a07-128gb-4gb-ram-preto-MLB55034955.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_995527-MLA99554953104_122025-O.webp" alt="Celular Samsung Galaxy A07 256gb, 8gb, CÃ¢mera 50mp, Tela..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A07 256gb, 8gb, CÃ¢mera 50mp, Tela...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67--proteaao-ip54-processador-6nm---preto-MLB49089309.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_895724-MLA91526198522_092025-AB.webp" alt="Celular Samsung Galaxy A07 256gb, 8gb, CÃ¢mera 50mp, Tela..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A07 256gb, 8gb, CÃ¢mera 50mp, Tela...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67--proteaao-ip54-processador-6nm---preto-MLB6443434920.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_895724-MLA91526198522_092025-O.webp" alt="Celular Samsung Galaxy A07 256gb, 8gb, Câmera 50mp, Tela ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A07 256gb, 8gb, Câmera 50mp, Tela ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67--protecao-ip54-processador-6nm---preto-MLB54961556.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_995527-MLA99554953104_122025-O.webp" alt="Celular Samsung Galaxy A07 256gb, 8gb, CÃ¢mera 50mp, Tela..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A07 256gb, 8gb, CÃ¢mera 50mp, Tela...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67-proteaao-ip54-processador-6nm-preto-MLB49089309.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_895724-MLA91526198522_092025-O.webp" alt="Celular Samsung Galaxy A07 256gb, 8gb, CÃ¢mera 50mp, Tela..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A07 256gb, 8gb, CÃ¢mera 50mp, Tela...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67-proteaao-ip54-processador-6nm-preto-MLB54961556.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_895724-MLA91526198522_092025-AB.webp" alt="Celular Samsung Galaxy A07 256gb, 8gb, CÃ¢mera 50mp, Tela..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A07 256gb, 8gb, CÃ¢mera 50mp, Tela...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67-proteaao-ip54-processador-6nm-preto-MLB6443434920.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_995527-MLA99554953104_122025-O.webp" alt="Celular Samsung Galaxy A07 256gb, 8gb, Câmera 50mp, Tela ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A07 256gb, 8gb, Câmera 50mp, Tela ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67-protecao-ip54-processador-6nm-preto-MLB49089309.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_895724-MLA91526198522_092025-O.webp" alt="Celular Samsung Galaxy A07 256gb, 8gb, Câmera 50mp, Tela ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A07 256gb, 8gb, Câmera 50mp, Tela ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67-protecao-ip54-processador-6nm-preto-MLB54961556.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_895724-MLA91526198522_092025-AB.webp" alt="Celular Samsung Galaxy A07 256gb, 8gb, Câmera 50mp, Tela ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A07 256gb, 8gb, Câmera 50mp, Tela ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-tela-67-protecao-ip54-processador-6nm-preto-MLB6443434920.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_778917-MLA91526601104_092025-O.webp" alt="Celular Samsung Galaxy A07 256gb 8gb Câmera 50mp Verde"></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A07 256gb 8gb Câmera 50mp Verde</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-verde-MLB54963045.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_873869-MLA92299394919_092025-O.webp" alt="Celular Samsung Galaxy A17 5g Com Ia, 128gb, 4gb Ram, Câm..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A17 5g Com Ia, 128gb, 4gb Ram, Câm...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a17-5g-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---cinza-MLB55521828.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_755351-MLA99597188918_122025-O.webp" alt="Celular Samsung Galaxy A17 5g Com Ia, 128gb, 4gb Ram, Câm..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A17 5g Com Ia, 128gb, 4gb Ram, Câm...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a17-5g-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---preto-MLB55027309.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_873869-MLA92299394919_092025-O.webp" alt="Celular Samsung Galaxy A17 5g Com Ia, 128gb, 4gb Ram, Câm..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A17 5g Com Ia, 128gb, 4gb Ram, Câm...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a17-5g-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67-nfc-ip54-cinza-MLB55521828.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_755351-MLA99597188918_122025-O.webp" alt="Celular Samsung Galaxy A17 5g Com Ia, 128gb, 4gb Ram, Câm..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A17 5g Com Ia, 128gb, 4gb Ram, Câm...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a17-5g-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67-nfc-ip54-preto-MLB55027309.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_807017-MLA91535682558_092025-O.webp" alt="Celular Samsung Galaxy A17 Com Ia, 128gb, 4gb Ram, CÃ¢m D..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A17 Com Ia, 128gb, 4gb Ram, CÃ¢m D...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a17-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---preto-MLB54987753.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_807017-MLA91535682558_092025-O.webp" alt="Celular Samsung Galaxy A17 Com Ia, 128gb, 4gb Ram, CÃ¢m D..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A17 Com Ia, 128gb, 4gb Ram, CÃ¢m D...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a17-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67-nfc-ip54-preto-MLB54987753.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_697102-MLA99477666220_112025-O.webp" alt="Celular Samsung Galaxy A36 5g 256gb 8gb Ram Branco"></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A36 5g 256gb 8gb Ram Branco</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a36-5g-256gb-8gb-ram-branco-MLB47106610.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_960662-MLA99955909577_112025-O.webp" alt="Celular Samsung Galaxy A57 5g 256gb 8gb Ram Cor Gray"></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A57 5g 256gb 8gb Ram Cor Gray</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a57-5g-256gb-8gb-ram-cor-gray-MLB45680390.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_807890-MLA109666789142_042026-O.webp" alt="Celular Samsung Galaxy A57 5g 256gb 8gb Ram Cor Gray"></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy A57 5g 256gb 8gb Ram Cor Gray</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-a57-5g-256gb-8gb-ram-cor-gray-MLB68202517.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_988716-MLA107519519715_022026-O.webp" alt="Celular Samsung Galaxy S25 Ultra 5g, 256gb, 12gb, CÃ¢m. Q..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Samsung Galaxy S25 Ultra 5g, 256gb, 12gb, CÃ¢m. Q...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-samsung-galaxy-s25-ultra-5g-256gb-12gb-cam-quad-cor-titanium-gray-MLB45514086.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_614937-MLA96889123348_112025-O.webp" alt="Celular Smartphone Realme C73 256gb 8gb Ram Dual Sim 120h..."></div>
+                <div class="card-body">
+                    <div class="card-title">Celular Smartphone Realme C73 256gb 8gb Ram Dual Sim 120h...</div>
+                    <div class="card-price">R$</div>
+                    <a href="celular-smartphone-realme-c73-256gb-8gb-ram-dual-sim-120hz-6000mah-verde-MLB50853162.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_899533-MLA99452523474_112025-O.webp" alt="Controle Gamesir T4 Nova Lite Sem Fio Para Pc Switch Andr..."></div>
+                <div class="card-body">
+                    <div class="card-title">Controle Gamesir T4 Nova Lite Sem Fio Para Pc Switch Andr...</div>
+                    <div class="card-price">R$</div>
+                    <a href="controle-gamesir-t4-nova-lite-sem-fio-para-pc-switch-android-ios-steam-celular-hall-effect-cor-branco-MLB36695087.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_844010-MLA99448132108_112025-O.webp" alt="Controle Gamesir T4 Nova Lite Sem Fio Para Pc Switch Andr..."></div>
+                <div class="card-body">
+                    <div class="card-title">Controle Gamesir T4 Nova Lite Sem Fio Para Pc Switch Andr...</div>
+                    <div class="card-price">R$</div>
+                    <a href="controle-gamesir-t4-nova-lite-sem-fio-para-pc-switch-android-ios-steam-celular-hall-effect-cor-space-purple-MLB35655836.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_762912-MLA105696431793_012026-O.webp" alt="Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv..."></div>
+                <div class="card-body">
+                    <div class="card-title">Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv...</div>
+                    <div class="card-price">R$</div>
+                    <a href="controle-sem-fio-joystick-bluetooth-para-ps4-videogame-tv-samsung-pc-p4-ps-4-dual-shock-manete-pc-gamer-tv-smart-controle-bluetooth-celular-headset-sem-fio-com-p2---marca-redfin-preto-MLB39960346.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_762912-MLA105696431793_012026-O.webp" alt="Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv..."></div>
+                <div class="card-body">
+                    <div class="card-title">Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv...</div>
+                    <div class="card-price">R$</div>
+                    <a href="controle-sem-fio-joystick-bluetooth-para-ps4-videogame-tv-samsung-pc-p4-ps-4-dual-shock-manete-pc-gamer-tv-smart-controle-bluetooth-celular-headset-sem-fio-com-p2-marca-redfin-preto-MLB39960346.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_760745-MLA95700724020_102025-O.webp" alt="Fone De Ouvido Bluetooth 5.4 Soundcore P30i Da Anker, Can..."></div>
+                <div class="card-body">
+                    <div class="card-title">Fone De Ouvido Bluetooth 5.4 Soundcore P30i Da Anker, Can...</div>
+                    <div class="card-price">R$</div>
+                    <a href="fone-de-ouvido-bluetooth-54-soundcore-p30i-da-anker-cancelamento-de-ruido-adaptativo-graves-poderosos-45h-de-reproducao-estojo-2-em-1-com-suporte-para-celular-ip54-fone-sem-fio-tws-preto-MLB38176139.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_950255-MLA99604896412_122025-O.webp" alt="Fone De Ouvido Sem Fio Bluetooth F9-5 Pares Som Imersivo ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Fone De Ouvido Sem Fio Bluetooth F9-5 Pares Som Imersivo ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="fone-de-ouvido-sem-fio-bluetooth-f9-5-pares-som-imersivo-powerbank-moderno-bateria-longa-duracao-academia-compativel-com-todos-celulares-preto-MLB27174916.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_650858-MLA97317826023_112025-AB.webp" alt="Galaxy Buds Core Preto"></div>
+                <div class="card-body">
+                    <div class="card-title">Galaxy Buds Core Preto</div>
+                    <div class="card-price">R$</div>
+                    <a href="galaxy-buds-core-preto-MLB5783097440.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_637709-MLA109798049593_032026-O.webp" alt="Microfone Lapela Redondo Sem Fio Tipo-c Duplo Anti RuÃ­do..."></div>
+                <div class="card-body">
+                    <div class="card-title">Microfone Lapela Redondo Sem Fio Tipo-c Duplo Anti RuÃ­do...</div>
+                    <div class="card-price">R$</div>
+                    <a href="microfone-lapela-redondo-sem-fio-tipo-c-duplo-anti-ruado-p-android-e-iphone-15-16-17-com-caixinha-para-carregamento-cor-preto-micgeek-MLB66852007.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_637709-MLA109798049593_032026-O.webp" alt="Microfone Lapela Redondo Sem Fio Tipo-c Duplo Anti Ruído ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Microfone Lapela Redondo Sem Fio Tipo-c Duplo Anti Ruído ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="microfone-lapela-redondo-sem-fio-tipo-c-duplo-anti-ruido-pu002f-android-e-iphone-15-16-17-com-caixinha-para-carregamento-cor-preto-micgeek-MLB66852007.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_719636-MLA99381510294_112025-O.webp" alt="Power Bank 20000mah Portátil Carga Rápida Leve Seus Cabos..."></div>
+                <div class="card-body">
+                    <div class="card-title">Power Bank 20000mah Portátil Carga Rápida Leve Seus Cabos...</div>
+                    <div class="card-price">R$</div>
+                    <a href="power-bank-20000mah-portatil-carga-rapida-leve-seus-cabos-embutidos-usb-c-e-o-display-pratico-carregamento-rapido-225w-para-iphone-samsung-e-mais-essencial-para-viagem-preto-MLB50592250.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_688848-MLA99984653413_112025-O.webp" alt="Relógio Smartwatch Redmi Watch 5 Lite Com Gps Caixa Black..."></div>
+                <div class="card-body">
+                    <div class="card-title">Relógio Smartwatch Redmi Watch 5 Lite Com Gps Caixa Black...</div>
+                    <div class="card-price">R$</div>
+                    <a href="relogio-smartwatch-redmi-watch-5-lite-com-gps-caixa-black-preto-MLB56513939.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_844806-MLA99457494578_112025-O.webp" alt="Samsung Galaxy A06 5g 128gb Cinza"></div>
+                <div class="card-body">
+                    <div class="card-title">Samsung Galaxy A06 5g 128gb Cinza</div>
+                    <div class="card-price">R$</div>
+                    <a href="samsung-galaxy-a06-5g-128gb-cinza-MLB47428342.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_624255-MLA110693245748_052026-O.webp" alt="Samsung Galaxy A06 5g 128gb Cinza"></div>
+                <div class="card-body">
+                    <div class="card-title">Samsung Galaxy A06 5g 128gb Cinza</div>
+                    <div class="card-price">R$</div>
+                    <a href="samsung-galaxy-a06-5g-128gb-cinza-MLB69626508.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_716412-MLA99524473372_122025-O.webp" alt="Samsung Galaxy A06 5g Dual Sim 128gb Preto"></div>
+                <div class="card-body">
+                    <div class="card-title">Samsung Galaxy A06 5g Dual Sim 128gb Preto</div>
+                    <div class="card-price">R$</div>
+                    <a href="samsung-galaxy-a06-5g-dual-sim-128gb-preto-MLB48946861.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_751119-MLA105637632754_012026-O.webp" alt="Samsung Galaxy A17 A175f Preto 6.7 4g+wi-fi+nfc - Android..."></div>
+                <div class="card-body">
+                    <div class="card-title">Samsung Galaxy A17 A175f Preto 6.7 4g+wi-fi+nfc - Android...</div>
+                    <div class="card-price">R$</div>
+                    <a href="samsung-galaxy-a17-a175f-preto-67-4gwi-finfc---android-1-preto-MLB65114795.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_751119-MLA105637632754_012026-O.webp" alt="Samsung Galaxy A17 A175f Preto 6.7 4g+wi-fi+nfc - Android..."></div>
+                <div class="card-body">
+                    <div class="card-title">Samsung Galaxy A17 A175f Preto 6.7 4g+wi-fi+nfc - Android...</div>
+                    <div class="card-price">R$</div>
+                    <a href="samsung-galaxy-a17-a175f-preto-67-4gwi-finfc-android-1-preto-MLB65114795.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_902043-MLA96988011016_112025-O.webp" alt="Samsung Galaxy Tab A11+ 5g 6gb, 128gb Cinza"></div>
+                <div class="card-body">
+                    <div class="card-title">Samsung Galaxy Tab A11+ 5g 6gb, 128gb Cinza</div>
+                    <div class="card-price">R$</div>
+                    <a href="samsung-galaxy-tab-a11-5g-6gb-128gb-cinza-MLB48955624.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_906643-MLA100013270877_122025-O.webp" alt="Samsung Galaxy Watch7 Smartwatch 44mm Bt Galaxy Ai - Verde"></div>
+                <div class="card-body">
+                    <div class="card-title">Samsung Galaxy Watch7 Smartwatch 44mm Bt Galaxy Ai - Verde</div>
+                    <div class="card-price">R$</div>
+                    <a href="samsung-galaxy-watch7-smartwatch-44mm-bt-galaxy-ai---verde-MLB38058572.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_933771-MLA112535593373_052026-O.webp" alt="Samsung Galaxy Watch7 Smartwatch 44mm Bt Galaxy Ai - Verde"></div>
+                <div class="card-body">
+                    <div class="card-title">Samsung Galaxy Watch7 Smartwatch 44mm Bt Galaxy Ai - Verde</div>
+                    <div class="card-price">R$</div>
+                    <a href="samsung-galaxy-watch7-smartwatch-44mm-bt-galaxy-ai---verde-MLB65770866.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_933771-MLA112535593373_052026-O.webp" alt="Samsung Galaxy Watch7 Smartwatch 44mm Bt Galaxy Ai - Verde"></div>
+                <div class="card-body">
+                    <div class="card-title">Samsung Galaxy Watch7 Smartwatch 44mm Bt Galaxy Ai - Verde</div>
+                    <div class="card-price">R$</div>
+                    <a href="samsung-galaxy-watch7-smartwatch-44mm-bt-galaxy-ai-verde-MLB65770866.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_995617-MLA98165157730_112025-O.webp" alt="Smartphone Gamer Infinix Gt30 Pro 5g - 12gb Ram 256gb Câm..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Gamer Infinix Gt30 Pro 5g - 12gb Ram 256gb Câm...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-gamer-infinix-gt30-pro-5g---12gb-ram-256gb-camera-dupla-108mp-selfie-13mp-nfc-678--amoled-144hz-dual-chip---memoria-ram-expansivel-ate-24gb---chumbo-MLB62253296.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_995617-MLA98165157730_112025-O.webp" alt="Smartphone Gamer Infinix Gt30 Pro 5g - 12gb Ram 256gb CÃ¢..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Gamer Infinix Gt30 Pro 5g - 12gb Ram 256gb CÃ¢...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-gamer-infinix-gt30-pro-5g-12gb-ram-256gb-camera-dupla-108mp-selfie-13mp-nfc-678-amoled-144hz-dual-chip-mema3ria-ram-expansavel-ata-24gb-chumbo-MLB62253296.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_995617-MLA98165157730_112025-O.webp" alt="Smartphone Gamer Infinix Gt30 Pro 5g - 12gb Ram 256gb Câm..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Gamer Infinix Gt30 Pro 5g - 12gb Ram 256gb Câm...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-gamer-infinix-gt30-pro-5g-12gb-ram-256gb-camera-dupla-108mp-selfie-13mp-nfc-678-amoled-144hz-dual-chip-memoria-ram-expansivel-ate-24gb-chumbo-MLB62253296.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_964227-MLA100071062557_122025-O.webp" alt="Smartphone Infinix Smart 10 4gb Ram 256gb Ssd Câmera 8mp ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Infinix Smart 10 4gb Ram 256gb Ssd Câmera 8mp ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-infinix-smart-10-4gb-ram-256gb-ssd-camera-8mp--ia-tela-667-hd-120hz-bateria-5000mah-processador-t7250-android-15-go-dual-chip---preto-MLB56327005.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_964227-MLA100071062557_122025-O.webp" alt="Smartphone Infinix Smart 10 4gb Ram 256gb Ssd Câmera 8mp ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Infinix Smart 10 4gb Ram 256gb Ssd Câmera 8mp ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-infinix-smart-10-4gb-ram-256gb-ssd-camera-8mp-ia-tela-667-hd-120hz-bateria-5000mah-processador-t7250-android-15-go-dual-chip-preto-MLB56327005.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_807890-MLA109666789142_042026-O.webp" alt="Xiaomi Poco C85 256gb 16gb Ram Lançamento 2026 +brinde To..."></div>
+                <div class="card-body">
+                    <div class="card-title">Xiaomi Poco C85 256gb 16gb Ram Lançamento 2026 +brinde To...</div>
+                    <div class="card-price">R$</div>
+                    <a href="xiaomi-poco-c85-256gb-16gb-ram-lancamento-2026-brinde-top1-preto-MLB68202517.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_960662-MLA99955909577_112025-O.webp" alt="Xiaomi Poco X7 Pro Amarelo"></div>
+                <div class="card-body">
+                    <div class="card-title">Xiaomi Poco X7 Pro Amarelo</div>
+                    <div class="card-price">R$</div>
+                    <a href="xiaomi-poco-x7-pro-amarelo-MLB45680390.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_657060-MLA104761778541_012026-O.webp" alt="Smartphone Motorola Moto G06 - 128gb 12gb (4gb Ram + 8gb ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Motorola Moto G06 - 128gb 12gb (4gb Ram + 8gb ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-motorola-moto-g06---128gb-12gb-4gb-ram--8gb-ram-boost-e-camera-50mp-com-ai-bateria-de-5200-mah-tela-69---azul-marinho-MLB58353028.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_657060-MLA104761778541_012026-O.webp" alt="Smartphone Motorola Moto G06 - 128gb 12gb (4gb Ram + 8gb ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Motorola Moto G06 - 128gb 12gb (4gb Ram + 8gb ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-motorola-moto-g06-128gb-12gb-4gb-ram-8gb-ram-boost-e-camera-50mp-com-ai-bateria-de-5200-mah-tela-69-azul-marinho-MLB58353028.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_652780-MLA97095974098_112025-AB.webp" alt="Smartphone Motorola Moto G35 5g - 128gb 12gb (4gb Ram+8gb..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Motorola Moto G35 5g - 128gb 12gb (4gb Ram+8gb...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-motorola-moto-g35-5g---128gb-12gb-4gb-ram8gb-ram-boost-e-camera-50mp-com-ai-nfc-tela-67-com-superbrilho---grafite---vegan-leather-MLB4079715491.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_652780-MLA97095974098_112025-O.webp" alt="Smartphone Motorola Moto G35 5g - 128gb 12gb (4gb Ram+8gb..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Motorola Moto G35 5g - 128gb 12gb (4gb Ram+8gb...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-motorola-moto-g35-5g---128gb-12gb-4gb-ram8gb-ram-boost-e-camera-50mp-com-ai-nfc-tela-67-com-superbrilho---grafite---vegan-leather-MLB41540844.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_652780-MLA97095974098_112025-AB.webp" alt="Smartphone Motorola Moto G35 5g - 128gb 12gb (4gb Ram+8gb..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Motorola Moto G35 5g - 128gb 12gb (4gb Ram+8gb...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-motorola-moto-g35-5g-128gb-12gb-4gb-ram8gb-ram-boost-e-camera-50mp-com-ai-nfc-tela-67-com-superbrilho-grafite-vegan-leather-MLB4079715491.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_652780-MLA97095974098_112025-O.webp" alt="Smartphone Motorola Moto G35 5g - 128gb 12gb (4gb Ram+8gb..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Motorola Moto G35 5g - 128gb 12gb (4gb Ram+8gb...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-motorola-moto-g35-5g-128gb-12gb-4gb-ram8gb-ram-boost-e-camera-50mp-com-ai-nfc-tela-67-com-superbrilho-grafite-vegan-leather-MLB41540844.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_968548-MLA99944961199_112025-O.webp" alt="Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram CÃ¢mera Tr..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram CÃ¢mera Tr...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ata-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranaa-snapdragon---branco-MLB47109375.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_705075-MLA99943632917_112025-O.webp" alt="Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram CÃ¢mera Tr..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram CÃ¢mera Tr...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ata-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranaa-snapdragon---preto-MLB47115842.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_705075-MLA99943632917_112025-AB.webp" alt="Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram CÃ¢mera Tr..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram CÃ¢mera Tr...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ata-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranaa-snapdragon---preto-MLB6756182602.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_968548-MLA99944961199_112025-O.webp" alt="Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram CÃ¢mera Tr..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram CÃ¢mera Tr...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ata-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranaa-snapdragon-branco-MLB47109375.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_705075-MLA99943632917_112025-O.webp" alt="Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram CÃ¢mera Tr..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram CÃ¢mera Tr...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ata-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranaa-snapdragon-preto-MLB47115842.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_705075-MLA99943632917_112025-AB.webp" alt="Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram CÃ¢mera Tr..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram CÃ¢mera Tr...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ata-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranaa-snapdragon-preto-MLB6756182602.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_968548-MLA99944961199_112025-O.webp" alt="Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram Câmera Tri..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram Câmera Tri...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ate-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranca-snapdragon-branco-MLB47109375.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_705075-MLA99943632917_112025-O.webp" alt="Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram Câmera Tri..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram Câmera Tri...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ate-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranca-snapdragon-preto-MLB47115842.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_705075-MLA99943632917_112025-AB.webp" alt="Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram Câmera Tri..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram Câmera Tri...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla-de-ate-50mp-selfie-de-12mp-ip67-super-amoled-67-nfc-recursos-ai-android-e-seguranca-snapdragon-preto-MLB6756182602.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_960662-MLA99955909577_112025-O.webp" alt="Xiaomi Poco X7 Pro 5g 256gb Amarelo 12ram 50mpx"></div>
+                <div class="card-body">
+                    <div class="card-title">Xiaomi Poco X7 Pro 5g 256gb Amarelo 12ram 50mpx</div>
+                    <div class="card-price">R$</div>
+                    <a href="xiaomi-poco-x7-pro-5g-256gb-amarelo-12ram-50mpx-MLB45680390.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_999325-MLA102615422841_122025-O.webp" alt="Xiaomi Poco X7 Pro 5g 256gb Amarelo 12ram 50mpx"></div>
+                <div class="card-body">
+                    <div class="card-title">Xiaomi Poco X7 Pro 5g 256gb Amarelo 12ram 50mpx</div>
+                    <div class="card-price">R$</div>
+                    <a href="xiaomi-poco-x7-pro-5g-256gb-amarelo-12ram-50mpx-MLB62149637.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_872329-MLA91474709180_092025-O.webp" alt="Xiaomi Pocofone Xiaomi Poco C85 Dual Sim 256 Gb 8 Gb Cor ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Xiaomi Pocofone Xiaomi Poco C85 Dual Sim 256 Gb 8 Gb Cor ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="xiaomi-pocofone-xiaomi-poco-c85-dual-sim-256-gb-8-gb-cor-preto-MLB54068750.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_900205-MLA95350306863_102025-O.webp" alt="Xiaomi Redmi 15c 8gb Ram 256gb Dual Sim 50mp Fm ImpressÃ£..."></div>
+                <div class="card-body">
+                    <div class="card-title">Xiaomi Redmi 15c 8gb Ram 256gb Dual Sim 50mp Fm ImpressÃ£...</div>
+                    <div class="card-price">R$</div>
+                    <a href="xiaomi-redmi-15c-8gb-ram-256gb-dual-sim-50mp-fm-impressao-digital-dimm-azul-MLB54099424.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
         </div>
     </main>
-    <footer class="footer" style="margin-top: 60px; padding: 40px 0; border-top: 1px solid var(--border);">
+
+    <footer style="background: #0f172a; color: white; padding: 40px 0; margin-top: 60px; text-align: center;">
         <div class="container">
-            <p>© 2026 Compara Preço</p>
+            <p>&copy; 2026 Radar Ninja</p>
         </div>
     </footer>
 </body>

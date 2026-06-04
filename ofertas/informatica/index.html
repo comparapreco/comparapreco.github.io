@@ -1,47 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Ofertas de Informatica | Compara Preço</title>
-    <link href="/assets/css/style.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas de Informatica — Radar Ninja</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+    <style>
+        :root {
+            --primary: #00c853;
+            --primary-dark: #00a443;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #0f172a;
+            --border: #e2e8f0;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header { background: #0f172a; padding: 15px 0; }
+        .hero-mini { background: #1e293b; color: white; padding: 40px 0; text-align: center; border-bottom: 4px solid var(--primary); }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; margin: 40px 0; }
+        .product-card { background: var(--card); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .card-img { height: 200px; background: #f1f5f9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-title { font-weight: 700; font-size: 1rem; margin-bottom: 10px; line-height: 1.4; }
+        .card-price { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-top: auto; }
+        .btn-ninja { background: var(--primary); color: white; padding: 10px; border-radius: 8px; text-decoration: none; text-align: center; font-weight: 700; margin-top: 15px; }
+    </style>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="/" style="text-decoration: none; font-weight: 800; font-size: 1.5rem; color: var(--primary);">Compara Preço</a>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" style="font-size: 1.5rem; font-weight: 900; color: white; text-decoration: none;">🥷 RADAR NINJA</a>
+            <nav style="display: flex; gap: 20px;">
+                <a href="/ofertas-hoje/" style="color: white; text-decoration: none; font-weight: 600;">Ofertas</a>
+                <a href="/noticias/" style="color: white; text-decoration: none; font-weight: 600;">Notícias</a>
+            </nav>
         </div>
     </header>
-    <main class="container">
-        <h1 style="margin-top: 40px;">Ofertas de Informatica</h1>
-        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
-            <div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="asus-consola-portatil-512-gb-white-z2-rc73ya-nh003w-rog-xbox-ally-asus-ryzen-z2-wh-branco-MLB6070039800.html" style="text-decoration: none; color: inherit; font-weight: 600;">Asus Consola Portatil 512 Gb White Z2 Rc73Ya Nh003W Rog Xbox Ally Asus Ryzen Z2 Wh Branco Mlb6070039800</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="computador-completo-top-intel-core-i5-4570-8gb-ram-ssd-256gb-bivolt-monitor-20-led-75hz-preto---bluepc-cd2e-0110to-256-gb-8-gb-MLB65664882.html" style="text-decoration: none; color: inherit; font-weight: 600;">Computador Completo Top Intel Core I5 4570 8Gb Ram Ssd 256Gb Bivolt Monitor 20 Led 75Hz Preto   Bluepc Cd2E 0110To 256 Gb 8 Gb Mlb65664882</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="computador-completo-top-intel-core-i5-4570-8gb-ram-ssd-256gb-bivolt-monitor-20-led-75hz-preto-bluepc-cd2e-0110to-256-gb-8-gb-MLB65664882.html" style="text-decoration: none; color: inherit; font-weight: 600;">Computador Completo Top Intel Core I5 4570 8Gb Ram Ssd 256Gb Bivolt Monitor 20 Led 75Hz Preto Bluepc Cd2E 0110To 256 Gb 8 Gb Mlb65664882</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="impressora-multifuncional-cor-epson-ecotank-l3250-preto-127220v-MLB5275428302.html" style="text-decoration: none; color: inherit; font-weight: 600;">Impressora Multifuncional Cor Epson Ecotank L3250 Preto 127220V Mlb5275428302</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="monitor-gamer-aoc-215-full-hd-gaming-120hz-1ms-22b30hm23-cor-preto-127220v-MLB4089347501.html" style="text-decoration: none; color: inherit; font-weight: 600;">Monitor Gamer Aoc 215 Full Hd Gaming 120Hz 1Ms 22B30Hm23 Cor Preto 127220V Mlb4089347501</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="monitor-gamer-lg-24ms500-b-24ms-ips-fullhd-100hz-ajuste-de-inclinaaao-negro-preto-127220v-MLB34229008.html" style="text-decoration: none; color: inherit; font-weight: 600;">Monitor Gamer Lg 24Ms500 B 24Ms Ips Fullhd 100Hz Ajuste De Inclinaaao Negro Preto 127220V Mlb34229008</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="monitor-gamer-lg-24ms500-b-24ms-ips-fullhd-100hz-ajuste-de-inclinacao-negro-preto-127u002f220v-MLB34229008.html" style="text-decoration: none; color: inherit; font-weight: 600;">Monitor Gamer Lg 24Ms500 B 24Ms Ips Fullhd 100Hz Ajuste De Inclinacao Negro Preto 127U002F220V Mlb34229008</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="monitor-gamer-lg-ultragear-24-24gs60f-b-ips-full-hd-180hz-1ms-gtg-nvidia-g-sync-amd-freesync-hdr10-srgb-99-hdmi-displayport-preto-127220v-MLB3925829485.html" style="text-decoration: none; color: inherit; font-weight: 600;">Monitor Gamer Lg Ultragear 24 24Gs60F B Ips Full Hd 180Hz 1Ms Gtg Nvidia G Sync Amd Freesync Hdr10 Srgb 99 Hdmi Displayport Preto 127220V Mlb3925829485</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="monitor-gamer-lg-ultragear-24-24gs60f-b-ips-full-hd-180hz-1ms-gtg-nvidia-g-sync-amd-freesync-hdr10-srgb-99-hdmi-displayport-preto-127u002f220v-MLB43417665.html" style="text-decoration: none; color: inherit; font-weight: 600;">Monitor Gamer Lg Ultragear 24 24Gs60F B Ips Full Hd 180Hz 1Ms Gtg Nvidia G Sync Amd Freesync Hdr10 Srgb 99 Hdmi Displayport Preto 127U002F220V Mlb43417665</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="monitor-gamer-lg-ultragear-24-24gs60f-b-ips-full-hd-180hz-1ms-gtg-nvidiaa-g-synca-amd-freesync-hdr10-srgb-99-hdmi-displayport-preto-127220v-MLB3925829485.html" style="text-decoration: none; color: inherit; font-weight: 600;">Monitor Gamer Lg Ultragear 24 24Gs60F B Ips Full Hd 180Hz 1Ms Gtg Nvidiaa G Synca Amd Freesync Hdr10 Srgb 99 Hdmi Displayport Preto 127220V Mlb3925829485</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="monitor-gamer-lg-ultragear-24-24gs60f-b-ips-full-hd-180hz-1ms-gtg-nvidiaa-g-synca-amd-freesync-hdr10-srgb-99-hdmi-displayport-preto-127220v-MLB43417665.html" style="text-decoration: none; color: inherit; font-weight: 600;">Monitor Gamer Lg Ultragear 24 24Gs60F B Ips Full Hd 180Hz 1Ms Gtg Nvidiaa G Synca Amd Freesync Hdr10 Srgb 99 Hdmi Displayport Preto 127220V Mlb43417665</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="monitor-lg-ultragear-27g411a-b-27-fhd-144hz-1ms-mbr-nvidia-g-sync-amd-freesync-hdr10-preto-127220v-MLB64206195.html" style="text-decoration: none; color: inherit; font-weight: 600;">Monitor Lg Ultragear 27G411A B 27 Fhd 144Hz 1Ms Mbr Nvidia G Sync Amd Freesync Hdr10 Preto 127220V Mlb64206195</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="monitor-lg-ultragear-27g411a-b-27-fhd-144hz-1ms-mbr-nvidia-g-sync-amd-freesync-hdr10-preto-127u002f220v-MLB64206195.html" style="text-decoration: none; color: inherit; font-weight: 600;">Monitor Lg Ultragear 27G411A B 27 Fhd 144Hz 1Ms Mbr Nvidia G Sync Amd Freesync Hdr10 Preto 127U002F220V Mlb64206195</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="notebook-gamer-asus-tuf-gaming-a15-amd-ryzen-7-rtx-3050-8gb-ram-512gb-ssd-linux-keepos-graphite-black---fa506ncg-hn216-preto-grafite-MLB65030699.html" style="text-decoration: none; color: inherit; font-weight: 600;">Notebook Gamer Asus Tuf Gaming A15 Amd Ryzen 7 Rtx 3050 8Gb Ram 512Gb Ssd Linux Keepos Graphite Black   Fa506Ncg Hn216 Preto Grafite Mlb65030699</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="notebook-gamer-asus-tuf-gaming-a15-amd-ryzen-7-rtx-3050-8gb-ram-512gb-ssd-linux-keepos-graphite-black-fa506ncg-hn216-preto-grafite-MLB65030699.html" style="text-decoration: none; color: inherit; font-weight: 600;">Notebook Gamer Asus Tuf Gaming A15 Amd Ryzen 7 Rtx 3050 8Gb Ram 512Gb Ssd Linux Keepos Graphite Black Fa506Ncg Hn216 Preto Grafite Mlb65030699</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smart-tv-32-lg-hd-32lr600bpsa-processador-5-ger6-alexa-webos-MLB37929806.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smart Tv 32 Lg Hd 32Lr600Bpsa Processador 5 Ger6 Alexa Webos Mlb37929806</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smart-tv-lg-uhd-ai-ua75-43-polegadas-hdr10-pro-processador-7-ai-ger8-webos-25-MLB69311713.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smart Tv Lg Uhd Ai Ua75 43 Polegadas Hdr10 Pro Processador 7 Ai Ger8 Webos 25 Mlb69311713</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smart-tv-lg-uhd-ai-ua75-55-polegadas-hdr10-pro-processador-7-ai-ger8-webos-25-MLB54742419.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smart Tv Lg Uhd Ai Ua75 55 Polegadas Hdr10 Pro Processador 7 Ai Ger8 Webos 25 Mlb54742419</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smart-tv-lg-uhd-ai-ua75-65-polegadas-hdr10-pro-processador-7-ai-ger8-webos-25-MLB53610161.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smart Tv Lg Uhd Ai Ua75 65 Polegadas Hdr10 Pro Processador 7 Ai Ger8 Webos 25 Mlb53610161</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="smart-tv-profissional-lg-43-full-hd-processador-a5-ger6-ai-alexa-integrada-webos-23-43lr671c-b-MLB19884311.html" style="text-decoration: none; color: inherit; font-weight: 600;">Smart Tv Profissional Lg 43 Full Hd Processador A5 Ger6 Ai Alexa Integrada Webos 23 43Lr671C B Mlb19884311</a></div>
 
+    <section class="hero-mini">
+        <div class="container">
+            <h1>Ofertas de Informatica</h1>
+            <p>Os melhores preços encontrados pela nossa IA em Informatica</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_785197-MLA98861184401_112025-AB.webp" alt="Asus Consola PortÃ¡til 512 Gb White Z2 Rc73ya-nh003w Rog ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Asus Consola PortÃ¡til 512 Gb White Z2 Rc73ya-nh003w Rog ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="asus-consola-portatil-512-gb-white-z2-rc73ya-nh003w-rog-xbox-ally-asus-ryzen-z2-wh-branco-MLB6070039800.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_697855-MLA107291983773_022026-O.webp" alt="Computador Completo Top Intel Core I5 4570, 8gb Ram, Ssd ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Computador Completo Top Intel Core I5 4570, 8gb Ram, Ssd ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="computador-completo-top-intel-core-i5-4570-8gb-ram-ssd-256gb-bivolt-monitor-20-led-75hz-preto---bluepc-cd2e-0110to-256-gb-8-gb-MLB65664882.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_697855-MLA107291983773_022026-O.webp" alt="Computador Completo Top Intel Core I5 4570, 8gb Ram, Ssd ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Computador Completo Top Intel Core I5 4570, 8gb Ram, Ssd ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="computador-completo-top-intel-core-i5-4570-8gb-ram-ssd-256gb-bivolt-monitor-20-led-75hz-preto-bluepc-cd2e-0110to-256-gb-8-gb-MLB65664882.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_867179-MLA99966959445_112025-AB.webp" alt="Impressora Multifuncional Cor Epson Ecotank L3250 Preto 1..."></div>
+                <div class="card-body">
+                    <div class="card-title">Impressora Multifuncional Cor Epson Ecotank L3250 Preto 1...</div>
+                    <div class="card-price">R$</div>
+                    <a href="impressora-multifuncional-cor-epson-ecotank-l3250-preto-127220v-MLB5275428302.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_621055-MLA91966913733_092025-AB.webp" alt="Monitor Gamer Aoc 21.5'' Full Hd Gaming 120hz 1ms 22b30hm..."></div>
+                <div class="card-body">
+                    <div class="card-title">Monitor Gamer Aoc 21.5'' Full Hd Gaming 120hz 1ms 22b30hm...</div>
+                    <div class="card-price">R$</div>
+                    <a href="monitor-gamer-aoc-215-full-hd-gaming-120hz-1ms-22b30hm23-cor-preto-127220v-MLB4089347501.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_827740-MLA99943629541_112025-O.webp" alt="Monitor Gamer LG 24ms500-b 24ms Ips Fullhd 100hz Ajuste D..."></div>
+                <div class="card-body">
+                    <div class="card-title">Monitor Gamer LG 24ms500-b 24ms Ips Fullhd 100hz Ajuste D...</div>
+                    <div class="card-price">R$</div>
+                    <a href="monitor-gamer-lg-24ms500-b-24ms-ips-fullhd-100hz-ajuste-de-inclinaaao-negro-preto-127220v-MLB34229008.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_827740-MLA99943629541_112025-O.webp" alt="Monitor Gamer LG 24ms500-b 24ms Ips Fullhd 100hz Ajuste D..."></div>
+                <div class="card-body">
+                    <div class="card-title">Monitor Gamer LG 24ms500-b 24ms Ips Fullhd 100hz Ajuste D...</div>
+                    <div class="card-price">R$</div>
+                    <a href="monitor-gamer-lg-24ms500-b-24ms-ips-fullhd-100hz-ajuste-de-inclinacao-negro-preto-127u002f220v-MLB34229008.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_817281-MLA107167838581_022026-AB.webp" alt="Monitor Gamer LG Ultragear 24 24gs60f-b Ips Full Hd 180hz..."></div>
+                <div class="card-body">
+                    <div class="card-title">Monitor Gamer LG Ultragear 24 24gs60f-b Ips Full Hd 180hz...</div>
+                    <div class="card-price">R$</div>
+                    <a href="monitor-gamer-lg-ultragear-24-24gs60f-b-ips-full-hd-180hz-1ms-gtg-nvidia-g-sync-amd-freesync-hdr10-srgb-99-hdmi-displayport-preto-127220v-MLB3925829485.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_722728-MLA110061030541_042026-O.webp" alt="Monitor Gamer LG Ultragear 24 24gs60f-b Ips Full Hd 180hz..."></div>
+                <div class="card-body">
+                    <div class="card-title">Monitor Gamer LG Ultragear 24 24gs60f-b Ips Full Hd 180hz...</div>
+                    <div class="card-price">R$</div>
+                    <a href="monitor-gamer-lg-ultragear-24-24gs60f-b-ips-full-hd-180hz-1ms-gtg-nvidia-g-sync-amd-freesync-hdr10-srgb-99-hdmi-displayport-preto-127u002f220v-MLB43417665.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_Q_NP_2X_817281-MLA107167838581_022026-AB.webp" alt="Monitor Gamer LG Ultragear 24 24gs60f-b Ips Full Hd 180hz..."></div>
+                <div class="card-body">
+                    <div class="card-title">Monitor Gamer LG Ultragear 24 24gs60f-b Ips Full Hd 180hz...</div>
+                    <div class="card-price">R$</div>
+                    <a href="monitor-gamer-lg-ultragear-24-24gs60f-b-ips-full-hd-180hz-1ms-gtg-nvidiaa-g-synca-amd-freesync-hdr10-srgb-99-hdmi-displayport-preto-127220v-MLB3925829485.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_722728-MLA110061030541_042026-O.webp" alt="Monitor Gamer LG Ultragear 24 24gs60f-b Ips Full Hd 180hz..."></div>
+                <div class="card-body">
+                    <div class="card-title">Monitor Gamer LG Ultragear 24 24gs60f-b Ips Full Hd 180hz...</div>
+                    <div class="card-price">R$</div>
+                    <a href="monitor-gamer-lg-ultragear-24-24gs60f-b-ips-full-hd-180hz-1ms-gtg-nvidiaa-g-synca-amd-freesync-hdr10-srgb-99-hdmi-displayport-preto-127220v-MLB43417665.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_973181-MLA108584695831_032026-O.webp" alt="Monitor LG Ultragear 27g411a-b 27 ,fhd, 144hz, 1ms (mbr),..."></div>
+                <div class="card-body">
+                    <div class="card-title">Monitor LG Ultragear 27g411a-b 27 ,fhd, 144hz, 1ms (mbr),...</div>
+                    <div class="card-price">R$</div>
+                    <a href="monitor-lg-ultragear-27g411a-b-27-fhd-144hz-1ms-mbr-nvidia-g-sync-amd-freesync-hdr10-preto-127220v-MLB64206195.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_973181-MLA108584695831_032026-O.webp" alt="Monitor LG Ultragear 27g411a-b 27 ,fhd, 144hz, 1ms (mbr),..."></div>
+                <div class="card-body">
+                    <div class="card-title">Monitor LG Ultragear 27g411a-b 27 ,fhd, 144hz, 1ms (mbr),...</div>
+                    <div class="card-price">R$</div>
+                    <a href="monitor-lg-ultragear-27g411a-b-27-fhd-144hz-1ms-mbr-nvidia-g-sync-amd-freesync-hdr10-preto-127u002f220v-MLB64206195.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_630514-MLA105459813396_012026-O.webp" alt="Notebook Gamer Asus Tuf Gaming A15, Amd Ryzen 7, Rtx 3050..."></div>
+                <div class="card-body">
+                    <div class="card-title">Notebook Gamer Asus Tuf Gaming A15, Amd Ryzen 7, Rtx 3050...</div>
+                    <div class="card-price">R$</div>
+                    <a href="notebook-gamer-asus-tuf-gaming-a15-amd-ryzen-7-rtx-3050-8gb-ram-512gb-ssd-linux-keepos-graphite-black---fa506ncg-hn216-preto-grafite-MLB65030699.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_630514-MLA105459813396_012026-O.webp" alt="Notebook Gamer Asus Tuf Gaming A15, Amd Ryzen 7, Rtx 3050..."></div>
+                <div class="card-body">
+                    <div class="card-title">Notebook Gamer Asus Tuf Gaming A15, Amd Ryzen 7, Rtx 3050...</div>
+                    <div class="card-price">R$</div>
+                    <a href="notebook-gamer-asus-tuf-gaming-a15-amd-ryzen-7-rtx-3050-8gb-ram-512gb-ssd-linux-keepos-graphite-black-fa506ncg-hn216-preto-grafite-MLB65030699.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_934018-MLA99576753908_122025-O.webp" alt="Smart Tv 32'' LG Hd 32lr600bpsa Processador 5 Ger6 Alexa ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smart Tv 32'' LG Hd 32lr600bpsa Processador 5 Ger6 Alexa ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smart-tv-32-lg-hd-32lr600bpsa-processador-5-ger6-alexa-webos-MLB37929806.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_750187-MLA110407169744_052026-O.webp" alt="Smart Tv LG Uhd Ai Ua75 43 Polegadas Hdr10 Pro Processado..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smart Tv LG Uhd Ai Ua75 43 Polegadas Hdr10 Pro Processado...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smart-tv-lg-uhd-ai-ua75-43-polegadas-hdr10-pro-processador-7-ai-ger8-webos-25-MLB69311713.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_739445-MLA106908065058_022026-O.webp" alt="Smart Tv LG Uhd Ai Ua75 55 Polegadas Hdr10 Pro Processado..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smart Tv LG Uhd Ai Ua75 55 Polegadas Hdr10 Pro Processado...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smart-tv-lg-uhd-ai-ua75-55-polegadas-hdr10-pro-processador-7-ai-ger8-webos-25-MLB54742419.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_966485-MLA106907952364_022026-O.webp" alt="Smart Tv LG Uhd Ai Ua75 65 Polegadas Hdr10 Pro Processado..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smart Tv LG Uhd Ai Ua75 65 Polegadas Hdr10 Pro Processado...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smart-tv-lg-uhd-ai-ua75-65-polegadas-hdr10-pro-processador-7-ai-ger8-webos-25-MLB53610161.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_868771-MLA99401762570_112025-O.webp" alt="Smart Tv Profissional LG 43 Full Hd Processador A5 Ger6 A..."></div>
+                <div class="card-body">
+                    <div class="card-title">Smart Tv Profissional LG 43 Full Hd Processador A5 Ger6 A...</div>
+                    <div class="card-price">R$</div>
+                    <a href="smart-tv-profissional-lg-43-full-hd-processador-a5-ger6-ai-alexa-integrada-webos-23-43lr671c-b-MLB19884311.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
         </div>
     </main>
-    <footer class="footer" style="margin-top: 60px; padding: 40px 0; border-top: 1px solid var(--border);">
+
+    <footer style="background: #0f172a; color: white; padding: 40px 0; margin-top: 60px; text-align: center;">
         <div class="container">
-            <p>© 2026 Compara Preço</p>
+            <p>&copy; 2026 Radar Ninja</p>
         </div>
     </footer>
 </body>

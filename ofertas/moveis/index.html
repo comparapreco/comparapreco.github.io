@@ -1,36 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Ofertas de Moveis | Compara Preço</title>
-    <link href="/assets/css/style.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas de Moveis — Radar Ninja</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+    <style>
+        :root {
+            --primary: #00c853;
+            --primary-dark: #00a443;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #0f172a;
+            --border: #e2e8f0;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header { background: #0f172a; padding: 15px 0; }
+        .hero-mini { background: #1e293b; color: white; padding: 40px 0; text-align: center; border-bottom: 4px solid var(--primary); }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; margin: 40px 0; }
+        .product-card { background: var(--card); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .card-img { height: 200px; background: #f1f5f9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-title { font-weight: 700; font-size: 1rem; margin-bottom: 10px; line-height: 1.4; }
+        .card-price { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-top: auto; }
+        .btn-ninja { background: var(--primary); color: white; padding: 10px; border-radius: 8px; text-decoration: none; text-align: center; font-weight: 700; margin-top: 15px; }
+    </style>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="/" style="text-decoration: none; font-weight: 800; font-size: 1.5rem; color: var(--primary);">Compara Preço</a>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" style="font-size: 1.5rem; font-weight: 900; color: white; text-decoration: none;">🥷 RADAR NINJA</a>
+            <nav style="display: flex; gap: 20px;">
+                <a href="/ofertas-hoje/" style="color: white; text-decoration: none; font-weight: 600;">Ofertas</a>
+                <a href="/noticias/" style="color: white; text-decoration: none; font-weight: 600;">Notícias</a>
+            </nav>
         </div>
     </header>
-    <main class="container">
-        <h1 style="margin-top: 40px;">Ofertas de Moveis</h1>
-        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
-            <div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cadeira-gamer-barata-ergona-mica-python-fly-couro-sintatico-cor-branco-MLB34968599.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cadeira Gamer Barata Ergona Mica Python Fly Couro Sintatico Cor Branco Mlb34968599</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cadeira-gamer-barata-ergonomica-python-fly-couro-sintetico-cor-branco-MLB34968599.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cadeira Gamer Barata Ergonomica Python Fly Couro Sintetico Cor Branco Mlb34968599</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cadeira-gamer-tgt-heron-tc2-preto-tgt-hrtc-bl03-couro-sintatico-MLB41514567.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cadeira Gamer Tgt Heron Tc2 Preto Tgt Hrtc Bl03 Couro Sintatico Mlb41514567</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cadeira-gamer-tgt-heron-tc2-preto-tgt-hrtc-bl03-couro-sintetico-MLB41514567.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cadeira Gamer Tgt Heron Tc2 Preto Tgt Hrtc Bl03 Couro Sintetico Mlb41514567</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cadeira-gamer-wells-preta-healer-preto-couro-sintatico-MLB19763973.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cadeira Gamer Wells Preta Healer Preto Couro Sintatico Mlb19763973</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cadeira-gamer-wells-preta-healer-preto-couro-sintetico-MLB19763973.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cadeira Gamer Wells Preta Healer Preto Couro Sintetico Mlb19763973</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cadeira-presidente-python-fly-girata3ria-reclinavel-couro-sintatico-marrom-MLB62276296.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cadeira Presidente Python Fly Girata3Ria Reclinavel Couro Sintatico Marrom Mlb62276296</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cadeira-presidente-python-fly-giratoria-reclinavel-couro-sintetico-marrom-MLB62276296.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cadeira Presidente Python Fly Giratoria Reclinavel Couro Sintetico Marrom Mlb62276296</a></div>
-<div class="card" style="padding: 15px; border: 1px solid var(--border); border-radius: 8px;"><a href="cooktop-5-bocas-a-gas-electrolux-mesa-de-vidro-efficient-grade-de-aco-fosco-ke5gr-bivolt-MLB50374350.html" style="text-decoration: none; color: inherit; font-weight: 600;">Cooktop 5 Bocas A Gas Electrolux Mesa De Vidro Efficient Grade De Aco Fosco Ke5Gr Bivolt Mlb50374350</a></div>
 
+    <section class="hero-mini">
+        <div class="container">
+            <h1>Ofertas de Moveis</h1>
+            <p>Os melhores preços encontrados pela nossa IA em Moveis</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_808936-MLA99988566135_112025-O.webp" alt="Cadeira Gamer Barata ErgonÃ´mica Python Fly Couro SintÃ©t..."></div>
+                <div class="card-body">
+                    <div class="card-title">Cadeira Gamer Barata ErgonÃ´mica Python Fly Couro SintÃ©t...</div>
+                    <div class="card-price">R$</div>
+                    <a href="cadeira-gamer-barata-ergona-mica-python-fly-couro-sintatico-cor-branco-MLB34968599.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_808936-MLA99988566135_112025-O.webp" alt="Cadeira Gamer Barata Ergonômica Python Fly Couro Sintétic..."></div>
+                <div class="card-body">
+                    <div class="card-title">Cadeira Gamer Barata Ergonômica Python Fly Couro Sintétic...</div>
+                    <div class="card-price">R$</div>
+                    <a href="cadeira-gamer-barata-ergonomica-python-fly-couro-sintetico-cor-branco-MLB34968599.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_903029-MLA107184098937_022026-O.webp" alt="Cadeira Gamer Tgt Heron Tc2, Preto, Tgt-hrtc-bl03 Couro S..."></div>
+                <div class="card-body">
+                    <div class="card-title">Cadeira Gamer Tgt Heron Tc2, Preto, Tgt-hrtc-bl03 Couro S...</div>
+                    <div class="card-price">R$</div>
+                    <a href="cadeira-gamer-tgt-heron-tc2-preto-tgt-hrtc-bl03-couro-sintatico-MLB41514567.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_903029-MLA107184098937_022026-O.webp" alt="Cadeira Gamer Tgt Heron Tc2, Preto, Tgt-hrtc-bl03 Couro S..."></div>
+                <div class="card-body">
+                    <div class="card-title">Cadeira Gamer Tgt Heron Tc2, Preto, Tgt-hrtc-bl03 Couro S...</div>
+                    <div class="card-price">R$</div>
+                    <a href="cadeira-gamer-tgt-heron-tc2-preto-tgt-hrtc-bl03-couro-sintetico-MLB41514567.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_808481-MLA99967103043_112025-O.webp" alt="Cadeira Gamer Wells Preta Healer Preto Couro SintÃ©tico"></div>
+                <div class="card-body">
+                    <div class="card-title">Cadeira Gamer Wells Preta Healer Preto Couro SintÃ©tico</div>
+                    <div class="card-price">R$</div>
+                    <a href="cadeira-gamer-wells-preta-healer-preto-couro-sintatico-MLB19763973.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_808481-MLA99967103043_112025-O.webp" alt="Cadeira Gamer Wells Preta Healer Preto Couro Sintético"></div>
+                <div class="card-body">
+                    <div class="card-title">Cadeira Gamer Wells Preta Healer Preto Couro Sintético</div>
+                    <div class="card-price">R$</div>
+                    <a href="cadeira-gamer-wells-preta-healer-preto-couro-sintetico-MLB19763973.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_896529-MLA98735006295_112025-O.webp" alt="Cadeira Presidente Python Fly GiratÃ³ria ReclinÃ¡vel Cour..."></div>
+                <div class="card-body">
+                    <div class="card-title">Cadeira Presidente Python Fly GiratÃ³ria ReclinÃ¡vel Cour...</div>
+                    <div class="card-price">R$</div>
+                    <a href="cadeira-presidente-python-fly-girata3ria-reclinavel-couro-sintatico-marrom-MLB62276296.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_896529-MLA98735006295_112025-O.webp" alt="Cadeira Presidente Python Fly Giratória Reclinável Couro ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Cadeira Presidente Python Fly Giratória Reclinável Couro ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="cadeira-presidente-python-fly-giratoria-reclinavel-couro-sintetico-marrom-MLB62276296.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-img"><img src="https://http2.mlstatic.com/D_NQ_NP_720909-MLA99966292541_112025-O.webp" alt="Cooktop 5 Bocas A Gás Electrolux Mesa De Vidro Efficient ..."></div>
+                <div class="card-body">
+                    <div class="card-title">Cooktop 5 Bocas A Gás Electrolux Mesa De Vidro Efficient ...</div>
+                    <div class="card-price">R$</div>
+                    <a href="cooktop-5-bocas-a-gas-electrolux-mesa-de-vidro-efficient-grade-de-aco-fosco-ke5gr-bivolt-MLB50374350.html" class="btn-ninja">Ver Oferta</a>
+                </div>
+            </div>
         </div>
     </main>
-    <footer class="footer" style="margin-top: 60px; padding: 40px 0; border-top: 1px solid var(--border);">
+
+    <footer style="background: #0f172a; color: white; padding: 40px 0; margin-top: 60px; text-align: center;">
         <div class="container">
-            <p>© 2026 Compara Preço</p>
+            <p>&copy; 2026 Radar Ninja</p>
         </div>
     </footer>
 </body>
