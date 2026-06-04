@@ -1,5 +1,5 @@
 {
-  "last_generated": "2026-06-03T23:18:52.765682",
+  "last_generated": "2026-06-04T11:27:45.256419",
   "automated_articles": [
     {
       "id": "article-MLB17375584",
@@ -10,30 +10,12 @@
       "current_price": 60.0,
       "previous_price": 199.0,
       "status": "published",
-      "generated_at": "2026-06-03T23:18:52.765650",
+      "generated_at": "2026-06-04T11:27:45.256382",
       "content": "O Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red atingiu uma queda de 69% em seu preço. Agora disponível por apenas R$ 60.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
       "social_posts": [
         {
           "platform": "twitter",
           "content": "🔥 OFERTA: Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red com 69% de Desconto por apenas R$ 60.00! Confira no Radar Ninja."
-        }
-      ]
-    },
-    {
-      "id": "article-MLB23056909",
-      "title": "OFERTA: Perfume Árabe Feminino Yara Lattafa Eau De Parfum 100 Ml com 68% de Desconto",
-      "slug": "perfume-árabe-feminino-yara-lattafa-eau-de-parfum--queda-68",
-      "category": "Beleza",
-      "price_drop": 68,
-      "current_price": 96.0,
-      "previous_price": 300.0,
-      "status": "published",
-      "generated_at": "2026-06-03T23:18:52.765667",
-      "content": "O Perfume Árabe Feminino Yara Lattafa Eau De Parfum 100 Ml atingiu uma queda de 68% em seu preço. Agora disponível por apenas R$ 96.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
-      "social_posts": [
-        {
-          "platform": "twitter",
-          "content": "🔥 OFERTA: Perfume Árabe Feminino Yara Lattafa Eau De Parfum 100 Ml com 68% de Desconto por apenas R$ 96.00! Confira no Radar Ninja."
         }
       ]
     },
@@ -46,12 +28,30 @@
       "current_price": 48.0,
       "previous_price": 149.0,
       "status": "published",
-      "generated_at": "2026-06-03T23:18:52.765679",
+      "generated_at": "2026-06-04T11:27:45.256402",
       "content": "O Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127\\u002F220v atingiu uma queda de 67% em seu preço. Agora disponível por apenas R$ 48.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
       "social_posts": [
         {
           "platform": "twitter",
           "content": "🔥 OFERTA: Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127\\u002F220v com 67% de Desconto por apenas R$ 48.00! Confira no Radar Ninja."
+        }
+      ]
+    },
+    {
+      "id": "article-MLB25708528",
+      "title": "OFERTA: Perfume Asad Elixir Lattafa Árabe Original Nota Fiscal com 67% de Desconto",
+      "slug": "perfume-asad-elixir-lattafa-árabe-original-nota-fi-queda-67",
+      "category": "Beleza",
+      "price_drop": 67,
+      "current_price": 48.0,
+      "previous_price": 149.0,
+      "status": "published",
+      "generated_at": "2026-06-04T11:27:45.256416",
+      "content": "O Perfume Asad Elixir Lattafa Árabe Original Nota Fiscal atingiu uma queda de 67% em seu preço. Agora disponível por apenas R$ 48.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "content": "🔥 OFERTA: Perfume Asad Elixir Lattafa Árabe Original Nota Fiscal com 67% de Desconto por apenas R$ 48.00! Confira no Radar Ninja."
         }
       ]
     }
@@ -62,12 +62,12 @@
       "product_name": "Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red"
     },
     {
-      "product_id": "MLB23056909",
-      "product_name": "Perfume Árabe Feminino Yara Lattafa Eau De Parfum 100 Ml"
-    },
-    {
       "product_id": "MLB15238956",
       "product_name": "Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127\\u002F220v"
+    },
+    {
+      "product_id": "MLB25708528",
+      "product_name": "Perfume Asad Elixir Lattafa Árabe Original Nota Fiscal"
     }
   ]
 }

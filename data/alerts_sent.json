@@ -28,5 +28,15 @@
     "timestamp": "2026-06-03T23:18:53.666024",
     "subject": "Pipeline Error",
     "message": "Falha no script seo_health_check.py: Traceback (most recent call last):\n  File \"/home/runner/work/comparapreco.github.io/comparapreco.github.io/scripts/seo_health_check.py\", line 3, in <module>\n    from bs4 import BeautifulSoup\nModuleNot"
+  },
+  {
+    "timestamp": "2026-06-04T11:27:45.034732",
+    "subject": "Pipeline Error",
+    "message": "Falha no script fetch_products_realtime.py: Traceback (most recent call last):\n  File \"/home/runner/work/comparapreco.github.io/comparapreco.github.io/scripts/fetch_products_realtime.py\", line 15, in <module>\n    from bs4 import BeautifulSoup\nM"
+  },
+  {
+    "timestamp": "2026-06-04T11:27:46.027006",
+    "subject": "Pipeline Error",
+    "message": "Falha no script seo_health_check.py: Traceback (most recent call last):\n  File \"/home/runner/work/comparapreco.github.io/comparapreco.github.io/scripts/seo_health_check.py\", line 3, in <module>\n    from bs4 import BeautifulSoup\nModuleNot"
   }
 ]
