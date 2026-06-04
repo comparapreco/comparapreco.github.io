@@ -23,7 +23,7 @@ INPUT_FILES = [
     "data/raw_products.json",
 ]
 DATABASE_FILE = "data/database/all_products.json"
-MAX_DB_SIZE = 500          # Máximo de produtos no banco
+MAX_DB_SIZE = 2000 # Aumentado de 500 para 2000 para suportar volume de promoções rápidas          # Máximo de produtos no banco
 MAX_AGE_DAYS = 30          # Remover produtos com mais de 30 dias sem atualização
 
 

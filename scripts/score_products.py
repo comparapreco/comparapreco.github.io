@@ -7,24 +7,27 @@ SCORED_FILE = "data/scored_products.json"
 METRICS_FILE = "data/cycle_metrics.json"
 
 # Configurações de Filtro
-MIN_QUALITY_SCORE = 55 # Reduzido de 70 para 55 para permitir mais ofertas reais
-MAX_DISCOUNT_PCT = 85  # Aumentado de 70 para 85 (existem queimas de estoque reais de 80%)
+MIN_QUALITY_SCORE = 30 # Nível 1: Quase tudo que é válido entra (Reduzido de 55 para 30)
+MAX_DISCOUNT_PCT = 95  # Nível 1: Aceita descontos agressivos de até 95% (Ex: cupons/bugs reais)
 
 def calculate_score(product):
     score = 50 # Base
     
-    # 1. Foto Obrigatória (CRÍTICO)
-    # Bloqueia se não tiver imagem ou se for placeholder comum
+    # 1. Foto e Preço Obrigatórios (CRÍTICO NÍVEL 1)
     image = product.get('image') or product.get('thumbnail') or ''
+    price = product.get('price', 0)
     if not image or 'placeholder' in image.lower() or 'no-image' in image.lower():
         return 0, "Sem imagem válida"
+    if price <= 0:
+        return 0, "Sem preço válido"
 
-    # 2. Desconto Real
+    # 2. Desconto Real (NÍVEL 1)
     discount = product.get('custom_discount_pct', 0)
     if discount > MAX_DISCOUNT_PCT:
         return 0, "Anomalia de preço (desconto excessivo)"
     
-    score += (discount * 0.6) # Aumentado peso do desconto
+    # Bônus por desconto agressivo (Nível 1 prioriza preço baixo)
+    score += (discount * 0.8)
 
     # 3. Marcas Premium
     premium_brands = ['apple', 'samsung', 'motorola', 'xiaomi', 'dell', 'asus', 'lg', 'philips', 'sony']
