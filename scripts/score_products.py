@@ -7,8 +7,8 @@ SCORED_FILE = "data/scored_products.json"
 METRICS_FILE = "data/cycle_metrics.json"
 
 # Configurações de Filtro
-MIN_QUALITY_SCORE = 70
-MAX_DISCOUNT_PCT = 70  # Acima disso é considerado anomalia (preço falso)
+MIN_QUALITY_SCORE = 55 # Reduzido de 70 para 55 para permitir mais ofertas reais
+MAX_DISCOUNT_PCT = 85  # Aumentado de 70 para 85 (existem queimas de estoque reais de 80%)
 
 def calculate_score(product):
     score = 50 # Base
@@ -24,7 +24,7 @@ def calculate_score(product):
     if discount > MAX_DISCOUNT_PCT:
         return 0, "Anomalia de preço (desconto excessivo)"
     
-    score += (discount * 0.5) # Até +35 pontos por desconto
+    score += (discount * 0.6) # Aumentado peso do desconto
 
     # 3. Marcas Premium
     premium_brands = ['apple', 'samsung', 'motorola', 'xiaomi', 'dell', 'asus', 'lg', 'philips', 'sony']

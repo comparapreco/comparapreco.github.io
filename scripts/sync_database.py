@@ -78,11 +78,12 @@ def sync():
     removed = 0
     filtered = {}
     for p_id, p in existing_dict.items():
-        data_coleta = p.get("data_coleta", "")
-        if data_coleta:
+        # Unificar timestamps: usa last_seen ou data_coleta
+        ts = p.get("last_seen") or p.get("data_coleta", "")
+        if ts:
             try:
-                coleta_dt = datetime.fromisoformat(data_coleta[:19])
-                if coleta_dt < cutoff:
+                ts_dt = datetime.fromisoformat(ts[:19])
+                if ts_dt < cutoff:
                     removed += 1
                     continue
             except Exception:
@@ -92,10 +93,10 @@ def sync():
     # Limitar tamanho do banco — manter os mais recentes
     final_list = list(filtered.values())
     if len(final_list) > MAX_DB_SIZE:
-        # Ordenar por data de coleta (mais recentes primeiro)
+        # Ordenar por last_seen (mais recentes primeiro) para garantir rotatividade
         def sort_key(p):
-            dc = p.get("data_coleta", "")
-            return dc if dc else "0"
+            ts = p.get("last_seen") or p.get("data_coleta", "")
+            return ts if ts else "0"
         final_list.sort(key=sort_key, reverse=True)
         final_list = final_list[:MAX_DB_SIZE]
 

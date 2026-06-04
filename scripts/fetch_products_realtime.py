@@ -200,6 +200,7 @@ def scrape_search(search_type: str, search_value: str, page: int = 1) -> List[Di
                 "custom_affiliate_url": affiliate_url,
                 "status": "active",
                 "data_coleta": datetime.now().isoformat(),
+                "last_seen": datetime.now().isoformat(),
             })
 
         return products
