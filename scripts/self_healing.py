@@ -40,6 +40,7 @@ def run_pipeline():
         "build_homepage.py", 
         "generate_hubs.py",
         "build_sitemap.py",
+        "generate_sitemap_dynamic.py",
         "seo_health_check.py",
         "health_monitor.py"
     ]
