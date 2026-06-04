@@ -98,6 +98,33 @@
         }
         .btn-ninja:hover { background: var(--primary-dark); transform: scale(1.05); }
     </style>
+    <script>
+        // Lógica de Redirecionamento da Extensão
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const linkOriginal = params.get('origem');
+            const siteOrigem = params.get('site');
+
+            if (linkOriginal) {
+                document.addEventListener('DOMContentLoaded', () => {
+                    const banner = document.createElement('div');
+                    banner.style.cssText = 'background: #00c853; color: white; padding: 15px; text-align: center; font-weight: bold; position: sticky; top: 0; z-index: 9999; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; gap: 15px;';
+                    
+                    let mensagem = '🛒 Você estava indo para o Mercado Livre!';
+                    if (siteOrigem && siteOrigem.includes('amazon')) mensagem = '🛒 Você estava indo para a Amazon!';
+                    if (siteOrigem && siteOrigem.includes('magazineluiza')) mensagem = '🛒 Você estava indo para o Magalu!';
+
+                    banner.innerHTML = `
+                        <span>${mensagem} Veja nossas ofertas exclusivas antes:</span>
+                        <a href="${linkOriginal}" style="background: white; color: #333; padding: 8px 20px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: transform 0.2s;">
+                            Continuar para a Loja →
+                        </a>
+                    `;
+                    document.body.prepend(banner);
+                });
+            }
+        })();
+    </script>
 </head>
 <body>
     <header class="header" style="background: #0f172a; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px 0;">
@@ -107,6 +134,7 @@
                 <a href="/ofertas-hoje" style="color: white; text-decoration: none; font-weight: 600;">Ofertas</a>
                 <a href="/comparar" style="color: white; text-decoration: none; font-weight: 600;">Comparar</a>
                 <a href="/melhores-2026" style="color: white; text-decoration: none; font-weight: 600;">Rankings</a>
+                <a href="/assets/extension_radar_ninja.zip" style="background: #00c853; color: white; padding: 8px 15px; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 14px;">📥 Extensão Ninja</a>
                 <a href="/pro" class="btn-ninja">NINJA PRO 🚀</a>
             </nav>
         </div>
