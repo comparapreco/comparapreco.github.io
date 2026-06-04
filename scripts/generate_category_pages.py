@@ -163,19 +163,30 @@ def money(value: float) -> str:
 
 
 def product_card(product: dict[str, Any]) -> str:
-    title = html.escape(str(product.get('title') or product.get('name') or 'Produto em oferta'))
-    url = html.escape(affiliate_url(product), quote=True)
+    import sys
+    sys.path.append(str(ROOT / 'scripts'))
+    from generate_pages import slugify
+    
+    p_name = str(product.get('title') or product.get('name') or 'Produto em oferta')
+    title = html.escape(p_name)
+    p_slug = slugify(p_name)
+    p_cat = product.get('custom_category_slug', 'outros')
+    p_id = product.get('id', '0')
+    
+    # URL interna para a página do produto
+    url = f"../../ofertas/{p_cat}/{p_slug}-{p_id}.html"
+    
     img = html.escape(str(product.get('image') or product.get('thumbnail') or ''), quote=True)
     current = money(price(product))
     disc = discount(product)
     image_html = f'<img src="{img}" alt="{title}" loading="lazy"/>' if img else '<div class="no-image">Oferta</div>'
     badge = f'<span class="discount-badge">-{disc}%</span>' if disc else '<span class="discount-badge neutral">Oferta</span>'
     return f'''<article class="strategic-product-card">
-      <a href="{url}" target="_blank" rel="noopener noreferrer sponsored" title="{title}">
+      <a href="{url}" title="{title}">
         <div class="product-image-wrap">{image_html}{badge}</div>
         <h3>{title}</h3>
         <p class="price">{current}</p>
-        <span class="cta">Ver oferta no Mercado Livre</span>
+        <span class="cta">Ver Detalhes da Oferta 🥷</span>
       </a>
     </article>'''
 

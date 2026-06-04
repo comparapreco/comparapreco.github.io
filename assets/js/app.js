@@ -23,6 +23,15 @@ function getRandomProducts(products, count) {
     return [...products].sort(() => Math.random() - 0.5).slice(0, count);
 }
 
+function slugify(text) {
+    return text.toString().toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remove acentos
+        .replace(/\s+/g, '-')           // Substitui espaços por -
+        .replace(/[^\w\-]+/g, '')       // Remove caracteres não alfanuméricos
+        .replace(/\-\-+/g, '-')         // Substitui múltiplos - por um único -
+        .trim();                        // Remove espaços no início e fim
+}
+
 // ========== SKELETON LOADING ==========
 function createSkeletonCard() {
     return `
@@ -80,6 +89,10 @@ function createProductCard(p) {
 
     const badges = getBadges(discount);
 
+    const p_slug = slugify(p.name);
+    const p_cat = p.custom_category_slug || 'outros';
+    const internalUrl = `/ofertas/${p_cat}/${p_slug}-${p.id}.html`;
+
     return `
         <div class="product-card">
             ${badges.left}
@@ -97,7 +110,7 @@ function createProductCard(p) {
                 <div class="current-price">R$ ${formatPrice(price)}</div>
                 ${savings > 1 ? `<span class="savings">💰 Economize R$ ${formatPrice(savings)}</span>` : ''}
             </div>
-            <a href="${p.custom_affiliate_url}" class="btn-buy" target="_blank" rel="noopener noreferrer">
+            <a href="${internalUrl}" class="btn-buy">
                 Ver Oferta Ninja 🚀
             </a>
         </div>
