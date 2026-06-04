@@ -1,6 +1,6 @@
 {
   "status": "OK",
-  "timestamp": "2026-06-04T18:15:13.950136",
+  "timestamp": "2026-06-04T19:32:16.511505",
   "issues": [],
   "audit": [
     {
@@ -13,13 +13,6 @@
     {
       "id": "MLB17449992",
       "name": "Aquecedor De \u00c1gua El\u00e9trico Lorenzetti Vers\u00e1til 3 Temperaturas Branco 220v 5500w Gn",
-      "captured": true,
-      "processed": true,
-      "published": true
-    },
-    {
-      "id": "MLB68765218",
-      "name": "Purificador \u00c1gua E-due Equilibrium Grafite Ibbl Bivolt 127\\u002F220v",
       "captured": true,
       "processed": true,
       "published": true
@@ -39,15 +32,15 @@
       "published": true
     },
     {
-      "id": "MLB50374350",
-      "name": "Cooktop 5 Bocas A G\u00e1s Electrolux Mesa De Vidro Efficient Grade De A\u00e7o Fosco (ke5gr) Bivolt",
+      "id": "MLB68765218",
+      "name": "Purificador \u00c1gua E-due Equilibrium Grafite Ibbl Bivolt 127\\u002F220v",
       "captured": true,
       "processed": true,
       "published": true
     },
     {
-      "id": "MLB35556218",
-      "name": "Ventilador De Teto C\\u002F Controle 6 Vel. Fenix Ventisol 127\\u002F220v",
+      "id": "MLB50374350",
+      "name": "Cooktop 5 Bocas A G\u00e1s Electrolux Mesa De Vidro Efficient Grade De A\u00e7o Fosco (ke5gr) Bivolt",
       "captured": true,
       "processed": true,
       "published": true
@@ -60,6 +53,13 @@
       "published": true
     },
     {
+      "id": "MLB35556218",
+      "name": "Ventilador De Teto C\\u002F Controle 6 Vel. Fenix Ventisol 127\\u002F220v",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
       "id": "MLB22511808",
       "name": "Aspirador De P\u00f3 Vertical E Port\u00e1til Wap High Speed Plus 1350w 3 Em 1 Cinza\\u002Fvermelho 127v",
       "captured": true,
@@ -67,8 +67,8 @@
       "published": true
     },
     {
-      "id": "MLB6207755",
-      "name": "Micro-ondas Cm020bf 20 Litros Espelhado Com Fun\u00e7\u00e3o Descongelar Cor Cinza E Inox Consul 127v",
+      "id": "MLB6077910",
+      "name": "Modelador Decachos2em1\\u002Fpente De Ar Quente Com \u00cdons Negativos Preto 127\\u002F220v",
       "captured": true,
       "processed": true,
       "published": true

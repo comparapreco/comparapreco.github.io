@@ -86,6 +86,17 @@ def run_pipeline():
         return False
 
     logger.info("✅ ASSERTIONS PASS: Banco e Site atualizados com sucesso.")
+    
+    # Publicar no GitHub Pages
+    logger.info("📤 Publicando atualizações no GitHub...")
+    try:
+        subprocess.run(["git", "add", "."], check=True)
+        subprocess.run(["git", "commit", "-m", f"🤖 Auto-update: {datetime.now().strftime('%Y-%m-%d %H:%M')}"], check=True)
+        subprocess.run(["git", "push", "origin", "main"], check=True)
+        logger.info("🚀 Publicação concluída com sucesso!")
+    except Exception as e:
+        logger.error(f"❌ Erro na publicação: {e}")
+
     run_backup()
     
     # Gerar relatório de execução
