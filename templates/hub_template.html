@@ -1,38 +1,35 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
-    <script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag("js", new Date());
       gtag("config", "G-P0X4Z9Y7B2");
     </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{seo.title}}</title>
-    <meta name="description" content="{{meta.description}}">
-    <link rel="canonical" href="{{canonical.url}}">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{canonical.url}}">
-    <meta property="og:title" content="{{seo.title}}">
-    <meta property="og:description" content="{{meta.description}}">
-    <meta property="og:image" content="{{og.image}}">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{canonical.url}}">
-    <meta property="twitter:title" content="{{seo.title}}">
-    <meta property="twitter:description" content="{{meta.description}}">
-    <meta property="twitter:image" content="{{og.image}}">
-
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{{seo.title}}</title>
+<meta content="{{meta.description}}" name="description"/>
+<link href="{{canonical.url}}" rel="canonical"/>
+<!-- Open Graph / Facebook -->
+<meta content="website" property="og:type"/>
+<meta content="{{canonical.url}}" property="og:url"/>
+<meta content="{{seo.title}}" property="og:title"/>
+<meta content="{{meta.description}}" property="og:description"/>
+<meta content="{{og.image}}" property="og:image"/>
+<!-- Twitter -->
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="{{canonical.url}}" property="twitter:url"/>
+<meta content="{{seo.title}}" property="twitter:title"/>
+<meta content="{{meta.description}}" property="twitter:description"/>
+<meta content="{{og.image}}" property="twitter:image"/>
+<link href="../../assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         .hub-content { padding: 20px; background: var(--card); border-radius: 12px; margin-top: 20px; }
         .hub-content h1, .hub-content h2, .hub-content h3 { color: var(--text); margin-top: 30px; margin-bottom: 15px; }
         .hub-content p { line-height: 1.7; margin-bottom: 15px; }
@@ -51,43 +48,41 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container header-inner">
-            <a class="logo" href="../../">🥷 <strong>Radar Ninja</strong></a>
-            <div class="search-bar">
-                <input id="searchInput" placeholder="Buscar ofertas..." type="text">
-            </div>
-            <button id="themeToggle" style="background:none; border:none; cursor:pointer; font-size:20px;">🌙</button>
-        </div>
-    </header>
-    <nav class="cat-nav">
-        <div class="container cat-tabs">
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="../../">🥷 <strong>Radar Ninja</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle" style="background:none; border:none; cursor:pointer; font-size:20px;">🌙</button>
+</div>
+</header>
+<nav class="cat-nav">
+<div class="container cat-tabs">
             {{nav.tabs}}
         </div>
-    </nav>
-    <main class="container">
-        <nav class="breadcrumb">
-            <a href="../../">Home</a> &gt; <a href="../../categorias/">Categorias</a> &gt; {{hub.name}}
+</nav>
+<main class="container">
+<nav class="breadcrumb">
+<a href="../../">Home</a> &gt; Categorias &gt; {{hub.name}}
         </nav>
-        <section class="section">
-            <div class="hub-content">
+<section class="section">
+<div class="hub-content">
                 {{hub.content}}
 
                 <div class="faq-section">
-                    <h2>Perguntas Frequentes sobre {{hub.name}}</h2>
+<h2>Perguntas Frequentes sobre {{hub.name}}</h2>
                     {{faq.content}}
                 </div>
-
-                <div class="related-links">
-                    <h2>Links Úteis</h2>
-                    <ul>
+<div class="related-links">
+<h2>Links Úteis</h2>
+<ul>
                         {{related.links}}
                     </ul>
-                </div>
-            </div>
-        </section>
-
-        <script type="application/ld+json" class="faq-schema">
+</div>
+</div>
+</section>
+<script class="faq-schema" type="application/ld+json">
             {
               "@context": "https://schema.org",
               "@type": "FAQPage",
@@ -96,38 +91,38 @@
               ]
             }
         </script>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; margin-bottom: 40px;">
-                <div style="max-width: 300px;">
-                    <h2 style="color: white; margin-bottom: 16px;">🥷 Radar Ninja</h2>
-                    <p style="color: #94a3b8; font-size: 14px;">O seu rastreador de ofertas em tempo real. Economize tempo e dinheiro com curadoria profissional.</p>
-                </div>
-                <div>
-                    <h3 style="color: white; margin-bottom: 16px; font-size: 16px;">Categorias</h3>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                        <a href="../../categorias/tecnologia/" style="color: #94a3b8; text-decoration: none; font-size: 14px;">Tecnologia</a>
-                        <a href="../../categorias/beleza/" style="color: #94a3b8; text-decoration: none; font-size: 14px;">Beleza</a>
-                        <a href="../../categorias/casa/" style="color: #94a3b8; text-decoration: none; font-size: 14px;">Casa</a>
-                        <a href="../../categorias/gamer/" style="color: #94a3b8; text-decoration: none; font-size: 14px;">Gamer</a>
-                        <a href="../../categorias/moveis/" style="color: #94a3b8; text-decoration: none; font-size: 14px;">Móveis</a>
-                    </div>
-                </div>
-                <div>
-                    <h3 style="color: white; margin-bottom: 16px; font-size: 16px;">Institucional</h3>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <a href="../../sobre/" style="color: #94a3b8; text-decoration: none; font-size: 14px;">Sobre o Radar</a>
-                        <a href="../../privacidade/" style="color: #94a3b8; text-decoration: none; font-size: 14px;">Privacidade</a>
-                        <a href="../../termos/" style="color: #94a3b8; text-decoration: none; font-size: 14px;">Termos de Uso</a>
-                    </div>
-                </div>
-            </div>
-            <div style="border-top: 1px solid #334155; padding-top: 30px; text-align: center; color: #64748b; font-size: 13px;">
-                <p>© 2026 Radar Ninja. Preços e disponibilidade sujeitos a alteração pelas lojas parceiras.</p>
-            </div>
-        </div>
-    </footer>
-    <script src="../../assets/js/app.js"></script>
+</main>
+<footer class="footer">
+<div class="container">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; margin-bottom: 40px;">
+<div style="max-width: 300px;">
+<h2 style="color: white; margin-bottom: 16px;">🥷 Radar Ninja</h2>
+<p style="color: #94a3b8; font-size: 14px;">O seu rastreador de ofertas em tempo real. Economize tempo e dinheiro com curadoria profissional.</p>
+</div>
+<div>
+<h3 style="color: white; margin-bottom: 16px; font-size: 16px;">Categorias</h3>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+Tecnologia
+Beleza
+Casa
+Gamer
+Móveis
+</div>
+</div>
+<div>
+<h3 style="color: white; margin-bottom: 16px; font-size: 16px;">Institucional</h3>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+Sobre o Radar
+Privacidade
+Termos de Uso
+</div>
+</div>
+</div>
+<div style="border-top: 1px solid #334155; padding-top: 30px; text-align: center; color: #64748b; font-size: 13px;">
+<p>© 2026 Radar Ninja. Preços e disponibilidade sujeitos a alteração pelas lojas parceiras.</p>
+</div>
+</div>
+</footer>
+<script src="../../assets/js/app.js"></script>
 </body>
 </html>

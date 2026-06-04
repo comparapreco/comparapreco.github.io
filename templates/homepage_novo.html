@@ -1,179 +1,171 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compara Preço — As Melhores Ofertas do Mercado Livre Hoje</title>
-  <meta name="description" content="Economize com as melhores ofertas curadas do Mercado Livre. Descubra produtos com desconto de até 70% em eletrônicos, casa, beleza e muito mais.">
-  <link href="https://comparapreco.github.io/" rel="canonical">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Compara Preço — As Melhores Ofertas do Mercado Livre Hoje</title>
+<meta content="Economize com as melhores ofertas curadas do Mercado Livre. Descubra produtos com desconto de até 70% em eletrônicos, casa, beleza e muito mais." name="description"/>
+<link href="https://comparapreco.github.io/" rel="canonical"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-P0X4Z9Y7B2');
   </script>
-  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
-  <meta name="google-adsense-account" content="ca-pub-4896859041377751">
+<meta content="ca-pub-4896859041377751" name="google-adsense-account"/>
+<meta content="ca-pub-4896859041377751" name="google-adsense-account"/>
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="logo" href="/">📊 <strong>Compara Preço</strong></a>
-      <div class="search-bar">
-        <input id="searchInput" placeholder="Buscar ofertas..." type="text">
-      </div>
-      <button id="themeToggle">🌙</button>
-    </div>
-  </header>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="/">📊 <strong>Compara Preço</strong></a>
+<div class="search-bar">
+<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
+</div>
+<button id="themeToggle">🌙</button>
+</div>
+</header>
+<nav class="cat-nav">
+<div class="container cat-tabs" id="catTabs">
+<a class="cat-tab active" href="/">Início</a>
+📰 Blog
+Celulares
+Informática
+Eletrodomésticos
+TV e Vídeo
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="main-hero">
+<div class="container">
+<h1>🔥 As Melhores Ofertas do Dia</h1>
+<p>+ de 5.000 ofertas curadas e atualizadas automaticamente pelo nosso robô.</p>
+<div class="hero-btns">
+<a class="btn btn-white" href="#featuredGrid">Ver Promoções</a>
+Ler Blog
+</div>
+</div>
+</section>
+<!-- Stats Bar -->
+<div class="container">
+<div class="stats-bar" id="statsBar">
+<div class="stat-card">
+<span class="stat-value">📦 5.000+</span>
+<span class="stat-label">Produtos</span>
+</div>
+<div class="stat-card">
+<span class="stat-value">💸 35%</span>
+<span class="stat-label">Economia Média</span>
+</div>
+<div class="stat-card">
+<span class="stat-value">🛒 1.250+</span>
+<span class="stat-label">Ofertas Hoje</span>
+</div>
+<div class="stat-card">
+<span class="stat-value">⚡ Ativo</span>
+<span class="stat-label">Atualizado Agora</span>
+</div>
+</div>
+</div>
+<!-- Trust Bar -->
+<div class="container">
+<div class="trust-bar">
+<div class="trust-item">✓ Atualização automática</div>
+<div class="trust-item">✓ Dados oficiais ML</div>
+<div class="trust-item">✓ Comparação real</div>
+<div class="trust-item">✓ Ofertas verificadas</div>
+</div>
+</div>
+<!-- Blog Section - Destacado -->
+<section class="blog-section container" style="margin: 60px auto; padding: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; color: white;">
+<div class="section-header" style="text-align: center; margin-bottom: 40px;">
+<h2 style="color: white; font-size: 32px;">📰 Últimas Notícias e Guias</h2>
+<p style="color: rgba(255,255,255,0.9); font-size: 16px;">Dicas, análises e guias completos para você economizar mais</p>
+</div>
+<div class="blog-grid" id="blogGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+<!-- Preenchido via JS -->
+</div>
+<div style="text-align: center; margin-top: 30px;">
+Ver Todos os Artigos →
+</div>
+</section>
+<!-- Featured Products -->
+<section class="section container">
+<div class="section-header">
+<h2>🎯 Melhores Ofertas</h2>
+<p>Produtos com os maiores descontos de hoje</p>
+</div>
+<div class="products-grid" id="featuredGrid">
+<!-- Preenchido via JS -->
+</div>
+</section>
+<!-- Categories Section -->
+<section class="section container">
+<div class="section-header">
+<h2>🧭 Explorar Categorias</h2>
+</div>
+<div class="categories-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
 
-  <nav class="cat-nav">
-    <div class="container cat-tabs" id="catTabs">
-      <a class="cat-tab active" href="/">Início</a>
-      <a class="cat-tab" href="noticias/">📰 Blog</a>
-      <a class="cat-tab" href="categorias/celulares/">Celulares</a>
-      <a class="cat-tab" href="categorias/informatica/">Informática</a>
-      <a class="cat-tab" href="categorias/eletrodomesticos/">Eletrodomésticos</a>
-      <a class="cat-tab" href="categorias/tv-e-video/">TV e Vídeo</a>
-    </div>
-  </nav>
+<div style="font-size: 32px; margin-bottom: 10px;">📱</div>
+<div style="font-weight: bold;">Celulares</div>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="main-hero">
-      <div class="container">
-        <h1>🔥 As Melhores Ofertas do Dia</h1>
-        <p>+ de 5.000 ofertas curadas e atualizadas automaticamente pelo nosso robô.</p>
-        <div class="hero-btns">
-          <a class="btn btn-white" href="#featuredGrid">Ver Promoções</a>
-          <a class="btn btn-outline-white" href="noticias/">Ler Blog</a>
-        </div>
-      </div>
-    </section>
 
-    <!-- Stats Bar -->
-    <div class="container">
-      <div class="stats-bar" id="statsBar">
-        <div class="stat-card">
-          <span class="stat-value">📦 5.000+</span>
-          <span class="stat-label">Produtos</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-value">💸 35%</span>
-          <span class="stat-label">Economia Média</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-value">🛒 1.250+</span>
-          <span class="stat-label">Ofertas Hoje</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-value">⚡ Ativo</span>
-          <span class="stat-label">Atualizado Agora</span>
-        </div>
-      </div>
-    </div>
+<div style="font-size: 32px; margin-bottom: 10px;">💻</div>
+<div style="font-weight: bold;">Informática</div>
 
-    <!-- Trust Bar -->
-    <div class="container">
-      <div class="trust-bar">
-        <div class="trust-item">✓ Atualização automática</div>
-        <div class="trust-item">✓ Dados oficiais ML</div>
-        <div class="trust-item">✓ Comparação real</div>
-        <div class="trust-item">✓ Ofertas verificadas</div>
-      </div>
-    </div>
 
-    <!-- Blog Section - Destacado -->
-    <section class="blog-section container" style="margin: 60px auto; padding: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; color: white;">
-      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
-        <h2 style="color: white; font-size: 32px;">📰 Últimas Notícias e Guias</h2>
-        <p style="color: rgba(255,255,255,0.9); font-size: 16px;">Dicas, análises e guias completos para você economizar mais</p>
-      </div>
-      <div class="blog-grid" id="blogGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-        <!-- Preenchido via JS -->
-      </div>
-      <div style="text-align: center; margin-top: 30px;">
-        <a href="noticias/" class="btn" style="background: white; color: #667eea; padding: 12px 30px; font-weight: bold;">Ver Todos os Artigos →</a>
-      </div>
-    </section>
+<div style="font-size: 32px; margin-bottom: 10px;">🏠</div>
+<div style="font-weight: bold;">Eletrodomésticos</div>
 
-    <!-- Featured Products -->
-    <section class="section container">
-      <div class="section-header">
-        <h2>🎯 Melhores Ofertas</h2>
-        <p>Produtos com os maiores descontos de hoje</p>
-      </div>
-      <div class="products-grid" id="featuredGrid">
-        <!-- Preenchido via JS -->
-      </div>
-    </section>
 
-    <!-- Categories Section -->
-    <section class="section container">
-      <div class="section-header">
-        <h2>🧭 Explorar Categorias</h2>
-      </div>
-      <div class="categories-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
-        <a href="categorias/celulares/" class="category-card" style="padding: 20px; text-align: center; border: 2px solid var(--border); border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s;">
-          <div style="font-size: 32px; margin-bottom: 10px;">📱</div>
-          <div style="font-weight: bold;">Celulares</div>
-        </a>
-        <a href="categorias/informatica/" class="category-card" style="padding: 20px; text-align: center; border: 2px solid var(--border); border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s;">
-          <div style="font-size: 32px; margin-bottom: 10px;">💻</div>
-          <div style="font-weight: bold;">Informática</div>
-        </a>
-        <a href="categorias/eletrodomesticos/" class="category-card" style="padding: 20px; text-align: center; border: 2px solid var(--border); border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s;">
-          <div style="font-size: 32px; margin-bottom: 10px;">🏠</div>
-          <div style="font-weight: bold;">Eletrodomésticos</div>
-        </a>
-        <a href="categorias/tv-e-video/" class="category-card" style="padding: 20px; text-align: center; border: 2px solid var(--border); border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s;">
-          <div style="font-size: 32px; margin-bottom: 10px;">📺</div>
-          <div style="font-weight: bold;">TV e Vídeo</div>
-        </a>
-        <a href="categorias/beleza/" class="category-card" style="padding: 20px; text-align: center; border: 2px solid var(--border); border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s;">
-          <div style="font-size: 32px; margin-bottom: 10px;">💄</div>
-          <div style="font-weight: bold;">Beleza</div>
-        </a>
-        <a href="categorias/games/" class="category-card" style="padding: 20px; text-align: center; border: 2px solid var(--border); border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s;">
-          <div style="font-size: 32px; margin-bottom: 10px;">🎮</div>
-          <div style="font-weight: bold;">Games</div>
-        </a>
-      </div>
-    </section>
-  </main>
+<div style="font-size: 32px; margin-bottom: 10px;">📺</div>
+<div style="font-weight: bold;">TV e Vídeo</div>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h3>Compara Preço</h3>
-          <p>O seu assistente inteligente para compras online. Monitoramos milhares de produtos para garantir que você pague o menor preço real.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Navegação</h4>
-          <a href="/">Início</a>
-          <a href="noticias/">Blog</a>
-          <a href="sobre/">Sobre Nós</a>
-          <a href="contato/">Contato</a>
-        </div>
-        <div class="footer-col">
-          <h4>Institucional</h4>
-          <a href="privacidade/">Privacidade</a>
-          <a href="termos/">Termos de Uso</a>
-          <a href="quem-somos/">Quem Somos</a>
-          <a href="metodologia/">Metodologia</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Compara Preço. Todos os direitos reservados. Atualizado via API oficial.</p>
-      </div>
-    </div>
-  </footer>
 
-  <script src="assets/js/app.js"></script>
-  <script>
+<div style="font-size: 32px; margin-bottom: 10px;">💄</div>
+<div style="font-weight: bold;">Beleza</div>
+
+
+<div style="font-size: 32px; margin-bottom: 10px;">🎮</div>
+<div style="font-weight: bold;">Games</div>
+
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-col">
+<h3>Compara Preço</h3>
+<p>O seu assistente inteligente para compras online. Monitoramos milhares de produtos para garantir que você pague o menor preço real.</p>
+</div>
+<div class="footer-col">
+<h4>Navegação</h4>
+<a href="/">Início</a>
+Blog
+Sobre Nós
+Contato
+</div>
+<div class="footer-col">
+<h4>Institucional</h4>
+Privacidade
+Termos de Uso
+Quem Somos
+Metodologia
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 Compara Preço. Todos os direitos reservados. Atualizado via API oficial.</p>
+</div>
+</div>
+</footer>
+<script src="assets/js/app.js"></script>
+<script>
     // Renderizar blog na homepage
     async function renderBlogOnHome() {
       try {
