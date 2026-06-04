@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Comparador de Produtos — Compara Preço</title>
-    <meta content="Compare produtos lado a lado. Veja preços, especificações, prós e contras. Descubra qual é o melhor para você." name="description"/>
-    <link href="https://comparapreco.github.io/comparar/" rel="canonical"/>
-    <link href="/assets/css/style.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
-    <meta content="ca-pub-4896859041377751" name="google-adsense-account"/>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Comparador de Produtos — Compara Preço</title>
+<meta content="Compare produtos lado a lado. Veja preços, especificações, prós e contras. Descubra qual é o melhor para você." name="description"/>
+<link href="https://comparapreco.github.io/comparar/" rel="canonical"/>
+<link href="/assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<meta content="ca-pub-4896859041377751" name="google-adsense-account"/>
+<style>
         .comparison-hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
@@ -85,58 +86,51 @@
     </style>
 </head>
 <body>
-    <header class="header"></header>
-
-    <section class="comparison-hero">
-        <div class="container">
-            <h1>⚖️ Comparador Inteligente</h1>
-            <p>A ferramenta definitiva para você não errar na compra e economizar de verdade.</p>
-        </div>
-    </section>
-
-    <main class="container">
-        <div class="search-container">
-            <div class="search-grid">
-                <div class="input-group">
-                    <label>Produto 1</label>
-                    <input id="product1" placeholder="Ex: iPhone 15 Pro Max" type="text"/>
-                </div>
-                <div class="vs-circle">VS</div>
-                <div class="input-group">
-                    <label>Produto 2</label>
-                    <input id="product2" placeholder="Ex: Samsung S24 Ultra" type="text"/>
-                </div>
-            </div>
-            <div class="compare-action">
-                <button class="btn btn-large" onclick="createComparison()">Comparar Agora 🚀</button>
-            </div>
-        </div>
-
-        <div class="affiliate-banner">
-            <div class="icon">🎁</div>
-            <div>
-                <h3>Ofertas Exclusivas do Dia</h3>
-                <p>Confira os menores preços selecionados por nossa equipe no Mercado Livre.</p>
-                <a href="https://www.mercadolivre.com.br/ofertas?matt_tool=vendas0nline" target="_blank" style="color: var(--primary); font-weight: 700; text-decoration: none;">Ver todas as ofertas →</a>
-            </div>
-        </div>
-
-        <h2 class="section-title">📊 Comparações em Alta</h2>
-        <div class="products-grid" id="comparisonsGrid">
-            <!-- Comparações populares serão carregadas aqui via JavaScript -->
-        </div>
-
-        <div style="margin: 60px 0; text-align: center; padding: 40px; background: var(--secondary); color: white; border-radius: 20px;">
-            <h2>Não encontrou o que procurava?</h2>
-            <p style="margin: 15px 0 25px; opacity: 0.8;">Nossa inteligência artificial monitora mais de 100 mil produtos diariamente.</p>
-            <a href="/ofertas-hoje" class="btn" style="display: inline-block; min-width: 200px;">Ver Ofertas do Dia</a>
-        </div>
-    </main>
-
-    <footer class="footer"></footer>
-
-    <script src="/assets/js/app.js"></script>
-    <script>
+<header class="header"></header>
+<section class="comparison-hero">
+<div class="container">
+<h1>⚖️ Comparador Inteligente</h1>
+<p>A ferramenta definitiva para você não errar na compra e economizar de verdade.</p>
+</div>
+</section>
+<main class="container">
+<div class="search-container">
+<div class="search-grid">
+<div class="input-group">
+<label>Produto 1</label>
+<input id="product1" placeholder="Ex: iPhone 15 Pro Max" type="text"/>
+</div>
+<div class="vs-circle">VS</div>
+<div class="input-group">
+<label>Produto 2</label>
+<input id="product2" placeholder="Ex: Samsung S24 Ultra" type="text"/>
+</div>
+</div>
+<div class="compare-action">
+<button class="btn btn-large" onclick="createComparison()">Comparar Agora 🚀</button>
+</div>
+</div>
+<div class="affiliate-banner">
+<div class="icon">🎁</div>
+<div>
+<h3>Ofertas Exclusivas do Dia</h3>
+<p>Confira os menores preços selecionados por nossa equipe no Mercado Livre.</p>
+<a href="https://www.mercadolivre.com.br/ofertas?matt_tool=vendas0nline" style="color: var(--primary); font-weight: 700; text-decoration: none;" target="_blank">Ver todas as ofertas →</a>
+</div>
+</div>
+<h2 class="section-title">📊 Comparações em Alta</h2>
+<div class="products-grid" id="comparisonsGrid">
+<!-- Comparações populares serão carregadas aqui via JavaScript -->
+</div>
+<div style="margin: 60px 0; text-align: center; padding: 40px; background: var(--secondary); color: white; border-radius: 20px;">
+<h2>Não encontrou o que procurava?</h2>
+<p style="margin: 15px 0 25px; opacity: 0.8;">Nossa inteligência artificial monitora mais de 100 mil produtos diariamente.</p>
+<a class="btn" href="../ofertas-hoje" style="display: inline-block; min-width: 200px;">Ver Ofertas do Dia</a>
+</div>
+</main>
+<footer class="footer"></footer>
+<script src="/assets/js/app.js"></script>
+<script>
         function createComparison() {
             const p1 = document.getElementById('product1').value.trim().toLowerCase().replace(/\s+/g, '-');
             const p2 = document.getElementById('product2').value.trim().toLowerCase().replace(/\s+/g, '-');
