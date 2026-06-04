@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-<head><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<head>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Página Não Encontrada (404) | Compara Preço</title>
 <meta content="A página que você procura não foi encontrada. Use nossa busca ou confira nossas melhores ofertas e guias de compra." name="description"/>
 <link href="https://comparapreco.github.io/404.html" rel="canonical"/>
-<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="/assets/css/style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
 <style>
     .error-container {
@@ -88,27 +88,11 @@
   gtag('js', new Date());
   gtag('config', 'G-P0X4Z9Y7B2');
 </script>
-<script>
-  // Rastreamento de cliques em afiliados
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href*="mercadolivre.com"]').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        gtag('event', 'affiliate_click', {
-          'event_category': 'engagement',
-          'event_label': this.href,
-          'link_url': this.href,
-          'product_name': this.getAttribute('title') || this.innerText
-        });
-      });
-    });
-  });
-</script>
-<meta content="ca-pub-4896859041377751" name="google-adsense-account"/>
 </head>
 <body>
 <header class="header">
 <div class="container header-inner">
-
+<a href="/" style="text-decoration: none; font-weight: 800; font-size: 1.5rem; color: var(--primary);">Compara Preço</a>
 <button id="themeToggle">🌙</button>
 </div>
 </header>
@@ -122,18 +106,17 @@
 </div>
 <h2>Páginas Recomendadas</h2>
 <div class="recommendations">
-
-<a class="rec-card" href="guias/melhor-celular-ate-1500/">
-<div class="rec-icon">📱</div>
-<div class="rec-title">Guia de Celulares</div>
+<a class="rec-card" href="/ofertas-hoje/">
+<div class="rec-icon">💰</div>
+<div class="rec-title">Ofertas de Hoje</div>
 </a>
-<a class="rec-card" href="tendencias/">
-<div class="rec-icon">📈</div>
-<div class="rec-title">Tendências</div>
+<a class="rec-card" href="/categorias/">
+<div class="rec-icon">📂</div>
+<div class="rec-title">Categorias</div>
 </a>
-<a class="rec-card" href="explodindo/">
-<div class="rec-icon">🔥</div>
-<div class="rec-title">Ofertas Quentes</div>
+<a class="rec-card" href="/noticias/">
+<div class="rec-icon">📰</div>
+<div class="rec-title">Notícias & Análises</div>
 </a>
 </div>
 </div>
@@ -142,10 +125,10 @@
 <div class="container">
 <p>© 2026 Compara Preço. Transparência e Tecnologia.</p>
 <div class="footer-links">
-<a href="sobre/">Sobre</a>
-<a href="contato/">Contato</a>
-<a href="privacidade/">Privacidade</a>
-<a href="disclaimer/">Disclaimer</a>
+<a href="/sobre/">Sobre</a>
+<a href="/contato/">Contato</a>
+<a href="/privacidade/">Privacidade</a>
+<a href="/disclaimer/">Disclaimer</a>
 </div>
 </div>
 </footer>
@@ -163,7 +146,7 @@
     document.getElementById('searchInput404').addEventListener('keydown', e => {
       if (e.key === 'Enter') {
         const q = e.target.value.trim();
-        if (q) window.location.href = `./?q=${encodeURIComponent(q)}`;
+        if (q) window.location.href = `/?q=${encodeURIComponent(q)}`;
       }
     });
   </script>
