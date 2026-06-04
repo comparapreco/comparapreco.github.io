@@ -37,6 +37,8 @@ def build_affiliate_url(product: dict) -> str:
     # Lógica para Mercado Livre
     if "mercadolivre.com.br" in parsed.netloc:
         params["matt_tool"] = [ML_AFILIADO_ID]
+        params["utm_source"] = ["social"]
+        params["utm_medium"] = ["ninja"]
         # Remove parâmetros que podem interferir se necessário
     
     # Lógica para Amazon
@@ -66,10 +68,21 @@ def process(input_p: str, output_p: str):
             product["custom_affiliate_url"] = new_url
             corrected += 1
             
-    logger.info(f"✅ Links de afiliado processados: {corrected} correções em {len(products)} produtos.")
+    # Garantia de Monetização: Remove produtos que não possuem link de afiliado válido (ML ou Amazon)
+    final_products = []
+    for p in products:
+        url = p.get("custom_affiliate_url", "")
+        if "mercadolivre.com.br" in url and "matt_tool=" in url:
+            final_products.append(p)
+        elif "amazon.com.br" in url and "tag=" in url:
+            final_products.append(p)
+        else:
+            logger.warning(f"🚫 Produto removido por falta de monetização: {p.get('name', 'Sem Nome')}")
+
+    logger.info(f"✅ Links de afiliado processados: {corrected} correções. {len(final_products)} produtos mantidos com monetização garantida.")
     
     with open(output_p, "w", encoding="utf-8") as f:
-        json.dump(products, f, ensure_ascii=False, indent=2)
+        json.dump(final_products, f, ensure_ascii=False, indent=2)
 
 if __name__ == "__main__":
     # Processar o banco de dados principal

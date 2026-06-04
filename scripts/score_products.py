@@ -16,8 +16,9 @@ def calculate_score(product):
     # 1. Foto e Preço Obrigatórios (CRÍTICO NÍVEL 1)
     image = product.get('image') or product.get('thumbnail') or ''
     price = product.get('price', 0)
-    if not image or 'placeholder' in image.lower() or 'no-image' in image.lower():
-        return 0, "Sem imagem válida"
+    # Garantia de Foto Real: Bloqueia placeholders, URLs vazias ou imagens genéricas
+    if not image or any(p in image.lower() for p in ['placeholder', 'no-image', 'sem-foto', 'sem-imagem', 'via.placeholder']):
+        return 0, "Bloqueado: Imagem ausente ou placeholder"
     if price <= 0:
         return 0, "Sem preço válido"
 

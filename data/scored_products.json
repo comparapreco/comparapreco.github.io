@@ -29,7 +29,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.988562",
     "last_seen": "2026-06-04T17:26:42.988564",
-    "quality_score": 95.8
+    "quality_score": 100
   },
   {
     "id": "MLB54961556",
@@ -93,7 +93,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.988680",
     "last_seen": "2026-06-04T17:26:42.988681",
-    "quality_score": 86.8
+    "quality_score": 92.4
   },
   {
     "id": "MLB1040287808",
@@ -109,7 +109,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.988692",
     "last_seen": "2026-06-04T17:26:42.988693",
-    "quality_score": 94.6
+    "quality_score": 100
   },
   {
     "id": "MLB27174916",
@@ -125,7 +125,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.988734",
     "last_seen": "2026-06-04T17:26:42.988735",
-    "quality_score": 70.4
+    "quality_score": 77.2
   },
   {
     "id": "MLB41540844",
@@ -141,7 +141,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.988750",
     "last_seen": "2026-06-04T17:26:42.988751",
-    "quality_score": 97.0
+    "quality_score": 100
   },
   {
     "id": "MLB50592250",
@@ -173,7 +173,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.988876",
     "last_seen": "2026-06-04T17:26:42.988877",
-    "quality_score": 94.6
+    "quality_score": 100
   },
   {
     "id": "MLB1040287791",
@@ -189,7 +189,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.988887",
     "last_seen": "2026-06-04T17:26:42.988889",
-    "quality_score": 95.8
+    "quality_score": 100
   },
   {
     "id": "MLB1040287802",
@@ -205,7 +205,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.988898",
     "last_seen": "2026-06-04T17:26:42.988899",
-    "quality_score": 95.8
+    "quality_score": 100
   },
   {
     "id": "MLB1027172669",
@@ -221,7 +221,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.988908",
     "last_seen": "2026-06-04T17:26:42.988909",
-    "quality_score": 97.6
+    "quality_score": 100
   },
   {
     "id": "MLB1027172667",
@@ -237,7 +237,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.988917",
     "last_seen": "2026-06-04T17:26:42.988918",
-    "quality_score": 98.2
+    "quality_score": 100
   },
   {
     "id": "MLB55034955",
@@ -269,7 +269,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989019",
     "last_seen": "2026-06-04T17:26:42.989021",
-    "quality_score": 78.8
+    "quality_score": 88.4
   },
   {
     "id": "MLB67737386",
@@ -285,7 +285,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989100",
     "last_seen": "2026-06-04T17:26:42.989101",
-    "quality_score": 84.19999999999999
+    "quality_score": 95.6
   },
   {
     "id": "MLB62253296",
@@ -301,7 +301,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989164",
     "last_seen": "2026-06-04T17:26:42.989165",
-    "quality_score": 74.6
+    "quality_score": 82.80000000000001
   },
   {
     "id": "MLB56327005",
@@ -317,7 +317,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989206",
     "last_seen": "2026-06-04T17:26:42.989207",
-    "quality_score": 74.0
+    "quality_score": 82.0
   },
   {
     "id": "MLB1040287792",
@@ -333,7 +333,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989234",
     "last_seen": "2026-06-04T17:26:42.989236",
-    "quality_score": 89.2
+    "quality_score": 95.6
   },
   {
     "id": "MLB1040287800",
@@ -349,7 +349,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989245",
     "last_seen": "2026-06-04T17:26:42.989247",
-    "quality_score": 91.0
+    "quality_score": 98.0
   },
   {
     "id": "MLB67540101",
@@ -365,7 +365,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989320",
     "last_seen": "2026-06-04T17:26:42.989321",
-    "quality_score": 57.8
+    "quality_score": 60.4
   },
   {
     "id": "MLB56513939",
@@ -381,7 +381,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989344",
     "last_seen": "2026-06-04T17:26:42.989346",
-    "quality_score": 66.8
+    "quality_score": 72.4
   },
   {
     "id": "MLB47814270",
@@ -397,7 +397,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989357",
     "last_seen": "2026-06-04T17:26:42.989359",
-    "quality_score": 76.4
+    "quality_score": 85.2
   },
   {
     "id": "MLB68202517",
@@ -413,7 +413,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989382",
     "last_seen": "2026-06-04T17:26:42.989383",
-    "quality_score": 91.6
+    "quality_score": 98.8
   },
   {
     "id": "MLB45680390",
@@ -429,7 +429,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989393",
     "last_seen": "2026-06-04T17:26:42.989394",
-    "quality_score": 81.4
+    "quality_score": 85.2
   },
   {
     "id": "MLB62149637",
@@ -445,7 +445,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989404",
     "last_seen": "2026-06-04T17:26:42.989405",
-    "quality_score": 89.8
+    "quality_score": 96.4
   },
   {
     "id": "MLB50853162",
@@ -461,7 +461,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989417",
     "last_seen": "2026-06-04T17:26:42.989419",
-    "quality_score": 89.6
+    "quality_score": 100
   },
   {
     "id": "MLB65770866",
@@ -493,7 +493,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989503",
     "last_seen": "2026-06-04T17:26:42.989504",
-    "quality_score": 80.6
+    "quality_score": 90.80000000000001
   },
   {
     "id": "MLB47428342",
@@ -509,7 +509,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989572",
     "last_seen": "2026-06-04T17:26:42.989574",
-    "quality_score": 62.6
+    "quality_score": 66.8
   },
   {
     "id": "MLB69626508",
@@ -525,7 +525,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:42.989583",
     "last_seen": "2026-06-04T17:26:42.989584",
-    "quality_score": 79.0
+    "quality_score": 82.0
   },
   {
     "id": "MLB68104527",
@@ -541,7 +541,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.679869",
     "last_seen": "2026-06-04T17:26:52.679884",
-    "quality_score": 71.6
+    "quality_score": 78.8
   },
   {
     "id": "MLB49652036",
@@ -557,7 +557,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.679927",
     "last_seen": "2026-06-04T17:26:52.679929",
-    "quality_score": 69.8
+    "quality_score": 76.4
   },
   {
     "id": "MLB19899495",
@@ -573,7 +573,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.679966",
     "last_seen": "2026-06-04T17:26:52.679968",
-    "quality_score": 71.0
+    "quality_score": 78.0
   },
   {
     "id": "MLB52363091",
@@ -589,7 +589,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.679991",
     "last_seen": "2026-06-04T17:26:52.679993",
-    "quality_score": 81.2
+    "quality_score": 91.6
   },
   {
     "id": "MLB15238956",
@@ -605,7 +605,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.680035",
     "last_seen": "2026-06-04T17:26:52.680036",
-    "quality_score": 83.2
+    "quality_score": 87.6
   },
   {
     "id": "MLB9033853",
@@ -621,7 +621,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.680076",
     "last_seen": "2026-06-04T17:26:52.680078",
-    "quality_score": 69.8
+    "quality_score": 76.4
   },
   {
     "id": "MLB26441604",
@@ -637,7 +637,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.680121",
     "last_seen": "2026-06-04T17:26:52.680122",
-    "quality_score": 72.8
+    "quality_score": 80.4
   },
   {
     "id": "MLB50269368",
@@ -653,7 +653,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.680141",
     "last_seen": "2026-06-04T17:26:52.680143",
-    "quality_score": 75.2
+    "quality_score": 83.6
   },
   {
     "id": "MLB17460955",
@@ -669,7 +669,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.680178",
     "last_seen": "2026-06-04T17:26:52.680179",
-    "quality_score": 90.19999999999999
+    "quality_score": 100
   },
   {
     "id": "MLB25708528",
@@ -685,7 +685,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.680198",
     "last_seen": "2026-06-04T17:26:52.680199",
-    "quality_score": 75.8
+    "quality_score": 84.4
   },
   {
     "id": "MLB6122462",
@@ -701,7 +701,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.680220",
     "last_seen": "2026-06-04T17:26:52.680222",
-    "quality_score": 75.2
+    "quality_score": 83.6
   },
   {
     "id": "MLB20962585",
@@ -717,7 +717,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.680251",
     "last_seen": "2026-06-04T17:26:52.680252",
-    "quality_score": 72.2
+    "quality_score": 79.6
   },
   {
     "id": "MLB45617876",
@@ -733,7 +733,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.680272",
     "last_seen": "2026-06-04T17:26:52.680274",
-    "quality_score": 61.4
+    "quality_score": 65.2
   },
   {
     "id": "MLB19612966",
@@ -749,7 +749,7 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.680297",
     "last_seen": "2026-06-04T17:26:52.680298",
-    "quality_score": 66.8
+    "quality_score": 72.4
   },
   {
     "id": "MLB66453791",
@@ -765,6 +765,6 @@
     "status": "active",
     "data_coleta": "2026-06-04T17:26:52.680334",
     "last_seen": "2026-06-04T17:26:52.680335",
-    "quality_score": 72.8
+    "quality_score": 80.4
   }
 ]

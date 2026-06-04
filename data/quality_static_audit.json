@@ -1,0 +1,1060 @@
+{
+  "summary": {
+    "html_files": 501,
+    "broken_internal_links": 150,
+    "bad_html_images": 25,
+    "bad_product_json_images": 0
+  },
+  "product_json_counts": {
+    "data/raw_products.json": {
+      "total": 48,
+      "bad_images": 0
+    },
+    "data/scored_products.json": {
+      "total": 48,
+      "bad_images": 0
+    },
+    "data/affiliate_products.json": {
+      "total": 48,
+      "bad_images": 0
+    },
+    "data/database/all_products.json": {
+      "total": 158,
+      "bad_images": 0
+    },
+    "data/products/offers.json": {
+      "total": 44,
+      "bad_images": 0
+    }
+  },
+  "broken_internal_links": [
+    {
+      "file": "guias/melhores-celulares-2026.html",
+      "href": "../ofertas/celulares/smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-t-MLB6756182602.html",
+      "resolved": "guias/../ofertas/celulares/smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-t-MLB6756182602.html",
+      "text": "Samsung Galaxy A36 5G O melhor equilíbrio entre preço, câmera e anos de atualização. Ver Melhor Preço Hoje →"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../",
+      "resolved": "templates/../..",
+      "text": "🥷 Radar Ninja"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../categorias/tecnologia/",
+      "resolved": "templates/../../categorias/tecnologia",
+      "text": "📱 Tecnologia"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../categorias/gamer/",
+      "resolved": "templates/../../categorias/gamer",
+      "text": "🎮 Gamer"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../categorias/casa/",
+      "resolved": "templates/../../categorias/casa",
+      "text": "🏠 Casa"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../categorias/eletrodomesticos/",
+      "resolved": "templates/../../categorias/eletrodomesticos",
+      "text": "🔌 Eletro"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../categorias/beleza/",
+      "resolved": "templates/../../categorias/beleza",
+      "text": "💄 Beleza"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../categorias/moveis/",
+      "resolved": "templates/../../categorias/moveis",
+      "text": "🛋️ Móveis"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../",
+      "resolved": "templates/../..",
+      "text": "Home"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../categorias/",
+      "resolved": "templates/../../categorias",
+      "text": "Categorias"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../categorias/tecnologia/",
+      "resolved": "templates/../../categorias/tecnologia",
+      "text": "Tecnologia"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../categorias/beleza/",
+      "resolved": "templates/../../categorias/beleza",
+      "text": "Beleza"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../categorias/casa/",
+      "resolved": "templates/../../categorias/casa",
+      "text": "Casa"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../categorias/gamer/",
+      "resolved": "templates/../../categorias/gamer",
+      "text": "Gamer"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../categorias/moveis/",
+      "resolved": "templates/../../categorias/moveis",
+      "text": "Móveis"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../sobre/",
+      "resolved": "templates/../../sobre",
+      "text": "Sobre o Radar"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../privacidade/",
+      "resolved": "templates/../../privacidade",
+      "text": "Privacidade"
+    },
+    {
+      "file": "templates/category_template.html",
+      "href": "../../termos/",
+      "resolved": "templates/../../termos",
+      "text": "Termos de Uso"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "noticias/",
+      "resolved": "templates/noticias",
+      "text": "📰 Blog"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "categorias/celulares/",
+      "resolved": "templates/categorias/celulares",
+      "text": "Celulares"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "categorias/informatica/",
+      "resolved": "templates/categorias/informatica",
+      "text": "Informática"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "categorias/eletrodomesticos/",
+      "resolved": "templates/categorias/eletrodomesticos",
+      "text": "Eletrodomésticos"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "categorias/tv-e-video/",
+      "resolved": "templates/categorias/tv-e-video",
+      "text": "TV e Vídeo"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "noticias/",
+      "resolved": "templates/noticias",
+      "text": "Ler Blog"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "noticias/",
+      "resolved": "templates/noticias",
+      "text": "Ver Todos os Artigos →"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "categorias/celulares/",
+      "resolved": "templates/categorias/celulares",
+      "text": "📱 Celulares"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "categorias/informatica/",
+      "resolved": "templates/categorias/informatica",
+      "text": "💻 Informática"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "categorias/eletrodomesticos/",
+      "resolved": "templates/categorias/eletrodomesticos",
+      "text": "🏠 Eletrodomésticos"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "categorias/tv-e-video/",
+      "resolved": "templates/categorias/tv-e-video",
+      "text": "📺 TV e Vídeo"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "categorias/beleza/",
+      "resolved": "templates/categorias/beleza",
+      "text": "💄 Beleza"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "categorias/games/",
+      "resolved": "templates/categorias/games",
+      "text": "🎮 Games"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "noticias/",
+      "resolved": "templates/noticias",
+      "text": "Blog"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "sobre/",
+      "resolved": "templates/sobre",
+      "text": "Sobre Nós"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "contato/",
+      "resolved": "templates/contato",
+      "text": "Contato"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "privacidade/",
+      "resolved": "templates/privacidade",
+      "text": "Privacidade"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "termos/",
+      "resolved": "templates/termos",
+      "text": "Termos de Uso"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "quem-somos/",
+      "resolved": "templates/quem-somos",
+      "text": "Quem Somos"
+    },
+    {
+      "file": "templates/homepage_novo.html",
+      "href": "metodologia/",
+      "resolved": "templates/metodologia",
+      "text": "Metodologia"
+    },
+    {
+      "file": "templates/hub_template.html",
+      "href": "../../",
+      "resolved": "templates/../..",
+      "text": "🥷 Radar Ninja"
+    },
+    {
+      "file": "templates/hub_template.html",
+      "href": "../../",
+      "resolved": "templates/../..",
+      "text": "Home"
+    },
+    {
+      "file": "templates/hub_template.html",
+      "href": "../../categorias/",
+      "resolved": "templates/../../categorias",
+      "text": "Categorias"
+    },
+    {
+      "file": "templates/hub_template.html",
+      "href": "../../categorias/tecnologia/",
+      "resolved": "templates/../../categorias/tecnologia",
+      "text": "Tecnologia"
+    },
+    {
+      "file": "templates/hub_template.html",
+      "href": "../../categorias/beleza/",
+      "resolved": "templates/../../categorias/beleza",
+      "text": "Beleza"
+    },
+    {
+      "file": "templates/hub_template.html",
+      "href": "../../categorias/casa/",
+      "resolved": "templates/../../categorias/casa",
+      "text": "Casa"
+    },
+    {
+      "file": "templates/hub_template.html",
+      "href": "../../categorias/gamer/",
+      "resolved": "templates/../../categorias/gamer",
+      "text": "Gamer"
+    },
+    {
+      "file": "templates/hub_template.html",
+      "href": "../../categorias/moveis/",
+      "resolved": "templates/../../categorias/moveis",
+      "text": "Móveis"
+    },
+    {
+      "file": "templates/hub_template.html",
+      "href": "../../sobre/",
+      "resolved": "templates/../../sobre",
+      "text": "Sobre o Radar"
+    },
+    {
+      "file": "templates/hub_template.html",
+      "href": "../../privacidade/",
+      "resolved": "templates/../../privacidade",
+      "text": "Privacidade"
+    },
+    {
+      "file": "templates/hub_template.html",
+      "href": "../../termos/",
+      "resolved": "templates/../../termos",
+      "text": "Termos de Uso"
+    },
+    {
+      "file": "templates/product_template.html",
+      "href": "../../",
+      "resolved": "templates/../..",
+      "text": "📊 Compara Preço"
+    },
+    {
+      "file": "templates/product_template.html",
+      "href": "../../",
+      "resolved": "templates/../..",
+      "text": "Home"
+    },
+    {
+      "file": "templates/product_template.html",
+      "href": "../../categorias/{{product.category}}/index.html",
+      "resolved": "templates/../../categorias/{{product.category}}/index.html",
+      "text": "Categoria"
+    },
+    {
+      "file": "templates/product_template.html",
+      "href": "../../autores/lucas-silva.html",
+      "resolved": "templates/../../autores/lucas-silva.html",
+      "text": "Lucas Silva"
+    },
+    {
+      "file": "templates/product_template.html",
+      "href": "{{product.url}}",
+      "resolved": "templates/{{product.url}}",
+      "text": "🛒 Ir para o Mercado Livre"
+    },
+    {
+      "file": "templates/product_template.html",
+      "href": "../../sobre/",
+      "resolved": "templates/../../sobre",
+      "text": "Sobre"
+    },
+    {
+      "file": "templates/product_template.html",
+      "href": "../../contato/",
+      "resolved": "templates/../../contato",
+      "text": "Contato"
+    },
+    {
+      "file": "templates/product_template.html",
+      "href": "../../privacidade/",
+      "resolved": "templates/../../privacidade",
+      "text": "Privacidade"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/celulares/samsung-galaxy-a07-256gb-8gb-preto-MLB54961556.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/celulares/samsung-galaxy-a07-256gb-8gb-preto-MLB54961556.html",
+      "text": "-55% Samsung Galaxy A07 256GB 8GB Preto R$ 799,20 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/celulares/celular-samsung-galaxy-a17-5g-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---cinza-MLB4238150607.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/celulares/celular-samsung-galaxy-a17-5g-com-ia-128gb-4gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---cinza-MLB4238150607.html",
+      "text": "-55% Celular Samsung Galaxy A17 5g Com Ia, 128gb, 4gb Ram, Câm De 50mp, Tela De 6.7 , Nfc, Ip54 - Cinza R$ 809,10 Ver De"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/tv-e-video/soundbar-samsung-hw-q990c-1114-canais-dolby-atmos-MLB6456789012.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/tv-e-video/soundbar-samsung-hw-q990c-1114-canais-dolby-atmos-MLB6456789012.html",
+      "text": "-50% Soundbar Samsung HW-Q990C 11.1.4 Canais Dolby Atmos R$ 1.999,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/celulares/samsung-galaxy-tab-a11-5g-6gb-128gb-cinza-MLB6233727450.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/celulares/samsung-galaxy-tab-a11-5g-6gb-128gb-cinza-MLB6233727450.html",
+      "text": "-49% Samsung Galaxy Tab A11+ 5g 6gb, 128gb Cinza R$ 1.451,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/celulares/celular-samsung-galaxy-a17-com-ia-256gb-8gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---cinza-MLB4594905683.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/celulares/celular-samsung-galaxy-a17-com-ia-256gb-8gb-ram-cam-de-50mp-tela-de-67--nfc-ip54---cinza-MLB4594905683.html",
+      "text": "-40% Celular Samsung Galaxy A17 Com Ia, 256gb, 8gb Ram, Câm De 50mp, Tela De 6.7 , Nfc, Ip54 - Cinza R$ 1.079,00 Ver Det"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-55-samsung-qn55qn90d-4k-mini-led-MLB6345678901.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/tv-e-video/smart-tv-55-samsung-qn55qn90d-4k-mini-led-MLB6345678901.html",
+      "text": "-40% Smart TV 55 Samsung QN55QN90D 4K Mini LED R$ 2.999,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/celulares/tablet-samsung-galaxy-tab-s9-ultra-256gb-grafite-MLB6123456789.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/celulares/tablet-samsung-galaxy-tab-s9-ultra-256gb-grafite-MLB6123456789.html",
+      "text": "-37% Tablet Samsung Galaxy Tab S9 Ultra 256GB Grafite R$ 2.499,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/celulares/samsung-galaxy-a07-256gb-8gb-verde-MLB54963045.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/celulares/samsung-galaxy-a07-256gb-8gb-verde-MLB54963045.html",
+      "text": "-35% Samsung Galaxy A07 256GB 8GB Verde R$ 736,95 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/celulares/smartphone-samsung-galaxy-s24-256gb-preto-MLB5890123456.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/celulares/smartphone-samsung-galaxy-s24-256gb-preto-MLB5890123456.html",
+      "text": "-30% Smartphone Samsung Galaxy S24 256GB Preto R$ 3.499,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/celulares/samsung-galaxy-a06-5g-dual-sim-128gb-preto-MLB4475360653.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/celulares/samsung-galaxy-a06-5g-dual-sim-128gb-preto-MLB4475360653.html",
+      "text": "-28% Samsung Galaxy A06 5g Dual Sim 128gb Preto R$ 709,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/celulares/samsung-galaxy-a06-5g-128gb-preto-MLB48946861.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/celulares/samsung-galaxy-a06-5g-128gb-preto-MLB48946861.html",
+      "text": "-28% Samsung Galaxy A06 5G 128GB Preto R$ 709,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/celulares/smartphone-samsung-galaxy-s23-fe-256gb-creme-MLB3456789019.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/celulares/smartphone-samsung-galaxy-s23-fe-256gb-creme-MLB3456789019.html",
+      "text": "-26% Smartphone Samsung Galaxy S23 FE 256GB Creme R$ 3.299,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-43-samsung-qn43q60d-qled-4k-MLB2003012.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/tv-e-video/smart-tv-43-samsung-qn43q60d-qled-4k-MLB2003012.html",
+      "text": "-25% Smart TV 43 Samsung QN43Q60D QLED 4K R$ 1.799,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/casa/aspirador-robo-samsung-jet-bot-ai-MLB2004005.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/casa/aspirador-robo-samsung-jet-bot-ai-MLB2004005.html",
+      "text": "-25% Aspirador Robô Samsung Jet Bot AI+ R$ 2.999,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/celulares/samsung-galaxy-a25-256gb-preto-MLB2002019.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/celulares/samsung-galaxy-a25-256gb-preto-MLB2002019.html",
+      "text": "-24% Samsung Galaxy A25 256GB Preto R$ 1.299,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-55-samsung-qn55q60d-qled-4k-MLB2003013.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/tv-e-video/smart-tv-55-samsung-qn55q60d-qled-4k-MLB2003013.html",
+      "text": "-24% Smart TV 55 Samsung QN55Q60D QLED 4K R$ 2.499,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/tv-e-video/soundbar-samsung-hw-q990c-1114-dolby-atmos-MLB2003006.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/tv-e-video/soundbar-samsung-hw-q990c-1114-dolby-atmos-MLB2003006.html",
+      "text": "-23% Soundbar Samsung HW-Q990C 11.1.4 Dolby Atmos R$ 4.999,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-65-samsung-qn65qn90d-mini-led-4k-MLB2003002.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/tv-e-video/smart-tv-65-samsung-qn65qn90d-mini-led-4k-MLB2003002.html",
+      "text": "-23% Smart TV 65 Samsung QN65QN90D Mini LED 4K R$ 4.999,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/celulares/samsung-galaxy-a55-256gb-preto-MLB2002007.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/celulares/samsung-galaxy-a55-256gb-preto-MLB2002007.html",
+      "text": "-22% Samsung Galaxy A55 256GB Preto R$ 1.799,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-75-samsung-qn75qn90d-mini-led-4k-MLB2003004.html",
+      "resolved": "melhores-ofertas/melhores-celulares-samsung/../../ofertas/tv-e-video/smart-tv-75-samsung-qn75qn90d-mini-led-4k-MLB2003004.html",
+      "text": "-22% Smart TV 75 Samsung QN75QN90D Mini LED 4K R$ 6.999,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-fones-bluetooth/index.html",
+      "href": "../../ofertas/informatica/fone-bluetooth-jbl-tune-670-cancelamento-ruido-ativo-preto-MLB5123456789.html",
+      "resolved": "melhores-ofertas/melhores-fones-bluetooth/../../ofertas/informatica/fone-bluetooth-jbl-tune-670-cancelamento-ruido-ativo-preto-MLB5123456789.html",
+      "text": "-37% Fone Bluetooth JBL Tune 670 Cancelamento Ruído Ativo Preto R$ 249,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-fones-bluetooth/index.html",
+      "href": "../../ofertas/informatica/fone-airpods-pro-apple-2a-geracao-MLB8678901234.html",
+      "resolved": "melhores-ofertas/melhores-fones-bluetooth/../../ofertas/informatica/fone-airpods-pro-apple-2a-geracao-MLB8678901234.html",
+      "text": "-35% Fone Airpods Pro Apple 2ª Geração R$ 1.499,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-fones-bluetooth/index.html",
+      "href": "../../ofertas/celulares/fone-de-ouvido-bluetooth-jbl-wave-buds-preto-MLB3456789020.html",
+      "resolved": "melhores-ofertas/melhores-fones-bluetooth/../../ofertas/celulares/fone-de-ouvido-bluetooth-jbl-wave-buds-preto-MLB3456789020.html",
+      "text": "-28% Fone de Ouvido Bluetooth JBL Wave Buds Preto R$ 249,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-fones-bluetooth/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-lg-55-4k-uhd-thinq-ai-hdr-bluetooth-MLB3456789028.html",
+      "resolved": "melhores-ofertas/melhores-fones-bluetooth/../../ofertas/tv-e-video/smart-tv-lg-55-4k-uhd-thinq-ai-hdr-bluetooth-MLB3456789028.html",
+      "text": "-24% Smart TV LG 55 4K UHD ThinQ AI HDR Bluetooth R$ 2.499,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-fones-bluetooth/index.html",
+      "href": "../../ofertas/informatica/microfone-blue-yeti-usb-MLB2001014.html",
+      "resolved": "melhores-ofertas/melhores-fones-bluetooth/../../ofertas/informatica/microfone-blue-yeti-usb-MLB2001014.html",
+      "text": "-20% Microfone Blue Yeti USB R$ 399,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-notebooks-ate-3000/index.html",
+      "href": "../../ofertas/informatica/notebook-lenovo-inspiron-15-core-i5-8gb-256gb-ssd-MLB3456789015.html",
+      "resolved": "melhores-ofertas/melhores-notebooks-ate-3000/../../ofertas/informatica/notebook-lenovo-inspiron-15-core-i5-8gb-256gb-ssd-MLB3456789015.html",
+      "text": "-17% Notebook Lenovo Inspiron 15 Core i5 8GB 256GB SSD R$ 2.899,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/soundbar-samsung-hw-q990c-1114-canais-dolby-atmos-MLB6456789012.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/soundbar-samsung-hw-q990c-1114-canais-dolby-atmos-MLB6456789012.html",
+      "text": "-50% Soundbar Samsung HW-Q990C 11.1.4 Canais Dolby Atmos R$ 1.999,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-43-philco-p43vik-roku-led-dolby-audio-wi-fi-hdmi-hdr-full-hd-110220v-MLB4367472775.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/smart-tv-43-philco-p43vik-roku-led-dolby-audio-wi-fi-hdmi-hdr-full-hd-110220v-MLB4367472775.html",
+      "text": "-44% Smart Tv 43 Philco P43vik Roku Led Dolby Audio Wi-fi Hdmi Hdr Full Hd 110/220v R$ 1.399,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-philco-58-p58vik-4k-uhd-led-roku-dolby-audio-wi-fi-hdr10-110220v-MLB4571470859.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/smart-tv-philco-58-p58vik-4k-uhd-led-roku-dolby-audio-wi-fi-hdr10-110220v-MLB4571470859.html",
+      "text": "-42% Smart Tv Philco 58 P58vik 4k Uhd Led Roku Dolby Audio Wi-fi Hdr10 110/220v R$ 2.299,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-55-samsung-qn55qn90d-4k-mini-led-MLB6345678901.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/smart-tv-55-samsung-qn55qn90d-4k-mini-led-MLB6345678901.html",
+      "text": "-40% Smart TV 55 Samsung QN55QN90D 4K Mini LED R$ 2.999,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-philco-40-p40vik-led-roku-dolby-audio-wi-fi-hdmi-hdr-full-hd-110220v-MLB4571467199.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/smart-tv-philco-40-p40vik-led-roku-dolby-audio-wi-fi-hdmi-hdr-full-hd-110220v-MLB4571467199.html",
+      "text": "-38% Smart Tv Philco 40 P40vik Led Roku Dolby Audio Wi-fi Hdmi Hdr Full Hd 110/220v R$ 1.299,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-65-lg-oled-evo-c4-4k-120hz-MLB6234567890.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/smart-tv-65-lg-oled-evo-c4-4k-120hz-MLB6234567890.html",
+      "text": "-37% Smart TV 65 LG OLED evo C4 4K 120Hz R$ 4.999,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/cabo-hdmi-21-premium-3m-MLB2003015.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/cabo-hdmi-21-premium-3m-MLB2003015.html",
+      "text": "-33% Cabo HDMI 2.1 Premium 3m R$ 99,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/suporte-tv-articulado-32-a-65-polegadas-MLB2003014.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/suporte-tv-articulado-32-a-65-polegadas-MLB2003014.html",
+      "text": "-33% Suporte TV Articulado 32 a 65 polegadas R$ 199,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/informatica/monitor-lg-27-27up550-4k-uhd-ips-usb-c-MLB5789012345.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/informatica/monitor-lg-27-27up550-4k-uhd-ips-usb-c-MLB5789012345.html",
+      "text": "-30% Monitor LG 27 27UP550 4K UHD IPS USB-C R$ 1.599,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-55-lg-oled-evo-c4-4k-120hz-MLB2003003.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/smart-tv-55-lg-oled-evo-c4-4k-120hz-MLB2003003.html",
+      "text": "-27% Smart TV 55 LG OLED evo C4 4K 120Hz R$ 3.999,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/soundbar-lg-sp11ra-714-dolby-atmos-MLB2003007.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/soundbar-lg-sp11ra-714-dolby-atmos-MLB2003007.html",
+      "text": "-27% Soundbar LG SP11RA 7.1.4 Dolby Atmos R$ 3.999,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-50-sony-bravia-xr-50x90l-4k-MLB2003009.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/smart-tv-50-sony-bravia-xr-50x90l-4k-MLB2003009.html",
+      "text": "-26% Smart TV 50 Sony Bravia XR-50X90L 4K R$ 3.499,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-43-lg-43up7550-4k-MLB2003005.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/smart-tv-43-lg-43up7550-4k-MLB2003005.html",
+      "text": "-25% Smart TV 43 LG 43UP7550 4K R$ 1.499,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-43-samsung-qn43q60d-qled-4k-MLB2003012.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/smart-tv-43-samsung-qn43q60d-qled-4k-MLB2003012.html",
+      "text": "-25% Smart TV 43 Samsung QN43Q60D QLED 4K R$ 1.799,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/soundbar-jbl-bar-91-true-wireless-surround-MLB2003011.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/soundbar-jbl-bar-91-true-wireless-surround-MLB2003011.html",
+      "text": "-25% Soundbar JBL Bar 9.1 True Wireless Surround R$ 2.999,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-lg-55-4k-uhd-thinq-ai-hdr-bluetooth-MLB3456789028.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/smart-tv-lg-55-4k-uhd-thinq-ai-hdr-bluetooth-MLB3456789028.html",
+      "text": "-24% Smart TV LG 55 4K UHD ThinQ AI HDR Bluetooth R$ 2.499,00 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-55-samsung-qn55q60d-qled-4k-MLB2003013.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/smart-tv-55-samsung-qn55q60d-qled-4k-MLB2003013.html",
+      "text": "-24% Smart TV 55 Samsung QN55Q60D QLED 4K R$ 2.499,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-65-sony-bravia-xr-65x90l-4k-MLB2003010.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/smart-tv-65-sony-bravia-xr-65x90l-4k-MLB2003010.html",
+      "text": "-24% Smart TV 65 Sony Bravia XR-65X90L 4K R$ 5.499,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "href": "../../ofertas/tv-e-video/soundbar-samsung-hw-q990c-1114-dolby-atmos-MLB2003006.html",
+      "resolved": "melhores-ofertas/melhores-tvs-4k/../../ofertas/tv-e-video/soundbar-samsung-hw-q990c-1114-dolby-atmos-MLB2003006.html",
+      "text": "-23% Soundbar Samsung HW-Q990C 11.1.4 Dolby Atmos R$ 4.999,90 Ver Detalhes da Oferta 🥷"
+    },
+    {
+      "file": "noticias/posts/missao-projeto-compara-precos.html",
+      "href": "../../../noticias/",
+      "resolved": "noticias/posts/../../../noticias",
+      "text": "Notícias"
+    },
+    {
+      "file": "noticias/posts/missao-projeto-compara-precos.html",
+      "href": "../../../noticias/",
+      "resolved": "noticias/posts/../../../noticias",
+      "text": "blog completo"
+    },
+    {
+      "file": "noticias/posts/missao-projeto-compara-precos.html",
+      "href": "../../../noticias/",
+      "resolved": "noticias/posts/../../../noticias",
+      "text": "← Voltar para Blog"
+    },
+    {
+      "file": "noticias/posts/missao-projeto-compara-precos.html",
+      "href": "../../../noticias/",
+      "resolved": "noticias/posts/../../../noticias",
+      "text": "Blog"
+    },
+    {
+      "file": "noticias/posts/missao-projeto-compara-precos.html",
+      "href": "../../../sobre/",
+      "resolved": "noticias/posts/../../../sobre",
+      "text": "Sobre"
+    },
+    {
+      "file": "noticias/posts/missao-projeto-compara-precos.html",
+      "href": "../../../contato/",
+      "resolved": "noticias/posts/../../../contato",
+      "text": "Contato"
+    },
+    {
+      "file": "noticias/posts/missao-projeto-compara-precos.html",
+      "href": "../../../privacidade/",
+      "resolved": "noticias/posts/../../../privacidade",
+      "text": "Privacidade"
+    },
+    {
+      "file": "noticias/posts/missao-projeto-compara-precos.html",
+      "href": "../../../termos/",
+      "resolved": "noticias/posts/../../../termos",
+      "text": "Termos"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/gamer/controle-joystick-sem-fio-sony-playstation-dualsense-branco-MLB33997846.html",
+      "resolved": "noticias/posts/../../ofertas/gamer/controle-joystick-sem-fio-sony-playstation-dualsense-branco-MLB33997846.html",
+      "text": "Controle Joystick Sem Fio Sony Playstation Dualsense Branco"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/gamer/controle-joystick-sem-fio-sony-playstation-dualsense-branco-MLB33997846.html",
+      "resolved": "noticias/posts/../../ofertas/gamer/controle-joystick-sem-fio-sony-playstation-dualsense-branco-MLB33997846.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/gamer/controle-para-xbox-360-com-fio-usb-e-pc-preto-MLB22778772.html",
+      "resolved": "noticias/posts/../../ofertas/gamer/controle-para-xbox-360-com-fio-usb-e-pc-preto-MLB22778772.html",
+      "text": "Controle Para Xbox 360 Com Fio USB e PC Preto"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/gamer/controle-para-xbox-360-com-fio-usb-e-pc-preto-MLB22778772.html",
+      "resolved": "noticias/posts/../../ofertas/gamer/controle-para-xbox-360-com-fio-usb-e-pc-preto-MLB22778772.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/gamer/controle-xbox-wireless-series-x-s-carbon-black-MLB16268160.html",
+      "resolved": "noticias/posts/../../ofertas/gamer/controle-xbox-wireless-series-x-s-carbon-black-MLB16268160.html",
+      "text": "Controle Xbox Wireless Series X|s Carbon black"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/gamer/controle-xbox-wireless-series-x-s-carbon-black-MLB16268160.html",
+      "resolved": "noticias/posts/../../ofertas/gamer/controle-xbox-wireless-series-x-s-carbon-black-MLB16268160.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/eletrodomesticos/fritadeira-eletrica-afon-12l-bg-forno-oven-12-litros-mondial-MLB19055866.html",
+      "resolved": "noticias/posts/../../ofertas/eletrodomesticos/fritadeira-eletrica-afon-12l-bg-forno-oven-12-litros-mondial-MLB19055866.html",
+      "text": "Fritadeira Elétrica AFON-12L-BG Forno Oven 12 Litros Mondial"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/eletrodomesticos/fritadeira-eletrica-afon-12l-bg-forno-oven-12-litros-mondial-MLB19055866.html",
+      "resolved": "noticias/posts/../../ofertas/eletrodomesticos/fritadeira-eletrica-afon-12l-bg-forno-oven-12-litros-mondial-MLB19055866.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/beleza/chapinha-de-cabelo-mq-professional-titanium-pro-480-MLB15238956.html",
+      "resolved": "noticias/posts/../../ofertas/beleza/chapinha-de-cabelo-mq-professional-titanium-pro-480-MLB15238956.html",
+      "text": "Chapinha De Cabelo Mq Professional Titanium Pro 480"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/beleza/chapinha-de-cabelo-mq-professional-titanium-pro-480-MLB15238956.html",
+      "resolved": "noticias/posts/../../ofertas/beleza/chapinha-de-cabelo-mq-professional-titanium-pro-480-MLB15238956.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/apple-iphone-16-128-gb-preto-AMZ-B0CHX1W21Z.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/apple-iphone-16-128-gb-preto-AMZ-B0CHX1W21Z.html",
+      "text": "Apple iPhone 16 (128 GB) - Preto"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/apple-iphone-16-128-gb-preto-AMZ-B0CHX1W21Z.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/apple-iphone-16-128-gb-preto-AMZ-B0CHX1W21Z.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/eletrodomesticos/fritadeira-a-ar-mondial-family-puff-4l-preto-1500w-af-31-AMZ-B09B2Y9Z79.html",
+      "resolved": "noticias/posts/../../ofertas/eletrodomesticos/fritadeira-a-ar-mondial-family-puff-4l-preto-1500w-af-31-AMZ-B09B2Y9Z79.html",
+      "text": "Fritadeira a Ar Mondial, Family Puff - 4L, Preto, 1500W - AF-31"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/eletrodomesticos/fritadeira-a-ar-mondial-family-puff-4l-preto-1500w-af-31-AMZ-B09B2Y9Z79.html",
+      "resolved": "noticias/posts/../../ofertas/eletrodomesticos/fritadeira-a-ar-mondial-family-puff-4l-preto-1500w-af-31-AMZ-B09B2Y9Z79.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-lg-50-4k-uhd-50ur8750-psa-AMZ-B08S6S765X.html",
+      "resolved": "noticias/posts/../../ofertas/tv-e-video/smart-tv-lg-50-4k-uhd-50ur8750-psa-AMZ-B08S6S765X.html",
+      "text": "Smart TV LG 50\" 4K UHD 50UR8750 PSA"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tv-e-video/smart-tv-lg-50-4k-uhd-50ur8750-psa-AMZ-B08S6S765X.html",
+      "resolved": "noticias/posts/../../ofertas/tv-e-video/smart-tv-lg-50-4k-uhd-50ur8750-psa-AMZ-B08S6S765X.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/gamer/controle-sem-fio-microsoft-xbox-series-s-x-one-pc-pulse-red-MLB17375584.html",
+      "resolved": "noticias/posts/../../ofertas/gamer/controle-sem-fio-microsoft-xbox-series-s-x-one-pc-pulse-red-MLB17375584.html",
+      "text": "Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/gamer/controle-sem-fio-microsoft-xbox-series-s-x-one-pc-pulse-red-MLB17375584.html",
+      "resolved": "noticias/posts/../../ofertas/gamer/controle-sem-fio-microsoft-xbox-series-s-x-one-pc-pulse-red-MLB17375584.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/beleza/perfume-asad-elixir-lattafa-arabe-original-MLB25708528.html",
+      "resolved": "noticias/posts/../../ofertas/beleza/perfume-asad-elixir-lattafa-arabe-original-MLB25708528.html",
+      "text": "Perfume Asad Elixir Lattafa Árabe Original"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/beleza/perfume-asad-elixir-lattafa-arabe-original-MLB25708528.html",
+      "resolved": "noticias/posts/../../ofertas/beleza/perfume-asad-elixir-lattafa-arabe-original-MLB25708528.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/beleza/creatina-monohidratada-pura-500g-dark-lab-MLB4812143184.html",
+      "resolved": "noticias/posts/../../ofertas/beleza/creatina-monohidratada-pura-500g-dark-lab-MLB4812143184.html",
+      "text": "Creatina Monohidratada Pura 500g Dark Lab"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/beleza/creatina-monohidratada-pura-500g-dark-lab-MLB4812143184.html",
+      "resolved": "noticias/posts/../../ofertas/beleza/creatina-monohidratada-pura-500g-dark-lab-MLB4812143184.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/casa/kit-10-pote-de-vidro-marmita-hermetico-640ml-MLB32551422.html",
+      "resolved": "noticias/posts/../../ofertas/casa/kit-10-pote-de-vidro-marmita-hermetico-640ml-MLB32551422.html",
+      "text": "Kit 10 Pote De Vidro Marmita Hermético 640ml"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/casa/kit-10-pote-de-vidro-marmita-hermetico-640ml-MLB32551422.html",
+      "resolved": "noticias/posts/../../ofertas/casa/kit-10-pote-de-vidro-marmita-hermetico-640ml-MLB32551422.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/echo-dot-3a-geracao-smart-speaker-com-alexa-cor-preta-AMZ-B07PDHSJ1H.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/echo-dot-3a-geracao-smart-speaker-com-alexa-cor-preta-AMZ-B07PDHSJ1H.html",
+      "text": "Echo Dot (3ª Geração): Smart Speaker com Alexa - Cor Preta"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/echo-dot-3a-geracao-smart-speaker-com-alexa-cor-preta-AMZ-B07PDHSJ1H.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/echo-dot-3a-geracao-smart-speaker-com-alexa-cor-preta-AMZ-B07PDHSJ1H.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/novo-fire-tv-stick-lite-com-controle-remoto-por-voz-com-alex-AMZ-B084DWCZY6.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/novo-fire-tv-stick-lite-com-controle-remoto-por-voz-com-alex-AMZ-B084DWCZY6.html",
+      "text": "Novo Fire TV Stick Lite com Controle Remoto por Voz com Alexa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/novo-fire-tv-stick-lite-com-controle-remoto-por-voz-com-alex-AMZ-B084DWCZY6.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/novo-fire-tv-stick-lite-com-controle-remoto-por-voz-com-alex-AMZ-B084DWCZY6.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/kindle-11a-geracao-mais-leve-agora-com-tela-de-300-ppi-AMZ-B09G96TFFG.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/kindle-11a-geracao-mais-leve-agora-com-tela-de-300-ppi-AMZ-B09G96TFFG.html",
+      "text": "Kindle 11ª Geração – Mais leve, agora com tela de 300 ppi"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/kindle-11a-geracao-mais-leve-agora-com-tela-de-300-ppi-AMZ-B09G96TFFG.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/kindle-11a-geracao-mais-leve-agora-com-tela-de-300-ppi-AMZ-B09G96TFFG.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/apple-macbook-air-m1-2020-13-polegadas-8-gb-ram-256-gb-ssd-AMZ-B08N5WRWJ5.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/apple-macbook-air-m1-2020-13-polegadas-8-gb-ram-256-gb-ssd-AMZ-B08N5WRWJ5.html",
+      "text": "Apple MacBook Air (M1, 2020) 13 polegadas, 8 GB RAM, 256 GB SSD"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/apple-macbook-air-m1-2020-13-polegadas-8-gb-ram-256-gb-ssd-AMZ-B08N5WRWJ5.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/apple-macbook-air-m1-2020-13-polegadas-8-gb-ram-256-gb-ssd-AMZ-B08N5WRWJ5.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/fone-de-ouvido-bluetooth-jbl-tune-510bt-pure-bass-AMZ-B086DKS2L1.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/fone-de-ouvido-bluetooth-jbl-tune-510bt-pure-bass-AMZ-B086DKS2L1.html",
+      "text": "Fone de Ouvido Bluetooth JBL Tune 510BT Pure Bass"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/fone-de-ouvido-bluetooth-jbl-tune-510bt-pure-bass-AMZ-B086DKS2L1.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/fone-de-ouvido-bluetooth-jbl-tune-510bt-pure-bass-AMZ-B086DKS2L1.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/camera-inteligente-interna-wi-fi-full-hd-im3-intelbras-AMZ-B07WHSN1S5.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/camera-inteligente-interna-wi-fi-full-hd-im3-intelbras-AMZ-B07WHSN1S5.html",
+      "text": "Câmera Inteligente Interna Wi-Fi Full HD iM3 Intelbras"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/camera-inteligente-interna-wi-fi-full-hd-im3-intelbras-AMZ-B07WHSN1S5.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/camera-inteligente-interna-wi-fi-full-hd-im3-intelbras-AMZ-B07WHSN1S5.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/mouse-sem-fio-logitech-m280-com-conexao-usb-e-pilha-inclusa-AMZ-B08X9N7S9K.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/mouse-sem-fio-logitech-m280-com-conexao-usb-e-pilha-inclusa-AMZ-B08X9N7S9K.html",
+      "text": "Mouse Sem Fio Logitech M280 com Conexão USB e Pilha Inclusa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/mouse-sem-fio-logitech-m280-com-conexao-usb-e-pilha-inclusa-AMZ-B08X9N7S9K.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/mouse-sem-fio-logitech-m280-com-conexao-usb-e-pilha-inclusa-AMZ-B08X9N7S9K.html",
+      "text": "Ver Análise Completa"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/lampada-inteligente-wi-fi-positivo-casa-inteligente-AMZ-B07XJ8C8F5.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/lampada-inteligente-wi-fi-positivo-casa-inteligente-AMZ-B07XJ8C8F5.html",
+      "text": "Lâmpada Inteligente Wi-Fi Positivo Casa Inteligente"
+    },
+    {
+      "file": "noticias/posts/top-20-produtos-mais-vendidos-20260604124146.html",
+      "href": "../../ofertas/tecnologia/lampada-inteligente-wi-fi-positivo-casa-inteligente-AMZ-B07XJ8C8F5.html",
+      "resolved": "noticias/posts/../../ofertas/tecnologia/lampada-inteligente-wi-fi-positivo-casa-inteligente-AMZ-B07XJ8C8F5.html",
+      "text": "Ver Análise Completa"
+    }
+  ],
+  "bad_html_images": [
+    {
+      "file": "exclusivos/index.html",
+      "src": "https://via.placeholder.com/120",
+      "alt": "Produto Exclusivo 1"
+    },
+    {
+      "file": "exclusivos/index.html",
+      "src": "https://via.placeholder.com/120",
+      "alt": "Produto Exclusivo 2"
+    },
+    {
+      "file": "exclusivos/index.html",
+      "src": "https://via.placeholder.com/120",
+      "alt": "Produto com Queda Histórica 1"
+    },
+    {
+      "file": "exclusivos/index.html",
+      "src": "https://via.placeholder.com/120",
+      "alt": "Produto com Queda Histórica 2"
+    },
+    {
+      "file": "templates/product_template.html",
+      "src": "{{product.image}}",
+      "alt": "{{product.name}}"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Smart TV 43 Samsung QN43Q60D QLED 4K"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Aspirador Robô Samsung Jet Bot AI+"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Samsung Galaxy A25 256GB Preto"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Smart TV 55 Samsung QN55Q60D QLED 4K"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Soundbar Samsung HW-Q990C 11.1.4 Dolby Atmos"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Smart TV 65 Samsung QN65QN90D Mini LED 4K"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Samsung Galaxy A55 256GB Preto"
+    },
+    {
+      "file": "melhores-ofertas/melhores-celulares-samsung/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Smart TV 75 Samsung QN75QN90D Mini LED 4K"
+    },
+    {
+      "file": "melhores-ofertas/melhores-fones-bluetooth/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Microfone Blue Yeti USB"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Cabo HDMI 2.1 Premium 3m"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Suporte TV Articulado 32 a 65 polegadas"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Smart TV 55 LG OLED evo C4 4K 120Hz"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Soundbar LG SP11RA 7.1.4 Dolby Atmos"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Smart TV 50 Sony Bravia XR-50X90L 4K"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Smart TV 43 LG 43UP7550 4K"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Smart TV 43 Samsung QN43Q60D QLED 4K"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Soundbar JBL Bar 9.1 True Wireless Surround"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Smart TV 55 Samsung QN55Q60D QLED 4K"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Smart TV 65 Sony Bravia XR-65X90L 4K"
+    },
+    {
+      "file": "melhores-ofertas/melhores-tvs-4k/index.html",
+      "src": "https://via.placeholder.com/300",
+      "alt": "Soundbar Samsung HW-Q990C 11.1.4 Dolby Atmos"
+    }
+  ],
+  "bad_product_json_images": []
+}
