@@ -73,12 +73,15 @@ def generate_product_page(product: Dict[str, Any], all_products: List[Dict[str, 
             """
         similars_html += '</div></div>'
 
-    # SEO DINÂMICO
+    
+    # SEO DINÂMICO APRIMORADO
     seo_title = f"{product_name} | Compara Preço"
     if p_status == 'active':
         seo_title = f"{product_name} com {p_discount}% de Desconto | Compara Preço"
     
-    meta_desc = f"Confira a oferta de {product_name} no Compara Preço. Economize com os melhores descontos do Mercado Livre."
+    # Template de Meta Description sugerido pelo usuário
+    meta_desc = f"Veja preço atualizado, avaliações, ficha técnica e oferta de {product_name}. Compare valores e encontre a melhor oportunidade antes de comprar."
+
     canonical_url = f"{BASE_URL}ofertas/{p_cat_slug}/{p_slug}-{p_id}.html"
     
     # Substituições
