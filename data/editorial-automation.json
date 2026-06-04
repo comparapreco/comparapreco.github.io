@@ -1,5 +1,5 @@
 {
-  "last_generated": "2026-06-04T11:27:45.256419",
+  "last_generated": "2026-06-04T18:15:07.738793",
   "automated_articles": [
     {
       "id": "article-MLB17375584",
@@ -10,7 +10,7 @@
       "current_price": 60.0,
       "previous_price": 199.0,
       "status": "published",
-      "generated_at": "2026-06-04T11:27:45.256382",
+      "generated_at": "2026-06-04T18:15:07.738763",
       "content": "O Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red atingiu uma queda de 69% em seu preço. Agora disponível por apenas R$ 60.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
       "social_posts": [
         {
@@ -20,38 +20,38 @@
       ]
     },
     {
-      "id": "article-MLB15238956",
-      "title": "OFERTA: Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127\\u002F220v com 67% de Desconto",
-      "slug": "chapinha-de-cabelo-mq-professional-titanium-pro-48-queda-67",
-      "category": "Outros",
-      "price_drop": 67,
-      "current_price": 48.0,
-      "previous_price": 149.0,
+      "id": "article-MLB47814270",
+      "title": "OFERTA: Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp Branco com 66% de Desconto",
+      "slug": "carregador-30w-turbo-para-iphone-8-x-xr-11-12-13-1-queda-66",
+      "category": "Celulares",
+      "price_drop": 66,
+      "current_price": 330.0,
+      "previous_price": 999.0,
       "status": "published",
-      "generated_at": "2026-06-04T11:27:45.256402",
-      "content": "O Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127\\u002F220v atingiu uma queda de 67% em seu preço. Agora disponível por apenas R$ 48.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
+      "generated_at": "2026-06-04T18:15:07.738782",
+      "content": "O Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp Branco atingiu uma queda de 66% em seu preço. Agora disponível por apenas R$ 330.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
       "social_posts": [
         {
           "platform": "twitter",
-          "content": "🔥 OFERTA: Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127\\u002F220v com 67% de Desconto por apenas R$ 48.00! Confira no Radar Ninja."
+          "content": "🔥 OFERTA: Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp Branco com 66% de Desconto por apenas R$ 330.00! Confira no Radar Ninja."
         }
       ]
     },
     {
-      "id": "article-MLB25708528",
-      "title": "OFERTA: Perfume Asad Elixir Lattafa Árabe Original Nota Fiscal com 67% de Desconto",
-      "slug": "perfume-asad-elixir-lattafa-árabe-original-nota-fi-queda-67",
-      "category": "Beleza",
-      "price_drop": 67,
-      "current_price": 48.0,
-      "previous_price": 149.0,
+      "id": "article-MLB50853162",
+      "title": "OFERTA: Celular Smartphone Realme C73 256gb 8gb Ram Dual Sim 120hz 6000mah Verde com 66% de Desconto",
+      "slug": "celular-smartphone-realme-c73-256gb-8gb-ram-dual-s-queda-66",
+      "category": "Celulares",
+      "price_drop": 66,
+      "current_price": 330.0,
+      "previous_price": 999.0,
       "status": "published",
-      "generated_at": "2026-06-04T11:27:45.256416",
-      "content": "O Perfume Asad Elixir Lattafa Árabe Original Nota Fiscal atingiu uma queda de 67% em seu preço. Agora disponível por apenas R$ 48.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
+      "generated_at": "2026-06-04T18:15:07.738791",
+      "content": "O Celular Smartphone Realme C73 256gb 8gb Ram Dual Sim 120hz 6000mah Verde atingiu uma queda de 66% em seu preço. Agora disponível por apenas R$ 330.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
       "social_posts": [
         {
           "platform": "twitter",
-          "content": "🔥 OFERTA: Perfume Asad Elixir Lattafa Árabe Original Nota Fiscal com 67% de Desconto por apenas R$ 48.00! Confira no Radar Ninja."
+          "content": "🔥 OFERTA: Celular Smartphone Realme C73 256gb 8gb Ram Dual Sim 120hz 6000mah Verde com 66% de Desconto por apenas R$ 330.00! Confira no Radar Ninja."
         }
       ]
     }
@@ -62,12 +62,12 @@
       "product_name": "Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red"
     },
     {
-      "product_id": "MLB15238956",
-      "product_name": "Chapinha De Cabelo Mq Professional Titanium Pro 480 Cor Chumbo 127\\u002F220v"
+      "product_id": "MLB47814270",
+      "product_name": "Carregador 30w Turbo Para iPhone 8 X Xr 11 12 13 14 Pro Max Fonte Usb C Cor Branca Dtimp Branco"
     },
     {
-      "product_id": "MLB25708528",
-      "product_name": "Perfume Asad Elixir Lattafa Árabe Original Nota Fiscal"
+      "product_id": "MLB50853162",
+      "product_name": "Celular Smartphone Realme C73 256gb 8gb Ram Dual Sim 120hz 6000mah Verde"
     }
   ]
 }
