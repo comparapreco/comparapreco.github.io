@@ -1,0 +1,24 @@
+{
+  "celulares": {
+    "title": "Celulares: Guia Completo, Ofertas e Comparativos",
+    "description": "Encontre os melhores celulares, compare preços, veja guias de compra e as ofertas mais quentes de smartphones no Radar Ninja.",
+    "guide_path": "noticias/posts/como-escolher-um-celular-2026-guia-completo.md",
+    "faq_path": "noticias/posts/celulares-faq.html",
+    "og_image": "assets/images/celulares-hub-og.jpg",
+    "related_comparisons": [
+      {"title": "Celulares Top de Linha", "url": "comparar/celulares-top-de-linha.html"},
+      {"title": "Celulares Custo-Benefício", "url": "comparar/celulares-custo-beneficio.html"}
+    ]
+  },
+  "notebooks": {
+    "title": "Notebooks: Melhores Ofertas, Guia de Compra e Comparativos",
+    "description": "Encontre o notebook ideal para trabalho, estudo ou games. Compare preços e veja as melhores ofertas de notebooks no Radar Ninja.",
+    "guide_path": "noticias/posts/guia-notebooks-2026.md",
+    "faq_path": "noticias/posts/notebooks-faq.html",
+    "og_image": "assets/images/notebooks-hub-og.jpg",
+    "related_comparisons": [
+      {"title": "Melhores Notebooks Gamer", "url": "comparar/notebooks-gamer.html"},
+      {"title": "Notebooks para Trabalho", "url": "comparar/notebooks-trabalho.html"}
+    ]
+  }
+}
