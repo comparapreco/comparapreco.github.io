@@ -58,7 +58,7 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         
     # SEO para categorias (Fase 1)
     seo_title = f"Ofertas de {category_name} com Desconto no Compara Preço"
-    meta_description = f"Compare os melhores {category_slug.replace("-", " ").title()}, veja preços atualizados, avaliações e ofertas das principais lojas."
+    meta_description = f'Compare os melhores {category_slug.replace("-", " ").title()}, veja preços atualizados, avaliações e ofertas das principais lojas.'
     canonical_url = f"{BASE_URL}categorias/{category_slug}/"
 
     # Substituições no template
@@ -114,7 +114,7 @@ def build_all_category_pages(input_path: str, template_path: str, output_dir: st
                 if brand not in brands: brands[brand] = []
                 brands[brand].append(product)
                 break
-        
+         
     alias_output_dir = "ofertas" if output_dir != "ofertas" else None
 
     # Gerar páginas de categorias e aliases limpos em /ofertas/{categoria}/
@@ -122,7 +122,7 @@ def build_all_category_pages(input_path: str, template_path: str, output_dir: st
         build_category_page(slug, cat_products, template_path, output_dir)
         if alias_output_dir:
             build_category_page(slug, cat_products, template_path, alias_output_dir)
-        
+         
     # Gerar páginas de marcas (Hub de Marcas)
     for brand, brand_products in brands.items():
         build_category_page(brand, brand_products, template_path, output_dir)
