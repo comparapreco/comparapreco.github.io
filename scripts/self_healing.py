@@ -31,18 +31,23 @@ def run_pipeline():
         "score_products.py",
         "affiliate_links.py",
         "validate_products.py", 
-        "deduplicate.py", 
         "sync_database.py",
+        "deduplicate.py", 
         "editorial_automation.py", 
         "generate_blog_posts.py",
+        "clean_legacy_posts.py",
         "generate_pages.py",
         "build_categories.py",
+        "repair_internal_links.py",
+        "repair_unicode_escapes.py",
+        "repair_public_artifacts_all.py",
         "build_homepage.py", 
         "generate_hubs.py",
         "build_sitemap.py",
         "generate_sitemap_dynamic.py",
         "seo_health_check.py",
-        "health_monitor.py"
+        "health_monitor.py",
+        "advanced_health_report.py"
     ]
     
     essential = ["score_products.py", "sync_database.py", "generate_pages.py", "build_homepage.py"]
@@ -87,15 +92,9 @@ def run_pipeline():
 
     logger.info("✅ ASSERTIONS PASS: Banco e Site atualizados com sucesso.")
     
-    # Publicar no GitHub Pages
-    logger.info("📤 Publicando atualizações no GitHub...")
-    try:
-        subprocess.run(["git", "add", "."], check=True)
-        subprocess.run(["git", "commit", "-m", f"🤖 Auto-update: {datetime.now().strftime('%Y-%m-%d %H:%M')}"], check=True)
-        subprocess.run(["git", "push", "origin", "main"], check=True)
-        logger.info("🚀 Publicação concluída com sucesso!")
-    except Exception as e:
-        logger.error(f"❌ Erro na publicação: {e}")
+    # A publicação Git fica centralizada no GitHub Actions para evitar commits duplicados,
+    # conflitos de rebase e falhas por falta de identidade do usuário Git no ambiente.
+    logger.info("📦 Artefatos gerados; publicação será feita pelo workflow externo.")
 
     run_backup()
     

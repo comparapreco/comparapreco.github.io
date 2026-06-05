@@ -7,6 +7,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+from quality_utils import clean_product_name, slugify as quality_slugify
+
 try:
     from openai import OpenAI
     AI_ENABLED = True
@@ -27,9 +29,7 @@ PRODUCTS_FILE = ROOT / "data" / "database" / "all_products.json"
 
 
 def slugify(text: str, max_len: int = 90) -> str:
-    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
-    text = re.sub(r"[^a-zA-Z0-9]+", "-", text.lower()).strip("-")
-    return text[:max_len].strip("-") or "oferta"
+    return quality_slugify(text, max_len=max_len)
 
 
 def money(value: Any) -> str:
@@ -143,11 +143,10 @@ def generate_long_content(product: Dict[str, Any]) -> str:
 
 
 def render_post(product: Dict[str, Any], now: datetime, sequence: int) -> tuple[str, str, str]:
-    product_name = product.get("name", "Produto")
+    product_name = clean_product_name(product.get("name", "Produto"))
     safe_name = html.escape(product_name)
-    product_id = str(product.get("id", "produto"))
-    timestamp = now.strftime("%Y%m%d%H%M%S")
-    slug = f"analise-{slugify(product_name, 55)}-{product_id}-{timestamp}-{sequence}"
+    timestamp = now.strftime("%Y%m%d")
+    slug = f"analise-{slugify(product_name, 64)}-{timestamp}-{sequence}"
     title = f"Análise: {product_name} vale a pena com {product.get('custom_discount_pct', 0)}% OFF?"
     canonical = f"{BASE_URL}noticias/posts/{slug}.html"
     article_body = generate_long_content(product)

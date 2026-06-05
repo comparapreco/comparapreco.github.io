@@ -1,0 +1,21 @@
+{
+  "status": "OK",
+  "timestamp": "2026-06-05T19:15:57.709132",
+  "total_products": 221,
+  "issues": [],
+  "metrics": {
+    "bad_names": 0,
+    "duplicate_signatures": 0,
+    "missing_images": 0,
+    "missing_links": 0,
+    "public_artifacts": {
+      "html_with_u002f": 0,
+      "html_with_timestamp_titles": 0,
+      "post_links_with_mlb_timestamp": 0
+    }
+  },
+  "samples": {
+    "bad_names": [],
+    "duplicate_signatures": []
+  }
+}

@@ -196,7 +196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div style="margin-bottom: 15px;">
 <p><strong>Este é o menor preço?</strong></p>
-<p>Nosso robô monitora o Mercado Livre 24h por dia. O preço de {{product.price}} é uma das melhores ofertas registradas recentemente.</p>
+<p>Nosso robô acompanha ofertas públicas e sinais de preço em ciclos recorrentes. O valor de {{product.price}} foi destacado por apresentar boa oportunidade no momento da captura.</p>
 </div>
 </div>
 </div>
@@ -208,7 +208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </main>
 <footer class="footer">
 <div class="container">
-<p>© 2026 Compara Preço. Atualizado via API oficial do Mercado Livre.</p>
+<p>© 2026 Compara Preço. Ofertas monitoradas automaticamente a partir de fontes públicas e links de parceiros.</p>
 <div class="footer-links">
 Sobre
 Contato
@@ -223,9 +223,9 @@ Privacidade
         const currentPrice = {{product.price_raw}};
         const oldPrice = parseFloat("{{product.originalPrice}}".replace('R$ ', '').replace('.', '').replace(',', '.'));
         
-        // Simulação de histórico baseada no preço atual e original
+        // Tendência visual estimada a partir do preço de referência e do preço capturado.
         const data = [oldPrice, oldPrice * 0.95, oldPrice * 0.98, oldPrice * 0.92, currentPrice];
-        const labels = ['Há 30 dias', 'Há 15 dias', 'Há 7 dias', 'Há 3 dias', 'Hoje'];
+        const labels = ['Referência', 'Estimativa 1', 'Estimativa 2', 'Estimativa 3', 'Captura atual'];
 
         new Chart(ctx, {
             type: 'line',

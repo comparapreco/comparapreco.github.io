@@ -2,6 +2,7 @@ import os
 import json
 from typing import List, Dict, Any
 from logger import logger
+from quality_utils import clean_product_name, escape_attr, escape_html, money, normalize_product, slugify
 
 BASE_URL = "https://comparapreco.github.io/"
 
@@ -17,23 +18,23 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         
     category_name = category_slug.replace("-", " ").title()
     
-    def _safe_url(p):
-        aff = p.get('custom_affiliate_url', '')
-        if aff and '/social/' not in aff and True:
-            return aff
-        return p.get('permalink', '')
+    def _offer_url(p):
+        name = clean_product_name(p.get("name") or p.get("title"))
+        return f"../../ofertas/{p.get('custom_category_slug', category_slug)}/{slugify(name)}-{p.get('id', 'produto')}.html"
 
     # Renderizar produtos da categoria
     category_products_html = ""
     for idx, p in enumerate(products):
+        p = normalize_product(p)
         # Pular produtos sem imagem ou link básico
         img_url = p.get("image") or p.get("thumbnail")
-        product_url = _safe_url(p)
+        product_url = _offer_url(p)
         
         if not img_url or not product_url:
             continue
 
-        discount = p.get("custom_discount_pct", 0)
+        name = clean_product_name(p.get("name") or p.get("title"), 70)
+        discount = int(p.get("custom_discount_pct", 0) or 0)
         
         # Lógica de Selos Dinâmicos
         extra_badge = ""
@@ -48,10 +49,10 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         <div class="product-card">
             <span class="badge discount-badge">↓ {discount}% OFF</span>
             {extra_badge}
-            <div class="card-img"><img src="{img_url}" alt="{p.get("name", "")}"></div>
-            <h3>{p.get("name", "")[:50]}...</h3>
-            <div class="price-tag" style="font-size: 20px;">R$ {p.get("price", 0):.2f} <span class="old-price" style="font-size: 14px;">R$ {p.get("originalPrice", 0):.2f}</span></div>
-            <a href="{product_url}" class="btn" style="width: 100%; text-align: center;" target="_blank">Comprar</a>
+            <div class="card-img"><img src="{escape_attr(img_url)}" alt="{escape_attr(name)}"></div>
+            <h3>{escape_html(name)}</h3>
+            <div class="price-tag" style="font-size: 20px;">{money(p.get("price"))} <span class="old-price" style="font-size: 14px;">{money(p.get("originalPrice") or p.get("original_price"))}</span></div>
+            <a href="{escape_attr(product_url)}" class="btn" style="width: 100%; text-align: center;">Ver análise</a>
         </div>
         """
         
@@ -114,13 +115,19 @@ def build_all_category_pages(input_path: str, template_path: str, output_dir: st
                 brands[brand].append(product)
                 break
         
-    # Gerar páginas de categorias
+    alias_output_dir = "ofertas" if output_dir != "ofertas" else None
+
+    # Gerar páginas de categorias e aliases limpos em /ofertas/{categoria}/
     for slug, cat_products in categories.items():
         build_category_page(slug, cat_products, template_path, output_dir)
+        if alias_output_dir:
+            build_category_page(slug, cat_products, template_path, alias_output_dir)
         
     # Gerar páginas de marcas (Hub de Marcas)
     for brand, brand_products in brands.items():
         build_category_page(brand, brand_products, template_path, output_dir)
+        if alias_output_dir:
+            build_category_page(brand, brand_products, template_path, alias_output_dir)
 
 if __name__ == "__main__":
     build_all_category_pages("data/database/all_products.json", "templates/category_template.html", "categorias")
