@@ -58,7 +58,8 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         
     # SEO para categorias (Fase 1)
     seo_title = f"Ofertas de {category_name} com Desconto no Compara Preço"
-    meta_description = f'Compare os melhores {category_slug.replace("-", " ").title()}, veja preços atualizados, avaliações e ofertas das principais lojas.'
+    category_display_name = category_slug.replace("-", " ").title()
+    meta_description = f"Compare os melhores {category_display_name}, veja preços atualizados, avaliações e ofertas das principais lojas."
     canonical_url = f"{BASE_URL}categorias/{category_slug}/"
 
     # Substituições no template
