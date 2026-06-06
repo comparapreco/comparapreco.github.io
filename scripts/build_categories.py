@@ -7,127 +7,127 @@ from quality_utils import clean_product_name, escape_attr, escape_html, money, n
 BASE_URL = "https://comparapreco.github.io/"
 
 def build_category_page(category_slug: str, products: List[Dict[str, Any]], template_path: str, output_dir: str) -> None:
-    logger.info(f"Building category page: {category_slug}")
+    logger.info(f"Building page for category: {category_slug}")
     
     if not os.path.exists(template_path):
-        logger.error(f"Template not found: {template_path}")
+        logger.error(f"Template file not found: {template_path}")
         return
 
-    with open(template_path, "r", encoding="utf-8") as f:
-        template = f.read()
+    with open(template_path, "r", encoding="utf-8") as file:
+        template = file.read()
         
-    category_name = category_slug.replace("-", " ").title()
+    cat_name = category_slug.replace("-", " ").title()
     
     def _offer_url(p):
-        name = clean_product_name(p.get("name") or p.get("title"))
-        custom_cat = p.get("custom_category_slug", category_slug)
-        product_id = p.get("id", "product")
-        slugified_name = slugify(name)
-        return f"../../offers/{custom_cat}/{slugified_name}-{product_id}.html"
+        pname = clean_product_name(p.get("name") or p.get("title"))
+        pcat = p.get("custom_category_slug", category_slug)
+        pid = p.get("id", "product")
+        pslug = slugify(pname)
+        return f"../../offers/{pcat}/{pslug}-{pid}.html"
 
-    category_products_html = ""
-    for idx, p in enumerate(products):
-        p = normalize_product(p)
-        img_url = p.get("image") or p.get("thumbnail")
-        product_url = _offer_url(p)
+    products_html = ""
+    for i, product in enumerate(products):
+        product = normalize_product(product)
+        pimg = product.get("image") or product.get("thumbnail")
+        purl = _offer_url(product)
         
-        if not img_url or not product_url:
+        if not pimg or not purl:
             continue
 
-        name = clean_product_name(p.get("name") or p.get("title"), 70)
-        discount = int(p.get("custom_discount_pct", 0) or 0)
+        pname = clean_product_name(product.get("name") or product.get("title"), 70)
+        pdiscount = int(product.get("custom_discount_pct", 0) or 0)
         
-        extra_badge = ""
-        if discount >= 60:
-            extra_badge = '<span class="badge badge-menor-preco">BEST PRICE</span>'
-        elif discount >= 45:
-            extra_badge = '<span class="badge badge-baixou">PRICE DOWN</span>'
-        elif idx < 3:
-            extra_badge = '<span class="badge badge-promo-dia">PROMO TODAY</span>'
+        pbadge = ""
+        if pdiscount >= 60:
+            pbadge = '<span class="badge badge-best">BEST PRICE</span>'
+        elif pdiscount >= 45:
+            pbadge = '<span class="badge badge-down">PRICE DOWN</span>'
+        elif i < 3:
+            pbadge = '<span class="badge badge-today">TODAY</span>'
 
-        escaped_img = escape_attr(img_url)
-        escaped_name = escape_attr(name)
-        html_name = escape_html(name)
-        price_value = money(p.get("price"))
-        original_price = money(p.get("originalPrice") or p.get("original_price"))
-        escaped_url = escape_attr(product_url)
+        pimg_esc = escape_attr(pimg)
+        pname_esc = escape_attr(pname)
+        pname_html = escape_html(pname)
+        pprice = money(product.get("price"))
+        porig = money(product.get("originalPrice") or product.get("original_price"))
+        purl_esc = escape_attr(purl)
         
-        category_products_html += f"""
+        products_html += f"""
         <div class="product-card">
-            <span class="badge discount-badge">{discount}% OFF</span>
-            {extra_badge}
-            <div class="card-img"><img src="{escaped_img}" alt="{escaped_name}"></div>
-            <h3>{html_name}</h3>
-            <div class="price-tag" style="font-size: 20px;">{price_value} <span class="old-price" style="font-size: 14px;">{original_price}</span></div>
-            <a href="{escaped_url}" class="btn" style="width: 100%; text-align: center;">View</a>
+            <span class="badge discount-badge">{pdiscount}% OFF</span>
+            {pbadge}
+            <div class="card-img"><img src="{pimg_esc}" alt="{pname_esc}"></div>
+            <h3>{pname_html}</h3>
+            <div class="price-tag" style="font-size: 20px;">{pprice} <span class="old-price" style="font-size: 14px;">{porig}</span></div>
+            <a href="{purl_esc}" class="btn" style="width: 100%; text-align: center;">View</a>
         </div>
         """
         
-    seo_title = f"Offers of {category_name} with Discount"
-    meta_description = f"Compare best {category_name}, check updated prices, reviews and offers from main stores."
-    canonical_url = f"{BASE_URL}categories/{category_slug}/"
+    seo_title = f"Offers of {cat_name} with Discount"
+    meta_desc = f"Compare {cat_name} prices, reviews and offers."
+    canon_url = f"{BASE_URL}categories/{category_slug}/"
 
-    page_content = template.replace("{{seo.title}}", seo_title)
-    page_content = page_content.replace("{{meta.description}}", meta_description)
-    page_content = page_content.replace("{{canonical.url}}", canonical_url)
-    page_content = page_content.replace("{{category.name}}", category_name)
-    page_content = page_content.replace("{{category.slug}}", category_slug)
-    page_content = page_content.replace("{{category.products}}", category_products_html)
+    page = template.replace("{{seo.title}}", seo_title)
+    page = page.replace("{{meta.description}}", meta_desc)
+    page = page.replace("{{canonical.url}}", canon_url)
+    page = page.replace("{{category.name}}", cat_name)
+    page = page.replace("{{category.slug}}", category_slug)
+    page = page.replace("{{category.products}}", products_html)
 
-    categories_list = ["technology", "games", "home", "appliances", "pet", "beauty", "fitness", "auto", "furniture"]
-    for cat in categories_list:
-        placeholder = f"{{{{cat_{cat}_active}}}}"
-        active_class = "active" if cat == category_slug else ""
-        page_content = page_content.replace(placeholder, active_class)
+    cats = ["technology", "games", "home", "appliances", "pet", "beauty", "fitness", "auto", "furniture"]
+    for cat in cats:
+        ph = f"{{{{cat_{cat}_active}}}}"
+        active = "active" if cat == category_slug else ""
+        page = page.replace(ph, active)
     
-    page_path = os.path.join(output_dir, category_slug, "index.html")
-    os.makedirs(os.path.dirname(page_path), exist_ok=True)
-    with open(page_path, "w", encoding="utf-8") as f:
-        f.write(page_content)
-    logger.info(f"Category page generated: {page_path}")
+    out_path = os.path.join(output_dir, category_slug, "index.html")
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(page)
+    logger.info(f"Page created: {out_path}")
 
 def build_all_category_pages(input_path: str, template_path: str, output_dir: str) -> None:
     logger.info(f"Building category pages from {input_path}")
     
-    products = []
+    prods = []
     if os.path.exists(input_path):
         try:
             with open(input_path, "r", encoding="utf-8") as f:
-                products = json.load(f)
+                prods = json.load(f)
         except Exception as e:
             logger.error(f"Error loading {input_path}: {e}")
     
-    if not products:
+    if not prods:
         return
         
-    categories: Dict[str, List[Dict[str, Any]]] = {}
-    brands: Dict[str, List[Dict[str, Any]]] = {}
+    cats = {}
+    brands = {}
     
-    for product in products:
-        cat_slug = product.get("custom_category_slug", "other")
-        if cat_slug not in categories:
-            categories[cat_slug] = []
-        categories[cat_slug].append(product)
+    for prod in prods:
+        cslug = prod.get("custom_category_slug", "other")
+        if cslug not in cats:
+            cats[cslug] = []
+        cats[cslug].append(prod)
         
-        name_lower = (product.get("name") or "").lower()
-        for brand in ["samsung", "motorola", "lenovo", "lg", "jbl", "apple", "philco", "asus"]:
-            if brand in name_lower:
-                if brand not in brands:
-                    brands[brand] = []
-                brands[brand].append(product)
+        pn = (prod.get("name") or "").lower()
+        for br in ["samsung", "motorola", "lenovo", "lg", "jbl", "apple", "philco", "asus"]:
+            if br in pn:
+                if br not in brands:
+                    brands[br] = []
+                brands[br].append(prod)
                 break
          
-    alias_output_dir = "offers" if output_dir != "offers" else None
+    alias = "offers" if output_dir != "offers" else None
 
-    for slug, cat_products in categories.items():
-        build_category_page(slug, cat_products, template_path, output_dir)
-        if alias_output_dir:
-            build_category_page(slug, cat_products, template_path, alias_output_dir)
+    for slug, cp in cats.items():
+        build_category_page(slug, cp, template_path, output_dir)
+        if alias:
+            build_category_page(slug, cp, template_path, alias)
          
-    for brand, brand_products in brands.items():
-        build_category_page(brand, brand_products, template_path, output_dir)
-        if alias_output_dir:
-            build_category_page(brand, brand_products, template_path, alias_output_dir)
+    for brand, bp in brands.items():
+        build_category_page(brand, bp, template_path, output_dir)
+        if alias:
+            build_category_page(brand, bp, template_path, alias)
 
 if __name__ == "__main__":
     build_all_category_pages("data/database/all_products.json", "templates/category_template.html", "categories")
