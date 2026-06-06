@@ -59,7 +59,9 @@ def title_from_html(content: str, fallback: str) -> str:
 def slugify(value: Any, max_len: int = 90) -> str:
     text = clean_product_name(value, max_len=160)
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
-    text = re.sub(r"[^a-zA-Z0-9]+", "-", text.lower()).strip("-")
+    # Substituir explicitamente "/" por "-" para evitar que o slug remova a barra sem colocar nada no lugar
+    text = text.lower().replace("/", "-")
+    text = re.sub(r"[^a-z0-9]+", "-", text).strip("-")
     text = re.sub(r"-+", "-", text)
     if len(text) > max_len:
         text = text[:max_len].rsplit("-", 1)[0].strip("-")
