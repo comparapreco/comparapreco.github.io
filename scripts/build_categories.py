@@ -20,7 +20,10 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
     
     def _offer_url(p):
         name = clean_product_name(p.get("name") or p.get("title"))
-        return f"../../ofertas/{p.get('custom_category_slug', category_slug)}/{slugify(name)}-{p.get('id', 'produto')}.html"
+        custom_cat = p.get("custom_category_slug", category_slug)
+        product_id = p.get("id", "produto")
+        slugified_name = slugify(name)
+        return f"../../ofertas/{custom_cat}/{slugified_name}-{product_id}.html"
 
     # Renderizar produtos da categoria
     category_products_html = ""
@@ -45,14 +48,21 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         elif idx < 3:
             extra_badge = '<span class="badge badge-promo-dia">🌟 PROMOÇÃO DO DIA</span>'
 
+        escaped_img = escape_attr(img_url)
+        escaped_name = escape_attr(name)
+        html_name = escape_html(name)
+        price_value = money(p.get("price"))
+        original_price = money(p.get("originalPrice") or p.get("original_price"))
+        escaped_url = escape_attr(product_url)
+        
         category_products_html += f"""
         <div class="product-card">
             <span class="badge discount-badge">↓ {discount}% OFF</span>
             {extra_badge}
-            <div class="card-img"><img src="{escape_attr(img_url)}" alt="{escape_attr(name)}"></div>
-            <h3>{escape_html(name)}</h3>
-            <div class="price-tag" style="font-size: 20px;">{money(p.get("price"))} <span class="old-price" style="font-size: 14px;">{money(p.get("originalPrice") or p.get("original_price"))}</span></div>
-            <a href="{escape_attr(product_url)}" class="btn" style="width: 100%; text-align: center;">Ver análise</a>
+            <div class="card-img"><img src="{escaped_img}" alt="{escaped_name}"></div>
+            <h3>{html_name}</h3>
+            <div class="price-tag" style="font-size: 20px;">{price_value} <span class="old-price" style="font-size: 14px;">{original_price}</span></div>
+            <a href="{escaped_url}" class="btn" style="width: 100%; text-align: center;">Ver análise</a>
         </div>
         """
         
