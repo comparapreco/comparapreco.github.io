@@ -58,8 +58,8 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         
     # SEO para categorias (Fase 1)
     seo_title = f"Ofertas de {category_name} com Desconto no Compara Preço"
-    category_display_name = category_slug.replace("-", " ").title()
-    meta_description = f"Compare os melhores {category_display_name}, veja preços atualizados, avaliações e ofertas das principais lojas."
+    category_name_formatted = category_slug.replace("-", " ").title()
+    meta_description = f"Compare os melhores {category_name_formatted}, veja preços atualizados, avaliações e ofertas das principais lojas."
     canonical_url = f"{BASE_URL}categorias/{category_slug}/"
 
     # Substituições no template
@@ -99,20 +99,21 @@ def build_all_category_pages(input_path: str, template_path: str, output_dir: st
         return
         
     categories: Dict[str, List[Dict[str, Any]]] = {}
-    categories: Dict[str, List[Dict[str, Any]]] = {}
     brands: Dict[str, List[Dict[str, Any]]] = {}
     
     for product in products:
         # Categorias
         cat_slug = product.get("custom_category_slug", "outros")
-        if cat_slug not in categories: categories[cat_slug] = []
+        if cat_slug not in categories:
+            categories[cat_slug] = []
         categories[cat_slug].append(product)
         
         # Marcas (extrair do nome se não houver campo específico)
         name_lower = (product.get("name") or "").lower()
         for brand in ["samsung", "motorola", "lenovo", "lg", "jbl", "apple", "philco", "asus"]:
             if brand in name_lower:
-                if brand not in brands: brands[brand] = []
+                if brand not in brands:
+                    brands[brand] = []
                 brands[brand].append(product)
                 break
          
