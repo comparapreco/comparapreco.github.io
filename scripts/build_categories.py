@@ -25,11 +25,9 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         slugified_name = slugify(name)
         return f"../../ofertas/{custom_cat}/{slugified_name}-{product_id}.html"
 
-    # Renderizar produtos da categoria
     category_products_html = ""
     for idx, p in enumerate(products):
         p = normalize_product(p)
-        # Pular produtos sem imagem ou link básico
         img_url = p.get("image") or p.get("thumbnail")
         product_url = _offer_url(p)
         
@@ -39,7 +37,6 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         name = clean_product_name(p.get("name") or p.get("title"), 70)
         discount = int(p.get("custom_discount_pct", 0) or 0)
         
-        # Lógica de Selos Dinâmicos
         extra_badge = ""
         if discount >= 60:
             extra_badge = '<span class="badge badge-menor-preco">💎 MENOR PREÇO</span>'
@@ -66,13 +63,11 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         </div>
         """
         
-    # SEO para categorias (Fase 1)
     seo_title = f"Ofertas de {category_name} com Desconto no Compara Preço"
     category_display = category_slug.replace("-", " ").title()
     meta_description = f"Compare os melhores {category_display}, veja preços atualizados, avaliações e ofertas das principais lojas."
     canonical_url = f"{BASE_URL}categorias/{category_slug}/"
 
-    # Substituições no template
     page_content = template.replace("{{seo.title}}", seo_title)
     page_content = page_content.replace("{{meta.description}}", meta_description)
     page_content = page_content.replace("{{canonical.url}}", canonical_url)
@@ -80,14 +75,12 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
     page_content = page_content.replace("{{category.slug}}", category_slug)
     page_content = page_content.replace("{{category.products}}", category_products_html)
 
-    # Marcar categoria ativa no menu
     categories_list = ["tecnologia", "gamer", "casa", "eletrodomesticos", "pet", "beleza", "fitness", "auto", "moveis"]
     for cat in categories_list:
         placeholder = f"{{{{cat_{cat}_active}}}}"
         active_class = "active" if cat == category_slug else ""
         page_content = page_content.replace(placeholder, active_class)
     
-    # Salvar página
     page_path = os.path.join(output_dir, category_slug, "index.html")
     os.makedirs(os.path.dirname(page_path), exist_ok=True)
     with open(page_path, "w", encoding="utf-8") as f:
