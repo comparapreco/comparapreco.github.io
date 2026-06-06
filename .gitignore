@@ -44,3 +44,12 @@ temp/
 # Backups
 *.bak
 *.backup
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Generated validation reports
+/data/quality_gate_report.json
+/data/validation_publication_report.json
+/data/dedupe_report.json

@@ -129,80 +129,9 @@ def generate_comparisons(products):
                 (out_dir / fname).write_text(template.render(p1=p1, p2=p2, money=money))
 
 def generate_rankings(products):
-    logger.info(f"Gerando rankings Top 5/10 para {SITE_KEY or 'main site'}...")
-    out_dir = OUTPUT_BASE / "melhores-2026"
-    out_dir.mkdir(parents=True, exist_ok=True)
-    
-    cats = {}
-    for p in products:
-        c = p.get("custom_category_slug", "geral")
-        if c not in cats: cats[c] = []
-        cats[c].append(p)
-        
-    template_str = """
-    <!DOCTYPE html>
-    <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Melhores {{ category_name }} de 2026 — Ranking Radar Ninja</title>
-        <link rel="stylesheet" href="../../assets/css/style.css">
-        <style>
-            .rank-item { display: flex; align-items: center; gap: 30px; background: var(--card); padding: 30px; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 25px; position: relative; }
-            .rank-number { font-size: 60px; font-weight: 900; color: var(--primary); opacity: 0.15; position: absolute; left: 20px; top: 10px; }
-            .rank-img { width: 150px; height: 150px; object-fit: contain; background: white; border-radius: 12px; }
-            .rank-info { flex: 1; }
-            .rank-badge { background: var(--success); color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 10px; display: inline-block; }
-        </style>
-    </head>
-    <body>
-        <header class="header"><div class="container"><a href="../../" class="logo">📊 Radar Ninja</a></div></header>
-        <main class="container">
-            <h1 style="margin: 50px 0 20px;">🏆 Melhores {{ category_name }} de 2026</h1>
-            <p style="margin-bottom: 40px; color: #666;">Ranking atualizado automaticamente com base em descontos reais e custo-benefício monitorado pelo Radar Ninja.</p>
-            
-            {% for p in products %}
-            <div class="rank-item">
-                <div class="rank-number">#{{ loop.index }}</div>
-                <img src="{{ p.image }}" class="rank-img">
-                <div class="rank-info">
-                    {% if p.is_best_value %}<span class="rank-badge" style="background:var(--primary)">🏆 MELHOR CUSTO-BENEFÍCIO</span>
-                    {% elif p.is_premium %}<span class="rank-badge" style="background:#6f42c1">💎 ESCOLHA PREMIUM</span>
-                    {% elif p.is_budget %}<span class="rank-badge" style="background:#20c997">💰 MELHOR PREÇO</span>
-                    {% else %}<span class="rank-badge">{{ p.custom_discount_pct }}% DE DESCONTO</span>{% endif %}
-                    <h3>{{ p.name }}</h3>
-                    <div class="price-tag" style="font-size:22px; margin:10px 0;">{{ money(p.price) }}</div>
-                    <a href="{{ p.custom_affiliate_url }}" class="btn">Ver Melhor Preço</a>
-                </div>
-            </div>
-            {% endfor %}
-        </main>
-    </body>
-    </html>
-    """
-    template = Template(template_str)
-    for cat, items in cats.items():
-        # Filtrar apenas produtos com preço válido
-        valid_items = [p for p in items if p.get("price") and float(p.get("price")) > 0]
-        if not valid_items: continue
-        
-        valid_items.sort(key=lambda x: float(x.get("custom_discount_pct", 0)), reverse=True)
-        
-        # Identificar destaques
-        prices = [float(p["price"]) for p in valid_items]
-        avg_price = sum(prices) / len(prices)
-        
-        for p in valid_items:
-            p_price = float(p["price"])
-            p_discount = float(p.get("custom_discount_pct", 0))
-            
-            p["is_best_value"] = p_discount > 15 and p_price <= avg_price
-            p["is_premium"] = p_price > avg_price * 1.5
-            p["is_budget"] = p_price < avg_price * 0.6
-            
-        top_10 = valid_items[:10]
-        fname = f"melhores-{cat}-2026.html"
-        (out_dir / fname).write_text(template.render(category_name=cat.replace('-', ' ').title(), products=top_10, money=money))
+    logger.info(f"Gerando rankings validados para {SITE_KEY or 'main site'}...")
+    from generate_rankings import generate_rankings as generate_validated_rankings
+    generate_validated_rankings()
 
 def main():
     products = load_products()

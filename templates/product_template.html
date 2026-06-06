@@ -46,65 +46,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .specs-table td:first-child { font-weight: 700; color: var(--text-light); width: 40%; }
   </style>
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "{{product.name}}",
-    "image": "{{product.image}}",
-    "description": "{{meta.description}}",
-    "sku": "{{product.id}}",
-    "brand": { "@type": "Brand", "name": "Mercado Livre" },
-    "offers": {
-      "@type": "Offer",
-      "url": "{{product.url}}",
-      "priceCurrency": "BRL",
-      "price": "{{product.price_raw}}",
-      "priceValidUntil": "2026-12-31",
-      "itemCondition": "https://schema.org/NewCondition",
-      "availability": "https://schema.org/InStock",
-      "seller": { "@type": "Organization", "name": "Mercado Livre" }
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "1250"
-    },
-    "review": {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Lucas Silva",
-        "url": "https://comparapreco.github.io/autores/lucas-silva.html"
-      }
-    }
-  }
+{{product.schema_json}}
   </script>
 <!-- FAQ Schema -->
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "O {{product.name}} vale a pena?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim! O {{product.name}} está com um desconto de {{product.discount}}% no Compara Preço, sendo uma das melhores opções de custo-benefício hoje."
-      }
-    }, {
-      "@type": "Question",
-      "name": "Este é o menor preço do {{product.name}}?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nosso Compara Preço IA analisou o histórico e este preço de {{product.price}} é considerado altamente competitivo para a categoria {{product.category}}."
-      }
-    }]
-  }
+{{product.faq_schema_json}}
   </script>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>

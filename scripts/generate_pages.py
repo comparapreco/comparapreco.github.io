@@ -5,6 +5,7 @@ from typing import Any, Dict, List
 
 from logger import logger
 from quality_utils import clean_product_name, escape_attr, escape_html, money, normalize_product, slugify, as_float
+from schema_utils import jsonld, product_schema
 
 BASE_URL = "https://comparapreco.github.io/"
 
@@ -80,8 +81,31 @@ def generate_product_page(product: Dict[str, Any], all_products: List[Dict[str, 
     canonical_url = f"{BASE_URL}ofertas/{p_cat_slug}/{p_slug}-{p_id}.html"
 
     desc = product.get("description") or (
-        f"Oferta monitorada automaticamente pelo Radar Ninja. Confira preço, desconto, disponibilidade e detalhes antes de comprar {product_name}."
+        f"Oferta monitorada automaticamente pelo Compara Preço. Confira preço, desconto, disponibilidade e detalhes antes de comprar {product_name}."
     )
+    schema_json = jsonld(product_schema(product, description=desc, canonical_url=canonical_url))
+    faq_schema_json = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": f"O {product_name} vale a pena?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": f"Sim. O {product_name} é monitorado pelo Compara Preço com validação de preço, imagem, disponibilidade e link antes da publicação."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": f"O preço de {product_name} está consistente com a página?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": f"O robô publica esta oferta somente quando o preço visível, o Schema.org Product/Offer e os dados internos estão consistentes. Preço atual: {p_price}."
+                }
+            }
+        ]
+    }, ensure_ascii=False, indent=2)
 
     replacements = {
         "{{seo.title}}": escape_html(seo_title),
@@ -100,6 +124,8 @@ def generate_product_page(product: Dict[str, Any], all_products: List[Dict[str, 
         "{{product.category}}": escape_html(p_cat_slug),
         "{{product.discount}}": str(p_discount),
         "{{product.description_content}}": escape_html(desc),
+        "{{product.schema_json}}": schema_json,
+        "{{product.faq_schema_json}}": faq_schema_json,
     }
 
     content = template
