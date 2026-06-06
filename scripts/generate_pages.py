@@ -53,9 +53,10 @@ def generate_product_page(product: Dict[str, Any], all_products: List[Dict[str, 
     if similars:
         similars_html = '<div class="similar-products"><h2>Produtos similares em oferta</h2><div class="products-grid">'
         for similar in similars:
-            s_name = clean_product_name(similar.get("name") or similar.get("title"), 62)
+            s_full_name = clean_product_name(similar.get("name") or similar.get("title"))
+            s_name = clean_product_name(s_full_name, 62)
             s_price = money(similar.get("price"))
-            s_slug = slugify(s_name)
+            s_slug = slugify(s_full_name)
             s_id = similar.get("id", "produto")
             s_url = f"../../ofertas/{similar.get('custom_category_slug', 'outros')}/{s_slug}-{s_id}.html"
             similars_html += f"""

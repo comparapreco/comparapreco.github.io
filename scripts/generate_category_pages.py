@@ -13,8 +13,8 @@ TODAY = date.today().isoformat()
 BASE_URL = 'https://comparapreco.github.io'
 
 PRODUCT_FILES = [
+    ROOT / 'data' / 'database' / 'all_products.json',
     ROOT / 'data' / 'curated_products.json',
-    ROOT / 'data' / 'all_products_final_unique_urls.json',
     ROOT / 'data' / 'validated_products.json',
     ROOT / 'data' / 'affiliate_products.json',
 ]
@@ -165,17 +165,21 @@ def money(value: float) -> str:
 def product_card(product: dict[str, Any]) -> str:
     import sys
     sys.path.append(str(ROOT / 'scripts'))
-    from generate_pages import slugify
-    
-    p_name = str(product.get('title') or product.get('name') or 'Produto em oferta')
+    from quality_utils import clean_product_name, slugify, normalize_product
+
+    product = normalize_product(product)
+    p_name = clean_product_name(product.get('name') or product.get('title') or 'Produto em oferta')
     title = html.escape(p_name)
     p_slug = slugify(p_name)
     p_cat = product.get('custom_category_slug', 'outros')
     p_id = product.get('id', '0')
-    
-    # URL interna para a página do produto
+
+    local_offer = ROOT / 'ofertas' / p_cat / f'{p_slug}-{p_id}.html'
+    if not local_offer.exists():
+        return ''
+
     url = f"../../ofertas/{p_cat}/{p_slug}-{p_id}.html"
-    
+
     img = html.escape(str(product.get('image') or product.get('thumbnail') or ''), quote=True)
     current = money(price(product))
     disc = discount(product)
@@ -186,7 +190,7 @@ def product_card(product: dict[str, Any]) -> str:
         <div class="product-image-wrap">{image_html}{badge}</div>
         <h3>{title}</h3>
         <p class="price">{current}</p>
-        <span class="cta">Ver Detalhes da Oferta 🥷</span>
+        <span class="cta">Ver Detalhes da Oferta</span>
       </a>
     </article>'''
 
