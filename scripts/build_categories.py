@@ -7,6 +7,7 @@ from quality_utils import clean_product_name, escape_attr, escape_html, money, n
 BASE_URL = "https://comparapreco.github.io/"
 
 def build_category_page(category_slug: str, products: List[Dict[str, Any]], template_path: str, output_dir: str) -> None:
+    """Build a category page with all products for that category."""
     logger.info(f"Gerando página para a categoria: {category_slug}")
     
     if not os.path.exists(template_path):
@@ -68,8 +69,8 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         
     # SEO para categorias (Fase 1)
     seo_title = f"Ofertas de {category_name} com Desconto no Compara Preço"
-    category_name_formatted = category_slug.replace("-", " ").title()
-    meta_description = f"Compare os melhores {category_name_formatted}, veja preços atualizados, avaliações e ofertas das principais lojas."
+    category_display = category_slug.replace("-", " ").title()
+    meta_description = f"Compare os melhores {category_display}, veja preços atualizados, avaliações e ofertas das principais lojas."
     canonical_url = f"{BASE_URL}categorias/{category_slug}/"
 
     # Substituições no template
@@ -95,6 +96,7 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
     logger.info(f"Página de categoria gerada: {page_path}")
 
 def build_all_category_pages(input_path: str, template_path: str, output_dir: str) -> None:
+    """Build all category pages from products data."""
     logger.info(f"Gerando páginas de categorias a partir de {input_path}...")
     
     products = []
