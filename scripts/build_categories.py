@@ -28,17 +28,30 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         slugified_name = slugify(name)
         return f"../../ofertas/{custom_cat}/{slugified_name}-{product_id}.html"
 
+    def _offer_abs_url(product: Dict[str, Any]) -> str:
+        normalized = normalize_product(product)
+        name = clean_product_name(normalized.get("name") or normalized.get("title"))
+        custom_cat = normalized.get("custom_category_slug", category_slug)
+        product_id = normalized.get("id", "produto")
+        slugified_name = slugify(name)
+        return f"{BASE_URL}ofertas/{custom_cat}/{slugified_name}-{product_id}.html"
+
     category_products_html = ""
+    jsonld_items = []
+
     for idx, product in enumerate(products):
         p = normalize_product(product)
         img_url = p.get("image") or p.get("thumbnail")
         product_url = _offer_url(p)
+        product_abs_url = _offer_abs_url(p)
 
         if not img_url or not product_url:
             continue
 
         name = clean_product_name(p.get("name") or p.get("title"), 70)
         discount = int(p.get("custom_discount_pct", 0) or 0)
+        price = p.get("price") or 0
+        original_price_val = p.get("originalPrice") or p.get("original_price") or 0
 
         extra_badge = ""
         if discount >= 60:
@@ -51,25 +64,41 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
         escaped_img = escape_attr(img_url)
         escaped_name = escape_attr(name)
         html_name = escape_html(name)
-        price_value = money(p.get("price"))
-        original_price = money(p.get("originalPrice") or p.get("original_price"))
+        price_display = money(price)
+        original_price_display = money(original_price_val)
         escaped_url = escape_attr(product_url)
 
         category_products_html += f"""
-        <div class="product-card">
+        <div class="product-card" itemscope itemtype="https://schema.org/Product">
             <span class="badge discount-badge">↓ {discount}% OFF</span>
             {extra_badge}
-            <div class="card-img"><img src="{escaped_img}" alt="{escaped_name}" loading="lazy"></div>
-            <h3>{html_name}</h3>
-            <div class="price-tag" style="font-size: 20px;">{price_value} <span class="old-price" style="font-size: 14px;">{original_price}</span></div>
-            <a href="{escaped_url}" class="btn" style="width: 100%; text-align: center;">Ver análise</a>
+            <div class="card-img"><img src="{escaped_img}" alt="{escaped_name}" loading="lazy" itemprop="image"/></div>
+            <h3 itemprop="name">{html_name}</h3>
+            <div class="price-tag" style="font-size: 20px;" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <span itemprop="price" content="{price}">{price_display}</span>
+                <span class="old-price" style="font-size: 14px;">{original_price_display}</span>
+                <meta itemprop="priceCurrency" content="BRL"/>
+                <meta itemprop="availability" content="https://schema.org/InStock"/>
+            </div>
+            <a href="{escaped_url}" class="btn" style="width: 100%; text-align: center;" itemprop="url">Ver análise</a>
         </div>
         """
+
+        # JSON-LD ItemList entry
+        if len(jsonld_items) < 20:
+            jsonld_items.append({
+                "@type": "ListItem",
+                "position": idx + 1,
+                "url": product_abs_url,
+                "name": name
+            })
 
     seo_title = f"Ofertas de {category_name} com Desconto no Compara Preço"
     category_display = category_slug.replace("-", " ").title()
     meta_description = f"Compare os melhores {category_display}, veja preços atualizados, avaliações e ofertas das principais lojas."
     canonical_url = f"{BASE_URL}categorias/{category_slug}/"
+
+    jsonld_str = json.dumps(jsonld_items, ensure_ascii=False)
 
     page_content = template.replace("{{seo.title}}", seo_title)
     page_content = page_content.replace("{{meta.description}}", meta_description)
@@ -77,6 +106,7 @@ def build_category_page(category_slug: str, products: List[Dict[str, Any]], temp
     page_content = page_content.replace("{{category.name}}", category_name)
     page_content = page_content.replace("{{category.slug}}", category_slug)
     page_content = page_content.replace("{{category.products}}", category_products_html)
+    page_content = page_content.replace("{{category.jsonld}}", jsonld_str)
 
     categories_list = ["tecnologia", "gamer", "casa", "eletrodomesticos", "pet", "beleza", "fitness", "auto", "moveis"]
     for cat in categories_list:
