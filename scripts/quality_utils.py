@@ -56,7 +56,7 @@ def title_from_html(content: str, fallback: str) -> str:
     return clean_product_name(fallback, 95)
 
 
-def slugify(value: Any, max_len: int = 90) -> str:
+def slugify(value: Any, max_len: int = 200) -> str:
     text = clean_product_name(value, max_len=160)
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
     # Substituir explicitamente "/" por "-" para evitar que o slug remova a barra sem colocar nada no lugar
