@@ -1,6 +1,24 @@
 {
-  "last_generated": "2026-06-08T09:43:46.468611",
+  "last_generated": "2026-06-08T10:09:22.366224",
   "automated_articles": [
+    {
+      "id": "article-MLB38053317",
+      "title": "OFERTA: Parafusadeira E Furadeira Impacto The Black Tools Tb-21pw 3/8 Cor Amarelo Frequência 50/60 Hz 127/220v 60hz com 73% de Desconto",
+      "slug": "parafusadeira-e-furadeira-impacto-the-black-tools--queda-73",
+      "category": "Ferramentas",
+      "price_drop": 73,
+      "current_price": 193.0,
+      "previous_price": 718.0,
+      "status": "published",
+      "generated_at": "2026-06-08T10:09:22.366180",
+      "content": "O Parafusadeira E Furadeira Impacto The Black Tools Tb-21pw 3/8 Cor Amarelo Frequência 50/60 Hz 127/220v 60hz atingiu uma queda de 73% em seu preço. Agora disponível por apenas R$ 193.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "content": "🔥 OFERTA: Parafusadeira E Furadeira Impacto The Black Tools Tb-21pw 3/8 Cor Amarelo Frequência 50/60 Hz 127/220v 60hz com 73% de Desconto por apenas R$ 193.00! Confira no Radar Ninja."
+        }
+      ]
+    },
     {
       "id": "article-MLB45840555",
       "title": "OFERTA: Controle Sem Fio Dualsense Chroma Teal Ps5 Sony Cfi-zct1w Cor Verde com 72% de Desconto",
@@ -10,7 +28,7 @@
       "current_price": 54.0,
       "previous_price": 199.0,
       "status": "published",
-      "generated_at": "2026-06-08T09:43:46.468579",
+      "generated_at": "2026-06-08T10:09:22.366207",
       "content": "O Controle Sem Fio Dualsense Chroma Teal Ps5 Sony Cfi-zct1w Cor Verde atingiu uma queda de 72% em seu preço. Agora disponível por apenas R$ 54.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
       "social_posts": [
         {
@@ -20,54 +38,36 @@
       ]
     },
     {
-      "id": "article-MLB39960346",
-      "title": "OFERTA: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart com 69% de Desconto",
-      "slug": "controle-sem-fio-joystick-bluetooth-para-ps4-video-queda-69",
-      "category": "Celulares",
-      "price_drop": 69,
-      "current_price": 303.0,
-      "previous_price": 999.0,
+      "id": "article-MLB20662382",
+      "title": "OFERTA: Smart Box Proeletronic Smartpro Prosb-3000/16 Gb 4k Hd Preto Padrão com 71% de Desconto",
+      "slug": "smart-box-proeletronic-smartpro-prosb-3000-16-gb-4-queda-71",
+      "category": "Outros",
+      "price_drop": 71,
+      "current_price": 577.0,
+      "previous_price": 2000.0,
       "status": "published",
-      "generated_at": "2026-06-08T09:43:46.468601",
-      "content": "O Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart atingiu uma queda de 69% em seu preço. Agora disponível por apenas R$ 303.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
+      "generated_at": "2026-06-08T10:09:22.366221",
+      "content": "O Smart Box Proeletronic Smartpro Prosb-3000/16 Gb 4k Hd Preto Padrão atingiu uma queda de 71% em seu preço. Agora disponível por apenas R$ 577.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
       "social_posts": [
         {
           "platform": "twitter",
-          "content": "🔥 OFERTA: Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart com 69% de Desconto por apenas R$ 303.00! Confira no Radar Ninja."
-        }
-      ]
-    },
-    {
-      "id": "article-MLB17375584",
-      "title": "OFERTA: Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red com 69% de Desconto",
-      "slug": "controle-sem-fio-microsoft-xbox-series-s-x-one-pc--queda-69",
-      "category": "Games",
-      "price_drop": 69,
-      "current_price": 60.0,
-      "previous_price": 199.0,
-      "status": "published",
-      "generated_at": "2026-06-08T09:43:46.468609",
-      "content": "O Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red atingiu uma queda de 69% em seu preço. Agora disponível por apenas R$ 60.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
-      "social_posts": [
-        {
-          "platform": "twitter",
-          "content": "🔥 OFERTA: Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red com 69% de Desconto por apenas R$ 60.00! Confira no Radar Ninja."
+          "content": "🔥 OFERTA: Smart Box Proeletronic Smartpro Prosb-3000/16 Gb 4k Hd Preto Padrão com 71% de Desconto por apenas R$ 577.00! Confira no Radar Ninja."
         }
       ]
     }
   ],
   "alert_triggers": [
     {
+      "product_id": "MLB38053317",
+      "product_name": "Parafusadeira E Furadeira Impacto The Black Tools Tb-21pw 3/8 Cor Amarelo Frequência 50/60 Hz 127/220v 60hz"
+    },
+    {
       "product_id": "MLB45840555",
       "product_name": "Controle Sem Fio Dualsense Chroma Teal Ps5 Sony Cfi-zct1w Cor Verde"
     },
     {
-      "product_id": "MLB39960346",
-      "product_name": "Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 Ps 4 Dual Shock Manete Pc Gamer Tv Smart"
-    },
-    {
-      "product_id": "MLB17375584",
-      "product_name": "Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red"
+      "product_id": "MLB20662382",
+      "product_name": "Smart Box Proeletronic Smartpro Prosb-3000/16 Gb 4k Hd Preto Padrão"
     }
   ]
 }

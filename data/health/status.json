@@ -1,7 +1,9 @@
 {
-  "status": "OK",
-  "timestamp": "2026-06-08T09:43:49.390568",
-  "issues": [],
+  "status": "WARNING",
+  "timestamp": "2026-06-08T10:09:32.774034",
+  "issues": [
+    "Produto MLB49652036 capturado mas n\u00e3o publicado totalmente."
+  ],
   "audit": [
     {
       "id": "MLB68104527",
@@ -11,6 +13,13 @@
       "published": true
     },
     {
+      "id": "MLB49652036",
+      "name": "Secador De Cabelos Philco\u00a0psc3500 4 Em 1\u00a0dobr\u00e1vel\u00a0motor\u00a0bldc Prateado Bege 127v",
+      "captured": true,
+      "processed": false,
+      "published": false
+    },
+    {
       "id": "MLB50269368",
       "name": "Aparador De Pelos Multigroom 8 Em 1 Mg3917\\u002F15 Philips Preto 127\\u002F220v",
       "captured": true,
@@ -18,28 +27,14 @@
       "published": true
     },
     {
-      "id": "MLB49652036",
+      "id": "MLB7917167",
       "name": "Secador De Cabelos Philco\u00a0psc3500 4 Em 1\u00a0dobr\u00e1vel\u00a0motor\u00a0bldc Prateado Bege 220v",
       "captured": true,
       "processed": true,
       "published": true
     },
     {
-      "id": "MLB7917167",
-      "name": "Secador De Cabelos Philco\u00a0psc3500 4 Em 1\u00a0dobr\u00e1vel\u00a0motor\u00a0bldc Prateado Bege 127v",
-      "captured": true,
-      "processed": true,
-      "published": true
-    },
-    {
       "id": "MLB6140723",
-      "name": "Perfume Sedutor \u00c1rabe Sabah 100ml Original Feminino",
-      "captured": true,
-      "processed": true,
-      "published": true
-    },
-    {
-      "id": "MLB52363091",
       "name": "Perfume Armaf Club De Nuit Intense 105ml Edt - Masculino",
       "captured": true,
       "processed": true,
@@ -47,6 +42,13 @@
     },
     {
       "id": "MLB45617876",
+      "name": "Perfume Sedutor \u00c1rabe Sabah 100ml Original Feminino",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB26000295",
       "name": "Perfume Lattafa Asad 100ml Eau De Parfum Original \u00c1rabe Original Com Nota Fiscal E Selo Original Lataffa",
       "captured": true,
       "processed": true,
@@ -60,15 +62,15 @@
       "published": true
     },
     {
-      "id": "MLB19612966",
+      "id": "MLB52363091",
       "name": "Perfume \u00c1rabe Feminino Yara Lattafa Eau De Parfum 100 Ml",
       "captured": true,
       "processed": true,
       "published": true
     },
     {
-      "id": "MLB26000295",
-      "name": "Escova Progressiva 150g - Fashion Gold",
+      "id": "MLB10164591",
+      "name": "Attracione Men Perfume Masculino Com Ferom\u00f4nios Ativados 25 Ml",
       "captured": true,
       "processed": true,
       "published": true
