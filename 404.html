@@ -172,7 +172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           const newUrl = idMap[productId];
           if (newUrl) {
             // Redirecionar para a nova URL
-            window.location.href = newUrl;
+            window.location.href = "/" + newUrl;
           }
         })
         .catch(err => {
