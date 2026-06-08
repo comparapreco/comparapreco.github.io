@@ -1,0 +1,61 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Melhores Eletrodomésticos de 2026: Ranking de Custo-Benefício",
+  "description": "Ranking dos 10 melhores eletrodomésticos de 2026 no Brasil, avaliados por preço, performance e economia de energia.",
+  "url": "https://comparapreco.github.io/melhores-2026/melhores-eletrodomesticos-2026.html",
+  "numberOfItems": 10,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Product",
+        "name": "Fritadeira Air Fryer Forno Oven 12L Mondial Afon-12L-AB",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_687549-MLA99986849451_112025-O.webp",
+        "description": "A melhor fritadeira air fryer forno de 2026 com 12 litros de capacidade.",
+        "brand": { "@type": "Brand", "name": "Mondial" },
+        "offers": {
+          "@type": "Offer",
+          "price": "387.00",
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Product",
+        "name": "Chuveiro Lorenzetti Loren Shower Ultra Eletrônico 7500W",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_694258-MLA99841104441_112025-O.webp",
+        "description": "Melhor chuveiro eletrônico de 2026 com controle gradual de temperatura.",
+        "brand": { "@type": "Brand", "name": "Lorenzetti" },
+        "offers": {
+          "@type": "Offer",
+          "price": "499.00",
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Product",
+        "name": "Cafeteira Elétrica Electrolux Inox com Jarra de Vidro",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_614829-MLA110791527994_052026-O.webp",
+        "description": "Cafeteira elétrica com melhor custo-benefício de 2026.",
+        "brand": { "@type": "Brand", "name": "Electrolux" },
+        "offers": {
+          "@type": "Offer",
+          "price": "137.00",
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    }
+  ]
+}
