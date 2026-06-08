@@ -1,56 +1,11 @@
 {
-  "before": 231,
-  "after": 221,
-  "removed": 10,
+  "before": 216,
+  "after": 215,
+  "removed": 1,
   "duplicates": [
     {
-      "kept": "MLB54961556",
-      "removed": "MLB6443434920",
-      "reason": "higher_score"
-    },
-    {
-      "kept": "MLB47115842",
-      "removed": "MLB6756182602",
-      "reason": "higher_score"
-    },
-    {
-      "kept": "MLB41540844",
-      "removed": "MLB4079715491",
-      "reason": "higher_score"
-    },
-    {
-      "kept": "MLB53610161",
-      "removed": "MLB4179239349",
-      "reason": "higher_score"
-    },
-    {
-      "kept": "MLB67267597",
-      "removed": "MLB6539025322",
-      "reason": "higher_score"
-    },
-    {
-      "kept": "MLB66191173",
-      "removed": "MLB6444937486",
-      "reason": "higher_score"
-    },
-    {
-      "kept": "MLB68104527",
-      "removed": "MLB4645102377",
-      "reason": "higher_score"
-    },
-    {
-      "kept": "MLB49652036",
-      "removed": "MLB6486861240",
-      "reason": "higher_score"
-    },
-    {
-      "kept": "MLB65529879",
-      "removed": "MLB6423251554",
-      "reason": "higher_score"
-    },
-    {
-      "kept": "MLB58315694",
-      "removed": "MLB5783097440",
+      "kept": "MLB65966191",
+      "removed": "MLB6600589630",
       "reason": "higher_score"
     }
   ]

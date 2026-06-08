@@ -1,54 +1,81 @@
 #!/bin/bash
 
-# Script de entrada para execução 24/7 do Compara Preço
-# Este script deve ser agendado no Crontab ou Manus Schedule
+# Script de entrada resiliente para execução 24/7 do Compara Preço.
+# Objetivos operacionais:
+# 1. Nunca falhar silenciosamente no GitHub Actions.
+# 2. Evitar travamento permanente por lockfile antigo.
+# 3. Registrar cada etapa crítica com código de saída visível.
+# 4. Manter a barreira de qualidade antes de publicar.
+
+set -uo pipefail
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$PROJECT_DIR"
 
-# Trava de segurança para evitar sobreposição
+mkdir -p logs data/database
+LOG_FILE="logs/execution.log"
 LOCKFILE="/tmp/radar_ninja.lock"
+MAX_LOCK_AGE_SECONDS="${MAX_LOCK_AGE_SECONDS:-7200}"
+
+log() {
+    local message="$1"
+    echo "[$(date -u '+%Y-%m-%d %H:%M:%S UTC')] ${message}" | tee -a "$LOG_FILE"
+}
+
+show_failure_context() {
+    local exit_code="$1"
+    log "ERRO: ciclo encerrado com código ${exit_code}. Últimas linhas do log:"
+    tail -n 120 "$LOG_FILE" || true
+}
+
+cleanup() {
+    rm -f "$LOCKFILE"
+}
+trap cleanup EXIT
+
 if [ -f "$LOCKFILE" ]; then
-    echo "[$(date)] ⚠️ Já existe uma execução em curso. Abortando." >> logs/execution.log
-    exit 1
+    lock_age=$(( $(date +%s) - $(stat -c %Y "$LOCKFILE" 2>/dev/null || echo 0) ))
+    if [ "$lock_age" -gt "$MAX_LOCK_AGE_SECONDS" ]; then
+        log "AVISO: lockfile antigo encontrado (${lock_age}s). Removendo para destravar o robô."
+        rm -f "$LOCKFILE"
+    else
+        log "AVISO: já existe execução em curso (${lock_age}s). Encerrando sem erro para não marcar a automação como quebrada."
+        exit 0
+    fi
 fi
+
 touch "$LOCKFILE"
-trap "rm -f $LOCKFILE" EXIT
 
-# Garantir que as pastas necessárias existam
-mkdir -p logs
-mkdir -p data/database
+run_step() {
+    local label="$1"
+    shift
+    log "INÍCIO: ${label}"
+    "$@" >> "$LOG_FILE" 2>&1
+    local status=$?
+    if [ "$status" -ne 0 ]; then
+        log "FALHA: ${label} retornou código ${status}."
+        show_failure_context "$status"
+        return "$status"
+    fi
+    log "OK: ${label}"
+    return 0
+}
 
-# Log de início
-echo "[$(date)] 🚀 Iniciando ciclo de atualização 24/7..." >> logs/execution.log
+log "Iniciando ciclo de atualização 24/7 do Radar Ninja."
 
-# Executar o orquestrador resiliente
-python3 scripts/self_healing.py >> logs/execution.log 2>&1
-SELF_HEALING_STATUS=$?
-
-if [ $SELF_HEALING_STATUS -ne 0 ]; then
-    echo "[$(date)] ❌ Falha no ciclo. Verifique os logs detalhados." >> logs/execution.log
-    exit $SELF_HEALING_STATUS
-fi
+run_step "orquestrador resiliente" python3 scripts/self_healing.py || exit $?
 
 # Barreiras de qualidade antes da publicação: remove duplicidades,
 # valida preço/imagem/link e regenera páginas com Schema.org consistente.
-python3 scripts/dedupe_products.py >> logs/execution.log 2>&1
-python3 scripts/validate_products.py >> logs/execution.log 2>&1
-python3 scripts/generate_pages.py >> logs/execution.log 2>&1
-python3 scripts/generate_rankings.py >> logs/execution.log 2>&1
-python3 scripts/generate_sitemaps.py >> logs/execution.log 2>&1
-python3 scripts/generate_feeds.py >> logs/execution.log 2>&1
-python3 scripts/prepublish_quality_gate.py >> logs/execution.log 2>&1
-QUALITY_STATUS=$?
+run_step "deduplicação final de produtos" python3 scripts/dedupe_products.py || exit $?
+run_step "validação final de produtos" python3 scripts/validate_products.py || exit $?
+run_step "geração final de páginas" python3 scripts/generate_pages.py || exit $?
+run_step "geração final de rankings" python3 scripts/generate_rankings.py || exit $?
+run_step "geração final de sitemaps" python3 scripts/generate_sitemaps.py || exit $?
+run_step "geração final de feeds" python3 scripts/generate_feeds.py || exit $?
+run_step "barreira de qualidade pré-publicação" python3 scripts/prepublish_quality_gate.py || exit $?
 
-# Verificar status da execução
-if [ $QUALITY_STATUS -eq 0 ]; then
-    echo "[$(date)] ✅ Ciclo concluído com sucesso e aprovado na barreira de qualidade." >> logs/execution.log
-else
-    echo "[$(date)] ❌ Publicação bloqueada pela barreira de qualidade. Verifique os logs detalhados." >> logs/execution.log
-    exit $QUALITY_STATUS
-fi
+log "Ciclo concluído com sucesso e aprovado na barreira de qualidade."
 
-# Limpeza de logs antigos (manter apenas os últimos 1000 linhas para economizar espaço)
-tail -n 1000 logs/execution.log > logs/execution.log.tmp && mv logs/execution.log.tmp logs/execution.log
+# Limpeza de logs antigos, mantendo contexto suficiente para auditoria.
+tail -n 1500 "$LOG_FILE" > "${LOG_FILE}.tmp" && mv "${LOG_FILE}.tmp" "$LOG_FILE"
