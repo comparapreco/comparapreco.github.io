@@ -1,17 +1,17 @@
 # 📊 Relatório de Execução Radar Ninja
 
-**Última Atualização:** 2026-06-08 10:09:32 UTC
+**Última Atualização:** 2026-06-08 10:14:43 UTC
 
 | Métrica | Valor |
 |---------|-------|
-| **Horário da Execução** | 2026-06-08T10:09:22+00:00 |
-| **Produtos Encontrados** | 60 |
-| **Produtos Publicados** | 60 |
+| **Horário da Execução** | 2026-06-08T10:14:33+00:00 |
+| **Produtos Encontrados** | 78 |
+| **Produtos Publicados** | 78 |
 | **Status** | SUCCESS |
 
 ## 🛠️ Detalhes da Execução
-- **Total Raw:** 60
-- **Aprovados:** 60
+- **Total Raw:** 78
+- **Aprovados:** 78
 - **Bloqueados (Qualidade):** 0
 
 ## ❌ Erros Encontrados
