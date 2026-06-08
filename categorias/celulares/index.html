@@ -1,272 +1,82 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W7MP9499');</script>
-<!-- End Google Tag Manager -->
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P0X4Z9Y7B2"></script>
-<script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-P0X4Z9Y7B2");
-    </script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Celulares: Guia Completo, Ofertas e Comparativos</title>
-<meta content="Encontre os melhores celulares, compare preços, veja guias de compra e as ofertas mais quentes de smartphones no Radar Ninja." name="description"/>
-<link href="https://comparapreco.github.io/categorias/celulares/" rel="canonical"/>
-<!-- Open Graph / Facebook -->
-<meta content="website" property="og:type"/>
-<meta content="https://comparapreco.github.io/categorias/celulares/" property="og:url"/>
-<meta content="Celulares: Guia Completo, Ofertas e Comparativos" property="og:title"/>
-<meta content="Encontre os melhores celulares, compare preços, veja guias de compra e as ofertas mais quentes de smartphones no Radar Ninja." property="og:description"/>
-<meta content="https://comparapreco.github.io/assets/images/celulares-hub-og.jpg" property="og:image"/>
-<!-- Twitter -->
-<meta content="summary_large_image" property="twitter:card"/>
-<meta content="https://comparapreco.github.io/categorias/celulares/" property="twitter:url"/>
-<meta content="Celulares: Guia Completo, Ofertas e Comparativos" property="twitter:title"/>
-<meta content="Encontre os melhores celulares, compare preços, veja guias de compra e as ofertas mais quentes de smartphones no Radar Ninja." property="twitter:description"/>
-<meta content="https://comparapreco.github.io/assets/images/celulares-hub-og.jpg" property="twitter:image"/>
-<link href="../../assets/css/style.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<style>
-        .hub-content { padding: 20px; background: var(--card); border-radius: 12px; margin-top: 20px; }
-        .hub-content h1, .hub-content h2, .hub-content h3 { color: var(--text); margin-top: 30px; margin-bottom: 15px; }
-        .hub-content p { line-height: 1.7; margin-bottom: 15px; }
-        .hub-content ul, .hub-content ol { margin-bottom: 15px; padding-left: 20px; }
-        .hub-content li { margin-bottom: 8px; }
-        .faq-schema { display: none; } /* Hidden for display, used by search engines */
-        .faq-section { margin-top: 40px; border-top: 1px solid var(--border); padding-top: 30px; }
-        .faq-item { margin-bottom: 20px; }
-        .faq-question { font-weight: 700; color: var(--primary); margin-bottom: 5px; }
-        .faq-answer { line-height: 1.6; }
-        .related-links { margin-top: 40px; border-top: 1px solid var(--border); padding-top: 30px; }
-        .related-links h2 { margin-bottom: 20px; }
-        .related-links ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-        .related-links li a { display: block; padding: 10px 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text); transition: all 0.2s ease; }
-        .related-links li a:hover { background: var(--primary-glow); color: var(--primary); border-color: var(--primary); }
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Ofertas de Celulares e Smartphones | Radar Ninja</title>
+    <meta content="Encontre as melhores ofertas de celulares e smartphones. Compare preços e economize com o Radar Ninja." name="description"/>
+    <link href="/assets/css/style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+    <style>
+        :root { --primary: #00c853; --bg: #f8fafc; --text: #0f172a; --card: #ffffff; --border: #e2e8f0; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header { background: #0f172a; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 900; color: white; text-decoration: none; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; }
+        .product-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; text-decoration: none; color: inherit; transition: transform 0.2s; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .product-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .discount-badge { background: var(--primary); color: white; padding: 4px 8px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; }
+        .product-title { font-weight: 700; margin: 15px 0 10px; font-size: 1.1rem; line-height: 1.4; }
+        .btn-buy { display: block; background: var(--primary); color: white; text-align: center; padding: 12px; border-radius: 8px; font-weight: 700; margin-top: 15px; }
+        .guide-section { background: white; padding: 40px; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 60px; }
     </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7MP9499"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<header class="header">
-<div class="container header-inner">
-<a class="logo" href="../../">🥷 <strong>Radar Ninja</strong></a>
-<div class="search-bar">
-<input id="searchInput" placeholder="Buscar ofertas..." type="text"/>
-</div>
-<button id="themeToggle" style="background:none; border:none; cursor:pointer; font-size:20px;">🌙</button>
-</div>
-</header>
-<nav class="cat-nav">
-<div class="container cat-tabs">
-            <a class="cat-tab active" href="../../categorias/celulares/">📱 Celulares</a>
-            <a class="cat-tab" href="../../categorias/notebooks/">💻 Notebooks</a>
-            <a class="cat-tab" href="../../categorias/tv-e-video/">📺 TVs</a>
-            <a class="cat-tab" href="../../categorias/monitores/">🖥️ Monitores</a>
-            <a class="cat-tab" href="../../categorias/eletrodomesticos/">🍳 Air Fryers</a>
+    <header class="header">
+        <div class="container header-inner">
+            <a class="logo" href="/">🥷 RADAR NINJA</a>
+            <nav style="display: flex; gap: 20px;">
+                <a href="/" style="color: white; text-decoration: none; font-weight: 600;">Home</a>
+                <a href="/categorias/" style="color: white; text-decoration: none; font-weight: 600;">Categorias</a>
+            </nav>
         </div>
-</nav>
-<main class="container">
-<nav class="breadcrumb">
-<a href="../../">Home</a> &gt; Categorias &gt; Celulares
-        </nav>
-<section class="section">
-<div class="hub-content">
-                <h1>Como Escolher um Celular em 2026: Guia Completo do Radar Ninja</h1>
-<p>Com a avalanche de lançamentos anuais, escolher um celular pode ser uma tarefa esmagadora. O Radar Ninja preparou este guia completo para te ajudar a tomar a melhor decisão, focando no que realmente importa para o seu uso diário.</p>
-<h2>1. Defina seu Orçamento</h2>
-<p>Antes de tudo, estabeleça quanto você está disposto a gastar. Os celulares se dividem em três grandes categorias de preço:</p>
-<ul>
-<li><strong>Entrada (até R$ 1.500):</strong> Foco em funções básicas, bateria de longa duração e câmeras decentes para o dia a dia. Marcas como Samsung (linha A), Xiaomi (Redmi) e Motorola (Moto G) dominam este segmento.</li>
-<li><strong>Intermediário (R$ 1.500 a R$ 3.500):</strong> Melhor desempenho, câmeras mais versáteis, telas de alta qualidade e recursos extras como carregamento rápido e maior resistência à água. Aqui, você encontra modelos mais avançados da Samsung (linhas A e M), Xiaomi (linhas Redmi Note e POCO) e alguns iPhones mais antigos.</li>
-<li><strong>Premium (acima de R$ 3.500):</strong> O topo de linha em tecnologia. Processadores potentes, câmeras profissionais, telas OLED de última geração, design premium e recursos inovadores. Dominado por Apple (iPhones), Samsung (linhas S e Z) e alguns modelos da Xiaomi (linha Mi).</li>
-</ul>
-<h2>2. Priorize o que é Importante para Você</h2>
-<p>Cada usuário tem necessidades diferentes. Pense no seu perfil:</p>
-<h3>Câmera</h3>
-<ul>
-<li><strong>Fotógrafo Amador:</strong> Busque celulares com múltiplos sensores (principal, ultrawide, macro, profundidade), boa abertura de lente (f/1.8 ou menor) e recursos de software como Modo Noturno e Estabilização Óptica de Imagem (OIS).</li>
-<li><strong>Selfies:</strong> Fique de olho na resolução da câmera frontal e em recursos como foco automático e modo retrato.</li>
-<li><strong>Vídeos:</strong> Verifique a capacidade de gravação em 4K, estabilização e recursos de câmera lenta/rápida.</li>
-</ul>
-<h3>Desempenho (Processador e RAM)</h3>
-<ul>
-<li><strong>Uso Básico (Redes Sociais, Mensagens):</strong> Processadores de entrada (Snapdragon 4xx, MediaTek Helio Gxx) e 4GB de RAM são suficientes.</li>
-<li><strong>Uso Moderado (Jogos Leves, Multitarefas):</strong> Processadores intermediários (Snapdragon 6xx/7xx, MediaTek Dimensity) e 6GB a 8GB de RAM oferecem uma experiência fluida.</li>
-<li><strong>Uso Intenso (Jogos Pesados, Edição de Vídeo):</strong> Processadores topo de linha (Snapdragon 8xx, Apple A Bionic, MediaTek Dimensity de alto desempenho) e 8GB a 12GB de RAM são ideais.</li>
-</ul>
-<h3>Bateria</h3>
-<ul>
-<li><strong>Longa Duração (mais de 1 dia):</strong> Baterias acima de 5.000 mAh são excelentes. Verifique também a otimização do software.</li>
-<li><strong>Carregamento Rápido:</strong> Se você tem pressa, procure por tecnologias como Power Delivery (PD) ou Quick Charge (QC) com carregadores de 25W ou mais.</li>
-</ul>
-<h3>Tela</h3>
-<ul>
-<li><strong>Tamanho:</strong> De 6.0 a 6.8 polegadas é o padrão. Telas menores para quem busca portabilidade, maiores para consumo de mídia.</li>
-<li><strong>Tecnologia:</strong><ul>
-<li><strong>LCD/IPS:</strong> Boa qualidade, cores precisas, mais comum em modelos de entrada e intermediários.</li>
-<li><strong>AMOLED/OLED:</strong> Cores vibrantes, pretos profundos, alto contraste, ideal para consumo de mídia. Mais comum em intermediários premium e topo de linha.</li>
-</ul>
-</li>
-<li><strong>Taxa de Atualização:</strong> 60Hz (padrão), 90Hz ou 120Hz (maior fluidez, especialmente em jogos e navegação).</li>
-</ul>
-<h3>Armazenamento</h3>
-<ul>
-<li><strong>Uso Básico:</strong> 64GB pode ser suficiente se você usa poucos apps e fotos na nuvem.</li>
-<li><strong>Uso Moderado:</strong> 128GB é o ideal para a maioria dos usuários.</li>
-<li><strong>Uso Intenso:</strong> 256GB ou mais, especialmente se você grava muitos vídeos em alta resolução ou baixa muitos jogos.</li>
-<li><strong>Expansão:</strong> Verifique se há slot para cartão microSD, caso precise de mais espaço.</li>
-</ul>
-<h2>3. Sistema Operacional: Android vs. iOS</h2>
-<ul>
-<li><strong>Android:</strong> Mais flexibilidade, personalização, maior variedade de modelos e preços. Ideal para quem gosta de explorar e ter controle total sobre o aparelho.</li>
-<li><strong>iOS (Apple):</strong> Ecossistema integrado, segurança robusta, atualizações de software por mais tempo e alta valorização no mercado de usados. Ideal para quem busca simplicidade, desempenho consistente e integração com outros produtos Apple.</li>
-</ul>
-<h2>4. Recursos Extras</h2>
-<ul>
-<li><strong>Resistência à Água e Poeira (IP67/IP68):</strong> Essencial para quem busca durabilidade e segurança contra acidentes.</li>
-<li><strong>NFC:</strong> Para pagamentos por aproximação e conexão rápida com outros dispositivos.</li>
-<li><strong>5G:</strong> Para velocidades de internet ultrarrápidas (verifique a cobertura na sua região).</li>
-<li><strong>Sensor de Impressão Digital/Reconhecimento Facial:</strong> Para segurança e conveniência no desbloqueio.</li>
-</ul>
-<h2>5. Leia Avaliações e Compare Preços</h2>
-<p>Depois de definir suas prioridades, pesquise modelos que se encaixam. Leia avaliações de especialistas e usuários. E, claro, use o Radar Ninja para comparar preços e encontrar a melhor oferta!</p>
+    </header>
 
-                <div class="faq-section">
-<h2>Perguntas Frequentes sobre Celulares</h2>
-                    
-    <div class="faq-item">
-        <p class="faq-question">Qual o melhor celular para comprar em 2026?</p>
-        <p class="faq-answer">O 'melhor' celular depende do seu orçamento e necessidades. Para quem busca o topo de linha, modelos como o iPhone 16 Pro Max ou Samsung Galaxy S26 Ultra são excelentes. Para custo-benefício, o Xiaomi Redmi Note 15 Pro ou Samsung Galaxy A57 se destacam. Nosso guia completo 'Como Escolher um Celular' pode te ajudar a decidir.</p>
-    </div>
-    
-    <div class="faq-item">
-        <p class="faq-question">Celular Android ou iPhone: qual escolher?</p>
-        <p class="faq-answer">Android oferece maior flexibilidade, personalização e uma vasta gama de preços e modelos. iPhones (iOS) são conhecidos pela simplicidade, ecossistema integrado, segurança e atualizações de software de longo prazo. A escolha ideal depende da sua preferência por liberdade de customização (Android) ou integração e estabilidade (iOS).</p>
-    </div>
-    
-    <div class="faq-item">
-        <p class="faq-question">O que é importante considerar na câmera de um celular?</p>
-        <p class="faq-answer">Para uma boa câmera, observe a quantidade de megapixels (MP), mas principalmente a abertura da lente (quanto menor o número f/, melhor), a presença de Estabilização Óptica de Imagem (OIS) e a versatilidade dos sensores (ultrawide, macro, telefoto). Recursos de software como Modo Noturno e HDR também fazem grande diferença.</p>
-    </div>
-    
-    <div class="faq-item">
-        <p class="faq-question">Quanto de RAM é necessário em um celular?</p>
-        <p class="faq-answer">Para uso básico (redes sociais, mensagens), 4GB de RAM são suficientes. Para uso moderado (jogos leves, multitarefas), 6GB a 8GB oferecem fluidez. Para jogos pesados, edição de vídeo ou uso intenso, 8GB a 12GB de RAM são ideais para garantir o melhor desempenho.</p>
-    </div>
-    
-    <div class="faq-item">
-        <p class="faq-question">Vale a pena comprar um celular 5G em 2026?</p>
-        <p class="faq-answer">Sim, se a cobertura 5G já estiver disponível na sua região e você busca velocidades de internet ultrarrápidas. Mesmo que a cobertura ainda seja limitada, um celular 5G garante que você estará preparado para o futuro. Verifique a compatibilidade com as bandas 5G do Brasil antes de comprar.</p>
-    </div>
-    
-                </div>
-<div class="related-links">
-<h2>Links Úteis</h2>
-<ul>
-                        <li><a href="../../ofertas/celulares/samsung-galaxy-watch7-smartwatch-44mm-bt-galaxy-ai-verde-MLB65770866.html">Samsung Galaxy Watch7 Smartwatch 44mm Bt Galaxy Ai / Verde <span style="color:#22c55e;font-size:12px;">-66%</span></a></li>
-<li><a href="../../ofertas/celulares/celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-verde-MLB49089309.html">Celular Samsung Galaxy A07 256gb 8gb Câmera 50mp Verde <span style="color:#22c55e;font-size:12px;">-64%</span></a></li>
-<li><a href="../../ofertas/celulares/smartphone-gamer-infinix-gt30-pro-5g-12gb-ram-256gb-camera-dupla-108mp-selfie-13mp-nfc-6-78-amoled-144hz-dual-MLB62253296.html">Smartphone Gamer Infinix Gt30 Pro 5g / 12gb Ram 256gb Câmera Dupla 108mp+ Selfie 13mp Nfc 6, 78 Amoled 144hz Dual <span style="color:#22c55e;font-size:12px;">-63%</span></a></li>
-<li><a href="../../ofertas/celulares/smartphone-infinix-smart-10-4gb-ram-256gb-ssd-camera-8mp-ia-tela-667-hd-120hz-bateria-5000mah-processador-MLB58899457.html">Smartphone Infinix Smart 10 4gb Ram 256gb Ssd Câmera 8mp + Ia, Tela 6.67 Hd+ 120hz, Bateria 5000mah, Processador <span style="color:#22c55e;font-size:12px;">-63%</span></a></li>
-<li><a href="../../ofertas/celulares/controle-gamepad-gamesir-x5-lite-usb-c-android-iphone-15-16-mobile-hall-effect-turbo-leve-preto-MLB50567982.html">Controle Gamepad Gamesir X5 Lite Usb-c Android iPhone 15/16 Mobile Hall Effect Turbo Leve Preto <span style="color:#22c55e;font-size:12px;">-62%</span></a></li>
+    <main class="container">
+        <h1 style="font-size: 2.5rem; font-weight: 900; margin-top: 40px;">📱 Melhores Ofertas de Celulares</h1>
+        <p style="color: #64748b; font-size: 1.1rem;">As ofertas mais quentes de smartphones rastreadas pelo nosso Radar Ninja.</p>
 
-                    </ul>
-</div>
-</div>
-</section>
-<script class="faq-schema" type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                
-  {
-    "@type": "Question",
-    "name": "Qual o melhor celular para comprar em 2026?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "O 'melhor' celular depende do seu orçamento e necessidades. Para quem busca o topo de linha, modelos como o iPhone 16 Pro Max ou Samsung Galaxy S26 Ultra são excelentes. Para custo-benefício, o Xiaomi Redmi Note 15 Pro ou Samsung Galaxy A57 se destacam. Nosso guia completo 'Como Escolher um Celular' pode te ajudar a decidir."
-    }
-  },
-  {
-    "@type": "Question",
-    "name": "Celular Android ou iPhone: qual escolher?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Android oferece maior flexibilidade, personalização e uma vasta gama de preços e modelos. iPhones (iOS) são conhecidos pela simplicidade, ecossistema integrado, segurança e atualizações de software de longo prazo. A escolha ideal depende da sua preferência por liberdade de customização (Android) ou integração e estabilidade (iOS)."
-    }
-  },
-  {
-    "@type": "Question",
-    "name": "O que é importante considerar na câmera de um celular?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Para uma boa câmera, observe a quantidade de megapixels (MP), mas principalmente a abertura da lente (quanto menor o número f/, melhor), a presença de Estabilização Óptica de Imagem (OIS) e a versatilidade dos sensores (ultrawide, macro, telefoto). Recursos de software como Modo Noturno e HDR também fazem grande diferença."
-    }
-  },
-  {
-    "@type": "Question",
-    "name": "Quanto de RAM é necessário em um celular?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Para uso básico (redes sociais, mensagens), 4GB de RAM são suficientes. Para uso moderado (jogos leves, multitarefas), 6GB a 8GB oferecem fluidez. Para jogos pesados, edição de vídeo ou uso intenso, 8GB a 12GB de RAM são ideais para garantir o melhor desempenho."
-    }
-  },
-  {
-    "@type": "Question",
-    "name": "Vale a pena comprar um celular 5G em 2026?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Sim, se a cobertura 5G já estiver disponível na sua região e você busca velocidades de internet ultrarrápidas. Mesmo que a cobertura ainda seja limitada, um celular 5G garante que você estará preparado para o futuro. Verifique a compatibilidade com as bandas 5G do Brasil antes de comprar."
-    }
-  }
+        <div class="product-grid">
+            <a href="../../ofertas/celulares/celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-verde-MLB49089309.html" class="product-card">
+                <span class="discount-badge">-64% OFF</span>
+                <h3 class="product-title">Celular Samsung Galaxy A07 256gb 8gb Câmera 50mp Verde</h3>
+                <span class="btn-buy">Ver Oferta Ninja</span>
+            </a>
+            <a href="../../ofertas/celulares/smartphone-gamer-infinix-gt30-pro-5g-12gb-ram-256gb-camera-dupla-108mp-selfie-13mp-nfc-6-78-amoled-144hz-dual-MLB62253296.html" class="product-card">
+                <span class="discount-badge">-63% OFF</span>
+                <h3 class="product-title">Smartphone Gamer Infinix Gt30 Pro 5g / 12gb Ram 256gb</h3>
+                <span class="btn-buy">Ver Oferta Ninja</span>
+            </a>
+            <a href="../../ofertas/celulares/smartphone-infinix-smart-10-4gb-ram-256gb-ssd-camera-8mp-ia-tela-667-hd-120hz-bateria-5000mah-processador-MLB58899457.html" class="product-card">
+                <span class="discount-badge">-63% OFF</span>
+                <h3 class="product-title">Smartphone Infinix Smart 10 4gb Ram 256gb Ssd Câmera 8mp</h3>
+                <span class="btn-buy">Ver Oferta Ninja</span>
+            </a>
+            <a href="../../ofertas/celulares/samsung-galaxy-watch7-smartwatch-44mm-bt-galaxy-ai-verde-MLB65770866.html" class="product-card">
+                <span class="discount-badge">-66% OFF</span>
+                <h3 class="product-title">Samsung Galaxy Watch7 Smartwatch 44mm Bt Galaxy Ai / Verde</h3>
+                <span class="btn-buy">Ver Oferta Ninja</span>
+            </a>
+        </div>
 
-              ]
-            }
-        </script>
-</main>
-<footer class="footer">
-<div class="container">
-<div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; margin-bottom: 40px;">
-<div style="max-width: 300px;">
-<h2 style="color: white; margin-bottom: 16px;">🥷 Radar Ninja</h2>
-<p style="color: #94a3b8; font-size: 14px;">O seu rastreador de ofertas em tempo real. Economize tempo e dinheiro com curadoria profissional.</p>
-</div>
-<div>
-<h3 style="color: white; margin-bottom: 16px; font-size: 16px;">Categorias</h3>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-Tecnologia
-Beleza
-Casa
-Gamer
-Móveis
-</div>
-</div>
-<div>
-<h3 style="color: white; margin-bottom: 16px; font-size: 16px;">Institucional</h3>
-<div style="display: flex; flex-direction: column; gap: 10px;">
-Sobre o Radar
-Privacidade
-Termos de Uso
-</div>
-</div>
-</div>
-<div style="border-top: 1px solid #334155; padding-top: 30px; text-align: center; color: #64748b; font-size: 13px;">
-<p>© 2026 Radar Ninja. Preços e disponibilidade sujeitos a alteração pelas lojas parceiras.</p>
-</div>
-</div>
-</footer>
-<script src="../../assets/js/app.js"></script>
-<!-- Seção de Parceiros - Otimização AdSense --><section class="partners-section" style="background: #f9f9f9; padding: 40px 0; border-top: 1px solid #eee; margin-top: 50px; font-family: sans-serif; clear: both;"><div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;"><h4 style="text-align: center; margin-bottom: 30px; color: #666; font-size: 1.2rem; font-weight: 700;">Nossa Rede de Parceiros</h4><div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; text-align: center;"><a href="https://comparapreco.github.io" target="_blank" style="text-decoration: none; color: #333; font-weight: 600; padding: 10px; border: 1px solid #ddd; border-radius: 5px; min-width: 150px;">Compara Preço</a><a href="https://comprerapido.github.io" target="_blank" style="text-decoration: none; color: #333; font-weight: 600; padding: 10px; border: 1px solid #ddd; border-radius: 5px; min-width: 150px;">Compre Rápido</a><a href="https://radardeprecos.github.io/radar/" target="_blank" style="text-decoration: none; color: #333; font-weight: 600; padding: 10px; border: 1px solid #ddd; border-radius: 5px; min-width: 150px;">Radar de Preços</a><a href="https://superninjas.github.io" target="_blank" style="text-decoration: none; color: #333; font-weight: 600; padding: 10px; border: 1px solid #ddd; border-radius: 5px; min-width: 150px;">Super Ninjas</a><a href="https://granahoje.github.io" target="_blank" style="text-decoration: none; color: #333; font-weight: 600; padding: 10px; border: 1px solid #ddd; border-radius: 5px; min-width: 150px;">Grana Hoje</a><a href="https://casino-radar.github.io" target="_blank" style="text-decoration: none; color: #333; font-weight: 600; padding: 10px; border: 1px solid #ddd; border-radius: 5px; min-width: 150px;">Casino Radar</a></div><div style="text-align: center; margin-top: 30px; font-size: 0.8rem; color: #999; border-top: 1px solid #eee; padding-top: 20px;"><p>Sites parceiros verificados para transparência e conformidade com as diretrizes do Google AdSense.</p></div></div></section></body>
+        <section class="guide-section">
+            <h2>Guia de Compra: Como escolher seu celular em 2026</h2>
+            <p>Escolher um celular pode ser difícil com tantos lançamentos. Aqui estão os pontos principais:</p>
+            <ul>
+                <li><strong>Orçamento:</strong> Defina se busca um modelo de Entrada (até R$ 1.500), Intermediário (até R$ 3.500) ou Premium.</li>
+                <li><strong>Uso:</strong> Se você joga muito, foque em RAM (8GB+) e Processador. Se tira muitas fotos, foque na abertura da lente e sensores.</li>
+                <li><strong>Bateria:</strong> Procure modelos com pelo menos 5.000 mAh para garantir um dia inteiro de uso.</li>
+            </ul>
+            <p><a href="/noticias/posts/celulares-faq.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">Confira nosso FAQ completo sobre celulares →</a></p>
+        </section>
+    </main>
+
+    <footer style="background: #0f172a; color: white; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2026 Radar Ninja — O seu guia ninja para economizar.</p>
+        </div>
+    </footer>
+</body>
 </html>
