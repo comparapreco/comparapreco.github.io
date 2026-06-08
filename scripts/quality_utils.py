@@ -61,6 +61,8 @@ def slugify(value: Any, max_len: int = 200) -> str:
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
     # Substituir explicitamente "/" por "-" para evitar que o slug remova a barra sem colocar nada no lugar
     text = text.lower().replace("/", "-")
+    # Remover pontos explicitamente para evitar 5.3 -> 5-3 ou 53 inconsistente
+    text = text.replace(".", "")
     text = re.sub(r"[^a-z0-9]+", "-", text).strip("-")
     text = re.sub(r"-+", "-", text)
     if len(text) > max_len:
