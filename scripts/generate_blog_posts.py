@@ -122,14 +122,28 @@ def generate_long_content(product: Dict[str, Any]) -> str:
     name = html.escape(product.get("name", "Produto"))
     discount = html.escape(str(product.get("custom_discount_pct", 0)))
     category = html.escape(product.get("custom_category_slug", "geral").replace("-", " "))
+    image = html.escape(product.get("image") or product.get("thumbnail") or "")
+    offer_url = html.escape(product.get("custom_affiliate_url") or product.get("permalink") or "#")
+    
     specs = generate_product_specs(product)
     specs_html = "".join(f"<li><strong>{html.escape(k)}:</strong> {html.escape(v)}</li>" for k, v in specs.items())
     ai_text = generate_ai_content(product)
+    
+    # Imagem e Link de Afiliado OBRIGATÓRIOS no topo
+    top_content = f"""
+        <div class="featured-offer-top" style="margin-bottom: 30px; text-align: center; background: #fff; padding: 20px; border-radius: 15px; border: 1px solid #e2e8f0;">
+            <img src="{image}" alt="{name}" style="max-width: 100%; height: auto; max-height: 400px; margin-bottom: 20px; border-radius: 8px;">
+            <div style="font-size: 24px; font-weight: 800; color: #10b981; margin-bottom: 15px;">Oferta de Hoje: {money(product.get('price'))}</div>
+            <a href="{offer_url}" class="btn" style="background: #10b981; color: white; padding: 15px 30px; font-size: 18px; text-decoration: none; border-radius: 8px; display: block; font-weight: 700;">Ver Preço de Hoje no Mercado Livre ➔</a>
+        </div>
+    """
+    
     intro = ai_text or (
         f"<p>O <strong>{name}</strong> entrou no radar do Compara Preço porque combina desconto relevante, "
         "preço competitivo e procura recorrente entre consumidores que acompanham ofertas do Mercado Livre.</p>"
     )
     return f"""
+        {top_content}
         {intro}
         <h2>Por que esta oferta foi selecionada?</h2>
         <p>Nosso robô prioriza produtos ativos com maior redução percentual, disponibilidade pública e potencial de economia. Nesta análise, o destaque é o desconto de <strong>{discount}%</strong> na categoria <strong>{category}</strong>.</p>
