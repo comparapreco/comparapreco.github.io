@@ -146,11 +146,19 @@ def scrape_search(search_type: str, search_value: str, page: int = 1) -> List[Di
         if not target_script:
             return []
 
-        # Extrair dados
-        metadata_list = re.findall(
-            r'"product_id":"(MLB\d+)"[^}]*?"url":"([^"]+)"',
-            target_script
+        # Extrair dados por produto individualmente para garantir correspondência correta
+        # CORREÇÃO: extrair imagem junto com o produto, não em lista separada
+        # O regex anterior capturava IDs de imagens de forma desacoplada, causando
+        # imagens erradas sendo atribuídas a produtos incorretos.
+
+        # Estratégia: extrair blocos de produto completos do JSON
+        # Padrão: buscar cada produto com seu ID, URL e imagem associada
+        product_blocks = re.findall(
+            r'"product_id":"(MLB\d+)".*?"url":"([^"]+)".*?"id":"(\d+-MLA\d+[^"]*)"',
+            target_script,
+            re.DOTALL
         )
+
         title_list = re.findall(
             r'"type":"title"[^}]*?"text":"([^"]{5,200})"',
             target_script
@@ -159,22 +167,36 @@ def scrape_search(search_type: str, search_value: str, page: int = 1) -> List[Di
             r'"previous_price":\{"value":(\d+),"currency":"BRL"[^}]*\},"current_price":\{"value":(\d+)',
             target_script
         )
-        img_list = re.findall(
-            r'"id":"(\d+-MLA\d+[^"]*)"',
-            target_script
-        )
 
-        n = min(len(metadata_list), len(title_list), len(price_list), len(img_list))
+        # Se a extração por bloco falhar, usar método legado com aviso
+        if not product_blocks:
+            logger.warning(f"Extração por bloco falhou para {search_value}, tentando método alternativo")
+            metadata_list = re.findall(
+                r'"product_id":"(MLB\d+)"[^}]*?"url":"([^"]+)"',
+                target_script
+            )
+            img_list = re.findall(
+                r'"id":"(\d+-MLA\d+[^"]*)"',
+                target_script
+            )
+            n = min(len(metadata_list), len(title_list), len(price_list), len(img_list))
+            if n == 0:
+                return []
+            product_blocks = [
+                (metadata_list[i][0], metadata_list[i][1], img_list[i])
+                for i in range(n)
+            ]
+
+        n = min(len(product_blocks), len(title_list), len(price_list))
         if n == 0:
             return []
 
         products = []
         for i in range(n):
-            product_id, url_raw = metadata_list[i]
+            product_id, url_raw, img_id = product_blocks[i]
             title = title_list[i]
             prev_price = float(price_list[i][0])
             curr_price = float(price_list[i][1])
-            img_id = img_list[i]
 
             # Bloquear por termos
             if any(term in title.lower() for term in BLOCKED_TERMS):
@@ -184,6 +206,11 @@ def scrape_search(search_type: str, search_value: str, page: int = 1) -> List[Di
             permalink = permalink.split("#")[0].split("?pdp_filters")[0]
             affiliate_url = permalink + f"?matt_tool={AFILIADO_ID}"
             img_url = f"https://http2.mlstatic.com/D_NQ_NP_{img_id}-O.webp"
+
+            # Validação: rejeitar produto sem imagem válida
+            if not img_id or len(img_id) < 5:
+                logger.warning(f"Produto {product_id} sem imagem válida, ignorando")
+                continue
 
             discount = int(((prev_price - curr_price) / prev_price) * 100) if prev_price > curr_price else 0
 

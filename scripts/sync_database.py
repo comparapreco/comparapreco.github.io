@@ -59,19 +59,46 @@ def sync():
     existing_products = load_json(DATABASE_FILE, [])
     existing_dict = {p["id"]: p for p in existing_products if "id" in p}
 
+    # IDs de imagens genéricas/erradas conhecidas — não aceitar produtos com essas imagens
+    WRONG_IMAGE_IDS = {"697288", "617570", "640641"}
+
+    def has_valid_image(p: dict) -> bool:
+        """Verifica se o produto tem uma imagem válida e única."""
+        img = p.get("image", "") or p.get("thumbnail", "")
+        if not img or not img.strip():
+            return False
+        if any(wrong in img for wrong in WRONG_IMAGE_IDS):
+            return False
+        if "mlstatic.com" not in img:
+            return False
+        return True
+
     # Adicionar/atualizar produtos novos
     updated = 0
     added = 0
+    rejected_no_image = 0
     for p in new_products:
         p_id = p.get("id")
         if not p_id:
             continue
+        # Rejeitar produtos sem imagem válida
+        if not has_valid_image(p):
+            rejected_no_image += 1
+            logger.warning(f"Produto {p_id} rejeitado: sem imagem válida ({p.get('image', '')[:50]})")
+            continue
+        # Garantir que image e thumbnail estão sincronizados
+        img = p.get("image", "") or p.get("thumbnail", "")
+        p["image"] = img
+        p["thumbnail"] = img
+        p["image_url"] = img
         if p_id in existing_dict:
             existing_dict[p_id] = p
             updated += 1
         else:
             existing_dict[p_id] = p
             added += 1
+    if rejected_no_image:
+        logger.warning(f"Produtos rejeitados por imagem inválida: {rejected_no_image}")
 
     # Remover produtos muito antigos (mais de MAX_AGE_DAYS dias)
     cutoff = datetime.now() - timedelta(days=MAX_AGE_DAYS)
