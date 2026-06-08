@@ -1,14 +1,28 @@
-# Robots.txt - Configuração automática do Radar Ninja
+# Robots.txt otimizado para Compara Preço (Radar Ninja)
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /config/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /templates/
+Disallow: /service-worker.js
+Disallow: /sw.js
 
+# Bloquear parametros de busca para evitar conteudo duplicado
+Disallow: /*?q=
+Disallow: /*?search=
+Disallow: /*?sort=
+
+# Sitemaps
 Sitemap: https://comparapreco.github.io/sitemap.xml
-Sitemap: https://comparapreco.github.io/sitemap-produtos.xml
-Sitemap: https://comparapreco.github.io/sitemap-categorias.xml
-Sitemap: https://comparapreco.github.io/sitemap-noticias.xml
-Sitemap: https://comparapreco.github.io/sitemap-guias.xml
-Sitemap: https://comparapreco.github.io/sitemap-paginas.xml
-Sitemap: https://comparapreco.github.io/sitemap-comparativos.xml
-Sitemap: https://comparapreco.github.io/sitemap-rankings.xml
 
-Crawl-delay: 1
+# Sinais de IA e Bot Management
+User-agent: GPTBot
+Disallow: /data/
+Disallow: /scripts/
+
+User-agent: PerplexityBot
+Allow: /guias/
+Allow: /melhores-2026/
+Allow: /comparativos/
