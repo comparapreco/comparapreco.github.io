@@ -7,6 +7,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/categorias/air-fryers/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/categorias/apple/</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>daily</changefreq>
@@ -128,6 +134,12 @@
   </url>
   <url>
     <loc>https://comparapreco.github.io/categorias/tv-e-video/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/categorias/tvs/</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
