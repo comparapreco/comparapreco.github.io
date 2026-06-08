@@ -209,7 +209,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     function renderProfile() {
       const user = Compara PreçoAuth.getUser();
       const ready = Compara PreçoAuth.isFirebaseReady();
-      const avatar = user && user.photoURL ? `<img src="${safe(user.photoURL)}" alt="${safe(user.displayName)}">` : '<span class="profile-avatar">R</span>';
+      const avatar = user && user.photoURL ? `<img src="${safe(user.photoURL)}" alt="${safe(user.displayName)}" loading="lazy">` : '<span class="profile-avatar">R</span>';
       document.getElementById('profileLine').innerHTML = `${avatar}<div><strong>${safe(user?.displayName || 'Visitante Compara Preço')}</strong><br><small>${ready ? 'Conta Google sincronizada com Firebase.' : 'Modo local ativo. Configure o Firebase para sincronizar entre dispositivos.'}</small></div>`;
     }
 
