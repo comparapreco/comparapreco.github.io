@@ -1,76 +1,74 @@
 {
-  "status": "WARNING",
-  "timestamp": "2026-06-08T10:14:43.847226",
-  "issues": [
-    "Produto MLB49652036 capturado mas n\u00e3o publicado totalmente."
-  ],
+  "status": "OK",
+  "timestamp": "2026-06-08T10:30:47.809387",
+  "issues": [],
   "audit": [
     {
-      "id": "MLB68104527",
-      "name": "Kit Body Splash Masculino Barbarius + Enigma + Midtown 200ml",
+      "id": "MLB49420882",
+      "name": "Colch\u00e3o Solteiro Molas Qatar 88x188x22cm Bege\\u002Fbranco Inducol Cor Bege",
       "captured": true,
       "processed": true,
       "published": true
     },
     {
-      "id": "MLB49652036",
-      "name": "Secador De Cabelos Philco\u00a0psc3500 4 Em 1\u00a0dobr\u00e1vel\u00a0motor\u00a0bldc Prateado Bege 127v",
-      "captured": true,
-      "processed": false,
-      "published": false
-    },
-    {
-      "id": "MLB50269368",
-      "name": "Aparador De Pelos Multigroom 8 Em 1 Mg3917\\u002F15 Philips Preto 127\\u002F220v",
+      "id": "MLB42835779",
+      "name": "Garrafa T\u00e9rmica 1 Litro Com Term\u00f4metro Led Para Ch\u00e1s \\u002F Caf\u00e9",
       "captured": true,
       "processed": true,
       "published": true
     },
     {
-      "id": "MLB7917167",
-      "name": "Secador De Cabelos Philco\u00a0psc3500 4 Em 1\u00a0dobr\u00e1vel\u00a0motor\u00a0bldc Prateado Bege 220v",
+      "id": "MLB44906664",
+      "name": "Kit 2 C\u00e2mera Wifi Externa A28 App Icsee Dupla Vis\u00e3o 3mp Prova D\u00e1gua Cor Branco",
       "captured": true,
       "processed": true,
       "published": true
     },
     {
-      "id": "MLB6140723",
-      "name": "Perfume Armaf Club De Nuit Intense 105ml Edt - Masculino",
+      "id": "MLB46836439",
+      "name": "C\u00e2mera Seguran\u00e7a Wifi Ip Lente Dupla 2x 3mp Externa 360\u00b0 A Prova D\u00e1gua Cor Cinza",
       "captured": true,
       "processed": true,
       "published": true
     },
     {
-      "id": "MLB45617876",
-      "name": "Perfume Sedutor \u00c1rabe Sabah 100ml Original Feminino",
+      "id": "MLB19590092",
+      "name": "Cobertor Queen Grosso Coberdrom L\u00e3 Carneiro Dupla Face Manta",
       "captured": true,
       "processed": true,
       "published": true
     },
     {
-      "id": "MLB26000295",
-      "name": "Perfume Lattafa Asad 100ml Eau De Parfum Original \u00c1rabe Original Com Nota Fiscal E Selo Original Lataffa",
+      "id": "MLB62276296",
+      "name": "Conjunto Panelas Antiaderente 10 Pe\u00e7as Teflon V\u00e1rias Cores",
       "captured": true,
       "processed": true,
       "published": true
     },
     {
-      "id": "MLB6139411",
-      "name": "Perfume Feminino L' Eau De Parfum Fragr\u00e2ncia Floral Gourmand Inebriante Com Notas De \u00cdris Nobre, Baunilha E Pralin\u00ea La Vie Est Belle Lanc\u00f4me, Frasco Com 100ml",
+      "id": "MLB63904966",
+      "name": "800mlgarrafa T\u00e9rmica \u00c1gua Squeeze Inox Academiaquente E Frio",
       "captured": true,
       "processed": true,
       "published": true
     },
     {
-      "id": "MLB52363091",
-      "name": "Perfume \u00c1rabe Feminino Yara Lattafa Eau De Parfum 100 Ml",
+      "id": "MLB28812908",
+      "name": "Kit 2 C\u00e2mera Seguran\u00e7a Ip Interna Externa Wifi Icsee Infravermelho Prova D\u00e1gua - Hw Branco",
       "captured": true,
       "processed": true,
       "published": true
     },
     {
-      "id": "MLB10164591",
-      "name": "Attracione Men Perfume Masculino Com Ferom\u00f4nios Ativados 25 Ml",
+      "id": "MLB18393786",
+      "name": "Chuveiro Lorenzetti Loren Shower Ultra Eletr\u00f4nico Branco 7500w 220v 7.5 W",
+      "captured": true,
+      "processed": true,
+      "published": true
+    },
+    {
+      "id": "MLB54543594",
+      "name": "Panela De Press\u00e3o Brinox Pressure 4,2l \u00d820 X 14,5 Cm Vanilla Baunilha Vanila",
       "captured": true,
       "processed": true,
       "published": true
