@@ -1,6 +1,17 @@
 {
-  "before": 285,
-  "after": 285,
-  "removed": 0,
-  "duplicates": []
+  "before": 319,
+  "after": 317,
+  "removed": 2,
+  "duplicates": [
+    {
+      "kept": "MLB62998911",
+      "removed": "MLB69001762",
+      "reason": "duplicate_identity"
+    },
+    {
+      "kept": "MLB50200257",
+      "removed": "MLB4089347501",
+      "reason": "higher_score"
+    }
+  ]
 }

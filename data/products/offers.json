@@ -224,6 +224,24 @@
     "custom_affiliate_url": "https://www.mercadolivre.com.br/cooktop-a-gas-fischer-4-bocas-fit-line-trempe-esmaltada-aramado/p/MLB42641505?pdp_filters=deal%3AMLB779362-1&matt_tool=60566305"
   },
   {
+    "id": "MLB38053317",
+    "name": "Parafusadeira E Furadeira Impacto The Black Tools Tb-21pw 3/8 Cor Amarelo Frequência 50/60 Hz 127/220v 60hz",
+    "price": 193.0,
+    "original_price": 718.0,
+    "permalink": "https://www.mercadolivre.com.br/parafusadeira-e-furadeira-impacto-the-black-tools-tb-21pw-38-cor-amarelo-frequncia-5060-hz/p/MLB38053317",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_683617-MLA99862544303_112025-O.webp",
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_683617-MLA99862544303_112025-O.webp",
+    "custom_category_slug": "ferramentas",
+    "custom_discount_pct": 73,
+    "custom_affiliate_url": "https://www.mercadolivre.com.br/parafusadeira-e-furadeira-impacto-the-black-tools-tb-21pw-38-cor-amarelo-frequncia-5060-hz/p/MLB38053317?matt_tool=60566305&utm_source=social&utm_medium=ninja",
+    "status": "active",
+    "data_coleta": "2026-06-08T10:09:12.144508",
+    "last_seen": "2026-06-08T10:09:12.144510",
+    "quality_score": 100,
+    "title": "Parafusadeira E Furadeira Impacto The Black Tools Tb-21pw 3/8 Cor Amarelo Frequência 50/60 Hz 127/220v 60hz",
+    "originalPrice": 718.0
+  },
+  {
     "id": "MLB4345564271",
     "name": "Parafusadeira Furadeira C/ 2 Baterias Maleta Kit Completo Led Eixo Flexível Vários Níveis Torque Amarelo 127/220v",
     "title": "Parafusadeira Furadeira C/ 2 Baterias Maleta Kit Completo Led Eixo Flexível Vários Níveis Torque Amarelo 127/220v",
@@ -614,23 +632,5 @@
     "custom_category_slug": "tv-e-video",
     "custom_discount_pct": 42,
     "custom_affiliate_url": "https://www.mercadolivre.com.br/smart-tv-philco-58-p58vik-4k-uhd-led-roku-dolby-audio-wi-fi-hdr10-110220v/p/MLB67275824?pdp_filters=deal%3AMLB779362-1&matt_tool=60566305"
-  },
-  {
-    "id": "MLB38053317",
-    "name": "Parafusadeira E Furadeira Impacto The Black Tools Tb-21pw 3/8 Cor Amarelo Frequência 50/60 Hz 127/220v 60hz",
-    "price": 193.0,
-    "original_price": 718.0,
-    "permalink": "https://www.mercadolivre.com.br/parafusadeira-e-furadeira-impacto-the-black-tools-tb-21pw-38-cor-amarelo-frequncia-5060-hz/p/MLB38053317",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_683617-MLA99862544303_112025-O.webp",
-    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_683617-MLA99862544303_112025-O.webp",
-    "custom_category_slug": "ferramentas",
-    "custom_discount_pct": 73,
-    "custom_affiliate_url": "https://www.mercadolivre.com.br/parafusadeira-e-furadeira-impacto-the-black-tools-tb-21pw-38-cor-amarelo-frequncia-5060-hz/p/MLB38053317?matt_tool=60566305&utm_source=social&utm_medium=ninja",
-    "status": "active",
-    "data_coleta": "2026-06-08T10:09:12.144508",
-    "last_seen": "2026-06-08T10:09:12.144510",
-    "quality_score": 100,
-    "title": "Parafusadeira E Furadeira Impacto The Black Tools Tb-21pw 3/8 Cor Amarelo Frequência 50/60 Hz 127/220v 60hz",
-    "originalPrice": 718.0
   }
 ]

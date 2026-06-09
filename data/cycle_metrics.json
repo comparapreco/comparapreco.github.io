@@ -287,5 +287,19 @@
       "blocked_low_quality": 0,
       "approved": 77
     }
+  },
+  {
+    "timestamp": "2026-06-09T04:53:42+00:00",
+    "produtos_processados": 77,
+    "publicados": 77,
+    "detalhes": {
+      "total_raw": 77,
+      "blocked_no_image": 0,
+      "blocked_blacklist": 0,
+      "blocked_stock": 0,
+      "blocked_price_anomaly": 0,
+      "blocked_low_quality": 0,
+      "approved": 77
+    }
   }
 ]
