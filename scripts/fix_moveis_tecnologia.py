@@ -26,7 +26,7 @@ def safe_url(p):
     url = p.get("custom_affiliate_url", "") or p.get("permalink", "")
     if url and "mercadolivre.com" in url and "matt_tool=" not in url:
         sep = "&" if "?" in url else "?"
-        url = f"{url}{sep}matt_tool=vendas0nline"
+        url = f"{url}{sep}matt_tool=60566305"
     return url
 
 def build_product_card(p, idx):

@@ -135,7 +135,7 @@ def affiliate_url(product: dict[str, Any]) -> str:
     url = product.get('custom_affiliate_url') or product.get('affiliate_url') or product.get('permalink') or '#'
     if 'mercadolivre.com' in url and 'matt_tool=' not in url:
         sep = '&' if '?' in url else '?'
-        url = f'{url}{sep}matt_tool=vendas0nline'
+        url = f'{url}{sep}matt_tool=60566305'
     return str(url)
 
 

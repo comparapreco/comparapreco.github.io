@@ -16,7 +16,7 @@
 | **Produto de teste removido** | 1 (ID TESTE_*) |
 | **Links quebrados** | 0 |
 | **Erros de processamento** | 0 |
-| **Identificador de afiliado** | `matt_tool=vendas0nline` |
+| **Identificador de afiliado** | `matt_tool=60566305` |
 
 ---
 
@@ -26,7 +26,7 @@
 
 **Total: 2 páginas HTML + 115 entradas JSON**
 
-Foram encontrados 2 arquivos HTML e 115 entradas no arquivo `all_products_final_unique_urls.json` sem o parâmetro `matt_tool=vendas0nline`. Todos foram corrigidos automaticamente.
+Foram encontrados 2 arquivos HTML e 115 entradas no arquivo `all_products_final_unique_urls.json` sem o parâmetro `matt_tool=60566305`. Todos foram corrigidos automaticamente.
 
 | Arquivo | Ação |
 |---|---|

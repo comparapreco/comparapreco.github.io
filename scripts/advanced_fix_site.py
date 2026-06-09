@@ -14,7 +14,7 @@ from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 BASE_DIR = Path(__file__).parent.parent
 
 def add_matt_tool_to_url(url):
-    """Adiciona matt_tool=vendas0nline a uma URL do Mercado Livre"""
+    """Adiciona matt_tool=60566305 a uma URL do Mercado Livre"""
     if 'matt_tool' in url:
         return url
     

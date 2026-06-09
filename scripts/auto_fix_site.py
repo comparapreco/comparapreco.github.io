@@ -142,7 +142,7 @@ TEMPLATE_HTML = '''<!DOCTYPE html>
   <!-- Carregado via JavaScript -->
 </div>
 <div style="text-align: center; margin: 40px 0;">
-  <a href="https://www.mercadolivre.com.br/ofertas?matt_tool=vendas0nline" target="_blank" rel="noopener sponsored" class="btn-ml" style="display: inline-block; padding: 15px 40px; font-size: 1.1rem;">
+  <a href="https://www.mercadolivre.com.br/ofertas?matt_tool=60566305" target="_blank" rel="noopener sponsored" class="btn-ml" style="display: inline-block; padding: 15px 40px; font-size: 1.1rem;">
     🛒 Ver Todas as Ofertas no Mercado Livre →
   </a>
 </div>
@@ -240,7 +240,7 @@ def remove_other_stores(html_content):
     return result
 
 def ensure_affiliate_links(html_content):
-    """Garante que todos os links do Mercado Livre têm matt_tool=vendas0nline"""
+    """Garante que todos os links do Mercado Livre têm matt_tool=60566305"""
     # Padrão para encontrar links do Mercado Livre
     pattern = r'href="(https://www\.mercadolivre\.com\.br/[^"]*)"'
     
@@ -251,7 +251,7 @@ def ensure_affiliate_links(html_content):
             return f'href="{url}"'
         # Adiciona matt_tool
         separator = '&' if '?' in url else '?'
-        return f'href="{url}{separator}matt_tool=vendas0nline"'
+        return f'href="{url}{separator}matt_tool=60566305"'
     
     result = re.sub(pattern, add_matt_tool, html_content)
     return result

@@ -2,7 +2,7 @@
 """
 CORREÇÃO AUTOMÁTICA DE LINKS DE AFILIADO - COMPARA PREÇO
 Corrige:
-1. Links sem tag de afiliado (adiciona matt_tool=vendas0nline para ML e tag=radar041-20 para Amazon)
+1. Links sem tag de afiliado (adiciona matt_tool=60566305 para ML e tag=radar041-20 para Amazon)
 2. Produtos com ID duplicado mas nomes completamente diferentes (remove o errado)
 3. Produtos duplicados em categorias diferentes (mantém o mais relevante, remove o outro)
 4. Atualiza o all_products.json removendo produtos com IDs reutilizados incorretamente

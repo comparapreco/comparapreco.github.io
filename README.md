@@ -8,7 +8,7 @@ O projeto inclui:
 
 *   **Site Estático:** Construído com HTML/CSS simples, hospedado gratuitamente via GitHub Pages.
 *   **Robô de Conteúdo:** Um script Python (`generate_blog_posts.py`) que gera artigos longos (mais de 1.000 palavras) e otimizados para SEO/EEAT a partir de uma lista de produtos.
-*   **Links de Afiliados:** Integrado com o `matt_tool=vendas0nline` para rastreamento de comissões.
+*   **Links de Afiliados:** Integrado com o `matt_tool=60566305` para rastreamento de comissões.
 *   **Conteúdo Dinâmico:** O robô pode ser configurado para gerar posts sobre produtos específicos ou uma seleção aleatória dos melhores descontos.
 
 ## Como Replicar o Projeto
@@ -67,7 +67,7 @@ Para ter produtos diferentes e focar em um nicho específico:
 
 1.  Edite o arquivo `data/products/offers.json`.
 2.  Você pode remover os produtos existentes e adicionar novos produtos manualmente, ou usar um script para buscar ofertas de um nicho específico (ex: apenas eletrônicos, apenas itens de beleza).
-3.  **Certifique-se de que o `custom_affiliate_url` de cada produto contenha `matt_tool=vendas0nline` para garantir suas comissões.**
+3.  **Certifique-se de que o `custom_affiliate_url` de cada produto contenha `matt_tool=60566305` para garantir suas comissões.**
 
 ### 5. Execute o Robô de Geração de Conteúdo
 

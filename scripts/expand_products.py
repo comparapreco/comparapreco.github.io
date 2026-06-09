@@ -55,7 +55,7 @@ def main():
                 "thumbnail": "https://http2.mlstatic.com/D_Q_NP_2X_640641-MLA74488120717_022024-O.webp",
                 "custom_category_slug": t['cat'],
                 "custom_discount_pct": int(((orig - price) / orig) * 100),
-                "custom_affiliate_url": f"https://www.mercadolivre.com.br/p/{p_id}?matt_tool=vendas0nline"
+                "custom_affiliate_url": f"https://www.mercadolivre.com.br/p/{p_id}?matt_tool=60566305"
             })
             count += 1
             

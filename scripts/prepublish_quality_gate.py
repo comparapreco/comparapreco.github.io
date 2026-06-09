@@ -26,7 +26,7 @@ def audit_html_file(path: Path) -> List[str]:
         href = buy_btn.get('href', '')
         if not href:
             issues.append(f"{rel}: Link de afiliado vazio")
-        elif "mercadolivre.com" in href and "matt_tool=vendas0nline" not in href:
+        elif "mercadolivre.com" in href and "matt_tool=60566305" not in href:
             issues.append(f"{rel}: Link Mercado Livre sem tracking ID (matt_tool)")
         elif "amazon.com" in href and "tag=radar041-20" not in href:
             issues.append(f"{rel}: Link Amazon sem tracking ID (tag)")

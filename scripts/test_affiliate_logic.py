@@ -13,7 +13,7 @@ def test():
     print(f"URL Original: {test_product['permalink']}")
     print(f"URL Afiliado: {aff_url}")
     
-    if "matt_tool=vendas0nline" in aff_url:
+    if "matt_tool=60566305" in aff_url:
         print("✅ Link de afiliado gerado corretamente com matt_tool!")
     else:
         print("❌ Falha na geração do link de afiliado.")
