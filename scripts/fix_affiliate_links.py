@@ -17,7 +17,7 @@ from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 
 BASE_DIR = Path(__file__).parent.parent
 OFERTAS_DIR = BASE_DIR / "ofertas"
-AFFILIATE_TAG = "vendas0nline"
+AFFILIATE_TAG = "60566305"
 AFFILIATE_PARAM = "matt_tool"
 AMAZON_TAG = "radar041-20"
 AMAZON_PARAM = "tag"

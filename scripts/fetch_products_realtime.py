@@ -26,7 +26,7 @@ except ImportError:
 RAW_DATA_FILE = "data/raw_products.json"
 BLACKLIST_FILE = "data/blacklist_ids.json"
 
-AFILIADO_ID = os.environ.get("ML_AFILIADO_ID", "vendas0nline")
+AFILIADO_ID = os.environ.get("ML_AFILIADO_ID", "60566305")
 
 HEADERS = {
     "User-Agent": (

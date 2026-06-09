@@ -21,7 +21,7 @@ BLOCKED_TERMS = {
 
 REQUIRED_IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp", ".avif")
 AFFILIATE_PARAM = "matt_tool"
-AFFILIATE_TAG = "vendas0nline"
+AFFILIATE_TAG = "60566305"
 
 
 def _select_input_file() -> str:

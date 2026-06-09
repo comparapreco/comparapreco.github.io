@@ -20,7 +20,7 @@ def add_matt_tool_to_url(url):
     
     parsed = urlparse(url)
     params = parse_qs(parsed.query, keep_blank_values=True)
-    params['matt_tool'] = ['vendas0nline']
+    params['matt_tool'] = ['60566305']
     
     new_query = urlencode({k: v[0] for k, v in params.items()})
     new_url = urlunparse(parsed._replace(query=new_query))

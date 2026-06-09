@@ -12,7 +12,7 @@ from urllib.parse import urlparse, parse_qs
 
 BASE_DIR = Path(__file__).parent.parent
 OFERTAS_DIR = BASE_DIR / "ofertas"
-AFFILIATE_TAG = "vendas0nline"
+AFFILIATE_TAG = "60566305"
 AFFILIATE_PARAM = "matt_tool"
 
 # Resultados da auditoria
