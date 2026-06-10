@@ -414,4 +414,4 @@ smartadserver.com, 3056, RESELLER, 060d053dcf45cbf3
 sovrn.com, 260380, RESELLER, fafdf38b16bf6b2b
 triplelift.com, 12507, RESELLER
 yahoo.com, 49648, RESELLER
-google.com, pub-3944954862316283, DIRECT, f08c47f
+google.com, pub-3944954862316283, DIRECT, f08c47fec0942fa0
