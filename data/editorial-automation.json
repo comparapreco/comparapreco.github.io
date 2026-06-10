@@ -1,39 +1,21 @@
 {
-  "last_generated": "2026-06-09T04:53:42.606751",
+  "last_generated": "2026-06-10T19:18:31.156259",
   "automated_articles": [
     {
-      "id": "article-MLB45840555",
-      "title": "OFERTA: Controle Sem Fio Dualsense Chroma Teal Ps5 Sony Cfi-zct1w Cor Verde com 72% de Desconto",
-      "slug": "controle-sem-fio-dualsense-chroma-teal-ps5-sony-cf-queda-72",
-      "category": "Gamer",
-      "price_drop": 72,
-      "current_price": 54.0,
-      "previous_price": 199.0,
-      "status": "published",
-      "generated_at": "2026-06-09T04:53:42.606709",
-      "content": "O Controle Sem Fio Dualsense Chroma Teal Ps5 Sony Cfi-zct1w Cor Verde atingiu uma queda de 72% em seu preço. Agora disponível por apenas R$ 54.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
-      "social_posts": [
-        {
-          "platform": "twitter",
-          "content": "🔥 OFERTA: Controle Sem Fio Dualsense Chroma Teal Ps5 Sony Cfi-zct1w Cor Verde com 72% de Desconto por apenas R$ 54.00! Confira no Radar Ninja."
-        }
-      ]
-    },
-    {
-      "id": "article-MLB58372375",
-      "title": "OFERTA: Caixa De Som Bluetooth Tax5000/78, 1800w, Philips, Preto, Party Speaker 127/220v com 70% de Desconto",
-      "slug": "caixa-de-som-bluetooth-tax5000-78-1800w-philips-pr-queda-70",
+      "id": "article-MLB42978348",
+      "title": "OFERTA: Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor bldc Prateado Bege 127v com 71% de Desconto",
+      "slug": "secador-de-cabelos-philco-psc3500-4-em-1-dobrável--queda-71",
       "category": "Outros",
-      "price_drop": 70,
-      "current_price": 599.0,
-      "previous_price": 2000.0,
+      "price_drop": 71,
+      "current_price": 85.0,
+      "previous_price": 297.0,
       "status": "published",
-      "generated_at": "2026-06-09T04:53:42.606734",
-      "content": "O Caixa De Som Bluetooth Tax5000/78, 1800w, Philips, Preto, Party Speaker 127/220v atingiu uma queda de 70% em seu preço. Agora disponível por apenas R$ 599.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
+      "generated_at": "2026-06-10T19:18:31.156220",
+      "content": "O Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor bldc Prateado Bege 127v atingiu uma queda de 71% em seu preço. Agora disponível por apenas R$ 85.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
       "social_posts": [
         {
           "platform": "twitter",
-          "content": "🔥 OFERTA: Caixa De Som Bluetooth Tax5000/78, 1800w, Philips, Preto, Party Speaker 127/220v com 70% de Desconto por apenas R$ 599.00! Confira no Radar Ninja."
+          "content": "🔥 OFERTA: Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor bldc Prateado Bege 127v com 71% de Desconto por apenas R$ 85.00! Confira no Radar Ninja."
         }
       ]
     },
@@ -46,7 +28,7 @@
       "current_price": 599.0,
       "previous_price": 2000.0,
       "status": "published",
-      "generated_at": "2026-06-09T04:53:42.606745",
+      "generated_at": "2026-06-10T19:18:31.156244",
       "content": "O Impressora 3x1 Multifuncional Epson Ecotank L3250 Wifi Bivol Preto 220v atingiu uma queda de 70% em seu preço. Agora disponível por apenas R$ 599.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
       "social_posts": [
         {
@@ -54,20 +36,38 @@
           "content": "🔥 OFERTA: Impressora 3x1 Multifuncional Epson Ecotank L3250 Wifi Bivol Preto 220v com 70% de Desconto por apenas R$ 599.00! Confira no Radar Ninja."
         }
       ]
+    },
+    {
+      "id": "article-MLB17375584",
+      "title": "OFERTA: Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red com 69% de Desconto",
+      "slug": "controle-sem-fio-microsoft-xbox-series-s-x-one-pc--queda-69",
+      "category": "Gamer",
+      "price_drop": 69,
+      "current_price": 60.0,
+      "previous_price": 199.0,
+      "status": "published",
+      "generated_at": "2026-06-10T19:18:31.156256",
+      "content": "O Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red atingiu uma queda de 69% em seu preço. Agora disponível por apenas R$ 60.00, este é um dos melhores momentos para adquirir este produto monitorado pelo Radar Ninja.",
+      "social_posts": [
+        {
+          "platform": "twitter",
+          "content": "🔥 OFERTA: Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red com 69% de Desconto por apenas R$ 60.00! Confira no Radar Ninja."
+        }
+      ]
     }
   ],
   "alert_triggers": [
     {
-      "product_id": "MLB45840555",
-      "product_name": "Controle Sem Fio Dualsense Chroma Teal Ps5 Sony Cfi-zct1w Cor Verde"
-    },
-    {
-      "product_id": "MLB58372375",
-      "product_name": "Caixa De Som Bluetooth Tax5000/78, 1800w, Philips, Preto, Party Speaker 127/220v"
+      "product_id": "MLB42978348",
+      "product_name": "Secador De Cabelos Philco psc3500 4 Em 1 dobrável motor bldc Prateado Bege 127v"
     },
     {
       "product_id": "MLB51332653",
       "product_name": "Impressora 3x1 Multifuncional Epson Ecotank L3250 Wifi Bivol Preto 220v"
+    },
+    {
+      "product_id": "MLB17375584",
+      "product_name": "Controle Sem Fio Microsoft Xbox Series S X One Pc Pulse Red"
     }
   ]
 }
