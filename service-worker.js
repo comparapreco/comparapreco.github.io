@@ -1,3 +1,11 @@
+// Monetag Push Notifications
+self.options = {
+    "domain": "5gvci.com",
+    "zoneId": 11129556
+}
+self.lary = ""
+importScripts('https://5gvci.com/act/files/service-worker.min.js?r=sw')
+
 // Service Worker para Compara Preço
 const CACHE_NAME = 'compara-precos-v1';
 const STATIC_ASSETS = [

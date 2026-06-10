@@ -1,3 +1,11 @@
+// Monetag Push Notifications
+self.options = {
+    "domain": "5gvci.com",
+    "zoneId": 11129556
+}
+self.lary = ""
+importScripts('https://5gvci.com/act/files/service-worker.min.js?r=sw')
+
 const CACHE_NAME = 'compara-pwa-v10';
 const ROOT = self.registration.scope;
 const CORE_ASSETS = [
