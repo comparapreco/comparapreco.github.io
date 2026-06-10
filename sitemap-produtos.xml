@@ -25,25 +25,25 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/beleza/escova-progressiva-150g-fashion-gold-MLB66453791.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://comparapreco.github.io/ofertas/beleza/hidratante-facial-hydro-boost-water-gel-50g-neutrogena-todo-tipo-de-pele-dia-noite-MLB6122462.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/beleza/perfume-arabe-yara-lattafa-eau-de-parfum-100ml-original-c-nf-MLB4350686819.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/beleza/perfume-arabe-feminino-al-wataniah-sabah-al-ward-edp-100ml-MLB16084455.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://comparapreco.github.io/ofertas/beleza/index.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/beleza/perfume-arabe-yara-lattafa-eau-de-parfum-100ml-original-c-nf-MLB4350686819.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -61,7 +61,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/beleza/perfume-carolina-herrera-212-vip-black-eau-de-parfum-200-ml-masculino-MLB68838381.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/beleza/perfume-carolina-herrera-212-vip-black-eau-de-parfum-200-ml-masculino-MLB19603205.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -80,6 +80,12 @@
   </url>
   <url>
     <loc>https://comparapreco.github.io/ofertas/beleza/perfume-lattafa-asad-100ml-eau-de-parfum-original-arabe-original-com-nota-fiscal-e-selo-original-lataffa-MLB26000295.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/beleza/perfume-masculino-al-wataniah-attar-al-wesal-100ml-original-MLB6093027.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -187,13 +193,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/celulares/celular-samsung-galaxy-a07-128gb-4gb-ram-preto-MLB55034955.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/celulares/celular-samsung-galaxy-a07-128gb-4gb-ram-preto-MLB48946861.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/celulares/celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-verde-MLB26796581.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/celulares/celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-verde-MLB55034955.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -445,19 +451,13 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/ofertas/eletrodomesticos/chuveiro-lorenzetti-loren-shower-ultra-eletronico-branco-7500w-220v-75-w-MLB24273671.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/ofertas/eletrodomesticos/cooktop-a-gas-fischer-4-bocas-fit-line-trempe-esmaltada-aramado-preto-127-220v-MLB4292031849.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://comparapreco.github.io/ofertas/eletrodomesticos/fritadeira-air-fryer-forno-oven-12l-mondial-afon-12l-ab-preto-127v-MLB19055866.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://comparapreco.github.io/ofertas/eletrodomesticos/fritadeira-air-fryer-sem-oleo-ofrt660-preta-inox-oster-4-8l-cor-preto-127v-MLB40656539.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -469,7 +469,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/eletrodomesticos/fritadeira-a-ar-mondial-family-puff-4l-preto-1500w-af-31-AMZ-B09B2Y9Z79.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/eletrodomesticos/fritadeira-eletrica-air-fryer-oven-black-inox-wap-waod2-12-litros-4-em-1-porta-com-abertura-lateral-e-removivel-MLB43435820.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -481,7 +481,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/ofertas/eletrodomesticos/fritadeira-sem-oleo-4-8-litros-black-inox-ofrt660-oster-preto-220v-MLB34966446.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/eletrodomesticos/fritadeira-a-ar-mondial-family-puff-4l-preto-1500w-af-31-AMZ-B09B2Y9Z79.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/ofertas/eletrodomesticos/geladeira-electrolux-cycle-defrost-240l-degelo-pratico-uma-porta-branca-re31-127v-branco-MLB6077910.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/eletrodomesticos/lavadora-de-roupas-midea-wave-agitator-13kg-branca-127v-branco-MLB26797982.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/eletrodomesticos/maquina-de-lavar-bwf14ab-14kg-smart-sensor-ciclo-brastemp-branco-127v-MLB61522379.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -781,19 +805,25 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/ofertas/informatica/placa-de-video-msi-rtx-5060-8gb-gddr7-128-bits-shadow-2x-oc-MLB23443207.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/ofertas/informatica/smart-tv-4k-75-lg-qned73-portal-de-games-processador-ai-7-ger8-4k-super-upscaling-google-cast-integrado-controle-MLB61060326.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/informatica/smart-tv-lg-43-full-hd-processador-a5-ger6-ai-alexa-e-webos-23-43lr6700psa-MLB51202548.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/informatica/smart-tv-lg-43-full-hd-processador-a5-ger6-ai-alexa-e-webos-23-43lr6700psa-MLB39205913.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/informatica/smart-tv-lg-uhd-ai-ua75-43-polegadas-hdr10-pro-processador-7-ai-ger8-webos-25-MLB51539641.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/informatica/smart-tv-lg-uhd-ai-ua75-43-polegadas-hdr10-pro-processador-7-ai-ger8-webos-25-MLB51227508.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -811,13 +841,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/informatica/smart-tv-lg-uhd-ai-ua85-50-polegadas-hdr10-pro-processador-7-ai-ger-8-webos-25-MLB35587178.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://comparapreco.github.io/ofertas/informatica/smart-tv-profissional-4k-43-lg-uhd-43au801-processador-7-ai-ger8-super-upscaling-google-cast-alexa-integrado-MLB24550933.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/informatica/smart-tv-profissional-4k-43-lg-uhd-43au801-processador-7-ai-ger8-super-upscaling-google-cast-alexa-integrado-MLB66364935.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -847,6 +871,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/ofertas/informatica/tablet-m15-pro-101-8gb-ram-128gb-caneta-teclado-sortidos-MLB62998911.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/ofertas/informatica/tv-box-aquario-plus-stv-3000-4k-padrao-4k-16gb-preto-com-2gb-de-memoria-ram-MLB49278256.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
@@ -871,13 +901,55 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/monitores/monitor-gamer-aoc-agon-g42-27-200hz-0-3ms-ips-27g42he-preto-127-220v-MLB43417665.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/monitores/monitor-gamer-aoc-215-full-hd-gaming-120hz-1ms-22b30hm23-cor-preto-127-220v-MLB8063122.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/monitores/monitor-gamer-aoc-agon-g50-24-144hz-0-5ms-24g50f-preto-127-220v-MLB54176209.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/monitores/monitor-gamer-aoc-agon-g42-24-200hz-0-3ms-ips-24g42he-preto-127-220v-MLB19444510.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/monitores/monitor-gamer-lg-22mp410-tela-va-de-215-fhd-1920x1080-75hz-5ms-gtg-hdmi-freesync-preto-127-220v-MLB19812882.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/monitores/monitor-gamer-lcd-20-polegadas-pc-1600x900-hd-alto-falantes-integrados-100hz-tempo-de-resposta-1ms-250cd-m2-MLB61497487.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/monitores/monitor-gamer-samsung-odyssey-g40-27-240-hz-1ms-ajuste-de-altura-gsync-freesync-hdmi-dp-fhd-preto-MLB46180713.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/monitores/monitor-lg-ultrafine-tela-ips-uhd-4k-27-hdr10-dci-p3-90-dynamic-action-sync-27us500-w-branco-127-220v-MLB51332653.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/monitores/monitor-lg-ultragear-27g411a-b-27-fhd-144hz-1ms-mbr-nvidia-g-sync-amd-freesync-hdr10-preto-127-220v-MLB64311324.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/monitores/monitor-lg-ultrawide-tela-ips-de-29-21-9-hdr10-srgb-99-100hz-29wq500-preto-127-220v-MLB47137238.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/monitores/monitor-portatil-gamer-bettdow-de-156-full-hd-ips-antirreflexo-com-capa-preto-127-220v-MLB50200257.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -901,13 +973,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/moveis/cadeira-de-escritorio-giratoria-or-design-3310-preta-ergonomica-MLB62276296.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/moveis/cadeira-de-escritorio-giratoria-homenow-columbus-presidente-preta-com-tela-mesh-preto-MLB62276296.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/moveis/cadeira-escritorio-ergonomica-genebra-b500-luvinco-cor-preto-com-suporte-lombar-estofado-mesh-malha-MLB28453045.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/moveis/cadeira-de-escritorio-giratoria-or-design-3310-preta-ergonomica-MLB28453045.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/moveis/cadeira-escritorio-ergonomica-genebra-b500-luvinco-cor-preto-com-suporte-lombar-estofado-mesh-malha-MLB46220740.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -919,7 +997,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/moveis/cadeira-gamer-com-apoio-de-pes-level-preta-healer-preto-couro-sintetico-MLB52936702.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/moveis/cadeira-gamer-com-apoio-de-pes-level-preta-healer-preto-couro-sintetico-MLB22535617.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -931,13 +1009,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/moveis/cadeira-gamer-tgt-heron-m-preto-vermelho-reclinavel-espuma-moldada-preto-e-vermelho-couro-sintetico-MLB15189092.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/moveis/index.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/moveis/index.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/moveis/cadeira-gamer-tgt-heron-m-preto-vermelho-reclinavel-espuma-moldada-preto-e-vermelho-couro-sintetico-MLB15189092.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1069,7 +1147,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/caixa-de-som-bluetooth-tax5000-78-1800w-philips-preto-party-speaker-127-220v-MLB48954912.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/caixa-de-som-bluetooth-tax5000-78-1800w-philips-preto-party-speaker-127-220v-MLB54488375.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1081,13 +1159,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/caixa-de-som-boombox-plus-aiwa-bbs-01-lbl-200w-bluetooth-30h-ip66-usb-rgb-azul-127-220v-MLB54086417.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/caixa-de-som-boombox-plus-aiwa-bbs-01-lbl-200w-bluetooth-30h-ip66-usb-rgb-azul-127-220v-MLB22655991.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/caixa-de-som-jbl-boombox-4-bluetooth-som-210w-jbl-pro-ai-sound-boost-graves-personalizaveis-bateria-de-ate-34h-MLB49756297.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/caixa-de-som-jbl-boombox-4-bluetooth-som-210w-jbl-pro-ai-sound-boost-graves-personalizaveis-bateria-de-ate-34h-MLB48954912.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1100,12 +1178,6 @@
   </url>
   <url>
     <loc>https://comparapreco.github.io/ofertas/outros/caixa-som-philco-extreme-1200w-connection-tws-pcx6900-2-mic-preto-127-220v-MLB65436824.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/calca-jogger-tactel-soltinha-slim-academia-esportiva-MLB9033853.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1147,6 +1219,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/chapinha-lizze-profissional-480-extreme-cinza-220v-MLB68104527.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/clash-100ml-o-boticario-MLB55232692.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/ofertas/outros/cobertor-queen-grosso-coberdrom-la-carneiro-dupla-face-manta-MLB37961005.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
@@ -1154,6 +1238,12 @@
   </url>
   <url>
     <loc>https://comparapreco.github.io/ofertas/outros/conjunto-panelas-antiaderente-10-pecas-teflon-varias-cores-MLB47163373.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/copa-do-mundo-fifa-2026-kit-c-100-envelopes-700-cromos-MLB40656539.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1171,49 +1261,31 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/creatina-monohidratada-500g-growth-supplements-sem-sabor-em-po-MLB58582424.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://comparapreco.github.io/ofertas/outros/camera-ip-a8-app-icsee-infravermelho-prova-d-agua-externa-wifi-hd-cor-branco-MLB63315912.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/camera-lampada-intelbras-im6-full-color-3mp-360-wifi-interna-cor-branco-MLB19590092.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/camera-seguranca-wifi-ip-lente-dupla-2x-3mp-externa-360-a-prova-dagua-cor-cinza-MLB44906664.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/camera-seguranca-wifi-ip-lente-dupla-2x-3mp-externa-360-a-prova-dagua-cor-cinza-MLB18393786.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/esmerilhadeira-angular-profissional-brushless-9000-rpm-21v-com-02-baterias-e-acessorios-the-black-tools-amarelo-MLB19534856.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/filamento-pla-branco-e-preto-175mm-1kg-para-impressora-3d-MLB50200257.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/filamento-pla-dourado-v-silk-1kg-impressao-pecas-3d-nacional-MLB54143222.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/extratora-de-sujeira-portatil-wap-spot-cleaner-w3-borrifa-esfrega-e-extrai-1450w-de-potencia-e-bico-de-autolimpeza-MLB14489716.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://comparapreco.github.io/ofertas/outros/fone-de-ouvido-headphone-dapon-h02d-bluetooth-51-over-ear-22h-preto-MLB15248175.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/micro-ondas-20l-preto-mastercook-midea-220v-MLB56461322.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1249,7 +1321,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/impressora-3x1-multifuncional-epson-ecotank-l3250-wifi-bivol-preto-220v-MLB51332653.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/impressora-3x1-multifuncional-epson-ecotank-l3250-wifi-bivol-preto-220v-MLB22246671.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/impressora-epson-ecotank-l1250-tanque-de-tinta-colorida-cor-preto-127-220v-MLB51032833.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1261,13 +1339,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/impressora-multifuncional-hp-deskjet-ink-advantage-2975-colorida-1-usb-20-de-alta-velocidade-wi-de-banda-dupla-MLB61455819.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/impressora-multifuncional-hp-smart-tank-584-preta-preto-127-220v-MLB34801962.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/impressora-multifuncional-cor-epson-ecotank-l3250-preto-127-220v-MLB53547163.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1279,13 +1351,43 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/impressora-multifuncional-hp-deskjet-ink-advantage-2975-colorida-1-usb-20-de-alta-velocidade-wi-de-banda-dupla-MLB27907838.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/impressora-multifuncional-hp-smart-tank-584-preta-preto-127-220v-MLB34801962.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/impressora-multifuncional-hp-smart-tank-724-tanque-de-tinta-colorida-wi-scanner-duplex-branco-2g9q2a-MLB49756297.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/ofertas/outros/impressora-multifuncional-wi-epson-ecotank-l3250-mod-c11cj67301-preto-127v-MLB18446928.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/jogo-de-panelas-inducao-antiaderente-ceramica-10-pecas-ppg-pfoa-free-baunilha-MLB57032440.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/impressora-termica-bluetooth-usb-110mm-codigo-de-barras-e-etiquetas-2-rolo-de-etiqueta-adesivas-portatil-MLB34847250.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/jaqueta-puffer-de-frio-intenso-blusa-impermeavel-inverno-MLB54494663.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/jogo-de-panelas-inducao-antiaderente-ceramica-10-pecas-ppg-pfoa-free-baunilha-MLB65352564.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1315,7 +1417,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/kit-3-moletom-canguru-com-capuz-liso-frio-unissex-com-bolso-MLB19762752.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/kit-280-figurinhas-do-album-copa-do-mundo-2026-40-envelopes-MLB19939841.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/kit-3-moletom-canguru-com-capuz-liso-frio-unissex-com-bolso-MLB49089309.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1327,13 +1435,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/kit-4-suporte-de-banheiro-alto-adesivo-de-parede-aramado-pr-preto-MLB46220740.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/kit-4-suporte-de-banheiro-alto-adesivo-de-parede-aramado-pr-preto-MLB57032440.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/kit-700-figurinha-do-album-copa-do-mundo-2026-100-envelopes-MLB49089309.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/kit-700-figurinha-do-album-copa-do-mundo-2026-100-envelopes-MLB42978348.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1345,7 +1453,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/lustre-led-sala-moderno-60w-3-arcos-pendente-luminaria-teto-127-220v-dourado-MLB46836439.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/lustre-led-sala-moderno-60w-3-arcos-pendente-luminaria-teto-127-220v-dourado-MLB63904966.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1357,19 +1465,37 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/micro-ondas-20l-preto-mastercook-midea-220v-MLB56461322.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/ofertas/outros/micro-ondas-32-litros-cms46ar-cinza-consul-127v-MLB19310684.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/micro-ondas-electrolux-de-bancada-branco-com-funcao-tira-odor-e-manter-aquecido-34l-meo44-127v-MLB8742310.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/micro-ondas-com-menu-facil-32-litros-cms46ar-cinza-espelhado-consul-220v-MLB19310683.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/omo-lava-roupas-liquido-profissional-perfect-white-7l-MLB63904966.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/micro-ondas-electrolux-de-bancada-branco-com-funcao-tira-odor-e-manter-aquecido-34l-meo44-127v-MLB19055866.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/maquina-de-acabamento-corta-cabelo-profissional-kemei-2299-p-preto-127-220v-MLB25708528.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/omo-lava-roupas-liquido-profissional-perfect-white-7l-MLB18393786.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1381,7 +1507,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/panificadora-multipane-12-programacoes-com-funcao-timer-e-antiaderente-potencia-de-550-w-cor-preto-britania-127v-MLB68725782.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://comparapreco.github.io/ofertas/outros/power-bank-baseus-turbo-bipow2-pro-20000mah-225w-cor-preto-cosmic-black-MLB27793940.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/prancha-lizze-chapinha-profissional-480-extreme-cinza-127v-MLB54742419.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1417,13 +1555,25 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/relogio-technos-militar-masculino-aco-inox-prata-fundo-azul-50m-agua-MLB55027309.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/relogio-technos-militar-masculino-aco-inox-prata-fundo-azul-50m-agua-MLB68838381.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-127v-MLB42978348.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/secador-de-cabelo-profissional-lizze-extreme-cinza-127v-MLB18572364.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/secador-de-cabelo-profissional-lizze-extreme-cinza-220v-MLB66453791.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/secador-de-cabelos-philco-psc3500-4-em-1-dobravel-motor-bldc-prateado-bege-127v-MLB67275824.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1435,7 +1585,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/smart-box-proeletronic-smartpro-prosb-3000-16-gb-4k-hd-preto-padrao-MLB43918941.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/secadora-de-roupas-11-2-kg-midea-healthguard-branca-cor-branco-220v-MLB20671918.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/outros/smart-box-proeletronic-smartpro-prosb-3000-16-gb-4k-hd-preto-padrao-MLB60390574.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1447,19 +1603,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/tela-de-projecao-bettdow-de-100-polegadas-para-apresentacao-127-220v-MLB60390574.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/tela-de-projecao-com-suporte-dobravel-de-100-polegadas-0-MLB63783529.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/tela-de-projecao-retratil-dobravel-de-120-com-suporte-0-MLB51032833.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/tela-de-projecao-bettdow-de-100-polegadas-para-apresentacao-127-220v-MLB43417665.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1483,13 +1627,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/walkie-talkie-radios-comunicador-kit-com-2-unidades-radinho-walk-talk-completo-fone-microfone-e-acessorios-radio-MLB67737386.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/vaso-sanitario-monobloco-caixa-acoplada-completo-privada-cor-branco-vab0002-MLB22663071.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/outros/webcam-emeet-c60e-4k-uhd-8mp-foco-automatico-60fps-2microfon-preto-MLB47081288.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/outros/walkie-talkie-radios-comunicador-kit-com-2-unidades-radinho-walk-talk-completo-fone-microfone-e-acessorios-radio-MLB67737386.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1531,31 +1675,31 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/amazon-fire-tv-stick-hd-4a-gen-preto-8gb-1gb-wi-5-2024-de-voz-MLB66364935.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/amazon-fire-tv-stick-hd-4a-gen-preto-8gb-1gb-wi-5-2024-de-voz-MLB24550933.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/lancamento-tv-box-uni-v11-8k-versao-branco-padrao-copa-2026-branco-MLB48955624.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/lancamento-tv-box-uni-v11-8k-versao-branco-padrao-copa-2026-branco-MLB24008975.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/maxnova-projetor-hy300-4k-portatil-branco-127-220v-MLB68248818.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/maxnova-projetor-hy300-4k-portatil-branco-127-220v-MLB53866444.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/mini-projetor-davely-hy300-4k-android-com-wi-e-bluetooth-branco-127-220v-MLB51227508.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/mini-projetor-davely-hy300-4k-android-com-wi-e-bluetooth-branco-127-220v-MLB48955624.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/projeto-smart-portatil-tv-hd-4k-bluetooth-wifi-cor-branco-android-110-5g-cinema-em-casa-imagem-nitida-compativel-MLB67314423.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/projeto-smart-portatil-tv-hd-4k-bluetooth-wifi-cor-branco-android-110-5g-cinema-em-casa-imagem-nitida-compativel-MLB51539641.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1567,13 +1711,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/projetor-bettdow-ac1066-350ansi-para-netflix-chatgpt-preto-127-220v-MLB62998911.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/projetor-bettdow-ac1066-para-netflix-chatgpt-350ansi-preto-127-220v-MLB24008975.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/projetor-bettdow-ac1066-para-netflix-chatgpt-350ansi-preto-127-220v-MLB54176209.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1645,13 +1783,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/projetor-vlx-hy320-mini-4k-wi-preto-bluetooth-android-preto-127-220v-MLB50114846.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/projetor-vlx-hy320-mini-4k-wi-preto-bluetooth-android-preto-127-220v-MLB50054616.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/projetor-pfl5211-full-hd-5200lm-branco-intelbras-127-220v-MLB38520699.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/projetor-pfl5211-full-hd-5200lm-branco-intelbras-127-220v-MLB54143222.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1693,13 +1831,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-32-pol-hd-britania-b32kra-roku-tv-wi-dolby-audio-MLB66383541.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-43-aoc-led-roku-full-hd-wi-60hz-hdmi-usb-43s5155-78g-MLB59090080.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-43-aoc-led-roku-full-hd-wi-60hz-hdmi-usb-43s5155-78g-MLB35961672.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1711,25 +1843,25 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-de-40-weyon-40wdsnmx-com-tela-led-full-hd-preto-MLB21077584.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-de-40-weyon-40wdsnmx-com-tela-led-full-hd-preto-MLB66418417.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-h5000f-hd-32-polegadas-2025-preto-samsung-bivolt-MLB60660217.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-h5000f-hd-32-polegadas-2025-preto-samsung-bivolt-MLB38520699.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-philco-40-p40vik-led-roku-dolby-audio-wi-hdmi-hdr-full-hd-110-220v-MLB39205913.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-philco-40-p40vik-led-roku-dolby-audio-wi-hdmi-hdr-full-hd-110-220v-MLB67270079.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-philco-50-p50vik-4k-uhd-led-roku-dolby-audio-wi-hdr10-110-220v-MLB66191173.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-philco-50-p50vik-4k-uhd-led-roku-dolby-audio-wi-hdr10-110-220v-MLB67267597.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1747,13 +1879,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-roku-tv-50-7045-4k-uhd-aoc-bivolt-MLB67267597.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-roku-tv-50-7045-4k-uhd-aoc-bivolt-MLB51202548.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110-220v-MLB51381761.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-samsung-32-ls32h5000fgxzd-hd-led-wifi-hdmi-110-220v-MLB66191173.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1783,13 +1915,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-toshiba-43-polegadas-43v35rs-full-hd-MLB22655991.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-tcl-55-polegadas-qled-4k-p8k-wifi-bluetooth-google-tv-144hz-hdr10-dolby-atmos-vision-55p8k-MLB46439669.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-tcl-55-polegadas-qled-4k-p8k-wifi-bluetooth-google-tv-144hz-hdr10-dolby-atmos-vision-55p8k-MLB46439669.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-toshiba-43-polegadas-43v35rs-full-hd-MLB58372375.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/smart-tv-weyon-32wdsnmx-32-hd-led-MLB21077584.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1801,7 +1939,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://comparapreco.github.io/ofertas/tv-e-video/tv-box-lancamento-uni-v10-4k-versao-branco-padrao-copa-2026-branco-MLB67270079.html</loc>
+    <loc>https://comparapreco.github.io/ofertas/tv-e-video/tv-box-lancamento-uni-v10-4k-versao-branco-padrao-copa-2026-branco-MLB51381761.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
